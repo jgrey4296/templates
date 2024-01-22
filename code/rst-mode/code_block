@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : code_block
+# uuid  : code_block
+# key   : code_block
+# group : sphinx
+# --
+.. code-block:: ${1:python}
+   :linenos:
+   :caption: ${2:Block Caption}
+
+   $0

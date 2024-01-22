@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: quit
+# uuid: quit
+# key:  qq
+# group :
+# --
+quit()

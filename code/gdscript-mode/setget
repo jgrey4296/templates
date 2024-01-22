@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : setget
+# uuid  : setget
+# key   : setget
+# group : godot
+# --
+setget ${1:setfunc}, ${2:getfunc}

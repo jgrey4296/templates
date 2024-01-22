@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name  : test.fn
+# uuid  : test.fn
+# key   : test.fn
+# group : pytest
+# --
+def test_${1:function}(self):
+	# Setup:
+    $0
+    # Pre-check:
+
+    # Action
+
+    # Post-check:
+
+    assert(True is False)

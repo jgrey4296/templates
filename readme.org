@@ -1,0 +1,19 @@
+#+TITLE: Templates Readme
+
+* Overview
+
+* Main
+
+
+
+* Todos
+** templates
+*** TODO move templates to separate repo
+*** TODO project templates
+*** TODO palette insert with colours
+*** TODO themes
+** maintenance
+*** TODO version records
+*** TODO updates
+
+* Links

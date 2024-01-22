@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: logging.setlevel
+# uuid: logging.setlevel
+# group: logging
+# --
+logging.getLogger().setLevel(logging.$1)
+$0

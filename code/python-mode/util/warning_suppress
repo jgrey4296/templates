@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: warning.suppress
+# uuid: warning.suppress
+# key:  warning.suppress
+# group :
+# --
+${1:import warnings}
+with warnings.catch_warnings():
+    warnings.simplefilter("ignore")
+    pass

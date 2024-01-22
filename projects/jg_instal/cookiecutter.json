@@ -1,0 +1,7 @@
+{
+    "proj_name"   : "jg_instal_template",
+    "python"      : "3.10",
+    "entry_point" : "__main__",
+        "*docs/_templates"
+    ]
+}

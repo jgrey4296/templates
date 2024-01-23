@@ -10,22 +10,22 @@ echo "Date  : $(date).  CWD: $(pwd)"
 
 export NO_AT_BRIDGE=1
 
-source "$HOME/.config/jg/bash/_basic_utils.bash"
-source "$HOME/.config/jg/bash/_base_path.bash"
+source "$HOME/github/_templates/bash/_basic_utils.bash"
+source "$HOME/github/_templates/bash/_base_path.bash"
 
 case "$OSTYPE" in
-	darwin*) source "$HOME/.config/jg/bash/_aliases.mac.bash"
+	darwin*) source "$HOME/github/_templates/bash/_aliases.mac.bash"
 		 jgdebug "Activating components"
-		 for fname in $(find "$HOME/.config/jg/bash/components" -type f -name "*.bash" -not -regex ".+?/_.+?\.bash")
+		 for fname in $(find "$HOME/github/_templates/bash/components" -type f -name "*.bash" -not -regex ".+?/_.+?\.bash")
 		 do
 		     jgdebug "-- Sourcing: $fname"
 		     source "$fname"
 		 done
-		 source "$HOME/.config/jg/bash/conda.bash"
+		 source "$HOME/github/_templates/bash/conda.bash"
 		 setup_conda
 		 ;;
-	linux*) source "$HOME/.config/jg/bash/_aliases.linux.bash"
-		 for fname in $(find "$HOME/.config/jg/bash/components" -type f -name "*.bash" -not -regex ".+?/_.+?\.bash")
+	linux*) source "$HOME/github/_templates/bash/_aliases.linux.bash"
+		 for fname in $(find "$HOME/github/_templates/bash/components" -type f -name "*.bash" -not -regex ".+?/_.+?\.bash")
 		 do
 		     jgdebug "-- Sourcing: $fname"
 		     source "$fname"
@@ -35,9 +35,9 @@ case "$OSTYPE" in
         ;;
 esac
 
-BASH_ENV="$HOME/.config/jg/bash/non_interactive.bash"
-source "$HOME/.config/jg/bash/emacs.bash"
-source "$HOME/.config/jg/bash/_exports.bash"
+BASH_ENV="$HOME/github/_templates/bash/non_interactive.bash"
+source "$HOME/github/_templates/bash/emacs.bash"
+source "$HOME/github/_templates/bash/_exports.bash"
 
 jgdebug "Path  : $PATH"
 

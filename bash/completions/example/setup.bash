@@ -1,3 +1,3 @@
 
-PATH="/Volumes/documents/github/__configs/bash/completions/example:$PATH"
+PATH="/Volumes/documents/github/_templates/bash/completions/example:$PATH"
 source testcmd-completion.bash

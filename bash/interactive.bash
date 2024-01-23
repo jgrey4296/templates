@@ -23,18 +23,18 @@ HISTFILESIZE=2000
 shopt -s checkwinsize
 
 
-source "$HOME/.config/jg/bash/_basic_utils.bash"
-source "$HOME/.config/jg/bash/emacs.bash"
+source "$HOME/github/_templates/bash/_basic_utils.bash"
+source "$HOME/github/_templates/bash/emacs.bash"
 
 case "$OSTYPE" in
-	darwin*) source "$HOME/.config/jg/bash/_aliases.bash"
+	darwin*) source "$HOME/github/_templates/bash/_aliases.bash"
 		# Setup Conda
-		source "$HOME/.config/jg/bash/conda.bash"
+		source "$HOME/github/_templates/bash/conda.bash"
         setup_conda
 		echo "Stopping Sarafi Bookmarks"; launchctl stop com.apple.SafariBookmarksSyncAgent
 		;;
 	linux*)
-       source "$HOME/.config/jg/bash/conda.bash"
+       source "$HOME/github/_templates/bash/conda.bash"
        setup_conda
        if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
            debian_chroot=$(cat /etc/debian_chroot)

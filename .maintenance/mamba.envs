@@ -1,0 +1,18 @@
+  Name            Active  Path                                       
+───────────────────────────────────────────────────────────────────────
+  base                    /home/john/.cache/mamba                    
+  acab-dev                /home/john/.cache/mamba/envs/acab-dev      
+  cuty-dev                /home/john/.cache/mamba/envs/cuty-dev      
+  default                 /home/john/.cache/mamba/envs/default       
+  distributor             /home/john/.cache/mamba/envs/distributor   
+  doot-dev        *       /home/john/.cache/mamba/envs/doot-dev      
+  instal-dev              /home/john/.cache/mamba/envs/instal-dev    
+  provenance-dev          /home/john/.cache/mamba/envs/provenance-dev
+  sphinx-dev              /home/john/.cache/mamba/envs/sphinx-dev    
+  sphinx-ext              /home/john/.cache/mamba/envs/sphinx-ext    
+  stats                   /home/john/.cache/mamba/envs/stats         
+  testbed                 /home/john/.cache/mamba/envs/testbed       
+  testbed311              /home/john/.cache/mamba/envs/testbed311    
+  tomlguard-dev           /home/john/.cache/mamba/envs/tomlguard-dev 
+  visual                  /home/john/.cache/mamba/envs/visual        
+  web                     /home/john/.cache/mamba/envs/web           

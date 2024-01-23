@@ -1,0 +1,5 @@
+Default host: x86_64-unknown-linux-gnu
+rustup home:  /home/john/.cache/rustup
+
+stable-x86_64-unknown-linux-gnu (default)
+rustc 1.74.0 (79e9716c9 2023-11-13)

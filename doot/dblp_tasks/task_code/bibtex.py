@@ -47,6 +47,7 @@ from dootle.bibtex import middlewares as dmids
 import bibtexparser as BTP
 from bibtexparser import middlewares as ms
 from bibtexparser.middlewares.middleware import BlockMiddleware
+from task_code.xml import skip_re
 
 MYBIB                              = "#my_bibtex"
 MAX_TAGS                           = 7
@@ -78,9 +79,13 @@ class MergeMultipleAuthorsEditors(BlockMiddleware):
                     fields.append(x)
 
         if bool(authors):
-            fields.append(BTP.model.Field("author", " and ".join(authors)))
+            joined_authors = " and ".join(authors)
+            if skip_re.search(joined_authors):
+                return None
+            fields.append(BTP.model.Field("author", joined_authors))
         if bool(editors):
             fields.append(BTP.model.Field("editor", " and ".join(editors)))
+
 
         entry.fields = fields
         return entry

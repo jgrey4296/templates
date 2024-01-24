@@ -50,7 +50,7 @@ UPDATE   = DootKey.make("update_")
 FROM_K   = DootKey.make("from")
 
 ##-- regex
-skip_re = re.compile(r"dickin")
+skip_re = re.compile(r"(?i)dickin")
 
 ##-- end regex
 
@@ -186,9 +186,13 @@ class DBLPHandler(DootSaxHandler):
 
     def _maybe_store_entry(self):
         # if theres an explicit key -> file mapping:
-        authors = [x.value for x in self._curr_entry.fields if  x.key.lower() == "author"]
-        if any(skip_re.search(x) for x in authors):
-            return
+        for field in self._curr_entry.fields:
+            if field.key.lower().strip() != "author":
+                continue
+
+            if skip_re.search(field.value):
+                self._clear()
+                return
 
         match_keys = [y for x in self._curr_keys if (y:=self._mapping.get(x, None))]
         if bool(match_keys):

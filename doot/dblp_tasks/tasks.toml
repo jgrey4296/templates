@@ -4,7 +4,7 @@ data    = {protect="data"}
 bib     = "~/github/bibliography"
 results = "results"
 dblp    = "{data}"
-conf    = "{bib}/plus/conferences/primary"
+conf    = "{bib}/plus/conferences/"
 journ   = "{bib}/plus/journals"
 
 [[tasks.bib]]

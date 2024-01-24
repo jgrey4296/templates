@@ -42,6 +42,8 @@ actions              = [
                      {do="link!", link="{home}/.config/gpg/gpg-agent.conf",     to="{tools}/gpg-agent.linux.conf" },
                      {do="link!", link="{home}/.config/calibre/global.py.json", to="{tools}/calibre/global.py.json"},
                      {do="link!", link="{home}/.config/user-dirs.dirs",         to="{tools}/user-dirs.dirs"},
+
+                     {do="link!", link="{home}/.cache/cargo/config.toml",       to="{tools}/cargo_config.toml"},
                      # Tex
                      {do="link!", link="{tex}/texmf.cnf",            to="tex-config/texmf.cnf.linux"},
                      {do="link!", link="{tex}/texmfcnf.lua",         to="tex-config/texmfcnf.lua.linux"},

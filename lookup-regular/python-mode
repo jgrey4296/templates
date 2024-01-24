@@ -141,3 +141,4 @@ time complexity                                      # https://wiki.python.org/m
 pep8 style                                           # https://peps.python.org/pep-0008/
 urllib3                                              # https://urllib3.readthedocs.io/en/stable/index.html
 cpython internals                                    # https://devguide.python.org/internals/
+Pyarrow/parquette                                    # https://arrow.apache.org/docs/python/getstarted.html

@@ -1,5 +1,5 @@
 # $OpenBSD: sshd_config,v 1.103 2018/04/09 20:41:22 tj Exp $
-# To Use, symlink and replace /private/etc/ssh/sshd_config
+# To Use, symlink and replace /etc/ssh/sshd_config
 
 
 # https://www.ssh.com/academy/ssh/sshd_config

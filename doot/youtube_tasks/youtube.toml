@@ -22,6 +22,7 @@ sub_actions          = [
                      {do="touch", file="{target}/{flag_file}"},
                      {do="tar!",  file="{target}"},
                      {do="delete!", args=["{target}"], recursive=true},
+                     {do="shell", args=["spd-say", "completed a channel"]},
 ]                   # <list[dict]>
 # head_actions         = []                   # <list[dict]>
 

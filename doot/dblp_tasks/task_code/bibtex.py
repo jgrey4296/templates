@@ -125,6 +125,11 @@ class CleanUrls(BlockMiddleware):
                 fields_dict['bibsource'] = BTP.model.Field('bibsource', "dblp computer science bibliography, https://dblp.org")
                 del fields_dict['url']
 
+        if "ee" in fields_dict:
+            url = fields_dict['ee'].value
+            del fields_dict['ee']
+            fields_dict['url'] = BTP.model.Field("url", url)
+
 
         entry.fields = list(fields_dict.values())
         return entry

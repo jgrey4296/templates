@@ -27,7 +27,7 @@ select_limit_type    = "soft"
 roots                = ["{all_bib}"]                # <list[str|pl.Path]>  Places the walker will start
 exts                 = [".bib"]                   # <list[str]>
 head_actions         = [
-                     { do="getPost", update_="entries" },
+                     { do="getPost", entries="-" },
                      { do="tasks_code.soc_media:format_for_mastodon", from_="entries", update="text"},
                      { do="dootle.mastodon.actions:MastodonSetup" },
                      { do="dootle.mastodon.actions:MastodonPost", from_="text" },

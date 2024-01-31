@@ -1,3 +1,6 @@
+# https://cookiecutter.readthedocs.io/en/stable/
+# project layout generation
+
 default_context:
     _author: "John Grey"
     _short_name: "J Grey"

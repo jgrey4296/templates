@@ -1,4 +1,6 @@
 # Symlink to $CARGO_HOME/config.toml
+# https://doc.rust-lang.org/cargo/
+# Rust Package management
 
 # paths = ["/path/to/override"] # path dependency overrides
 

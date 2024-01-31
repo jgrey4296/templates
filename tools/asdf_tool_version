@@ -1,4 +1,7 @@
+# .tool-versions -*- mode: conf -*-
 # Symlink to ~/.tool-versions
+# Elixir and Erlang VM management
+# https://asdf-vm.com/guide/getting-started.html
 
 erlang 26.1.2
 elixir 1.15.7-otp-26

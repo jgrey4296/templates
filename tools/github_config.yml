@@ -1,4 +1,5 @@
 # Symlink to $GH_CONFIG_DIR/config.yml
+# https://cli.github.com/manual/
 
 # What protocol to use when performing git operations. Supported values: ssh, https
 git_protocol: ssh

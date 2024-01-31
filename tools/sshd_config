@@ -1,10 +1,13 @@
 # $OpenBSD: sshd_config,v 1.103 2018/04/09 20:41:22 tj Exp $
-# To Use, symlink and replace /etc/ssh/sshd_config
-
-
+# To Use, symlink into /etc/ssh/sshd_config.d/
+# https://www.ssh.com/academy/ssh/sshd_config
+# https://man7.org/linux/man-pages/man5/ssh_config.5.html
+#
 # https://www.ssh.com/academy/ssh/sshd_config
 # This is the sshd server system-wide configuration file.  See
 # sshd_config(5) for more information.
+
+# To check sshd options, run sshd -T
 
 # This sshd was compiled with PATH=/usr/bin:/bin:/usr/sbin:/sbin
 
@@ -39,8 +42,6 @@ PermitRootLogin no
 
 PubkeyAuthentication yes
 
-# The default is to check both .ssh/authorized_keys and .ssh/authorized_keys2
-# but this is overridden so installations will only check .ssh/authorized_keys
 AuthorizedKeysFile	.ssh/authorized_keys
 
 #AuthorizedPrincipalsFile none
@@ -54,7 +55,7 @@ AuthorizedKeysFile	.ssh/authorized_keys
 # HostbasedAuthentication
 #IgnoreUserKnownHosts no
 # Don't read the user's ~/.rhosts and ~/.shosts files
-IgnoreRhosts no
+# IgnoreRhosts no
 
 # To disable tunneled clear text passwords, change to no here!
 PasswordAuthentication no

@@ -142,3 +142,6 @@ pep8 style                                           # https://peps.python.org/p
 urllib3                                              # https://urllib3.readthedocs.io/en/stable/index.html
 cpython internals                                    # https://devguide.python.org/internals/
 Pyarrow/parquette                                    # https://arrow.apache.org/docs/python/getstarted.html
+guppy3                                               # https://zhuyifei1999.github.io/guppy3/
+pympler                                              # https://github.com/pympler/pympler
+slotscheck                                           # https://slotscheck.readthedocs.io/en/latest/

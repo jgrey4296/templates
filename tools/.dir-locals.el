@@ -4,7 +4,7 @@
 
 (
  (auto-mode-alist . (
-                     ("."        . prog-mode)
+                     ("."        . conf-mode)
                      ("\\.el\\'" . emacs-lisp-mode)
                      ))
  (prog-mode . ((mode . abbrev)))

@@ -1,4 +1,6 @@
 # /etc/fstab: static file system information.
+# https://linux.die.net/man/5/fstab
+# File system setup
 #
 # Use 'blkid' to print the universally unique identifier for a
 # device; this may be used with UUID= as a more robust way to name devices

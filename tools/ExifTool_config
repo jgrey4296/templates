@@ -1,4 +1,6 @@
 ## -*- mode: cperl -*-
+# https://exiftool.org/
+# Metadata reading/writing for image files
 
 ##-- intro
 # File:         example.config

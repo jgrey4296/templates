@@ -1,0 +1,22 @@
+
+[[tasks.yt]]
+name                 = "convert"
+version              = "0.1"                                                                # <str>
+ctor                 = "task"                                                               # <type>
+mixins               = []
+doc                  = ["unpack a youtube tar, and convert to a usable form"]                                                 # <list[str]>
+print_levels         = {action="WARN", execute="WARN"}                                      # <Dict: {'action', 'execute', 'build', 'sleep', 'head'}>
+fpath = ""
+actions = [
+# unpack
+
+# read video jsons:
+# extract: fulltitle/title, description, duration, view_count, webpage_url, categories/tags, automatic_captions.en.[ext, url]
+# chapters, upload_date, playlist, playlist_id, playlist_title, was_live, epoch, language
+
+# format
+
+# repack
+
+# index
+]

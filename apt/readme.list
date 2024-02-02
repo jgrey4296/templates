@@ -1,0 +1,2 @@
+symlink sources into /etc/apt/sources.list.d/
+symlink preferences into /etc/apt/preferences.d/

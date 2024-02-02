@@ -1,37 +1,33 @@
 # doot bib::get.keys --roots="{test}" bib::get.xml --roots="{dblp}/dblp-2023-10-01-02.xml" bib::write.xml.entries
 [[locations]]
-data    = "data"
+data    = {protect="data"}
+bib     = "~/github/bibliography"
 results = "results"
 dblp    = "{data}"
-bib     = "~/github/bibliography"
-conf    = "{bib}/plus/conferences"
-test    = "{conf}/primary/iva/"
+conf    = "{bib}/plus/conferences/"
 journ   = "{bib}/plus/journals"
 
 [[tasks.bib]]
-name                 = "get.keys"
+name                 = "get.patterns"
 version              = "0.1"                                                                # <str>
 ctor                 = "job"                                                                # <type>
 mixins               = ["job:walker", "job:terse"]
-doc                  = ["find dblp keys to expand"]                                         # <list[str]>
+doc                  = ["find dblp keys to expand"]
+required_for         = ["bib::get.xml"]
 print_levels         = {action="WARN", execute="WARN"}                                      # <Dict: {'action', 'execute', 'build', 'sleep', 'head'}>
 inject               = ["fpath", "fstem", "fname", "lpath"]                                 # <('list',)>
 recursive            = true
-roots                = ["{conf}"]                                                            # <list[str|pl.Path]>  Places the job:walker will start
-exts                 = [".bib"]                                                              # <list[str]>
+roots                = ["{journ}"]                                                            # <list[str|pl.Path]>  Places the job:walker will start
+exts                 = [".keys"]                                                              # <list[str]>
 sub_actions          = [
-                     { do="dootle.bibtex.v2:BibtexInitAction",   update_="bib_db"},
-                     { do="task_code.bibtex:build_parse_stack",  update_="parse_stack"},
-                     # { do="task_code.bibtex:build_write_stack",  update_="write_stack" },
-                     { do="dootle.bibtex.v2:BibtexLoadAction",   from_="fpath",     update_="bib_db",   parse_stack_="parse_stack" },
-                     { do="task_code.bibtex:map_urls", from_="bib_db", update_="mapping" },
-                     { do="putPost", args=["mapping"]},
+                     { do="read",  from_="fpath", update_="text"},
+                     { do="task_code.text:split_keys", from_="text", update_="keys" },
+                     { do="putPost", keys="keys"},
 ]                                                                                                                         # <str>
-
 head_actions = [
-             {do="getPost", mappings="-"},
-             {do="task_code.bibtex:join_mappings", from_="mappings", update_="total_mappings" },
-             {do="putPost", total_mappings="total_mappings"},
+             {do="getPost", keys="keys"},
+             {do="task_code.text:map_keys", from_="keys", update_="keymap" },
+             {do="putPost", keymap="keymap"},
 ]
 
 
@@ -40,16 +36,17 @@ name                 = "get.xml"
 version              = "0.1"
 ctor                 = "job"
 mixins               = ["job:walker", "job:terse"]
-doc                  = "Stream DBLP xmls and extract entries with matching keys"
+doc                  = ["Stream DBLP xmls and extract entries with matching keys"]
 print_levels         = {action="WARN", execute="WARN"}
-depends_on           = ["bib::get.keys.$head$"]
-inject               = ["fpath", "fstem", "fname", "lpath"]                                 # <('list',)>
+depends_on           = ["bib::get.patterns", "bib::get.patterns.$head$"]
+inject               = ["fpath", "fstem", "fname", "lpath", "entries"]                                 # <('list',)>
 recursive            = false
 roots                = ["{dblp}"]                                                            # <list[str|pl.Path]>  Places the job:walker will start
 exts                 = [".xml"]                                                             # <list[str]>
+entries              = ["article"]
 sub_actions          = [
-            {do="getPost", from="bib::get", mappings="total_mappings"},
-            {do="dootle.actions.xml:stream_xml", handler="task_code.xml:DBLPHandler", from_="fpath", update_="done_handler"},
+            {do="getPost", from="bib::get", mappings="total_mappings", patterns="keymap"},
+            {do="dootle.actions.xml:stream_xml", handler="task_code.xml:DBLPHandler", from_="fpath", update_="done_handler", errors="ignore"},
             {do="task_code.xml:extract_entries", from_="done_handler", update_="results"},
             {do="putPost", results="results"},
 ]
@@ -66,17 +63,20 @@ ctor       = "job"
 mixins     = [ "doot.mixins.job.postbox_expander:PostBoxExpanderMixin", "job:terse" ]
 postbox    = {task="bib::get", sub_key="all_entries", inject_key="data", flatten=true}
 doc        = ["Update source bibs with found entries"]
-depends_on = ["bib::get.xml"]
+depends_on = ["bib::get.xml", "bib::get.xml.$head$"]
 sub_actions = [
         # load existing bib if it exists
         { do="dootle.bibtex.v2:BibtexInitAction",   update_="bib_db"},
         { do="task_code.bibtex:build_simple_parse_stack",  update_="parse_stack"},
         { do="task_code.bibtex:build_simple_write_stack",  update_="write_stack" },
-        { do="dootle.bibtex.v2:BibtexLoadAction",   from_="fpath",     update_="bib_db",   parse_stack_="parse_stack" },
         # insert entries
-        # TODO: fix crossref, authors, editors
         { do="task_code.bibtex:insert_entries", from_="entries", update_="bib_db" },
         # write
         { do="dootle.bibtex.v2:BibtexToStrAction",  from_="bib_db",    update_="bib_text", write_stack_="write_stack" },
-        { do="write!", from_="bib_text", to="results/{fstem}.bib"},
+        { do="task_code.bibtex:get_fstem_fpar" },
+        { do="write!", from_="bib_text", to="{fpath}"},
+        # { do="write!", from_="bib_text", to="{results}/{fstem}.bib"},
+        { do="shell", args=["spd-say", "complete"]},
 ]
+
+

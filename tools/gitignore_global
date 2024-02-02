@@ -1,3 +1,4 @@
+# https://git-scm.com/docs/gitignore
 # Compiled source:
 *.beam
 *.bl
@@ -5,7 +6,6 @@
 *.com
 *.dll
 *.elc
-*.exe
 *.exe
 *.hi
 *.meta

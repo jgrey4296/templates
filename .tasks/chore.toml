@@ -6,7 +6,11 @@ name    = "versions"
 version = "0.1"
 ctor    = "task"
 doc     = ["Update the list of installed software versions"]
-depends_on = ["chore::_apt.versions", "chore::_snap.versions", "chore::_mamba.versions", "chore::_rust.versions", "chore::_tex.versions", "chore::_git"]
+depends_on = ["chore::_apt.versions", "chore::_snap.versions",
+               "chore::_mamba.versions", "chore::_rust.versions",
+               "chore::_tex.versions", "chore::_git",
+               "chore::_cron",
+               ]
 
 [[tasks.chore]]
 name    = "_apt.versions"
@@ -67,4 +71,13 @@ ctor    = "task"
 actions = [
         {do="shell", args=["git", "--version"], update_="gitinfo" },
         {do="write!", from_="gitinfo", to="{records}/git.version"},
+]
+
+[[tasks.chore]]
+name = "_cron"
+version = "0.1"
+ctor = "task"
+actions = [
+        {do="shell", args=["crontab", "-l"], update_="cron"},
+        {do="write!", from_="cron", to="{records}/cron.backup"},
 ]

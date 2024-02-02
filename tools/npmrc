@@ -1,5 +1,7 @@
 # -*-Conf-*-
+# symlink to ~/.npmrc
 # https://docs.npmjs.com/cli/v9/configuring-npm/npmrc/
+
 prefix=${BASE_CACHE}/npm-global
 cache                           = "${BASE_CACHE}/npm"
 globalconfig                    = "${BASE_CACHE}/npm-global/etc/npmrc"

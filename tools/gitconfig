@@ -1,3 +1,5 @@
+# git configuration
+# https://git-scm.com/docs/git-config
 [user]
 	name	= John Grey
 	email	= johngrey4296@gmail.com

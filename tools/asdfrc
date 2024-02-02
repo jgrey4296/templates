@@ -1,4 +1,5 @@
 # https://asdf-vm.com/manage/configuration.html
+# Elixir and Erlang VM manager
 
 legacy_version_file                   = no
 use_release_candidates                = no

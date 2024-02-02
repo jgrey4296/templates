@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : doot.imports
+# uuid  : doot.imports
+# key   : doot.imports
+# group :
+# --
+printer = logmod.getLogger("doot._printer")
+
+import doot
+import doot.errors
+from doot.structs import DootKey

@@ -2,7 +2,13 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("todo"
+(("snap-emacs-lisp"
+ (filename . "/snap/emacs/2307/usr/share/emacs/29.1/lisp/")
+ (front-context-string . "calc\n  drwxr-xr-")
+ (rear-context-string . "0K Dec 10 11:31 ")
+ (position . 138)
+ (last-modified 26042 58935 641726 146000))
+("todo"
  (filename . "/media/john/data/github/jgrey4296.github.io/orgfiles/todo.org")
  (front-context-string . "**** Spiders\n***")
  (rear-context-string . "l.html\n*** bots\n")

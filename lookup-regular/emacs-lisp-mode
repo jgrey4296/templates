@@ -24,3 +24,4 @@ transient              # https://magit.vc/manual/transient/
 Cask                   # https://github.com/cask/cask.git
 Cask Docs              # https://cask.readthedocs.io/en/latest/guide/installation.html
 Emacs Manuals          # https://www.gnu.org/software/emacs/manual/index.html
+Calc                   # https://www.gnu.org/software/emacs/manual/html_node/calc/index.html

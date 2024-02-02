@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: subplot
-# uid: subplot
+# uuid: subplot
 # group: plt
 # --
 # Create subplots to work with as objs

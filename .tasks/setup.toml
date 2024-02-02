@@ -48,6 +48,8 @@ actions              = [
                      {do="link!", link="{home}/.config/calibre/global.py.json",  to="{tools}/calibre/global.py.json"},
                      {do="link!", link="{home}/.config/user-dirs.dirs",          to="{tools}/user-dirs.dirs"},
                      {do="link!", link="{home}/.config/matplotlib/matplotlibrc", to="python/matplotlibrc"},
+                     {do="link!", link="{home}/.config/switch-to-firefox.bash",  to="bash/shortcuts/switch-to-firefox.bash"},
+                     {do="link!", link="{home}/.config/switch-to-tor.bash",  to="bash/shortcuts/switch-to-tor.bash"},
 
                      {do="link!", link="{home}/.cache/cargo/config.toml",        to="{tools}/cargo_config.toml"},
                      # Tex

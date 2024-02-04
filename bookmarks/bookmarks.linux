@@ -2,7 +2,13 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("snap-emacs-lisp"
+(("corana"
+ (filename . "/media/john/data/github/python/corana/")
+ (front-context-string . ".tasks\n  drwxrwx")
+ (rear-context-string . "0K Jan 27 20:14 ")
+ (position . 133)
+ (last-modified 26045 42750 725211 368000))
+("snap-emacs-lisp"
  (filename . "/snap/emacs/2307/usr/share/emacs/29.1/lisp/")
  (front-context-string . "calc\n  drwxr-xr-")
  (rear-context-string . "0K Dec 10 11:31 ")
@@ -143,8 +149,6 @@
  (filename . "/usr/lib/android-sdk/"))
 ("packages:python"
  (filename . "/media/john/data/github/_config/modules/lang-weakly-typed/python/packages-reference.org"))
-("provenance"
- (filename . "~/github/python/provenance/"))
 ("config"
  (filename . "~/.config/"))
 ("cache"

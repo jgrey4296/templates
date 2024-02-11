@@ -21,7 +21,17 @@ evil-mc                # https://github.com/gabesoft/evil-mc
 multiple-cursors       # https://github.com/magnars/multiple-cursors.el
 s                      # https://github.com/magnars/s.el
 transient              # https://magit.vc/manual/transient/
+GNU Transient          # https://www.gnu.org/software/emacs/manual/html_mono/transient.html
 Cask                   # https://github.com/cask/cask.git
 Cask Docs              # https://cask.readthedocs.io/en/latest/guide/installation.html
 Emacs Manuals          # https://www.gnu.org/software/emacs/manual/index.html
 Calc                   # https://www.gnu.org/software/emacs/manual/html_node/calc/index.html
+ERT                    # https://www.gnu.org/software/emacs/manual/html_mono/ert.html
+Org-Mode               # https://orgmode.org/org.html
+reftex                 # https://www.gnu.org/software/emacs/manual/html_mono/reftex.html
+widget                 # https://www.gnu.org/software/emacs/manual/html_mono/widget.html
+EIEIO                  # https://www.gnu.org/software/emacs/manual/html_mono/eieio.html
+Eglot                  # https://www.gnu.org/software/emacs/manual/html_mono/eglot.html
+EDiff                  # https://www.gnu.org/software/emacs/manual/html_mono/ediff.html
+EShell                 # https://www.gnu.org/software/emacs/manual/html_mono/eshell.html
+EWW                    # https://www.gnu.org/software/emacs/manual/html_mono/eww.html

@@ -2,7 +2,13 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("corana"
+(("script notes"
+ (filename . "/media/john/data/github/_templates/_wiki/")
+ (front-context-string . "tool-config\n  -r")
+ (rear-context-string . "0K Nov 27 13:59 ")
+ (position . 244)
+ (last-modified 26049 62739 887453 937000))
+("corana"
  (filename . "/media/john/data/github/python/corana/")
  (front-context-string . ".tasks\n  drwxrwx")
  (rear-context-string . "0K Jan 27 20:14 ")
@@ -185,8 +191,6 @@
  (filename . "~/github/godot/"))
 ("automated"
  (filename . "/media/john/data/library/automated"))
-("script notes"
- (filename . "~/.config/jg/wiki/"))
 ("homepage"
  (filename . "~/github/jgrey4296.github.io/"))
 ("taxonomies"

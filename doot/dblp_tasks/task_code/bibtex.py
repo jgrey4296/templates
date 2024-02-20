@@ -43,7 +43,7 @@ from urllib.parse import urlparse
 import doot
 import doot.errors
 from doot.structs import DootKey
-from dootle.bibtex import middlewares as dmids
+import bib_middleware as BM
 import bibtexparser as BTP
 from bibtexparser import middlewares as ms
 from bibtexparser.middlewares.middleware import BlockMiddleware
@@ -59,99 +59,24 @@ LIB_ROOT                           = DootKey.make("lib_root")
 KEY_CLEAN_RE = re.compile(r"[/:{}]")
 KEY_SUB_CHAR = "_"
 
-class MergeMultipleAuthorsEditors(BlockMiddleware):
-    """ Merge multiple fields of the same name """
-
-    def metadata_key(self):
-        return str(self.__class__.__name__)
-
-    def transform_entry(self, entry, library):
-        fields  = []
-        authors = []
-        editors = []
-        for x in entry.fields:
-            match x.key.lower():
-                case "author":
-                    authors.append(x.value)
-                case "editor":
-                    editors.append(x.value)
-                case _:
-                    fields.append(x)
-
-        if bool(authors):
-            joined_authors = " and ".join(authors)
-            if skip_re.search(joined_authors):
-                return None
-            fields.append(BTP.model.Field("author", joined_authors))
-        if bool(editors):
-            fields.append(BTP.model.Field("editor", " and ".join(editors)))
-
-
-        entry.fields = fields
-        return entry
-
-class LockCrossrefKeys(BlockMiddleware):
-    """ ensure crossref consistency by appending _ to keys and removing chars i don't like"""
-
-    def metadata_key(self):
-        return str(self.__class__.__name__)
-
-    def transform_entry(self, entry, library):
-        clean_key = KEY_CLEAN_RE.sub(KEY_SUB_CHAR, entry.key)
-        entry.key = f"{clean_key}_"
-        if "crossref" in entry.fields_dict:
-            orig = entry.fields_dict['crossref'].value
-            clean_ref = KEY_CLEAN_RE.sub(KEY_SUB_CHAR, orig)
-            entry.set_field(BTP.model.Field("crossref", f"{clean_ref}_"))
-
-        return entry
-
-class CleanUrls(BlockMiddleware):
-
-    def metadata_key(self):
-        return str(self.__class__.__name__)
-
-    def transform_entry(self, entry, library):
-        fields_dict = entry.fields_dict
-        if "doi" in fields_dict:
-            clean = fields_dict['doi'].value.removeprefix("https://doi.org/")
-            fields_dict['doi'] = BTP.model.Field("doi", clean)
-
-        if "url" in fields_dict:
-            url = fields_dict['url'].value
-            if url.startswith("db/"):
-                joined                   = "".join(["https://dblp.org/", url])
-                fields_dict['biburl']    = BTP.model.Field("biburl", joined)
-                fields_dict['bibsource'] = BTP.model.Field('bibsource', "dblp computer science bibliography, https://dblp.org")
-                del fields_dict['url']
-
-        if "ee" in fields_dict:
-            url = fields_dict['ee'].value
-            del fields_dict['ee']
-            fields_dict['url'] = BTP.model.Field("url", url)
-
-
-        entry.fields = list(fields_dict.values())
-        return entry
-
 
 def build_simple_parse_stack(spec, state):
     update = UPDATE.redirect(spec)
     read_mids = [
         ms.ResolveStringReferencesMiddleware(True),
         ms.RemoveEnclosingMiddleware(True),
-        dmids.FieldAwareLatexDecodingMiddleware(True, keep_braced_groups=True, keep_math_mode=True),
-        dmids.TitleStripMiddleware(True)
+        BM.LatexReader(True, keep_braced_groups=True, keep_math_mode=True),
+        BM.TitleReader(True)
     ]
     return { update : read_mids}
 
 def build_simple_write_stack(spec, state):
     update = UPDATE.redirect(spec)
     write_mids = [
-        MergeMultipleAuthorsEditors(True),
-        LockCrossrefKeys(True),
-        CleanUrls(True),
-        dmids.FieldAwareLatexEncodingMiddleware(keep_math=True, enclose_urls=False),
+        BM.MergeMultipleAuthorsEditors(True),
+        BM.LockCrossrefKeys(True),
+        BM.CleanUrls(True),
+        BM.LatexWriter(keep_math=True, enclose_urls=False),
         ms.AddEnclosingMiddleware(allow_inplace_modification=True, default_enclosing="{", reuse_previous_enclosing=False, enclose_integers=True),
     ]
     return { update : write_mids }

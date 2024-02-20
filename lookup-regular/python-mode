@@ -1,4 +1,4 @@
-Awesome Libs             # https://github.com/vinta/awesome-python
+Awesome Libs                                         # https://github.com/vinta/awesome-python
 Dagster                                              # https://docs.dagster.io/
 Logging                                              # https://docs.python.org/3/library/logging.html
 Luigi                                                # https://luigi.readthedocs.io/en/stable/index.html
@@ -145,3 +145,4 @@ Pyarrow/parquette                                    # https://arrow.apache.org/
 guppy3                                               # https://zhuyifei1999.github.io/guppy3/
 pympler                                              # https://github.com/pympler/pympler
 slotscheck                                           # https://slotscheck.readthedocs.io/en/latest/
+jsonlines                                            # https://jsonlines.readthedocs.io/en/latest/

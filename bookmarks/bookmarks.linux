@@ -3,11 +3,11 @@
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("script notes"
- (filename . "/media/john/data/github/_templates/_wiki/")
+ (filename . "/media/john/data/github/_templates/wiki_/")
  (front-context-string . "tool-config\n  -r")
  (rear-context-string . "0K Nov 27 13:59 ")
  (position . 244)
- (last-modified 26049 62739 887453 937000))
+ (last-modified 26060 60396 787104 141000))
 ("corana"
  (filename . "/media/john/data/github/python/corana/")
  (front-context-string . ".tasks\n  drwxrwx")

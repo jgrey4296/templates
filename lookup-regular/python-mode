@@ -146,3 +146,4 @@ guppy3                                               # https://zhuyifei1999.gith
 pympler                                              # https://github.com/pympler/pympler
 slotscheck                                           # https://slotscheck.readthedocs.io/en/latest/
 jsonlines                                            # https://jsonlines.readthedocs.io/en/latest/
+coverage                                             # https://coverage.readthedocs.io/en/7.4.1/

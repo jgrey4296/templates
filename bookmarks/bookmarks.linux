@@ -2,7 +2,13 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("script notes"
+(("urls"
+ (filename . "/media/john/data/github/bibliography/bookmarks/urls.org")
+ (front-context-string . "\nhttps://docs.so")
+ (rear-context-string . "ermsarchive.org/")
+ (position . 1283)
+ (last-modified 26070 20963 867819 381000))
+("script notes"
  (filename . "/media/john/data/github/_templates/wiki_/")
  (front-context-string . "tool-config\n  -r")
  (rear-context-string . "0K Nov 27 13:59 ")

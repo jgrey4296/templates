@@ -263,6 +263,7 @@ pyflakes                                                                        
 pylint                                                                                          : 2.14.5
 crashtest                                                                                       : 0.3.1
 https://github.com/nedbat/coveragepy
+https://coverage.readthedocs.io/en/7.4.1/
 flake8                                                                                          : 4.0.1
 https://docs.quantifiedcode.com/python-anti-patterns/index.html
 https://github.com/google/yapf                                                                  : emacs : formatting : libraries : lint : pep8

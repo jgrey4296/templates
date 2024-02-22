@@ -13,6 +13,7 @@
 ** external
 * Links
 
+https://elpa.gnu.org/packages/cobol-mode.html
 https://github.com/skeeto/elfeed
 https://github.com/emacs-tw/awesome-emacs
 https://github.com/pashky/restclient.el

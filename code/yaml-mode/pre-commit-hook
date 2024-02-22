@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : pre-commit-hook
+# uuid  : pre-commit-hook
+# key   : pre-commit-hook
+# group :
+# --
+- id: ${1:name}
+  files: ${2:''}
+  args: ${3:[]}
+  stages: ${4:[]}
+$0

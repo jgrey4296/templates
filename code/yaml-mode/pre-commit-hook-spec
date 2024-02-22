@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name  : pre-commit-hook-spec
+# uuid  : pre-commit-hook-spec
+# key   : pre-commit-hook-spec
+# group :
+# --
+- id: ${1:name}
+  name: ${2:stub}
+  description: ${3:a stub description}
+  entry: ${4:entry}
+  language: ${5:python}
+  stages: [commit, push, manual]
+$0

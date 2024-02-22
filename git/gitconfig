@@ -12,9 +12,9 @@
 	excludesfile = ~/.gitignore_global
 [init]
 	defaultBranch = main
-	templateDir = ~/gitub/_templates/git
+	templateDir = ~/gitub/_templates/git/initDir
 [commit]
-	template = ~/github/_templates/files/git/commit
+	template = ~/github/_templates/git/commit_template
 [hooks]
 	allownonascii = false
 [merge]

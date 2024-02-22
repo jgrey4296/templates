@@ -1,8 +1,15 @@
 
+
 [[locations]]
 tools = "tools"
 home  = "~"
 tex   = "~/.local/texlive/current"
+
+[[tasks.setup]]
+name = "total"
+version = "0.1"
+ctor = "task"
+depends_on = ["setup::symlinks", "setup::git", "setup::bash", "setup::dirs", "setup::misc"]
 
 [[tasks.setup]]
 name                 = "symlinks"
@@ -18,7 +25,6 @@ actions              = [
                      {do="link!", link="{home}/.cookiecutterrc",     to="{tools}/cookiecutterrc"},
                      {do="link!", link="{home}/.gemrc",              to="{tools}/gemrc"},
                      {do="link!", link="{home}/.ghci",               to="{tools}/ghci"},
-                     {do="link!", link="{home}/.gitconfig",          to="{tools}/gitconfig"},
                      {do="link!", link="{home}/.globalrc",           to="{tools}/globalrc"},
                      {do="link!", link="{home}/.inputrc",            to="{tools}/inputrc"},
                      {do="link!", link="{home}/.lldbinit",           to="{tools}/lldbinit.conf"},
@@ -28,7 +34,6 @@ actions              = [
                      {do="link!", link="{home}/.npmrc",              to="{tools}/npmrc"},
                      {do="link!", link="{home}/.tmux.conf",          to="{tools}/tmux.conf"},
                      {do="link!", link="{home}/.ExifTool_config",    to="{tools}/ExifTool_config"},
-                     {do="link!", link="{home}/.gitignore_global",   to="{tools}/gitignore_global"},
                      {do="link!", link="{home}/.gradle_properties",  to="{tools}/gradle.properties"},
                      {do="link!", link="{home}/.tool-versions",      to="{tools}/asdf_tool_version"},
                      {do="link!", link="{home}/.wgetrc",             to="{tools}/wgetrc"},
@@ -43,7 +48,6 @@ actions              = [
                      # subdirs
                      {do="link!", link="{home}/.ssh/config",                     to="{tools}/ssh_config"},
                      {do="link!", link="{home}/.config/gdb/gdbinit",             to="{tools}/gdbinit"},
-                     {do="link!", link="{home}/.config/gh/config.yml",           to="{tools}/github_config.yml"},
                      {do="link!", link="{home}/.config/gpg/gpg-agent.conf",      to="{tools}/gpg-agent.linux.conf" },
                      {do="link!", link="{home}/.config/calibre/global.py.json",  to="{tools}/calibre/global.py.json"},
                      {do="link!", link="{home}/.config/user-dirs.dirs",          to="{tools}/user-dirs.dirs"},
@@ -87,4 +91,17 @@ version = "0.1"
 ctor    = "task"
 actions = [
         {do="touch", file="{home}/.browsers"}
+]
+
+[[tasks.setup]]
+name                 = "git"
+version              = "0.1"                # <str>
+doc                  = ["setup git config file symlinks"]                   # <list[str]>
+ctor                 = "task"               # <str>
+mixins               = []                   # <list>               mix in additional capabilities
+print_levels = {execute="INFO"}
+actions              = [
+                     {do="link!", link="{home}/.gitconfig",                      to="git/gitconfig"},
+                     {do="link!", link="{home}/.gitignore_global",               to="git/gitignore_global"},
+                     {do="link!", link="{home}/.config/gh/config.yml",           to="git/github_config.yml"},
 ]

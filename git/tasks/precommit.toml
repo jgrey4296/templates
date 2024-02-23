@@ -13,13 +13,15 @@ actions              = [
 ]
 
 [[tasks.precommit]]
-name         = "Run a task for "
-doc          = [""]
+name         = "TODO"
+doc          = ["Run a task to process changed files", "activate for stage pre-commit"]
 ctor         = "job"
-mixins       = ["job:expander"]
+mixins       = ["job:expander", "job:terse"]
 cli          = [
              { name="files",   type="list", default=[], positional=true }
 ]
 print_levels = { head="INFO", build="DEBUG", execute="INFO", sleep="WARNING", action="WARNING" }
 retriever    = "doot.utils.retrievers:cli_retriever"
-sub_task      = "TODO"
+sub_actions = [
+            # TODO
+]

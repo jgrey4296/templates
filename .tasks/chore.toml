@@ -9,7 +9,7 @@ doc     = ["Update the list of installed software versions"]
 depends_on = ["chore::_apt.versions", "chore::_snap.versions",
                "chore::_mamba.versions", "chore::_rust.versions",
                "chore::_tex.versions", "chore::_git",
-               "chore::_cron",
+               # "chore::_cron",
                ]
 
 [[tasks.chore]]

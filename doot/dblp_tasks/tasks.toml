@@ -60,7 +60,7 @@ head_actions = [
 name       = "write.xml.entries"
 version    = "0.1"
 ctor       = "job"
-mixins     = [ "doot.mixins.job.postbox_expander:PostBoxExpanderMixin", "job:terse" ]
+mixins     = [ "job:postbox", "job:terse" ]
 postbox    = {task="bib::get", sub_key="all_entries", inject_key="data", flatten=true}
 doc        = ["Update source bibs with found entries"]
 depends_on = ["bib::get.xml", "bib::get.xml.$head$"]

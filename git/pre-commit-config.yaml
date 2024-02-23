@@ -1,5 +1,6 @@
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
+exclude: "REAMDE.md"
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
@@ -17,3 +18,13 @@ repos:
     -   id: check-json
     -   id: pretty-format-json
         args: ["--autofix"]
+# - repo: local
+#   hooks:
+#     - id: localDoot
+#       name: localDoot
+#       description: An Example local doot task
+#       language: system
+#       entry: mamba run "-n" "doot-dev" doot "TODO"
+#       verbose: true
+#       require_serial: true
+#       stages: [pre-commit]

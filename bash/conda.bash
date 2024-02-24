@@ -11,6 +11,12 @@ with (){
     mamba run -n "$env_name" "$@"
 }
 
+use (){
+    env_name="$1"
+    micromamba activate "$env_name"
+}
+
+
 setup_conda () {
 	jgdebug "Setting up Conda"
     if [[ ! ( -L "${HOME}/.condarc" ) ]] && [[ ! ( -L "${HOME}/.mambarc" ) ]]; then

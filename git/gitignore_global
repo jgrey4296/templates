@@ -27,7 +27,7 @@ target/
 /Cargo.lock
 
 # Python:
-.temp/venv
+.temp/
 *.egg-info
 *.mypy_cache
 *.pyc
@@ -90,5 +90,4 @@ log.*
 *.auctex
 
 # doot
-.tasks_cache
 .doot_defaults.toml

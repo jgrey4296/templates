@@ -18,7 +18,6 @@ export ADB_VENDOR_KEYS
 export JDK_HOME
 export JAVA_HOME
 export TERM
-export EMACS
 export EMACSDIR
 export DOOMDIR
 export JGLOGDIR

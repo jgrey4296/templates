@@ -4,7 +4,7 @@ jgdebug "Setting emacs data"
 BLOOD_SRC="$HOME/github/lisp/blood"
 EDITOR="vim"
 
-EMACS="$(which emacs)"
+jg_use_EMACS="$(which emacs)"
 EMACSDIR="$HOME/.emacs.d"
 DOOMDIR="$HOME/.config/jg/"
 
@@ -17,7 +17,7 @@ case "$OSTYPE" in
 
     linux*)
         ENAT_DIR="/media/john/data/github/_libs/lisp/doomemacs"
-        ENAT_BIN="/snap/bin/emacs"
+        ENAT_BIN="/usr/bin/emacs"
         ;;
 esac
 
@@ -46,20 +46,26 @@ function set-emacs () {
     case "$1" in
         *native* | doom*)
             echo "Setting Doom Native Emacs"
-            EMACS="$ENAT_BIN"
+            jg_use_EMACS="$ENAT_BIN"
             EMACSDIR="$ENAT_DIR"
             DOOMDIR="$HOME/.config/jg/"
             ;;
         "blood")
             echo "BLOOD"
-            EMACS="$ENAT_BIN"
+            jg_use_EMACS="$ENAT_BIN"
             EMACSDIR="$BLOOD_SRC"
             # TODO
             BLOOD_CONFIG="$EMACSDIR/example"
             ;;
+        "snap")
+            echo "gtk"
+            jg_use_EMACS="/snap/bin/emacs"
+            EMACSDIR="$ENAT_DIR"
+            DOOMDIR="$HOME/.config/jg/"
+            ;;
         *)
             echo "Unrecognized emacs type: $1"
-            EMACS="$NAT_BIN"
+            # EMACS="$NAT_BIN"
             EMACSDIR="$ENAT_DIR"
         ;;
         esac
@@ -83,8 +89,20 @@ function read-emacs () {
 }
 
 function report-emacs () {
-    echo "Emacs       : $EMACS"
+    echo "Emacs       : $jg_use_EMACS"
     echo "blood       : $BLOOD_SRC : $BLOOD_CONFIG"
     echo ".emacs.d    : $EMACSDIR"
     echo " .doom.d    : $DOOMDIR"
 }
+
+function emacs (){
+    `$jg_use_EMACS -nw`
+}
+
+function emacsw() {
+    `$jg_use_EMACS`
+}
+
+export jg_use_EMACS
+export -f emacs
+export -f emacsw

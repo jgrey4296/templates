@@ -8,7 +8,6 @@ name                 = "yt"
 version              = "0.1"                # <str>
 doc                  = ["Download each channel in a csv using yt-dlp"]                   # <list[str]>
 ctor                 = "job"             # <str>
-mixins               = ["job:terse"]            # <list>               mix in additional capabilities
 print_levels         = {"build"="INFO", "execute"="INFO"}                   # <Dict: {'sleep', 'build', 'head', 'execute', 'action'}>
 queue_behaviour      = "default"            # <str>                default | auto | reactive
 flag_file            = ".complete"
@@ -23,8 +22,11 @@ sub_actions          = [
                      {do="tar!",  file="{target}"},
                      {do="delete!", args=["{target}"], recursive=true},
                      {do="shell", args=["spd-say", "completed a channel"]},
-]                   # <list[dict]>
-# head_actions         = []                   # <list[dict]>
+]
+actions             = [
+                    {do="job.gen", fn_="sub_generator", update_="tasks", base_="sub_actions"}, # Custom expansion
+                    {do="job.queue", from_="tasks"},
+]
 
 [[tasks.dl]]
 name        = "backup"
@@ -35,8 +37,14 @@ mixins      = ["job:shadow", "job:walker", "job:terse"]
 exts        = []
 recursive   = false
 roots       = ["{data}"]
-accept_fn   = "taskcode.youtube:select_tars"
 shadow_root = "{backup}"
 sub_actions = [
             {do="backup!", from_="fpath", to="{shadow_path}/{fname}"}
+]
+actions = [
+        {do="job.walk", fn="taskcode.youtube:select_tars", update_="files"}, # walk,
+        {do="job.expand", from_="files", update_="tasks", inject="fpath", base_="sub_actions"},
+        {do="job.inject.shadow", onto_="tasks"},
+        {do="job.queue", from_="tasks"}, # queue
+
 ]

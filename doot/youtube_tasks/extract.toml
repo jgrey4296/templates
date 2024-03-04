@@ -1,0 +1,74 @@
+
+[[locations]]
+youtube   = "/media/john/big_ex/datasets/youtube/data"
+yt_raw    = "raw"
+extracted = "extracted"
+
+
+[[tasks.yt]]
+name    = "count"
+version = "0.1"
+ctor    = "task"
+cli     = [{ name="fpath", type="str", default="", positional=true }]
+actions = [
+        {do="pathParts", from="{fpath}"},
+        {do="tar.list", from="{fpath}", update_="flist"},
+        {do="write!", from_="flist", to="{yt_raw}/{fstem}_files_tar.list"}
+]
+
+[[tasks.yt]]
+name    = "unpack"
+version = "0.1"
+doc     = ["unpack {target.tar.gz} into raw/{out}"]
+ctor    = "task"
+cli     = [
+        { name="target", type="str", default="{youtube}/northernlion.tar.gz", positional=true },
+        { name="out",    type="str", default="{yt_raw}/northernlion", positional=true },
+]
+fpath   = "{target}"
+actions = [
+        {do="pathParts", from="{fpath}"},
+        {do="shell", args=["tar", "-xf", {path="{fpath}"}, "--directory", {path="{yt_raw}"}]},
+        {do="doot.actions.io:ListFiles", from="{fpath}", update_="flist"},
+        {do="write!", from_="flist", to="{yt_raw}/{fstem}_files.list"}
+]
+
+[[tasks.yt]]
+name                     = "extract"
+version                  = "0.1"                # <str>
+doc                      = ["Walk an unpacked youtube data directory, extracting to into {extracted}/{pstem}.jsonnl"]
+ctor                     = "job"
+cli                      = [{ name="target", type="str", default="{yt_raw}/northernlion", positional=true }]
+print_levels             = { execute="WARN", action="WARN", head="INFO", build="WARN", sleep="WARN" }
+queue_behaviour          = "default"
+exts                     = [".json"]
+roots                    = ["{target}"]
+jsonl_file               = "{extracted}/{pstem}.jsonl"
+cal_file                 = "{extracted}/{pstem}.cal"
+inject                   = ["jsonl_file", "target"]
+early_select_fn          = "identity"
+late_select_fn           = "all"
+select_limit           = 10
+sub_actions              = [
+                     # load the json
+                     {do="json.read", from_="fpath", update_="json"},
+                     # extract the data
+                     {do="taskcode.json:reduce_video_metadata", from_="json", update_="reduction"},
+                     # add to db/jsonl list
+                     {do="json.nl.write", from_="reduction", to_="jsonl_file"}
+                     # add to .csv
+
+                     # add to calendar
+
+]
+head_actions         = [
+                     {do="dootle.actions.say:say", args=["complete"]},
+]
+actions = [
+        {do="job.walk", update_="files"}, # walk,
+        {do="job.expand", from_="files", update_="tasks", inject="fpath", base_="sub_actions"},
+        {do="job.limit", from_="tasks", count_="select_limit"},
+        {do="job.queue", from_="tasks"}, # queue
+        {do="job.queue.head", base_="head_actions"},
+
+]

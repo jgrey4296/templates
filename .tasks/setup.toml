@@ -16,7 +16,6 @@ name                 = "symlinks"
 version              = "0.1"                # <str>
 doc                  = ["setup symlinks to templates"]                   # <list[str]>
 ctor                 = "task"               # <str>
-mixins               = []                   # <list>               mix in additional capabilities
 print_levels = {execute="INFO"}
 actions              = [
                      # Main
@@ -98,8 +97,7 @@ name                 = "git"
 version              = "0.1"                # <str>
 doc                  = ["setup git config file symlinks"]                   # <list[str]>
 ctor                 = "task"               # <str>
-mixins               = []                   # <list>               mix in additional capabilities
-print_levels = {execute="INFO"}
+print_levels         = {execute="INFO"}
 actions              = [
                      {do="link!", link="{home}/.gitconfig",                      to="git/gitconfig"},
                      {do="link!", link="{home}/.gitignore_global",               to="git/gitignore_global"},

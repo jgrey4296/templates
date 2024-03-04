@@ -15,7 +15,6 @@ name                       = "pdfs"
 version                    = "0.1"                                                       # <str>
 doc                        = ["Backup pdf library"]
 ctor                       = "job"             # <type>
-mixins                     = ["job:shadow", "job:walker", "job:terse"]
 clean_locs                 = ["{pdf_bkup}"]
 print_levels               = {build="WARNING", action="WARNING", execute="INFO"} # <Dict: {'build', 'action', 'sleep', 'head', 'execute'}>
 exts                       = []                                  # <list[str]>
@@ -26,4 +25,11 @@ head_actions               = [{do="doot.actions.postbox:SummarizePostAction", fu
 sub_actions                = [
                      {do="dir!", args=["{shadow_path}"] },
                      {do="backup!", from_="fpath", to="{shadow_path}/{fname}"}
+]
+actions = [
+        {do="job.walk", update_="files"}, # walk,
+        {do="job.expand", from_="files", update_="tasks", inject="fpath", base_="sub_actions"},
+        {do="job.inject.shadow", onto_="tasks" }, # shadow
+        {do="job.queue", from_="tasks"}, # queue
+        {do="job.queue.head", base_="head_actions"},
 ]

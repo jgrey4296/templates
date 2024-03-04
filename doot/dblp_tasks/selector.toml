@@ -3,28 +3,32 @@
 name                 = "select.venues"
 version              = "0.1"
 ctor                 = "job"
-mixins               = ["job:walker", "job:terse"]
 doc                  = [""]
 print_levels         = {action="WARN", execute="WARN"}
-inject               = ["fpath", "fstem", "fname", "lpath"]                                 # <('list',)>
 recursive            = false
-roots                = ["{dblp}"]                                                            # <list[str|pl.Path]>  Places the job:walker will start
-exts                 = [".xml"]                                                             # <list[str]>
-sub_actions          = [
-            {do="getPost", from="bib::get", mappings="total_mappings", patterns="keymap"},
-            {do="dootle.actions.xml:stream_xml", handler="task_code.selector:DBLPSelector", from_="fpath", update_="done_handler", errors="ignore"},
-            {do="task_code.selector:extract_results", from_="done_handler"},
-            {do="putPost", journals="journals", confs="confs", jraw="jraw", craw="craw"},
+roots                = ["{dblp}"]
+exts                 = [".xml"]
+actions              = [
+                        {do="job.walk", update_="files"}, # walk,
+                        {do="job.expand", from_="files", update_="tasks", inject="fpath", base_="sub_actions"},
+                        {do="job.queue", from_="tasks"}, # queue
+                        {do="job.queue.head", base_="head_actions"},
 ]
-head_actions = [
-             {do="getPost", journals="journals", confs="confs", jraw="jraw", craw="craw"},
-             {do="task_code.selector:flatten_dicts", from_="journals", update_="fjournals"},
-             {do="task_code.selector:flatten_dicts", from_="confs", update_="fconfs"},
-             {do="task_code.selector:flatten_raw", from_="jraw", update_="fjraw"},
-             {do="task_code.selector:flatten_raw", from_="craw", update_="fcraw"},
-             {do="write!", from_="fjournals", to="{results}/journals.list"},
-             {do="write!", from_="fconfs",    to="{results}/confs.list"},
-             {do="write!", from_="fjraw",     to="{results}/dblp.journals.raw"},
-             {do="write!", from_="fcraw",     to="{results}/dblp.confs.raw"},
-             {do="shell", args=["spd-say", "complete"]},
+sub_actions          = [
+                        {do="post.get", mappings="bib::get.total_mappings", patterns="bib::get.keymap"},
+                        {do="dootle.actions.xml:stream_xml", handler="task_code.selector:DBLPSelector", from_="fpath", update_="done_handler", errors="ignore"},
+                        {do="task_code.selector:extract_results", from_="done_handler"},
+                        {do="post.put", journals="journals", confs="confs", jraw="jraw", craw="craw"},
+]
+head_actions         = [
+                        {do="post.get", journals="bib::select.journals", confs="bib::select.confs", jraw="bib::select.jraw", craw="bib::select.craw"},
+                        {do="task_code.selector:flatten_dicts", from_="journals", update_="fjournals"},
+                        {do="task_code.selector:flatten_dicts", from_="confs", update_="fconfs"},
+                        {do="task_code.selector:flatten_raw", from_="jraw", update_="fjraw"},
+                        {do="task_code.selector:flatten_raw", from_="craw", update_="fcraw"},
+                        {do="write!", from_="fjournals", to="{results}/journals.list"},
+                        {do="write!", from_="fconfs",    to="{results}/confs.list"},
+                        {do="write!", from_="fjraw",     to="{results}/dblp.journals.raw"},
+                        {do="write!", from_="fcraw",     to="{results}/dblp.confs.raw"},
+                        {do="shell", args=["spd-say", "complete"]},
 ]

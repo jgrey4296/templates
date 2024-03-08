@@ -26,11 +26,10 @@ accept_fn                  = "tasks_code.android:select_dirs"
 roots                      = ["{push_pdfs}"]
 print_level                = { head="INFO", action="DEBUG" }
 android_root               = "/storage/6331-3162"
-inject                     = ["android_root"]
 actions = [
         {do="job.walk",   update_="files"}, # walk,
-        {do="job.expand", from_="files", update_="tasks", inject="fpath", base_="sub_actions"},
-        {do="job.inject.path", onto_="tasks"},
+        {do="job.expand", from_="files", update_="tasks", inject={copy=["fpath", "android_root"]}, base_="sub_actions"},
+        {do="job.inject.path", onto_="tasks", key="fpath"},
         {do="job.queue",  from_="tasks"}, # queue
 
 ]

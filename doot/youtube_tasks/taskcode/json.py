@@ -47,10 +47,10 @@ import doot.errors
 from doot.structs import DootKey
 from doot.mixins.action.human_numbers import Human_M
 
-to_k       = DootKey.make("to")
-from_k     = DootKey.make("from")
-update_k   = DootKey.make("update_")
-focus_k    = DootKey.make("focus_keys")
+to_k       = DootKey.build("to")
+from_k     = DootKey.build("from")
+update_k   = DootKey.build("update_")
+focus_k    = DootKey.build("focus_keys")
 
 # https://developers.google.com/youtube/v3/docs/videos
 
@@ -71,9 +71,8 @@ def reduce_video_metadata(spec, state, update_, from_ex):
     json : TomlGuard = from_ex
     keys             = set(json.keys())
     focus            = set(focus_keys)
-    printer.info("Json has matching: %s", focus & keys)
     reduced              = {}
-    reduced['date']      = datetime.datetime.strptime(json.upload_date, json_date_format).strftime(output_date_format)
+    reduced['date']      = datetime.datetime.strptime(json.on_fail("30000101").upload_date(), json_date_format).strftime(output_date_format)
 
     if 'filesize_approx' in json:
         reduced['file_size'] = fsize = Human_M.human_sizes(json.filesize_approx)

@@ -48,8 +48,8 @@ from bibtexparser import middlewares as ms
 
 MYBIB                              = "#my_bibtex"
 MAX_TAGS                           = 7
-UPDATE        : Final[DootKey] = DootKey.make("update_")
-FROM_KEY      : Final[DootKey] = DootKey.make("from")
+UPDATE        : Final[DootKey] = DootKey.build("update_")
+FROM_KEY      : Final[DootKey] = DootKey.build("from")
 
 def select_one_entry(spec, state):
     bib_db     = FROM_KEY.to_type(spec, state, type_=BTP.Library)

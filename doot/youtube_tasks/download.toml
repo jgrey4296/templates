@@ -14,7 +14,7 @@ flag_file            = ".complete"
 subs                 = ["subs.main.csv"]
 sub_generator        = "taskcode.youtube:generate_tasks"
 sub_actions          = [
-                     {do="skipIfFile", args=["{target}/{flag_file}", "{target}.tar.gz"]},
+                     {do="exists?",    args=["{target}/{flag_file}", "{target}.tar.gz"]},
                      {do="dir!",       args=["{target}"]},
                      {do="log",        msg="Will Be getting: {title} : {channel}"},
                      {do="taskcode.youtube:get_channel"},
@@ -33,18 +33,17 @@ name        = "backup"
 version     = "0.1"
 doc         = ["backup tars"]
 ctor        = "job"
-mixins      = ["job:shadow", "job:walker", "job:terse"]
 exts        = []
 recursive   = false
 roots       = ["{data}"]
 shadow_root = "{backup}"
-sub_actions = [
-            {do="backup!", from_="fpath", to="{shadow_path}/{fname}"}
-]
-actions = [
+actions     = [
         {do="job.walk", fn="taskcode.youtube:select_tars", update_="files"}, # walk,
-        {do="job.expand", from_="files", update_="tasks", inject="fpath", base_="sub_actions"},
+        {do="job.expand", from_="files", update_="tasks", inject={copy=["fpath"]}, base_="sub_actions"},
         {do="job.inject.shadow", onto_="tasks"},
         {do="job.queue", from_="tasks"}, # queue
 
+]
+sub_actions = [
+            {do="backup!", from_="fpath", to="{shadow_path}/{fname}"}
 ]

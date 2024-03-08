@@ -44,11 +44,11 @@ import doot.errors
 from doot.structs import DootKey
 from dootle.actions.xml import DootSaxHandler
 
-MAPPINGS = DootKey.make("mappings")
-PATTERNS = DootKey.make("patterns")
-UPDATE   = DootKey.make("update_")
-FROM_K   = DootKey.make("from")
-ENTRIES  = DootKey.make("entries")
+MAPPINGS = DootKey.build("mappings")
+PATTERNS = DootKey.build("patterns")
+UPDATE   = DootKey.build("update_")
+FROM_K   = DootKey.build("from")
+ENTRIES  = DootKey.build("entries")
 
 ##-- regex
 skip_re = re.compile(r"(?i)dickin")

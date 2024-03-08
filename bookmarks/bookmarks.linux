@@ -2,7 +2,13 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("packages"
+(("org-refile-last-stored"
+ (filename . "/media/john/data/github/jgrey4296.github.io/orgfiles/base_agenda.org")
+ (front-context-string . "** TODO definiti")
+ (rear-context-string . "[#A] Blood Bind\n")
+ (position . 3399)
+ (last-modified 26085 45595 65397 290000))
+("packages"
  (filename . "/media/john/data/github/_templates/packages/")
  (front-context-string . "python.org\n  -rw")
  (rear-context-string . "8K Feb 20 05:34 ")

@@ -10,7 +10,8 @@ roots                = ["{dblp}"]
 exts                 = [".xml"]
 actions              = [
                         {do="job.walk", update_="files"}, # walk,
-                        {do="job.expand", from_="files", update_="tasks", inject="fpath", base_="sub_actions"},
+                        {do="job.expand", from_="files", update_="tasks", inject={copy=["fpath"]}, base_="sub_actions"},
+                        {do="job.inject.path.parts", onto_="tasks", key="fpath"},
                         {do="job.queue", from_="tasks"}, # queue
                         {do="job.queue.head", base_="head_actions"},
 ]

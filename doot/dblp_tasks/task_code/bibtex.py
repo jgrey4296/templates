@@ -51,10 +51,10 @@ from task_code.xml import skip_re
 
 MYBIB                              = "#my_bibtex"
 MAX_TAGS                           = 7
-UPDATE        : Final[DootKey]     = DootKey.make("update_")
-FROM_KEY      : Final[DootKey]     = DootKey.make("from")
-FPATH                              = DootKey.make("fpath")
-LIB_ROOT                           = DootKey.make("lib_root")
+UPDATE        : Final[DootKey]     = DootKey.build("update_")
+FROM_KEY      : Final[DootKey]     = DootKey.build("from")
+FPATH                              = DootKey.build("fpath")
+LIB_ROOT                           = DootKey.build("lib_root")
 
 KEY_CLEAN_RE = re.compile(r"[/:{}]")
 KEY_SUB_CHAR = "_"
@@ -136,5 +136,5 @@ def insert_entries(spec, state):
     return { update : db }
 
 def get_fstem_fpar(spec, state):
-    fpath   = DootKey.make("fpath").to_path(spec, state)
+    fpath   = DootKey.build("fpath").to_path(spec, state)
     return { "fstem" : fpath.stem, "fpar": fpath.parent }

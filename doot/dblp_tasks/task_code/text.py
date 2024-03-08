@@ -42,9 +42,9 @@ import doot
 import doot.errors
 from doot.structs import DootKey
 
-UPDATE = DootKey.make("update_")
-FROM_K = DootKey.make("from")
-FPATH  = DootKey.make("fpath")
+UPDATE = DootKey.build("update_")
+FROM_K = DootKey.build("from")
+FPATH  = DootKey.build("fpath")
 
 def split_keys(spec, state):
     """ convert text to a tuple of (source_dir, [patterns]) """

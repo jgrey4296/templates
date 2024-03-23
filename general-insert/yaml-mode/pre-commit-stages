@@ -1,0 +1,11 @@
+Pre-Commit Stages:
+commit-msg         # fn(filename)
+post-checkout      # needs 'always_run: true'
+post-commit        # needs 'always_run: true'
+post-merge         # needs 'always_run: true'
+post-rewrite       # used for git commit --amend.  needs 'always_run: true'
+pre-commit         # fn(*changedFiles)
+pre-merge-commit   # fn(*changedFiles)
+pre-push           # uses env vars
+pre-rebase         # needs 'always_run: true'
+prepare-commit-msg # fn(filename)

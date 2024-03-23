@@ -6,7 +6,7 @@
 
 (define-abbrev-table 'org-mode-abbrev-table
   '(
-    ("todo" "TODO" nil :count 66)
+    ("todo" "TODO" nil :count 95)
    ))
 
 (define-abbrev-table 'prog-mode-abbrev-table
@@ -16,7 +16,9 @@
 
 (define-abbrev-table 'python-mode-abbrev-table
   '(
-    ("dootkey" "DootKey" nil :count 50)
+    ("dootkey" "DootKey" nil :count 165)
     ("isins" "isinstance(" nil :count 1)
+    ("kwarp" "kwrap" nil :count 61)
     ("lamdba" "lambda" nil :count 2)
    ))
+

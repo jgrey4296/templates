@@ -37,7 +37,7 @@ import more_itertools as mitz
 logging = logmod.getLogger(__name__)
 ##-- end logging
 
-from doot.task.dir_walker import _WalkControl
+from doot.mixins.job.expander import _WalkControl
 
 def select_dirs(target) -> bool | _WalkControl:
     if target.stem == "pdfs":
@@ -45,11 +45,3 @@ def select_dirs(target) -> bool | _WalkControl:
     if target.is_dir():
         return _WalkControl.yesAnd
     return False
-
-
-
-
-"""
-
-
-"""

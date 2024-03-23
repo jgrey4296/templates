@@ -18,12 +18,8 @@ actions              = []                   # <list[Any]>
 name                 = "bibtex"
 version              = "0.1"                # <str>
 ctor                 = "job" # <type>
-mixins               = ["job:limit", "job:terse"]
 doc                  = ["Maybe Post a formatted bibtex citation to mastodon"] # <list[str]>
-# early_select_fn      = "identity"
-late_select_fn     = "random"
 select_limit         = 1
-select_limit_type    = "soft"
 roots                = ["{all_bib}"]                # <list[str|pl.Path]>  Places the walker will start
 exts                 = [".bib"]                   # <list[str]>
 head_actions         = [
@@ -39,3 +35,11 @@ sub_actions          = [
                      { do="tasks_code.bibtex:select_one_entry", from_="bib_db", update_="entry"},
                      { do="putPost", args=["entry"] },
                      ] # <list[Any]>
+actions = [
+        {do="job.walk",   update_="files"}, # walk,
+        {do="job.expand", from_="files", update_="tasks", inject={copy=["fpath"]}, base_="sub_actions"},
+        {do="job.limit",  count_="select_limit"},
+        {do="job.queue",  from_="tasks"}, # queue
+        {do="job.queue.head", base_="head_actions"},
+
+]

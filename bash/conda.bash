@@ -1,5 +1,22 @@
 # https://stackoverflow.com/questions/36365801/run-a-crontab-job-using-an-anaconda-env/60977676#60977676
 
+with (){
+    # simple command to simplify:
+    # mamba run -n {} {}
+    # into:
+    # with {} {}
+    env_name="$1"
+    shift
+    jgdebug "Env: $env_name Args: $@"
+    mamba run -n "$env_name" "$@"
+}
+
+use (){
+    env_name="$1"
+    micromamba activate "$env_name"
+}
+
+
 setup_conda () {
 	jgdebug "Setting up Conda"
     if [[ ! ( -L "${HOME}/.condarc" ) ]] && [[ ! ( -L "${HOME}/.mambarc" ) ]]; then

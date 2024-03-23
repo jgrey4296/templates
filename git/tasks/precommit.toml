@@ -1,0 +1,27 @@
+
+[[tasks.precommit]]
+name                 = "validate"
+version              = "0.1"                # <str>
+doc                  = ["Validate a commit message.", "Runs in stage commit-msg"]
+cli                  = [
+                     { name="msgfile",   default="", type="str", positional=true },
+]
+ctor                 = "task"               # <str>
+actions              = [
+                     {do="read", from_="msgfile", update_="text"},
+                     {do="taskcode.precommit:validate", from_="text"}
+]
+
+[[tasks.precommit]]
+name         = "TODO"
+doc          = ["Run a task to process changed files", "activate for stage pre-commit"]
+ctor         = "job"
+mixins       = ["job:expander", "job:terse"]
+cli          = [
+             { name="files",   type="list", default=[], positional=true }
+]
+print_levels = { head="INFO", build="DEBUG", execute="INFO", sleep="WARNING", action="WARNING" }
+retriever    = "doot.utils.retrievers:cli_retriever"
+sub_actions = [
+            # TODO
+]

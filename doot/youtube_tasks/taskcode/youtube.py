@@ -47,19 +47,19 @@ import doot.errors
 import doot.structs as DS
 from doot.enums import ActionResponseEnum
 
-SUBS        = DS.DootKey.make("subs")
-TARGET      = DS.DootKey.make("target")
-TITLE       = DS.DootKey.make("title")
-CHANNEL     = DS.DootKey.make("channel")
-FLAG_FILE   = DS.DootKey.make("flag_file")
-DL_ARCHIVE  = DS.DootKey.make("archive")
+SUBS        = DS.DootKey.build("subs")
+TARGET      = DS.DootKey.build("target")
+TITLE       = DS.DootKey.build("title")
+CHANNEL     = DS.DootKey.build("channel")
+FLAG_FILE   = DS.DootKey.build("flag_file")
+DL_ARCHIVE  = DS.DootKey.build("archive")
 
 base_call = yt_dlp.bake("-i", "--skip-download", "--restrict-filenames", "--write-description", "--write-info-json", "--no-overwrite",
                         "--write-playlist-metafiles", "--no-clean-infojson", "--force-write-archive", _out=sys.stdout, _err=sys.stderr)
 
-def generate_tasks(task):
+def generate_tasks(spec, state):
     """ Read the subscriptions csv file, generate as many tasks as necessary """
-    sub_files = [DS.DootKey.make(x, explicit=True).to_path() for x in SUBS.to_type(None, task.spec.extra)]
+    sub_files = [DS.DootKey.build(x, explicit=True).to_path() for x in SUBS.to_type(None, spec.extra)]
     printer.info("Got: %s", sub_files)
     frames = []
     for sub in sub_files:
@@ -67,13 +67,18 @@ def generate_tasks(task):
 
     frame = pandas.concat(frames, ignore_index=True)
 
-    base              = task.spec.name
-    flag_file         = FLAG_FILE.expand(state=task.spec.extra)
+    base              = spec.name
+    flag_file         = FLAG_FILE.expand(state=spec.extra)
     for row in frame.itertuples():
         safe_name   = row[3].replace(":", "_").replace(" ","_")
-        sub_name    = base.subtask(safe_name)
+        sub_name    = base.subtask(row[0], safe_name)
         target      = "{data}/{safe_name}"
-        spec        = task._build_subtask(row[0], safe_name, channel=row[2], safe_name=safe_name, title=row[3], target=target, flag_file=flag_file)
+        spec        = DS.DootTaskSpec.from_dict(dict(name=sub_name,
+                                                    channel=row[2],
+                                                    safe_name=safe_name,
+                                                    title=row[3],
+                                                    target=target,
+                                                    flag_file=flag_file))
         yield spec
 
     yield None

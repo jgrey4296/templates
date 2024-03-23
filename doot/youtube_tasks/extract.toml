@@ -1,0 +1,89 @@
+
+[[locations]]
+youtube        = "/media/john/big_ex/datasets/youtube/data"
+yt_raw         = "raw"
+extracted      = "extracted"
+extract_backup = "/media/john/big_ex/datasets/youtube/extracted"
+
+
+[[tasks.yt]]
+name    = "count"
+version = "0.1"
+ctor    = "task"
+cli     = [{ name="fpath", type="str", default="", positional=true }]
+actions = [
+        {do="job.inject.path", from="{fpath}"},
+        {do="tar.list", from="{fpath}", update_="flist"},
+        {do="write!", from_="flist", to="{yt_raw}/{fstem}_files_tar.list"}
+]
+
+[[tasks.yt]]
+name = "joint"
+ctor = "job"
+cli     = [
+        { name="target", type="str", default="{youtube}/northernlion.tar.gz", positional=true },
+        { name="out",    type="str", default="unpacked", positional=true },
+]
+actions = [
+        {do="job.expand", base="yt::unpack",  inject={copy=["target", "out"]},  update_="unpack"},
+        {do="job.expand", base="yt::extract", inject={copy=["target"]}, update_="extract"},
+        {do="job.chain.->", unpack={literal=[], by-name=[]}},
+        {do="job.queue", from_multi_=["update", "extract"]},
+]
+
+[[tasks.yt]]
+name    = "unpack"
+version = "0.1"
+doc     = ["unpack {target.tar.gz} into raw/{out}"]
+ctor    = "task"
+cli     = [
+        { name="target", type="str", default="{youtube}/northernlion.tar.gz", positional=true },
+        { name="out",    type="str", default="unpacked", positional=true },
+]
+actions = [
+        {do="state.add.path.parts", from="{target}"},
+        {do="dir?", args=["{yt_raw}/{out}"]},
+        {do="shell", args=["tar", "-xf", {path="{target}"}, "--directory", {path="{yt_raw}/{out}"}]},
+        {do="doot.actions.io:ListFiles", from="{yt_raw}/{out}", update_="flist"},
+        {do="write!", from_="flist", to="{yt_raw}/{fstem}_files.list"}
+]
+
+[[tasks.yt]]
+name                     = "extract"
+version                  = "0.1"                # <str>
+doc                      = ["Walk an unpacked youtube data directory, extracting to into {extracted}/{pstem}.jsonnl"]
+ctor                     = "job"
+cli                      = [{ name="target", type="str", default="northernlion", positional=true }]
+print_levels             = { execute="WARN", action="WARN", head="INFO", build="WARN", sleep="WARN" }
+sub_print                = { execute="WARN", action="WARN", head="INFO", build="WARN", sleep="WARN" }
+queue_behaviour          = "default"
+recursive                = false
+exts                     = [".json"]
+roots                    = ["{yt_raw}/{target}"]
+jsonl                    = "{extracted}/{pstem}.jsonl"
+select_limit             = -1
+actions                  = [
+        {do="job.walk",   update_="files"}, # walk,
+        {do="job.expand", base_="sub_actions", from_="files", inject={copy=["jsonl"], replace=["fpath"]}, update_="tasks" },
+        {do="job.limit",  from_="tasks", count_="select_limit"},
+        {do="job.inject.path.parts", onto_="tasks", key="fpath"},
+        {do="job.queue", from_="tasks"}, # queue
+        {do="job.queue.head", base_="head_actions", inject={copy=["target"]}},
+]
+sub_actions              = [
+                     {do="ext?", ext=".json"},
+                     # TODO : skip if too big
+                     # load the json
+                     {do="json.read", from_="fpath", update_="json"},
+                     # extract the data
+                     {do="taskcode.json:reduce_video_metadata", from_="json", update_="reduction"},
+                     # add to db/jsonl list. TODO: track id's, for resume
+                     {do="json.nl.write", from_="reduction", to_="jsonl"}
+
+]
+head_actions         = [
+                     {do="dootle.actions.say:say", args=["complete"]},
+                     # gz and backup
+                     # delete raw
+                     {do="delete!", args=["{yt_raw}/{target}"], recursive=true}
+]

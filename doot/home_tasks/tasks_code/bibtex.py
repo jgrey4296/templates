@@ -42,14 +42,14 @@ from random import choice, choices
 import doot
 import doot.errors
 from doot.structs import DootKey
-from dootle.bibtex import middlewares as dmids
+import bib_middleware as BM
 import bibtexparser as BTP
 from bibtexparser import middlewares as ms
 
 MYBIB                              = "#my_bibtex"
 MAX_TAGS                           = 7
-UPDATE        : Final[DootKey] = DootKey.make("update_")
-FROM_KEY      : Final[DootKey] = DootKey.make("from")
+UPDATE        : Final[DootKey] = DootKey.build("update_")
+FROM_KEY      : Final[DootKey] = DootKey.build("from")
 
 def select_one_entry(spec, state):
     bib_db     = FROM_KEY.to_type(spec, state, type_=BTP.Library)
@@ -65,22 +65,21 @@ def build_parse_stack(spec, state):
     read_mids = [
         ms.ResolveStringReferencesMiddleware(True),
         ms.RemoveEnclosingMiddleware(True),
-        dmids.FieldAwareLatexDecodingMiddleware(True, keep_braced_groups=True, keep_math_mode=True),
-        dmids.ParsePathsMiddleware(lib_root=doot.locs["{lib-root}"]),
-        dmids.ParseTagsMiddleware(),
+        BM.LatexReader(True, keep_braced_groups=True, keep_math_mode=True),
+        BM.PathsReader(lib_root=doot.locs["{lib-root}"]),
+        BM.TagsReader(),
         ms.SeparateCoAuthors(True),
-        dmids.RelaxedSplitNameParts(True),
+        BM.NameReader(True),
     ]
     return {spec.kwargs.update_ : read_mids}
 
 def build_write_stack(spec, state):
     write_mids = [
-        # ms.MergeNameParts(True),
-        dmids.MergeLastNameFirstName(True),
+        BM.NameWriter(True),
         ms.MergeCoAuthors(True),
-        dmids.FieldAwareLatexEncodingMiddleware(keep_math=True, enclose_urls=False),
-        dmids.WriteTagsMiddleware(),
-        dmids.WritePathsMiddleware(lib_root=doot.locs["{lib-root}"]),
+        BM.LatexWriter(keep_math=True, enclose_urls=False),
+        BM.TagsWriter(),
+        BM.PathsWriter(lib_root=doot.locs["{lib-root}"]),
         ms.AddEnclosingMiddleware(allow_inplace_modification=True, default_enclosing="{", reuse_previous_enclosing=False, enclose_integers=True),
     ]
     return {spec.kwargs.update_ : write_mids}
@@ -88,12 +87,12 @@ def build_write_stack(spec, state):
 
 def write_tag_set(spec, state):
     update_key = UPDATE.redirect(spec, state)
-    result     = dmids.ParseTagsMiddleware.tags_to_str()
+    result     = BM.ParseTagsMiddleware.tags_to_str()
 
     return { update_key : result }
 
 def write_name_set(spec, state):
     update_key = UPDATE.redirect(spec, state)
-    result     = dmids.MergeLastNameFirstName.names_to_str()
+    result     = BM.MergeLastNameFirstName.names_to_str()
 
     return { update_key : result }

@@ -2,18 +2,54 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("snap-emacs-lisp"
+(("dejavu"
+ (filename . "/media/john/data/github/python/dejavu/")
+ (front-context-string . "deja_vu\n  drwxrw")
+ (rear-context-string . "0K Mar 19 22:55 ")
+ (position . 329)
+ (last-modified 26106 17838 420937 209000))
+("python_src"
+ (filename . "/media/john/data/github/_libs/python/cpython/Lib/")
+ (front-context-string . "string.py\n  -rw-")
+ (rear-context-string . "2K Dec  7 16:43 ")
+ (position . 7564)
+ (last-modified 26106 17822 656893 327000))
+("org-refile-last-stored"
+ (filename . "/media/john/data/github/jgrey4296.github.io/orgfiles/base_agenda.org")
+ (front-context-string . "**** TODO [#A] d")
+ (rear-context-string . "i target lister\n")
+ (position . 16193)
+ (last-modified 26092 25043 821609 160000))
+("packages"
+ (filename . "/media/john/data/github/_templates/packages/")
+ (front-context-string . "python.org\n  -rw")
+ (rear-context-string . "8K Feb 20 05:34 ")
+ (position . 622)
+ (last-modified 26074 17152 341626 136000))
+("urls"
+ (filename . "/media/john/data/github/bibliography/bookmarks/urls.org")
+ (front-context-string . "\nhttps://docs.so")
+ (rear-context-string . "ermsarchive.org/")
+ (position . 1283)
+ (last-modified 26070 20963 867819 381000))
+("script notes"
+ (filename . "/media/john/data/github/_templates/wiki_/")
+ (front-context-string . "tool-config\n  -r")
+ (rear-context-string . "0K Nov 27 13:59 ")
+ (position . 244)
+ (last-modified 26060 60396 787104 141000))
+("corana"
+ (filename . "/media/john/data/github/python/corana/")
+ (front-context-string . ".tasks\n  drwxrwx")
+ (rear-context-string . "0K Jan 27 20:14 ")
+ (position . 133)
+ (last-modified 26045 42750 725211 368000))
+("snap-emacs-lisp"
  (filename . "/snap/emacs/2307/usr/share/emacs/29.1/lisp/")
  (front-context-string . "calc\n  drwxr-xr-")
  (rear-context-string . "0K Dec 10 11:31 ")
  (position . 138)
  (last-modified 26042 58935 641726 146000))
-("todo"
- (filename . "/media/john/data/github/jgrey4296.github.io/orgfiles/todo.org")
- (front-context-string . "**** Spiders\n***")
- (rear-context-string . "l.html\n*** bots\n")
- (position . 134)
- (last-modified 26034 43591 54256 285000))
 ("misc"
  (filename . "/media/john/data/github/jgrey4296.github.io/orgfiles/todo.org")
  (front-context-string . "**** Spiders\n***")
@@ -26,12 +62,6 @@
  (rear-context-string . "2K Dec  9 20:50 ")
  (position . 173)
  (last-modified 25982 13863 669167 126000))
-("cpython"
- (filename . "/media/john/data/github/_libs/python/cpython/Lib/")
- (front-context-string . "string.py\n  -rw-")
- (rear-context-string . "2K Dec  7 16:43 ")
- (position . 7564)
- (last-modified 25978 15834 424854 98000))
 ("doot-tasks"
  (filename . "~/github/_templates/doot/")
  (front-context-string . "home_tasks\n  -rw")
@@ -56,78 +86,13 @@
  (rear-context-string . "0K Nov 27 13:34 ")
  (position . 79)
  (last-modified 25967 13552 690358 597000))
-("packages:latex"
- (filename . "/media/john/data/github/_config/modules/lang-text/latex/package-reference.org")
- (front-context-string . "\n\n* Overview\n\n* ")
- (rear-context-string . "ackage Reference")
- (position . 33)
- (last-modified 25967 7875 687577 778000))
-("packages:ruby"
- (filename . "/media/john/data/github/_config/modules/lang-weakly-typed/ruby/package-reference.org")
- (front-context-string . "\n\n* Overview\n\n* ")
- (rear-context-string . "ackage Reference")
- (position . 32)
- (last-modified 25967 7841 523054 596000))
-("packages:lua"
- (filename . "/media/john/data/github/_config/modules/lang-weakly-typed/lua/package-reference.org")
- (front-context-string . "\n\n* Overview\n\n* ")
- (rear-context-string . "ackage Reference")
- (position . 31)
- (last-modified 25967 7822 650832 75000))
-("packages:lisp"
- (filename . "/media/john/data/github/_config/modules/lang-weakly-typed/lisp-langs/package-reference.org")
- (front-context-string . "\n\n* Overview\n\n* ")
- (rear-context-string . "ackage Reference")
- (position . 32)
- (last-modified 25967 7804 149058 427000))
-("packages:godot"
- (filename . "/media/john/data/github/_config/modules/lang-weakly-typed/godot/package-reference.org")
- (front-context-string . "\n\n* Overview\n\n* ")
- (rear-context-string . "ackage Reference")
- (position . 33)
- (last-modified 25967 7748 634643 913000))
-("packages:elixir"
- (filename . "/media/john/data/github/_config/modules/lang-weakly-typed/erlang-vms/package-reference.org")
- (front-context-string . "\n\n* Overview\n\n* ")
- (rear-context-string . "ackage Reference")
- (position . 43)
- (last-modified 25967 7729 486565 102000))
-("packages:coq"
- (filename . "/media/john/data/github/_config/modules/lang-strongly-typed/coq/package-reference.org")
- (front-context-string . "\n\n* Overview\n\n* ")
- (rear-context-string . "ackage Reference")
- (position . 31)
- (last-modified 25967 7693 211085 384000))
-("packages:haskell"
- (filename . "/media/john/data/github/_config/modules/lang-strongly-typed/haskell/package-reference.org")
- (front-context-string . "\n\n* Overview\n\n* ")
- (rear-context-string . "ackage Reference")
- (position . 35)
- (last-modified 25967 7664 447444 428000))
-("packages:jvm"
- (filename . "/media/john/data/github/_config/modules/lang-strongly-typed/jvm-langs/package-reference.org")
- (front-context-string . "\n\n* Overview\n\n* ")
- (rear-context-string . "ackage Reference")
- (position . 31)
- (last-modified 25967 7640 383284 608000))
-("packages:rust"
- (filename . "/media/john/data/github/_config/modules/lang-strongly-typed/rust/packages-reference.org")
- (front-context-string . "\n\n* Overview\n\n* ")
- (rear-context-string . "ackage Reference")
- (position . 32)
- (last-modified 25967 7615 692777 97000))
-("packages:dotnet"
- (filename . "/media/john/data/github/_config/modules/lang-strongly-typed/dotnet-langs/package-reference.org")
- (front-context-string . "\n\n* Overview\n\n* ")
- (rear-context-string . "ackage Reference")
- (position . 34)
- (last-modified 25967 7600 870580 433000))
 (".local"
  (filename . "~/.local/"))
 ("jacamo"
  (filename . "/media/john/data/github/_libs/ai/jacamo/"))
 ("doot examples"
- (filename . "/media/john/data/github/python/doot-examples/"))
+ (filename . "/media/john/data/github/_test/doot-examples/")
+ (last-modified 26074 17089 316366 292000))
 ("templates"
  (filename . "/media/john/data/github/_templates/"))
 ("mamba"
@@ -141,10 +106,6 @@
  (last-modified 26028 4205 556367 775000))
 ("android"
  (filename . "/usr/lib/android-sdk/"))
-("packages:python"
- (filename . "/media/john/data/github/_config/modules/lang-weakly-typed/python/packages-reference.org"))
-("provenance"
- (filename . "~/github/python/provenance/"))
 ("config"
  (filename . "~/.config/"))
 ("cache"
@@ -181,8 +142,6 @@
  (filename . "~/github/godot/"))
 ("automated"
  (filename . "/media/john/data/library/automated"))
-("script notes"
- (filename . "~/.config/jg/wiki/"))
 ("homepage"
  (filename . "~/github/jgrey4296.github.io/"))
 ("taxonomies"

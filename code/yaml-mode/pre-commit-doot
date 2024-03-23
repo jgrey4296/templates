@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name  : pre-commit-doot
+# uuid  : doot-pre-commit
+# key   : doot-pre-commit
+# group :
+# --
+- repo: local
+  hooks:
+    - id: dootValidateFiles
+      name: dootValidateFiles
+      description: Format changed files using doot
+      language: system
+      entry: mamba run "-n" "${1:doot-dev}" doot "$2"
+      verbose: true
+      require_serial: true
+      stages: [pre-commit]

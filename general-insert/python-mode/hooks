@@ -1,0 +1,5 @@
+Python Sys Hooks:
+excepthook     # (type, value, traceback)
+breakpointhook #
+displayhook    #
+unraisablehook #

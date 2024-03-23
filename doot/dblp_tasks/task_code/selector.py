@@ -44,8 +44,8 @@ import doot.errors
 from doot.structs import DootKey
 from dootle.actions.xml import DootSaxHandler
 
-UPDATE   = DootKey.make("update_")
-FROM_K   = DootKey.make("from")
+UPDATE   = DootKey.build("update_")
+FROM_K   = DootKey.build("from")
 
 def extract_results(spec, state):
     """  """

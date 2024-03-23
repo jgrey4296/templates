@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : coqproject
+# uuid  : coqproject
+# key   : coqproject
+# group :
+# --
+# Parameter to pass to coqc
+-Q . JG

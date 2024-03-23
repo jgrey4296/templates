@@ -99,3 +99,10 @@ case "$USER" in
     ;;
     *) ;;
 esac
+
+function jvm! () {
+    # For activating sdkman in a subshell
+    if [[ -e "$SDKMAN_DIR/bin/sdkman-init.sh" ]]; then
+        source "$SDKMAN_DIR/bin/sdkman-init.sh"
+    fi
+}

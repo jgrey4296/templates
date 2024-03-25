@@ -3,22 +3,15 @@
 youtube        = "/media/john/big_ex/datasets/youtube/data"
 yt_raw         = "raw"
 extracted      = "extracted"
+extract_tars = "extract_tars"
 extract_backup = "/media/john/big_ex/datasets/youtube/extracted"
+extract_output = "/media/john/data/datasets/todo/youtube"
 
 
-[[tasks.yt]]
-name    = "count"
-version = "0.1"
-ctor    = "task"
-cli     = [{ name="fpath", type="str", default="", positional=true }]
-actions = [
-        {do="job.inject.path", from="{fpath}"},
-        {do="tar.list", from="{fpath}", update_="flist"},
-        {do="write!", from_="flist", to="{yt_raw}/{fstem}_files_tar.list"}
-]
 
 [[tasks.yt]]
 name = "joint"
+doc = ["unpack then extract from a tar"]
 ctor = "job"
 cli     = [
         { name="target", type="str", default="{youtube}/northernlion.tar.gz", positional=true },
@@ -68,10 +61,11 @@ actions                  = [
         {do="job.limit",  from_="tasks", count_="select_limit"},
         {do="job.inject.path.parts", onto_="tasks", key="fpath"},
         {do="job.queue", from_="tasks"}, # queue
-        {do="job.queue.head", base_="head_actions", inject={copy=["target"]}},
+        {do="job.queue.head", base_="head_actions", inject={copy=["target", "jsonl"]}},
 ]
 sub_actions              = [
                      {do="ext?", ext=".json"},
+                     {do="taskcode.util:skip_if_too_big", maxMB="1"},
                      # TODO : skip if too big
                      # load the json
                      {do="json.read", from_="fpath", update_="json"},
@@ -79,11 +73,14 @@ sub_actions              = [
                      {do="taskcode.json:reduce_video_metadata", from_="json", update_="reduction"},
                      # add to db/jsonl list. TODO: track id's, for resume
                      {do="json.nl.write", from_="reduction", to_="jsonl"}
-
 ]
 head_actions         = [
                      {do="dootle.actions.say:say", args=["complete"]},
+                     {do="pathParts", from_="target"},
                      # gz and backup
+                     {do="tar!", file_="jsonl", to="{extract_tars}/{pstem}.jsonl.tar"},
+                     {do="copy", from="{extract_tars}/{pstem}.jsonl.tar", to="{extract_backup}/{pstem}.jsonl.tar"},
+                     {do="copy", from="{extract_tars}/{pstem}.jsonl.tar", to="{extract_output}/{pstem}.jsonl.tar"},
                      # delete raw
                      {do="delete!", args=["{yt_raw}/{target}"], recursive=true}
 ]

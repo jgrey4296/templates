@@ -1,0 +1,12 @@
+
+[[tasks.util]]
+name    = "count"
+version = "0.1"
+doc     = ["count the number of files of a tar"]
+ctor    = "task"
+cli     = [{ name="fpath", type="str", default="", positional=true }]
+actions = [
+        {do="job.inject.path", from="{fpath}"},
+        {do="tar.list", from="{fpath}", update_="flist"},
+        {do="write!", from_="flist", to="{yt_raw}/{fstem}_files_tar.list"}
+]

@@ -2,6 +2,12 @@
 https://status.python.org/
 
 * Main
+https://www.structlog.org/en/stable/
+https://github.com/PrefectHQ/prefect
+https://github.com/borgbackup/borg
+https://github.com/simonw/datasette
+https://github.com/robinhood/faust
+https://github.com/pypa/warehouse
 * Stdlib
 ** useful
 *** abc
@@ -173,6 +179,7 @@ https://palletsprojects.com/p/markupsafe/
 https://github.com/JeffLIrion/adb_shell
 
 ** Algorithms
+
 *** pyxirr                                      :finance:rust:
 https://anexen.github.io/pyxirr/
 *** boltons                                     :utility:
@@ -205,6 +212,8 @@ https://github.com/hell03end/pylev3
 https://github.com/cmaclell/py_rete
 *** python-barcode                              :barcode:
 https://python-barcode.readthedocs.io/en/stable/
+*** python-qrcode                               :qrcode:
+https://github.com/lincolnloop/python-qrcode
 *** python-dateutil                             :datetime:
 https://dateutil.readthedocs.io/en/stable/
 *** scipy                                       :numerics:statistics:
@@ -217,6 +226,8 @@ https://github.com/pytoolz/toolz
 *** toposort                                    :sorting:
 *** validators                                  :validation:
 https://python-validators.github.io/validators/
+*** itsdangerous                                :validation:
+https://github.com/pallets/itsdangerous
 *** wfc-piano-roll                              :music:wave_function_collapse:
 https://github.com/bbaltaxe/wfc-piano-roll
 *** pyephem                                     :astronomy:
@@ -225,6 +236,8 @@ https://github.com/brandon-rhodes/pyephem
 https://github.com/asaini/Apriori
 *** PRML                                        :machine_learning:pattern_recognition:
 https://github.com/ctgk/PRML
+*** returns                                     :monads:
+https://github.com/dry-python/returns
 ** Apis
 
 *** bytewax
@@ -233,6 +246,8 @@ https://github.com/bytewax/bytewax
 *** ipython
 **** pyheatmagic
 https://github.com/csurfer/pyheatmagic
+**** ipdb
+https://github.com/gotcha/ipdb
 *** internetarchive
 https://archive.org/developers/internetarchive/installation.html
 https://github.com/jjjake/internetarchive
@@ -275,47 +290,36 @@ https://github.com/ORCID/python-orcid
 https://github.com/mewo2/pronouncingpy
 *** verbnet
 https://github.com/cu-clear/verbnet
+*** keyboard
+https://github.com/boppreh/keyboard
+*** mouse
+https://github.com/boppreh/mouse
+*** pynput
+https://github.com/moses-palmer/pynput
+*** scapy
+https://github.com/secdev/scapy
 ** Architecture
+
 *** django                                      :http:server:
 https://docs.djangoproject.com/en/5.0/
+**** django-allauth
+https://github.com/pennersr/django-allauth
+**** django-rest-framework
+https://github.com/encode/django-rest-framework
+**** django-scheduler
+https://github.com/thauber/django-schedule
+**** django-debug-toolbar
+https://github.com/jazzband/django-debug-toolbar
+**** django-oauth-toolkit
+https://github.com/jazzband/django-oauth-toolkit
 *** flask                                       :http:server:
 https://flask.palletsprojects.com/en/2.2.x/
-*** distribution
-https://packaging.python.org/en/latest/guides/
-**** setuptools
-https://setuptools.pypa.io/en/latest/setuptools.html
-***** setuptools-rust
-https://github.com/PyO3/setuptools-rust
-***** calver
-https://github.com/di/calver
-**** pip
-https://pip.pypa.io/en/stable/
-***** pip-chill                                   :pip:requirements:versioning:
-https://github.com/rbanffy/pip-chill
-***** pipreqs                                     :pip:requirements:versioning:
-https://github.com/bndr/pipreqs
-***** pip-review                                  :pip:
-https://github.com/jgonggrijp/pip-review
-**** poetry
-https://github.com/python-poetry/poetry
-**** build
-https://github.com/pypa/build
-https://pypa-build.readthedocs.io/en/latest/
-**** distlib
-https://distlib.readthedocs.io/en/latest/
-**** pkginfo
-https://pythonhosted.org/pkginfo/
-
-**** pkginfo2
-https://github.com/nexB/pkginfo2
-**** wheel
-https://wheel.readthedocs.io/en/stable/
-**** bumpver                                   :versioning:
-https://github.com/mbarkhau/bumpver
-**** python-semantic-release                   :versioning:
-https://github.com/python-semantic-release/python-semantic-release
-**** semantic-version                          :versioning:
-https://github.com/rbarrois/python-semanticversion
+**** flask-admin
+https://github.com/flask-admin/flask-admin
+**** flask-restful
+https://github.com/flask-restful/flask-restful
+**** flask-debugtoolbar
+https://github.com/pallets-eco/flask-debugtoolbar
 *** pexpect                                     :subprocess:
 https://pexpect.readthedocs.io/en/stable/
 *** platformdirs                                :operating_system:
@@ -326,6 +330,8 @@ https://github.com/pytest-dev/pluggy
 https://github.com/pexpect/ptyprocess
 *** pydispatcher                                :signals:
 https://github.com/mcfletch/pydispatcher
+*** blinker
+https://github.com/jek/blinker
 *** py-filelock                                 :files:
 https://py-filelock.readthedocs.io/en/latest/
 *** python-wires                                :plugins:signals:
@@ -345,6 +351,10 @@ https://palletsprojects.com/p/werkzeug/
 https://github.com/msiedlarek/wiring
 *** wrapt                                       :decorator:monkey_patching:
 https://wrapt.readthedocs.io/en/master/
+*** hydra                                       :configuration:
+https://github.com/facebookresearch/hydra
+*** structlog
+https://www.structlog.org/en/stable/
 ** Argumentation
 
 *** ALIAS
@@ -357,12 +367,26 @@ https://github.com/open-argumentation/SADFace
 
 *** arrow
 https://arrow.apache.org/docs/python/getstarted.html
-*** attrs
+
+*** arrow-py                                    :datetime:
+https://github.com/arrow-py/arrow
+
+*** pendulum                                    :datetime:
+https://github.com/sdispater/pendulum
+*** attrs                                       :boilerplate:
 https://www.attrs.org/en/stable/
+*** bidict
+https://github.com/jab/bidict
 *** benedict
 https://github.com/fabiocaccamo/python-benedict.git
+*** box                                         :doc_notation:
+https://github.com/cdgriffith/Box
+*** dotteddict                                  :dot_notation:
+https://github.com/carlosescri/DottedDict
 *** databases
 **** sqlite
+**** postgresql
+https://github.com/psycopg/psycopg
 **** sqlalchemy
 https://alembic.sqlalchemy.org/en/latest/tutorial.html
 https://docs.sqlalchemy.org/en/20/
@@ -426,6 +450,8 @@ https://pandas.pydata.org/docs/
 https://github.com/jaraco/path
 *** polars                                      :data_analysis:
 https://docs.pola.rs/py-polars/html/reference/
+*** datasette                                   :__come_back_to:
+https://github.com/simonw/datasette
 *** pympler
 https://github.com/pympler/pympler
 *** pyqtree                                     :spatial:
@@ -441,6 +467,10 @@ https://github.com/pytransitions/transitions
 https://github.com/hukkin/tomli-w
 *** urllib3                                     :urls:
 https://urllib3.readthedocs.io/en/stable/index.html
+*** purl                                        :urls:
+https://github.com/codeinthehole/purl
+*** furl                                        :urls:
+https://github.com/gruns/furl
 *** yaml
 **** pyaml
 https://pyyaml.org/
@@ -488,6 +518,52 @@ https://github.com/tabatkins/railroad-diagrams
 http://seaborn.pydata.org/index.html
 *** stackprinter                                :profiling:stacktrace:
 https://github.com/cknd/stackprinter
+** Distribution
+https://packaging.python.org/en/latest/guides/
+*** setuptools
+https://setuptools.pypa.io/en/latest/setuptools.html
+**** setuptools-rust
+https://github.com/PyO3/setuptools-rust
+**** calver
+https://github.com/di/calver
+*** pip
+https://pip.pypa.io/en/stable/
+**** pip-chill                                    :pip:requirements:versioning:
+https://github.com/rbanffy/pip-chill
+**** pipreqs                                      :pip:requirements:versioning:
+https://github.com/bndr/pipreqs
+**** pip-review                                   :pip:
+https://github.com/jgonggrijp/pip-review
+*** poetry
+https://github.com/python-poetry/poetry
+*** build
+https://github.com/pypa/build
+https://pypa-build.readthedocs.io/en/latest/
+*** distlib
+https://distlib.readthedocs.io/en/latest/
+*** pkginfo
+https://pythonhosted.org/pkginfo/
+
+*** pkginfo2
+https://github.com/nexB/pkginfo2
+*** wheel
+https://wheel.readthedocs.io/en/stable/
+*** bumpver                                       :versioning:
+https://github.com/mbarkhau/bumpver
+*** python-semantic-release                       :versioning:
+https://github.com/python-semantic-release/python-semantic-release
+*** semantic-version                              :versioning:
+https://github.com/rbarrois/python-semanticversion
+*** py2app
+https://github.com/ronaldoussoren/py2app
+*** py2exe
+https://github.com/py2exe/py2exe
+*** pyinstaller
+https://github.com/pyinstaller/pyinstaller
+*** shiv
+https://github.com/linkedin/shiv
+*** conda
+https://github.com/conda/conda/
 ** Docs
 *** markdown
 **** commonmark                                :markdown:
@@ -514,6 +590,8 @@ sphinxcontrib-jsmath
 sphinxcontrib-qthelp
 sphinxcontrib-serializinghtml
 **** alabaster
+*** pdoc
+https://github.com/mitmproxy/pdoc
 ** Exceptions
 *** better-exceptions
 https://github.com/qix-/better-exceptions
@@ -531,12 +609,15 @@ https://github.com/sdispater/crashtest
 https://doc.qt.io/qtforpython-6/quickstart.html
 https://www.learnpyqt.com/blog/pyqt6-vs-pyside6/
 ***** pyqt
+https://doc.qt.io/qtforpython/
 ***** pyside
 **** glwindow                                  :opengl:
 https://github.com/cprogrammer1994/GLWindow
 https://glwindow.readthedocs.io/en/latest/
 **** renpy                                     :visual_novel:
 https://github.com/renpy/renpy
+**** wooey                                     :web_ui:
+https://github.com/wooey/wooey
 *** pygame
 https://www.pygame.org/news
 https://www.pygame.org/docs/
@@ -561,6 +642,7 @@ https://github.com/ufkapano/planegeometry
 https://pillow.readthedocs.io/en/stable/
 *** imageio                                     :image_processing:
 https://imageio.readthedocs.io/en/stable/index.html
+
 *** pixel-art
 https://github.com/vvanirudh/Pixel-Art
 *** jpeg
@@ -569,6 +651,8 @@ https://github.com/vvanirudh/Pixel-Art
 *** pixman
 *** moviepiy
 https://github.com/Zulko/moviepy
+*** wand                                        :image_processing:imagemagick:
+https://github.com/emcconville/wand
 ** Linting
 *** autopep8                                    :formatting:
 https://github.com/hhatto/autopep8
@@ -610,26 +694,6 @@ https://github.com/ariebovenberg/slotscheck
 https://slotscheck.readthedocs.io/en/latest/
 *** schema                                      :validation:
 https://github.com/keleshev/schema
-** Other Langs
-*** cython
-https://github.com/cython/cython
-*** erlang
-https://github.com/Pyrlang/Pyrlang
-https://github.com/hdima/erlport
-
-*** fortls                                      :fortran:
-https://github.com/fortran-lang/fortls
-*** llvmlite                                    :llvm:
-https://github.com/numba/llvmlite
-*** rust
-https://github.com/PyO3/pyo3
-*** prolog
-**** prologterms-py                            :dsl:
-https://github.com/cmungall/prologterms-py
-**** pyswip                                    :prolog:
-https://github.com/yuce/pyswip
-**** pyswip
-https://github.com/yuce/pyswip
 ** Logic
 *** ai-toolbox                                  :MDP:POMDP:
 https://github.com/Svalorzen/AI-Toolbox
@@ -675,13 +739,6 @@ https://github.com/pysmt/pysmt
 https://github.com/uber/causalml
 **** dowhy                                     :causal_model:
 https://github.com/py-why/dowhy
-** Stats
-*** multipy                                     :hypothesis_testing:
-https://github.com/puolival/multipy
-*** nlp-qrmine                                  :qualitative_research:
-https://github.com/dermatologist/nlp-qrmine
-*** statsmodels
-https://www.statsmodels.org/stable/index.html
 ** Machine Learning
 *** keras
 https://keras.io/examples/
@@ -700,14 +757,78 @@ https://github.com/reiinakano/scikit-plot
 *** nltk
 http://www.nltk.org/book/
 https://www.nltk.org/
+*** simpy                                       :discrete_event_simulation:
+https://gitlab.com/team-simpy/simpy
+** Other Langs
+*** cython
+https://github.com/cython/cython
+*** erlang
+https://github.com/Pyrlang/Pyrlang
+https://github.com/hdima/erlport
+
+*** fortls                                      :fortran:
+https://github.com/fortran-lang/fortls
+*** llvmlite                                    :llvm:
+https://github.com/numba/llvmlite
+*** rust
+https://github.com/PyO3/pyo3
+*** prolog
+**** prologterms-py                            :dsl:
+https://github.com/cmungall/prologterms-py
+**** pyswip                                    :prolog:
+https://github.com/yuce/pyswip
+**** pyswip
+https://github.com/yuce/pyswip
+*** ironpython                                  :csharp:
+https://github.com/IronLanguages/ironpython3
+** Profiling
+*** coveragepy
+https://github.com/nedbat/coveragepy
+https://coverage.readthedocs.io/en/7.4.1/
+*** pyelftools                                  :DWARF:ELF:debugging:
+https://github.com/eliben/pyelftools
+*** py-spy
+https://github.com/benfred/py-spy
+*** guppy                                       :heap:profiling:
+https://github.com/zhuyifei1999/guppy3/
+https://zhuyifei1999.github.io/guppy3/
+*** watchdog
+https://pythonhosted.org/watchdog/
+** Stats
+*** multipy                                     :hypothesis_testing:
+https://github.com/puolival/multipy
+*** nlp-qrmine                                  :qualitative_research:
+https://github.com/dermatologist/nlp-qrmine
+*** statsmodels
+https://www.statsmodels.org/stable/index.html
 ** System
 *** pyutil                                      :monitoring:
 https://github.com/giampaolo/psutil
+*** supervisor
+https://github.com/Supervisor/supervisor
 ** Task runners
 *** bonobo
 https://docs.bonobo-project.org/en/master/
-*** celery
+*** spiff
+https://github.com/knipknap/SpiffWorkflow
+*** taskflow
+https://docs.openstack.org/developer/taskflow/
+*** joblib
+https://joblib.readthedocs.io/
+*** prefect
+https://github.com/PrefectHQ/prefect
+*** ansible
+https://github.com/ansible/ansible
+*** bitbake
+https://github.com/openembedded/bitbake
+*** buildout
+https://github.com/buildout/buildout
+*** pybuilder
+https://github.com/pybuilder/pybuilder
+*** celery                                      :task_queue:
 https://github.com/celery/celery
+**** flower
+https://github.com/mher/flower
 *** cmdline-provenance
 https://cmdline-provenance.readthedocs.io/en/latest/
 *** jenkins
@@ -743,9 +864,17 @@ https://pytest-cov.readthedocs.io/en/latest/
 https://pytest-mock.readthedocs.io/en/latest/
 **** pytest-watch
 https://github.com/joeyespo/pytest-watch
+*** tox
+https://tox.readthedocs.io/en/latest/
+*** faker                                       :data_generator:
+https://github.com/joke2k/faker
+*** mimesis                                     :data_generator:
+https://github.com/lk-geimfari/mimesis
 ** Text manipulation
 *** blessings                                   :terminal:
 https://github.com/erikrose/blessings
+*** babel                                       :internationalisation:
+http://babel.pocoo.org/en/latest/
 *** fonts
 **** fonttools
 https://github.com/fonttools/fonttools
@@ -762,6 +891,10 @@ https://palletsprojects.com/p/jinja/
 *** nlp
 **** inflect                                   :inflection:plural:
 https://github.com/jaraco/inflect
+**** gensim                                    :topic_models:
+https://github.com/RaRe-Technologies/gensim
+**** stanza
+https://github.com/stanfordnlp/stanza
 **** parlAI                                    :facebook:
 https://github.com/facebookresearch/ParlAI
 **** pywsd                                     :word_vectors:
@@ -822,6 +955,8 @@ https://github.com/smrg-lm/sc3
 https://github.com/josiah-wolf-oberholtzer/supriya
 **** typer                                     :arg_parsing:cli:
 https://github.com/tiangolo/typer
+*** cssutils
+https://pypi.org/project/cssutils/
 *** pylatexenc                                  :latex:
 https://github.com/phfaist/pylatexenc
 *** swda                                        :damsl:
@@ -836,15 +971,6 @@ https://github.com/tartley/colorama
 https://github.com/feluxe/sty
 **** termcolor
 ("python -m termcolor " for a test print)
-** Profiling
-*** coveragepy
-https://github.com/nedbat/coveragepy
-https://coverage.readthedocs.io/en/7.4.1/
-*** guppy                                       :heap:profiling:
-https://github.com/zhuyifei1999/guppy3/
-https://zhuyifei1999.github.io/guppy3/
-*** watchdog
-https://pythonhosted.org/watchdog/
 * Misc
 ** awesome-python
 https://github.com/vinta/awesome-python

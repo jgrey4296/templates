@@ -15,11 +15,11 @@
  (position . 7564)
  (last-modified 26106 17822 656893 327000))
 ("org-refile-last-stored"
- (filename . "/media/john/data/github/jgrey4296.github.io/orgfiles/base_agenda.org")
- (front-context-string . "**** TODO [#A] d")
- (rear-context-string . "i target lister\n")
- (position . 16193)
- (last-modified 26092 25043 821609 160000))
+ (filename . "/media/john/data/github/_templates/packages/python.org")
+ (front-context-string . "** distribution\n")
+ (rear-context-string . "d.org/watchdog/\n")
+ (position . 31125)
+ (last-modified 26112 61536 893047 483000))
 ("packages"
  (filename . "/media/john/data/github/_templates/packages/")
  (front-context-string . "python.org\n  -rw")

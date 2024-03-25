@@ -1,263 +1,547 @@
 #+TITLE: Python Packages Reference
 https://status.python.org/
 
-* Overview :toc:
-- [[#main][Main]]
-- [[#stdlib][Stdlib]]
-- [[#categories][Categories]]
-  - [[#adb][ADB]]
-  - [[#algorithms][Algorithms]]
-  - [[#apis][Apis]]
-  - [[#architecture][Architecture]]
-  - [[#argumentation][Argumentation]]
-  - [[#best-practices][Best-practices]]
-  - [[#datastructures][Datastructures]]
-  - [[#diagrams][Diagrams]]
-  - [[#docs][Docs]]
-  - [[#exceptions][Exceptions]]
-  - [[#graphics][Graphics]]
-  - [[#linting][Linting]]
-  - [[#misc][Misc]]
-  - [[#other-langs][Other Langs]]
-  - [[#smt-and-logic][SMT and logic]]
-  - [[#stats][Stats]]
-  - [[#machine-learning][Machine Learning]]
-  - [[#system][System]]
-  - [[#task-runners][Task runners]]
-  - [[#testing][Testing]]
-  - [[#text-manipulation][Text manipulation]]
-  - [[#xml][XML]]
-- [[#environments][Environments]]
-  - [[#core][Core]]
-  - [[#to-make-core][To Make Core]]
-  - [[#alt-cores][Alt Cores]]
-
 * Main
-https://github.com/jjjake/internetarchive
-https://archive.org/developers/internetarchive/installation.html
-https://github.com/vinta/awesome-python
-https://github.com/bytewax/bytewax
-https://github.com/OlafHaag/VectorFields/tree/master
-
 * Stdlib
+** useful
+*** abc
+*** argparse
+*** ast
+*** asyncio
+*** bdb
+*** cmd
+*** code
+*** collections
+*** contextlib
+*** copy
+*** csv
+*** ctypes
+*** dataclasses
+*** datetime
+*** enum
+*** functools
+*** __future__
+*** graphlib
+*** gzip
+*** hashlib
+*** heapq
+*** inspect
+*** io
+*** json
+*** linecache
+*** logging
+*** pdb
+*** queue
+*** random
+*** secrets
+*** shelve
+*** shutil
+*** signal
+*** sqlite3
+*** stat
+*** statistics
+*** struct
+*** tempfile
+*** tomllib
+*** trace                                       :profiling:
+*** traceback
+*** tracemalloc                                 :profiling:
+*** types
+*** typing
+*** unittest
+*** uuid
+*** warnings
+** general
+** rest
+*** antigravity
+*** base64
+*** bisect
+*** bz1
+*** calendar
+*** codecs
+*** codeop
+*** colorsys
+*** compileall
+*** concurrent
+*** configparser
+*** contextvars
+*** copyreg
+*** cProfile
+*** curses
+*** dbm
+*** decimal
+*** difflib
+*** dis
+*** doctest
+*** email
+*** encodings
+*** ensurepip
+*** filecmp
+*** fileinput
+*** fnmatch
+*** fractions
+*** ftplib
+*** genericpath
+*** getopt
+*** getpass
+*** gettext
+*** glob
+*** hmac
+*** html
+*** http
+*** idlelib
+*** imaplib
+*** importlib
+*** ipaddress
+*** keyword
+*** locale
+*** lzma
+*** mailbox
+*** mimetypes
+*** modulefinder
+*** multiprocessing
+*** netrc
+*** ntpath
+*** nturl2path
+*** numbers
+*** opcode
+*** operator
+*** optparse
+*** os
+*** pickle
+*** pickletools
+*** pkgutil
+*** platform
+*** plistlib
+*** poplib
+*** posixpath
+*** pprint
+*** profile
+*** pstats
+*** pty
+*** pyclbr
+*** pydoc
+*** quopri
+*** reprlib
+*** rlcompleter
+*** runpy
+*** sched
+*** selectors
+*** shlex
+*** site
+*** smtplib
+*** socket
+*** socketserver
+*** ssl
+*** string
+*** stringprep
+*** subprocess
+*** symtable
+*** sysconfig
+*** tabnanny
+*** tarfile
+*** test
+*** textwrap
+*** this
+*** threading
+*** timeit
+*** tkinter
+*** token
+*** tokenize
+*** tty
+*** turtle
+*** turtledemo
+*** urllib
+*** venv
+*** wave
+*** weakref
+*** webbrowser
+*** wsgiref
+*** xml
+**** markupsafe
+https://palletsprojects.com/p/markupsafe/
+*** xmlrpc
+*** zipapp
+*** zipfile
+*** zipimport
+*** zoneinfo
+
 * Categories
-** ADB
-pure-python-adb                                                                                 : 0.3.0.dev0
-https://github.com/JeffLIrion/adb_shell                                                         : adb : android
+** ADB                                           :android:
+*** pure-python-adb
+*** adb-shell
+https://github.com/JeffLIrion/adb_shell
 
 ** Algorithms
-https://more-itertools.readthedocs.io/en/stable/
-https://python-validators.github.io/validators/
-https://github.com/seatgeek/thefuzz
-https://dirty-equals.helpmanual.io/latest/
+*** pyxirr                                      :finance:rust:
+https://anexen.github.io/pyxirr/
+*** boltons                                     :utility:
 https://boltons.readthedocs.io/en/latest/
-cycler                                                                                          : 0.11.0
-noise
-editdistance                                                                                    : 0.5.3
-pylev                                                                                           : 1.3.0
-python-barcode                                                                                  : 0.14.0
-python-dateutil                                                                                 : 2.8.2
-toposort                                                                                        : 1.7
-scipy                                                                                           : 1.7.3
-munkres
-frozendict                                                                                      : 1.2
-dill                                                                                            : 0.3.4
-https://rednafi.github.io/reflections/structural-subtyping-in-python.html                       : go : programming : structural_subtyping
-https://github.com/santinic/pampy                                                               : lib : pattern_matching
-https://github.com/pytoolz/toolz                                                                : functional_programming : iteration : reference : toolz
-https://github.com/bbaltaxe/wfc-piano-roll                                                      : music : wave_function_collapse
-https://github.com/cmaclell/py_rete                                                             : rete : rule_engine
-https://github.com/iiitv/algos                                                                  : algorithm : c_lang : c_plus_plus : go_lang : implementation : java : javascript
-https://github.com/jstray/lede-algorithms                                                       : algorithm : journalism
-https://scipy.github.io/old-wiki/pages/Cookbook/SavitzkyGolay                                   : cookbook : libraries : math : numpy : scipy
-https://goelhardik.github.io/2016/10/04/fishers-lda/                                            : LDA : machine_learning : statistics : tutorial
-https://anexen.github.io/pyxirr/                                                                : finance : library : programming : rust
-
+*** cycler                                      :iterator:
+https://matplotlib.org/cycler/
+*** dill                                        :serialization:
+https://dill.readthedocs.io/en/latest/
+*** dirty-equals                                :equality:
+https://dirty-equals.helpmanual.io/latest/
+*** editdistance                                :text_comparison:
+https://github.com/roy-ht/editdistance
+*** fishers-lda                                 :LDA:machine_learning:statistics:tutorial:
+https://goelhardik.github.io/2016/10/04/fishers-lda/
+*** frozendict                                  :immutability:
+https://github.com/Marco-Sulla/python-frozendict
+*** lede-algorithims                            :journalism:
+https://github.com/jstray/lede-algorithms
+*** more-itertools                              :iterator:
+https://more-itertools.readthedocs.io/en/stable/
+*** munkres                                     :credit_assignment:
+https://software.clapper.org/munkres/
+*** noise                                       :perlin_noise:
+https://github.com/caseman/noise
+*** pampy   :pattern_matching:
+https://github.com/santinic/pampy
+*** pylev                                       :levenshstein_distance:text_comparison:
+https://github.com/hell03end/pylev3
+*** py-rete                                     :rete:rule_engine:
+https://github.com/cmaclell/py_rete
+*** python-barcode                              :barcode:
+https://python-barcode.readthedocs.io/en/stable/
+*** python-dateutil                             :datetime:
+https://dateutil.readthedocs.io/en/stable/
+*** scipy                                       :numerics:statistics:
+https://www.scipy.org/
+https://docs.scipy.org/doc/scipy/reference/index.html
+*** thefuzz                                     :string_comparison:
+https://github.com/seatgeek/thefuzz
+*** toolz :functional_programming:iteration:reference:
+https://github.com/pytoolz/toolz
+*** toposort                                    :sorting:
+*** validators                                  :validation:
+https://python-validators.github.io/validators/
+*** wfc-piano-roll                              :music:wave_function_collapse:
+https://github.com/bbaltaxe/wfc-piano-roll
+*** pyephem                                     :astronomy:
+https://github.com/brandon-rhodes/pyephem
+*** apriori                                     :association_rules:
+https://github.com/asaini/Apriori
+*** PRML                                        :machine_learning:pattern_recognition:
+https://github.com/ctgk/PRML
 ** Apis
+
+*** bytewax
+https://github.com/bytewax/bytewax
+
+*** ipython
+**** pyheatmagic
+https://github.com/csurfer/pyheatmagic
+*** internetarchive
+https://archive.org/developers/internetarchive/installation.html
+https://github.com/jjjake/internetarchive
+*** mastodon-py
+https://mastodonpy.readthedocs.io/en/1.5.1/
+*** praw                                        :reddit:
+https://github.com/praw-dev/praw
+*** readthedocs
 https://docs.readthedocs.io/en/stable/
-https://github.com/axcore/tartube
-https://github.com/yt-dlp/yt-dlp
-mastodon-py                                                                                     : 1.5.1
-https://github.com/praw-dev/praw                                                                : libraries : reddit
-https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference
-https://github.com/sixohsix/twitter                                                             : libraries : twitter
-https://akamhy.github.io/waybackpy/ - wayback machine
+*** selenium                                    :browsers:firefox:
+https://github.com/mherrmann/selenium-python-helium
+**** helium
+*** sh                                          :executable:shell:subprocess:
 https://amoffat.github.io/sh/
-
-** Architecture
-https://docs.djangoproject.com/en/5.0/
-https://flask.palletsprojects.com/en/2.2.x/
-
-https://github.com/twisted/twisted
-https://github.com/mcfletch/pydispatcher
-https://palletsprojects.com/p/jinja/
-https://palletsprojects.com/p/werkzeug/
-https://docs.pylonsproject.org/projects/waitress/en/stable/
-https://www.rabbitmq.com/
-build                                                                                           : 0.8.0
-https://github.com/tkem/cachetools/
-cachy                                                                                           : 0.3.0
-distlib                                                                                         : 0.3.2
-https://py-filelock.readthedocs.io/en/latest/
-https://github.com/msiedlarek/wiring
-https://github.com/tmontes/python-wires/
-packaging                                                                                       : 20.9
-pexpect                                                                                         : 4.8.0
-pip                                                                                             : 22.2.2
-pkginfo                                                                                         : 1.8.2
-https://github.com/platformdirs/platformdirs
-https://github.com/pytest-dev/pluggy
-https://github.com/pexpect/ptyprocess
-setuptools                                                                                      : 63.4.1
-https://github.com/di/calver
-setuptools-rust                                                                                 : 1.4.1
-virtualenv                                                                                      : 20.16.2
-wheel                                                                                           : 0.37.1
-wrapt                                                                                           : 1.14.1
-
-** Argumentation
-https://github.com/Open-Argumentation/ALIAS
-https://github.com/open-argumentation/SADFace
-https://github.com/siwells/DGDL
-** Best-practices
-https://github.com/mbarkhau/bumpver
-https://github.com/rbarrois/python-semanticversion
-https://github.com/jorisroovers/gitlint
-https://github.com/python-semantic-release/python-semantic-release
-https://github.com/csurfer/pyheatmagic                                                          : heatmap : ipython
-https://github.com/fredcamps/lsp-jedi                                                           : emacs : lisp : lsp
+*** twitter
+https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference
+https://github.com/sixohsix/twitter
+*** waybackpy
+https://akamhy.github.io/waybackpy/
+*** yt-dlp                                      :youtube:
+https://github.com/yt-dlp/yt-dlp
+**** tartube                                   :gui:
+https://github.com/axcore/tartube
+*** LSP
+**** lsp-jedi                                  :lsp:
+https://github.com/fredcamps/lsp-jedi
+**** lsp-server                                :lsp:
 https://github.com/python-lsp/python-lsp-server
-https://github.com/gregmalcolm/python_koans                                                     : education : koan : learning : libraries : practice
-
-https://github.com/jgonggrijp/pip-review
-https://github.com/bndr/pipreqs
-
-https://github.com/norvig/pytudes                                                               : etudes : peter_norvig : practice : programming
-https://github.com/python-rope/rope                                                             : refactoring
-https://github.com/python-rope/ropemacs                                                         : emacs : refactoring : rope
-https://github.com/vinta/awesome-python                                                         : recommendation
+**** lspprotocol
+https://github.com/microsoft/lsprotocol
+**** ruff-lsp
+https://github.com/astral-sh/ruff-lsp
+**** pygls
+https://github.com/openlawlibrary/pygls
+*** calibre
+https://github.com/kovidgoyal/calibre
+*** orcid
+https://github.com/ORCID/python-orcid
+*** pronouncingpy                               :cmu_pronouncing_dict:
+https://github.com/mewo2/pronouncingpy
+*** verbnet
+https://github.com/cu-clear/verbnet
+** Architecture
+*** django                                      :http:server:
+https://docs.djangoproject.com/en/5.0/
+*** flask                                       :http:server:
+https://flask.palletsprojects.com/en/2.2.x/
+*** distribution
+https://packaging.python.org/en/latest/guides/
+**** setuptools
+https://setuptools.pypa.io/en/latest/setuptools.html
+***** setuptools-rust
+https://github.com/PyO3/setuptools-rust
+***** calver
+https://github.com/di/calver
+**** pip
+https://pip.pypa.io/en/stable/
+***** pip-chill                                   :pip:requirements:versioning:
 https://github.com/rbanffy/pip-chill
+***** pipreqs                                     :pip:requirements:versioning:
+https://github.com/bndr/pipreqs
+***** pip-review                                  :pip:
+https://github.com/jgonggrijp/pip-review
+**** poetry
+https://github.com/python-poetry/poetry
+**** build
+https://github.com/pypa/build
+https://pypa-build.readthedocs.io/en/latest/
+**** distlib
+https://distlib.readthedocs.io/en/latest/
+**** pkginfo
+https://pythonhosted.org/pkginfo/
 
+**** pkginfo2
+https://github.com/nexB/pkginfo2
+**** wheel
+https://wheel.readthedocs.io/en/stable/
+**** bumpver                                   :versioning:
+https://github.com/mbarkhau/bumpver
+**** python-semantic-release                   :versioning:
+https://github.com/python-semantic-release/python-semantic-release
+**** semantic-version                          :versioning:
+https://github.com/rbarrois/python-semanticversion
+*** pexpect                                     :subprocess:
+https://pexpect.readthedocs.io/en/stable/
+*** platformdirs                                :operating_system:
+https://github.com/platformdirs/platformdirs
+*** pluggy                                      :plugins:
+https://github.com/pytest-dev/pluggy
+*** ptyprocess                                  :pseudo_terminal:subprocess:
+https://github.com/pexpect/ptyprocess
+*** pydispatcher                                :signals:
+https://github.com/mcfletch/pydispatcher
+*** py-filelock                                 :files:
+https://py-filelock.readthedocs.io/en/latest/
+*** python-wires                                :plugins:signals:
+https://github.com/tmontes/python-wires/
+*** rabbitmq                                    :message_broker:signals:
+https://www.rabbitmq.com/
+*** twisted                                     :multi_threading:
+https://github.com/twisted/twisted
+https://docs.twisted.org/en/stable/
+*** virtualenv                                  :virtual_environment:
+https://virtualenv.pypa.io/en/latest/
+*** waitress                                    :WSGI:http:server:
+https://docs.pylonsproject.org/projects/waitress/en/stable/
+*** wekzeug                                     :WSGI:http:server:
+https://palletsprojects.com/p/werkzeug/
+*** wiring                                      :dependency_injection:interface:plugins:
+https://github.com/msiedlarek/wiring
+*** wrapt                                       :decorator:monkey_patching:
+https://wrapt.readthedocs.io/en/master/
+** Argumentation
+
+*** ALIAS
+https://github.com/Open-Argumentation/ALIAS
+*** dgdl
+https://github.com/siwells/DGDL
+*** sadface
+https://github.com/open-argumentation/SADFace
 ** Datastructures
-https://github.com/zhuyifei1999/guppy3/
-https://zhuyifei1999.github.io/guppy3/
-https://github.com/ariebovenberg/slotscheck
-https://slotscheck.readthedocs.io/en/latest/
-https://github.com/pympler/pympler
+
+*** arrow
 https://arrow.apache.org/docs/python/getstarted.html
-https://urllib3.readthedocs.io/en/stable/index.html
-https://github.com/jaraco/path
+*** attrs
 https://www.attrs.org/en/stable/
-https://github.com/pytransitions/transitions
-https://pyyaml.org/
-https://karimbahgat.github.io/Pyqtree/
-imagesize                                                                                       : 1.4.1
-jsonschema                                                                                      : 4.16.0
-https://jsonlines.readthedocs.io/en/latest/
-https://numpy.org/doc/stable/
-https://pandas.pydata.org/docs/
-https://github.com/pydata/bottleneck
-https://github.com/pydata/numexpr
-
-https://docs.pola.rs/py-polars/html/reference/
-https://github.com/tobgu/pyrsistent
-https://github.com/keleshev/schema
-toml                                                                                            : 0.10.2
-tomli                                                                                           : 2.0.1
-tomlkit                                                                                         : 0.11.1
-https://github.com/hukkin/tomli-w
-yaml                                                                                            : 0.2.5
+*** benedict
 https://github.com/fabiocaccamo/python-benedict.git
-https://github.com/rezoo/movis : movies
-https://github.com/JNRowe/pyisbn
-https://github.com/TorKlingberg/isbn_hyphenate
-*** graphs
-https://graphviz.readthedocs.io/en/stable/
-https://github.com/pygraphviz/pygraphviz/issues/398
-https://github.com/pydot/pydot
-https://igraph.org/
-https://networkx.github.io/                                                                     : graph : network : networkx
-https://github.com/Murali-group/halp                                                            : algorithms : hypergraph : library
-https://github.com/ezod/hypergraph                                                              : hypergraph : library
-https://github.com/lmcinnes/hypergraph                                                          : hypergraph : library
-https://github.com/mvcisback/hasse                                                              : partial_order : sets
-
 *** databases
+**** sqlite
+**** sqlalchemy
 https://alembic.sqlalchemy.org/en/latest/tutorial.html
 https://docs.sqlalchemy.org/en/20/
-https://github.com/ponyorm/pony/                                                                : SQL : database : databases : library : object_relation_mapper : object_relational_mapper : pony
-https://marshmallow.readthedocs.io/en/stable/                                                   : library : marshmallow : technical
-sqlite                                                                                          : 3.39.3
-
+**** pony
+https://github.com/ponyorm/pony/
+*** marshmallow                                :serialisation:
+https://marshmallow.readthedocs.io/en/stable/
 *** excel
-pylightxl                                                                                       : 1.59
-pyexcel                                                                                         : 0.7.0
-pyexcel-io                                                                                      : 0.6.6
-openpyxl                                                                                        : 3.0.10
-https://github.com/pyexcel/pyexcel                                                              : excel : library : spreadsheets
-https://github.com/PydPiper/pylightxl                                                           : excel : library : spreadsheets
-
-** Diagrams
-https://github.com/MNoichl/opinionated  : graphs
-https://github.com/cknd/stackprinter
-https://github.com/daleroberts/itermplot                                                        : iterm2 : matplotlib : visualisation
-https://github.com/mingrammer/diagrams#getting-started
-https://github.com/plotly/plotly.py
-https://github.com/reiinakano/scikit-plot                                                       : graph : libraries : plot : scikit
-https://github.com/ricklupton/floweaver
+**** openpyxl
+**** pyexcel
+https://github.com/pyexcel/pyexcel
+**** pyexcel-io
+**** pylightxl
+https://github.com/PydPiper/pylightxl
+*** graphs
+**** graphviz
+https://graphviz.readthedocs.io/en/stable/
+https://github.com/pygraphviz/pygraphviz/issues/398
+***** pydot                                   :graphviz:
+https://github.com/pydot/pydot
+***** pygraphviz
 https://pygraphviz.github.io/documentation/pygraphviz-1.5/index.html
 https://www.graphviz.org/
+**** halp                                      :hypergraph:
+https://github.com/Murali-group/halp
+**** hasse                                     :partial_order:
+https://github.com/mvcisback/hasse
+**** hypergraph                                :hypergraph:
+https://github.com/ezod/hypergraph
+https://github.com/lmcinnes/hypergraph
+**** igraph                                    :analysis:
+https://igraph.org/
+**** networkx
+https://networkx.github.io/
+*** imagesize                                   :image_processing:
+*** isbn
+**** isbn-hyphenate
+https://github.com/TorKlingberg/isbn_hyphenate
+**** isbnlib
+https://github.com/xlcnd/isbnlib
+**** isbntools
+https://github.com/xlcnd/isbntools
+**** pyisbn
+https://github.com/JNRowe/pyisbn
+*** json
+**** jsonschema
+https://python-jsonschema.readthedocs.io/en/stable/
+**** jsonlines
+https://jsonlines.readthedocs.io/en/latest/
+*** movis                                       :movies:
+https://github.com/rezoo/movis
+*** numpy                                       :numerics:
+https://numpy.org/doc/stable/
+**** bottleneck                                :numpy:
+https://github.com/pydata/bottleneck
+**** numexpr                                   :numpy:
+https://github.com/pydata/numexpr
+*** pandas                                      :data_analysis:
+https://pandas.pydata.org/docs/
+*** path                                        :file_path:
+https://github.com/jaraco/path
+*** polars                                      :data_analysis:
+https://docs.pola.rs/py-polars/html/reference/
+*** pympler
+https://github.com/pympler/pympler
+*** pyqtree                                     :spatial:
+https://karimbahgat.github.io/Pyqtree/
+*** pyrsistent                                  :immutability:
+https://github.com/tobgu/pyrsistent
+*** pytransitions                               :FSMs:
+https://github.com/pytransitions/transitions
+*** toml
+**** tomli
+**** tomlit
+**** tomli-w
+https://github.com/hukkin/tomli-w
+*** urllib3                                     :urls:
+https://urllib3.readthedocs.io/en/stable/index.html
+*** yaml
+**** pyaml
+https://pyyaml.org/
+*** vectorfields
+https://github.com/OlafHaag/VectorFields
+*** buku                                        :bookmarks:
+https://github.com/jarun/Buku
+*** XML
+**** generateDS
+http://www.davekuhlman.org/generateDS.html
+**** pyxb
+https://pyxb.sourceforge.net/
+**** scrapy                                    :twisted:
+https://github.com/scrapy/scrapy
+**** xmlschema
+https://xmlschema.readthedocs.io/en/latest/
+**** xsdata
+https://xsdata.readthedocs.io/en/latest/
+***** xsdata-plantuml
+https://github.com/tefra/xsdata-plantuml
+
+*** cachetools
+https://github.com/tkem/cachetools/
+*** cachy                                       :caching:
+https://cachy.readthedocs.io/en/latest/
+** Diagrams
+*** diagrams                                    :system_diagrams:
+https://github.com/mingrammer/diagrams
+https://diagrams.mingrammer.com/
+*** floweaver                                   :sankey_diagram:
+https://github.com/ricklupton/floweaver
+*** matplotlib
 http://matplotlib.org
-https://github.com/tabatkins/railroad-diagrams
-http://seaborn.pydata.org/index.html
+**** itermplot                                 :iterm:
+https://github.com/daleroberts/itermplot
+**** opinionated                               :stylesheets:
+https://github.com/MNoichl/opinionated
+*** palettable                                  :colours:
 https://jiffyclub.github.io/palettable/
-
+*** plotly
+https://github.com/plotly/plotly.py
+*** railroad-diagrams                           :parsing:
+https://github.com/tabatkins/railroad-diagrams
+*** seaborn
+http://seaborn.pydata.org/index.html
+*** stackprinter                                :profiling:stacktrace:
+https://github.com/cknd/stackprinter
 ** Docs
-https://docs.getpelican.com/en/latest/
-commonmark                                                                                      : 0.9.1
-Markdown                                                                                        : 3.3.4
-https://www.sphinx-doc.org/en/master/contents.html                                              : documentation : programming : python : software_engineering : sphinx
-alabaster                                                                                       : 0.7.12
-Sphinx                                                                                          : 5.0.2
-sphinxcontrib-applehelp                                                                         : 1.0.2
-sphinxcontrib-devhelp                                                                           : 1.0.2
-sphinxcontrib-htmlhelp                                                                          : 2.0.0
-sphinxcontrib-jsmath                                                                            : 1.0.1
-sphinxcontrib-qthelp                                                                            : 1.0.3
-sphinxcontrib-serializinghtml                                                                   : 1.1.5
-Jinja2                                                                                          : 3.0.3
-pandoc
+*** markdown
+**** commonmark                                :markdown:
+https://github.com/readthedocs/commonmark.py
+**** markdown-it-py
+https://github.com/executablebooks/markdown-it-py
+*** pandoc
+https://pandoc.org/index.html
 *** pdfs
-https://github.com/pmaupin/pdfrw/                                                               : pdf : pdfrw : programming
+**** borb
 https://github.com/jorisschellekens/borb
+**** pdfrw
+https://github.com/pmaupin/pdfrw/
+*** python-bibtexparser                         :bibtex:
 https://github.com/sciunto-org/python-bibtexparser
-
+*** pelican                                     :static_site_generator:
+https://docs.getpelican.com/en/latest/
+*** sphinx                                      :documentation:
+https://www.sphinx-doc.org/en/master/contents.html
+sphinxcontrib-applehelp
+sphinxcontrib-devhelp
+sphinxcontrib-htmlhelp
+sphinxcontrib-jsmath
+sphinxcontrib-qthelp
+sphinxcontrib-serializinghtml
+**** alabaster
 ** Exceptions
-better-exceptions                                                                               : 0.3.3
+*** better-exceptions
+https://github.com/qix-/better-exceptions
+*** grappa                                      :assertion:
+https://github.com/grappa-py/grappa
+*** pretty-errors
 https://github.com/onelivesleft/PrettyErrors/
+*** rich
 https://rich.readthedocs.io/en/stable/introduction.html
-https://github.com/grappa-py/grappa                                                             : assert : grappa : unit_testing
-
+*** crashtest
+https://github.com/sdispater/crashtest
 ** Graphics
-https://tqdm.github.io/
-https://github.com/ufkapano/planegeometry
-https://pillow.readthedocs.io/en/stable/
-https://imageio.readthedocs.io/en/stable/index.html
-https://github.com/inconvergent/hyphae/blob/master/hyphae.py                                    : graphics : inconvergent : programming
-https://github.com/vvanirudh/Pixel-Art                                                          : machine_learning : pixel_art
-jpeg                                                                                            : 9e
-ncurses                                                                                         : 6.3
-pastel                                                                                          : 0.2.1
-pixman                                                                                          : 0.40.0
-https://github.com/Zulko/moviepy
 *** ui
-https://github.com/Dvlv/Tkinter-By-Example                                                      : GUI : libraries : tkinter : tutorial
-https://www.learnpyqt.com/blog/pyqt6-vs-pyside6/                                                : programming : pyside : python : pytq
-https://github.com/cprogrammer1994/GLWindow                                                     : open_gl
-https://github.com/renpy/renpy                                                                  : renpy : visual_novel
-
-*** Cairo
-https://pycairo.readthedocs.io/en/latest/reference/context.html                                 : cairo : libraries : python : reference
+**** qt
+https://doc.qt.io/qtforpython-6/quickstart.html
+https://www.learnpyqt.com/blog/pyqt6-vs-pyside6/
+***** pyqt
+***** pyside
+**** glwindow                                  :opengl:
+https://github.com/cprogrammer1994/GLWindow
+https://glwindow.readthedocs.io/en/latest/
+**** renpy                                     :visual_novel:
+https://github.com/renpy/renpy
+*** pygame
+https://www.pygame.org/news
+https://www.pygame.org/docs/
+*** cairo
+https://pycairo.readthedocs.io/en/latest/reference/context.html
 
 on mac:
 dont install cairo using conda,
@@ -267,194 +551,338 @@ pip install pygobject pycairo
 on linux:
 apt install pkg-config libcairo2-dev libgirepository1.0-dev
 pip install pygobject pycairo
-
+**** hyphae                                    :art:cairo:inconvergent:
+https://github.com/inconvergent/hyphae/blob/master/hyphae.py
+*** tqdm                                        :progress_bar:
+https://tqdm.github.io/
+*** planegeometry                               :algorithms:geometry:
+https://github.com/ufkapano/planegeometry
+*** pillow                                      :image_processing:
+https://pillow.readthedocs.io/en/stable/
+*** imageio                                     :image_processing:
+https://imageio.readthedocs.io/en/stable/index.html
+*** pixel-art
+https://github.com/vvanirudh/Pixel-Art
+*** jpeg
+*** ncurses
+*** pastel
+*** pixman
+*** moviepiy
+https://github.com/Zulko/moviepy
 ** Linting
-https://github.com/astral-sh/ruff
-https://github.com/astral-sh/ruff-lsp
-https://github.com/microsoft/lsprotocol
-https://github.com/openlawlibrary/pygls
-https://github.com/ORCID/python-orcid
-https://github.com/xlcnd/isbntools
-https://github.com/xlcnd/isbnlib
-https://pre-commit.com/
-autopep8
-https://github.com/bndr/pycycle                                                                 : imports : programming : pycycle : software_engineering
-https://github.com/LuminosoInsight/python-ftfy                                                  : programming : refactor : unicode
-isort                                                                                           : 5.9.3
-https://github.com/psf/black                                                                    : formatting
-https://github.com/isidentical/refactor                                                         : ast : programming : refactor
-mccabe                                                                                          : 0.7.0
-pycodestyle                                                                                     : 2.8.0
-pydantic                                                                                        : 1.10.0
-pyflakes                                                                                        : 2.4.0
-pylint                                                                                          : 2.14.5
-crashtest                                                                                       : 0.3.1
-https://github.com/nedbat/coveragepy
-https://coverage.readthedocs.io/en/7.4.1/
-flake8                                                                                          : 4.0.1
-https://docs.quantifiedcode.com/python-anti-patterns/index.html
-https://github.com/google/yapf                                                                  : emacs : formatting : libraries : lint : pep8
-*** Typing
-https://github.com/Microsoft/pyright                                                            : libraries : library : pyright : type_checking : type_inference : type_systems
+*** autopep8                                    :formatting:
+https://github.com/hhatto/autopep8
+*** black                                       :formatting:
+https://github.com/psf/black
+*** flake8
+**** mccabe                                    :complexity:
+*** isort                                       :imports:
+*** pycodestyle
+*** pycycle                                     :imports:
+https://github.com/bndr/pycycle
+*** pydantic
+*** pyflakes
+*** pylint
+*** refactoring
+**** refactor
+https://github.com/isidentical/refactor
+**** python-ftfy                               :refactoring:
+https://github.com/LuminosoInsight/python-ftfy
+**** rope                                      :refactoring:
+https://github.com/python-rope/rope
+***** ropemacs
+https://github.com/python-rope/ropemacs
+*** typing
+**** pyright
+https://github.com/Microsoft/pyright
+**** typeshed
 https://github.com/python/typeshed
-mypy
-
-** Misc
-https://github.com/brandon-rhodes/pyephem # astronomy
-https://rmzoo.math.uconn.edu/
-https://mrandri19.github.io/2022/01/12/a-PPL-in-70-lines-of-python.html                         : DAG : __come_back_to : probability : programming
-https://github.com/jarun/Buku                                                                   : bookmark_organisation : cli : libraries
-https://github.com/joeyespo/pytest-watch
-https://github.com/kovidgoyal/calibre
-
+**** mypy
+**** ruff
+https://github.com/astral-sh/ruff
+*** yapf                                        :formatting:
+https://github.com/google/yapf
+*** gitlint                                     :git:
+https://github.com/jorisroovers/gitlint
+https://jorisroovers.com/gitlint/latest/
+*** slotscheck                                  :slots:
+https://github.com/ariebovenberg/slotscheck
+https://slotscheck.readthedocs.io/en/latest/
+*** schema                                      :validation:
+https://github.com/keleshev/schema
 ** Other Langs
-https://github.com/yuce/pyswip
-https://github.com/numba/llvmlite
-https://github.com/fortran-lang/fortls
+*** cython
 https://github.com/cython/cython
 *** erlang
-https://github.com/Pyrlang/Pyrlang                                                              : erlang
-https://github.com/hdima/erlport                                                                : erlang : erlport
+https://github.com/Pyrlang/Pyrlang
+https://github.com/hdima/erlport
 
+*** fortls                                      :fortran:
+https://github.com/fortran-lang/fortls
+*** llvmlite                                    :llvm:
+https://github.com/numba/llvmlite
 *** rust
-https://github.com/PyO3/pyo3                                                                    : interoperability : pyo3 : rust
-https://github.com/PyO3/setuptools-rust                                                         : rust : setuptools
-** SMT and logic
-https://pomegranate.readthedocs.io/en/latest/index.html                                         : causal_model : library : markov_models : pomegranate : statistics
-https://github.com/AlexPof/colubridae
-https://github.com/AlexPof/opycleid
-https://github.com/Svalorzen/AI-Toolbox                                                         : ai : c_plusplus : toolbox
-https://github.com/Z3Prover/z3
-https://github.com/cmungall/prologterms-py                                                      : __come_back_to : dsl : prolog
-https://github.com/gasagna/mpc
-https://github.com/hsmfawaz/Chat-Bot-Using-python-and-ClIPS                                     : CLIPS : production_system : rule_engine
-https://github.com/nilp0inter/experta                                                           : clips : rule_engine
-https://github.com/oxford-quantum-group/discopy
-https://github.com/petercorke/bdsim
-https://github.com/pysmt/pysmt                                                                  : SMT : library
-https://github.com/uber/causalml                                                                : causal_inference : machine_learning
+https://github.com/PyO3/pyo3
+*** prolog
+**** prologterms-py                            :dsl:
+https://github.com/cmungall/prologterms-py
+**** pyswip                                    :prolog:
 https://github.com/yuce/pyswip
-https://gitlab.com/danielhones/pycategories
+**** pyswip
+https://github.com/yuce/pyswip
+** Logic
+*** ai-toolbox                                  :MDP:POMDP:
+https://github.com/Svalorzen/AI-Toolbox
+*** bdsim                                       :block_diagram:dynamic_systems:
+https://github.com/petercorke/bdsim
+*** colubridae                                  :category_theory:
+https://github.com/AlexPof/colubridae
+*** discopy                                     :category_theory:string_diagrams:
+https://github.com/oxford-quantum-group/discopy
+*** experta                                     :expert_system:
+https://github.com/nilp0inter/experta
+*** mpc                                         :MPC:dynamic_systems:
+https://github.com/gasagna/mpc
+*** opycleid                                    :TMT:monoids:music_theory:musicology:transformational_music_analysis:
+https://alexpof.github.io/opycleid/
+https://github.com/AlexPof/opycleid
+*** probabilistic programming
+**** pomegranate                                :bayesian_network:markov_models:probalistic_programming:
+https://pomegranate.readthedocs.io/en/latest/index.html
+**** pymc                                      :bayesian_network:probabilistic_programming:
+https://github.com/pymc-devs/pymc
+**** sorobn                                    :bayesian_network:
+https://github.com/MaxHalford/sorobn
+*** pottasco                                    :ASP:clingo:constraint_programming:
 https://potassco.org/
+*** pycategories                                :category_theory:
+https://gitlab.com/danielhones/pycategories
+*** pysathq                                     :SAT_solving:constraint_programming:
 https://pysathq.github.io/
-*** Sympy
+https://pysathq.github.io/docs/html/
+*** Sympy                                       :symbolic_programming:
 https://docs.sympy.org/latest/guides/index.html
 
 Comparisons: https://en.wikipedia.org/wiki/List_of_computer_algebra_systems
 Sympy can't do: graphy theory, quantifier elimination, control theory, has no forumla editor
-
-** Stats
+*** SMT
+**** z3
+https://github.com/Z3Prover/z3
+**** pysmt                                     :SMT:
+https://github.com/pysmt/pysmt
+*** causal logic
+**** causalml                                  :causal_model:
+https://github.com/uber/causalml
+**** dowhy                                     :causal_model:
 https://github.com/py-why/dowhy
-https://scikit-learn.org/stable/user_guide.html
-https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers  : bayes : hacker : statistics
-https://github.com/MaxHalford/sorobn                                                            : bayesian_network : library
-https://github.com/amitkaps/weed                                                                : data_analysis : education : reference : statistics : tutorial
-https://github.com/asaini/Apriori                                                               : a_priori : machine_learning
-https://github.com/ctgk/PRML                                                                    : book : jupyter : machine_learning
+** Stats
+*** multipy                                     :hypothesis_testing:
+https://github.com/puolival/multipy
+*** nlp-qrmine                                  :qualitative_research:
 https://github.com/dermatologist/nlp-qrmine
-https://github.com/fonnesbeck/statistical-analysis-python-tutorial                              : statistics : tutorial
-https://github.com/jakevdp/PythonDataScienceHandbook                                            : data_analysis : education : libraries : machine_learning : matplotlib : notebooks : numpy : pandas : text_books : tutorial
-https://github.com/puolival/multipy                                                             : hypothesis_testing : libraries
-https://github.com/pymc-devs/pymc                                                               : libraries : machine_learning
-https://github.com/rouseguy/intro2stats                                                         : statistics : tutorial
-https://github.com/stas-semeniuta/textvae                                                       : deep_learning : text_generation : theano
-https://github.com/tflearn/tflearn                                                              : deep_learning
-https://github.com/vahidk/EffectiveTensorflow                                                   : GPU : cuda : machine_learning : tensorflow
-https://utkuufuk.com/2018/05/04/learning-curves/
-https://www.statsmodels.org/stable/index.html                                                   : library : statistics
-
+*** statsmodels
+https://www.statsmodels.org/stable/index.html
 ** Machine Learning
-https://www.tensorflow.org/tutorials
+*** keras
 https://keras.io/examples/
+*** pytorch
 https://pytorch.org/tutorials/index.html
+*** tensorflow
+https://www.tensorflow.org/tutorials
+**** tflearn                                   :tensorflow:
+https://github.com/tflearn/tflearn
+**** effective tensorflow
+https://github.com/vahidk/EffectiveTensorflow
+*** scikit-learn
+https://scikit-learn.org/stable/user_guide.html
+**** scikit-plot
+https://github.com/reiinakano/scikit-plot
+*** nltk
+http://www.nltk.org/book/
+https://www.nltk.org/
 ** System
+*** pyutil                                      :monitoring:
 https://github.com/giampaolo/psutil
 ** Task runners
-https://github.com/jenkinsci/pipeline-examples
-https://www.jenkins.io/doc/book/installing/
-https://chrthomsen.github.io/pygrametl/doc/quickstart/beginner.html
-https://petl.readthedocs.io/en/stable/
-https://pycaret.gitbook.io/docs/
+*** bonobo
 https://docs.bonobo-project.org/en/master/
-https://github.com/snakemake/snakemake
-https://github.com/pydoit/doit
-https://github.com/spotify/luigi
-https://github.com/python-poetry/poetry
-https://github.com/SCons/scons
+*** celery
 https://github.com/celery/celery
-https://joblib.readthedocs.io/en/stable/
-https://www.vistrails.org/usersguide/v2.2/html/
-https://provenance.readthedocs.io/en/latest/intro-guide.html
+*** cmdline-provenance
 https://cmdline-provenance.readthedocs.io/en/latest/
+*** jenkins
+https://www.jenkins.io/doc/book/installing/
+*** joblib
+https://joblib.readthedocs.io/en/stable/
+*** luigi
+https://github.com/spotify/luigi
+*** petl
+https://petl.readthedocs.io/en/stable/
+*** pipeline-examples
+https://github.com/jenkinsci/pipeline-examples
+*** provenance
+https://provenance.readthedocs.io/en/latest/intro-guide.html
+*** pycaret
+https://pycaret.gitbook.io/docs/
+*** pydoit
+https://github.com/pydoit/doit
+*** pygrametl
+https://chrthomsen.github.io/pygrametl/doc/quickstart/beginner.html
+*** scons
+https://github.com/SCons/scons
+*** snakemake
+https://github.com/snakemake/snakemake
+*** vistrails
+https://www.vistrails.org/usersguide/v2.2/html/
 ** Testing
-https://pytest-cov.readthedocs.io/en/latest/
-https://pytest-mock.readthedocs.io/en/latest/
+*** pytest
 https://docs.pytest.org/en/7.3.x/contents.html
-
+**** pytest-cov
+https://pytest-cov.readthedocs.io/en/latest/
+**** pytest-mock
+https://pytest-mock.readthedocs.io/en/latest/
+**** pytest-watch
+https://github.com/joeyespo/pytest-watch
 ** Text manipulation
-https://github.com/phfaist/pylatexenc
-https://pythonhosted.org/watchdog/ : file watching
-https://github.com/mherrmann/selenium-python-helium    : firefox : headless
-https://github.com/jorisroovers/gitlint
-https://github.com/cgpotts/swda
-ansicolors                                                                                      : 1.1.8
-https://github.com/xolox/python-humanfriendly
-fontconfig                                                                                      : 2.13.1
-fonttools                                                                                       : 4.25.0
-freetype                                                                                        : 2.11.0
-https://github.com/feluxe/sty                                                                   : color : libraries : sty
-https://github.com/tartley/colorama                                                             : color : colorama : libraries
-blessings : color
-rich : color
-termcolor                                                                                       : 1.1.0
-("python -m termcolor " for a test print)
-MarkupSafe                                                                                      : 2.1.1
-texttable                                                                                       : 1.6.4
+*** blessings                                   :terminal:
+https://github.com/erikrose/blessings
+*** fonts
+**** fonttools
+https://github.com/fonttools/fonttools
+https://fonttools.readthedocs.io/en/latest/
+**** freetype
+*** template engines
+**** liquid                                     :template:
 https://github.com/jg-rp/liquid
-*** parsing
-https://beautiful-soup-4.readthedocs.io/en/latest/
-https://pygments.org/docs/
-https://pylint.pycqa.org/projects/astroid/en/latest/index.html
-et-xmlfile                                                                                      : 1.1.0
-html5lib                                                                                        : 1.1
-https://github.com/Rainbow-Dreamer/musicpy
-https://github.com/hchasestevens/astpath                                                        : ast : xpath
-https://github.com/josiah-wolf-oberholtzer/supriya                                              : supercollider
-https://github.com/karlicoss/orgparse                                                           : library : org-mode
-https://github.com/smrg-lm/sc3                                                                  : supercollider
-https://ideoforms.github.io/isobar/                                                             : isobar : music : programming : time
-https://pyparsing-docs.readthedocs.io/en/latest/whats_new_in_3_0_0.html#new-features            : parsing : programming : pyparsing : reference
-parso                                                                                           : 0.8.3
-pycparser                                                                                       : 2.21
-pyparsing                                                                                       : 3.0.9
-https://construct.readthedocs.io/en/latest/intro.html
-https://palletsprojects.com/p/click/
-https://github.com/tiangolo/typer
-https://argh.readthedocs.io/en/latest/
-https://github.com/python-poetry/cleo
-clikit                                                                                          : 0.6.2
-
+https://jg-rp.github.io/liquid/
+**** jinja2                                    :macros:template:
+https://jinja.palletsprojects.com/en/3.1.x/
+**** jinja                                       :template:
+https://palletsprojects.com/p/jinja/
 *** nlp
-textblob
-https://github.com/Kyubyong/wordvectors                                                         : NLP : word_vectors
-nltk
-https://github.com/alvations/pywsd                                                              : NLP : libraries : vector : word_sense
-https://github.com/chartbeat-labs/textacy                                                       : NLP : libraries : machine_learning : spacy
-https://github.com/cu-clear/verbnet                                                             : verbnet
-https://github.com/facebookresearch/ParlAI
-https://github.com/fluhus/wordnet-to-json                                                       : NLP : json : word_net
-https://github.com/mewo2/pronouncingpy                                                          : libraries : pronunciation
-https://spacy.io/                                                                               : NLP : libraries : python
+**** inflect                                   :inflection:plural:
 https://github.com/jaraco/inflect
-snowballstemmer                                                                                 : 2.2.0
+**** parlAI                                    :facebook:
+https://github.com/facebookresearch/ParlAI
+**** pywsd                                     :word_vectors:
+https://github.com/alvations/pywsd
+**** snowballstemmer                           :stemmer:
+https://github.com/snowballstem/snowball
+https://snowballstem.org/
+**** spacy
+https://spacy.io/
+***** textacy
+https://github.com/chartbeat-labs/textacy
+https://textacy.readthedocs.io/en/latest/
+**** textblob
+https://textblob.readthedocs.io/en/dev/index.html
+**** wordnet-to-json                           :wordnet:
+https://github.com/fluhus/wordnet-to-json
+**** wordvectors                               :word_vectors:
+https://github.com/Kyubyong/wordvectors
+**** humanfriendly                             :numbers:
+https://github.com/xolox/python-humanfriendly
+*** parsing
+**** argh                                      :arg_parsing:cli:
+https://argh.readthedocs.io/en/latest/
+**** astpath                                   :XPATH:ast:
+https://github.com/hchasestevens/astpath
+**** astroid                                   :ast:
+https://pylint.pycqa.org/projects/astroid/en/latest/index.html
+**** beautifulsoup                             :html:xml:
+https://beautiful-soup-4.readthedocs.io/en/latest/
+**** cleo                                      :arg_parsing:cli:
+https://github.com/python-poetry/cleo
+***** clikit
+**** click                                     :arg_parsing:cli:
+https://palletsprojects.com/p/click/
+**** construct                                 :binary:
+https://construct.readthedocs.io/en/latest/intro.html
+**** et-xmlfile                                :xml:
+https://github.com/compyman/et_xmlfile
+**** html5lib                                  :html:
+https://github.com/html5lib/html5lib-python
+**** isobar                                    :music:
+https://ideoforms.github.io/isobar/
+**** musicpy                                   :music:
+https://github.com/Rainbow-Dreamer/musicpy
+**** orgparse                                  :org_file:
+https://github.com/karlicoss/orgparse
+**** parso                                     :jedi:python:
+https://parso.readthedocs.io/en/latest/
+**** pycparser                                 :c_lang:
+https://github.com/eliben/pycparser
+**** pygments
+https://pygments.org/docs/
+**** pyparsing
+https://pyparsing-docs.readthedocs.io/en/latest/whats_new_in_3_0_0.html#new-features
+**** sc3                                       :supercollider:
+https://github.com/smrg-lm/sc3
+**** supriya                                   :supercollider:
+https://github.com/josiah-wolf-oberholtzer/supriya
+**** typer                                     :arg_parsing:cli:
+https://github.com/tiangolo/typer
+*** pylatexenc                                  :latex:
+https://github.com/phfaist/pylatexenc
+*** swda                                        :damsl:
+https://github.com/cgpotts/swda
+*** texttable                                   :ascii:tables:
+https://github.com/foutaise/texttable/
+*** colour
+**** ansicolors
+**** colorama
+https://github.com/tartley/colorama
+**** sty
+https://github.com/feluxe/sty
+**** termcolor
+("python -m termcolor " for a test print)
+** Profiling
+*** coveragepy
+https://github.com/nedbat/coveragepy
+https://coverage.readthedocs.io/en/7.4.1/
+*** guppy                                       :heap:profiling:
+https://github.com/zhuyifei1999/guppy3/
+https://zhuyifei1999.github.io/guppy3/
+*** watchdog
+https://pythonhosted.org/watchdog/
+* Misc
+** awesome-python
+https://github.com/vinta/awesome-python
+** algos                                         :c_lang:c_plus_cplus:go_lang:implementations:java:
+https://github.com/iiitv/algos
+** subtyping
+https://rednafi.github.io/reflections/structural-subtyping-in-python.html
 
-** XML
-https://github.com/scrapy/scrapy
-https://xmlschema.readthedocs.io/en/latest/
-https://pyxb.sourceforge.net/
-http://www.davekuhlman.org/generateDS.html
-https://xsdata.readthedocs.io/en/latest/
-https://github.com/tefra/xsdata-plantuml
+** cookbooks
+https://scipy.github.io/old-wiki/pages/Cookbook/SavitzkyGolay
+*** python-koans
+https://github.com/gregmalcolm/python_koans
+*** pytudes
+https://github.com/norvig/pytudes
+** ppl
+https://mrandri19.github.io/2022/01/12/a-PPL-in-70-lines-of-python.html
+** tkinter-by-example
+https://github.com/Dvlv/Tkinter-By-Example
+** anti-patterns
+https://docs.quantifiedcode.com/python-anti-patterns/index.html
+** rmzoo                                         :math:
+https://rmzoo.math.uconn.edu/
+** clips
+https://github.com/hsmfawaz/Chat-Bot-Using-python-and-ClIPS
+** data science handbook
+https://github.com/jakevdp/PythonDataScienceHandbook
+** intro2stats
+https://github.com/rouseguy/intro2stats
+** learning-curves
+https://utkuufuk.com/2018/05/04/learning-curves/
+** probabilistic programming
+https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers
+** statistical analysis
+https://github.com/fonnesbeck/statistical-analysis-python-tutorial
+** textvae                                       :machine_learning:theano:
+https://github.com/stas-semeniuta/textvae
+** weed                                          :data_analysis:
+https://github.com/amitkaps/weed
 * Environments
 ** Core
 - beautifulsoup4

@@ -5,6 +5,9 @@ Godot C sharp               # https://docs.godotengine.org/en/stable/tutorials/s
 
 DotNet SDK                  # https://learn.microsoft.com/en-gb/dotnet/core/sdk
 DotNet CLI                  # https://learn.microsoft.com/en-gb/dotnet/core/tools/
+MSBuild                     # https://learn.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props
+Config File Reference       # https://learn.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/
+Project Files               # https://learn.microsoft.com/en-us/visualstudio/ide/solutions-and-projects-in-visual-studio?view=vs-2022
 DotNet Project Templates    # https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new#c-templates
 Nuget                       # https://learn.microsoft.com/en-gb/nuget/
 NuSpec XML                  # https://learn.microsoft.com/en-gb/nuget/reference/nuspec
@@ -15,3 +18,6 @@ Mono Reference              # http://docs.go-mono.com/
 
 Unity Manual                # https://docs.unity3d.com/Manual/index.html
 Unity C sharp               # https://docs.unity3d.com/ScriptReference/index.html
+XUnit Tests                 # https://xunit.net/
+NUnit Tests                 # https://nunit.org/
+Microsoft Tests             # https://github.com/microsoft/testfx

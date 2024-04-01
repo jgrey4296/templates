@@ -2,7 +2,9 @@
 Microsoft C sharp           # https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/
 Microsoft F sharp reference # https://docs.microsoft.com/en-us/dotnet/fsharp/language-reference
 Godot C sharp               # https://docs.godotengine.org/en/stable/tutorials/scripting/c_sharp/index.html
-
+API Reference               # https://learn.microsoft.com/en-us/dotnet/api/?view=dotnet-plat-ext-8.0
+Samples                     # https://learn.microsoft.com/en-us/samples/browse/
+Pearls                      # https://www.dotnetperls.com/s#c#
 DotNet SDK                  # https://learn.microsoft.com/en-gb/dotnet/core/sdk
 DotNet CLI                  # https://learn.microsoft.com/en-gb/dotnet/core/tools/
 MSBuild                     # https://learn.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props

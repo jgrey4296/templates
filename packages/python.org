@@ -653,6 +653,8 @@ https://github.com/vvanirudh/Pixel-Art
 https://github.com/Zulko/moviepy
 *** wand                                        :image_processing:imagemagick:
 https://github.com/emcconville/wand
+*** moderngl                                    :modern_opengl:
+https://moderngl.readthedocs.io/en/5.8.2/
 ** Linting
 *** autopep8                                    :formatting:
 https://github.com/hhatto/autopep8

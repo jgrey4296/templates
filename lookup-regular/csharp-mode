@@ -12,6 +12,7 @@ Config File Reference       # https://learn.microsoft.com/en-us/dotnet/framework
 Project Files               # https://learn.microsoft.com/en-us/visualstudio/ide/solutions-and-projects-in-visual-studio?view=vs-2022
 DotNet Project Templates    # https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new#c-templates
 Nuget                       # https://learn.microsoft.com/en-gb/nuget/
+Nuget Packages              # https://www.nuget.org/packages
 NuSpec XML                  # https://learn.microsoft.com/en-gb/nuget/reference/nuspec
 Nuget Config                # https://learn.microsoft.com/en-gb/nuget/reference/nuget-config-file
 Env Vars                    # https://learn.microsoft.com/en-gb/dotnet/core/tools/dotnet-environment-variables

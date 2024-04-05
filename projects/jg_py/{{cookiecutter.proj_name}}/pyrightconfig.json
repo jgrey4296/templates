@@ -13,7 +13,7 @@
   "extraPaths": [],
   "ignore": [],
   "include": [
-    "{{cooiecutter.proj_name}}"
+    "{{cookiecutter.proj_name}}"
   ],
   "pythonPlatform": "Darwin",
   "pythonVersion": "3.11",

@@ -1,14 +1,35 @@
-Manuals # https://www.gnu.org/software/emacs/manual/index.html
-Mail                # https://mailutils.org/manual/mailutils.html
-ReadTheDocs         # https://readthedocs.org/dashboard/
 
-IPA                 # https://en.m.wikipedia.org/wiki/International_Phonetic_Alphabet
-IPA2                # https://en.m.wikipedia.org/wiki/Help:IPA
-IPA Help            # https://en.m.wikipedia.org/wiki/Help:IPA/English
-Pronouniation Key   # https://en.m.wikipedia.org/wiki/Help:Pronunciation_respelling_key
-Dialects            # https://en.m.wikipedia.org/wiki/International_Phonetic_Alphabet_chart_for_English_dialects
-Enlgish Orthography # https://en.m.wikipedia.org/wiki/English_orthography
+Emacs Manuals            # https://www.gnu.org/software/emacs/manual/index.html
+ReadTheDocs              # https://readthedocs.org/dashboard/
+MailUtils                # https://mailutils.org/manual/mailutils.html
+pypi                     # https://pypi.org/
 
-measuring           # https://measuringstuff.com/
-database design     # https://dbdiagram.io/d
-Design Patterns     # https://refactoring.guru/design-patterns
+IPA                      # https://en.m.wikipedia.org/wiki/International_Phonetic_Alphabet
+IPA2                     # https://en.m.wikipedia.org/wiki/Help:IPA
+IPA Help                 # https://en.m.wikipedia.org/wiki/Help:IPA/English
+Pronouniation Key        # https://en.m.wikipedia.org/wiki/Help:Pronunciation_respelling_key
+Dialects                 # https://en.m.wikipedia.org/wiki/International_Phonetic_Alphabet_chart_for_English_dialects
+English Orthography      # https://en.m.wikipedia.org/wiki/English_orthography
+Design Patterns          # https://refactoring.guru/design-patterns
+Folktale database        # http://www.mftd.org/
+Ladder of abstraction    # https://worrydream.com/LadderOfAbstraction/
+category theory diagrams # https://q.uiver.app/
+colour blind checker     # https://www.whocanuse.com/
+congress                 # https://www.congress.gov/
+database design          # https://dbdiagram.io/d
+dimensions               # https://www.dimensions.com
+explorable explanations  # https://explorabl.es/
+free fonts               # https://www.1001freefonts.com/
+grammar                  # https://www.merriam-webster.com/grammar/
+mcmaster                 # https://www.mcmaster.com/
+measuring                # https://measuringstuff.com/
+our world in data        # https://ourworldindata.org/
+parliament               # https://www.parliament.uk/business/publications/
+plantuml                 # http://plantuml.com/sequence-diagram
+propublica               # https://www.propublica.org
+proton mail              # https://proton.me/
+techdirt                 # https://www.techdirt.com
+the nation               # https://www.thenation.com
+the trace                # https://www.thetrace.org
+unit conversion          # https://convertlive.com/
+media matters            # https://www.mediamatters.org/

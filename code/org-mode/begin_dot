@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name: begin_dot
 # uuid: begin_dot
-# group: src
+# group: babel
 # --
 #+begin_src dot :file ${1:file} :exports results :results silent :cmdline -Tpng
 $0

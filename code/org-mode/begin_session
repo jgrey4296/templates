@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name: begin_session
 # key: begin_session
-# group: src
+# group: babel
 # --
 #+begin_src $1 :results $2{output | value} :session
 $3

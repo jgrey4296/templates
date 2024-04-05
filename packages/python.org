@@ -1083,3 +1083,6 @@ clingo, z3, pysmt, pyswip, pomegranate
 
 astroid
 textblob, inflect, pronouncingpy, spacy
+
+** Links
+https://www.bitecode.dev/p/python-312-what-didnt-make-the-headlines

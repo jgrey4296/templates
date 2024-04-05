@@ -2,7 +2,13 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("dejavu"
+(("libs"
+ (filename . "/media/john/data/github/__libs/")
+ (front-context-string . "lisp\n  drwxrwxr-")
+ (rear-context-string . "0K Mar 31 02:16 ")
+ (position . 842)
+ (last-modified 26127 25075 773456 359000))
+("dejavu"
  (filename . "/media/john/data/github/python/dejavu/")
  (front-context-string . "deja_vu\n  drwxrw")
  (rear-context-string . "0K Mar 19 22:55 ")
@@ -15,11 +21,11 @@
  (position . 7564)
  (last-modified 26106 17822 656893 327000))
 ("org-refile-last-stored"
- (filename . "/media/john/data/github/_templates/packages/python.org")
- (front-context-string . "** distribution\n")
- (rear-context-string . "d.org/watchdog/\n")
- (position . 31125)
- (last-modified 26112 61536 893047 483000))
+ (filename . "/media/john/data/github/jgrey4296.github.io/orgfiles/base_agenda.org")
+ (front-context-string . "*** TODO timelin")
+ (rear-context-string . " wordnut-search\n")
+ (position . 192)
+ (last-modified 26122 435 256455 968000))
 ("packages"
  (filename . "/media/john/data/github/_templates/packages/")
  (front-context-string . "python.org\n  -rw")
@@ -132,8 +138,6 @@
  (filename . "/media/john/"))
 ("rust"
  (filename . "~/github/rust/"))
-("libs"
- (filename . "~/github/_libs/"))
 ("python"
  (filename . "~/github/python/"))
 ("emacsd"

@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name: begin_clingo
 # key: begin_clingo
-# group: src
+# group: babel
 # --
 #+NAME: $1
 #+begin_src clingo :results output :clingo-models 5 :c-W all :clingo-output-debug all

@@ -1,10 +1,10 @@
 # -*- mode: snippet -*-
-# name: begin_src
-# key: begin_src
+# name: begin_python
+# key: begin_python
 # group: babel
 # --
 #+NAME: ${1:Example Code}
-#+begin_src ${2:python} :results ${3:output}
+#+begin_src python :results output
 	$4
 #+end_src
 $0

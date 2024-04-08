@@ -70,7 +70,7 @@
     # MyShortcut => ['exif:createdate','exposuretime','aperture'],
     # MyAlias => 'FocalLengthIn35mmFormat',
     pdf => 'PDF:all',
-    xmp => 'XMP:all',
+    # xmp => 'XMP:all',
 );
 ##-- end shortcuts
 
@@ -91,6 +91,12 @@
                                                 },
                                      },
     ##-- end exif
+
+    # Simple Example:
+    # 'Image::ExifTool::XMP::xmp' => {
+    #                                 MyTag1 => {  },
+    #                                 Year => {},
+    #                             },
 
     # new XMP namespaces (eg. xxx) must be added to the Main XMP table:
     'Image::ExifTool::XMP::Main' => {
@@ -113,13 +119,14 @@
 # The namespace prefix for these tags is 'xxx', which corresponds to
 # an ExifTool family 1 group name of 'XMP-xxx'.
 %Image::ExifTool::UserDefined::bibtex = (
-    GROUPS => { 0 => 'XMP', 1 => 'XMP-bib', 2 => 'bibtex' },
-    NAMESPACE => { 'bibtex' => 'http://www.bibtex.org/' },
-    WRITABLE => 'string', # (default to string-type tags)
-    BibtexFull => { Writable => 'string' },
-    BibTags   => { List     => 'Bag'},
+    GROUPS     => { 0 => 'XMP', 1 => 'XMP-bib', 2 => 'bibtex' },
+    NAMESPACE  => { 'bibtex' => 'http://www.bibtex.org/' },
+    WRITABLE   => 'string', # (default to string-type tags)
+    Full       => { Writable => 'string' },
+    Tags       => { List     => 'Bag'},
 
-    Entry => {
+    # Editable as bib:entryauthor= ...
+    Entry      => {
         # the "Struct" entry defines the structure fields
         Struct => {
             # structure fields (very similar to tag definitions)
@@ -131,7 +138,6 @@
                    Journal     => {},
                    Booktitle   => {},
                    Institution => {},
-                   School      => {},
                    Note        => {},
                    Publisher   => {},
                    Issn        => {},

@@ -50,6 +50,46 @@ https://github.com/pypa/warehouse
 *** tempfile
 *** tomllib
 *** trace                                       :profiling:
+#+begin_src bash :results output
+# List all files called
+python -m trace --listfuncs {file} > {file}
+#+end_src
+
+#+begin_src bash :results output
+# trace lines as they are executed
+python -m trace --trace {file} > {file}
+#+end_src
+
+#+begin_src bash :results output
+# calling relationships
+python -m trace --trackcalls {file} > {file}
+#+end_src
+
+#+begin_src bash :results output
+# create a {}.cover file
+python -m trace --count {file}
+# mark lines that weren't executed with >>>>>>
+python -m trace --missing --count {file}
+# add a summary to stdout
+python -m trace --summary --count {file}
+# put cover files in a specified dir:
+python -m trace --coverdir={dir} --count} {file}
+#+end_src
+
+#+begin_src bash :results output
+python -m trace --ignore-module={module,module,module}
+python -m trace --ignore-dir={dir,dir,dir}
+
+# trace,  but filter out stdlib stuff
+python -m trace --ignore-dir=/home/john/.cache/mamba/envs/default/lib/python3.12/ --trace ?
+#+end_src
+
+
+
+
+
+
+
 *** traceback
 *** tracemalloc                                 :profiling:
 *** types
@@ -262,6 +302,8 @@ https://github.com/mherrmann/selenium-python-helium
 **** helium
 *** sh                                          :executable:shell:subprocess:
 https://amoffat.github.io/sh/
+https://sh.readthedocs.io/en/latest/
+https://github.com/amoffat/sh
 *** twitter
 https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference
 https://github.com/sixohsix/twitter
@@ -575,8 +617,12 @@ https://pandoc.org/index.html
 *** pdfs
 **** borb
 https://github.com/jorisschellekens/borb
+**** xmp-toolkit
+https://python-xmp-toolkit.readthedocs.io/en/latest/
 **** pdfrw
 https://github.com/pmaupin/pdfrw/
+**** pikepdf
+https://pikepdf.readthedocs.io/en/latest/index.html
 *** python-bibtexparser                         :bibtex:
 https://github.com/sciunto-org/python-bibtexparser
 *** pelican                                     :static_site_generator:
@@ -787,6 +833,47 @@ https://github.com/IronLanguages/ironpython3
 *** coveragepy
 https://github.com/nedbat/coveragepy
 https://coverage.readthedocs.io/en/7.4.1/
+
+#+begin_src bash :results output
+coverage --help
+#+end_src
+
+#+RESULTS:
+#+begin_example
+Coverage.py, version 7.4.1 with C extension
+Measure, collect, and report on code coverage in Python programs.
+
+usage: coverage <command> [options] [args]
+
+Commands:
+    annotate    Annotate source files with execution information.
+    combine     Combine a number of data files.
+    debug       Display information about the internals of coverage.py
+    erase       Erase previously collected coverage data.
+    help        Get help on using coverage.py.
+    html        Create an HTML report.
+    json        Create a JSON report of coverage results.
+    lcov        Create an LCOV report of coverage results.
+    report      Report coverage stats on modules.
+    run         Run a Python program and measure code execution.
+    xml         Create an XML report of coverage results.
+
+Use "coverage help <command>" for detailed help on any command.
+Full documentation is at https://coverage.readthedocs.io/en/7.4.1
+#+end_example
+
+**** general usage
+#+begin_src bash :results output
+# create a .coverage cache
+coverage run {file}
+# then get info on it
+coverage report
+# or generate a web report
+coverage html -d {target}
+#+end_src
+
+**** pytest
+
 *** pyelftools                                  :DWARF:ELF:debugging:
 https://github.com/eliben/pyelftools
 *** py-spy

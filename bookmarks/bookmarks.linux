@@ -2,18 +2,30 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("libs"
+(("dejavu"
+ (filename . "/media/john/data/github/python/jgdv/")
+ (front-context-string . "doot.toml\n  -rw-")
+ (rear-context-string . "3K Apr 15 16:05 ")
+ (position . 1158)
+ (last-modified 26141 20437 506344 796000))
+("doom"
+ (filename . "/media/john/data/github/_libs/lisp/doomemacs/")
+ (front-context-string . "lisp\n  drwxr-xr-")
+ (rear-context-string . "0K Mar  1 21:40 ")
+ (position . 453)
+ (last-modified 26141 16207 610571 631000))
+("emacs-share"
+ (filename . "/usr/share/emacs/")
+ (front-context-string . "29.1\n  drwxr-xr-")
+ (rear-context-string . "0K Oct 17 11:36 ")
+ (position . 114)
+ (last-modified 26141 16101 926551 782000))
+("libs"
  (filename . "/media/john/data/github/__libs/")
  (front-context-string . "lisp\n  drwxrwxr-")
  (rear-context-string . "0K Mar 31 02:16 ")
  (position . 842)
  (last-modified 26127 25075 773456 359000))
-("dejavu"
- (filename . "/media/john/data/github/python/dejavu/")
- (front-context-string . "deja_vu\n  drwxrw")
- (rear-context-string . "0K Mar 19 22:55 ")
- (position . 329)
- (last-modified 26106 17838 420937 209000))
 ("python_src"
  (filename . "/media/john/data/github/_libs/python/cpython/Lib/")
  (front-context-string . "string.py\n  -rw-")
@@ -21,11 +33,11 @@
  (position . 7564)
  (last-modified 26106 17822 656893 327000))
 ("org-refile-last-stored"
- (filename . "/media/john/data/github/jgrey4296.github.io/orgfiles/base_agenda.org")
- (front-context-string . "*** TODO timelin")
- (rear-context-string . " wordnut-search\n")
- (position . 192)
- (last-modified 26122 435 256455 968000))
+ (filename . "/media/john/data/github/_templates/wiki_/document_manipulation.org")
+ (front-context-string . "** tesseract\nhtt")
+ (rear-context-string . "t a time\n:END:\n\n")
+ (position . 8054)
+ (last-modified 26131 45612 948153 983000))
 ("packages"
  (filename . "/media/john/data/github/_templates/packages/")
  (front-context-string . "python.org\n  -rw")

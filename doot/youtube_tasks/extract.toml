@@ -34,7 +34,7 @@ cli     = [
         { name="out",    type="str", default="unpacked", positional=true },
 ]
 actions = [
-        {do="state.add.path.parts", from="{target}"},
+        {do="path.elements", from="{target}"},
         {do="dir?", args=["{yt_raw}/{out}"]},
         {do="shell", args=["tar", "-xf", {path="{target}"}, "--directory", {path="{yt_raw}/{out}"}]},
         {do="doot.actions.io:ListFiles", from="{yt_raw}/{out}", update_="flist"},
@@ -59,7 +59,7 @@ actions                  = [
         {do="job.walk",   update_="files"}, # walk,
         {do="job.expand", base_="sub_actions", from_="files", inject={copy=["jsonl"], replace=["fpath"]}, update_="tasks" },
         {do="job.limit",  from_="tasks", count_="select_limit"},
-        {do="job.inject.path.parts", onto_="tasks", key="fpath"},
+        {do="job.inject.path.elements", onto_="tasks", key="fpath"},
         {do="job.queue", from_="tasks"}, # queue
         {do="job.queue.head", base_="head_actions", inject={copy=["target", "jsonl"]}},
 ]

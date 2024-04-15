@@ -11,22 +11,22 @@ exts                 = [".xml"]
 actions              = [
                         {do="job.walk", update_="files"}, # walk,
                         {do="job.expand", from_="files", update_="tasks", inject={copy=["fpath"]}, base_="sub_actions"},
-                        {do="job.inject.path.parts", onto_="tasks", key="fpath"},
+                        {do="job.inject.path.elements", onto_="tasks", key="fpath"},
                         {do="job.queue", from_="tasks"}, # queue
                         {do="job.queue.head", base_="head_actions"},
 ]
 sub_actions          = [
                         {do="post.get", mappings="bib::get.total_mappings", patterns="bib::get.keymap"},
-                        {do="dootle.actions.xml:stream_xml", handler="task_code.selector:DBLPSelector", from_="fpath", update_="done_handler", errors="ignore"},
-                        {do="task_code.selector:extract_results", from_="done_handler"},
+                        {do="dootle.actions.xml:stream_xml", handler="taskcode.selector:DBLPSelector", from_="fpath", update_="done_handler", errors="ignore"},
+                        {do="taskcode.selector:extract_results", from_="done_handler"},
                         {do="post.put", journals="journals", confs="confs", jraw="jraw", craw="craw"},
 ]
 head_actions         = [
                         {do="post.get", journals="bib::select.journals", confs="bib::select.confs", jraw="bib::select.jraw", craw="bib::select.craw"},
-                        {do="task_code.selector:flatten_dicts", from_="journals", update_="fjournals"},
-                        {do="task_code.selector:flatten_dicts", from_="confs", update_="fconfs"},
-                        {do="task_code.selector:flatten_raw", from_="jraw", update_="fjraw"},
-                        {do="task_code.selector:flatten_raw", from_="craw", update_="fcraw"},
+                        {do="taskcode.selector:flatten_dicts", from_="journals", update_="fjournals"},
+                        {do="taskcode.selector:flatten_dicts", from_="confs", update_="fconfs"},
+                        {do="taskcode.selector:flatten_raw", from_="jraw", update_="fjraw"},
+                        {do="taskcode.selector:flatten_raw", from_="craw", update_="fcraw"},
                         {do="write!", from_="fjournals", to="{results}/journals.list"},
                         {do="write!", from_="fconfs",    to="{results}/confs.list"},
                         {do="write!", from_="fjraw",     to="{results}/dblp.journals.raw"},

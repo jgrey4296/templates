@@ -1,139 +1,129 @@
 #+TITLE: Rust Package Reference
 
-* Overview :toc:
-- [[#main][Main]]
-  - [[#stdlib][Stdlib]]
-  - [[#rustdoc][RustDoc]]
-  - [[#cargo][Cargo]]
-  - [[#cargo-crates][Cargo Crates]]
-- [[#links][Links]]
-
-* Main
-
-** Stdlib
+* Stdlib
 https://doc.rust-lang.org/std/index.html
 
-*** alloc
+** alloc
 
-*** any
+** any
 
-*** arch
+** arch
 
-*** array
+** array
 
-*** ascii
+** ascii
 
-*** backtrace
+** backtrace
 
-*** borrow
+** borrow
 
-*** boxed
+** boxed
 
-*** cell
+** cell
 
-*** char
+** char
 
-*** clone
+** clone
 
-*** cmp
+** cmp
 
-*** collections
+** collections
 
-*** convert
+** convert
 
-*** default
+** default
 
-*** env
+** env
 
-*** error
+** error
 
-*** f32
+** f32
 
-*** f64
+** f64
 
-*** ffi
+** ffi
 
-*** fmt
+** fmt
 
-*** fs
+** fs
 
-*** future
+** future
 
-*** hash
+** hash
 
-*** hint
+** hint
 
-*** io
+** io
 
-*** iter
+** iter
 
-*** marker
+** marker
 
-*** mem
+** mem
 
-*** net
+** net
 
-*** num
+** num
 
-*** ops
+** ops
 
-*** option
+** option
 
-*** os
+** os
 
-*** panic
+** panic
 
-*** path
+** path
 
-*** pin
+** pin
 
-*** prelude
+** prelude
 
-*** primitive
+** primitive
 
-*** process
+** process
 
-*** ptr
+** ptr
 
-*** rc
+** rc
 
-*** result
+** result
 
-*** slice
+** slice
 
-*** str
+** str
 
-*** string
+** string
 
-*** sync
+** sync
 
-*** task
+** task
 
-*** thread
+** thread
 
-*** time
+** time
 
-*** vec
+** vec
 
-** RustDoc
+* RustDoc
 https://doc.rust-lang.org/rustdoc/index.html
-** Cargo
+* Cargo
 https://doc.rust-lang.org/cargo/
-** Cargo Crates
+* Cargo Crates
 
-*** Logging
+** Logging
 https://docs.rs/fern/latest/fern/
 https://docs.rs/log/latest/log/
 https://github.com/borntyping/rust-simple_logger
 https://docs.rs/slog/latest/slog/
 https://docs.rs/tokio/latest/tokio/
 
-*** Documentation
+** Documentation
 https://docs.rs/crate/cargo-sphinx/latest
 https://github.com/flamegraph-rs/flamegraph
 https://github.com/kbknapp/cargo-graph
 
-*** Utils
+** Utils
 https://docs.rs/anyhow/latest/anyhow/
 https://dylanede.github.io/cassowary-rs/cassowary/index.html
 https://crates.io/crates/fp-core
@@ -150,7 +140,7 @@ https://github.com/jamesmunns/tomlq
 https://crates.io/crates/tomato-toml
 https://github.com/ceejbot/tomato
 
-*** Data Structs
+** Data Structs
 https://docs.rs/bitflags/latest/bitflags/
 https://docs.rs/csv/latest/csv/
 https://docs.rs/diesel/latest/diesel/
@@ -176,7 +166,7 @@ https://docs.rs/cgmath/latest/cgmath/
 https://docs.rs/natural_constants/latest/natural_constants/
 https://github.com/pistondevelopers/vecmath
 
-*** Parsing
+** Parsing
 https://docs.rs/nom/latest/nom/
 https://docs.rs/pest/latest/pest/
 https://docs.rs/regex/latest/regex/
@@ -184,10 +174,10 @@ https://docs.rs/syn/latest/syn/
 https://docs.rs/textwrap/latest/textwrap/
 
 
-*** CLI
+** CLI
 https://docs.rs/clap/latest/clap/
 
-*** HTTP
+** HTTP
 https://docs.rs/actix/latest/actix/
 https://docs.rs/hyper/latest/hyper/
 https://docs.rs/lspower/latest/lspower/
@@ -195,13 +185,13 @@ https://docs.rs/reqwest/latest/reqwest/
 https://github.com/crossbeam-rs/crossbeam
 https://docs.rs/scopeguard/latest/scopeguard/
 
-*** Sync
+** Sync
 https://docs.rs/futures/latest/futures/
 https://docs.rs/parking_lot/latest/parking_lot/
 https://docs.rs/parking_lot_core/latest/parking_lot_core/
 https://docs.rs/lock_api/latest/lock_api/
 
-*** Graphical
+** Graphical
 https://github.com/emilk/egui
 https://gtk-rs.org/gtk3-rs/stable/latest/docs/gtk/
 https://docs.rs/iced/latest/iced/
@@ -209,7 +199,7 @@ https://docs.rs/image/latest/image/
 https://github.com/plotters-rs/plotters
 https://rust-sdl2.github.io/rust-sdl2/sdl2/
 
-*** FFI
+** FFI
 https://docs.rs/cc/latest/cc/
 https://dgrunwald.github.io/rust-cpython/doc/cpython/
 https://docs.rs/crate/gdnative/latest
@@ -220,14 +210,17 @@ https://docs.rs/crate/pyo3/latest
 https://docs.rs/crate/pyo3-asyncio/latest
 https://github.com/rusterlium/rustler
 
-*** Dev Tools
+** Dev Tools
 https://rust-lang.github.io/rust-clippy/
 https://github.com/rust-lang/rust-clippy
 https://docs.rs/rustfix/latest/rustfix/
 https://github.com/rust-lang/rustfmt
 https://rust-lang.github.io/rustfmt/?version=v1.6.0&search=
 
-*** Emacs
+
+*** iced
+https://github.com/icedland/iced
+** Emacs
 https://ubolonton.github.io/emacs-module-rs/latest/
 https://github.com/ubolonton/emacs-module-rs
 https://crates.io/crates/emacs-rs-module

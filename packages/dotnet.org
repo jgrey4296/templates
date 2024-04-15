@@ -1,19 +1,22 @@
 #+TITLE: DotNet Package Reference
 
-* Overview :toc:
-- [[#main][Main]]
-  - [[#stdlib][Stdlib]]
-  - [[#nuget-packages][Nuget Packages]]
-- [[#links][Links]]
+* dotnet
+https://learn.microsoft.com/en-us/dotnet/api/?view=net-8.0
 
-* Main
+* dotnet framework
+https://learn.microsoft.com/en-us/dotnet/api/?view=netframework-4.8&preserve-view=true
 
-** Stdlib
 
-** Nuget Packages
-
+* asp dotnet
+https://learn.microsoft.com/en-us/dotnet/api/?view=view=aspnetcore-8.0&preserve-view=true
+* Nuget Packages
+https://www.nuget.org/
+** dnlib
+https://www.nuget.org/packages/dnlib
+https://github.com/0xd4d/dnlib
+** ilspycmd
+https://www.nuget.org/packages/ilspycmd/9.0.0.7618-preview1
 * Links
-
 https://learn.microsoft.com/en-us/dotnet/csharp/
 https://learn.microsoft.com/en-us/dotnet/csharp/linq/
 https://learn.microsoft.com/en-us/dotnet/api/?view=net-7.0

@@ -5,17 +5,17 @@ loaders                  = { commands="default", task="default", parser="default
 location_check           = { make_missing = true, print_levels={action="WARN", execute="WARN"}}
 
 [settings.tasks]
-sources = ["~/github/_templates/doot/home_tasks"] # Files or directories where task specs can be loaded from, expanded according to [[locations]] keys
-code    = ["~/github/_templates/doot/home_tasks"]                                       # Directories where task specific code can be imported from, expanded according to [[locations]] keys
+# Files or directories where task specs can be loaded from, expanded according to [[locations]] keys
+sources = ["{template_tasks}/global", "{template_tasks}/android_tasks"]
 sleep   = { tasks=0.2, subtask=1, batch=1 }
+max_step = 100_000
 
 [logging]
 stream  = { level="WARN",  allow=["doot"], format="{levelname:<8} : {message}", colour=true }
 file    = { level="DEBUG", allow=["pony", "doot"], format="{levelname:<8} : {message:<20} :|: (module:{module} line:{lineno} fn:{funcName})" }
 printer = { level="INFO", colour=true}
 
-[plugins]
-# Allows for defining shorthands
+[plugins] # Allows for defining shorthands
 command        = { other-run = "doot.cmds.run_cmd:RunCmd", tasks = "doot.cmds.list_cmd:ListCmd" }
 report-line    = {}
 reporter       = {}
@@ -26,5 +26,9 @@ task           = {}
 run = { tracker = "default", runner = "default", reporter= "default", report-line = [] }
 
 [[locations]]
-temp    = ".cache/doot/temp"
-build   = ".cache/doot/build"
+templates      = {loc="~/.config/.templates", normOnLoad=true}
+temp           = {loc=".cache/doot/temp",  cleanable=true}
+build          = {loc=".cache/doot/build", cleanable=true}
+logs           = "{temp}/logs"
+template_tasks = "{templates}/doot"
+records        = "{templates}/.maintenance"

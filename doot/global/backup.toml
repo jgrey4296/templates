@@ -21,15 +21,16 @@ exts                       = []                                  # <list[str]>
 recursive                  = true                                # <bool>
 roots                      = ["{pdf_source}"]                    # <list[str|pl.Path]>  Places the globber will start
 shadow_root                = "{pdf_bkup}"
-head_actions               = [{do="doot.actions.postbox:SummarizePostAction", full=false}]
+actions = [
+        {do="job.walk", update_="files"}, # walk,
+        {do="job.expand", from_="files", update_="tasks", inject={replace=["fpath"]}, base_="sub_actions"},
+        {do="job.inject.path.elements", onto_="tasks",  key_="fpath"},
+        {do="job.inject.shadow", onto_="tasks", key="lpath"},
+        {do="job.queue", from_="tasks"}, # queue
+        {do="job.queue.head", base_="head_actions"},
+]
 sub_actions                = [
                      {do="dir!", args=["{shadow_path}"] },
                      {do="backup!", from_="fpath", to="{shadow_path}/{fname}"}
 ]
-actions = [
-        {do="job.walk", update_="files"}, # walk,
-        {do="job.expand", from_="files", update_="tasks", inject={copy=["fpath"]}, base_="sub_actions"},
-        {do="job.inject.shadow", onto_="tasks" }, # shadow
-        {do="job.queue", from_="tasks"}, # queue
-        {do="job.queue.head", base_="head_actions"},
-]
+head_actions               = [{do="doot.actions.postbox:SummarizePostAction", full=false}]

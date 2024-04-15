@@ -1,0 +1,3 @@
+Python With Statements:
+__enter__  #
+__exit__   # (self, exc_type, exc_value, traceback). return true to suppress

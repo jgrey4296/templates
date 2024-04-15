@@ -53,7 +53,6 @@ actions = [
         { do="write!", from_="rustup", to="{records}/rustup.info"},
 ]
 
-
 [[tasks.chore]]
 name    = "_tex.versions"
 version = "0.1"

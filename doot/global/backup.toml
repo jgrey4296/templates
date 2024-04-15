@@ -24,7 +24,7 @@ shadow_root                = "{pdf_bkup}"
 actions = [
         {do="job.walk", update_="files"}, # walk,
         {do="job.expand", from_="files", update_="tasks", inject={replace=["fpath"]}, base_="sub_actions"},
-        {do="job.inject.path", onto_="tasks",  key_="fpath"},
+        {do="job.inject.path.elements", onto_="tasks",  key_="fpath"},
         {do="job.inject.shadow", onto_="tasks", key="lpath"},
         {do="job.queue", from_="tasks"}, # queue
         {do="job.queue.head", base_="head_actions"},

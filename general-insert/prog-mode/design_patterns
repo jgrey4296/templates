@@ -1,0 +1,30 @@
+Gang of Four Design Patterns:
+
+---- # Creational
+Abstract Factory
+Builder
+Factory Method
+Prototype
+Singleton
+
+---- # Structural
+Adapter
+Bridge
+composite
+Decorate
+Facade
+Flyweight
+Proxy
+
+---- # Behavioural
+Chain of Responsibility
+Command
+Interpreter
+Iterator
+Mediator
+Memento
+Observer
+State
+Strategy
+Template
+Visitor

@@ -393,6 +393,10 @@ https://palletsprojects.com/p/werkzeug/
 https://github.com/msiedlarek/wiring
 *** wrapt                                       :decorator:monkey_patching:
 https://wrapt.readthedocs.io/en/master/
+*** decorator                                     :decorator:
+https://github.com/micheles/decorator
+*** decorator_validation                          :decorator:validation:
+https://github.com/ahartlba/decorator_validation
 *** hydra                                       :configuration:
 https://github.com/facebookresearch/hydra
 *** structlog

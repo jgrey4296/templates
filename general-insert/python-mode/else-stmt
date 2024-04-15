@@ -1,0 +1,8 @@
+Python Else Statement:
+if-else     # `else` when `if` doesnt.
+while-else  # `else` when `while` fails.
+for-else    # `else` when iterator is exhausted.
+try-else    # `else` when no exception is raise.
+try-finally # `finally` always runs.
+
+break       # short circuits the logic, stopping else being run.

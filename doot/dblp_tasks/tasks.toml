@@ -1,4 +1,5 @@
 # doot bib::get.keys --roots="{test}" bib::get.xml --roots="{dblp}/dblp-2023-10-01-02.xml" bib::write.xml.entries
+
 [[locations]]
 data    = {protect="data"}
 bib     = "~/github/bibliography"
@@ -17,24 +18,22 @@ print_levels         = {action="WARN", execute="WARN"}                          
 recursive            = true
 roots                = ["{journ}"]                                                            # <list[str|pl.Path]>  Places the job:walker will start
 exts                 = [".keys"]                                                              # <list[str]>
+cleanup         = [
+        {do="post.get", keys="bib::get.keys"},
+        {do="task_code.text:map_keys", from_="keys", update_="keymap" },
+        {do="post.put", keymap="keymap"},
+]
 actions              = [
-                        {do="job.walk", update_="files"}, # walk,
-                        {do="job.expand", from_="files", update_="tasks", inject={copy=["fpath"]}, base_="sub_actions"},
-                        {do="job.inject.path.elements", onto_="tasks", key="fpath"},
-                        {do="job.queue", from_="tasks"}, # queue
-                        {do="job.queue.head", base_="head_actions"}
+        {do="job.walk", update_="files"}, # walk,
+        {do="job.expand", from_="files", update_="tasks", inject={copy=["fpath"]}, template_="sub_actions"},
+        {do="job.inject.path.elements", onto_="tasks", key="fpath"},
+        {do="job.queue", from_="tasks"}, # queue
 ]
 sub_actions          = [
-                        { do="read",  from_="fpath", update_="text"},
-                        { do="task_code.text:split_keys", from_="text", update_="keys" },
-                        { do="post.put", keys="keys"},
+        { do="read",  from_="fpath", update_="text"},
+        { do="task_code.text:split_keys", from_="text", update_="keys" },
+        { do="post.put", keys="keys"},
 ]                                                                                                                         # <str>
-head_actions         = [
-                        {do="post.get", keys="bib::get.keys"},
-                        {do="task_code.text:map_keys", from_="keys", update_="keymap" },
-                        {do="post.put", keymap="keymap"},
-]
-
 
 [[tasks.bib]]
 name                 = "get.xml"
@@ -47,23 +46,22 @@ recursive            = false
 roots                = ["{dblp}"]                                                            # <list[str|pl.Path]>  Places the job:walker will start
 exts                 = [".xml"]                                                             # <list[str]>
 entries              = ["article"]
+cleanup         = [
+        {do="post.get", all_mappings="results"},
+        {do="task_code.xml:flatten_results", from_="all_mappings", update_="flattened"},
+        {do="post.put", all_entries="flattened"},
+]
 actions              = [
-                        {do="job.walk", update_="files"}, # walk,
-                        {do="job.expand", from_="files", update_="tasks", inject={copy=["fpath", "entries"]},base_="sub_actions"},
-                        {do="job.inject.path.elements", onto_="tasks", key="fpath"},
-                        {do="job.queue", from_="tasks"}, # queue
-                        {do="job.queue.head", base_="head_actions"},
+        {do="job.walk", update_="files"}, # walk,
+        {do="job.expand", from_="files", update_="tasks", inject={copy=["fpath", "entries"]},template_="sub_actions"},
+        {do="job.inject.path.elements", onto_="tasks", key="fpath"},
+        {do="job.queue", from_="tasks"}, # queue
 ]
 sub_actions          = [
-                        {do="post.get", mappings="bib::get.total_mappings", patterns="bib::get.keymap"},
-                        {do="dootle.actions.xml:stream_xml", handler="task_code.xml:DBLPHandler", from_="fpath", update_="done_handler", errors="ignore"},
-                        {do="task_code.xml:extract_entries", from_="done_handler", update_="results"},
-                        {do="post.put", results="results"},
-]
-head_actions         = [
-                        {do="post.get", all_mappings="results"},
-                        {do="task_code.xml:flatten_results", from_="all_mappings", update_="flattened"},
-                        {do="post.put", all_entries="flattened"},
+        {do="post.get", mappings="bib::get.total_mappings", patterns="bib::get.keymap"},
+        {do="dootle.actions.xml:stream_xml", handler="task_code.xml:DBLPHandler", from_="fpath", update_="done_handler", errors="ignore"},
+        {do="task_code.xml:extract_entries", from_="done_handler", update_="results"},
+        {do="post.put", results="results"},
 ]
 
 [[tasks.bib]]
@@ -74,8 +72,8 @@ doc        = ["Update source bibs with found entries"]
 depends_on = ["bib::get.xml", "bib::get.xml.$head$"]
 actions    = [
             {do="post.get",   data="bib::get.all_entries"},
-            {do="job.expand", from_="data", update_="tasks", inject={copy=["fpath"]}, base_="sub_actions"},
-            {do="job.queue",  from_="tasks"}, # queue
+            {do="job.expand", from_="data", update_="tasks", inject={copy=["fpath"]}, template_="sub_actions"},
+            {do="job.queue",  from_="tasks"},
 ]
 sub_actions = [
         # load existing bib if it exists

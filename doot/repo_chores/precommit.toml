@@ -6,6 +6,6 @@ doc                  = ["Validate a commit message.", "Runs in stage commit-msg"
 cli                  = [{ name="msgfile",   default="", type="str", positional=true }]
 ctor                 = "task"               # <str>
 actions              = [
-                     {do="read", from_="msgfile", update_="text"},
-                     {do="taskcode.precommit:validate", from_="text"}
+   {do="read", from_="msgfile", update_="text"},
+   {do="taskcode.precommit:validate", from_="text"}
 ]

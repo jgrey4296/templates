@@ -42,14 +42,14 @@ from random import choice, choices
 import doot
 import doot.errors
 from doot.structs import DootKey
-from dootle.bibtex import middlewares as dmids
+import bib_middleware as BM
 import bibtexparser as BTP
 from bibtexparser import middlewares as ms
 
 MYBIB                              = "#my_bibtex"
 MAX_TAGS                           = 7
-UPDATE        : Final[DootKey] = DootKey.make("update_")
-FROM_KEY      : Final[DootKey] = DootKey.make("from")
+UPDATE        : Final[DootKey] = DootKey.build("update_")
+FROM_KEY      : Final[DootKey] = DootKey.build("from")
 
 def format_title(entry):
     fields = entry.fields_dict

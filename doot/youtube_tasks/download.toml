@@ -13,19 +13,19 @@ queue_behaviour      = "default"            # <str>                default | aut
 flag_file            = ".complete"
 subs                 = ["subs.main.csv"]
 sub_generator        = "taskcode.youtube:generate_tasks"
-sub_actions          = [
-                     {do="exists?",    args=["{target}/{flag_file}", "{target}.tar.gz"]},
-                     {do="dir!",       args=["{target}"]},
-                     {do="log",        msg="Will Be getting: {title} : {channel}"},
-                     {do="taskcode.youtube:get_channel"},
-                     {do="touch", file="{target}/{flag_file}"},
-                     {do="tar!",  file="{target}"},
-                     {do="delete!", args=["{target}"], recursive=true},
-                     {do="shell", args=["spd-say", "completed a channel"]},
-]
 actions             = [
-                    {do="job.gen", fn_="sub_generator", update_="tasks", base_="sub_actions"}, # Custom expansion
-                    {do="job.queue", from_="tasks"},
+    {do="job.gen", fn_="sub_generator", update_="tasks", template_="sub_actions"}, # Custom expansion
+    {do="job.queue", from_="tasks"},
+]
+sub_actions          = [
+    {do="exists?",    args=["{target}/{flag_file}", "{target}.tar.gz"]},
+    {do="dir!",       args=["{target}"]},
+    {do="log",        msg="Will Be getting: {title} : {channel}"},
+    {do="taskcode.youtube:get_channel"},
+    {do="touch", file="{target}/{flag_file}"},
+    {do="tar!",  file="{target}"},
+    {do="delete!", args=["{target}"], recursive=true},
+    {do="shell", args=["spd-say", "completed a channel"]},
 ]
 
 [[tasks.dl]]
@@ -38,12 +38,12 @@ recursive   = false
 roots       = ["{data}"]
 shadow_root = "{backup}"
 actions     = [
-        {do="job.walk", fn="taskcode.youtube:select_tars", update_="files"}, # walk,
-        {do="job.expand", from_="files", update_="tasks", inject={copy=["fpath"]}, base_="sub_actions"},
-        {do="job.inject.shadow", onto_="tasks"},
-        {do="job.queue", from_="tasks"}, # queue
+    {do="job.walk", fn="taskcode.youtube:select_tars", update_="files"}, # walk,
+    {do="job.expand", from_="files", update_="tasks", inject={copy=["fpath"]}, template_="sub_actions"},
+    {do="job.inject.shadow", onto_="tasks"},
+    {do="job.queue", from_="tasks"}, # queue
 
 ]
 sub_actions = [
-            {do="backup!", from_="fpath", to="{shadow_path}/{fname}"}
+    {do="backup!", from_="fpath", to="{shadow_path}/{fname}"}
 ]

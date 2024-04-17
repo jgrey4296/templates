@@ -1,4 +1,4 @@
-## mastodon.toml<2> -*- mode: conf-toml -*-
+# mastodon.toml<2> -*- mode: conf-toml -*-
 
 [[locations]]
 mastodon_secrets = "~/.config/secrets/bots/bkmkorg.toml"
@@ -22,24 +22,22 @@ doc                  = ["Maybe Post a formatted bibtex citation to mastodon"] # 
 select_limit         = 1
 roots                = ["{all_bib}"]                # <list[str|pl.Path]>  Places the walker will start
 exts                 = [".bib"]                   # <list[str]>
-head_actions         = [
-                     { do="getPost", entries="-" },
-                     { do="taskcode.soc_media:format_for_mastodon", from_="entries", update="text"},
-                     { do="dootle.mastodon.actions:MastodonSetup" },
-                     { do="dootle.mastodon.actions:MastodonPost", from_="text" },
-                     ] # <list[Any]>
-sub_actions          = [
-                     { do="taskscode.bibtex:build_parse_stack",  update_="parse_stack"},
-                     { do="dootle.bibtex.v2:BibtexInitAction",  update_="bib_db"},
-                     { do="dootle.bibtex.v2:BibtexLoadAction",  from_="fpath", update_="bib_db", parse_stack_="parse_stack" },
-                     { do="taskscode.bibtex:select_one_entry", from_="bib_db", update_="entry"},
-                     { do="putPost", args=["entry"] },
-                     ] # <list[Any]>
+cleanup         = [
+    { do="post.get", entries="-" },
+    { do="taskcode.soc_media:format_for_mastodon", from_="entries", update="text"},
+    { do="dootle.mastodon.actions:MastodonSetup" },
+    { do="dootle.mastodon.actions:MastodonPost", from_="text" },
+]
 actions = [
-        {do="job.walk",   update_="files"}, # walk,
-        {do="job.expand", from_="files", update_="tasks", inject={copy=["fpath"]}, base_="sub_actions"},
-        {do="job.limit",  count_="select_limit"},
-        {do="job.queue",  from_="tasks"}, # queue
-        {do="job.queue.head", base_="head_actions"},
-
+    {do="job.walk",   update_="files"}, # walk,
+    {do="job.expand", from_="files", update_="tasks", inject={copy=["fpath"]}, template_="sub_actions"},
+    {do="job.limit",  count_="select_limit"},
+    {do="job.queue",  from_="tasks"}, # queue
+]
+sub_actions          = [
+    { do="taskscode.bibtex:build_parse_stack",  update_="parse_stack"},
+    { do="dootle.bibtex.v2:BibtexInitAction",  update_="bib_db"},
+    { do="dootle.bibtex.v2:BibtexLoadAction",  from_="fpath", update_="bib_db", parse_stack_="parse_stack" },
+    { do="taskscode.bibtex:select_one_entry", from_="bib_db", update_="entry"},
+    { do="post.put", args=["entry"] },
 ]

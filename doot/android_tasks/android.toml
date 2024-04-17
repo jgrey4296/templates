@@ -30,10 +30,9 @@ roots                      = ["{push_pdfs}"]
 print_level                = { head="INFO", action="DEBUG" }
 actions     = [
     {do="job.walk",   update_="files"},
-    {do="job.expand", from_="files", update_="tasks", inject={copy=["fpath", "android_root"]}, base_="sub_actions"},
+    {do="job.expand", from_="files", update_="tasks", inject={copy=["fpath", "android_root"]}, template_="sub_actions"},
     {do="job.inject.path.elements", onto_="tasks", key="fpath"},
     {do="job.queue",  from_="tasks"},
-    {do="job.queue.head"},
 ]
 sub_actions = [
     { do="log", msg="Pushing: {fname} to {android_root}/Library/pdf_library/{lpath}"},

@@ -506,6 +506,8 @@ https://karimbahgat.github.io/Pyqtree/
 https://github.com/tobgu/pyrsistent
 *** pytransitions                               :FSMs:
 https://github.com/pytransitions/transitions
+*** finite state machine
+https://github.com/jaypantone/FiniteStateMachines
 *** toml
 **** tomli
 **** tomlit
@@ -682,6 +684,9 @@ pip install pygobject pycairo
 on linux:
 apt install pkg-config libcairo2-dev libgirepository1.0-dev
 pip install pygobject pycairo
+
+*** pygobject / gi
+https://gnome.pages.gitlab.gnome.org/pygobject/index.html
 **** hyphae                                    :art:cairo:inconvergent:
 https://github.com/inconvergent/hyphae/blob/master/hyphae.py
 *** tqdm                                        :progress_bar:

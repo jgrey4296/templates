@@ -1,0 +1,4 @@
+Emacs Lisp Print Funcs:
+print  # Output wrapped in newlines
+prin1  # Output to use with #'read
+princ  # Output to look good for people

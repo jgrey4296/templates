@@ -1,0 +1,15 @@
+## requirements.toml -*- mode: Conf[TOML] -*-
+
+[locations]
+
+[[tasks.requrements]]
+name = "pip"
+doc = ["Generate a requirements.txt"]
+ctor = "task"
+required_for = ["file:>requirements.txt"]
+setup = [
+      # ensure pipreqs is installed
+]
+actions = [
+        # call pipreqs
+]

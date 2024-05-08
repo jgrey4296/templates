@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name  : ert-tempbuffer
+# uuid  : ert-tempbuffer
+# key   : ert-tempbuffer
+# group : testing
+# --
+(ert-deftest $1-test-temp-buffer-$2 ()
+    "Runs a test in a temp buffer"
+    (with-temp-buffer
+        $0
+    )
+)

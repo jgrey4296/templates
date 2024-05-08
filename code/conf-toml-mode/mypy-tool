@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name: mypyrc
+# uuid: mypyrc
+# group: python
+# --
+##-- mypy
+[tool.mypy]
+# https://mypy.readthedocs.io/en/stable/config_file.html
+python_version      = "3.7"
+warn_return_any     = true
+warn_unused_configs = true
+exclude = []
+
+# Per-module options:
+[[tool.mypy.overrides]]
+module                = "blah"
+disallow_untyped_defs = true
+
+
+##-- end mypy

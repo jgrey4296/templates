@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : dont-add
+# uuid  : dont-add
+# key   : dont-add
+# group : isort
+# --
+# isort: dont-add-imports

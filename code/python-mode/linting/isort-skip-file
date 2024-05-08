@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : skip-file
+# uuid  : skip-file
+# key   : skip-file
+# group : isort
+# --
+# isort: skip_file

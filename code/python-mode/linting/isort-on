@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : on
+# uuid  : on
+# key   : on
+# group : isort
+# --
+# isort: on

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : fmt-skip
+# uuid  : fmt-skip
+# key   : fmt-skip
+# group : ruff, linting
+# --
+# fmt: skip

@@ -417,18 +417,20 @@ https://arrow.apache.org/docs/python/getstarted.html
 *** arrow-py                                    :datetime:
 https://github.com/arrow-py/arrow
 
-*** pendulum                                    :datetime:
-https://github.com/sdispater/pendulum
 *** attrs                                       :boilerplate:
 https://www.attrs.org/en/stable/
-*** bidict
-https://github.com/jab/bidict
 *** benedict
 https://github.com/fabiocaccamo/python-benedict.git
+*** bidict
+https://github.com/jab/bidict
 *** box                                         :doc_notation:
 https://github.com/cdgriffith/Box
-*** dotteddict                                  :dot_notation:
-https://github.com/carlosescri/DottedDict
+*** buku                                        :bookmarks:
+https://github.com/jarun/Buku
+*** cachetools
+https://github.com/tkem/cachetools/
+*** cachy                                       :caching:
+https://cachy.readthedocs.io/en/latest/
 *** databases
 **** sqlite
 **** postgresql
@@ -438,8 +440,10 @@ https://alembic.sqlalchemy.org/en/latest/tutorial.html
 https://docs.sqlalchemy.org/en/20/
 **** pony
 https://github.com/ponyorm/pony/
-*** marshmallow                                :serialisation:
-https://marshmallow.readthedocs.io/en/stable/
+*** datasette                                   :__come_back_to:
+https://github.com/simonw/datasette
+*** dotteddict                                  :dot_notation:
+https://github.com/carlosescri/DottedDict
 *** excel
 **** openpyxl
 **** pyexcel
@@ -447,6 +451,10 @@ https://github.com/pyexcel/pyexcel
 **** pyexcel-io
 **** pylightxl
 https://github.com/PydPiper/pylightxl
+*** finite state machine
+https://github.com/jaypantone/FiniteStateMachines
+*** furl                                        :urls:
+https://github.com/gruns/furl
 *** graphs
 **** graphviz
 https://graphviz.readthedocs.io/en/stable/
@@ -482,6 +490,8 @@ https://github.com/JNRowe/pyisbn
 https://python-jsonschema.readthedocs.io/en/stable/
 **** jsonlines
 https://jsonlines.readthedocs.io/en/latest/
+*** marshmallow                                :serialisation:
+https://marshmallow.readthedocs.io/en/stable/
 *** movis                                       :movies:
 https://github.com/rezoo/movis
 *** numpy                                       :numerics:
@@ -494,10 +504,16 @@ https://github.com/pydata/numexpr
 https://pandas.pydata.org/docs/
 *** path                                        :file_path:
 https://github.com/jaraco/path
+*** pendulum                                    :datetime:
+https://github.com/sdispater/pendulum
 *** polars                                      :data_analysis:
 https://docs.pola.rs/py-polars/html/reference/
-*** datasette                                   :__come_back_to:
-https://github.com/simonw/datasette
+*** polyfactory
+https://polyfactory.litestar.dev/latest/getting-started.html
+*** purl                                        :urls:
+https://github.com/codeinthehole/purl
+*** pydantic
+https://docs.pydantic.dev/2.7/
 *** pympler
 https://github.com/pympler/pympler
 *** pyqtree                                     :spatial:
@@ -506,8 +522,6 @@ https://karimbahgat.github.io/Pyqtree/
 https://github.com/tobgu/pyrsistent
 *** pytransitions                               :FSMs:
 https://github.com/pytransitions/transitions
-*** finite state machine
-https://github.com/jaypantone/FiniteStateMachines
 *** toml
 **** tomli
 **** tomlit
@@ -515,17 +529,8 @@ https://github.com/jaypantone/FiniteStateMachines
 https://github.com/hukkin/tomli-w
 *** urllib3                                     :urls:
 https://urllib3.readthedocs.io/en/stable/index.html
-*** purl                                        :urls:
-https://github.com/codeinthehole/purl
-*** furl                                        :urls:
-https://github.com/gruns/furl
-*** yaml
-**** pyaml
-https://pyyaml.org/
 *** vectorfields
 https://github.com/OlafHaag/VectorFields
-*** buku                                        :bookmarks:
-https://github.com/jarun/Buku
 *** XML
 **** generateDS
 http://www.davekuhlman.org/generateDS.html
@@ -540,10 +545,9 @@ https://xsdata.readthedocs.io/en/latest/
 ***** xsdata-plantuml
 https://github.com/tefra/xsdata-plantuml
 
-*** cachetools
-https://github.com/tkem/cachetools/
-*** cachy                                       :caching:
-https://cachy.readthedocs.io/en/latest/
+*** yaml
+**** pyaml
+https://pyyaml.org/
 ** Diagrams
 *** diagrams                                    :system_diagrams:
 https://github.com/mingrammer/diagrams
@@ -721,7 +725,6 @@ https://github.com/psf/black
 *** pycodestyle
 *** pycycle                                     :imports:
 https://github.com/bndr/pycycle
-*** pydantic
 *** pyflakes
 *** pylint
 *** refactoring

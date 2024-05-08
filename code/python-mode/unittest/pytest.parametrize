@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : pytest.paramterize
+# uuid  : pytest.paramterize
+# key   : pytest.paramterize
+# group :
+# --
+@pytest.mark.parametrize("${1:var1,var2}", [${2:("1", "2")}])$0

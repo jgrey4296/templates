@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : pydantic
+# uuid  : pydantic
+# key   : pydantic
+# group : imports
+# --
+from pydantic import BaseModel, Field, model_validator, field_validator, ValidationError $0

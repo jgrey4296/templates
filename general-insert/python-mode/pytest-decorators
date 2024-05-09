@@ -4,6 +4,6 @@ Pytest Decorators:
 @pytest.mark.xfail               # Expect a Test to Fail
 @pytest.mark.parametrize("", []) # Parameterize a function, argnames in first arg, values in second
 @pytest.mark.filterwarnings("")  # Format is "{action}:{match}")
-
-@pytest.fixture                  # Mark a fuction as a fixture
 @pytest.mark.usefixtures(""...)  # add fixtures without listing in test args
+
+@pytest.fixture(scope="function") # Mark a fuction as a fixture

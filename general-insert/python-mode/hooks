@@ -1,5 +1,9 @@
 Python Sys Hooks:
-excepthook     # (type, value, traceback)
-breakpointhook #
-displayhook    #
-unraisablehook #
+excepthook              # (type, value, traceback)
+breakpointhook          # called by breakpoint(*args, **kwargs). usually pdb.set_trace
+displayhook             # (value)
+unraisablehook          # (tuple(exc_type, exc_value, exc_traceback, err_msg, obj))
+
+sys.exception()         # -> current Exception.
+sys.audit(event, *args) # raise auditing event
+sys.addaudithook(fn)    # add a hook.

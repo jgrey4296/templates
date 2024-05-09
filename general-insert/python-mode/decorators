@@ -1,9 +1,10 @@
 Python @decorators:
-@typing.runtime_checkable         # for Protocols
-@abc.abstractmethod               #
+@typing.runtime_checkable                      # for Protocols
+@abc.abstractmethod                            #
 
-@property                         # @property -> @other -> def
-@classmethod                      #
-@staticmethod                     #
+@property                                      # @property -> @other -> def
+@classmethod                                   #
+@staticmethod                                  #
 
-@pytest.fixture(scope="function") #
+@functools.cached_property                     # calc once and reuse
+@functools.lru_cache(maxsize=128, typed=False) #

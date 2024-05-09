@@ -22,13 +22,14 @@ __getattribute__(self, name)                    # attributes
 __setattr__(self, name, value)                  # attributes
 __delattr__(self, name)                         # attributes
 __dir__(self)                                   # attributes
-__get__(self, instance, owner=None)             # attributes
-__set__(self, instance, value)                  # attributes
-__delete__(self, instance)                      # attributes
 __slots__                                       # attributes
 
+__get__(self, instance, owner:type=None)        # Descriptors. Use obj as classvar
+__set__(self, instance, value)                  # Descriptors. Use obj as classvar
+__delete__(self, instance)                      # Descriptors. Use obj as classvar
+__set_name__(self, owner, name)                 # Descriptor. owner calls on definition.
+
 __init_subclass__(cls)                          # subclasses
-__set_name__(self, owner, name)                 # subclasses
 __mro_entries__(self, bases)                    # subclasses
 __instancecheck__(self, instance)               # subclasses
 __subclasscheck__(self, subclass)               # subclasses
@@ -106,7 +107,8 @@ __ceil__(self)                                  # math.  ceil(obj)
 
 __enter__(self)                                 # context manager
 __exit__(self, exc_type, exc_value, traceback)  # context manager
-__match_args__                                  # match statement
+__match_args__                                  # match statement. converts positional to kwarg.
+
 __await__(self)                                 # async
 __aiter__(self)                                 # async
 __anext__(self)                                 # async

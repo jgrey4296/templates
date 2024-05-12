@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : setup-fixture
+# uuid  : setup-fixture
+# key   : setup-fixture
+# group : pytest
+# --
+@pytest.fixture(scope="function")
+def $1(self, mocker):
+    $0
+    return

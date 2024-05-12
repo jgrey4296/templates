@@ -225,7 +225,9 @@ https://ubolonton.github.io/emacs-module-rs/latest/
 https://github.com/ubolonton/emacs-module-rs
 https://crates.io/crates/emacs-rs-module
 https://github.com/ubolonton/emacs-module-rs
-
+** Python
+https://pyo3.rs/v0.21.2/getting-started
+https://www.maturin.rs/
 * Links
 
 https://crates.io/

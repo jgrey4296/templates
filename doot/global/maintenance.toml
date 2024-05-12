@@ -1,3 +1,5 @@
+## maintenance.toml -*- mode: conf[TOML] -*-
+
 [[locations]]
 records = ".maintenance"
 
@@ -6,14 +8,14 @@ name    = "versions"
 version = "0.1"
 ctor    = "task"
 doc     = ["Update the list of installed software versions"]
-depends_on = ["chore::_apt.versions", "chore::_snap.versions",
-               "chore::_mamba.versions", "chore::_rust.versions",
-               "chore::_tex.versions", "chore::_git",
-               # "chore::_cron",
+depends_on = ["chore::_.apt.versions", "chore::_.snap.versions",
+               "chore::_.mamba.versions", "chore::_.rust.versions",
+               "chore::_.tex.versions", "chore::_.git",
+               # "chore::_.cron",
                ]
 
 [[tasks.chore]]
-name    = "_apt.versions"
+name    = "_.apt.versions"
 version = "0.1"
 ctor    = "task"
 actions = [
@@ -22,7 +24,7 @@ actions = [
 ]
 
 [[tasks.chore]]
-name    = "_snap.versions"
+name    = "_.snap.versions"
 version = "0.1"
 ctor    = "task"
 actions = [
@@ -31,7 +33,7 @@ actions = [
 ]
 
 [[tasks.chore]]
-name    = "_mamba.versions"
+name    = "_.mamba.versions"
 version = "0.1"
 ctor    = "task"
 print_levels = {execute="INFO"}
@@ -44,7 +46,7 @@ actions = [
 ]
 
 [[tasks.chore]]
-name    = "_rust.versions"
+name    = "_.rust.versions"
 version = "0.1"
 ctor    = "task"
 print_levels = {execute="INFO"}
@@ -54,7 +56,7 @@ actions = [
 ]
 
 [[tasks.chore]]
-name    = "_tex.versions"
+name    = "_.tex.versions"
 version = "0.1"
 ctor    = "task"
 print_levels = {execute="INFO"}
@@ -64,7 +66,7 @@ actions = [
 ]
 
 [[tasks.chore]]
-name    = "_git"
+name    = "_.git"
 version = "0.1"
 ctor    = "task"
 actions = [
@@ -73,7 +75,7 @@ actions = [
 ]
 
 [[tasks.chore]]
-name = "_cron"
+name = "_.cron"
 version = "0.1"
 ctor = "task"
 actions = [

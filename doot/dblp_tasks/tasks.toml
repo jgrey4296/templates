@@ -1,3 +1,4 @@
+# tasks.toml -*- mode: conf[TOML] -*-
 # doot bib::get.keys --roots="{test}" bib::get.xml --roots="{dblp}/dblp-2023-10-01-02.xml" bib::write.xml.entries
 
 [[locations]]
@@ -19,7 +20,7 @@ recursive            = true
 roots                = ["{journ}"]                                                            # <list[str|pl.Path]>  Places the job:walker will start
 exts                 = [".keys"]                                                              # <list[str]>
 cleanup         = [
-        {do="post.get", keys="bib::get.keys"},
+        {do="post.get", keys="bib::get.patterns..keys"},
         {do="task_code.text:map_keys", from_="keys", update_="keymap" },
         {do="post.put", keymap="keymap"},
 ]
@@ -41,7 +42,7 @@ version              = "0.1"
 ctor                 = "job"
 doc                  = ["Stream DBLP xmls and extract entries with matching keys"]
 print_levels         = {action="WARN", execute="WARN"}
-depends_on           = ["bib::get.patterns", "bib::get.patterns.$head$"]
+depends_on           = ["bib::get.patterns", "bib::get.patterns..$head$"]
 recursive            = false
 roots                = ["{dblp}"]                                                            # <list[str|pl.Path]>  Places the job:walker will start
 exts                 = [".xml"]                                                             # <list[str]>
@@ -58,7 +59,7 @@ actions              = [
         {do="job.queue", from_="tasks"}, # queue
 ]
 sub_actions          = [
-        {do="post.get", mappings="bib::get.total_mappings", patterns="bib::get.keymap"},
+        {do="post.get", mappings="bib::get.xml..all_mappings", patterns="bib::get.patterns..keymap"},
         {do="dootle.actions.xml:stream_xml", handler="task_code.xml:DBLPHandler", from_="fpath", update_="done_handler", errors="ignore"},
         {do="task_code.xml:extract_entries", from_="done_handler", update_="results"},
         {do="post.put", results="results"},
@@ -71,7 +72,7 @@ ctor       = "job"
 doc        = ["Update source bibs with found entries"]
 depends_on = ["bib::get.xml", "bib::get.xml.$head$"]
 actions    = [
-            {do="post.get",   data="bib::get.all_entries"},
+            {do="post.get",   data="bib::get.xml..all_entries"},
             {do="job.expand", from_="data", update_="tasks", inject={copy=["fpath"]}, template_="sub_actions"},
             {do="job.queue",  from_="tasks"},
 ]

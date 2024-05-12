@@ -9,10 +9,10 @@ name                 = "files"
 version              = "0.1"                # <str>
 ctor                 = "job"               # <str>
 doc                  = ["Writer split bib libraries to files"]
-depends_on           = ["chunk::_file", "chunk::_file.$head$"]
+depends_on           = ["chunk::_.file", "chunk::_file..$head$"]
 queue_behaviour      = "default"            # <str>                default | auto | reactive
 actions              = [
-    {do="post.get",   data="chunk::files.-"}, # Get from postbox
+    {do="post.get",   data="chunk::_.file..-"}, # Get from postbox
     {do="job.expand", from_="data", template_="sub_actions", update_="tasks"},
     {do="job.queue",  args=["tasks"]},      # Queue
 ]
@@ -25,7 +25,7 @@ sub_actions          = [
 ]
 
 [[tasks.chunk]]
-name                   = "_file"
+name                   = "_.file"
 version                = "0.1"                       # <str>
 ctor                   = "job"                      # <str>
 doc                    = ["walk the target for bibs, and split them to smaller libs"]

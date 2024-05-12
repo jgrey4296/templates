@@ -1,3 +1,5 @@
+## download.toml -*- mode: Conf[TOML] -*-
+
 [[locations]]
 archive = "dl-archive.txt"
 data    = "data"

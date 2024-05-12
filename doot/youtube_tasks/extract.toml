@@ -1,9 +1,10 @@
+## extract.toml -*- mode: Conf[TOML] -*-
 
 [[locations]]
 youtube        = "/media/john/big_ex/datasets/youtube/data"
 yt_raw         = "raw"
 extracted      = "extracted"
-extract_tars = "extract_tars"
+extract_tars   = "extract_tars"
 extract_backup = "/media/john/big_ex/datasets/youtube/extracted"
 extract_output = "/media/john/data/datasets/todo/youtube"
 

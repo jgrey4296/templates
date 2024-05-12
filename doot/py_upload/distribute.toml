@@ -1,6 +1,6 @@
 [[locations]]
 build     = "{temp}/dist"
-dist_key  = {loc="~/.config/secrets/pypi/token.asc", normOnLoad=true}
+dist_key  = {file="~/.config/secrets/pypi/token.asc", normOnLoad=true, protected=true}
 # TODO run pytest
 
 [[tasks.dist]]

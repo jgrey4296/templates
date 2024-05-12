@@ -1,7 +1,7 @@
 # mastodon.toml<2> -*- mode: conf-toml -*-
 
 [[locations]]
-mastodon_secrets = "~/.config/secrets/bots/bkmkorg.toml"
+mastodon_secrets = {file="~/.config/secrets/bots/bkmkorg.toml"}
 image_temp       = "{temp}/images/"
 all_bib          = "/media/john/data/github/bibliography/main/"
 image_whitelist  = {loc="~/.config/secrets/bots/whitelist", normOnLoad=true}

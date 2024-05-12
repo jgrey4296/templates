@@ -6,9 +6,9 @@ home  = "~"
 tex   = "~/.local/texlive/current"
 
 [[tasks.setup]]
-name = "total"
-version = "0.1"
-ctor = "task"
+name       = "total"
+version    = "0.1"
+ctor       = "task"
 depends_on = ["setup::symlinks", "setup::git", "setup::bash", "setup::dirs", "setup::misc"]
 
 [[tasks.setup]]

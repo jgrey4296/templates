@@ -2,11 +2,18 @@
 
 * dotnet
 https://learn.microsoft.com/en-us/dotnet/api/?view=net-8.0
+https://ubuntuhandbook.org/index.php/2023/11/install-dotnet-8-ubuntu-22-04/
 
+https://learn.microsoft.com/en-gb/dotnet/core/extensions/logging-providers
+* linq
+https://learn.microsoft.com/en-gb/dotnet/csharp/language-reference/keywords/query-keywords
+https://learn.microsoft.com/en-gb/dotnet/csharp/linq/standard-query-operators/
+https://learn.microsoft.com/en-gb/dotnet/csharp/linq/get-started/type-relationships-in-linq-query-operations
 * dotnet framework
 https://learn.microsoft.com/en-us/dotnet/api/?view=netframework-4.8&preserve-view=true
 
-
+* entity framework
+https://learn.microsoft.com/en-us/ef/core/
 * asp dotnet
 https://learn.microsoft.com/en-us/dotnet/api/?view=view=aspnetcore-8.0&preserve-view=true
 * Nuget Packages
@@ -16,6 +23,23 @@ https://www.nuget.org/packages/dnlib
 https://github.com/0xd4d/dnlib
 ** ilspycmd
 https://www.nuget.org/packages/ilspycmd/9.0.0.7618-preview1
+** Xunit
+https://xunit.net/
+https://learn.microsoft.com/en-us/dotnet/core/tutorials/testing-with-cli
+https://medium.com/bina-nusantara-it-division/a-comprehensive-guide-to-implementing-xunit-tests-in-c-net-b2eea43b48b
+https://haacked.com/archive/2012/01/02/structuring-unit-tests.aspx/
+*** Test access to internal/protected
+#+begin_src csharp :results output
+// Add to AssemblyInfo.cs for the module being tested
+// https://stackoverflow.com/questions/358196
+using System.Runtime.CompilerServices;
+[assembly:InternalsVisibleTo("{TEST_SUBPROJECT_NAME}")]
+
+#+end_src
+** xunit godot
+https://github.com/fledware/GodotXUnit
+** docfx
+https://dotnet.github.io/docfx/docs/basic-concepts.html
 * Links
 https://learn.microsoft.com/en-us/dotnet/csharp/
 https://learn.microsoft.com/en-us/dotnet/csharp/linq/
@@ -28,13 +52,23 @@ https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools
 https://learn.microsoft.com/en-us/dotnet/core/diagnostics/
 https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview?tabs=net-8
 https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/boxing-and-unboxing
-
 http://slick.ninjacave.com/wiki/index.php?title=Main_Page
-
 http://www.illposed.com/software/javaosc.html
-
 http://www.illposed.com/software/javaoscdoc/
-
 http://www.janus-project.org/Home
-
 http://www.leebyron.com/else/mesh/
+* Github
+https://github.com/dotnet/docs
+https://github.com/dotnet/csharpstandard
+https://github.com/dotnet/csharplang
+https://github.com/dotnet/dotnet
+https://github.com/dotnet/templating
+https://github.com/dotnet/msbuild
+https://github.com/dotnet/templates
+https://github.com/dotnet/docfx
+https://github.com/dotnet/HttpRepl
+https://github.com/dotnet/efcore
+https://github.com/dotnet/org-policy
+https://github.com/dotnet/new-repo
+https://github.com/dotnet/fsharp-api-docs
+https://github.com/dotnet/dotnet-api-docs

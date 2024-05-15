@@ -27,7 +27,6 @@ ctor                       = "job"
 doc                        = ["Push pdfs to device"]
 accept_fn                  = "taskscode.android:select_dirs"
 roots                      = ["{push_pdfs}"]
-print_level                = { head="INFO", action="DEBUG" }
 actions     = [
     {do="job.walk",   update_="files"},
     {do="job.expand", from_="files", update_="tasks", inject={copy=["fpath", "android_root"]}, template_="sub_actions"},

@@ -22,7 +22,6 @@ actions  = [
 name                   = "build"
 version                = "0.1"                          # <str>
 ctor                   = "task"                         # <str>
-print_levels           = { head="INFO", build="INFO", action="INFO", execute="INFO", enter="INFO" }
 env_name               = "distributor"
 match_re               = 's/^pypi\s+\=\s+(.+)/\1/p'
 inject                 = ["env_name", "match_re"]                   # <list[str]>
@@ -38,7 +37,6 @@ actions                = [
 name                   = "upload"
 version                = "0.1"
 ctor                   = "task"
-print_levels           = { head="INFO", build="INFO", action="INFO", execute="INFO", enter="INFO" }
 depends_on             = ["dist::build"]
 env_name               = "distributor"
 match_re               = 's/^pypi\s+\=\s+(.+)/\1/p'

@@ -48,8 +48,6 @@ version                  = "0.1"                # <str>
 doc                      = ["Walk an unpacked youtube data directory, extracting to into {extracted}/{pstem}.jsonnl"]
 ctor                     = "job"
 cli                      = [{ name="target", type="str", default="northernlion", positional=true }]
-print_levels             = { execute="WARN", action="WARN", head="INFO", build="WARN", sleep="WARN" }
-sub_print                = { execute="WARN", action="WARN", head="INFO", build="WARN", sleep="WARN" }
 queue_behaviour          = "default"
 recursive                = false
 exts                     = [".json"]

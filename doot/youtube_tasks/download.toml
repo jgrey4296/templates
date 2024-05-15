@@ -10,7 +10,6 @@ name                 = "yt"
 version              = "0.1"                # <str>
 doc                  = ["Download each channel in a csv using yt-dlp"]                   # <list[str]>
 ctor                 = "job"             # <str>
-print_levels         = {"build"="INFO", "execute"="INFO"}                   # <Dict: {'sleep', 'build', 'head', 'execute', 'action'}>
 queue_behaviour      = "default"            # <str>                default | auto | reactive
 flag_file            = ".complete"
 subs                 = ["subs.main.csv"]

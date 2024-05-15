@@ -15,7 +15,6 @@ version              = "0.1"                                                    
 ctor                 = "job"                                                                # <type>
 doc                  = ["find dblp keys to expand"]
 required_for         = ["bib::get.xml"]
-print_levels         = {action="WARN", execute="WARN"}                                      # <Dict: {'action', 'execute', 'build', 'sleep', 'head'}>
 recursive            = true
 roots                = ["{journ}"]                                                            # <list[str|pl.Path]>  Places the job:walker will start
 exts                 = [".keys"]                                                              # <list[str]>
@@ -41,7 +40,6 @@ name                 = "get.xml"
 version              = "0.1"
 ctor                 = "job"
 doc                  = ["Stream DBLP xmls and extract entries with matching keys"]
-print_levels         = {action="WARN", execute="WARN"}
 depends_on           = ["bib::get.patterns", "bib::get.patterns..$head$"]
 recursive            = false
 roots                = ["{dblp}"]                                                            # <list[str|pl.Path]>  Places the job:walker will start

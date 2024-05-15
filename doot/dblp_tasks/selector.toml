@@ -4,7 +4,6 @@ name                 = "select.venues"
 version              = "0.1"
 ctor                 = "job"
 doc                  = [""]
-print_levels         = {action="WARN", execute="WARN"}
 recursive            = false
 roots                = ["{dblp}"]
 exts                 = [".xml"]

@@ -15,6 +15,9 @@ stream  = { level="WARN",  allow=["doot"], format="{levelname:<8} : {message}", 
 file    = { level="DEBUG", allow=["doot"], format="{levelname:<8} : {message:<20} :|: (module:{module} line:{lineno} fn:{funcName})" }
 printer = { level="INFO", colour=true}
 
+[logging.subprinters]
+[logging.extra]
+
 [plugins]
 # Allows for defining shorthands
 command        = { other-run = "doot.cmds.run_cmd:RunCmd", tasks = "doot.cmds.list_cmd:ListCmd" }

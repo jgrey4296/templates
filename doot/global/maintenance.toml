@@ -36,7 +36,6 @@ actions = [
 name    = "_.mamba.versions"
 version = "0.1"
 ctor    = "task"
-print_levels = {execute="INFO"}
 actions = [
         { do="dootle.python.mamba:MambaEnv", env="default", update_="default"},
         { do="shell", args=["mamba", "info"], shenv_="default", update_="info"  },
@@ -49,7 +48,6 @@ actions = [
 name    = "_.rust.versions"
 version = "0.1"
 ctor    = "task"
-print_levels = {execute="INFO"}
 actions = [
         { do="shell", args=["rustup", "show"], update_="rustup"  },
         { do="write!", from_="rustup", to="{records}/rustup.info"},
@@ -59,7 +57,6 @@ actions = [
 name    = "_.tex.versions"
 version = "0.1"
 ctor    = "task"
-print_levels = {execute="INFO"}
 actions = [
         { do="shell", args=["tlmgr", "info", "--only-installed", "-data", "name,cat-version,localrev,shortdesc"], update_="tex"  },
         { do="write!", from_="tex", to="{records}/tex.versions"},

@@ -16,7 +16,6 @@ name                 = "symlinks"
 version              = "0.1"                # <str>
 doc                  = ["setup symlinks to templates"]                   # <list[str]>
 ctor                 = "task"               # <str>
-print_levels = {execute="INFO"}
 actions              = [
    # Main
    {do="link!", link="{home}/.asdfrc",             to="{tools}/asdfrc"},
@@ -96,7 +95,6 @@ name                 = "git"
 version              = "0.1"                # <str>
 doc                  = ["setup git config file symlinks"]                   # <list[str]>
 ctor                 = "task"               # <str>
-print_levels         = {execute="INFO"}
 actions              = [
    {do="link!", link="{home}/.gitconfig",                      to="git/gitconfig"},
    {do="link!", link="{home}/.gitignore_global",               to="git/gitignore_global"},

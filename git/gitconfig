@@ -10,6 +10,7 @@
 	helper = cache
 [core]
 	excludesfile = ~/.gitignore_global
+        autocrlf = true
 [init]
 	defaultBranch = main
 	templateDir = ~/gitub/_templates/git/initDir

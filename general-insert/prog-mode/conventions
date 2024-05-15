@@ -4,9 +4,11 @@ Data       {}_d.   # Structural Spec.
 Interfaces {}_i.   # Functional+Structural Spec.
 
 Enums      {}_e.   #
-Mixins     {}_m.   # {}_m Separate Implementations.
+Mixins     {}_m.   # Separate Implementations.
 
 Hooks      {}_h.   #
+
+Loggers    {})_l.  #
 
 build()            # Creates the type its attached to.            House.build => House
 make()             # Makes whatever the type is responsible for.  Oven.make   => Bread

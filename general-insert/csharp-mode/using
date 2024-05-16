@@ -1,0 +1,2 @@
+CSharp Imports:
+using System.CompoenntModel.DataAnnotations; # Entity Framework

@@ -5,6 +5,13 @@ https://learn.microsoft.com/en-us/dotnet/api/?view=net-8.0
 https://ubuntuhandbook.org/index.php/2023/11/install-dotnet-8-ubuntu-22-04/
 
 https://learn.microsoft.com/en-gb/dotnet/core/extensions/logging-providers
+https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events
+https://learn.microsoft.com/en-gb/aspnet/core/fundamentals/middleware/write?view=aspnetcore-8.0
+https://learn.microsoft.com/en-us/ef/core/
+https://www.linode.com/docs/guides/install-dotnet-on-ubuntu/
+
+* MSBuild
+https://learn.microsoft.com/en-us/visualstudio/msbuild/msbuild-reserved-and-well-known-properties?view=vs-2022
 * linq
 https://learn.microsoft.com/en-gb/dotnet/csharp/language-reference/keywords/query-keywords
 https://learn.microsoft.com/en-gb/dotnet/csharp/linq/standard-query-operators/
@@ -41,6 +48,7 @@ https://github.com/fledware/GodotXUnit
 ** docfx
 https://dotnet.github.io/docfx/docs/basic-concepts.html
 * Links
+https://stackoverflow.com/questions/67910658/how-do-i-trust-dotnets-dev-cert-in-linux
 https://learn.microsoft.com/en-us/dotnet/csharp/
 https://learn.microsoft.com/en-us/dotnet/csharp/linq/
 https://learn.microsoft.com/en-us/dotnet/api/?view=net-7.0
@@ -58,6 +66,7 @@ http://www.illposed.com/software/javaoscdoc/
 http://www.janus-project.org/Home
 http://www.leebyron.com/else/mesh/
 * Github
+https://github.com/dotnet-architecture/eBooks
 https://github.com/dotnet/docs
 https://github.com/dotnet/csharpstandard
 https://github.com/dotnet/csharplang

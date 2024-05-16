@@ -1,0 +1,25 @@
+# -*- mode: snippet -*-
+# name  : compiled
+# uuid  : compiled
+# key   : compiled
+# group : gitignore
+# --
+##-- compiled
+*.beam
+*.bl
+*.class
+*.com
+*.dll
+*.elc
+*.exe
+*.hi
+*.meta
+*.o
+*.so
+ccsat.*
+Makefile.in
+config.make
+aclocal.m4
+install-sh
+config.status
+##-- end compiled

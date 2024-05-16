@@ -1,0 +1,34 @@
+# -*- mode: snippet -*-
+# name  : big_data
+# uuid  : big_data
+# key   : big_data
+# group : gitignore
+# --
+##-- big data
+*.aif
+*.aif.*
+*.aiff
+*.avi
+*.dae
+*.dcm
+*.epub
+*.gd
+*.gif
+*.glb
+*.gltf
+*.jpeg
+*.jpg
+*.m4a
+*.m4p
+*.m4v
+*.mp3
+*.mp4
+*.pdf
+*.pdf
+*.pickle
+*.png
+*.wav
+imgs/*
+*.dmg
+*.app
+##-- end big data

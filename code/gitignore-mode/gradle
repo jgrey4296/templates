@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name  : gradle
+# uuid  : gradle
+# key   : gradle
+# group : gitignore
+# --
+##-- gradle
+gradle/
+gradlew
+gradlew.bat
+.gradle/
+##-- end gradle

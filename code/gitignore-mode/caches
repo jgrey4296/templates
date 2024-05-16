@@ -1,0 +1,44 @@
+# -*- mode: snippet -*-
+# name  : caches
+# uuid  : caches
+# key   : caches
+# group : gitignore
+# --
+##-- caches
+.DS_Store
+*.bak
+.DS_Store?
+UpgradeLog*.XML
+UpgradeLog*.htm
+.Spotlight-v11
+.Trashes
+._*
+.dropbox
+.orgids
+Thumbs.db
+\#.\#
+ehthumbs.db
+node_modules
+~*
+.doit*.db
+mono_crash.*
+$RECYCLE.BIN/
+.Trash-*/
+.DocumentRevisions-V100
+Icon
+.AppleDouble
+.LSOverride
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+*.rdl.data
+*.bim.layout
+*.bim_*.settings
+*.rptproj.rsuser
+*- [Bb]ackup.rdl
+*- [Bb]ackup ([0-9]).rdl
+*- [Bb]ackup ([0-9][0-9]).rdl
+##-- end caches

@@ -27,8 +27,8 @@ run = { tracker = "default", runner = "default", reporter= "default", report-lin
 
 [[locations]]
 templates      = {loc="~/.config/.templates", normOnLoad=true}
-temp           = {loc=".cache/doot/temp",  cleanable=true}
-build          = {loc=".cache/doot/build", cleanable=true}
+temp           = {loc="_cache_/doot/temp",  cleanable=true}
+build          = {loc="_cache_/doot/build", cleanable=true}
 logs           = "{temp}/logs"
 template_tasks = "{templates}/doot"
 records        = "{templates}/.maintenance"

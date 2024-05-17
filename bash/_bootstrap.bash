@@ -37,17 +37,17 @@ CACHE_DIRS=(
     )
 
 
-case "$OSTYPE" in 
+case "$OSTYPE" in
     darwin*)
-        
-        for i in $(grep -vE "^\s*#" $BREW_LIST | tr "\n" " "); 
+
+        for i in $(grep -vE "^\s*#" $BREW_LIST | tr "\n" " ");
         do
-           brew install "$i" 
+           brew install "$i"
         done
         ;;
     linux*)
         for i in "${CACHE_DIRS[@]}"; do
-            mkdir -p "$HOME/.cache/$i"
+            mkdir -p "$HOME/_cache_/$i"
        done
 
        mkdir -p "$HOME/.config"
@@ -61,7 +61,7 @@ case "$OSTYPE" in
        # after gh is installed, authenticate
 
        # Setup SDKMAN!
-       # export SDKMAN_DIR="$HOME/.cache/sdkman"
+       # export SDKMAN_DIR="$HOME/_cache_/sdkman"
        # curl -s "https://get.sdkman.io" | bash
       ;;
 esac

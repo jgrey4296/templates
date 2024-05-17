@@ -81,7 +81,7 @@ python -m trace --ignore-module={module,module,module}
 python -m trace --ignore-dir={dir,dir,dir}
 
 # trace,  but filter out stdlib stuff
-python -m trace --ignore-dir=/home/john/.cache/mamba/envs/default/lib/python3.12/ --trace ?
+python -m trace --ignore-dir=/home/john/_cache_/mamba/envs/default/lib/python3.12/ --trace ?
 #+end_src
 
 

@@ -22,8 +22,8 @@ Account johngrey
 
 # LOCAL STORAGE
 MaildirStore johngrey-local
-Path ~/.cache/mail/johngrey/
-Inbox  ~/.cache/mail/johngrey/inbox
+Path ~/_cache_/mail/johngrey/
+Inbox  ~/_cache_/mail/johngrey/inbox
 
 Channel johngrey-inbox
 Far :johngrey-remote:
@@ -66,8 +66,8 @@ Account jgrey
 
 # LOCAL STORAGE
 MaildirStore jgrey-local
-Path ~/.cache/mail/jgrey/
-Inbox  ~/.cache/mail/jgrey/inbox
+Path ~/_cache_/mail/jgrey/
+Inbox  ~/_cache_/mail/jgrey/inbox
 
 Channel jgrey-inbox
 Far :jgrey-remote:
@@ -111,8 +111,8 @@ Account jgnp1
 
 # LOCAL STORAGE
 MaildirStore jgnp1-local
-Path ~/.cache/mail/jgnp1/
-Inbox  ~/.cache/mail/jgnp1/inbox
+Path ~/_cache_/mail/jgnp1/
+Inbox  ~/_cache_/mail/jgnp1/inbox
 
 Channel jgnp1-inbox
 Far :jgnp1-remote:
@@ -155,8 +155,8 @@ Account b42
 
 # LOCAL STORAGE
 MaildirStore b42-local
-Path ~/.cache/mail/b42/
-Inbox  ~/.cache/mail/b42/inbox
+Path ~/_cache_/mail/b42/
+Inbox  ~/_cache_/mail/b42/inbox
 
 Channel b42-inbox
 Far :b42-remote:
@@ -199,8 +199,8 @@ Account jgsoe
 
 # LOCAL STORAGE
 MaildirStore jgsoe-local
-Path ~/.cache/mail/jgsoe/
-Inbox  ~/.cache/mail/jgsoe/inbox
+Path ~/_cache_/mail/jgsoe/
+Inbox  ~/_cache_/mail/jgsoe/inbox
 
 Channel jgsoe-inbox
 Far :jgsoe-remote:

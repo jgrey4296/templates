@@ -14,9 +14,9 @@
 % note: tlmgr option docfiles 1
 
 TEXBASE     = $HOME/.local/texlive/2023/texmf-dist
-TEXMFHOME   = $HOME/.cache/texlive/2023/home
-TEXMFVAR    = $HOME/.cache/texlive/2023/var
-TEXMFSYSVAR = $HOME/.cache/texlive/2023/sys
+TEXMFHOME   = $HOME/_cache_/texlive/2023/home
+TEXMFVAR    = $HOME/_cache_/texlive/2023/var
+TEXMFSYSVAR = $HOME/_cache_/texlive/2023/sys
 TEXMFOUT    = $TEXMFDOTDIR
 TEXMFCONFIG = $HOME/github/_templates/tex-config
 

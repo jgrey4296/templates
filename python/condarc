@@ -1,7 +1,7 @@
 envs_dirs:
-  - ${HOME}/.cache/mamba/envs
+  - ${HOME}/_cache_/mamba/envs
 pkgs_dirs:
-  - ${HOME}/.cache/mamba/pkgs
+  - ${HOME}/_cache_/mamba/pkgs
 channels:
   - nodefaults
   - conda-forge

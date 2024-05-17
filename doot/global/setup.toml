@@ -53,7 +53,7 @@ actions              = [
    {do="link!", link="{home}/.config/switch-to-firefox.bash",  to="bash/shortcuts/switch-to-firefox.bash"},
    {do="link!", link="{home}/.config/switch-to-tor.bash",  to="bash/shortcuts/switch-to-tor.bash"},
 
-   {do="link!", link="{home}/.cache/cargo/config.toml",        to="{tools}/cargo_config.toml"},
+   {do="link!", link="{home}/_cache_/cargo/config.toml",        to="{tools}/cargo_config.toml"},
    # Tex
    {do="link!", link="{tex}/texmf.cnf",            to="tex-config/texmf.cnf.linux"},
    {do="link!", link="{tex}/texmfcnf.lua",         to="tex-config/texmfcnf.lua.linux"},
@@ -78,7 +78,7 @@ name    = "dirs"
 version = "0.1"
 ctor    = "task"
 actions = [
-   {do="dir!", args=["{home}/.config/secrets", "{home}/.cache", "{home}/.local/bin"]}
+   {do="dir!", args=["{home}/.config/secrets", "{home}/_cache_", "{home}/.local/bin"]}
 
 ]
 

@@ -23,8 +23,8 @@ Account gmail
 
 # LOCAL STORAGE (CREATE DIRECTORIES with mkdir -p Maildir/gmail)
 MaildirStore gmail-local
-Path ~/.cache/mail/
-Inbox ~/.cache/mail/INBOX
+Path ~/_cache_/mail/
+Inbox ~/_cache_/mail/INBOX
 
 # CONNECTIONS SPECIFY LINKS BETWEEN REMOTE AND LOCAL FOLDERS
 #

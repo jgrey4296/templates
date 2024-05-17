@@ -114,7 +114,7 @@
 ("templates"
  (filename . "/media/john/data/github/_templates/"))
 ("mamba"
- (filename . "~/.cache/mamba/envs/"))
+ (filename . "~/_cache_/mamba/envs/"))
 ("jgc"
  (filename . "/media/john/data/github/_config/"))
 ("fonts"
@@ -127,7 +127,7 @@
 ("config"
  (filename . "~/.config/"))
 ("cache"
- (filename . "~/.cache/"))
+ (filename . "~/_cache_/"))
 ("lisp"
  (filename . "~/github/lisp/"))
 ("jvm_instances"
@@ -141,7 +141,7 @@
 ("dootle"
  (filename . "~/github/python/dootle/"))
 ("conda"
- (filename . "~/.cache/mamba/"))
+ (filename . "~/_cache_/mamba/"))
 ("doot"
  (filename . "~/github/python/doot/"))
 ("video"

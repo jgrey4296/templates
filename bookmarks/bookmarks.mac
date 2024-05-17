@@ -23,7 +23,7 @@
  (rear-context-string . "44 Aug 26 22:19 ")
  (position . 521))
 ("cache"
- (filename . "~/.cache/")
+ (filename . "~/_cache_/")
  (front-context-string . "re-doom\n  drwxr-")
  (rear-context-string . "96 Sep  5 03:35 ")
  (position . 1474))

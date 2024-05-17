@@ -60,7 +60,7 @@ except ImportError:
 
 ##-- readline history
 ## from: https://stackoverflow.com/questions/10346419
-histfile = pl.Path.home() / ".cache/logs/python_history"
+histfile = pl.Path.home() / "_cache_/logs/python_history"
 atexit.register(readline.write_history_file, histfile)
 readline.set_history_length(500)
 

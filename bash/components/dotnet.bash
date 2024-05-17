@@ -1,8 +1,9 @@
 # Settings for dotnet / c#
-
-DOTNET_ROOT="/usr/lib/dotnet"
-NUGET_PACKAGES="$BASE_CACHE/dotnet/packages"
+# https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-environment-variables
+#
+DOTNET_ROOT="$HOME/.local/dotnet"
 DOTNET_CLI_HOME="$BASE_CACHE/dotnet"
-DOTNET_BIN="/snap/dotnet-sdk/current/"
+NUGET_PACKAGES="$BASE_CACHE/dotnet/packages"
 
-PATH="$BASE_CACHE/dotnet/.dotnet/tools:$DOTNET_BIN:$PATH"
+DOTNET_BUNDLE_EXTRACT_BASE_DIR="$BASE_CACHE/dotnet/bundle"
+PATH="$BASE_CACHE/dotnet/.dotnet/tools:$DOTNET_ROOT/tools:$DOTNET_ROOT:$PATH"

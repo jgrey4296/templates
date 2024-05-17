@@ -1,6 +1,7 @@
 #+TITLE: DotNet Package Reference
 
 * dotnet
+https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-environment-variables
 https://learn.microsoft.com/en-us/dotnet/api/?view=net-8.0
 https://ubuntuhandbook.org/index.php/2023/11/install-dotnet-8-ubuntu-22-04/
 

@@ -13,6 +13,16 @@ https://www.linode.com/docs/guides/install-dotnet-on-ubuntu/
 
 * MSBuild
 https://learn.microsoft.com/en-us/visualstudio/msbuild/msbuild-reserved-and-well-known-properties?view=vs-2022
+
+#+begin_src bash :results output
+# verbose log to a file
+dotnet build /flp:v=diag
+#+end_src
+
+
+
+* SDK
+https://learn.microsoft.com/en-us/dotnet/core/project-sdk/overview
 * linq
 https://learn.microsoft.com/en-gb/dotnet/csharp/language-reference/keywords/query-keywords
 https://learn.microsoft.com/en-gb/dotnet/csharp/linq/standard-query-operators/
@@ -22,6 +32,78 @@ https://learn.microsoft.com/en-us/dotnet/api/?view=netframework-4.8&preserve-vie
 
 * entity framework
 https://learn.microsoft.com/en-us/ef/core/
+
+#+NAME: references
+#+begin_src xml :results output
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.5">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.5">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.sqlite" Version="8.0.5" />
+#+end_src
+
+
+** Scaffolding
+#+NAME: the model
+#+begin_src csharp :results output
+namespace web.Model;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore.Design;
+
+using Microsoft.EntityFrameworkCore;
+
+public class Patient
+{
+    [Key]
+    public int Id { get; set; }
+    public int[]? studies { get; set; }
+    public int[]? images { get; set; }
+}
+#+end_src
+
+#+NAME: context
+#+begin_src csharp :results output
+
+public class DicomContext : DbContext {
+
+    private readonly string ConnectionString = "Data Source=test.db";
+	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+	{
+		optionsBuilder.UseSqlite(ConnectionString);
+	}
+
+	public DbSet<Patient> Movies { get; set; }
+}
+
+#+end_src
+
+#+NAME: creating the scaffold
+#+begin_src bash :results output
+dotnet ef dbcontext scaffold "Data Source=test.db" Microsoft.EntityFrameworkCore.Sqlite --msbuildprojectextensionspath ./.temp/obj/web --project src/web  -s src/web --context-dir _scaffold
+#+end_src
+
+
+** The migration
+#+begin_src bash :results output
+# Creates the db 'dbv0', for the target/start project 'src/web'
+# Note the msbuildprojectextensionspath, to insert into the correct obj dir
+## src/{web} -> .temp/obj/{web}
+dotnet ef migrations add dbv0 -p src/web -s src/web --msbuildprojectextensionspath ./.temp/obj/web -o _migrations/initial
+
+# Then apply it
+dotnet ef databsae update -p src/web
+# Creates test.db (from the connection string)
+#+end_src
+
+
+
 * asp dotnet
 https://learn.microsoft.com/en-us/dotnet/api/?view=view=aspnetcore-8.0&preserve-view=true
 * Nuget Packages

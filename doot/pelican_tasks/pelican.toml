@@ -20,4 +20,4 @@ depends_on           = ["file:>pelican.toml"]                   # <list[DootTask
 actions              = [
                      { do="touch", args=["pelicanconf.py"] },
                      { do="shell", args=["pelican", "--listen", "--autoreload", "."] }
-]                                        # <list[Any]>
+]

@@ -2,7 +2,7 @@
 
 [locations]
 
-[[tasks.requrements]]
+[[tasks.requirements]]
 name = "pip"
 doc = ["Generate a requirements.txt"]
 ctor = "task"

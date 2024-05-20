@@ -15,6 +15,7 @@ exclude = [
 line-length    = 100
 indent-width   = 4
 target-version = "py311"
+cache-dir      = ".temp/ruff_cache"
 
 [lint]
 # Enable pycodestyle (`E`) and Pyflakes (`F`) codes by default.

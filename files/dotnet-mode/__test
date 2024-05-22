@@ -1,0 +1,12 @@
+// __test -*- mode: csharp -*-
+namespace InitialNamespace;
+using Xunit;
+
+public class InitialTest {
+
+    [Fact]
+    public void Test1 (){
+        Assert.Equal(1, 1);
+    }
+
+}

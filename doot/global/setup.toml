@@ -96,7 +96,11 @@ version              = "0.1"                # <str>
 doc                  = ["setup git config file symlinks"]                   # <list[str]>
 ctor                 = "task"               # <str>
 actions              = [
+   # Git General:
    {do="link!", link="{home}/.gitconfig",                      to="git/gitconfig"},
    {do="link!", link="{home}/.gitignore_global",               to="git/gitignore_global"},
    {do="link!", link="{home}/.config/gh/config.yml",           to="git/github_config.yml"},
+   # Setup git cliff:
+   {do="dir!",  args=["{home}/.config/git-cliff/}"]},
+   {do="link!", link="{home}/.config/git-cliff/cliff.toml",    to="git/cliff.toml"},
 ]

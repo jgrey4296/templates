@@ -1,5 +1,4 @@
-## pyproject.toml -*- mode: Conf[TOML] -*-
-
+## pyproject.toml -*- mode: conf-toml -*-
 [project]
 name            = "$1"
 version         = "0.1.0"

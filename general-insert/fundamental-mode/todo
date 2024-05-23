@@ -1,13 +1,17 @@
 Todo Codes:
-NOTE #
-IDEA #
-TODO #
-SOON #
-NEXT #
-DONE #
-WAIT #
-HOLD #
-STOP #
-HACK #
+IDEA    #
+JOB     #
+TASK    #
+LOOP    #
+ACTIVE  #
+BLOCKED #
+QUEUED  #
+DONE    #
+DEAD    #
+[∅]     #
+[⇒]     #
+[∃]     #
+[⟙]     #
+[⟘]     #
 
- # From https://amitp.blogspot.com/2023/12/status-codes.html?m=1
+        # also see https://amitp.blogspot.com/2023/12/status-codes.html?m=1

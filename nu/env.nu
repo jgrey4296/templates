@@ -44,7 +44,10 @@ $env.NU_PLUGIN_DIRS = [
     ($nu.default-config-dir | path join 'plugins') # add <nushell-config-dir>/plugins
 ]
 
-# To add entries to PATH (on Windows you might use Path), you can use the following pattern:
+# Split path as a string:
+# let _path = $env.PATH | split row (char esep)
+
+# But I build from scratch:
 let _path = [
         "/usr/local/bin"
         "/usr/local/sbin"
@@ -53,11 +56,20 @@ let _path = [
         "/usr/sbin"
         "/bin"
         "/sbin"
+        "/snap/bin"
 ]
 # std path add ($env.HOME | path join ".local" "bin") ## BROKEN
 let _path = $_path | prepend [
             ($env.CARGO_HOME | path join "bin")
             ($env.HOME | path join ".local/bin/")
 ]
-let _path = $_path | uniq
-$env.PATH = $_path
+let _path          = $_path | uniq
+$env.PATH          = $_path
+
+$env.BASECACHE     = ($env.HOME | path join "_cache_")
+$env.BASECONFIG    = ($env.HOME | path join ".config")
+$env.BASELOCAL     = ($env.HOME | path join ".local")
+$env.GITHUB        = ($env.HOME | path join "github")
+$env.TEMPLATES     = ($env.GITHUB | path join "_templates")
+$env.BASELOGS      = ($env.BASECACHE | path join "logs")
+$env.SECRETS       = ($env.BASECONFIG | path join "secrets")

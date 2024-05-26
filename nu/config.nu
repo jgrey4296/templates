@@ -16,6 +16,7 @@ source hooks.nu
 source menus.nu
 source plugins.nu
 use python.nu *
+use dotnet.nu *
 
 alias open = ^open
 

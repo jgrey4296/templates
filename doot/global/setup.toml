@@ -104,3 +104,14 @@ actions              = [
    {do="dir!",  args=["{home}/.config/git-cliff/}"]},
    {do="link!", link="{home}/.config/git-cliff/cliff.toml",    to="git/cliff.toml"},
 ]
+
+[[tasks.setup]]
+name = "nu"
+version = "0.1"
+doc = ["symlinks nushell config into home"]
+ctor = "task"
+actions = [
+        {do="dir!", args=["{home}/.config/nushell"]},
+        {do="link!", link="{home}/.config/nushell/env.nu", to="nu/env.nu"},
+        {do="link!", link="{home}/.config/nushell/config.nu", to="nu/config.nu"}
+]

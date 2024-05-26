@@ -2,7 +2,7 @@
 # name  : module
 # uuid  : module
 # key   : mod
-# group :
+# group : nushell
 # --
 module $1 {
        $0

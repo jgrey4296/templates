@@ -1,0 +1,1 @@
+## dotnet.nu -*- mode: Nushell -*-

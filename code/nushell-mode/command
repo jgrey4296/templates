@@ -2,8 +2,8 @@
 # name  : command
 # uuid  : command
 # key   : command
-# group :
+# group : nushell
 # --
-def $1 [$2] {
+def ${1:name} [${2:types}] {
     $0
 }

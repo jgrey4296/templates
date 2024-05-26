@@ -8,13 +8,14 @@
 # https://github.com/nushell/nu_scripts/tree/main/themes
 #
 print "Configuring Nu..."
-source ~/.config/.templates/nu/utils.nu
-source ~/.config/.templates/nu/themes.nu
-source ~/.config/.templates/nu/cmds.nu
-source ~/.config/.templates/nu/bindings.nu
-source ~/.config/.templates/nu/hooks.nu
-source ~/.config/.templates/nu/menus.nu
-source ~/.config/.templates/nu/plugins.nu
+source utils.nu
+source themes.nu
+source cmds.nu
+source bindings.nu
+source hooks.nu
+source menus.nu
+source plugins.nu
+use python.nu *
 
 alias open = ^open
 

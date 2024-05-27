@@ -1,6 +1,8 @@
 # Nushell Environment Config File
 # version = "0.93.0"
+use std
 source ~/.config/.templates/nu/utils.nu
+source ~/.config/.templates/nu/path.nu
 
 # Use nushell functions to define your right and left prompt
 $env.PROMPT_COMMAND       = {|| create_left_prompt }
@@ -43,28 +45,6 @@ $env.NU_LIB_DIRS = [
 $env.NU_PLUGIN_DIRS = [
     ($nu.default-config-dir | path join 'plugins') # add <nushell-config-dir>/plugins
 ]
-
-# Split path as a string:
-# let _path = $env.PATH | split row (char esep)
-
-# But I build from scratch:
-let _path = [
-        "/usr/local/bin"
-        "/usr/local/sbin"
-        "/usr/libexec"
-        "/usr/bin"
-        "/usr/sbin"
-        "/bin"
-        "/sbin"
-        "/snap/bin"
-]
-# std path add ($env.HOME | path join ".local" "bin") ## BROKEN
-let _path = $_path | prepend [
-            ($env.CARGO_HOME | path join "bin")
-            ($env.HOME | path join ".local/bin/")
-]
-let _path          = $_path | uniq
-$env.PATH          = $_path
 
 $env.BASECACHE     = ($env.HOME | path join "_cache_")
 $env.BASECONFIG    = ($env.HOME | path join ".config")

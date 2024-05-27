@@ -18,8 +18,6 @@ source plugins.nu
 use python.nu *
 use dotnet.nu *
 
-alias open = ^open
-
 mut general = {
     show_banner                      : false # true or false to enable or disable the welcome banner at startup
     color_config                     : $dark_theme   # if you want a light theme, replace `$dark_theme` to `$light_theme`

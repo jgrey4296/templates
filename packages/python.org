@@ -401,6 +401,9 @@ https://github.com/ahartlba/decorator_validation
 https://github.com/facebookresearch/hydra
 *** structlog
 https://www.structlog.org/en/stable/
+*** tach  :dependency:
+https://github.com/gauge-sh/tach
+https://gauge-sh.github.io/tach/
 ** Argumentation
 
 *** ALIAS
@@ -538,6 +541,8 @@ http://www.davekuhlman.org/generateDS.html
 https://pyxb.sourceforge.net/
 **** scrapy                                    :twisted:
 https://github.com/scrapy/scrapy
+**** crawlee
+https://crawlee.dev/docs/quick-start
 **** xmlschema
 https://xmlschema.readthedocs.io/en/latest/
 **** xsdata
@@ -715,8 +720,18 @@ https://github.com/emcconville/wand
 *** moderngl                                    :modern_opengl:
 https://moderngl.readthedocs.io/en/5.8.2/
 ** Linting
+
 *** autopep8                                    :formatting:
 https://github.com/hhatto/autopep8
+
+*** pyastgrep
+https://lukeplant.me.uk/blog/posts/pyastgrep-and-custom-linting/
+https://github.com/spookylukey/pyastgrep/
+https://semgrep.dev/docs/writing-rules/rule-ideas
+
+*** astpath
+https://github.com/hchasestevens/astpath
+
 *** black                                       :formatting:
 https://github.com/psf/black
 *** flake8

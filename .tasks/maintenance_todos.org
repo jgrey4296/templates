@@ -1,0 +1,21 @@
+#+TITLE: Maintenance Todos
+
+* maintenance
+** python env listing
+** updates
+*** doom
+*** blood
+*** apt
+*** tlmgr
+*** rust
+** system setup
+** dcim
+*** image hashing
+*** ocr
+*** duplicate detector
+** DONE version records
+** DONE tex versions
+** DONE rust version
+
+
+* Links

@@ -1,0 +1,34 @@
+#+TITLE: Template Todos
+
+* Templates                                      :templates:
+** bash
+** Definitions
+** General Inserts                               :gen_insert:
+*** general-insert : seaborn
+*** general-insert : matplotlib
+*** general-insert : sqlalchemy
+*** general-insert : cairo
+*** general-insert : construct
+*** general-insert : scipy
+*** general-insert : scikit-learn
+*** general-insert : pyparsing
+*** general-insert : networkx
+*** pandas
+** DONE move templates to separate repo
+** nu
+** themes
+** DONE update project templates
+** python notes
+*** timeit
+*** trace
+*** tracemalloc
+*** faulthandler
+*** atexit
+*** gc
+*** resource
+*** dis
+*** importlib
+*** mmap
+
+
+* Links

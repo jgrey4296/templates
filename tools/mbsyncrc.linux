@@ -8,7 +8,7 @@
 IMAPAccount johngrey
 Host imap.gmail.com
 User johngrey4296@gmail.com
-PassCmd "gpg --batch -dq --no-tty ~/.config/secrets/mail/.authinfo | sed -n -E 's/^machine.*? johngrey4296@gmail.com password (.+)/\\1/p'"
+PassCmd "gpg --batch -dq --no-tty ~/.config/secrets/mail/.authinfo.asc | sed -n -E 's/^machine.*? johngrey4296@gmail.com password (.+)/\\1/p'"
 AuthMechs LOGIN
 SSLType IMAPS
 SSLVersions TLSv1.2
@@ -52,7 +52,7 @@ Channel johngrey-sent
 IMAPAccount jgrey
 Host imap.gmail.com
 User jgrey4296@gmail.com
-PassCmd "gpg --batch -dq --no-tty ~/.config/secrets/mail/.authinfo | sed -n -E 's/^machine.*? jgrey4296@gmail.com password (.+)/\\1/p'"
+PassCmd "gpg --batch -dq --no-tty ~/.config/secrets/mail/.authinfo.asc | sed -n -E 's/^machine.*? jgrey4296@gmail.com password (.+)/\\1/p'"
 AuthMechs LOGIN
 SSLType IMAPS
 SSLVersions TLSv1.2
@@ -97,7 +97,7 @@ Channel jgrey-sent
 IMAPAccount jgnp1
 Host imap.gmail.com
 User jgrey.n.plus.one@gmail.com
-PassCmd "gpg --batch -dq --no-tty ~/.config/secrets/mail/.authinfo | sed -n -E 's/^machine.*? jgrey.n.plus.one@gmail.com password (.+)/\\1/p'"
+PassCmd "gpg --batch -dq --no-tty ~/.config/secrets/mail/.authinfo.asc | sed -n -E 's/^machine.*? jgrey.n.plus.one@gmail.com password (.+)/\\1/p'"
 AuthMechs LOGIN
 SSLType IMAPS
 SSLVersions TLSv1.2
@@ -140,7 +140,7 @@ Channel jgnp1-sent
 IMAPAccount b42
 Host imap.gmail.com
 User belial42@gmail.com
-PassCmd "gpg --batch -dq --no-tty ~/.config/secrets/mail/.authinfo | sed -n -E 's/^machine.*? belial42@gmail.com password (.+)/\\1/p'"
+PassCmd "gpg --batch -dq --no-tty ~/.config/secrets/mail/.authinfo.asc | sed -n -E 's/^machine.*? belial42@gmail.com password (.+)/\\1/p'"
 AuthMechs LOGIN
 SSLType IMAPS
 SSLVersions TLSv1.2
@@ -184,7 +184,7 @@ Channel b42-sent
 IMAPAccount jgsoe
 Host imap.gmail.com
 User jgrey@soe.ucsc.edu
-PassCmd "gpg --batch -dq --no-tty ~/.config/secrets/mail/.authinfo | sed -n -E 's/^machine.*? jgrey@soe.ucsc.edu password (.+)/\\1/p'"
+PassCmd "gpg --batch -dq --no-tty ~/.config/secrets/mail/.authinfo.asc | sed -n -E 's/^machine.*? jgrey@soe.ucsc.edu password (.+)/\\1/p'"
 AuthMechs LOGIN
 SSLType IMAPS
 SSLVersions TLSv1.2

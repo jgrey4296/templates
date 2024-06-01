@@ -141,7 +141,6 @@ IMAPAccount b42
 Host imap.gmail.com
 User belial42@gmail.com
 PassCmd "gpg --batch -dq --no-tty ~/.config/secrets/mail/.authinfo | sed -n -E 's/^machine.*? belial42@gmail.com password (.+)/\\1/p'"
-
 AuthMechs LOGIN
 SSLType IMAPS
 SSLVersions TLSv1.2

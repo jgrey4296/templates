@@ -1,15 +1,16 @@
 #+TITLE: Maintenance Todos
+#+STARTUP: agenda
 
 * maintenance
-** python env listing
-** updates
+** [∅] python env listing
+** [∅] updates
 *** doom
 *** blood
 *** apt
 *** tlmgr
 *** rust
-** system setup
-** dcim
+** [∅] system setup
+** [∅] dcim
 *** image hashing
 *** ocr
 *** duplicate detector

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : is-agenda
+# uuid  : is-agenda
+# key   : is-agenda
+# group : org-startup
+# --
+#+STARTUP: agenda

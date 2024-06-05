@@ -4,9 +4,17 @@
     ("nd" "ndarray" nil :count 1)
    ))
 
+(define-abbrev-table 'global-abbrev-table
+  '(
+    ("moduile" "module" nil :count 1)
+    ("moduiles" "modules" nil :count 2)
+    ("modulies" "modules" nil :count 2)
+    ("pacakge" "package" nil :count 1)
+   ))
+
 (define-abbrev-table 'org-mode-abbrev-table
   '(
-    ("todo" "TODO" nil :count 95)
+    ("todo" "TODO" nil :count 96)
    ))
 
 (define-abbrev-table 'prog-mode-abbrev-table
@@ -21,4 +29,3 @@
     ("kwarp" "kwrap" nil :count 61)
     ("lamdba" "lambda" nil :count 2)
    ))
-

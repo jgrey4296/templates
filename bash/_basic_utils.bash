@@ -93,6 +93,7 @@ fi
 case "$USER" in
     john)
         subu () {
+            # switch to other profile
             # a su cmd that preserves tmux info
             su -P -l --whitelist-environment="$SU_WHITELIST" jg
         }

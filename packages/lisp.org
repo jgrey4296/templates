@@ -1,4 +1,5 @@
 #+TITLE: Lisp Package Reference
+#+STARTUP: packages
 
 * Main
 ** stdlib

@@ -1,11 +1,5 @@
 #+TITLE: System Packages
-
-* Overview :toc:
-- [[#main][Main]]
-  - [[#linux][linux]]
-  - [[#mac][mac]]
-  - [[#windows][windows]]
-- [[#links][Links]]
+#+STARTUP: packages
 
 * Main
 

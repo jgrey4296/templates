@@ -1,10 +1,5 @@
 #+TITLE: JVM Package Reference
-
-* Overview :toc:
-- [[#main][Main]]
-  - [[#stdlib][stdlib]]
-  - [[#external][external]]
-- [[#links][Links]]
+#+STARTUP: packages
 
 * Main
 

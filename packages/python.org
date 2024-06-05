@@ -1,4 +1,5 @@
 #+TITLE: Python Packages Reference
+#+STARTUP: packages
 https://status.python.org/
 
 * Main
@@ -98,6 +99,7 @@ python -m trace --ignore-dir=/home/john/_cache_/mamba/envs/default/lib/python3.1
 *** uuid
 *** warnings
 ** general
+*** format-spec
 ** rest
 *** antigravity
 *** base64
@@ -553,6 +555,9 @@ https://github.com/tefra/xsdata-plantuml
 *** yaml
 **** pyaml
 https://pyyaml.org/
+*** statemachine
+https://github.com/fgmacedo/python-statemachine
+https://python-statemachine.readthedocs.io/en/latest/
 ** Diagrams
 *** diagrams                                    :system_diagrams:
 https://github.com/mingrammer/diagrams

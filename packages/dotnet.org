@@ -1,4 +1,5 @@
 #+TITLE: DotNet Package Reference
+#+STARTUP: packages
 
 * dotnet
 https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-environment-variables

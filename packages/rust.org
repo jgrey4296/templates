@@ -1,4 +1,5 @@
 #+TITLE: Rust Package Reference
+#+STARTUP: packages
 
 * Stdlib
 https://doc.rust-lang.org/std/index.html

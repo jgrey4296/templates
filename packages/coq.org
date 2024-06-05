@@ -1,4 +1,5 @@
 #+TITLE: Coq Package Reference
+#+STARTUP: packages
 
 * Overview :toc:
 - [[#main][Main]]

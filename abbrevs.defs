@@ -6,9 +6,11 @@
 
 (define-abbrev-table 'global-abbrev-table
   '(
-    ("moduile" "module" nil :count 1)
+    ("lamdba" "lambda" nil :count 2)
+    ("metdata" "metadata" nil :count 1)
+    ("moduile" "module" nil :count 3)
     ("moduiles" "modules" nil :count 2)
-    ("modulies" "modules" nil :count 2)
+    ("modulies" "modules" nil :count 4)
     ("pacakge" "package" nil :count 1)
    ))
 
@@ -24,7 +26,7 @@
 
 (define-abbrev-table 'python-mode-abbrev-table
   '(
-    ("dootkey" "DootKey" nil :count 165)
+    ("dootkey" "DootKey" nil :count 182)
     ("isins" "isinstance(" nil :count 1)
     ("kwarp" "kwrap" nil :count 61)
     ("lamdba" "lambda" nil :count 2)

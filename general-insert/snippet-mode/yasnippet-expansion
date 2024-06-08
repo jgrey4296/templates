@@ -1,0 +1,7 @@
+Yasnippet Expansion Templates:
+`{}`                     # Lisp Expansion
+`(current-time-string)`  # Time
+$0                       # Place point here after expansion
+$N                       # Nth prompt
+${N:default}             # Nth prompt with default
+${N:$$(upcase yas-text)} # Nth prompt transformation

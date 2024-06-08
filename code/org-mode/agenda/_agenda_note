@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : agenda-note
+# uuid  : agenda-note
+# key   : agenda-note
+# group : org-capture
+# --
+** Note: %?
+   %t

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : personal-todo
+# uuid  : personal-todo
+# key   : personal-todo
+# group : org-capture
+# --
+** TRIAGE %^{PROMPT|Title}
+   %a
+   %^{PROMPT|Description}

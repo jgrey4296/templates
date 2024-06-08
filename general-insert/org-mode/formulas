@@ -1,0 +1,17 @@
+Formula Syntax for Calc:
+p20 # set internal calc precision to 20 digits
+n3  # normal format
+s3  # scientific format
+e2  # engineering format
+f4  # engineering format
+D   # degree mode
+R   # radian mode
+F   # fraction mdoe
+S   # symbolic mode
+U   # unit simplication mode
+T   # duration
+t   # duration
+U   # Duration
+E   # keep empty fields
+N   # interpret all fields as numbers, 0 for NaNs
+L   # Literal lisp formulas

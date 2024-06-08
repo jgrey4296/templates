@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : global_todo
+# uuid  : global_todo
+# key   : global_todo
+# group : org-capture
+# --
+** TRIAGE Global %?
+    [[%F::%(with-current-buffer (org-capture-get :original-buffer) (number-to-string (line-number-at-pos)))][%(buffer-name (org-capture-get :original-buffer))]]
+
+	%t %(with-current-buffer (org-capture-get :original-buffer) (buffer-substring (line-beginning-position) (line-end-position)))

@@ -52,3 +52,11 @@ actions                = [
     # Upload to pypi
     { do="shell", args=["twine", "upload", "-u", "__token__", "-p", "{token_str}", "--skip-existing", "--non-interactive", "{build}/*"], env_="env"},
 ]
+
+
+[[tasks.dist]]
+name    = "changelog"
+version = "0.1"
+ctor    = "task"
+doc     = ["Generates a changelog using git cliff"]
+actions = []

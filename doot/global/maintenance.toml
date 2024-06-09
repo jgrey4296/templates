@@ -1,4 +1,4 @@
-## maintenance.toml -*- mode: conf[TOML] -*-
+## maintenance.toml -*- mode: conf-toml -*-
 
 [[locations]]
 records = ".maintenance"

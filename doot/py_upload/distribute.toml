@@ -1,6 +1,7 @@
 [[locations]]
 build     = "{temp}/dist"
 dist_key  = {file="~/.config/secrets/pypi/token.asc", normOnLoad=true, protected=true}
+changelog = {file="CHANGELOG.md"}
 # TODO run pytest
 
 [[tasks.dist]]
@@ -17,6 +18,17 @@ actions  = [
     { do="shell", args=["bumpver", "update", "--no-fetch", "--{raise}"], env_="env"},
 ]
 
+[[tasks.dist]]
+name       = "changelog"
+doc        = ["Generates a changelog using git cliff"]
+version    = "0.1"
+ctor       = "task"
+commit_msg = "[bump]: changelog"
+actions    = [
+    {do="shell", args=["git", "cliff", "--output={changelog}"]},
+    {do="shell", args=["git", "add", "{changelog}"]},
+    {do="shell", args=["git", "commit", "--amend", "--no-edit"]},
+]
 
 [[tasks.dist]]
 name                   = "build"
@@ -52,11 +64,3 @@ actions                = [
     # Upload to pypi
     { do="shell", args=["twine", "upload", "-u", "__token__", "-p", "{token_str}", "--skip-existing", "--non-interactive", "{build}/*"], env_="env"},
 ]
-
-
-[[tasks.dist]]
-name    = "changelog"
-version = "0.1"
-ctor    = "task"
-doc     = ["Generates a changelog using git cliff"]
-actions = []

@@ -2,7 +2,31 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("homepage_todos.org"
+(("org-capture-last-stored"
+ (filename . "/media/john/data/github/_config/.tasks/triage_todos.org")
+ (front-context-string . "** TRIAGE mu4e m")
+ (rear-context-string . "ts-example.html\n")
+ (position . 497)
+ (last-modified 26212 42854 949371 607000))
+("experiments"
+ (filename . "/media/john/data/github/jgrey4296.github.io/orgfiles/agenda/misc_todos.org")
+ (front-context-string . "periments\n** [∅]")
+ (rear-context-string . "intenance]]\n* Ex")
+ (position . 242)
+ (last-modified 26205 17652 387603 352000))
+("agenda"
+ (filename . "/media/john/data/github/jgrey4296.github.io/orgfiles/agenda/")
+ (front-context-string . "python_todos.org")
+ (rear-context-string . "3K May 31 20:43 ")
+ (position . 762)
+ (last-modified 26205 16893 331642 541000))
+("orgd"
+ (filename . "/media/john/data/github/jgrey4296.github.io/orgfiles/")
+ (front-context-string . "notes.org\n  -rw-")
+ (rear-context-string . "50 May 31 19:39 ")
+ (position . 682)
+ (last-modified 26203 42410 199267 722000))
+("homepage_todos.org"
  (filename . "/media/john/data/github/jgrey4296.github.io/orgfiles/todos/")
  (front-context-string . "todo_captures.or")
  (rear-context-string . "42 May 31 19:26 ")
@@ -14,12 +38,6 @@
  (rear-context-string . "8K Feb 20 05:10 ")
  (position . 153)
  (last-modified 26196 57737 229320 527000))
-("org-dir"
- (filename . "/media/john/data/github/jgrey4296.github.io/orgfiles/")
- (front-context-string . "journal.org\n  -r")
- (rear-context-string . " 0 Dec 20 09:01 ")
- (position . 638)
- (last-modified 26196 51924 580922 835000))
 ("diary"
  (filename . "/media/john/data/github/jgrey4296.github.io/orgfiles/main.diary")
  (front-context-string)
@@ -57,11 +75,11 @@
  (position . 7564)
  (last-modified 26106 17822 656893 327000))
 ("org-refile-last-stored"
- (filename . "/media/john/data/github/jgrey4296.github.io/orgfiles/base_agenda.org")
- (front-context-string . "** [[file:todos/")
- (rear-context-string . "age][Homepage]]\n")
- (position . 24787)
- (last-modified 26202 6324 897648 780000))
+ (filename . "/media/john/data/github/_config/.tasks/emacs_todos.org")
+ (front-context-string . "** DONE make q i")
+ (rear-context-string . "ect file\n* Done\n")
+ (position . 1530)
+ (last-modified 26207 22785 711803 399000))
 ("packages"
  (filename . "/media/john/data/github/_templates/packages/")
  (front-context-string . "python.org\n  -rw")

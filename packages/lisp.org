@@ -23,6 +23,13 @@ https://github.com/johnlepikhin/el-conventional-changelog
 https://www.djcbsoftware.nl/code/mu/
 https://github.com/djcb/mu
 
+
+*** environ
+https://github.com/cfclrk/environ
+
+*** helpful
+https://github.com/Wilfred/helpful
+
 * Links
 
 https://elpa.gnu.org/packages/cobol-mode.html

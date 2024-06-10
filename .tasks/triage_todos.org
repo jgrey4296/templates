@@ -1,0 +1,16 @@
+* Triage
+** OKAY dootle prog installed action
+   [[/media/john/data/github/_templates/doot/py_upload/version.toml::45][Location]]
+   :context:
+        <2024-06-10 Mon>      # ensure pipreqs is installed
+   :END:
+** TRIAGE dootle test last commit message action
+   [[/media/john/data/github/_templates/doot/py_upload/version.toml::33][Location]]
+   :context:
+        <2024-06-10 Mon>     {do="shell", args=["git", "commit", "--amend", "--no-edit"]},
+   :END:
+** TRIAGE add in a doot 'purge' action group
+   [[/media/john/data/github/_templates/doot/py_upload/docs.toml::18][Location]]
+   :context:
+        <2024-06-10 Mon>     { do="shell", args=["sphinx-build", "-w", "{logs}/sphinx.log", "-b", "{doc_builder}", "{doc_src}", "{doc_out}"], },
+   :END:

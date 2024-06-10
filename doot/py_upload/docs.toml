@@ -1,0 +1,20 @@
+
+[[locations]]
+doc_src = "docs"
+doc_out = "{temp}/docs"
+
+[[tasks.docs]]
+name        = "build"
+doc         = ["build sphinx project documentation"]
+ctor        = "task"
+doc_builder = "html"
+env_name    = "distributor"
+setup       = [
+    { do="dootle.python.mamba:MambaEnv", env_="env_name", update_="env"},
+    { do="installed?", args=["sphinx-build"], env_="env"},
+    { do="exists?", args=["{doc_src}/conf.py"] },
+]
+actions = [
+    { do="shell", args=["sphinx-build", "-w", "{logs}/sphinx.log", "-b", "{doc_builder}", "{doc_src}", "{doc_out}"] },
+
+]

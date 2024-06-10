@@ -1,0 +1,6 @@
+
+[[locations]]
+
+[[tasks.test]]
+name = "pytest"
+doc  = ["run project tests"]

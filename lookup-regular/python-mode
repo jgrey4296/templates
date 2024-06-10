@@ -44,7 +44,7 @@ WebDriver                                            # https://developer.mozilla
 argparse                                             # https://docs.python.org/3/howto/argparse.html
 astroid                                              # https://pylint.pycqa.org/projects/astroid/en/latest/index.html
 beautiful Soup                                       # https://beautiful-soup-4.readthedocs.io/en/latest/
-bibtex Parser                                        # https://bibtexparser.readthedocs.io/en/master/tutorial.html
+bibtex parser                                        # https://bibtexparser.readthedocs.io/en/main/
 black                                                # https://black.readthedocs.io/en/stable/
 boltons                                              # https://boltons.readthedocs.io/en/latest/
 bonobo ETL                                           # https://docs.bonobo-project.org/en/master/

@@ -45,7 +45,7 @@ import sys
 import doot
 import doot.errors
 import doot.structs as DS
-from doot.enums import ActionResponseEnum
+from doot.enums import ActionResponse_e
 
 SUBS        = DS.DootKey.build("subs")
 TARGET      = DS.DootKey.build("target")

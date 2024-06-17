@@ -44,14 +44,14 @@ from bibtexparser import middlewares as ms
 
 import doot
 import doot.errors
-from doot.structs import DootKey
+from doot.structs import DootKey, Keyed
 import bib_middleware as BM
 
 MYBIB                              = "#my_bibtex"
 MAX_TAGS                           = 7
 
-@DootKey.kwrap.paths("lib-root")
-@DootKey.kwrap.redirects("update_")
+@Keyed.paths("lib-root")
+@Keyed.redirects("update_")
 def build_working_parse_stack(spec, state, _libroot, _update):
     """ read and clean the file's entries, without handling latex encoding """
     read_mids = [
@@ -67,8 +67,8 @@ def build_working_parse_stack(spec, state, _libroot, _update):
     ]
     return { _update : read_mids }
 
-@DootKey.kwrap.paths("lib-root")
-@DootKey.kwrap.redirects("update_")
+@Keyed.paths("lib-root")
+@Keyed.redirects("update_")
 def build_working_write_stack(spec, state, _libroot, _update):
     """ Doesn't encode into latex """
     write_mids = [

@@ -39,11 +39,11 @@ printer = logmod.getLogger("doot._printer")
 
 import doot
 import doot.errors
-from doot.structs import DootKey
+from doot.structs import DootKey, Keyed
 
 HEAD_TAG_RE = re.compile(r"^\[\w+\]")
 
-@DootKey.kwrap.expands("text")
+@Keyed.expands("text")
 def validate(spec, state, text):
     head = text.split("\n")[0]
     if not HEAD_TAG_RE.match(head):

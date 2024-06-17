@@ -42,11 +42,11 @@ printer = logmod.getLogger("doot._printer")
 
 import doot
 import doot.errors
-from doot.structs import DootKey
+from doot.structs import DootKey, Keyed
 from doot.enums import ActionResponse_e
 
-@DootKey.kwrap.paths("fpath")
-@DootKey.kwrap.expands("maxMB")
+@Keyed.paths("fpath")
+@Keyed.expands("maxMB")
 def skip_if_too_big(spec, state, fpath, max):
     """
       Skip a file if it is larger than max megabyes

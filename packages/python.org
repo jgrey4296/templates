@@ -2,6 +2,12 @@
 #+STARTUP: packages
 https://status.python.org/
 
+* Triage
+
+** gloe :flow:
+https://github.com/ideos/gloe
+https://gloe.ideos.com.br/
+
 * Main
 https://www.structlog.org/en/stable/
 https://github.com/PrefectHQ/prefect
@@ -84,12 +90,6 @@ python -m trace --ignore-dir={dir,dir,dir}
 # trace,  but filter out stdlib stuff
 python -m trace --ignore-dir=/home/john/_cache_/mamba/envs/default/lib/python3.12/ --trace ?
 #+end_src
-
-
-
-
-
-
 
 *** traceback
 *** tracemalloc                                 :profiling:
@@ -626,6 +626,8 @@ https://github.com/pyinstaller/pyinstaller
 https://github.com/linkedin/shiv
 *** conda
 https://github.com/conda/conda/
+*** packaging
+https://packaging.pypa.io/en/stable/
 ** Docs
 *** markdown
 **** commonmark                                :markdown:

@@ -30,6 +30,13 @@ https://github.com/cfclrk/environ
 *** helpful
 https://github.com/Wilfred/helpful
 
+
+*** quickrun
+https://github.com/emacsorphanage/quickrun
+
+*** eros
+https://github.com/xiongtx/eros
+
 * Links
 
 https://elpa.gnu.org/packages/cobol-mode.html

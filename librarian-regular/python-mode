@@ -151,3 +151,6 @@ xsdata-plantuml                                      # https://github.com/tefra/
 z3                                                   # https://github.com/Z3Prover/z3
 zlib                                                 # https://docs.python.org/3/library/zlib.html
 pydantic                                             # https://docs.pydantic.dev/latest/concepts/models/
+Version specifiers                                   # https://packaging.python.org/en/latest/specifications/version-specifiers/#version-specifiers
+Packaging                                            # https://packaging.pypa.io/en/stable/
+Ruff Rules                                           # https://docs.astral.sh/ruff/rules/

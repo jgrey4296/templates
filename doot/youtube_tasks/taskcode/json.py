@@ -44,13 +44,13 @@ import pandas
 import tomlguard
 import doot
 import doot.errors
-from doot.structs import DootKey, Keyed
+from doot.structs import DKey, DKeyed
 from doot.mixins.action.human_numbers import Human_M
 
-to_k       = DootKey.build("to")
-from_k     = DootKey.build("from")
-update_k   = DootKey.build("update_")
-focus_k    = DootKey.build("focus_keys")
+to_k       = DKey("to")
+from_k     = DKey("from")
+update_k   = DKey("update_")
+focus_k    = DKey("focus_keys")
 
 # https://developers.google.com/youtube/v3/docs/videos
 
@@ -64,8 +64,8 @@ watch_url            = "https://www.youtube.com/watch?v={}" # add the ID
 json_date_format     = "%Y%m%d"
 output_date_format   = "%Y-%m-%d"
 
-@Keyed.redirects("update_")
-@Keyed.types("from")
+@DKeyed.redirects("update_")
+@DKeyed.types("from")
 def reduce_video_metadata(spec, state, update_, from_ex):
     update           = update_k.redirect(spec)
     json : TomlGuard = from_ex

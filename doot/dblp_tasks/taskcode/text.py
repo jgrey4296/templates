@@ -40,18 +40,18 @@ printer = logmod.getLogger("doot._printer")
 
 import doot
 import doot.errors
-from doot.structs import DootKey
+from doot.structs import DKey
 
-UPDATE = DootKey.build("update_")
-FROM_K = DootKey.build("from")
-FPATH  = DootKey.build("fpath")
+UPDATE = DKey("update_")
+FROM_K = DKey("from")
+FPATH  = DKey("fpath", mark=pl.Path)
 
 def split_keys(spec, state):
     """ convert text to a tuple of (source_dir, [patterns]) """
     update = UPDATE.redirect(spec)
     text   = FROM_K.expand(spec, state)
     clean  = [y for x in text.split("\n") if (y:=x.strip()) ]
-    fpath  = FPATH.to_path(spec, state).parent
+    fpath  = FPATH.expand(spec, state).parent
     return { update : (fpath, clean) }
 
 def map_keys(spec, state):
@@ -59,7 +59,7 @@ def map_keys(spec, state):
       into { key_pattern -> source_dir }
     """
     update = UPDATE.redirect(spec)
-    keys   = FROM_K.to_type(spec, state)
+    keys   = FROM_K.expand(spec, state)
     keymap = { v2 : k for k,v in keys for v2 in v}
 
     printer.info("Collected %s patterns", len(keymap))

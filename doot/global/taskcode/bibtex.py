@@ -41,18 +41,18 @@ from random import choice, choices
 
 import doot
 import doot.errors
-from doot.structs import DootKey
+from doot.structs import DKey
 import bib_middleware as BM
 import bibtexparser as BTP
 from bibtexparser import middlewares as ms
 
 MYBIB                              = "#my_bibtex"
 MAX_TAGS                           = 7
-UPDATE        : Final[DootKey] = DootKey.build("update_")
-FROM_KEY      : Final[DootKey] = DootKey.build("from")
+UPDATE        : Final[DKey] = DKey("update_")
+FROM_KEY      : Final[DKey] = DKey("from")
 
 def select_one_entry(spec, state):
-    bib_db     = FROM_KEY.to_type(spec, state, type_=BTP.Library)
+    bib_db     = FROM_KEY.expand(spec, state, check=BTP.Library)
     update_key = UPDATE.redirect(spec)
     entries    = bib_db.entries
     entry      = choice(entries)

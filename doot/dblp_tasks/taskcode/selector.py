@@ -41,15 +41,15 @@ from collections import defaultdict
 from bibtexparser.model import Field, Entry
 import doot
 import doot.errors
-from doot.structs import DootKey
+from doot.structs import DKey
 from dootle.actions.xml import DootSaxHandler
 
-UPDATE   = DootKey.build("update_")
-FROM_K   = DootKey.build("from")
+UPDATE   = DKey("update_")
+FROM_K   = DKey("from")
 
 def extract_results(spec, state):
     """  """
-    source   = FROM_K.to_type(spec, state)
+    source   = FROM_K.expand(spec, state)
     journals = source._journals.copy()
     confs    = source._conferences.copy()
     jraw = source._journals_set.copy()
@@ -60,7 +60,7 @@ def extract_results(spec, state):
 
 def flatten_dicts(spec, state):
     """ """
-    source = FROM_K.to_type(spec, state)
+    source = FROM_K.expand(spec, state)
     update = UPDATE.redirect(spec)
     flat = {}
     for d in source:
@@ -71,7 +71,7 @@ def flatten_dicts(spec, state):
     return { update : result_str }
 
 def flatten_raw(spec, state):
-    source = FROM_K.to_type(spec, state)
+    source = FROM_K.expand(spec, state)
     update = UPDATE.redirect(spec)
     result_str = "\n".join(source)
     return { update : result_str }

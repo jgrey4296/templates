@@ -40,13 +40,13 @@ printer = logmod.getLogger("doot._printer")
 
 import doot
 import doot.errors
-from doot.structs import DootKey
+from doot.structs import DKey
 import bib_middleware as BM
 import bibtexparser as BTP
 from bibtexparser import middlewares as ms
 
-UPDATE_K        : Final[DootKey] = DootKey.build("update_")
-FROM_KEY        : Final[DootKey] = DootKey.build("from")
+UPDATE_K        : Final[DKey] = DKey("update_")
+FROM_KEY        : Final[DKey] = DKey("from")
 
 def build_chunking_parse_stack(spec, state):
     read_mids = [
@@ -59,7 +59,7 @@ def build_chunking_parse_stack(spec, state):
 def split_library(spec, state):
     max_count = spec.kwargs.on_fail(250).target.bib_size()
     update = UPDATE_K.redirect(spec)
-    base = FROM_KEY.to_type(spec, state, type_=BTP.Library)
+    base = FROM_KEY.expand(spec, state, check=BTP.Library)
     libs = []
     curr = BTP.Library()
     curr.source_files = base.source_files.copy()
@@ -78,7 +78,7 @@ def split_library(spec, state):
     return { update : libs }
 
 def generate_stem(spec, state):
-    base = FROM_KEY.to_type(spec, state)
+    base = FROM_KEY.expand(spec, state)
     update = UPDATE_K.redirect(spec)
 
     source = list(base.source_files)[0]

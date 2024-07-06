@@ -47,19 +47,19 @@ import doot.errors
 import doot.structs as DS
 from doot.enums import ActionResponse_e
 
-SUBS        = DS.DootKey.build("subs")
-TARGET      = DS.DootKey.build("target")
-TITLE       = DS.DootKey.build("title")
-CHANNEL     = DS.DootKey.build("channel")
-FLAG_FILE   = DS.DootKey.build("flag_file")
-DL_ARCHIVE  = DS.DootKey.build("archive")
+SUBS        = DS.DKey("subs")
+TARGET      = DS.DKey("target")
+TITLE       = DS.DKey("title")
+CHANNEL     = DS.DKey("channel")
+FLAG_FILE   = DS.DKey("flag_file")
+DL_ARCHIVE  = DS.DKey("archive")
 
 base_call = yt_dlp.bake("-i", "--skip-download", "--restrict-filenames", "--write-description", "--write-info-json", "--no-overwrite",
                         "--write-playlist-metafiles", "--no-clean-infojson", "--force-write-archive", _out=sys.stdout, _err=sys.stderr)
 
 def generate_tasks(spec, state):
     """ Read the subscriptions csv file, generate as many tasks as necessary """
-    sub_files = [DS.DootKey.build(x, explicit=True).to_path() for x in SUBS.to_type(None, spec.extra)]
+    sub_files = [DS.DKey(x, explicit=True, mark=pl.Path).expand(spec,state) for x in SUBS.expand(spec.extra)]
     printer.info("Got: %s", sub_files)
     frames = []
     for sub in sub_files:
@@ -84,7 +84,7 @@ def generate_tasks(spec, state):
     yield None
 
 def get_channel(spec, state):
-    target     = TARGET.to_path(spec, state) / "%(title)s.%(ext)s"
+    target     = TARGET.expand(spec, state) / "%(title)s.%(ext)s"
     channel    = CHANNEL.expand(spec, state)
     name       = TITLE.expand(spec, state)
     dl_archive = doot.locs[DL_ARCHIVE]

@@ -154,3 +154,4 @@ pydantic                                             # https://docs.pydantic.dev
 Version specifiers                                   # https://packaging.python.org/en/latest/specifications/version-specifiers/#version-specifiers
 Packaging                                            # https://packaging.pypa.io/en/stable/
 Ruff Rules                                           # https://docs.astral.sh/ruff/rules/
+Data Model                                           # https://docs.python.org/3/reference/datamodel.html

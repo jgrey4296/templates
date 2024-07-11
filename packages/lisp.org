@@ -1,41 +1,46 @@
 #+TITLE: Lisp Package Reference
 #+STARTUP: packages
 
-* Main
-** stdlib
-*** desktop
+* stdlib
+** desktop
 
-** external
+* external
 
-*** git-cliff
+** git-cliff
 https://github.com/liuyinz/git-cliff.el
 
-*** conventional-changelog
+** conventional-changelog
 https://github.com/liuyinz/emacs-conventional-changelog
 
-*** el-conventional-changelog
+** el-conventional-changelog
 https://github.com/johnlepikhin/el-conventional-changelog
 
-*** markdown-changelog
+** markdown-changelog
 
 
-*** mu4e
+** mu4e
 https://www.djcbsoftware.nl/code/mu/
 https://github.com/djcb/mu
 
 
-*** environ
+** environ
 https://github.com/cfclrk/environ
 
-*** helpful
+** helpful
 https://github.com/Wilfred/helpful
 
 
-*** quickrun
+** quickrun
 https://github.com/emacsorphanage/quickrun
 
-*** eros
+** eros
 https://github.com/xiongtx/eros
+
+** exato
+https://github.com/ninrod/exato
+
+** elpaca
+https://github.com/progfolio/elpaca
 
 * Links
 

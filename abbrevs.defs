@@ -1,7 +1,7 @@
 ;;-*-coding: utf-8;-*-
 (define-abbrev-table 'conf-toml-mode-abbrev-table
   '(
-    ("False" "false" nil :count 3)
+    ("False" "false" nil :count 4)
     ("True" "true" nil :count 1)
    ))
 
@@ -34,8 +34,12 @@
 
 (define-abbrev-table 'python-mode-abbrev-table
   '(
+    ("Dkey" "DKey" nil :count 5)
     ("dootkey" "DootKey" nil :count 192)
+    ("false" "False" nil :count 3)
+    ("flase" "False" nil :count 0)
     ("isins" "isinstance(" nil :count 1)
     ("kwarp" "kwrap" nil :count 61)
     ("lamdba" "lambda" nil :count 2)
+    ("true" "True" nil :count 1)
    ))

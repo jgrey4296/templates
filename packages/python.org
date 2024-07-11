@@ -976,6 +976,7 @@ https://chrthomsen.github.io/pygrametl/doc/quickstart/beginner.html
 https://github.com/SCons/scons
 *** snakemake
 https://github.com/snakemake/snakemake
+https://github.com/leipzig/SandwichesWithSnakemake
 *** vistrails
 https://www.vistrails.org/usersguide/v2.2/html/
 ** Testing

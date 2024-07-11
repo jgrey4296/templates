@@ -37,18 +37,5 @@ class Test$1:
     def cleanup(self):
         pass
 
-    def test_initial(self):
-        ##-- setup
-
-        ##-- end setup
-
-        ##-- pre-check
-
-        ##-- end pre-check
-
-        # Run:
-
-        ##-- check
-
-        ##-- end check
-        pass
+    def test_sanity(self):
+        assert(True is True)

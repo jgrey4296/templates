@@ -230,6 +230,8 @@ https://github.com/ubolonton/emacs-module-rs
 ** Python
 https://pyo3.rs/v0.21.2/getting-started
 https://www.maturin.rs/
+** just
+https://github.com/casey/just
 * Links
 
 https://crates.io/

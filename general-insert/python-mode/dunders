@@ -129,3 +129,6 @@ __kwdefaults__                                  # special properties
 __self__                                        # special properties
 __func__                                        # special properties
 __bases__                                       # special properties
+
+__instancecheck__                               # Metaclass/ABC
+__subclasscheck__                               # Metaclass/ABC

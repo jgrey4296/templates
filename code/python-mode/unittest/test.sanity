@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : sanity.check
+# uuid  : sanity.check
+# key   : sanity.check
+# group :
+# --
+def test_sanity(self):
+    assert(True is True)

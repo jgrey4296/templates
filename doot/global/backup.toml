@@ -22,7 +22,7 @@ actions = [
     {do="job.queue", from_="tasks"},
 ]
 sub_actions                = [
-    {do="dootle.utils.multi_shadow:MultiBackupAction", from_="fpath", pattern="{shadow_path}/{fname}"}
+    {do="dootle.utils.multi_shadow:MultiBackupAction", from_="fpath", pattern="{shadow_path!p}/{fname}"}
 ]
 
 
@@ -43,7 +43,7 @@ actions = [
     {do="job.queue", from_="tasks"},
 ]
 sub_actions                = [
-    {do="dootle.utils.multi_shadow:MultiBackupAction", from_="fpath", pattern="{shadow_path}/{fname}"}
+    {do="dootle.utils.multi_shadow:MultiBackupAction", from_="fpath", pattern="{shadow_path!p}/{fname}"}
 ]
 
 [[tasks.backup]]
@@ -63,5 +63,5 @@ actions = [
     {do="job.queue", from_="tasks"},
 ]
 sub_actions                = [
-    {do="dootle.utils.multi_shadow:MultiBackupAction", from_="fpath", pattern="{shadow_path}/{fname}"}
+    {do="dootle.utils.multi_shadow:MultiBackupAction", from_="fpath", pattern="{shadow_path!p}/{fname}"}
 ]

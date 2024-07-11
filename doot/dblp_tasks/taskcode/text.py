@@ -44,7 +44,7 @@ from doot.structs import DKey
 
 UPDATE = DKey("update_")
 FROM_K = DKey("from")
-FPATH  = DKey("fpath", mark=pl.Path)
+FPATH  = DKey("fpath", mark=DKey.mark.PATH)
 
 def split_keys(spec, state):
     """ convert text to a tuple of (source_dir, [patterns]) """

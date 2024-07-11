@@ -84,7 +84,7 @@ sub_actions = [
         # write
         { do="dootle.bibtex.v2:BibtexToStrAction",  from_="bib_db",    update_="bib_text", write_stack_="write_stack" },
         { do="task_code.bibtex:get_fstem_fpar" },
-        { do="write!", from_="bib_text", to="{fpath}"},
+        { do="write!", from_="bib_text", to="{fpath!p}"},
         # { do="write!", from_="bib_text", to="{results}/{fstem}.bib"},
         { do="shell", args=["spd-say", "complete"]},
 ]

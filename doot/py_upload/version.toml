@@ -29,14 +29,16 @@ name       = "changelog"
 doc        = ["Generates a changelog using git cliff"]
 version    = "0.1"
 ctor       = "task"
+env_name = "distributor"
 depends_on = [
+    {do="dootle.python.mamba:MambaEnv", env_="env_name", update_="env"},
     {do="installed?", args=["git-cliff"]},
-    {do="shell", args=["git", "log", "--oneline", "HEAD~1..HEAD"], update_="log_text" },
+    {do="shell", args=["git", "--no-pager", "log", "--oneline", "HEAD~1..HEAD"], update_="log_text" , env_="env"},
     # TODO regex test log_text for /[bump: version \d+.\d+.\d+ -> \d+.\d+.\d+/
 ]
 actions    = [
-    {do="shell", args=["git", "cliff", "--output={changelog}"]},
-    {do="shell", args=["git", "add", "{changelog}"]},
+    {do="shell", args=["git", "cliff", "--output={changelog!p}"]},
+    {do="shell", args=["git", "add", "{changelog!p}"]},
     {do="shell", args=["git", "commit", "--amend", "--no-edit"]},
 ]
 
@@ -55,6 +57,6 @@ setup        = [
 ]
 actions = [
     { do="shell", args=["pipreqs", "--force"], env_="env"},
-    {do="shell", args=["git", "add", "{requirements}"]},
+    {do="shell", args=["git", "add", "{requirements!p}"]},
     {do="shell", args=["git", "commit", "--amend", "--no-edit"]},
 ]

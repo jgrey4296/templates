@@ -13,10 +13,10 @@ cleanup             = [
       {do="taskcode.selector:flatten_dicts", from_="confs", update_="fconfs"},
       {do="taskcode.selector:flatten_raw", from_="jraw", update_="fjraw"},
       {do="taskcode.selector:flatten_raw", from_="craw", update_="fcraw"},
-      {do="write!", from_="fjournals", to="{results}/journals.list"},
-      {do="write!", from_="fconfs",    to="{results}/confs.list"},
-      {do="write!", from_="fjraw",     to="{results}/dblp.journals.raw"},
-      {do="write!", from_="fcraw",     to="{results}/dblp.confs.raw"},
+      {do="write!", from_="fjournals", to="{results!p}/journals.list"},
+      {do="write!", from_="fconfs",    to="{results!p}/confs.list"},
+      {do="write!", from_="fjraw",     to="{results!p}/dblp.journals.raw"},
+      {do="write!", from_="fcraw",     to="{results!p}/dblp.confs.raw"},
       {do="shell", args=["spd-say", "complete"]},
 ]
 actions              = [

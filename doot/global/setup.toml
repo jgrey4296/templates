@@ -2,7 +2,8 @@
 
 [[locations]]
 tools = "tools"
-home  = "~"
+home  = {loc="~", normOnLoad=true}
+cache = "{home}/_cache_"
 tex   = "~/.local/texlive/current"
 
 [[tasks.setup]]
@@ -114,4 +115,41 @@ actions = [
         {do="dir!", args=["{home}/.config/nushell"]},
         {do="link!", link="{home}/.config/nushell/env.nu", to="nu/env.nu"},
         {do="link!", link="{home}/.config/nushell/config.nu", to="nu/config.nu"}
+]
+
+
+
+[[tasks.setup]]
+name         = "asdf"
+doc          = ["https://asdf-vm.com/guide/getting-started.html"]
+ctor         = "task"
+asfd_url     = "https://github.com/asdf-vm/asdf.git"
+elixir_url   = "https://github.com/asdf-vm/asdf-elixir.git"
+erlang_url   = "https://github.com/asdf-vm/asdf-erlang.git"
+ruby_url     = "https://github.com/asdf-vm/asdf-ruby.git"
+kotlin_url   = "https://github.com/asdf-community/asdf-kotlin.git"
+rust_url     = "https://github.com/asdf-community/asdf-rust.git" # set RUST_WITHOUT=rust-docs to reduce install size
+racket_url   = "https://github.com/vic/asdf-racket.git"
+python_url   = "https://github.com/asdf-community/asdf-python.git"
+poetry_url   = "https://github.com/asdf-community/asdf-poetry.git"
+graalvm_url  = "https://github.com/asdf-community/asdf-graalvm.git"
+opam_url     = "https://github.com/asdf-community/asdf-opam.git"
+haskell_url  = "https://github.com/vic/asdf-haskell.git"
+# fstar_url  = "https://github.com/asdf-community/asdf-fstar.git"
+asdf_ver     = "v0.14.0"
+setup        = [
+      # -- install dependencies of the runtimes here --
+]
+actions    = [
+   # {do="sh", args=["git", "clone", "{url}", "{cache}/asdf", "--branch", "{asdf_ver}"]},
+   # # -- possibly need to add environment var state here --
+   # {do="sh", args=["asdf", "plugin", "add", "erlang", "{erlang_url}"]},
+   # {do="sh", args=["asdf", "plugin", "add", "elixir", "{elixir_url}"]},
+   # {do="sh", args=["asdf", "plugin", "add", "ruby",    "{ruby_url}"]},
+   # {do="sh", args=["asdf", "plugin", "add", "python"]},
+]
+cleanup = [
+   # {do="sh", args=["asdf", "global", "erlang", "latest"]},
+   # {do="sh", args=["asdf", "global", "elixir", "latest"]},
+   # {do="sh", args=["asdf", "global", "ruby", "latest"]},
 ]

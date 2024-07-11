@@ -7,12 +7,11 @@ name                   = "build"
 version                = "0.1"                          # <str>
 ctor                   = "task"                         # <str>
 env_name               = "distributor"
-match_re               = 's/^pypi\s+\=\s+(.+)/\1/p'
 inject                 = ["env_name", "match_re"]                   # <list[str]>
 actions                = [
     {do="mamba.env", env_="env_name", update_="env"},
     # Build
-    {do="shell", args=["python", "-m", "build", "--outdir", "{build}", "."], env_="env"},
+    {do="shell", args=["python", "-m", "build", "--outdir", "{build!p}", "."], env_="env"},
     # Cleanup
     {do="delete!", args=["./{src}.egg-info"], lax=true, recursive=true},
 ]
@@ -21,18 +20,18 @@ actions                = [
 name                   = "upload"
 version                = "0.1"
 ctor                   = "task"
-depends_on             = ["dist::build"]
 env_name               = "distributor"
 match_re               = 's/^pypi\s+\=\s+(.+)/\1/p'
 inject                 = ["env_name", "match_re"]                   # <list[str]>
+depends_on             = ["dist::build"]
 setup                  = [
     { do="mamba.env", env_="env_name", update_="env"},
     # Get pypi token
-    { do="doot.actions.shell:DootShellBake", args=["gpg", "-q", "-d", "{dist_key}"], update_="gpg", env=false},
+    { do="doot.actions.shell:DootShellBake", args=["gpg", "-q", "-d", "{dist_key!p}"], update_="gpg", env=false},
     { do="doot.actions.shell:DootShellBake", args=["sed", "-n", "-E", "{match_re}"], in_="gpg", update_="token", env=false},
     { do="doot.actions.shell:DootShellBakedRun",  in_="token", update_="token_str"},
 ]
 actions                = [
     # Upload to pypi
-    { do="shell", args=["twine", "upload", "-u", "__token__", "-p", "{token_str}", "--skip-existing", "--non-interactive", "{build}/*"], env_="env"},
+    { do="shell", args=["twine", "upload", "-u", "__token__", "-p", "{token_str}", "--skip-existing", "--non-interactive", "{build!p}/*"], env_="env"},
 ]

@@ -15,8 +15,8 @@ setup = [
     { do="dootle.android.actions:AndroidRunning"} ,
 ]
 actions = [
-    { do="dootle.android.actions:AndroidRemoteCmd", cmd="find", args=["{android_root}/Library/pdf_library", "-type", "f"] },
-    { do="write!", from_="adb_result", to="{temp}/adb_files" }
+    { do="dootle.android.actions:AndroidRemoteCmd", cmd="find", args=["{android_root!p}/Library/pdf_library", "-type", "f"] },
+    { do="write!", from_="adb_result", to="{temp!p}/adb_files" }
 ]
 
 
@@ -34,7 +34,7 @@ actions     = [
     {do="job.queue",  from_="tasks"},
 ]
 sub_actions = [
-    { do="log", msg="Pushing: {fname} to {android_root}/Library/pdf_library/{fname}"},
+    { do="log", msg="Pushing: {fname} to {android_root!p}/Library/pdf_library/{fname}"},
     { do="dootle.android.actions:AndroidRunning" },
-    { do="dootle.android.actions:AndroidPush", local="{fpath}", remote="{android_root}/Library/pdf_library/" },
+    { do="dootle.android.actions:AndroidPush", local="{fpath!p}", remote="{android_root!p}/Library/pdf_library/" },
 ]

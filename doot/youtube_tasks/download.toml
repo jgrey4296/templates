@@ -19,13 +19,13 @@ actions             = [
     {do="job.queue", from_="tasks"},
 ]
 sub_actions          = [
-    {do="exists?",    args=["{target}/{flag_file}", "{target}.tar.gz"]},
-    {do="dir!",       args=["{target}"]},
+    {do="exists?",    args=["{target!p}/{flag_file}", "{target}.tar.gz"]},
+    {do="dir!",       args=["{target!p}"]},
     {do="log",        msg="Will Be getting: {title} : {channel}"},
     {do="taskcode.youtube:get_channel"},
-    {do="touch", file="{target}/{flag_file}"},
-    {do="tar!",  file="{target}"},
-    {do="delete!", args=["{target}"], recursive=true},
+    {do="touch", file="{target!p}/{flag_file}"},
+    {do="tar!",  file="{target!p}"},
+    {do="delete!", args=["{target!p}"], recursive=true},
     {do="shell", args=["spd-say", "completed a channel"]},
 ]
 
@@ -46,5 +46,5 @@ actions     = [
 
 ]
 sub_actions = [
-    {do="backup!", from_="fpath", to="{shadow_path}/{fname}"}
+    {do="backup!", from_="fpath", to="{shadow_path!p}/{fname}"}
 ]

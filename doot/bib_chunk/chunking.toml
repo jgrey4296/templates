@@ -21,7 +21,7 @@ sub_actions          = [
     { do="taskcode.chunking:generate_stem", from_="data", update_="fstem"},
     { do="taskcode.bibtex:build_working_write_stack",  update_="write_stack" },
     { do="dootle.bibtex.v2:BibtexToStrAction",  from_="data", update_="bib_text", write_stack_="write_stack" },
-    { do="write!", from_="bib_text", to="{chunked}/{fstem}.bib"},
+    { do="write!", from_="bib_text", to="{chunked!p}/{fstem}.bib"},
 ]
 
 [[tasks.chunk]]
@@ -49,5 +49,5 @@ sub_actions            = [
     { do="taskcode.chunking:split_library", from_="bib_db", update_="split_libs" },
     # add to postbox
     { do="post.put", args=["split_libs"] },
-    { do="dootle.bibtex.v2:BibtexFailedBlocksWriteAction", target="{chunk_failed}/{fstem}.bib" },
+    { do="dootle.bibtex.v2:BibtexFailedBlocksWriteAction", target="{chunk_failed!p}/{fstem}.bib" },
 ]

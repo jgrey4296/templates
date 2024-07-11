@@ -59,7 +59,7 @@ base_call = yt_dlp.bake("-i", "--skip-download", "--restrict-filenames", "--writ
 
 def generate_tasks(spec, state):
     """ Read the subscriptions csv file, generate as many tasks as necessary """
-    sub_files = [DS.DKey(x, explicit=True, mark=pl.Path).expand(spec,state) for x in SUBS.expand(spec.extra)]
+    sub_files = [DS.DKey(x, explicit=True, mark=DS.DKey.mark.PATH).expand(spec,state) for x in SUBS.expand(spec.extra)]
     printer.info("Got: %s", sub_files)
     frames = []
     for sub in sub_files:

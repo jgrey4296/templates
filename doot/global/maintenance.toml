@@ -20,7 +20,7 @@ version = "0.1"
 ctor    = "task"
 actions = [
         {do="shell", args=["apt", "list", "--installed"], update_="versions", notty=true},
-        {do="write!", from_="versions", to="{records}/apt.versions"},
+        {do="write!", from_="versions", to="{records!p}/apt.versions"},
 ]
 
 [[tasks.chore]]
@@ -29,7 +29,7 @@ version = "0.1"
 ctor    = "task"
 actions = [
         {do="shell", args=["snap", "list"], update_="versions", notty=true},
-        {do="write!", from_="versions", to="{records}/snap.versions"},
+        {do="write!", from_="versions", to="{records!p}/snap.versions"},
 ]
 
 [[tasks.chore]]
@@ -39,9 +39,9 @@ ctor    = "task"
 actions = [
         { do="dootle.python.mamba:MambaEnv", env="default", update_="default"},
         { do="shell", args=["mamba", "info"], shenv_="default", update_="info"  },
-        { do="write!", from_="info", to="{records}/mamba.info"},
+        { do="write!", from_="info", to="{records!p}/mamba.info"},
         { do="shell", args=["pip", "list"], shenv_="default", update_="pip"  },
-        { do="write!", from_="pip", to="{records}/mamba.versions"},
+        { do="write!", from_="pip", to="{records!p}/mamba.versions"},
 ]
 
 [[tasks.chore]]
@@ -50,7 +50,7 @@ version = "0.1"
 ctor    = "task"
 actions = [
         { do="shell", args=["rustup", "show"], update_="rustup"  },
-        { do="write!", from_="rustup", to="{records}/rustup.info"},
+        { do="write!", from_="rustup", to="{records!p}/rustup.info"},
 ]
 
 [[tasks.chore]]
@@ -59,7 +59,7 @@ version = "0.1"
 ctor    = "task"
 actions = [
         { do="shell", args=["tlmgr", "info", "--only-installed", "-data", "name,cat-version,localrev,shortdesc"], update_="tex"  },
-        { do="write!", from_="tex", to="{records}/tex.versions"},
+        { do="write!", from_="tex", to="{records!p}/tex.versions"},
 ]
 
 [[tasks.chore]]
@@ -68,7 +68,7 @@ version = "0.1"
 ctor    = "task"
 actions = [
         {do="shell", args=["git", "--version"], update_="gitinfo" },
-        {do="write!", from_="gitinfo", to="{records}/git.version"},
+        {do="write!", from_="gitinfo", to="{records!p}/git.version"},
 ]
 
 [[tasks.chore]]
@@ -77,5 +77,5 @@ version = "0.1"
 ctor = "task"
 actions = [
         {do="shell", args=["crontab", "-l"], update_="cron"},
-        {do="write!", from_="cron", to="{records}/cron.backup"},
+        {do="write!", from_="cron", to="{records!p}/cron.backup"},
 ]

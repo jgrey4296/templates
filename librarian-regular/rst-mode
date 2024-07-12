@@ -1,7 +1,9 @@
 Rst Spec                # https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html
+RST Home                # https://docutils.sourceforge.io/rst.html
 Sphinx Cheatsheet       # https://sphinx-tutorial.readthedocs.io/cheatsheet/
 Rst Primer              # https://docutils.sourceforge.io/docs/user/rst/quickstart.html
 Quick Rst Intro         # https://docutils.sourceforge.io/docs/user/rst/quickref.html
 Sphinx Rst Basics       # https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
 Python RST devguide     # https://devguide.python.org/documentation/markup/
 Sphinx Config Reference # https://www.sphinx-doc.org/en/master/usage/configuration.html#build-config
+Directives              # https://docutils.sourceforge.io/docs/ref/rst/directives.html

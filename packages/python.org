@@ -596,6 +596,11 @@ https://github.com/rbanffy/pip-chill
 https://github.com/bndr/pipreqs
 **** pip-review                                   :pip:
 https://github.com/jgonggrijp/pip-review
+*** pip-x
+https://github.com/pypa/pipx
+https://pipx.pypa.io/stable/
+
+cli python apps in isolated envs
 *** poetry
 https://github.com/python-poetry/poetry
 *** build
@@ -1133,6 +1138,15 @@ https://github.com/fonnesbeck/statistical-analysis-python-tutorial
 https://github.com/stas-semeniuta/textvae
 ** weed                                          :data_analysis:
 https://github.com/amitkaps/weed
+** http.server
+#+NAME: http server one liner
+#+begin_src bash :results output
+python -m http.server 8000
+#+end_src
+
+#+RESULTS: http server one liner
+
+
 * Environments
 ** Core
 - beautifulsoup4

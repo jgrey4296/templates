@@ -1,5 +1,6 @@
 # -*- mode: snippet -*-
 # name: py.type
 # uuid: py.type
+# group: python sphinx
 # --
 :type: $0

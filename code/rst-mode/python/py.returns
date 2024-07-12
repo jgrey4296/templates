@@ -1,5 +1,6 @@
 # -*- mode: snippet -*-
 # name: py.returns
 # uuid: py.returns
+# group: python sphinx
 # --
 :returns: $0

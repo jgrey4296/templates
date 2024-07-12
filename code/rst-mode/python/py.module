@@ -1,6 +1,7 @@
 # -*- mode: snippet -*-
 # name: py.module
 # uuid: py.module
+# group: python sphinx
 # --
 .. py:module:: ${1:module name}
 

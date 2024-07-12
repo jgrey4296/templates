@@ -1,6 +1,7 @@
 # -*- mode: snippet -*-
 # name: py.data
 # uuid: py.data
+# group: python sphinx
 # --
 .. py:data:: ${1:name}
 

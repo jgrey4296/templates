@@ -2,6 +2,7 @@
 # name: parsed_literal
 # key: src
 # uuid: src
+# group: meta
 # --
 .. parsed-literal::
    $0

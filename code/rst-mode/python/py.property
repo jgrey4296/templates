@@ -1,6 +1,7 @@
 # -*- mode: snippet -*-
 # name: py.property
 # uuid: py.property
+# group: python sphinx
 # --
 .. py:property:: ${1:name}
 

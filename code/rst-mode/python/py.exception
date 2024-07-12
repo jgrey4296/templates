@@ -1,6 +1,7 @@
 # -*- mode: snippet -*-
 # name: py.exception
 # uuid: py.exception
+# group: python sphinx
 # --
 .. py:exception:: ${1:exception signature}
 

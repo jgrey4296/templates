@@ -1,5 +1,6 @@
 # -*- mode: snippet -*-
 # name: py.raises
 # uuid: py.raises
+# group: python sphinx
 # --
 :raises ${1:ValueError}: $0

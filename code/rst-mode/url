@@ -2,5 +2,6 @@
 # name: url
 # key: url
 # uuid: url
+# group: link
 # --
 .. _${1:description}: $0

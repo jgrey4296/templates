@@ -1,0 +1,4 @@
+.. -*- mode: ReST -*-
+${1:$(s-replace-regexp "." "=" yas-text)}
+${1:Page Title}
+${1:$(s-replace-regexp "." "=" yas-text)}

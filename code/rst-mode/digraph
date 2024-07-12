@@ -2,6 +2,7 @@
 # name: digraph
 # key: graph
 # uuid: graph
+# group: graphics
 # --
 .. digraph:: $1
 

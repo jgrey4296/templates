@@ -1,6 +1,7 @@
 # -*- mode: snippet -*-
 # name: py.method
 # uuid: py.method
+# group: python sphinx
 # --
 .. py.method:: ${1:Method Signature}
 

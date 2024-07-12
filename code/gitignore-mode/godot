@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : godot
+# uuid  : godot
+# key   : godot
+# group : gitignore
+# --
+##-- godot
+*.import
+##-- end godot

@@ -1,16 +1,47 @@
 #+TITLE: Lisp Package Reference
+#+STARTUP: packages
 
-* Overview :toc:
-- [[#main][Main]]
-  - [[#stdlib][stdlib]]
-  - [[#external][external]]
-- [[#links][Links]]
+* stdlib
+** desktop
 
-* Main
+* external
 
-** stdlib
+** git-cliff
+https://github.com/liuyinz/git-cliff.el
 
-** external
+** conventional-changelog
+https://github.com/liuyinz/emacs-conventional-changelog
+
+** el-conventional-changelog
+https://github.com/johnlepikhin/el-conventional-changelog
+
+** markdown-changelog
+
+
+** mu4e
+https://www.djcbsoftware.nl/code/mu/
+https://github.com/djcb/mu
+
+
+** environ
+https://github.com/cfclrk/environ
+
+** helpful
+https://github.com/Wilfred/helpful
+
+
+** quickrun
+https://github.com/emacsorphanage/quickrun
+
+** eros
+https://github.com/xiongtx/eros
+
+** exato
+https://github.com/ninrod/exato
+
+** elpaca
+https://github.com/progfolio/elpaca
+
 * Links
 
 https://elpa.gnu.org/packages/cobol-mode.html

@@ -1,6 +1,7 @@
 # -*- mode: snippet -*-
 # name: py.attribute
 # uuid: py.attribute
+# group: python sphinx
 # --
 .. py:attribute:: ${1:name}
 

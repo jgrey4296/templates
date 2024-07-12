@@ -2,5 +2,6 @@
 # name: autofunction
 # key: auto
 # uuid: auto
+# group: code
 # --
 .. autofunction:: $0

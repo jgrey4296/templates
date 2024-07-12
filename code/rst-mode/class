@@ -2,5 +2,6 @@
 # name: class
 # key: cls
 # uuid: cls
+# group: code
 # --
 :class:\`$0\`

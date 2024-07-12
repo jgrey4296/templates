@@ -41,14 +41,14 @@ from collections import defaultdict
 from bibtexparser.model import Field, Entry
 import doot
 import doot.errors
-from doot.structs import DootKey
+from doot.structs import DKey
 from dootle.actions.xml import DootSaxHandler
 
-MAPPINGS = DootKey.build("mappings")
-PATTERNS = DootKey.build("patterns")
-UPDATE   = DootKey.build("update_")
-FROM_K   = DootKey.build("from")
-ENTRIES  = DootKey.build("entries")
+MAPPINGS = DKey("mappings")
+PATTERNS = DKey("patterns")
+UPDATE   = DKey("update_")
+FROM_K   = DKey("from")
+ENTRIES  = DKey("entries")
 
 ##-- regex
 skip_re = re.compile(r"(?i)dickin")
@@ -57,8 +57,8 @@ skip_re = re.compile(r"(?i)dickin")
 
 def extract_entries(spec, state):
     """ map files -> found entries """
-    mappings = MAPPINGS.to_type(spec, state)
-    source   = FROM_K.to_type(spec, state)
+    mappings = MAPPINGS.expand(spec, state)
+    source   = FROM_K.expand(spec, state)
     update   = UPDATE.redirect(spec)
     results  = source.entries.copy()
 
@@ -72,7 +72,7 @@ def flatten_results(spec, state):
       [{ fpath: x, entries: [] }]
 
     """
-    source = FROM_K.to_type(spec, state)
+    source = FROM_K.expand(spec, state)
     update = UPDATE.redirect(spec)
     flat_mapping = defaultdict(list)
     for mapping in source:
@@ -95,7 +95,7 @@ class DBLPHandler(DootSaxHandler):
 
     def __init__(self, spec, state):
         # Get explicit key mapping
-        match MAPPINGS.to_type(spec, state, on_fail=[]):
+        match MAPPINGS.expand(spec, state, on_fail=[]):
             case [dict() as x]:
                 self._mapping = x
             case []:
@@ -106,7 +106,7 @@ class DBLPHandler(DootSaxHandler):
                 raise doot.errors.DootActionError("Too Many Mappings Found")
 
         # Get pattern mapping
-        match PATTERNS.to_type(spec, state, on_fail=None):
+        match PATTERNS.expand(spec, state, on_fail=None):
             case [dict() as x]:
                 self._patterns : dict[str, pl.Path]    = x
                 self._regexs   : dict[str, re.Pattern] = { k : re.compile(k) for k in x.keys() }
@@ -120,7 +120,7 @@ class DBLPHandler(DootSaxHandler):
         # Search state
         self._state      = DBLPHandler._State.wait
         # Looking for entries:
-        self._entry_fields = ENTRIES.to_type(spec, state, type_=list, on_fail=["proceedings", "inproceedings"])
+        self._entry_fields = ENTRIES.expand(spec, state, type_=list, on_fail=["proceedings", "inproceedings"])
         self._key_fields   = ["crossref"]
         # field any characters relates to
         self._curr_fields = []

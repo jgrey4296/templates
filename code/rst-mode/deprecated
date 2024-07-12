@@ -2,7 +2,7 @@
 # name  : deprecated
 # uuid  : deprecated
 # key   : deprecated
-# group : sphinx
+# group : sphinx code
 # --
 .. deprecated:: v$1
 

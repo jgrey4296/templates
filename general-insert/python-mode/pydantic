@@ -1,0 +1,32 @@
+Pydantic Reference:
+from pydantic import BaseModel               #
+from pydantic import Field                   #
+from pydantic import ValidationError         #
+from pydantic import model_validator         # decorator to create equivs to post_init
+from pydantic import field_validator         # decorator
+
+{}.model_validate()                          # Build an object with validation
+{}.model_validate_json()                     # parse a str as json dict
+{}.model_construct()                         # build an object from a dict with no validation
+
+{}.model_copy()                              # rather than 'copy'
+{}.model_dump()                              # -> dict of fields and values
+{}.model_dump_json()                         # -> dict
+{}.model_json_schema()                       # -> dict
+
+{}.model_post_init()                         # Post late initialization
+{}.model_rebuild()                           # Rebuild Schema
+
+class AModel(BaseModel, {}):...              # config by model class kwargs
+frozen=True                                  # config for immutability
+extra='allow'                                # config for allowing extra fields, added to __pydantic_extra__
+arbitrary_types_allowed=True                # for complex types
+
+aField : list = []                           # will be deep copied on creation, not needing default_factory
+aField : UUID = Field(default_factory=uuid4) # For dynamic defaults
+aField : str  = Field(alias="other")         # Aliases
+_aField : str                                # private attributes, not part of model schema
+
+@model_validator(mode="before")              # fn(cls, data) -> cls
+@model_validator(mode="after")               # fn(self) -> Self
+@field_validator("fieldName")                # fn(cls, value) -> value | ValueError

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : rust
+# uuid  : rust
+# key   : rust
+# group : gitignore
+# --
+##-- rust
+/Cargo.lock
+##-- end rust

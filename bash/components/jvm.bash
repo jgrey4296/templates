@@ -12,7 +12,7 @@
 # android sdk home is deprecated, use android_home
 
 jgdebug "Setting JVM"
-BUILD_TOOLS="33.0.1"
+BUILD_TOOLS="33.0.2"
 
 case "$OSTYPE" in
     darwin*)
@@ -54,6 +54,6 @@ jgdebug "Setting Jason"
 JASON_HOME="$HOME/github/.local/jason-3.2.2"
 
 jgdebug "Setting JACAMO"
-JACAMO_HOME="$HOME/.local/javamo-1.2.2"
+JACAMO_HOME="$HOME/.local/jacamo-1.2.2"
 
 PATH="$ANDROID_TOOLS:$PATH"

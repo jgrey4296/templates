@@ -1,0 +1,72 @@
+Python Data Model:
+----                            # Exceptions
+
+
+----                            # Code Objects
+.co_name                        # CodeObj. function name
+.co_qualname                    # CodeObj. fully qualified name
+.co_argcount                    # CodeObj. number of (positional+default) parameters
+.co_posonlyargcount             # CodeObj.
+.co_kwonlyargcount              # CodeObj.
+.co_nlocals                     # CodeObj. local vars used by the function
+.co_varnames                    # CodeObj. tuple, names of local vars
+.co_cellvars                    # CodeObj. tuple, names of local vars referenced by nested functions
+.co_freevars                    # CodeObj. tuple of names
+.co_code                        # CodeObj. string of bytecode
+.co_consts                      # CodeObj. tuple of literals used by bytecode
+.co_names                       # CodeObj. tuple of names used by bytecode
+.co_filename                    # CodeObj. source file
+.co_firstlineno                 # CodeObj.
+.co_stacksize                   # CodeObj. required stack size
+.co_flags                       # CodeObj. integer
+
+.co_positions()                 # CodeObj. iterable of source code positions.
+.co_lines()                     # CodeObj. iterator of (start, end, lineno)s
+.replace(**kwargs)              # CodeObj. return a new code object
+
+----                            # Frames
+.f_back                         # Frames. None|frame. Points towards the caller.
+.f_code                         # Frames. code object
+.f_locals                       # Frames. dict
+.f_globals                      # Frames. dict
+.f_builtins                     # Frames. dict
+.f_lasti                        # Frames. int index into bytecode of code object
+
+.f_trace                        # Frames. None|fn. fn is called on code execution events
+.f_trace_lines                  # Frames. bool. False disables .f_trace fn.
+.f_trace_opcodes                # Frames. bool. True allows per-opcode events tracing.
+.f_lineno                       # Frames. int. current line number of frame, write to jump.
+
+.clear()                        # Frames. clears local var references. to break reference cycles.
+
+
+----                            # Tracebacks.
+types.TracebackType             # Tracebacks. for explicit instantiation.
+.tb_frame                       # Tracebacks. the current frame.
+.tb_lineno                      # Tracebacks. line where exception occurred.
+.tb_lasti                       # Tracebacks. Index of instruction where exception occurred.
+.tb_next                        # Tracebacks. next level of the trace.
+
+----                            # Util
+faulthandler.dump_traceback     # Tracebacks. λ(file=sys.stderr, all_threads=True)
+traceback.print_tb              # Tracebacks. λ(tb, limit:None|int=None, file=sys.stderr)
+traceback.print_exception       # λ(exc, /, value, tb, limit=None, file=None, chain=True)
+traceback.print_stack           # λ(f=None, limit=None, file=None)
+traceback.extract_stack         # λ(f:Frame=None, limit:None|int=None) -> list[FrameSummary]
+traceback.format_list           # λ(list[FrameSummary]) -> list[str]
+traceback.walk_stack            # λ(f:Frame) -> list[Frame]
+traceback.walk_tb               # λ(tb:Traceback) -> list[Traceback]
+
+----                            # Garbage Collection. gc.
+gc.collect(generation=2)        # run a full collection.
+gc.set_debug(flags)             #
+gc.get_debug()                  #
+gc.get_objects(generation=None) # -> list. all objects tracked by collector
+gc.get_stats()                  # -> tuple(dict[collections], dict[collected], dict[uncollectable])
+gc.get_referrers(*objs)         # list[obj] that refer to any of objs.
+gc.get_referents(*obsj)         # list[obj] that are referred to.
+gc.is_tracked(obj)              # bool
+gc.freeze()                     # ignore all tracked objects from future collections.
+gc.unfreeze()                   # undo a freeze.
+gc.get_freeze_count()           #
+gc.garbage                      # list[obj] of unreachable, unfreeable objects.

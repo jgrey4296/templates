@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name  : condition-case
+# uuid  : condition-case
+# key   : condition-case
+# group : error-handling
+# --
+;; To handle a signal, it needs to be defined as an error:
+(define-error '${1:a-signal} "$2")
+
+(condition-case err
+    (signal '$1 (list "data"))
+  ($1 (message "Error: %s" err))
+)

@@ -1,0 +1,38 @@
+Org Syntax:
+#+PROPERTY: {var} {val}             # Buffer property
+<YYYY-MM-DD {Day} HH:MM>            # Timestamp
+<YYYY-MM-DD {Day} HH:MM 1+{repeat}> # Repeating Timestamp. Repeat=h|d|w|m|y
+<{timestamp}>--<{timestamp}>        # Timestamp Range
+[YYYY-MM-DD {Day}]                  # Inactive timestampe
+
+clock: {inactive-timstamp}          #
+
+
+* Headline                          #
+
+:PROPERTIES:                        # Start Property Block
+:DRAWER:                            # Start Drawer Block
+:END:                               # End Block
+
+#+begin_{name} {data}               # start named block
+#+end_{name}                        # end named block
+
+:{text}: {val}                      # Property (in property block)
+
+
+----                                # Special Properties
+ALLTAGS                             #
+BLOCKED                             #
+CATEGORY                            #
+CLOCKSUM                            #
+CLOCKSUM_T                          #
+CLOSED                              #
+DEADLINE                            #
+FILE                                #
+ITEM                                #
+PRIORITY                            #
+SCHEDULED                           #
+TAGS                                #
+TIMESTAMP                           #
+TIMESTAMP_IA                        #
+TODO                                #

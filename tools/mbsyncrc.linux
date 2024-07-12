@@ -8,7 +8,7 @@
 IMAPAccount johngrey
 Host imap.gmail.com
 User johngrey4296@gmail.com
-PassCmd "gpg --batch -dq --no-tty ~/.config/secrets/mail/.authinfo | sed -n -E 's/^machine.*? johngrey4296@gmail.com password (.+)/\\1/p'"
+PassCmd "gpg --batch -dq --no-tty ~/.config/secrets/mail/.authinfo.asc | sed -n -E 's/^machine.*? johngrey4296@gmail.com password (.+)/\\1/p'"
 AuthMechs LOGIN
 SSLType IMAPS
 SSLVersions TLSv1.2
@@ -22,8 +22,8 @@ Account johngrey
 
 # LOCAL STORAGE
 MaildirStore johngrey-local
-Path ~/.cache/mail/johngrey/
-Inbox  ~/.cache/mail/johngrey/inbox
+Path ~/_cache_/mail/johngrey/
+Inbox  ~/_cache_/mail/johngrey/inbox
 
 Channel johngrey-inbox
 Far :johngrey-remote:
@@ -52,7 +52,7 @@ Channel johngrey-sent
 IMAPAccount jgrey
 Host imap.gmail.com
 User jgrey4296@gmail.com
-PassCmd "gpg --batch -dq --no-tty ~/.config/secrets/mail/.authinfo | sed -n -E 's/^machine.*? jgrey4296@gmail.com password (.+)/\\1/p'"
+PassCmd "gpg --batch -dq --no-tty ~/.config/secrets/mail/.authinfo.asc | sed -n -E 's/^machine.*? jgrey4296@gmail.com password (.+)/\\1/p'"
 AuthMechs LOGIN
 SSLType IMAPS
 SSLVersions TLSv1.2
@@ -66,8 +66,8 @@ Account jgrey
 
 # LOCAL STORAGE
 MaildirStore jgrey-local
-Path ~/.cache/mail/jgrey/
-Inbox  ~/.cache/mail/jgrey/inbox
+Path ~/_cache_/mail/jgrey/
+Inbox  ~/_cache_/mail/jgrey/inbox
 
 Channel jgrey-inbox
 Far :jgrey-remote:
@@ -97,7 +97,7 @@ Channel jgrey-sent
 IMAPAccount jgnp1
 Host imap.gmail.com
 User jgrey.n.plus.one@gmail.com
-PassCmd "gpg --batch -dq --no-tty ~/.config/secrets/mail/.authinfo | sed -n -E 's/^machine.*? jgrey.n.plus.one@gmail.com password (.+)/\\1/p'"
+PassCmd "gpg --batch -dq --no-tty ~/.config/secrets/mail/.authinfo.asc | sed -n -E 's/^machine.*? jgrey.n.plus.one@gmail.com password (.+)/\\1/p'"
 AuthMechs LOGIN
 SSLType IMAPS
 SSLVersions TLSv1.2
@@ -111,8 +111,8 @@ Account jgnp1
 
 # LOCAL STORAGE
 MaildirStore jgnp1-local
-Path ~/.cache/mail/jgnp1/
-Inbox  ~/.cache/mail/jgnp1/inbox
+Path ~/_cache_/mail/jgnp1/
+Inbox  ~/_cache_/mail/jgnp1/inbox
 
 Channel jgnp1-inbox
 Far :jgnp1-remote:
@@ -140,8 +140,7 @@ Channel jgnp1-sent
 IMAPAccount b42
 Host imap.gmail.com
 User belial42@gmail.com
-PassCmd "gpg --batch -dq --no-tty ~/.config/secrets/mail/.authinfo | sed -n -E 's/^machine.*? belial42@gmail.com password (.+)/\\1/p'"
-
+PassCmd "gpg --batch -dq --no-tty ~/.config/secrets/mail/.authinfo.asc | sed -n -E 's/^machine.*? belial42@gmail.com password (.+)/\\1/p'"
 AuthMechs LOGIN
 SSLType IMAPS
 SSLVersions TLSv1.2
@@ -155,8 +154,8 @@ Account b42
 
 # LOCAL STORAGE
 MaildirStore b42-local
-Path ~/.cache/mail/b42/
-Inbox  ~/.cache/mail/b42/inbox
+Path ~/_cache_/mail/b42/
+Inbox  ~/_cache_/mail/b42/inbox
 
 Channel b42-inbox
 Far :b42-remote:
@@ -185,7 +184,7 @@ Channel b42-sent
 IMAPAccount jgsoe
 Host imap.gmail.com
 User jgrey@soe.ucsc.edu
-PassCmd "gpg --batch -dq --no-tty ~/.config/secrets/mail/.authinfo | sed -n -E 's/^machine.*? jgrey@soe.ucsc.edu password (.+)/\\1/p'"
+PassCmd "gpg --batch -dq --no-tty ~/.config/secrets/mail/.authinfo.asc | sed -n -E 's/^machine.*? jgrey@soe.ucsc.edu password (.+)/\\1/p'"
 AuthMechs LOGIN
 SSLType IMAPS
 SSLVersions TLSv1.2
@@ -199,8 +198,8 @@ Account jgsoe
 
 # LOCAL STORAGE
 MaildirStore jgsoe-local
-Path ~/.cache/mail/jgsoe/
-Inbox  ~/.cache/mail/jgsoe/inbox
+Path ~/_cache_/mail/jgsoe/
+Inbox  ~/_cache_/mail/jgsoe/inbox
 
 Channel jgsoe-inbox
 Far :jgsoe-remote:

@@ -2,6 +2,6 @@
 # name: var
 # uuid: var
 # key:  var
-# group :
+# group : code
 # --
 {{($0:varname) | escape | underline}}

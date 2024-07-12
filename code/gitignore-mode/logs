@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : logs
+# uuid  : logs
+# key   : logs
+# group : gitignore
+# --
+##-- logs
+*.log
+log.*
+[Bb]uild[Ll]og.*
+##-- end logs

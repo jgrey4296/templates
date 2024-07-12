@@ -1,7 +1,7 @@
 envs_dirs:
-  - ${HOME}/.cache/mamba/envs
+  - ${HOME}/_cache_/mamba/envs
 pkgs_dirs:
-  - ${HOME}/.cache/mamba/pkgs
+  - ${HOME}/_cache_/mamba/pkgs
 channels:
   - nodefaults
   - conda-forge
@@ -9,19 +9,38 @@ channels:
 ssl_verify: true
 env_prompt: ""
 create_default_packages:
-  - sh
+  # - celery
+  # - dirty-equals
+  # - flask
+  # - mypy
+  # - pip-review
+  # - pomegranate
+  # - pretty-errors
+  # - pycodestyle
+  # - pycycle
+  # - pyright
+  # - railroad-diagrams
+  # - setuptools-rust
+  # - spacy
+  # - thefuzz
   - beautifulsoup4
+  - boltons
   - build
+  - cleo
   - coverage
   - humanfriendly
   - isort
   - jedi
   - matplotlib
+  - more-itertools
   - networkx
   - numpy
+  - packaging
   - pandas
   - pip
+  - pipreqs
   - pony
+  - pre-commit
   - pygments
   - pylint
   - pyparsing
@@ -35,34 +54,14 @@ create_default_packages:
   - scipy
   - seaborn
   - setuptools
+  - sh
   - sphinx
   - sqlite
+  - stackprinter
   - stackprinter
   - statsmodels
   - sty
   - sympy
-  - wheel
-  - pre-commit
-  - pipreqs
-  - boltons
-  - more-itertools
-  - cleo
-  - validators
-  - stackprinter
   - tqdm
-  # - pretty-errors
-  # - railroad-diagrams
-  # - spacy
-  # - pomegranate
-  # - setuptools-rust
-  # - sh
-  # - thefuzz
-  # - dirty-equals
-  # - celery
-  # - flask
-  # - mypy=0.931
-  # - pip-review
-  # - pycodestyle
-  # - pycycle
-  # - pyright
-  # - semanticversion
+  - validators
+  - wheel

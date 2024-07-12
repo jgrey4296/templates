@@ -1,9 +1,10 @@
+## extract.toml -*- mode: Conf[TOML] -*-
 
 [[locations]]
 youtube        = "/media/john/big_ex/datasets/youtube/data"
 yt_raw         = "raw"
 extracted      = "extracted"
-extract_tars = "extract_tars"
+extract_tars   = "extract_tars"
 extract_backup = "/media/john/big_ex/datasets/youtube/extracted"
 extract_output = "/media/john/data/datasets/todo/youtube"
 
@@ -18,10 +19,10 @@ cli     = [
         { name="out",    type="str", default="unpacked", positional=true },
 ]
 actions = [
-        {do="job.expand", base="yt::unpack",  inject={copy=["target", "out"]},  update_="unpack"},
-        {do="job.expand", base="yt::extract", inject={copy=["target"]}, update_="extract"},
-        {do="job.chain.->", unpack={literal=[], by-name=[]}},
-        {do="job.queue", from_multi_=["update", "extract"]},
+    {do="job.expand", template="yt::unpack",  inject={copy=["target", "out"]}, update_="unpack"},
+    {do="job.expand", template="yt::extract", inject={copy=["target"]}, update_="extract"},
+    {do="job.chain.->", unpack={literal=[], by-name=[]}},
+    {do="job.queue", from_multi_=["update", "extract"]},
 ]
 
 [[tasks.yt]]
@@ -47,40 +48,37 @@ version                  = "0.1"                # <str>
 doc                      = ["Walk an unpacked youtube data directory, extracting to into {extracted}/{pstem}.jsonnl"]
 ctor                     = "job"
 cli                      = [{ name="target", type="str", default="northernlion", positional=true }]
-print_levels             = { execute="WARN", action="WARN", head="INFO", build="WARN", sleep="WARN" }
-sub_print                = { execute="WARN", action="WARN", head="INFO", build="WARN", sleep="WARN" }
 queue_behaviour          = "default"
 recursive                = false
 exts                     = [".json"]
 roots                    = ["{yt_raw}/{target}"]
 jsonl                    = "{extracted}/{pstem}.jsonl"
 select_limit             = -1
+cleanup         = [
+    {do="dootle.actions.say:say", args=["complete"]},
+    {do="pathParts", from_="target"},
+    # gz and backup
+    {do="tar!", file_="jsonl", to="{extract_tars}/{pstem}.jsonl.tar"},
+    {do="copy", from="{extract_tars}/{pstem}.jsonl.tar", to="{extract_backup}/{pstem}.jsonl.tar"},
+    {do="copy", from="{extract_tars}/{pstem}.jsonl.tar", to="{extract_output}/{pstem}.jsonl.tar"},
+    # delete raw
+    {do="delete!", args=["{yt_raw}/{target}"], recursive=true}
+]
 actions                  = [
-        {do="job.walk",   update_="files"}, # walk,
-        {do="job.expand", base_="sub_actions", from_="files", inject={copy=["jsonl"], replace=["fpath"]}, update_="tasks" },
-        {do="job.limit",  from_="tasks", count_="select_limit"},
-        {do="job.inject.path.elements", onto_="tasks", key="fpath"},
-        {do="job.queue", from_="tasks"}, # queue
-        {do="job.queue.head", base_="head_actions", inject={copy=["target", "jsonl"]}},
+    {do="job.walk",   update_="files"}, # walk,
+    {do="job.expand", base_="sub_actions", from_="files", inject={copy=["jsonl"], replace=["fpath"]}, update_="tasks" },
+    {do="job.limit",  from_="tasks", count_="select_limit"},
+    {do="job.inject.path.elements", onto_="tasks", key="fpath"},
+    {do="job.queue", from_="tasks"}, # queue
 ]
 sub_actions              = [
-                     {do="ext?", ext=".json"},
-                     {do="taskcode.util:skip_if_too_big", maxMB="1"},
-                     # TODO : skip if too big
-                     # load the json
-                     {do="json.read", from_="fpath", update_="json"},
-                     # extract the data
-                     {do="taskcode.json:reduce_video_metadata", from_="json", update_="reduction"},
-                     # add to db/jsonl list. TODO: track id's, for resume
-                     {do="json.nl.write", from_="reduction", to_="jsonl"}
-]
-head_actions         = [
-                     {do="dootle.actions.say:say", args=["complete"]},
-                     {do="pathParts", from_="target"},
-                     # gz and backup
-                     {do="tar!", file_="jsonl", to="{extract_tars}/{pstem}.jsonl.tar"},
-                     {do="copy", from="{extract_tars}/{pstem}.jsonl.tar", to="{extract_backup}/{pstem}.jsonl.tar"},
-                     {do="copy", from="{extract_tars}/{pstem}.jsonl.tar", to="{extract_output}/{pstem}.jsonl.tar"},
-                     # delete raw
-                     {do="delete!", args=["{yt_raw}/{target}"], recursive=true}
+    {do="ext?", ext=".json"},
+    {do="taskcode.util:skip_if_too_big", maxMB="1"},
+    # TODO : skip if too big
+    # load the json
+    {do="json.read", from_="fpath", update_="json"},
+    # extract the data
+    {do="taskcode.json:reduce_video_metadata", from_="json", update_="reduction"},
+    # add to db/jsonl list. TODO: track id's, for resume
+    {do="json.nl.write", from_="reduction", to_="jsonl"}
 ]

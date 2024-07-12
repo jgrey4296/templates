@@ -1,155 +1,166 @@
 AST Types:
-https://docs.python.org/3/library/ast.html # Reference
-Add                                        #
-alias                                      #
-And                                        #
-AnnAssign                                  #
-arg                                        #
-arguments                                  #
-Assert                                     #
-Assign                                     #
-AST                                        # Core Class
-AsyncFor                                   #
-AsyncFunctionDef                           #
-AsyncWith                                  #
-Attribute                                  #
-AugAssign                                  #
-AugLoad                                    #
-AugStore                                   #
-auto                                       #
-Await                                      #
-BinOp                                      #
-BitAnd                                     #
-BitOr                                      #
-BitXor                                     #
-BoolOp                                     # And | Or
-boolop                                     # boolean operator
-Break                                      #
-Call                                       #
-ClassDef                                   #
-cmpop                                      # Eq | NotEq | Lt | LtE | Gt | GtE | Is | IsNot | In | NotIn
-Compare                                    #
-comprehension                              #
-Constant                                   #
-contextmanager                             #
-Continue                                   #
-Del                                        #
-Delete                                     #
-Dict                                       #
-DictComp                                   #
-Div                                        #
-Eq                                         #
-ExceptHandler                              #
-excepthandler                              #
-Expr                                       #
-expr                                       #
-expr_context                               # Load | Store | Del
-Expression                                 #
-ExtSlice                                   #
-FloorDiv                                   #
-For                                        #
-FormattedValue                             #
-FunctionDef                                #
-FunctionType                               #
-GeneratorExp                               #
-Global                                     #
-Gt                                         #
-GtE                                        #
-If                                         #
-IfExp                                      #
-Import                                     #
-ImportFrom                                 #
-In                                         #
-Index                                      #
-IntEnum                                    #
-Interactive                                #
-Invert                                     #
-Is                                         #
-IsNot                                      #
-JoinedStr                                  #
-keyword                                    #
-Lambda                                     #
-List                                       #
-ListComp                                   #
-Load                                       #
-LShift                                     #
-Lt                                         #
-LtE                                        #
-main                                       #
-Match                                      #
-match_case                                 #
-MatchAs                                    #
-MatchClass                                 #
-MatchMapping                               #
-MatchOr                                    #
-MatchSequence                              #
-MatchSingleton                             #
-MatchStar                                  #
-MatchValue                                 #
-MatMult                                    #
-mod                                        #
-Mod                                        # Module | Interactive | Expression | FunctionType
-Module                                     #
-Mult                                       #
-Name                                       #
-NamedExpr                                  #
-NodeTransformer                            # helper
-NodeVisitor                                # helper
-Nonlocal                                   #
-Not                                        #
-NotEq                                      #
-NotIn                                      #
-nullcontext                                #
-operator                                   # Add | Sub | Mult | MatMult | Div | Mod | Pow | LShift | RShift | BitOr | BitXor | BitAnd | FloorDiv
-Or                                         #
-Param                                      #
-ParamSpec                                  #
-Pass                                       #
-pattern                                    # MatchValue | MatchSingleton | MatchSequence | MatchMapping | MatchClass | MatchStar | MatchAs | MatchOr
-Pow                                        #
-Raise                                      #
-re                                         #
-Return                                     #
-RShift                                     #
-Set                                        #
-SetComp                                    #
-Slice                                      #
-slice                                      #
-Starred                                    #
-stmt                                       # FunctionDef | AsyncFunctionDef | ClassDef | Return | Delete | Assign | TypeAlias | AugAssign | AnnAssign ...
-Store                                      #
-Sub                                        #
-Subscript                                  #
-Suite                                      #
-sys                                        #
-Try                                        #
-TryStar                                    #
-Tuple                                      #
-type_ignore                                # TypeIgnore
-type_param                                 # TypeVar | ParamSpec | TypeVarTuple
-TypeAlias                                  #
-TypeIgnore                                 #
-TypeVar                                    #
-TypeVarTuple                               #
-UAdd                                       #
-unaryop                                    #
-UnaryOp                                    # Invert | Not | UAdd | USub
-USub                                       #
-While                                      #
-With                                       #
-withitem                                   #
-Yield                                      #
-YieldFrom                                  #
+https://docs.python.org/3/library/ast.html         # Reference
+ast.parse()                                        # λ(source, filename='unknown', mode='exec, *, type_comments=False) -> ast.AST
+ast.parse                                          # mode='func_type' modifies syntax to parse "fn(args) -> ret_type:"
+ast.unparse(ast)                                   # -> str
 
-copy_location                              # helper
-dump                                       # helper
-fix_missing_locations                      # helper
-get_docstring                              # helper
-get_source_segment                         # helper
-increment_lineno                           # helper
-iter_child_nodes                           # helper
-iter_fields                                # helper
-literal_eval                               # helper
-parse                                      # helper
-unparse                                    # helper
-walk                                       # helper
+
+Add                                                #
+alias                                              #
+And                                                #
+AnnAssign                                          #
+arg                                                #
+arguments                                          #
+Assert                                             #
+Assign                                             #
+AST                                                # Core Class
+AsyncFor                                           #
+AsyncFunctionDef                                   #
+AsyncWith                                          #
+Attribute                                          #
+AugAssign                                          #
+AugLoad                                            #
+AugStore                                           #
+auto                                               #
+Await                                              #
+BinOp                                              #
+BitAnd                                             #
+BitOr                                              #
+BitXor                                             #
+BoolOp                                             # And | Or
+boolop                                             # boolean operator
+Break                                              #
+Call                                               #
+ClassDef                                           #
+cmpop                                              # Eq | NotEq | Lt | LtE | Gt | GtE | Is | IsNot | In | NotIn
+Compare                                            #
+comprehension                                      #
+Constant                                           #
+contextmanager                                     #
+Continue                                           #
+Del                                                #
+Delete                                             #
+Dict                                               #
+DictComp                                           #
+Div                                                #
+Eq                                                 #
+ExceptHandler                                      #
+excepthandler                                      #
+Expr                                               #
+expr                                               #
+expr_context                                       # Load | Store | Del
+Expression                                         #
+ExtSlice                                           #
+FloorDiv                                           #
+For                                                #
+FormattedValue                                     #
+FunctionDef                                        #
+FunctionType                                       #
+GeneratorExp                                       #
+Global                                             #
+Gt                                                 #
+GtE                                                #
+If                                                 #
+IfExp                                              #
+Import                                             #
+ImportFrom                                         #
+In                                                 #
+Index                                              #
+IntEnum                                            #
+Interactive                                        #
+Invert                                             #
+Is                                                 #
+IsNot                                              #
+JoinedStr                                          #
+keyword                                            #
+Lambda                                             #
+List                                               #
+ListComp                                           #
+Load                                               #
+LShift                                             #
+Lt                                                 #
+LtE                                                #
+main                                               #
+Match                                              #
+match_case                                         #
+MatchAs                                            #
+MatchClass                                         #
+MatchMapping                                       #
+MatchOr                                            #
+MatchSequence                                      #
+MatchSingleton                                     #
+MatchStar                                          #
+MatchValue                                         #
+MatMult                                            #
+mod                                                #
+Mod                                                # Module | Interactive | Expression | FunctionType
+Module                                             #
+Mult                                               #
+Name                                               #
+NamedExpr                                          #
+NodeTransformer                                    # helper
+NodeVisitor                                        # helper
+Nonlocal                                           #
+Not                                                #
+NotEq                                              #
+NotIn                                              #
+nullcontext                                        #
+operator                                           # Add | Sub | Mult | MatMult | Div | Mod | Pow | LShift | RShift | BitOr | BitXor | BitAnd | FloorDiv
+Or                                                 #
+Param                                              #
+ParamSpec                                          #
+Pass                                               #
+pattern                                            # MatchValue | MatchSingleton | MatchSequence | MatchMapping | MatchClass | MatchStar | MatchAs | MatchOr
+Pow                                                #
+Raise                                              #
+re                                                 #
+Return                                             #
+RShift                                             #
+Set                                                #
+SetComp                                            #
+Slice                                              #
+slice                                              #
+Starred                                            #
+stmt                                               # FunctionDef | AsyncFunctionDef | ClassDef | Return | Delete | Assign | TypeAlias | AugAssign | AnnAssign ...
+Store                                              #
+Sub                                                #
+Subscript                                          #
+Suite                                              #
+sys                                                #
+Try                                                #
+TryStar                                            #
+Tuple                                              #
+type_ignore                                        # TypeIgnore
+type_param                                         # TypeVar | ParamSpec | TypeVarTuple
+TypeAlias                                          #
+TypeIgnore                                         #
+TypeVar                                            #
+TypeVarTuple                                       #
+UAdd                                               #
+unaryop                                            #
+UnaryOp                                            # Invert | Not | UAdd | USub
+USub                                               #
+While                                              #
+With                                               #
+withitem                                           #
+Yield                                              #
+YieldFrom                                          #
+
+ast.copy_location                                  # helper
+ast.dump                                           # helper. λ(node, annotate_fields=True)
+ast.fix_missing_locations                          # helper. λ(node)
+ast.get_docstring                                  # helper. λ(node, clean=True) -> str
+ast.get_source_segment                             # helper. λ(source, node, *, padded=False) -> str
+ast.increment_lineno                               # helper. λ(node, n=1)
+ast.iter_child_nodes                               # helper
+ast.iter_fields                                    # helper. λ(node) -> tupel[name, value]
+ast.literal_eval                                   # helper.
+ast.walk                                           # helper. λ(node) -> yields nodes
+
+----                                               # Fields
+._fields                                           # Fields. Child nodes.
+.lineno                                            # Fields.
+.col_offset                                        # Fields.
+.end_lineno                                        # Fields.
+.end_col_offset                                    # Fields.
+.type_comment                                      # Fields.

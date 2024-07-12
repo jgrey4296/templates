@@ -1,0 +1,53 @@
+# -*- mode: snippet -*-
+# name  : metaclass
+# uuid  : metaclass
+# key   : metaclass
+# group :
+# --
+class MyMeta(type):
+    """
+    By default classes are constructed using type().
+
+    class definitions execute:
+    1) MRO resolution : __mro_entries__(self, bases)
+    2) metaclass selection (most dervied of (type | metaclasses))
+    3) namespace preparation : @classmethod __prepare__(metacls, name, bases, **kwargs) -> dict
+    4) class body execution : exec(body, globals, namespace)
+    5) class objection creation : metaclass.__new__(name, bases, namespace, **kwargs) -> classobj
+    6) subclass creation : parent.__init_subclass__(cls, **kwargs)
+    """
+
+    def __prepare__(name, bases, **kwargs):
+        """ runs on class definition """
+        logging.warning("MyMeta Prepare: %s %s %s", name, bases, kwargs)
+        # super().__prepare__(name, bases, **kwargs)
+        return type.__prepare__(name, bases, **kwargs)
+
+    def __new__(mcls, name, bases:tuple, namespace:dict, **kwargs):
+        """ runs on class definition """
+        logging.warning("MyMeta new: %s %s %s %s %s", mcls, name, bases, namespace, kwargs)
+        # return type.__new__(mcls, name, bases, namespace, **kwargs)
+        # return type(name, bases, namespace, **kwargs)
+        return super().__new__(mcls, name, bases, dict(namespace), **kwargs)
+
+    def __init__(cls, name, bases:tuple, namespace:dict, **kwargs):
+        """ runs on class definition """
+        logging.warning("MyMeta init: %s %s %s %s %s", cls, name, bases, namespace, kwargs)
+        super().__init__(name, bases, namespace, **kwargs)
+
+    def __call__(cls, *args, **kwargs):
+        """ Runs on class instance creation
+        skips running cls.__init__ unless cls.__new__ calls it
+        """
+        logging.warning("MyMeta Call: %s %s %s", cls, args, kwargs)
+        obj = cls.__new__(cls, *args, **kwargs)
+        # obj.__init__(*args, **kwargs)
+        return obj
+
+    def __instancecheck__(self, instance) -> bool:
+        logging.warning("MyMeta instance check: %s %s", self, instance)
+        return super().__instancecheck__(instance)
+
+    def __subclasscheck__(self, subclass) -> bool:
+        logging.warning("MyMeta subclass check: %s %s", self, subclass)
+        return super().__subclasscheck__(subclass)

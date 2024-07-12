@@ -1,13 +1,36 @@
 Python Functional:
-map        # builtin
-filter     # builtin
-sum        # builtin
-len        # builtin
-any        # builtin
-all        # builtin
-min        # builtin
-max        # builtin
+map                               # builtin. λ(fn, *iters) where fn(*xs): len(xs) == len(*iters)
+filter                            # builtin. λ(fn, iter) -> xs   where ∀x ∈ xs: fn(x) -> True.
+sum                               # builtin. λ(iter, *, start=0)
+len                               # builtin  λ(obj) -> int
+any                               # builtin  λ(iter) -> bool
+all                               # builtin  λ(iter) -> bool
+min                               # builtin  λ(iter, *, default, key=None)
+max                               # builtin  λ(iter, *, default, key=None)
 
-reduce     # functools. λ(fn, list, initializer=None)
-accumulate # itertools
-partial    # functools.
+functools.reduce                  # λ(fn, list, initializer=None)
+ftz.partial                       # λ(fn, /, *args, **kwargs) -> fn'
+
+itertools.count                   # λ(start, step) -> start, start+step...
+itz.cycle                         # λ(xs) -> xs[0]... xs[n], xs[0]...
+itz.repeat                        # λ(x, n) -> x, x, x...
+
+itz.accumulate                    # λ(xs, fn) -> x[0], x[0]+x[1], x[0]+x[1]+x[2]...
+itz.batched                       # λ(xs, n=3) -> xs[:n-1], xs[n:n+n]...
+itz.chain                         # λ(xs, ys) -> xs[0]... xs[n], ys[0]...
+itz.chain.from_iterable           # λ()
+itz.compress                      # λ(xs, selectors)
+itz.dropwhile                     # λ(fn, xs)
+itz.filterfalse                   # λ(fn, xs)
+itz.groupby                       # λ(xs, key)
+itz.islice                        # λ(xs, start, stop, step)
+its.pairwise                      # λ(xs) -> tuple, tuple, tuple
+itz.starmap                       # λ(fn, xs) -> fn(xs[0]), fn(xs[1])...
+itz.takewhile                     # λ(fn, xs)
+itz.tee                           # λ(xs, n) -> n iterators of x
+itz.zip_longest                   # λ(xs, ys..., filvalue="-") ->
+
+itz.product                       # λ(*xs, repeat=1)
+itz.permutations                  # λ(xs, r) -> r len tuples, no repeat.
+itz.combinations                  # λ(xs, r) -> r len tuples, no repeat. sorted.
+itz.combinations_with_replacement # λ(xs, r) -> r len tuples, repeats, sorted.

@@ -1,0 +1,21 @@
+Org Capture Templates:
+:prepend t              #
+:immediate-finish t     # don't edit info
+:jump-to-captured t     # jump to finished entry
+:empty-lines {n}        # around the new entry
+:empty-lines-after {n}  #
+:empty-lines-before {n} #
+:clock-in t             #
+:clock-keep t           #
+:clock-resume t         #
+:time-prompt t          #
+:tree-type t            # week | month
+:unarrowed t            # don't narrow the target buffer
+:table-line-pos {n}     #
+:kill-buffer t          # close the target buffer after finishing
+:no-save t              # don't save the target buffer
+:refile-targets {val}   # set `org-refile-targets'
+:hook {}                # run these before `org-capture-hook' when template is selected
+:prepare-finalize {}    # hooks for before `org-capture-preapre-finalize-hook'
+:before-finalize {}     # hooks for before org-capture-before-finalize-hook
+:after-finalize {}      # hooks for before org-capture-after-finalize-hook

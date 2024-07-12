@@ -2,7 +2,7 @@
 # name  : py.doctest
 # uuid  : py.doctest
 # key   : py.doctest
-# group : sphinx
+# group : python sphinx
 # --
 >>> ${1:print("expected")}
 ${2:"expected"}

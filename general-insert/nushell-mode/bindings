@@ -1,0 +1,24 @@
+Nushell Binding Reminders:
+none              # modifer
+control           # modifer
+alt               # modifer
+shift             # modifer
+shift_alt         # modifer
+alt_shift         # modifer
+control_alt       # modifer
+alt_control       # modifer
+control_shift     # modifer
+shift_control     # modifer
+control_alt_shift # modifer
+control_shift_alt # modifer
+
+char_{}           # key codes
+
+
+emacs             # mode
+vi_insert         # mode
+vi_normal         # mode
+
+send              # event
+edit              # event
+until             # event

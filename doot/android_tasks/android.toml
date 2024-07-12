@@ -1,9 +1,9 @@
 ## android.toml<2> -*- mode: conf-toml -*-
 [[locations]]
+pdf_source                 = "{data_drive}/library/pdfs"
 push_pdfs                  = "{pdf_source}"
 data_drive                 = "/media/john/data"
-pdf_source                 = "{data_drive}/library/pdfs"
-android_root               = "/storage/6331-3162"
+android_root               = {loc="/storage/6331-3162", remote=true}
 
 [[tasks.android]]
 name                 = "device.find"
@@ -15,8 +15,8 @@ setup = [
     { do="dootle.android.actions:AndroidRunning"} ,
 ]
 actions = [
-    { do="dootle.android.actions:AndroidRemoteCmd", cmd="find", args=["{android_root}/Library/pdf_library", "-type", "f"] },
-    { do="write!", from_="adb_result", to="{temp}/adb_files" }
+    { do="dootle.android.actions:AndroidRemoteCmd", cmd="find", args=["{android_root!p}/Library/pdf_library", "-type", "f"] },
+    { do="write!", from_="adb_result", to="{temp!p}/adb_files" }
 ]
 
 
@@ -27,16 +27,14 @@ ctor                       = "job"
 doc                        = ["Push pdfs to device"]
 accept_fn                  = "taskscode.android:select_dirs"
 roots                      = ["{push_pdfs}"]
-print_level                = { head="INFO", action="DEBUG" }
 actions     = [
     {do="job.walk",   update_="files"},
-    {do="job.expand", from_="files", update_="tasks", inject={copy=["fpath", "android_root"]}, base_="sub_actions"},
-    {do="job.inject.path.elements", onto_="tasks", key="fpath"},
+    {do="job.expand", from_="files", update_="tasks", inject={replace=['fpath'], copy=["android_root"]}, template_="sub_actions"},
+    {do="job.inject.path.elements", onto_="tasks", key_="fpath"},
     {do="job.queue",  from_="tasks"},
-    {do="job.queue.head"},
 ]
 sub_actions = [
-    { do="log", msg="Pushing: {fname} to {android_root}/Library/pdf_library/{lpath}"},
+    { do="log", msg="Pushing: {fname} to {android_root!p}/Library/pdf_library/{fname}"},
     { do="dootle.android.actions:AndroidRunning" },
-    { do="dootle.android.actions:AndroidPush", local="{fpath}", remote="{android_root}/Library/pdf_library/" },
+    { do="dootle.android.actions:AndroidPush", local="{fpath!p}", remote="{android_root!p}/Library/pdf_library/" },
 ]

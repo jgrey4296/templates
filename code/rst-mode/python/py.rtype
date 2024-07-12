@@ -1,5 +1,6 @@
 # -*- mode: snippet -*-
 # name: py.rtype
 # uuid: py.rtype
+# group: python sphinx
 # --
 :rtype: $0

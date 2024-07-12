@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : model_validator_after
+# uuid  : model_validator_after
+# key   : model_validator_after
+# group : pydantic, decorators
+# --
+@model_validator(mode="after")
+def $1 (self) -> Self:
+$0

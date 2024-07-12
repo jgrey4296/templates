@@ -1,6 +1,7 @@
 # -*- mode: snippet -*-
 # name: py.decoratormethod
 # uuid: py.decoratormethod
+# group: python sphinx
 # --
 .. py:decoratormethod: ${1:name}
 

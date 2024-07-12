@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name  : databases
+# uuid  : databases
+# key   : databases
+# group : gitignore
+# --
+##-- databases
+*.sql
+*.sqlite
+*.mdf
+*.ldf
+*.ndf
+*.db
+##-- end databases

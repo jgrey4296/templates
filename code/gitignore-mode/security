@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name  : security
+# uuid  : security
+# key   : security
+# group : gitignore
+# --
+##-- secrets
+*.credentials
+*_credentials.cfg
+*.key
+*.secret
+.secrets.json
+secrets.config
+secrets.toml
+passwords.gpg
+authinfo.*
+*.pub
+*.crt
+token.*
+##-- end secrets

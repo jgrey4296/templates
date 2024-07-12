@@ -1,3 +1,5 @@
+## themes.nu -*- mode: Nushell -*-
+print "Configuring Themes..."
 
 let dark_theme = {
     # color for nushell primitives

@@ -1,1 +1,9 @@
-# TODO
+## __ -*- mode: elixir -*-
+# A Simple Module
+
+defmodule InitialModule do
+  # use Agent      ## start_link/1 + public api
+  # use GenServer  ## init/1, handle_call/3, handle_cast/2
+  # use Supervisor ## start_link/1, init/2,
+
+end

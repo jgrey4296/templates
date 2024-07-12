@@ -42,7 +42,7 @@ from urllib.parse import urlparse
 
 import doot
 import doot.errors
-from doot.structs import DootKey
+from doot.structs import DKey
 import bib_middleware as BM
 import bibtexparser as BTP
 from bibtexparser import middlewares as ms
@@ -51,10 +51,10 @@ from task_code.xml import skip_re
 
 MYBIB                              = "#my_bibtex"
 MAX_TAGS                           = 7
-UPDATE        : Final[DootKey]     = DootKey.build("update_")
-FROM_KEY      : Final[DootKey]     = DootKey.build("from")
-FPATH                              = DootKey.build("fpath")
-LIB_ROOT                           = DootKey.build("lib_root")
+UPDATE        : Final[DKey]        = DKey("update_")
+FROM_KEY      : Final[DKey]        = DKey("from")
+FPATH                              = DKey("fpath")
+LIB_ROOT                           = DKey("lib_root")
 
 KEY_CLEAN_RE = re.compile(r"[/:{}]")
 KEY_SUB_CHAR = "_"
@@ -85,8 +85,8 @@ def build_simple_write_stack(spec, state):
 
 def map_urls(spec, state):
     """ convert found entries to dblp keys"""
-    base    = FPATH.to_path(spec, state)
-    db      = FROM_KEY.to_type(spec, state)
+    base    = FPATH.expand(spec, state)
+    db      = FROM_KEY.expand(spec, state)
     update  = UPDATE.redirect(spec)
     mapping = {}
     for entry in db.entries:
@@ -112,7 +112,7 @@ def map_urls(spec, state):
 
 def join_mappings(spec, state):
     """ flatten mappings of key->file into a single dict """
-    mappings : list[dict] = FROM_KEY.to_type(spec, state)
+    mappings : list[dict] = FROM_KEY.expand(spec, state)
     update = UPDATE.redirect(spec)
     total = {}
     for mapping in mappings:
@@ -129,12 +129,12 @@ def join_mappings(spec, state):
 def insert_entries(spec, state):
     """ insert xml sourced entries into a db, """
     update  = UPDATE.redirect(spec)
-    db      = UPDATE.to_type(spec, state)
-    entries = FROM_KEY.to_type(spec, state)
+    db      = UPDATE.expand(spec, state)
+    entries = FROM_KEY.expand(spec, state)
     db.add(entries)
 
     return { update : db }
 
 def get_fstem_fpar(spec, state):
-    fpath   = DootKey.build("fpath").to_path(spec, state)
+    fpath   = DKey("fpath").expand(spec, state)
     return { "fstem" : fpath.stem, "fpar": fpath.parent }

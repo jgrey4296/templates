@@ -8,7 +8,7 @@ default_context:
     _github_username : "jgrey4296"
 
 cookiecutters_dir: "~/github/_templates/projects/"
-replay_dir: "~/.cache/cookiecutter/replay/"
+replay_dir: "~/_cache_/cookiecutter/replay/"
 abbreviations:
     pp: https://github.com/audreyr/cookiecutter-pypackage.git
     gh: https://github.com/{0}.git

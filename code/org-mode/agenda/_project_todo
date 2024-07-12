@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : project_todo
+# uuid  : project_todo
+# key   : project_todo
+# group : org-capture
+# --
+** TRIAGE %?
+   [[%F::%(with-current-buffer (org-capture-get :original-buffer) (number-to-string (line-number-at-pos)))][Location]]
+   :context:
+	%t %(with-current-buffer (org-capture-get :original-buffer) (buffer-substring (line-beginning-position) (line-end-position)))
+   :END:

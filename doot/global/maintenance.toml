@@ -1,3 +1,5 @@
+## maintenance.toml -*- mode: conf-toml -*-
+
 [[locations]]
 records = ".maintenance"
 
@@ -6,77 +8,74 @@ name    = "versions"
 version = "0.1"
 ctor    = "task"
 doc     = ["Update the list of installed software versions"]
-depends_on = ["chore::_apt.versions", "chore::_snap.versions",
-               "chore::_mamba.versions", "chore::_rust.versions",
-               "chore::_tex.versions", "chore::_git",
-               # "chore::_cron",
+depends_on = ["chore::_.apt.versions", "chore::_.snap.versions",
+               "chore::_.mamba.versions", "chore::_.rust.versions",
+               "chore::_.tex.versions", "chore::_.git",
+               # "chore::_.cron",
                ]
 
 [[tasks.chore]]
-name    = "_apt.versions"
+name    = "_.apt.versions"
 version = "0.1"
 ctor    = "task"
 actions = [
         {do="shell", args=["apt", "list", "--installed"], update_="versions", notty=true},
-        {do="write!", from_="versions", to="{records}/apt.versions"},
+        {do="write!", from_="versions", to="{records!p}/apt.versions"},
 ]
 
 [[tasks.chore]]
-name    = "_snap.versions"
+name    = "_.snap.versions"
 version = "0.1"
 ctor    = "task"
 actions = [
         {do="shell", args=["snap", "list"], update_="versions", notty=true},
-        {do="write!", from_="versions", to="{records}/snap.versions"},
+        {do="write!", from_="versions", to="{records!p}/snap.versions"},
 ]
 
 [[tasks.chore]]
-name    = "_mamba.versions"
+name    = "_.mamba.versions"
 version = "0.1"
 ctor    = "task"
-print_levels = {execute="INFO"}
 actions = [
         { do="dootle.python.mamba:MambaEnv", env="default", update_="default"},
         { do="shell", args=["mamba", "info"], shenv_="default", update_="info"  },
-        { do="write!", from_="info", to="{records}/mamba.info"},
+        { do="write!", from_="info", to="{records!p}/mamba.info"},
         { do="shell", args=["pip", "list"], shenv_="default", update_="pip"  },
-        { do="write!", from_="pip", to="{records}/mamba.versions"},
+        { do="write!", from_="pip", to="{records!p}/mamba.versions"},
 ]
 
 [[tasks.chore]]
-name    = "_rust.versions"
+name    = "_.rust.versions"
 version = "0.1"
 ctor    = "task"
-print_levels = {execute="INFO"}
 actions = [
         { do="shell", args=["rustup", "show"], update_="rustup"  },
-        { do="write!", from_="rustup", to="{records}/rustup.info"},
+        { do="write!", from_="rustup", to="{records!p}/rustup.info"},
 ]
 
 [[tasks.chore]]
-name    = "_tex.versions"
+name    = "_.tex.versions"
 version = "0.1"
 ctor    = "task"
-print_levels = {execute="INFO"}
 actions = [
         { do="shell", args=["tlmgr", "info", "--only-installed", "-data", "name,cat-version,localrev,shortdesc"], update_="tex"  },
-        { do="write!", from_="tex", to="{records}/tex.versions"},
+        { do="write!", from_="tex", to="{records!p}/tex.versions"},
 ]
 
 [[tasks.chore]]
-name    = "_git"
+name    = "_.git"
 version = "0.1"
 ctor    = "task"
 actions = [
         {do="shell", args=["git", "--version"], update_="gitinfo" },
-        {do="write!", from_="gitinfo", to="{records}/git.version"},
+        {do="write!", from_="gitinfo", to="{records!p}/git.version"},
 ]
 
 [[tasks.chore]]
-name = "_cron"
+name = "_.cron"
 version = "0.1"
 ctor = "task"
 actions = [
         {do="shell", args=["crontab", "-l"], update_="cron"},
-        {do="write!", from_="cron", to="{records}/cron.backup"},
+        {do="write!", from_="cron", to="{records!p}/cron.backup"},
 ]

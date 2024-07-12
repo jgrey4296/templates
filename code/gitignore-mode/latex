@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name  : latex
+# uuid  : latex
+# key   : latex
+# group : gitignore
+# --
+##-- latex
+*.auctex-auto
+*.auctex
+*.out
+*.aux
+##-- end latex

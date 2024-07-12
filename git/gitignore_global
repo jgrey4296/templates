@@ -1,5 +1,6 @@
+## gitignore_global -*- mode: Gitignore -*-
 # https://git-scm.com/docs/gitignore
-# Compiled source:
+##-- compiled
 *.beam
 *.bl
 *.class
@@ -14,8 +15,10 @@
 build/
 ccsat.*
 dist/
-.projectile-cmds
 
+##-- end compiled
+
+.projectile-cmds
 # Gradle
 gradle/
 gradlew

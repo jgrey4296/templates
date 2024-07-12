@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : dont-import
+# uuid  : dont-import
+# key   : dont-import
+# group : isort
+# --
+# isort: dont-add-import: ${1:module}

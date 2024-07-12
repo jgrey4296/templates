@@ -1,6 +1,7 @@
 # -*- mode: snippet -*-
 # name: py.decorator
 # uuid: py.decorator
+# group: python sphinx
 # --
 .. py:decorator:: ${1:name}
 

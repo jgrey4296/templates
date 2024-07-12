@@ -1,0 +1,57 @@
+// __cs -*- mode: csharp -*-
+namespace InitialNameSpace;
+////-- imports
+using Microsoft.Extensions.Logging;
+////-- end imports
+
+class InitialClassName {
+    /*
+      InitialClassName:
+
+
+     */
+    ////-- attributes
+    #region attributes
+    ILoggerFactory logFactory;
+    ILogger logger;
+    ////-- end attributes
+
+    ////-- ctors
+    #region ctors
+    public InitialClassName(ILoggerFactory logFactory) {
+
+
+    }
+
+    ////-- end ctors
+
+    ////-- public api
+    #region public api
+
+    ////-- end public api
+
+    ////-- event handlers
+    #region event handlers
+
+    ////-- end event handlers
+
+    ////-- utils
+    #region utils
+
+    ////-- end utils
+
+    ////-- logging
+    #region logging
+    private void SetupLogging (int level, string location) {
+        int ll = level >= 8 ? level : 63;
+        if (location != "")
+        {
+            DicomGlobal.LogToFile(location, ll, 60);
+        }
+        logger = logFactory.CreateLogger<InitialClassName>();
+    }
+
+    ////-- end logging
+
+
+}

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-MUHOME="$HOME/.cache/mu/"
-MAILDIR="$HOME/.cache/mail/"
+MUHOME="$BASE_CACHE/mu/"
+MAILDIR="$BASE_CACHE/mail/"
 MAIL="$MAILDIR"
-MBOX="$MAILDIR"
+MBOX="$MAILDIR/mbox"

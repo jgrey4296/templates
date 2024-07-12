@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : is-reference
+# uuid  : is-reference
+# key   : is-reference
+# group : org-startup
+# --
+#+STARTUP: reference

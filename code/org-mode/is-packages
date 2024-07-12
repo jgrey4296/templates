@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : is-packages
+# uuid  : is-packages
+# key   : is-packages
+# group : org
+# --
+#+STARTUP: packages

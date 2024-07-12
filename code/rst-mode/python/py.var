@@ -1,5 +1,6 @@
 # -*- mode: snippet -*-
 # name: py.var
 # uuid: py.var
+# group: python sphinx
 # --
 :var: $0

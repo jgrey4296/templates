@@ -1,86 +1,55 @@
 # Nushell Environment Config File
-#
-# version = 0.78.0
-
-def create_left_prompt [] {
-    mut home = ""
-    try {
-        if $nu.os-info.name == "windows" {
-            $home = $env.USERPROFILE
-        } else {
-            $home = $env.HOME
-        }
-    }
-
-    let dir = ([
-        ($env.PWD | str substring 0..($home | str length) | str replace -s $home "~"),
-        ($env.PWD | str substring ($home | str length)..)
-    ] | str join)
-
-    let path_segment = if (is-admin) {
-        $"(ansi red_bold)($dir)"
-    } else {
-        $"(ansi green_bold)($dir)"
-    }
-
-    $path_segment
-}
-
-def create_right_prompt [] {
-    let time_segment = ([
-        (date now | date format '%m/%d/%Y %r')
-    ] | str join)
-
-    $time_segment
-}
+# version = "0.93.0"
+use std
+source ~/.config/.templates/nu/utils.nu
+source ~/.config/.templates/nu/path.nu
 
 # Use nushell functions to define your right and left prompt
-let-env PROMPT_COMMAND = {|| create_left_prompt }
-let-env PROMPT_COMMAND_RIGHT = {|| create_right_prompt }
+$env.PROMPT_COMMAND       = {|| create_left_prompt }
+# FIXME: This default is not implemented in rust code as of 2023-09-08.
+$env.PROMPT_COMMAND_RIGHT = {|| create_right_prompt }
 
 # The prompt indicators are environmental variables that represent
 # the state of the prompt
-let-env PROMPT_INDICATOR = {|| "> " }
-let-env PROMPT_INDICATOR_VI_INSERT = {|| ": " }
-let-env PROMPT_INDICATOR_VI_NORMAL = {|| "> " }
-let-env PROMPT_MULTILINE_INDICATOR = {|| "::: " }
+$env.PROMPT_INDICATOR           = {|| "> " }
+$env.PROMPT_INDICATOR_VI_INSERT = {|| ": " }
+$env.PROMPT_INDICATOR_VI_NORMAL = {|| "> " }
+$env.PROMPT_MULTILINE_INDICATOR = {|| "::: " }
 
 # Specifies how environment variables are:
 # - converted from a string to a value on Nushell startup (from_string)
 # - converted from a value back to a string when running external commands (to_string)
 # Note: The conversions happen *after* config.nu is loaded
-let-env ENV_CONVERSIONS = {
+$env.ENV_CONVERSIONS = {
   "PATH": {
-    from_string: { |s| $s | split row (char esep) | path expand -n }
-    to_string: { |v| $v | path expand -n | str join (char esep) }
+        from_string : { |s| $s | split row (char esep) | path expand --no-symlink }
+        to_string   : { |v| $v | path expand --no-symlink | str join (char esep) }
   }
   "Path": {
-    from_string: { |s| $s | split row (char esep) | path expand -n }
-    to_string: { |v| $v | path expand -n | str join (char esep) }
+        from_string : { |s| $s | split row (char esep) | path expand --no-symlink }
+        to_string   : { |v| $v | path expand --no-symlink | str join (char esep) }
   }
 }
 
 # Directories to search for scripts when calling source or use
-#
-# By default, <nushell-config-dir>/scripts is added
-let-env NU_LIB_DIRS = [
-    ($nu.config-path | path dirname | path join 'scripts')
+# The default for this is $nu.default-config-dir/scripts
+let nu_in_templates = $nu.config-path | path dirname
+$env.NU_LIB_DIRS = [
+    $nu_in_templates
+    ($nu_in_templates | path join 'scripts') # add <nushell-config-dir>/scripts
+    ($nu_in_templates | path join "components")
 ]
 
 # Directories to search for plugin binaries when calling register
-#
-# By default, <nushell-config-dir>/plugins is added
-let-env NU_PLUGIN_DIRS = [
-    ($nu.config-path | path dirname | path join 'plugins')
+# The default for this is $nu.default-config-dir/plugins
+$env.NU_PLUGIN_DIRS = [
+    ($nu.default-config-dir | path join 'plugins') # add <nushell-config-dir>/plugins
 ]
 
-# To add entries to PATH (on Windows you might use Path), you can use the following pattern:
-# let-env PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
-let-env PATH = [
-        "/usr/local/bin"
-        "/usr/local/sbin"
-        "/usr/bin"
-        "/usr/sbin"
-        "/bin"
-        "/sbin"
-]
+$env.BASECACHE     = ($env.HOME | path join "_cache_")
+$env.BASECONFIG    = ($env.HOME | path join ".config")
+$env.BASELOCAL     = ($env.HOME | path join ".local")
+$env.GITHUB        = ($env.HOME | path join "github")
+$env.TEMPLATES     = ($env.GITHUB | path join "_templates")
+$env.BASELOGS      = ($env.BASECACHE | path join "logs")
+$env.SECRETS       = ($env.BASECONFIG | path join "secrets")

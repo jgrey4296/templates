@@ -2,5 +2,6 @@
 # name: code
 # key: code
 # uuid: code
+# group: code
 # --
 .. code:: ${1:python}

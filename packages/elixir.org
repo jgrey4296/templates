@@ -1,10 +1,5 @@
 #+TITLE: Erlang / Elixir Package Reference
-
-* Overview :toc:
-- [[#main][Main]]
-  - [[#stdlib][Stdlib]]
-  - [[#external][External]]
-- [[#links][Links]]
+#+STARTUP: packages
 
 * Main
 

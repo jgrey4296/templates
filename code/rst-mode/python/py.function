@@ -1,6 +1,7 @@
 # -*- mode: snippet -*-
 # name: py.function
 # uuid: py.function
+# group: python sphinx
 # --
 .. py:function:: ${1:The signature of the function}
 

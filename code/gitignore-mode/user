@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name  : user_files
+# uuid  : user_files
+# key   : user_files
+# group : gitignore
+# --
+##-- user files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+##-- end user files

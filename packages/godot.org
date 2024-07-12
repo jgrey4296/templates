@@ -1,12 +1,5 @@
 #+TITLE: Godot Package Reference
-
-* Overview :toc:
-- [[#main][Main]]
-  - [[#stdlib][stdlib]]
-  - [[#testing][Testing]]
-  - [[#libraries][Libraries]]
-  - [[#tweening][Tweening]]
-- [[#links][Links]]
+#+STARTUP: packages
 
 * Main
 

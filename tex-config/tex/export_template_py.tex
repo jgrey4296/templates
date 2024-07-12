@@ -1,0 +1,22 @@
+%% compiler:pdflatex
+%% available: pdflatex lualatex xelatex
+%% A bibtex export template with python string.Template keys
+\documentclass[12pt]{article}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[russian,english]{babel}
+\usepackage{listings}
+\usepackage[version=3]{mhchem}
+\usepackage{url}
+\usepackage[numbers]{natbib}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, pdfstartview=FitH]{hyperref}
+\usepackage{doi}
+
+\title{${title}}
+\author{${author}}
+\begin{document}
+\maketitle
+\nocite{*}
+% Bibtex:
+\bibliographystyle{jg_custom_name_first}
+\bibliography{${target}}
+\end{document}

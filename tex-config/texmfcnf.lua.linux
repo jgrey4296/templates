@@ -7,12 +7,12 @@
 -- the distributed file (.../texlive/YYYY/texmf-dist/web2c/texmfcnf.lua).
 -- And include *only* your changed values, not a copy of the whole thing!
 
-return { 
+return {
   content = {
     variables = {
-      TEXMFSYSVAR = "$HOME/.cache/texlive/2023/sys",
-      TEXMFHOME = "$HOME/.cache/texlive/2023/home",
-      TEXMFVAR = "$HOME/.cache/texlive/2023/var",
+      TEXMFSYSVAR = "$HOME/_cache_/texlive/2023/sys",
+      TEXMFHOME = "$HOME/_cache_/texlive/2023/home",
+      TEXMFVAR = "$HOME/_cache_/texlive/2023/var",
       TEXMFCONFIG = "$HOME/github/_templates/tex-config",
     },
   },

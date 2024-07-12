@@ -41,15 +41,15 @@ from random import choice, choices
 
 import doot
 import doot.errors
-from doot.structs import DootKey
-from dootle.bibtex import middlewares as dmids
+from doot.structs import DKey
+import bib_middleware as BM
 import bibtexparser as BTP
 from bibtexparser import middlewares as ms
 
 MYBIB                              = "#my_bibtex"
 MAX_TAGS                           = 7
-UPDATE        : Final[DootKey] = DootKey.make("update_")
-FROM_KEY      : Final[DootKey] = DootKey.make("from")
+UPDATE        : Final[DKey] = DKey("update_")
+FROM_KEY      : Final[DKey] = DKey("from")
 
 def format_title(entry):
     fields = entry.fields_dict
@@ -109,7 +109,7 @@ def format_names(entry):
         return " and ".join(result)
 
 def format_for_mastodon(spec, state):
-    data       = FROM_KEY.to_type(spec, state)
+    data       = FROM_KEY.expand(spec, state)
     update_key = UPDATE.redirect(spec)
     assert(isinstance(data, list))
     entry = choice(data)

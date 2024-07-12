@@ -3,8 +3,6 @@
 # key: begin_src
 # group: babel
 # --
-#+NAME: ${1:Example Code}
-#+begin_src ${2:python} :results ${3:output}
-	$4
+#+begin_src ${1:python} :results output
+	$0
 #+end_src
-$0

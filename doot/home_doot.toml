@@ -2,7 +2,7 @@
 [settings.general]
 notify                   = { say-on-exit = false }
 loaders                  = { commands="default", task="default", parser="default"}
-location_check           = { make_missing = true, print_levels={action="WARN", execute="WARN"}}
+location_check           = { make_missing=true }
 
 [settings.tasks]
 # Files or directories where task specs can be loaded from, expanded according to [[locations]] keys
@@ -27,8 +27,8 @@ run = { tracker = "default", runner = "default", reporter= "default", report-lin
 
 [[locations]]
 templates      = {loc="~/.config/.templates", normOnLoad=true}
-temp           = {loc=".cache/doot/temp",  cleanable=true}
-build          = {loc=".cache/doot/build", cleanable=true}
+temp           = {loc="_cache_/doot/temp",  cleanable=true}
+build          = {loc="_cache_/doot/build", cleanable=true}
 logs           = "{temp}/logs"
 template_tasks = "{templates}/doot"
 records        = "{templates}/.maintenance"

@@ -13,7 +13,7 @@
 % note: tlmgr option docfiles 1
 
 TEXMFHOME   = $HOME/Library/texmf
-TEXMFVAR    = $HOME/.cache/tex
+TEXMFVAR    = $HOME/_cache_/tex
 TEXMFOUT    = $TEXMFDOTDIR
 TEXMFCONFIG = $HOME/github/_templates/tex-config
 

@@ -1,36 +1,67 @@
 ## backup.toml<2> -*- mode: conf-toml -*-
 
 [[locations]]
-backup       = "{temp}/backup"
-data_drive   = "/media/john/data"
-backup_drive = "/media/john/big_ex"
-pdf_source   = "{data_drive}/library/pdfs"
-pdf_bkup     = "{backup_drive}/library/pdfs"
-
-# TODO movies
-# TODO images
+data     = "/media/john/data"
+backup_1 = "/media/john/big_ex"
+backup_2 = "/media/john/BackupSD"
 
 [[tasks.backup]]
-name                       = "pdfs"
+name                       = "assets"
 version                    = "0.1"                                                       # <str>
-doc                        = ["Backup pdf library"]
+doc                        = ["Backup assets"]
 ctor                       = "job"             # <type>
-clean_locs                 = ["{pdf_bkup}"]
-print_levels               = {build="WARNING", action="WARNING", execute="INFO"} # <Dict: {'build', 'action', 'sleep', 'head', 'execute'}>
 exts                       = []                                  # <list[str]>
 recursive                  = true                                # <bool>
-roots                      = ["{pdf_source}"]                    # <list[str|pl.Path]>  Places the globber will start
-shadow_root                = "{pdf_bkup}"
+roots                      = ["{data}/assets"]                    # <list[str|pl.Path]>  Places the globber will start
+shadow_roots               = ["{backup_1}/assets", "{backup_2}/assets"]
 actions = [
-        {do="job.walk", update_="files"}, # walk,
-        {do="job.expand", from_="files", update_="tasks", inject={replace=["fpath"]}, base_="sub_actions"},
-        {do="job.inject.path.elements", onto_="tasks",  key_="fpath"},
-        {do="job.inject.shadow", onto_="tasks", key="lpath"},
-        {do="job.queue", from_="tasks"}, # queue
-        {do="job.queue.head", base_="head_actions"},
+    {do="job.walk", update_="files"},
+    {do="job.expand", from_="files", update_="tasks", inject={replace=["fpath"]}, template_="sub_actions"},
+    {do="job.inject.path.elements", onto_="tasks",  key_="fpath"},
+    {do="dootle.utils.multi_shadow:InjectMultiShadow", onto_="tasks", key="rpath"},
+    {do="job.queue", from_="tasks"},
 ]
 sub_actions                = [
-                     {do="dir!", args=["{shadow_path}"] },
-                     {do="backup!", from_="fpath", to="{shadow_path}/{fname}"}
+    {do="dootle.utils.multi_shadow:MultiBackupAction", from_="fpath", pattern="{shadow_path!p}/{fname}"}
 ]
-head_actions               = [{do="doot.actions.postbox:SummarizePostAction", full=false}]
+
+
+[[tasks.backup]]
+name                       = "datasets"
+version                    = "0.1"                                                       # <str>
+doc                        = ["Backup assets"]
+ctor                       = "job"             # <type>
+exts                       = []                                  # <list[str]>
+recursive                  = true                                # <bool>
+roots                      = ["{data}/datasets"]                    # <list[str|pl.Path]>  Places the globber will start
+shadow_roots               = ["{backup_1}/datasets", "{backup_2}/datasets"]
+actions = [
+    {do="job.walk", update_="files"},
+    {do="job.expand", from_="files", update_="tasks", inject={replace=["fpath"]}, template_="sub_actions"},
+    {do="job.inject.path.elements", onto_="tasks",  key_="fpath"},
+    {do="dootle.utils.multi_shadow:InjectMultiShadow", onto_="tasks", key="rpath"},
+    {do="job.queue", from_="tasks"},
+]
+sub_actions                = [
+    {do="dootle.utils.multi_shadow:MultiBackupAction", from_="fpath", pattern="{shadow_path!p}/{fname}"}
+]
+
+[[tasks.backup]]
+name                       = "pictures"
+version                    = "0.1"                                                       # <str>
+doc                        = ["Backup assets"]
+ctor                       = "job"             # <type>
+exts                       = []                                  # <list[str]>
+recursive                  = true                                # <bool>
+roots                      = ["{backup_1}/pictures"]                    # <list[str|pl.Path]>  Places the globber will start
+shadow_roots               = ["{backup_2}/pictures"]
+actions = [
+    {do="job.walk", update_="files"},
+    {do="job.expand", from_="files", update_="tasks", inject={replace=["fpath"]}, template_="sub_actions"},
+    {do="job.inject.path.elements", onto_="tasks",  key_="fpath"},
+    {do="dootle.utils.multi_shadow:InjectMultiShadow", onto_="tasks", key="rpath"},
+    {do="job.queue", from_="tasks"},
+]
+sub_actions                = [
+    {do="dootle.utils.multi_shadow:MultiBackupAction", from_="fpath", pattern="{shadow_path!p}/{fname}"}
+]

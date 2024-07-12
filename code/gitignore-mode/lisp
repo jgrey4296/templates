@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : lisp
+# uuid  : lisp
+# key   : lisp
+# group : gitignore
+# --
+##-- lisp
+ac-comphist.dat
+*.yas-compiled-snippets.el
+*.el~
+##-- end lisp

@@ -1,23 +1,23 @@
 
-       libmamba version : 1.5.1
-     micromamba version : 1.5.1
-           curl version : libcurl/7.88.1 OpenSSL/3.1.2 zlib/1.2.13 zstd/1.5.5 libssh2/1.11.0 nghttp2/1.52.0
-     libarchive version : libarchive 3.6.2 zlib/1.2.13 bz2lib/1.0.8 libzstd/1.5.2
-       envs directories : /home/john/.cache/mamba/envs
-          package cache : /home/john/.cache/mamba/pkgs
+       libmamba version : 1.5.8
+     micromamba version : 1.5.8
+           curl version : libcurl/8.6.0 OpenSSL/3.2.1 zlib/1.2.13 zstd/1.5.5 libssh2/1.11.0 nghttp2/1.58.0
+     libarchive version : libarchive 3.7.2 zlib/1.2.13 bz2lib/1.0.8 libzstd/1.5.5
+       envs directories : /home/john/_cache_/mamba/envs
+          package cache : /home/john/_cache_/mamba/pkgs
             environment : default (active)
-           env location : /home/john/.cache/mamba/envs/default
+           env location : /home/john/_cache_/mamba/envs/default
       user config files : /home/john/.mambarc
  populated config files : /home/john/.mambarc
        virtual packages : __unix=0=0
-                          __linux=6.2.0=0
-                          __glibc=2.37=0
-                          __archspec=1=x86_64
+                          __linux=6.5.0=0
+                          __glibc=2.38=0
+                          __archspec=1=x86_64-v3
                channels : https://conda.anaconda.org/nodefaults/linux-64
                           https://conda.anaconda.org/nodefaults/noarch
                           https://conda.anaconda.org/conda-forge/linux-64
                           https://conda.anaconda.org/conda-forge/noarch
                           https://conda.anaconda.org/bioconda/linux-64
                           https://conda.anaconda.org/bioconda/noarch
-       base environment : /home/john/.cache/mamba
+       base environment : /home/john/_cache_/mamba
                platform : linux-64

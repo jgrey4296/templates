@@ -2,5 +2,6 @@
 # name: function
 # key: fun
 # uuid: fun
+# group: code
 # --
 :function:\`$0\`

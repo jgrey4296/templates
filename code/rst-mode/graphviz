@@ -2,6 +2,7 @@
 # name: graphviz
 # key: graph
 # uuid: graph
+# group: graphics
 # --
 .. graphviz::
 

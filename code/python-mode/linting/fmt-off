@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : fmt-off
+# uuid  : fmt-off
+# key   : fmt-off
+# group : ruff, linting
+# --
+# fmt: off

@@ -1,6 +1,7 @@
 # -*- mode: snippet -*-
 # name: py.autofunction
 # uuid: py.autofunction
+# group: python sphinx
 # --
 .. autofunction:: ${1:function.to.run}
 $0

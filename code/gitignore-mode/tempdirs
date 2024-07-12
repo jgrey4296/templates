@@ -1,0 +1,57 @@
+# -*- mode: snippet -*-
+# name  : tempdirs
+# uuid  : tempdirs
+# key   : tempdirs
+# group : gitignore
+# --
+##-- tempdirs
+**/bin/
+**/obj/
+**/tmp/
+*.[Cc]ache
+.history/
+.localhistory/
+.sass-cache/
+.temp/
+.tye/
+.vs/
+/.cache/
+AppPackages/
+AutoTest.Net/
+Backup*/
+BenchmarkDotNet.Artifacts/
+BundleArtifacts/
+Generated\ Files/
+Generated_Code/
+ServiceFabricBackup/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+[Bb]in/
+[Dd]ebug/
+[Dd]ebugPS/
+[Dd]ebugPublic/
+[Ll]og/
+[Ll]ogs/
+[Oo]bj/
+[Rr]elease/
+[Rr]eleasePS/
+[Rr]eleases/
+[Tt]est[Rr]esult*/
+[Ww][Ii][Nn]32/
+_site/
+artifacts/
+autom4te.cache/
+bld/
+bower_components/
+build/
+dist/
+docs/_generated_*
+ecf/
+node_modules/
+rcf/
+tarballs/
+target/
+test-results/
+x64/
+x86/
+##-- end tempdirs

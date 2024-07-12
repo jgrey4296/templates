@@ -2,7 +2,55 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("dejavu"
+(("screenshots"
+ (filename . "/media/john/data/pictures/Screenshots/")
+ (front-context-string)
+ (rear-context-string . "0K Jun 21 22:32 ")
+ (position . 85)
+ (last-modified 26229 61864 929799 770000))
+("org-capture-last-stored"
+ (filename . "/media/john/data/github/python/doot/.tasks/triage_todos.org")
+ (front-context-string . "** TRIAGE furthe")
+ (rear-context-string . "ys \"\"\"\n   :END:\n")
+ (position . 8137)
+ (last-modified 26239 103 255379 131000))
+("experiments"
+ (filename . "/media/john/data/github/jgrey4296.github.io/orgfiles/agenda/misc_todos.org")
+ (front-context-string . "periments\n** [∅]")
+ (rear-context-string . "intenance]]\n* Ex")
+ (position . 242)
+ (last-modified 26205 17652 387603 352000))
+("agenda"
+ (filename . "/media/john/data/github/jgrey4296.github.io/orgfiles/agenda/")
+ (front-context-string . "python_todos.org")
+ (rear-context-string . "3K May 31 20:43 ")
+ (position . 762)
+ (last-modified 26205 16893 331642 541000))
+("orgd"
+ (filename . "/media/john/data/github/jgrey4296.github.io/orgfiles/")
+ (front-context-string . "notes.org\n  -rw-")
+ (rear-context-string . "50 May 31 19:39 ")
+ (position . 682)
+ (last-modified 26203 42410 199267 722000))
+("homepage_todos.org"
+ (filename . "/media/john/data/github/jgrey4296.github.io/orgfiles/todos/")
+ (front-context-string . "todo_captures.or")
+ (rear-context-string . "42 May 31 19:26 ")
+ (position . 635)
+ (last-modified 26202 6189 333192 109000))
+("reference"
+ (filename . "/media/john/data/github/jgrey4296.github.io/wiki_/reference/")
+ (front-context-string . "ai.org\n  -rw-rw-")
+ (rear-context-string . "8K Feb 20 05:10 ")
+ (position . 153)
+ (last-modified 26196 57737 229320 527000))
+("diary"
+ (filename . "/media/john/data/github/jgrey4296.github.io/orgfiles/main.diary")
+ (front-context-string)
+ (rear-context-string . ", 2024 TODO blah")
+ (position . 23)
+ (last-modified 26194 54793 830580 867000))
+("dejavu"
  (filename . "/media/john/data/github/python/jgdv/")
  (front-context-string . "doot.toml\n  -rw-")
  (rear-context-string . "3K Apr 15 16:05 ")
@@ -27,17 +75,17 @@
  (position . 842)
  (last-modified 26127 25075 773456 359000))
 ("python_src"
- (filename . "/media/john/data/github/_libs/python/cpython/Lib/")
+ (filename . "/media/john/data/github/__libs/python/cpython/")
  (front-context-string . "string.py\n  -rw-")
  (rear-context-string . "2K Dec  7 16:43 ")
  (position . 7564)
- (last-modified 26106 17822 656893 327000))
+ (last-modified 26220 62747 430238 203000))
 ("org-refile-last-stored"
- (filename . "/media/john/data/github/_templates/wiki_/document_manipulation.org")
- (front-context-string . "** tesseract\nhtt")
- (rear-context-string . "t a time\n:END:\n\n")
- (position . 8054)
- (last-modified 26131 45612 948153 983000))
+ (filename . "/media/john/data/github/jgrey4296.github.io/wiki_/reference/env_management.org")
+ (front-context-string . "** Environment M")
+ (rear-context-string . "nce\n\n\n\n\n* Links\n")
+ (position . 58)
+ (last-modified 26220 59268 355148 490000))
 ("packages"
  (filename . "/media/john/data/github/_templates/packages/")
  (front-context-string . "python.org\n  -rw")
@@ -50,12 +98,6 @@
  (rear-context-string . "ermsarchive.org/")
  (position . 1283)
  (last-modified 26070 20963 867819 381000))
-("script notes"
- (filename . "/media/john/data/github/_templates/wiki_/")
- (front-context-string . "tool-config\n  -r")
- (rear-context-string . "0K Nov 27 13:59 ")
- (position . 244)
- (last-modified 26060 60396 787104 141000))
 ("corana"
  (filename . "/media/john/data/github/python/corana/")
  (front-context-string . ".tasks\n  drwxrwx")
@@ -114,7 +156,7 @@
 ("templates"
  (filename . "/media/john/data/github/_templates/"))
 ("mamba"
- (filename . "~/.cache/mamba/envs/"))
+ (filename . "~/_cache_/mamba/envs/"))
 ("jgc"
  (filename . "/media/john/data/github/_config/"))
 ("fonts"
@@ -127,7 +169,7 @@
 ("config"
  (filename . "~/.config/"))
 ("cache"
- (filename . "~/.cache/"))
+ (filename . "~/_cache_/"))
 ("lisp"
  (filename . "~/github/lisp/"))
 ("jvm_instances"
@@ -141,7 +183,7 @@
 ("dootle"
  (filename . "~/github/python/dootle/"))
 ("conda"
- (filename . "~/.cache/mamba/"))
+ (filename . "~/_cache_/mamba/"))
 ("doot"
  (filename . "~/github/python/doot/"))
 ("video"

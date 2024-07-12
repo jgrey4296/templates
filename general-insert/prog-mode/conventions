@@ -3,10 +3,16 @@ Protocols  {}_p.   # Functional Spec.
 Data       {}_d.   # Structural Spec.
 Interfaces {}_i.   # Functional+Structural Spec.
 
+Structs    {}_s.   # Structs.
+Specs      {}_c.   # Declarative Specifications of runtime behaviour.
+
 Enums      {}_e.   #
-Mixins     {}_m.   # {}_m Separate Implementations.
+Flags      {}_f.   #
+Mixins     {}_m.   # Separate Implementations.
 
 Hooks      {}_h.   #
+
+Loggers    {}_l.   #
 
 build()            # Creates the type its attached to.            House.build => House
 make()             # Makes whatever the type is responsible for.  Oven.make   => Bread

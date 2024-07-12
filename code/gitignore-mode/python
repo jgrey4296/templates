@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name  : python
+# uuid  : python
+# key   : python
+# group : gitignore
+# --
+##-- python
+*.egg-info
+*.mypy_cache
+*.pyc
+__pycache__/
+flycheck_*
+*.egg
+##-- end python

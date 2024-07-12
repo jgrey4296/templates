@@ -1,12 +1,30 @@
 ;;-*-coding: utf-8;-*-
+(define-abbrev-table 'conf-toml-mode-abbrev-table
+  '(
+    ("False" "false" nil :count 4)
+    ("True" "true" nil :count 1)
+   ))
+
 (define-abbrev-table 'fundamental-mode-abbrev-table
   '(
     ("nd" "ndarray" nil :count 1)
    ))
 
+(define-abbrev-table 'global-abbrev-table
+  '(
+    ("constriants" "constraints" nil :count 3)
+    ("lamdba" "lambda" nil :count 2)
+    ("metdata" "metadata" nil :count 1)
+    ("moduile" "module" nil :count 3)
+    ("moduiles" "modules" nil :count 2)
+    ("modulies" "modules" nil :count 4)
+    ("pacakge" "package" nil :count 1)
+    ("realtion" "relation" nil :count 1)
+   ))
+
 (define-abbrev-table 'org-mode-abbrev-table
   '(
-    ("todo" "TODO" nil :count 95)
+    ("todo" "TODO" nil :count 96)
    ))
 
 (define-abbrev-table 'prog-mode-abbrev-table
@@ -16,9 +34,12 @@
 
 (define-abbrev-table 'python-mode-abbrev-table
   '(
-    ("dootkey" "DootKey" nil :count 165)
+    ("Dkey" "DKey" nil :count 5)
+    ("dootkey" "DootKey" nil :count 192)
+    ("false" "False" nil :count 3)
+    ("flase" "False" nil :count 0)
     ("isins" "isinstance(" nil :count 1)
     ("kwarp" "kwrap" nil :count 61)
     ("lamdba" "lambda" nil :count 2)
+    ("true" "True" nil :count 1)
    ))
-

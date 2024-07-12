@@ -1,0 +1,16 @@
+## __test -*- mode: elixir -*-
+# A Test Module
+
+defmodule TestModule do
+  use ExUnit.Case, # async: true
+
+  setup do
+
+
+  end
+
+  test "Example", %{} do
+    assert 1 == 1
+
+  end
+end

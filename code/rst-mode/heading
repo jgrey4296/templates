@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : heading
+# uuid  : heading
+# key   : heading
+# group : sphinx
+# --
+${1:$(s-replace-regexp "." "=" yas-text)}
+${1:Page Title}
+${1:$(s-replace-regexp "." "=" yas-text)}
+
+$0

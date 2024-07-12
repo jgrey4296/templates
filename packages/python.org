@@ -1,5 +1,12 @@
 #+TITLE: Python Packages Reference
+#+STARTUP: packages
 https://status.python.org/
+
+* Triage
+
+** gloe :flow:
+https://github.com/ideos/gloe
+https://gloe.ideos.com.br/
 
 * Main
 https://www.structlog.org/en/stable/
@@ -81,14 +88,8 @@ python -m trace --ignore-module={module,module,module}
 python -m trace --ignore-dir={dir,dir,dir}
 
 # trace,  but filter out stdlib stuff
-python -m trace --ignore-dir=/home/john/.cache/mamba/envs/default/lib/python3.12/ --trace ?
+python -m trace --ignore-dir=/home/john/_cache_/mamba/envs/default/lib/python3.12/ --trace ?
 #+end_src
-
-
-
-
-
-
 
 *** traceback
 *** tracemalloc                                 :profiling:
@@ -98,6 +99,7 @@ python -m trace --ignore-dir=/home/john/.cache/mamba/envs/default/lib/python3.12
 *** uuid
 *** warnings
 ** general
+*** format-spec
 ** rest
 *** antigravity
 *** base64
@@ -401,6 +403,9 @@ https://github.com/ahartlba/decorator_validation
 https://github.com/facebookresearch/hydra
 *** structlog
 https://www.structlog.org/en/stable/
+*** tach  :dependency:
+https://github.com/gauge-sh/tach
+https://gauge-sh.github.io/tach/
 ** Argumentation
 
 *** ALIAS
@@ -417,18 +422,20 @@ https://arrow.apache.org/docs/python/getstarted.html
 *** arrow-py                                    :datetime:
 https://github.com/arrow-py/arrow
 
-*** pendulum                                    :datetime:
-https://github.com/sdispater/pendulum
 *** attrs                                       :boilerplate:
 https://www.attrs.org/en/stable/
-*** bidict
-https://github.com/jab/bidict
 *** benedict
 https://github.com/fabiocaccamo/python-benedict.git
+*** bidict
+https://github.com/jab/bidict
 *** box                                         :doc_notation:
 https://github.com/cdgriffith/Box
-*** dotteddict                                  :dot_notation:
-https://github.com/carlosescri/DottedDict
+*** buku                                        :bookmarks:
+https://github.com/jarun/Buku
+*** cachetools
+https://github.com/tkem/cachetools/
+*** cachy                                       :caching:
+https://cachy.readthedocs.io/en/latest/
 *** databases
 **** sqlite
 **** postgresql
@@ -438,8 +445,10 @@ https://alembic.sqlalchemy.org/en/latest/tutorial.html
 https://docs.sqlalchemy.org/en/20/
 **** pony
 https://github.com/ponyorm/pony/
-*** marshmallow                                :serialisation:
-https://marshmallow.readthedocs.io/en/stable/
+*** datasette                                   :__come_back_to:
+https://github.com/simonw/datasette
+*** dotteddict                                  :dot_notation:
+https://github.com/carlosescri/DottedDict
 *** excel
 **** openpyxl
 **** pyexcel
@@ -447,6 +456,10 @@ https://github.com/pyexcel/pyexcel
 **** pyexcel-io
 **** pylightxl
 https://github.com/PydPiper/pylightxl
+*** finite state machine
+https://github.com/jaypantone/FiniteStateMachines
+*** furl                                        :urls:
+https://github.com/gruns/furl
 *** graphs
 **** graphviz
 https://graphviz.readthedocs.io/en/stable/
@@ -482,6 +495,8 @@ https://github.com/JNRowe/pyisbn
 https://python-jsonschema.readthedocs.io/en/stable/
 **** jsonlines
 https://jsonlines.readthedocs.io/en/latest/
+*** marshmallow                                :serialisation:
+https://marshmallow.readthedocs.io/en/stable/
 *** movis                                       :movies:
 https://github.com/rezoo/movis
 *** numpy                                       :numerics:
@@ -494,10 +509,16 @@ https://github.com/pydata/numexpr
 https://pandas.pydata.org/docs/
 *** path                                        :file_path:
 https://github.com/jaraco/path
+*** pendulum                                    :datetime:
+https://github.com/sdispater/pendulum
 *** polars                                      :data_analysis:
 https://docs.pola.rs/py-polars/html/reference/
-*** datasette                                   :__come_back_to:
-https://github.com/simonw/datasette
+*** polyfactory
+https://polyfactory.litestar.dev/latest/getting-started.html
+*** purl                                        :urls:
+https://github.com/codeinthehole/purl
+*** pydantic
+https://docs.pydantic.dev/2.7/
 *** pympler
 https://github.com/pympler/pympler
 *** pyqtree                                     :spatial:
@@ -513,17 +534,8 @@ https://github.com/pytransitions/transitions
 https://github.com/hukkin/tomli-w
 *** urllib3                                     :urls:
 https://urllib3.readthedocs.io/en/stable/index.html
-*** purl                                        :urls:
-https://github.com/codeinthehole/purl
-*** furl                                        :urls:
-https://github.com/gruns/furl
-*** yaml
-**** pyaml
-https://pyyaml.org/
 *** vectorfields
 https://github.com/OlafHaag/VectorFields
-*** buku                                        :bookmarks:
-https://github.com/jarun/Buku
 *** XML
 **** generateDS
 http://www.davekuhlman.org/generateDS.html
@@ -531,6 +543,8 @@ http://www.davekuhlman.org/generateDS.html
 https://pyxb.sourceforge.net/
 **** scrapy                                    :twisted:
 https://github.com/scrapy/scrapy
+**** crawlee
+https://crawlee.dev/docs/quick-start
 **** xmlschema
 https://xmlschema.readthedocs.io/en/latest/
 **** xsdata
@@ -538,10 +552,12 @@ https://xsdata.readthedocs.io/en/latest/
 ***** xsdata-plantuml
 https://github.com/tefra/xsdata-plantuml
 
-*** cachetools
-https://github.com/tkem/cachetools/
-*** cachy                                       :caching:
-https://cachy.readthedocs.io/en/latest/
+*** yaml
+**** pyaml
+https://pyyaml.org/
+*** statemachine
+https://github.com/fgmacedo/python-statemachine
+https://python-statemachine.readthedocs.io/en/latest/
 ** Diagrams
 *** diagrams                                    :system_diagrams:
 https://github.com/mingrammer/diagrams
@@ -580,6 +596,11 @@ https://github.com/rbanffy/pip-chill
 https://github.com/bndr/pipreqs
 **** pip-review                                   :pip:
 https://github.com/jgonggrijp/pip-review
+*** pip-x
+https://github.com/pypa/pipx
+https://pipx.pypa.io/stable/
+
+cli python apps in isolated envs
 *** poetry
 https://github.com/python-poetry/poetry
 *** build
@@ -610,6 +631,8 @@ https://github.com/pyinstaller/pyinstaller
 https://github.com/linkedin/shiv
 *** conda
 https://github.com/conda/conda/
+*** packaging
+https://packaging.pypa.io/en/stable/
 ** Docs
 *** markdown
 **** commonmark                                :markdown:
@@ -682,6 +705,9 @@ pip install pygobject pycairo
 on linux:
 apt install pkg-config libcairo2-dev libgirepository1.0-dev
 pip install pygobject pycairo
+
+*** pygobject / gi
+https://gnome.pages.gitlab.gnome.org/pygobject/index.html
 **** hyphae                                    :art:cairo:inconvergent:
 https://github.com/inconvergent/hyphae/blob/master/hyphae.py
 *** tqdm                                        :progress_bar:
@@ -706,8 +732,18 @@ https://github.com/emcconville/wand
 *** moderngl                                    :modern_opengl:
 https://moderngl.readthedocs.io/en/5.8.2/
 ** Linting
+
 *** autopep8                                    :formatting:
 https://github.com/hhatto/autopep8
+
+*** pyastgrep
+https://lukeplant.me.uk/blog/posts/pyastgrep-and-custom-linting/
+https://github.com/spookylukey/pyastgrep/
+https://semgrep.dev/docs/writing-rules/rule-ideas
+
+*** astpath
+https://github.com/hchasestevens/astpath
+
 *** black                                       :formatting:
 https://github.com/psf/black
 *** flake8
@@ -716,7 +752,6 @@ https://github.com/psf/black
 *** pycodestyle
 *** pycycle                                     :imports:
 https://github.com/bndr/pycycle
-*** pydantic
 *** pyflakes
 *** pylint
 *** refactoring
@@ -946,6 +981,7 @@ https://chrthomsen.github.io/pygrametl/doc/quickstart/beginner.html
 https://github.com/SCons/scons
 *** snakemake
 https://github.com/snakemake/snakemake
+https://github.com/leipzig/SandwichesWithSnakemake
 *** vistrails
 https://www.vistrails.org/usersguide/v2.2/html/
 ** Testing
@@ -1102,6 +1138,15 @@ https://github.com/fonnesbeck/statistical-analysis-python-tutorial
 https://github.com/stas-semeniuta/textvae
 ** weed                                          :data_analysis:
 https://github.com/amitkaps/weed
+** http.server
+#+NAME: http server one liner
+#+begin_src bash :results output
+python -m http.server 8000
+#+end_src
+
+#+RESULTS: http server one liner
+
+
 * Environments
 ** Core
 - beautifulsoup4

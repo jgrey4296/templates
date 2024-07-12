@@ -1,0 +1,18 @@
+#+TITLE: Repo todos
+#+STARTUP: agenda
+
+* repo maintenance
+** workflows
+** doot
+*** [∅] lint
+*** [∅] test
+*** [∅] collect todos
+*** [∅] maintain dependencies
+*** DONE bumpver
+*** DONE deploy
+*** DONE build pelican
+*** DONE validate bibs
+*** DONE validate commit msg
+*** [∅] sphinx rebuild
+*** [∅] git cliff changelog gen
+* Links

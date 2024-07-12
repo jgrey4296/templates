@@ -1,0 +1,72 @@
+# -*- mode: snippet -*-
+# name  : generic
+# uuid  : generic
+# key   : generic
+# group :
+# --
+class MyObj[T]():
+    """ A Generic class which passes typing args to the instance """
+
+    class MyGenAlias(GenericAlias):
+
+        def __call__(self, *args, **kwargs):
+            result = self.__origin__(*args, typeargs=self.__args__, **kwargs)
+            try:
+                result.__orig_class__ = self
+            except Exception:
+                pass
+            return result
+
+    def __new__(cls, *args, **kwargs):
+        """ implicit staticmethod """
+        logging.warning("MyObj new: %s, %s %s", cls, args, kwargs)
+        obj = super().__new__(cls)
+        # If the metaclass doesn't call __init__, have it done here:
+        # obj.__init__(*args, **kwargs)
+        return obj
+
+    def __init__(self, vals=None, typeargs=None, **kwargs):
+        """ note the `typevars` kwarg """
+        logging.warning("MyObj init: %s %s", vals, kwargs)
+        super().__init__(**kwargs)
+        self._vals = vals or []
+        match typeargs:
+            case None:
+                self._targs = []
+            case [*xs] if len(xs) == 1:
+                self._targs = [x for x in xs]
+            case [*xs]:
+                self._targs = [y for x in xs for y in x]
+
+    def __repr__(self):
+        targs = []
+        for x in self._targs:
+            match x:
+                case type():
+                    targs.append(x.__name__)
+                case _:
+                    targs.append(str(x))
+
+        targs = ",".join(targs)
+        return f"<{self.__class__.__name__}[{targs}]>"
+
+    def __init_subclass__(cls, **kwargs):
+        """ implicit classmethod. runs at subclss definition time
+        kwargs are passed from the class {} (..., x=y): dec.
+        metaclass kwarg is never passed to this
+        """
+        logging.warning("MyObj Subclassing: %s %s", cls, kwargs)
+        super().__init_subclass__()
+
+    def __class_getitem__(cls, *args) -> GenericAlias:
+        """ implicit classmethod
+        inherit from typing.Generic if necessary
+        """
+        logging.warning("MyObj class getitem: %s %s", cls, args)
+        # return GenericAlias(cls, args)
+        result = super().__class_getitem__(args)
+        return cls.MyGenAlias(result.__origin__, result.__args__)
+
+    def __call__(self, *args, **kwargs):
+        logging.warning("MyObj Call: %s %s", args, kwargs)
+        return super().__call__(*args, **kwargs)

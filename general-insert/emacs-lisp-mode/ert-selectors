@@ -1,0 +1,9 @@
+ERT selectors
+nil         #
+t           #
+:new        #
+:failed     #
+:expected   #
+:unexpected #
+{string}    # regex on names
+{symbol}    #

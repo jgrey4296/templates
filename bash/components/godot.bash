@@ -1,7 +1,7 @@
 
 jgdebug "Setting Up Godot"
 
-case "$OSTYPE" in 
+case "$OSTYPE" in
     darwin*)
         PATH=/Applications/Godot.app/Contents/MacOS:$PATH
         ;;
@@ -21,7 +21,7 @@ function gdscript () {
             osascript -e "tell application \"iTerm\"" -e "activate" -e "end tell"
             ;;
         linux*)
-            godot-4 --headlead -s $@
+            godot-4 --headless -s $@
             ;;
     esac
 }

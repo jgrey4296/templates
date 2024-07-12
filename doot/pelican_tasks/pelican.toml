@@ -1,0 +1,23 @@
+
+[[tasks.pelican]]
+name                 = "build"
+version              = "0.1"                                     # <str>
+ctor                 = "task"                                    # <type>
+doc                  = ["Run pelican"]                           # <list[str]>
+depends_on           = ["file:>pelican.toml"]                   # <list[DootTaskArtifact]>
+actions              = [
+                     { do="touch", args=["pelican.py"] },
+                     { do="shell", args=["pelican", "."] },
+                     { do="delete!", args=["pelican.py"] },
+]
+
+[[tasks.pelican]]
+name                 = "listen"
+version              = "0.1"                                     # <str>
+ctor                 = "task"                                    # <type>
+doc                  = ["Run pelican"]                           # <list[str]>
+depends_on           = ["file:>pelican.toml"]                   # <list[DootTaskArtifact]>
+actions              = [
+                     { do="touch", args=["pelicanconf.py"] },
+                     { do="shell", args=["pelican", "--listen", "--autoreload", "."] }
+]

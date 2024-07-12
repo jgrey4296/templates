@@ -2,6 +2,7 @@
 # name: autoclass
 # key: auto
 # uuid: auto
+# group: code
 # --
 .. autoclass:: $0
    ${1::members: ${2:members}}

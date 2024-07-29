@@ -8,6 +8,16 @@ https://status.python.org/
 https://github.com/ideos/gloe
 https://gloe.ideos.com.br/
 
+** flit   :buildtool:
+https://flit.pypa.io/en/stable/
+
+** twine           :buildtool:
+https://twine.readthedocs.io/en/stable/
+
+
+** pyoxidizer   :buildtool:
+https://pyoxidizer.readthedocs.io/en/stable/index.html
+
 * Main
 https://www.structlog.org/en/stable/
 https://github.com/PrefectHQ/prefect
@@ -621,6 +631,8 @@ https://github.com/mbarkhau/bumpver
 https://github.com/python-semantic-release/python-semantic-release
 *** semantic-version                              :versioning:
 https://github.com/rbarrois/python-semanticversion
+*** incremental                                 :versioning:
+https://pypi.org/project/incremental/
 *** py2app
 https://github.com/ronaldoussoren/py2app
 *** py2exe
@@ -911,7 +923,6 @@ coverage report
 coverage html -d {target}
 #+end_src
 
-**** pytest
 
 *** pyelftools                                  :DWARF:ELF:debugging:
 https://github.com/eliben/pyelftools

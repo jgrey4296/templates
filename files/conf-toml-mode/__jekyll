@@ -1,3 +1,5 @@
+## __jekyll -*- mode: Toml -*-
+# https://jekyllrb.com/docs/configuration/
 # Where things are
 source               =  "."
 destination          =  "./_site"

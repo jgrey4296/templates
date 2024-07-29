@@ -1,3 +1,4 @@
+## __cargo -*- mode: Toml -*-
 # https://doc.rust-lang.org/cargo/reference/manifest.html
 # On nightly:
 # cargo-features = ["profile-rustflags"]

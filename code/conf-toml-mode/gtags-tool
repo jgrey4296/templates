@@ -2,7 +2,7 @@
 # name  : gtags-tool
 # uuid  : gtags-tool
 # key   : gtags-tool
-# group : infra
+# group : infra python pyproject
 # --
 ##-- gtags
 [tool.gtags]

@@ -1,5 +1,6 @@
 # -*- mode:conf-toml; -*-
-
+# https://docs.getpelican.com/en/latest/index.html
+#
 [pelican]
 DEFAULT_METADATA       = {}
 DEFAULT_LANG           = 'en'

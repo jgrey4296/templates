@@ -2,7 +2,7 @@
 # name  : cliff
 # uuid  : cliff
 # key   : cliff
-# group : rust
+# group : rust changelog
 # --
 ##-- git-cliff
 [package.metadata.git-cliff.changelog]

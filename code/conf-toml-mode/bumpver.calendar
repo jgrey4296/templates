@@ -2,7 +2,7 @@
 # name  : bumpver.calendar
 # uuid  : bumpver.calendar
 # key   : bumpver.calendar
-# group : infra
+# group : infra python pyproject
 # --
 [tool.bumpver]
 # https://github.com/mbarkhau/bumpver

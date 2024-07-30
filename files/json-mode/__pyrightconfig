@@ -12,11 +12,11 @@
     ".pytest_cache"
   ],
   "extraPaths": [
-    "/Volumes/documents/github/python/tomlguard/"
+    // "/Volumes/documents/github/python/tomlguard/"
   ],
   "ignore": [],
   "include": [
-    "doot"
+    // "doot"
   ],
   "pythonPlatform": "Darwin",
   "pythonVersion": "3.11",
@@ -89,6 +89,6 @@
   "strictParameterNoneValue": true,
   "strictSetInference": false,
   "typeCheckingMode": "basic",
-  "venv": "doot-dev",
+  // "venv": "doot-dev",
   "verboseOutput": false
 }

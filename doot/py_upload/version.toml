@@ -56,7 +56,7 @@ setup        = [
     # TODO regex test log_text for /[bump: version \d+.\d+.\d+ -> \d+.\d+.\d+/
 ]
 actions = [
-    { do="shell", args=["pipreqs", "--force"], env_="env"},
+    {do="shell", args=["pipreqs", "--force"], env_="env"},
     {do="shell", args=["git", "add", "{requirements!p}"]},
     {do="shell", args=["git", "commit", "--amend", "--no-edit"]},
 ]

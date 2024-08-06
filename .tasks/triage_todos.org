@@ -14,3 +14,9 @@
    :context:
         <2024-06-10 Mon>     { do="shell", args=["sphinx-build", "-w", "{logs}/sphinx.log", "-b", "{doc_builder}", "{doc_src}", "{doc_out}"], },
    :END:
+** TRIAGE dootle shell action for getting from gpg
+#+begin_src toml :results output
+{ do="doot.actions.shell:DootShellBake", args=["gpg", "-q", "-d", "{dist_key!p}"], update_="gpg", env=false},
+{ do="doot.actions.shell:DootShellBake", args=["sed", "-n", "-E", "{match_re}"], in_="gpg", update_="token", env=false},
+{ do="doot.actions.shell:DootShellBakedRun",  in_="token", update_="token_str"},
+#+end_src

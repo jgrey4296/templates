@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name  : profile.release
 # uuid  : profile.release
-# group : rust
+# group : rust cargo
 # --
 [profile.release]
 opt-level        = 3

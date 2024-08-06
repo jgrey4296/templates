@@ -5,8 +5,8 @@
      libarchive version : libarchive 3.7.2 zlib/1.2.13 bz2lib/1.0.8 libzstd/1.5.5
        envs directories : /home/john/_cache_/mamba/envs
           package cache : /home/john/_cache_/mamba/pkgs
-            environment : default (active)
-           env location : /home/john/_cache_/mamba/envs/default
+            environment : doot-dev (active)
+           env location : /home/john/_cache_/mamba/envs/doot-dev
       user config files : /home/john/.mambarc
  populated config files : /home/john/.mambarc
        virtual packages : __unix=0=0

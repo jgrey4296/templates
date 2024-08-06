@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name  : luafont
+# uuid  : luafont
+# key   : luafont
+# group : fonts lualatex
+# --
+% from https://tex.stackexchange.com/questions/103704
+  \setmainfont[
+    Path           = /home/john/.local/share/fonts/
+    Extension      = .ttf,
+    Ligatures      = TeX
+]{Embossed Germanica}

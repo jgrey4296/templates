@@ -2,12 +2,18 @@
 # name  : pytest-tool
 # uuid  : pytest-tool
 # key   : pytest-tool
-# group : python
+# group : python pyproject
 # --
 ##-- pytest
 [tool.pytest.ini_options]
-log_cli       = false
-log_level     = "DEBUG"
-log_cli_level = "DEBUG"
+# addopts          = "--cov="
+cache_dir       = ".temp/pytest_cache"
+log_file        = ".temp/logs/pytest.log"
 
+log_cli         = false
+log_level       = "DEBUG"
+log_cli_level   = "INFO"
+log_format      = "%(levelname)s %(name)s : %(message)s"
+log_file_level  = "DEBUG"
+log_file_format = "%(asctime)s %(levelname)s %(name)s : %(message)s"
 ##-- end pytest

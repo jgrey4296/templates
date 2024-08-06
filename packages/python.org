@@ -8,6 +8,16 @@ https://status.python.org/
 https://github.com/ideos/gloe
 https://gloe.ideos.com.br/
 
+** flit   :buildtool:
+https://flit.pypa.io/en/stable/
+
+** twine           :buildtool:
+https://twine.readthedocs.io/en/stable/
+
+
+** pyoxidizer   :buildtool:
+https://pyoxidizer.readthedocs.io/en/stable/index.html
+
 * Main
 https://www.structlog.org/en/stable/
 https://github.com/PrefectHQ/prefect
@@ -558,6 +568,47 @@ https://pyyaml.org/
 *** statemachine
 https://github.com/fgmacedo/python-statemachine
 https://python-statemachine.readthedocs.io/en/latest/
+
+Building:
+#+begin_src python :results output
+from statemachine import StateMachine, State
+
+class Machine(StateMachine):
+    # Define states
+    first  = State(initital=True)
+    second = State()
+    third  = State()
+    fourth = State(final=True)
+
+    # Define events/transitions, activate with "send"
+    cycle = (first.to(second) | second.to(third) | third.to(first))
+
+    # Define enter/exit handlers for states:
+    def on_enter_first(self):
+        pass
+
+    # And before/after/on event handlers
+    def before_cycle(self):
+        pass
+#+end_src
+
+Using:
+#+begin_src python :results output
+mac = Machine()
+mac.send("cycle", an_arg="test")
+mac.cycle()
+mac.current_state
+mac.second.is_active
+mac.events
+Machine.first
+
+# bad transitions throw:
+statemachine.exceptions.TransitionNotAllowed
+
+#+end_src
+
+
+
 ** Diagrams
 *** diagrams                                    :system_diagrams:
 https://github.com/mingrammer/diagrams
@@ -621,6 +672,8 @@ https://github.com/mbarkhau/bumpver
 https://github.com/python-semantic-release/python-semantic-release
 *** semantic-version                              :versioning:
 https://github.com/rbarrois/python-semanticversion
+*** incremental                                 :versioning:
+https://pypi.org/project/incremental/
 *** py2app
 https://github.com/ronaldoussoren/py2app
 *** py2exe
@@ -911,7 +964,6 @@ coverage report
 coverage html -d {target}
 #+end_src
 
-**** pytest
 
 *** pyelftools                                  :DWARF:ELF:debugging:
 https://github.com/eliben/pyelftools

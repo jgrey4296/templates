@@ -6,7 +6,7 @@
 # --
 (ert-deftest $1-test-$2 ()
   "Tests $3"
-  (should ${0:(equal 1 1)})
+  (should ${0:(equal 0 1)})
   ;;(should-error nil)
   ;;(should-not (1/0) :type 'arith-error)
 )

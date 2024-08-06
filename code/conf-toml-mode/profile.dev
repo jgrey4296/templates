@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name  : profile.dev
 # uuid  : profile.dev
-# group : rust
+# group : rust cargo
 # --
 [profile.dev]
 opt-level        = 0

@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
-# name: mypyrc
-# uuid: mypyrc
-# group: python
+# name: mypy-tool
+# uuid: mypy-tool
+# group: python pyproject
 # --
 ##-- mypy
 [tool.mypy]
@@ -9,12 +9,13 @@
 python_version      = "3.7"
 warn_return_any     = true
 warn_unused_configs = true
-exclude = []
+exclude = [] # regexs to ignore
+cache_dir = ".temp/mypy_cache"
 
 # Per-module options:
-[[tool.mypy.overrides]]
-module                = "blah"
-disallow_untyped_defs = true
+# [[tool.mypy.overrides]]
+# module                = "blah"
+# disallow_untyped_defs = true
 
 
 ##-- end mypy

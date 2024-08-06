@@ -2,7 +2,7 @@
 # name  : cliff
 # uuid  : cliff
 # key   : cliff
-# group : python
+# group : python pyproject changelog
 # --
 ##-- git-cliff
 [tool.git-cliff.changelog]

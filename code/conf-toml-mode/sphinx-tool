@@ -2,7 +2,7 @@
 # name  : sphinx.tool
 # uuid  : sphinx.tool
 # key   : sphinx.tool
-# group : infra
+# group : infra python pyproject
 # --
 ##-- sphinx
 # Use in doit

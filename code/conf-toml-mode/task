@@ -2,7 +2,7 @@
 # name  : task
 # uuid  : task
 # key   : task
-# group :
+# group : doot
 # --
 [[tasks.${1:group}]]
 name                 = "${2:name}"

@@ -42,6 +42,26 @@ https://github.com/ninrod/exato
 ** elpaca
 https://github.com/progfolio/elpaca
 
+
+** python-coverage
+https://github.com/wbolster/emacs-python-coverage
+
+** buttercup                                     :testing:
+https://github.com/jorgenschaefer/emacs-buttercup
+
+* python envs
+** pythonic
+https://github.com/pythonic-emacs/pythonic
+*** conda
+https://github.com/necaris/conda.el
+*** micromamba
+https://github.com/SqrtMinusOne/micromamba.el
+** pipenv
+https://github.com/pwalsh/pipenv.el
+** pyvenv
+https://github.com/jorgenschaefer/pyvenv
+** poetry
+https://github.com/cybniv/poetry.el
 * Links
 
 https://elpa.gnu.org/packages/cobol-mode.html

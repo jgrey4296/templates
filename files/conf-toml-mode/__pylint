@@ -1,4 +1,4 @@
-## pylint.toml -*- mode: conf-toml -*-
+## pylint.toml -*- mode: Toml -*-
 # https://pylint.readthedocs.io/en/latest/
 
 [tool.pylint.main]

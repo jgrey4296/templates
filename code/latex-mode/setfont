@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : setfont
+# uuid  : setfont
+# key   : setfont
+# group : font lualatex
+# --
+\newcommand{\$1}{\setmainfont{${2:NimbusRoman}}}$0

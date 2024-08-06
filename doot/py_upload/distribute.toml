@@ -8,10 +8,15 @@ version                = "0.1"                          # <str>
 ctor                   = "task"                         # <str>
 env_name               = "distributor"
 inject                 = ["env_name", "match_re"]                   # <list[str]>
-actions                = [
+# depends_on             = ["test::pytest", "requirements::pip", version::bump", "version::changelog", "docs::build"]
+setup = [
     {do="mamba.env", env_="env_name", update_="env"},
+]
+actions = [
     # Build
     {do="shell", args=["python", "-m", "build", "--outdir", "{build!p}", "."], env_="env"},
+]
+cleanup = [
     # Cleanup
     {do="delete!", args=["./{src}.egg-info"], lax=true, recursive=true},
 ]

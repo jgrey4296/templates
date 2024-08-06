@@ -5,6 +5,11 @@
     ("True" "true" nil :count 1)
    ))
 
+(define-abbrev-table 'emacs-lisp-mode-abbrev-table
+  '(
+    ("modulie" "module" nil :count 2)
+   ))
+
 (define-abbrev-table 'fundamental-mode-abbrev-table
   '(
     ("nd" "ndarray" nil :count 1)

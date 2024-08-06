@@ -1,0 +1,56 @@
+## coverage -*- mode: Toml -*-
+# https://coverage.readthedocs.io/en/latest/config.html
+# usually .coveragerc
+# envvar COVERAGE_RCFILE
+
+[run]
+branch           = true # measure branch coverage
+# command_line   = "..."
+cover_pylib      = false # measure stdlib
+data_file        = ".coverage" # cache
+disable_warnings = []
+source           = [] # packages or dirs to measure
+include          = [] # files to measure. ignored if source is set.
+omit             = [] # files to not measure
+relative_files   = false #
+timid            = false # simpler but slower tracing
+
+[paths] # specify equivalent paths
+source = []
+
+[report]
+# Regexes for lines to exclude from consideration
+exclude_also = [
+    # Don't complain about missing debug-only code:
+    "def __repr__",
+    "if self\\.debug",
+
+    # Don't complain if tests don't hit defensive assertion code:
+    "raise AssertionError",
+    "raise NotImplementedError",
+
+    # Don't complain if non-runnable code isn't run:
+    "if 0:",
+    "if __name__ == .__main__.:",
+
+    # Don't complain about abstract methods, they aren't run:
+    "@(abc\\.)?abstractmethod",
+
+    # TODO: class {}_[i,d,p,e,f,m]
+    ]
+
+ignore_errors = true
+# fail_under = 20 # coverage percentage
+format = "text" # or "markdown", "total"
+show_missing = false # for in the report
+skip_empty = false # skip files like __init__.py
+
+[html]
+directory = "coverage_html_report" # where to write output
+
+[xml]
+output = "coverage.xml" # where to write output
+
+[json]
+output = "coverage.json" # where to write output
+pretty_print = true

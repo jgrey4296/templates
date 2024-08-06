@@ -1,0 +1,58 @@
+Statemachine Reminder:
+from statemachine import StateMachine, State
+StateMachine                                           # Base Class
+State(initial=False, final=False)                      # States
+{machine}.write_png({path})                            # Create a dot diagram
+
+------------------------------------------------------ # Transitions:
+{state}.to({state}, cond="", validators="", unless="") # Transition
+{event} = ({transition} | {transition} | {transition}) # Event
+{event}() -> [transition_returns]                      # Event Calling
+
+------------------------------------------------------ # Callbacks
+before_{transition}(event, source, target)             #
+on_exit_{state}                                        #
+on_{transition}                                        #
+on_enter_{state}                                       #
+after_{transition}                                     #
+
+------------------------------------------------------ # Decorators
+#{event}.before                                        #
+@{event}.on                                            #
+@{event}.after                                         #
+@{state}.enter                                         #
+@{state}.exit                                          #
+@{state}.to({state})                                   # on a method
+
+@{event}.cond                                          # guard
+@{event}.unless                                        # guard
+
+-----------------------------------------------------  # Listeners
+{machine}.add_listener(obj)                            # where obj has relevant callbacks
+
+------------------------------------------------------ # Callback Groups and order
+validators()                                           # raise exceptions
+cond()                                                 # guard eval to True
+unless()                                               # guard eval to False
+before_transition                                      # before
+before_{event}                                         # before
+on_exit_state                                          # exit
+on_exit_{state}                                        # exit
+on_transition                                          # on
+on_{event}                                             # event
+on_enter_state                                         # enter
+on_enter_{state}                                       # enter
+after_{event}                                          # after
+after_transition                                       # after
+
+------------------------------------------------------ # Injection args:
+*args                                                  # injection arg
+**kwargs                                               # injection arg
+event_data                                             # EventData
+event                                                  # str of event name
+transition                                             # Transition(source, target)
+source                                                 # injection arg
+state                                                  # State
+target                                                 # State
+model                                                  # The model for the machine
+machine                                                # The state machine

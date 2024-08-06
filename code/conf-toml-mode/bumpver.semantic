@@ -2,7 +2,7 @@
 # name  : bumpver.semantic
 # uuid  : bumpver.semantic
 # key   : bumpver.semantic
-# group : infra
+# group : infra python pyproject
 # --
 [tool.bumpver]
 current_version    = "0.1.0"

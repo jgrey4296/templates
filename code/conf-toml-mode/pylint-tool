@@ -2,7 +2,7 @@
 # name  : pylint-tool
 # uuid  : pylint-tool
 # key   : pylint-tool
-# group : python
+# group : python pyproject
 # --
 ##-- pylint
 [tool.pylint.main]

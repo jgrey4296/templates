@@ -1,0 +1,21 @@
+%% __sty -*- mode: LaTeX -*-
+
+% Package ID:
+\ProvidesPackage{$1}
+\NeedsTeXFormat{LaTeX2e}
+
+%%-- Options
+
+%%-- end Options
+
+%%-- Package Loads
+
+%%-- end Package Loads
+
+%%-- Variables
+
+%%-- end Variables
+
+%%-- Commands
+
+%%-- end Commands

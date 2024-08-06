@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : footmark
+# uuid  : footmark
+# key   : footmark
+# group : footnotes
+# --
+\footnotemark[${1:1}]

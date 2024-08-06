@@ -5,9 +5,39 @@ Spacing:
 \pagebreak                                                                        # breaks
 \par                                                                              # breaks
 
+\vspace{amnt}                                                                     # vertical space
+\hspace{amnt}                                                                           # horizontal space
+
+\smallskip # vertical skips
+\medskip   # vertical skips
+\bigskip   # vertical skips
+
+\stretch{factor} # horizontal stretch
+
+\hfill # empty space
+\dotfill # dots
+\hrulefill # a ruler
 
 \centering                                                                        # make text centered inside figure
 
 Paragraphs                                                                        # full empty line inbetween text.
 [EOL]\\                                                                           # Newline
 \noindent                                                                         # prevent indenting
+
+
+\baselineskip                                                                     # length macros
+\baselinestretch                                                                  # length macros
+\columnsep                                                                        # length macros
+\columnwidth                                                                      # length macros
+\evensidemargin                                                                   # length macros
+\linewidth                                                                        # length macros
+\oddsidemargin                                                                    # length macros
+\paperwidth                                                                       # length macros
+\paperheight                                                                      # length macros
+\parindent                                                                        # length macros
+\parskip                                                                          # length macros
+\tabcolsep                                                                        # length macros
+\textheight                                                                       # length macros
+\textwidth                                                                        # length macros
+\topmargin                                                                        # length macros
+\unitlength                                                                       # length macros

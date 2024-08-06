@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : foottext
+# uuid  : foottext
+# key   : foottext
+# group : footnotes
+# --
+\footnotetext[${1:1}]{$2}$0

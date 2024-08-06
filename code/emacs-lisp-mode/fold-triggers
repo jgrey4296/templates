@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name  : fold-triggers
+# uuid  : fold-triggers
+# key   : fold-triggers
+# group : folding
+# --
+:triggers (:open-all   ,#'outline-show-all
+           :close-all  ,(cmd! (with-no-warnings (outline-hide-sublevels 1)))
+           :toggle     ,#'outline-toggle-children
+           :open       ,(cmd! (with-no-warnings (outline-show-entry) (outline-show-children)))
+           :open-rec   ,#'outline-show-subtree
+           :close      ,#'outline-hide-subtree
+           )

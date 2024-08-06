@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : margin
+# uuid  : margin
+# key   : margin
+# group : margins
+# --
+\marginpar[\footnotesize{$1}]{}$0

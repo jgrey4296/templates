@@ -49,7 +49,7 @@ from bibtexparser import middlewares as ms
 MYBIB                              = "#my_bibtex"
 MAX_TAGS                           = 7
 UPDATE        : Final[DKey] = DKey("update_")
-FROM_KEY      : Final[DKey] = DKey("from")
+FROM_KEY      : Final[DKey] = DKey("from", implicit=True)
 
 def select_one_entry(spec, state):
     bib_db     = FROM_KEY.expand(spec, state, check=BTP.Library)

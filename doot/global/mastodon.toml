@@ -6,15 +6,15 @@ image_temp       = "{temp}/images/"
 all_bib          = "/media/john/data/github/bibliography/main/"
 image_whitelist  = {loc="~/.config/secrets/bots/whitelist", normOnLoad=true}
 
-[[tasks.mast]]
-name                 = "post-image"
+[[tasks.mastodon]]
+name                 = "post.image"
 version              = "0.1"                # <str>
 ctor                 = "task" # <type>
 doc                  = ["TODO: Post a whitelisted image to mastodon"] # <list[str]>
 actions              = []                   # <list[Any]>
 # TODO : read from image_whitelist, select, post
 
-[[tasks.mast]]
+[[tasks.mastodon]]
 name                 = "bibtex"
 version              = "0.1"                # <str>
 ctor                 = "job" # <type>
@@ -22,12 +22,6 @@ doc                  = ["Maybe Post a formatted bibtex citation to mastodon"] # 
 select_limit         = 1
 roots                = ["{all_bib}"]                # <list[str|pl.Path]>  Places the walker will start
 exts                 = [".bib"]                   # <list[str]>
-cleanup         = [
-    { do="post.get", entries="-" },
-    { do="taskcode.soc_media:format_for_mastodon", from_="entries", update="text"},
-    { do="dootle.mastodon.actions:MastodonSetup" },
-    { do="dootle.mastodon.actions:MastodonPost", from_="text" },
-]
 actions = [
     {do="job.walk",   update_="files"}, # walk,
     {do="job.limit",  count_="select_limit"},
@@ -40,4 +34,10 @@ sub_actions          = [
     { do="dootle.bibtex.v2:BibtexLoadAction",  from_="fpath", update_="bib_db", parse_stack_="parse_stack" },
     { do="taskscode.bibtex:select_one_entry", from_="bib_db", update_="entry"},
     { do="post.put", args=["entry"] },
+]
+cleanup         = [
+    { do="post.get", entries="-" },
+    { do="taskcode.soc_media:format_for_mastodon", from_="entries", update="text"},
+    { do="dootle.mastodon.actions:MastodonSetup" },
+    { do="dootle.mastodon.actions:MastodonPost", from_="text" },
 ]

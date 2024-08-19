@@ -7,13 +7,13 @@ cache = "{home}/_cache_"
 tex   = "~/.local/texlive/current"
 
 [[tasks.setup]]
-name       = "total"
+name       = "system"
 version    = "0.1"
 ctor       = "task"
-depends_on = ["setup::symlinks", "setup::git", "setup::bash", "setup::dirs", "setup::misc"]
+depends_on = ["setup::_.symlinks", "setup::_.git", "setup::_.bash", "setup::_.dirs", "setup::_.misc"]
 
 [[tasks.setup]]
-name                 = "symlinks"
+name                 = "_.symlinks"
 version              = "0.1"                # <str>
 doc                  = ["setup symlinks to templates"]                   # <list[str]>
 ctor                 = "task"               # <str>
@@ -64,7 +64,7 @@ actions              = [
 ]                   # <list[Any]>
 
 [[tasks.setup]]
-name = "bash"
+name = "_.bash"
 version = "0.1"
 ctor = "task"
 actions = [
@@ -75,7 +75,7 @@ actions = [
 ]
 
 [[tasks.setup]]
-name    = "dirs"
+name    = "_.dirs"
 version = "0.1"
 ctor    = "task"
 actions = [
@@ -84,7 +84,7 @@ actions = [
 ]
 
 [[tasks.setup]]
-name    = "misc"
+name    = "_.misc"
 version = "0.1"
 ctor    = "task"
 actions = [
@@ -92,7 +92,7 @@ actions = [
 ]
 
 [[tasks.setup]]
-name                 = "git"
+name                 = "_.git"
 version              = "0.1"                # <str>
 doc                  = ["setup git config file symlinks"]                   # <list[str]>
 ctor                 = "task"               # <str>
@@ -107,7 +107,7 @@ actions              = [
 ]
 
 [[tasks.setup]]
-name = "nu"
+name = "_.nu"
 version = "0.1"
 doc = ["symlinks nushell config into home"]
 ctor = "task"
@@ -120,7 +120,7 @@ actions = [
 
 
 [[tasks.setup]]
-name         = "asdf"
+name         = "_.asdf"
 doc          = ["https://asdf-vm.com/guide/getting-started.html"]
 ctor         = "task"
 asfd_url     = "https://github.com/asdf-vm/asdf.git"

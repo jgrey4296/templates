@@ -48,12 +48,12 @@ sub_actions                = [
 
 [[tasks.backup]]
 name                       = "pictures"
-version                    = "0.1"                                                       # <str>
+version                    = "0.1"
 doc                        = ["Backup assets"]
-ctor                       = "job"             # <type>
-exts                       = []                                  # <list[str]>
-recursive                  = true                                # <bool>
-roots                      = ["{backup_1}/pictures"]                    # <list[str|pl.Path]>  Places the globber will start
+ctor                       = "job"
+exts                       = []
+recursive                  = true
+roots                      = ["{backup_1}/pictures"]
 shadow_roots               = ["{backup_2}/pictures"]
 actions = [
     {do="job.walk", update_="files"},

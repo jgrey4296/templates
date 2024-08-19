@@ -11,3 +11,4 @@
 :temp        : .temp
 :templates   : templates
 :wiki        : wiki_
+:git         : .git

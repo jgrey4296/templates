@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : http.server
+# uuid  : http.server
+# key   : http.server
+# group : cli http python
+# --
+python -m http.server ${1:9000} ${2:--directory}

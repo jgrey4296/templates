@@ -141,7 +141,7 @@ tomli-w                                              # https://github.com/hukkin
 tomllib                                              # https://docs.python.org/3/library/tomllib.html
 toolz                                                # https://toolz.readthedocs.io/en/latest/
 tqdm                                                 # https://tqdm.github.io/
-twine                                                # https://github.com/pypa/twine
+twine                                                # https://twine.readthedocs.io/en/stable/
 unicode                                              # https://tonsky.me/blog/unicode/
 urllib3                                              # https://urllib3.readthedocs.io/en/stable/index.html
 validators                                           # https://python-validators.github.io/validators/
@@ -155,3 +155,16 @@ Version specifiers                                   # https://packaging.python.
 Packaging                                            # https://packaging.pypa.io/en/stable/
 Ruff Rules                                           # https://docs.astral.sh/ruff/rules/
 Data Model                                           # https://docs.python.org/3/reference/datamodel.html
+isort                                                # https://pycqa.github.io/isort/
+pyoxidizer                                           # https://pyoxidizer.readthedocs.io/en/stable/index.html
+dill                                                 # https://dill.readthedocs.io/en/latest/
+noise                                                # https://github.com/caseman/noise
+scipy                                                # https://docs.scipy.org/doc/scipy/reference/index.html
+validators                                           # https://python-validators.github.io/validators/
+mastodon                                             # https://mastodonpy.readthedocs.io/en/1.5.1/
+structlog                                            # https://www.structlog.org/en/stable/
+statemachine                                         # https://python-statemachine.readthedocs.io/en/latest/
+pyaml                                                # https://pyyaml.org/
+pyo3                                                 # https://pyo3.rs/v0.22.2/
+liquid                                               # https://jg-rp.github.io/liquid/introduction/getting-started
+anti-patterns                                        # https://docs.quantifiedcode.com/python-anti-patterns/index.html

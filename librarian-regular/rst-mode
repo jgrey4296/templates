@@ -7,3 +7,5 @@ Sphinx Rst Basics       # https://www.sphinx-doc.org/en/master/usage/restructure
 Python RST devguide     # https://devguide.python.org/documentation/markup/
 Sphinx Config Reference # https://www.sphinx-doc.org/en/master/usage/configuration.html#build-config
 Directives              # https://docutils.sourceforge.io/docs/ref/rst/directives.html
+Alabaster               # https://alabaster.readthedocs.io/en/latest/
+RST Primer              # https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html

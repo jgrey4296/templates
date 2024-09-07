@@ -8,11 +8,12 @@ name    = "backup.versions"
 version = "0.1"
 ctor    = "task"
 doc     = ["Update the list of installed software versions"]
-depends_on = ["chore::_.apt.versions", "chore::_.snap.versions",
-               "chore::_.mamba.versions", "chore::_.rust.versions",
-               "chore::_.tex.versions", "chore::_.git",
-               # "chore::_.cron",
-               ]
+depends_on = [
+           "chore::_.apt.versions", "chore::_.snap.versions",
+           "chore::_.mamba.versions", "chore::_.rust.versions",
+           "chore::_.tex.versions", "chore::_.git",
+           # "chore::_.cron",
+]
 
 [[tasks.chore]]
 name    = "_.apt.versions"

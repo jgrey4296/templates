@@ -7,13 +7,13 @@ backup_2 = "/media/john/BackupSD"
 
 [[tasks.backup]]
 name                       = "assets"
-version                    = "0.1"                                                       # <str>
+version                    = "0.1"
 doc                        = ["Backup assets"]
-ctor                       = "job"             # <type>
-exts                       = []                                  # <list[str]>
-recursive                  = true                                # <bool>
-roots                      = ["{data}/assets"]                    # <list[str|pl.Path]>  Places the globber will start
-shadow_roots               = ["{backup_1}/assets", "{backup_2}/assets"]
+ctor                       = "job"
+exts                       = []
+recursive                  = true
+roots                      = ["{data!p}/assets"]
+shadow_roots               = ["{backup_1!p}/assets", "{backup_2!p}/assets"]
 actions = [
     {do="job.walk", update_="files"},
     {do="job.expand", from_="files", update_="tasks", inject={replace=["fpath"]}, template_="sub_actions"},
@@ -28,13 +28,13 @@ sub_actions                = [
 
 [[tasks.backup]]
 name                       = "datasets"
-version                    = "0.1"                                                       # <str>
+version                    = "0.1"
 doc                        = ["Backup assets"]
-ctor                       = "job"             # <type>
-exts                       = []                                  # <list[str]>
-recursive                  = true                                # <bool>
-roots                      = ["{data}/datasets"]                    # <list[str|pl.Path]>  Places the globber will start
-shadow_roots               = ["{backup_1}/datasets", "{backup_2}/datasets"]
+ctor                       = "job"
+exts                       = []
+recursive                  = true
+roots                      = ["{data!p}/datasets"]
+shadow_roots               = ["{backup_1!p}/datasets", "{backup_2!p}/datasets"]
 actions = [
     {do="job.walk", update_="files"},
     {do="job.expand", from_="files", update_="tasks", inject={replace=["fpath"]}, template_="sub_actions"},
@@ -53,8 +53,8 @@ doc                        = ["Backup assets"]
 ctor                       = "job"
 exts                       = []
 recursive                  = true
-roots                      = ["{backup_1}/pictures"]
-shadow_roots               = ["{backup_2}/pictures"]
+roots                      = ["{backup_1!p}/pictures"]
+shadow_roots               = ["{backup_2!p}/pictures"]
 actions = [
     {do="job.walk", update_="files"},
     {do="job.expand", from_="files", update_="tasks", inject={replace=["fpath"]}, template_="sub_actions"},

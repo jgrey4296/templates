@@ -2,6 +2,6 @@
 # name: link
 # uuid: link
 # key:  link
-# group :
+# group : internal reference
 # --
-:doc:`$0`
+:doc:\`$0\`

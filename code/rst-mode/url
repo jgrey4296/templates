@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
-# name: url
-# key: url
-# uuid: url
-# group: link
+# name: link.declare
+# key:  link.declare
+# uuid: link.declare
+# group: link reference url
 # --
-.. _${1:description}: $0
+.. _${1:refname}: $0

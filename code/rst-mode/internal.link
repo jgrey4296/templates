@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : internal.link
+# uuid  : internal.link
+# key   : internal.link
+# group : url link reference
+# --
+.. _${name}: $0

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : ref
+# uuid  : ref
+# key   : ref
+# group : ref link
+# --
+:ref:\`${name}\`$0

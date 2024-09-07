@@ -2,7 +2,7 @@
 # name: toctree
 # uuid: toctree
 # key:  toctree
-# group : sphinx
+# group : sphinx contents inter.doc
 # --
 .. toctree:
    :caption: $1

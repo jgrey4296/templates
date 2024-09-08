@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name  : silence
+# uuid  : silence
+# key   : silence
+# group : latex silence warnings errors
+# --
+\usepackage{silence}
+
+\hfuzz=5pt % silences overfull hboxes up to 5pts
+\hbadness=100000 % silences underfull hbox warnings
+\WarningsOff*
+\ErrorsOff*

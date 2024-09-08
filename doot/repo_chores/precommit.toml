@@ -1,6 +1,6 @@
 
 [[tasks.precommit]]
-name    = "_setup"
+name    = "_.setup"
 version = "0.1"
 doc     = ["Setup Pre-Commit"]
 actions = [

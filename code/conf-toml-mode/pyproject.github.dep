@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : pyproject.github.dep
+# uuid  : pyproject.github.dep
+# key   : pyproject.github.dep
+# group : python pyproject github url
+# --
+"${1:dootle}@git+https://github.com/jgrey4296/$1${2:egg=branchname}",$0

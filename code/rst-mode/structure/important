@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : important
+# uuid  : important
+# key   : important
+# group : sphinx struct
+# --
+.. important::
+
+   $0

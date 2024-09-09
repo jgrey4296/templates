@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: automodule
+# key: automod
+# uuid: automod
+# group: code sphinx
+# --
+.. automodule:: ${1:module_name}

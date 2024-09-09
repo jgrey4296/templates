@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name  : inline-url
-# uuid  : inline-url
-# key   : inline-url
-# group : url link
-# --
-\`${1:text} <${2:url}>`_

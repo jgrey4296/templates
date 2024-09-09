@@ -1,9 +1,0 @@
-# -*- mode: snippet -*-
-# name: graph
-# key: graph
-# uuid: graph
-# group: diagrams
-# --
-.. graph:: $1
-
-   $0

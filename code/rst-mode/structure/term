@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: term
+# key: term
+# uuid: term
+# group: meta struct sphinx
+# --
+:term:\`$0\`

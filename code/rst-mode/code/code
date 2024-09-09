@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: code
+# key: code
+# uuid: code
+# group: code sphinx
+# --
+.. code:: ${1:python}

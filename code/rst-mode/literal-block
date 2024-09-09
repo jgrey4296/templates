@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# name  : literal-block
-# uuid  : literal-block
-# key   : lblock
-# group : sphinx formatting
-# --
-::
-    $0

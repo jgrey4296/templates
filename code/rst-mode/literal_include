@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: literatal include
-# key: inc
-# uuid: inc
-# group: meta
-# --
-.. literalinclude:: ${1:path}

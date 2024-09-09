@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: meta
+# key: meta
+# uuid: meta
+# group: meta struct sphinx
+# --
+:${1:var}: $0

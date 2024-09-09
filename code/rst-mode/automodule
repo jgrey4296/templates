@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: automodule
-# key: auto
-# uuid: auto
-# group: code
-# --
-.. automodule:: ${1:module_name}

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : superscript
+# uuid  : superscript
+# key   : superscript
+# group : sphinx format
+# --
+:sup:`${0:text}`

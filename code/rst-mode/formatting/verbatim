@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: verbatim
+# key: |
+# uuid: |
+# group: meta format sphinx
+# --
+| $0
+|

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: inheritance
+# key: inh
+# uuid: inh
+# group: graphics code sphinx
+# --
+.. inheritance-diagram:: $0

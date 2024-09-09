@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: class
+# key: cls
+# uuid: cls
+# group: code sphinx
+# --
+:class:\`$0\`

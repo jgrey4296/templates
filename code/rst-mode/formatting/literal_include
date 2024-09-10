@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: literal.include
+# key: inc
+# uuid: inc
+# group: meta format sphinx
+# --
+.. literalinclude:: ${1:path}

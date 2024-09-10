@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : list.ord
+# uuid  : list.ord
+# key   : list.ord
+# group : sphinx struct list ordered
+# --
+${1:1}. ${2:Test}.

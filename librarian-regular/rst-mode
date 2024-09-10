@@ -7,3 +7,21 @@ Sphinx Rst Basics       # https://www.sphinx-doc.org/en/master/usage/restructure
 Python RST devguide     # https://devguide.python.org/documentation/markup/
 Sphinx Config Reference # https://www.sphinx-doc.org/en/master/usage/configuration.html#build-config
 Directives              # https://docutils.sourceforge.io/docs/ref/rst/directives.html
+RST Primer              # https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
+Sphinx Config           # https://www.sphinx-doc.org/en/master/usage/configuration.html
+Sphinx Autoapi          # https://sphinx-autoapi.readthedocs.io/en/latest/
+Sphinx Autodoc          # https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html#module-sphinx.ext.autodoc
+Sphinx Coverage         # https://www.sphinx-doc.org/en/master/usage/extensions/coverage.html
+Sphinx Graphviz         # https://www.sphinx-doc.org/en/master/usage/extensions/graphviz.html
+Sphinx Inheritance      # https://www.sphinx-doc.org/en/master/usage/extensions/inheritance.html
+Intersphinx             # https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html
+Sphinx Viewcode         # https://www.sphinx-doc.org/en/master/usage/extensions/viewcode.html
+Github Sphinx Exts      # https://github.com/sphinx-contrib/
+
+Theme : Alabaster       # https://alabaster.readthedocs.io/en/latest/
+Theme : ReadTheDocs     # https://sphinx-rtd-theme.readthedocs.io/en/stable/
+Theme : Book            # https://sphinx-book-theme.readthedocs.io/en/latest/
+Theme : Press           # https://schettino72.github.io/sphinx_press_site/
+Theme : Material        # https://bashtage.github.io/sphinx-material/
+Theme : Groundwork      # https://sphinx-themes.org/sample-sites/groundwork-sphinx-theme/
+Theme : Readable        # https://sphinx-themes.org/sample-sites/sphinx-readable-theme/

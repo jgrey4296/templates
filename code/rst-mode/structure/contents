@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : contents
+# uuid  : contents
+# key   : contents
+# group : toctree document.level struct
+# --
+.. contents:: ${1:Table of Contents}$0

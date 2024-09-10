@@ -1,5 +1,14 @@
 
 [[tasks.precommit]]
+name    = "_.setup"
+version = "0.1"
+doc     = ["Setup Pre-Commit"]
+actions = [
+        # TODO read pre-commit yaml, find hook types, install those
+        {do="shell", args=["pre-comimit", "--install-hooks"]},
+]
+
+[[tasks.precommit]]
 name                 = "validate"
 version              = "0.1"                # <str>
 doc                  = ["Validate a commit message.", "Runs in stage commit-msg"]

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: label.declare
+# key:  label.declare
+# uuid: label.declare
+# group: link crossref url sphinx format
+# --
+:: _${1:refname}: $0

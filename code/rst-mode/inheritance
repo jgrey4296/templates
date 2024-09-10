@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: inheritance
-# key: inh
-# uuid: inh
-# group: graphics
-# --
-.. inheritance-diagram:: $0

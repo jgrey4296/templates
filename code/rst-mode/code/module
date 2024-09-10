@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: module
+# key: mod
+# uuid: mod
+# group: code sphinx
+# --
+:mod: \`$0\`

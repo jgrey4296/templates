@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: parsed.literal
+# key: src
+# uuid: src
+# group: meta sphinx format
+# --
+.. parsed-literal::
+   $0

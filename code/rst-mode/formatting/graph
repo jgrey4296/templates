@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: graph
+# key: graph
+# uuid: graph
+# group: diagrams sphinx format
+# --
+.. graph:: $1
+
+   $0

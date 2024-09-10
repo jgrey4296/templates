@@ -52,6 +52,7 @@ run = { tracker = "default", runner = "default", reporter= "default", report-lin
 
 [[locations]]
 temp            = {loc=".temp", cleanable=true}
+templates       = "."
 logs            = "{temp}/logs"
 build           = "{temp}/build"
 docs            = "docs"

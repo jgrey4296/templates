@@ -1,0 +1,29 @@
+# -*- mode: snippet -*-
+# name  : alabaster.options
+# uuid  : alabaster.options
+# key   : alabaster.options
+# group : sphinx docs
+# --
+##-- alabaster options
+# https://alabaster.readthedocs.io/en/latest/index.html
+html_theme       = "alabaster"
+extlinks         = {}
+html_sidebars    = {
+    "**": [
+        "about.html",
+        "searchfield.html",
+        "navigation.html",
+        "relations.html",
+        "donate.html",
+    ]
+}
+
+
+html_theme_options = {
+    "description"   : "",
+    "github_user"   : "",
+    "github_repo"   : "",
+    "fixed_sidebar" : True,
+    "github_banner" : False,
+}
+##-- end alabaster

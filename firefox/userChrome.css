@@ -1,0 +1,12 @@
+/* from https://support.mozilla.org/en-US/questions/1444201 */
+#context-navigation,
+#context-navigation > menuitem,
+#context-sep-navigation {
+  display: flex;
+}
+#context-stop[disabled="true"] {
+  display: none;
+}
+#context-reload:has(+ #context-stop:not([disabled])) {
+  display: none;
+}

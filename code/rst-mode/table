@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : table
+# uuid  : table
+# key   : table
+# group : sphinx table struct
+# --
+${1:$(s-replace-regexp "." "=" yas-text)}    ${2:$(s-replace-regexp "." "=" yas-text)}  ${3:$(s-replace-regexp "." "=" yas-text)}
+${1:Column 1}                                ${2:Column 2}                              ${3:Column 3}
+${1:$(s-replace-regexp "." "=" yas-text)}    ${2:$(s-replace-regexp "." "=" yas-text)}  ${3:$(s-replace-regexp "." "=" yas-text)}

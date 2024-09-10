@@ -14,9 +14,18 @@ https://flit.pypa.io/en/stable/
 ** twine           :buildtool:
 https://twine.readthedocs.io/en/stable/
 
-
 ** pyoxidizer   :buildtool:
 https://pyoxidizer.readthedocs.io/en/stable/index.html
+
+** elements                                      :research:
+https://github.com/danijar/elements
+
+** logging
+https://betterstack.com/community/guides/logging/loguru/
+https://betterstack.com/community/guides/logging/best-python-logging-libraries/
+
+** pyopensci
+https://www.pyopensci.org/python-package-guide/
 
 * Main
 https://www.structlog.org/en/stable/
@@ -276,6 +285,7 @@ https://github.com/seatgeek/thefuzz
 *** toolz :functional_programming:iteration:reference:
 https://github.com/pytoolz/toolz
 *** toposort                                    :sorting:
+https://gitlab.com/ericvsmith/toposort
 *** validators                                  :validation:
 https://python-validators.github.io/validators/
 *** itsdangerous                                :validation:
@@ -411,6 +421,7 @@ https://github.com/micheles/decorator
 https://github.com/ahartlba/decorator_validation
 *** hydra                                       :configuration:
 https://github.com/facebookresearch/hydra
+https://hydra.cc/docs/1.3/intro/
 *** structlog
 https://www.structlog.org/en/stable/
 *** tach  :dependency:
@@ -607,8 +618,6 @@ statemachine.exceptions.TransitionNotAllowed
 
 #+end_src
 
-
-
 ** Diagrams
 *** diagrams                                    :system_diagrams:
 https://github.com/mingrammer/diagrams
@@ -802,6 +811,7 @@ https://github.com/psf/black
 *** flake8
 **** mccabe                                    :complexity:
 *** isort                                       :imports:
+https://pycqa.github.io/isort/
 *** pycodestyle
 *** pycycle                                     :imports:
 https://github.com/bndr/pycycle
@@ -912,12 +922,11 @@ https://github.com/fortran-lang/fortls
 https://github.com/numba/llvmlite
 *** rust
 https://github.com/PyO3/pyo3
+https://pyo3.rs/v0.22.2/
 *** prolog
 **** prologterms-py                            :dsl:
 https://github.com/cmungall/prologterms-py
 **** pyswip                                    :prolog:
-https://github.com/yuce/pyswip
-**** pyswip
 https://github.com/yuce/pyswip
 *** ironpython                                  :csharp:
 https://github.com/IronLanguages/ironpython3
@@ -964,7 +973,6 @@ coverage report
 coverage html -d {target}
 #+end_src
 
-
 *** pyelftools                                  :DWARF:ELF:debugging:
 https://github.com/eliben/pyelftools
 *** py-spy
@@ -974,6 +982,11 @@ https://github.com/zhuyifei1999/guppy3/
 https://zhuyifei1999.github.io/guppy3/
 *** watchdog
 https://pythonhosted.org/watchdog/
+** logging
+*** logging518
+https://mharrisb1.github.io/logging518/
+
+pyproject/toml config of stdlib logging
 ** Stats
 *** multipy                                     :hypothesis_testing:
 https://github.com/puolival/multipy
@@ -1065,6 +1078,7 @@ https://fonttools.readthedocs.io/en/latest/
 **** liquid                                     :template:
 https://github.com/jg-rp/liquid
 https://jg-rp.github.io/liquid/
+https://jg-rp.github.io/liquid/introduction/getting-started
 **** jinja2                                    :macros:template:
 https://jinja.palletsprojects.com/en/3.1.x/
 **** jinja                                       :template:
@@ -1197,7 +1211,6 @@ python -m http.server 8000
 #+end_src
 
 #+RESULTS: http server one liner
-
 
 * Environments
 ** Core

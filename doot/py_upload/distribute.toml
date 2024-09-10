@@ -4,34 +4,34 @@ dist_key  = {file="~/.config/secrets/pypi/token.asc", normOnLoad=true, protected
 
 [[tasks.dist]]
 name                   = "build"
-version                = "0.1"                          # <str>
-ctor                   = "task"                         # <str>
+version                = "0.1"
+ctor                   = "task"
 env_name               = "distributor"
-inject                 = ["env_name", "match_re"]                   # <list[str]>
+inject                 = ["env_name", "match_re"]
 # depends_on             = ["test::pytest", "requirements::pip", version::bump", "version::changelog", "docs::build"]
 setup = [
     {do="mamba.env", env_="env_name", update_="env"},
 ]
 actions = [
-    # Build
     {do="shell", args=["python", "-m", "build", "--outdir", "{build!p}", "."], env_="env"},
 ]
 cleanup = [
-    # Cleanup
     {do="delete!", args=["./{src}.egg-info"], lax=true, recursive=true},
 ]
 
 [[tasks.dist]]
+disabled               = true
 name                   = "upload"
 version                = "0.1"
+doc                    = ["Obsolete due to github actions"]
 ctor                   = "task"
 env_name               = "distributor"
 match_re               = 's/^pypi\s+\=\s+(.+)/\1/p'
-inject                 = ["env_name", "match_re"]                   # <list[str]>
+inject                 = ["env_name", "match_re"]
 depends_on             = ["dist::build"]
 setup                  = [
-    { do="mamba.env", env_="env_name", update_="env"},
     # Get pypi token
+    { do="mamba.env", env_="env_name", update_="env"},
     { do="doot.actions.shell:DootShellBake", args=["gpg", "-q", "-d", "{dist_key!p}"], update_="gpg", env=false},
     { do="doot.actions.shell:DootShellBake", args=["sed", "-n", "-E", "{match_re}"], in_="gpg", update_="token", env=false},
     { do="doot.actions.shell:DootShellBakedRun",  in_="token", update_="token_str"},

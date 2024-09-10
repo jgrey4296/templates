@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : list.unord
+# uuid  : list.unord
+# key   : list.unord
+# group : sphinx struct list unordered
+# --
+* $1

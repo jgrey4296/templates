@@ -6,33 +6,26 @@ image_temp       = "{temp}/images/"
 all_bib          = "/media/john/data/github/bibliography/main/"
 image_whitelist  = {loc="~/.config/secrets/bots/whitelist", normOnLoad=true}
 
-[[tasks.mast]]
-name                 = "post-image"
-version              = "0.1"                # <str>
-ctor                 = "task" # <type>
-doc                  = ["TODO: Post a whitelisted image to mastodon"] # <list[str]>
-actions              = []                   # <list[Any]>
-# TODO : read from image_whitelist, select, post
+[[tasks.mastodon]] # TODO : read from image_whitelist, select, post
+name                 = "post.image"
+version              = "0.1"
+ctor                 = "task"
+doc                  = ["TODO: Post a whitelisted image to mastodon"]
+actions              = []
 
-[[tasks.mast]]
+[[tasks.mastodon]]
 name                 = "bibtex"
-version              = "0.1"                # <str>
-ctor                 = "job" # <type>
-doc                  = ["Maybe Post a formatted bibtex citation to mastodon"] # <list[str]>
+version              = "0.1"
+ctor                 = "job"
+doc                  = ["Maybe Post a formatted bibtex citation to mastodon"]
 select_limit         = 1
-roots                = ["{all_bib}"]                # <list[str|pl.Path]>  Places the walker will start
-exts                 = [".bib"]                   # <list[str]>
-cleanup         = [
-    { do="post.get", entries="-" },
-    { do="taskcode.soc_media:format_for_mastodon", from_="entries", update="text"},
-    { do="dootle.mastodon.actions:MastodonSetup" },
-    { do="dootle.mastodon.actions:MastodonPost", from_="text" },
-]
+roots                = ["{all_bib}"]
+exts                 = [".bib"]
 actions = [
-    {do="job.walk",   update_="files"}, # walk,
+    {do="job.walk",   update_="files"},
     {do="job.limit",  count_="select_limit"},
     {do="job.expand", from_="files", update_="tasks", inject={copy=["fpath"]}, template_="sub_actions"},
-    {do="job.queue",  from_="tasks"}, # queue
+    {do="job.queue",  from_="tasks"},
 ]
 sub_actions          = [
     { do="taskscode.bibtex:build_parse_stack",  update_="parse_stack"},
@@ -40,4 +33,10 @@ sub_actions          = [
     { do="dootle.bibtex.v2:BibtexLoadAction",  from_="fpath", update_="bib_db", parse_stack_="parse_stack" },
     { do="taskscode.bibtex:select_one_entry", from_="bib_db", update_="entry"},
     { do="post.put", args=["entry"] },
+]
+cleanup         = [
+    { do="post.get", entries="-" },
+    { do="taskcode.soc_media:format_for_mastodon", from_="entries", update="text"},
+    { do="dootle.mastodon.actions:MastodonSetup" },
+    { do="dootle.mastodon.actions:MastodonPost", from_="text" },
 ]

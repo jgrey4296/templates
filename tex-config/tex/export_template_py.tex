@@ -2,6 +2,7 @@
 %% available: pdflatex lualatex xelatex
 %% A bibtex export template with python string.Template keys
 \documentclass[12pt]{article}
+\usepackage{silence}
 \usepackage[T1,T2A]{fontenc}
 \usepackage[russian,english]{babel}
 \usepackage{listings}
@@ -10,6 +11,13 @@
 \usepackage[numbers]{natbib}
 \usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, pdfstartview=FitH]{hyperref}
 \usepackage{doi}
+
+\usepackage{silence}
+
+\hfuzz=40pt % silences overfull hboxes up to 5pts
+\hbadness=100000 % silences underfull hbox warnings
+\WarningsOff*
+% \ErrorsOff*
 
 \title{${title}}
 \author{${author}}

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : version.added
+# uuid  : version.added
+# key   : version.added
+# group : sphinx code
+# --
+.. versionadded:: $1
+
+   $0

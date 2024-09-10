@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : csv.file
+# uuid  : csv.file
+# key   : csv.file
+# group : sphinx struct data table
+# --
+.. csv-table:: ${1:Title}
+   :file: ${2}
+
+$0

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: autofunction
+# key: autofun
+# uuid: autofun
+# group: code sphinx
+# --
+.. autofunction:: $0

@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : production.list
+# uuid  : production.list
+# key   : production.list
+# group : sphinx struct
+# --
+.. productionlist::
+
+   $1 : $2
+   $0

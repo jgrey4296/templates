@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name  : test.code
+# uuid  : test.code
+# key   : test.code
+# group : sphinx doctest code
+# --
+.. testcode::
+
+    $1
+
+.. testoutput::
+
+   $2
+
+$0

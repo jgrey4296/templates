@@ -5,6 +5,8 @@
 # group : python pyproject infra
 # --
 ##-- coverage
+# https://pytest-cov.readthedocs.io/en/latest/config.html
+# add "addopts = '--cov-report xml --cov={}' " for pytest
 [tool.coverage.run]
 branch           = true # measure branch coverage
 # command_line   = "..."
@@ -18,7 +20,7 @@ relative_files   = false #
 timid            = false # simpler but slower tracing
 
 [tool.coverage.paths] # specify equivalent paths
-source = []
+# source = [] # will error if left empty
 
 [tool.coverage.report]
 # Regexes for lines to exclude from consideration

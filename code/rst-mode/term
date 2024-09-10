@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: term
-# key: term
-# uuid: term
-# group: meta
-# --
-:term:\`$0\`

@@ -4,4 +4,4 @@
 # key   : italics
 # group : sphinx format
 # --
-:emphasis:`${0:text}`
+*${0:text}*

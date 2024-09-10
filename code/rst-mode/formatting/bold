@@ -4,4 +4,4 @@
 # key   : bold
 # group : sphinx format
 # --
-:strong:`${0:text}`
+**${0:text}**

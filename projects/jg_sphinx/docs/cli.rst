@@ -1,14 +1,10 @@
 .. -*- mode: ReST -*-
-
-.. _${2:label}:
-
-${1:$(s-replace-regexp "." "=" yas-text)}
-${1:Page Title}
-${1:$(s-replace-regexp "." "=" yas-text)}
+==========
+CLI
+==========
 
 .. contents:: Contents
 
-$0
 Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci
 commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget,
 lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac

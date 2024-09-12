@@ -17,6 +17,7 @@ Sphinx Inheritance      # https://www.sphinx-doc.org/en/master/usage/extensions/
 Intersphinx             # https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html
 Sphinx Viewcode         # https://www.sphinx-doc.org/en/master/usage/extensions/viewcode.html
 Github Sphinx Exts      # https://github.com/sphinx-contrib/
+Myst Parser             # https://myst-parser.readthedocs.io/en/latest/intro.html
 
 Theme : Alabaster       # https://alabaster.readthedocs.io/en/latest/
 Theme : ReadTheDocs     # https://sphinx-rtd-theme.readthedocs.io/en/stable/

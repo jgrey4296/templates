@@ -718,13 +718,49 @@ https://github.com/sciunto-org/python-bibtexparser
 https://docs.getpelican.com/en/latest/
 *** sphinx                                      :documentation:
 https://www.sphinx-doc.org/en/master/contents.html
-sphinxcontrib-applehelp
-sphinxcontrib-devhelp
-sphinxcontrib-htmlhelp
-sphinxcontrib-jsmath
-sphinxcontrib-qthelp
-sphinxcontrib-serializinghtml
+
+*** sphinx-extensions
+https://github.com/sphinx-contrib/
+
+**** myst parser :markdown:
+https://myst-parser.readthedocs.io/en/latest/intro.html
+
+**** autoapi
+https://sphinx-autoapi.readthedocs.io/en/latest/
+
+
+**** autodoc
+https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html#module-sphinx.ext.autodoc
+
+**** coverage
+https://www.sphinx-doc.org/en/master/usage/extensions/coverage.html
+
+**** graphviz
+https://www.sphinx-doc.org/en/master/usage/extensions/graphviz.html
+
+**** inheritance
+https://www.sphinx-doc.org/en/master/usage/extensions/inheritance.html
+
+**** viewcode
+https://www.sphinx-doc.org/en/master/usage/extensions/viewcode.html
+
+*** sphinx-themes
 **** alabaster
+https://alabaster.readthedocs.io/en/latest/
+**** readtedocs
+https://sphinx-rtd-theme.readthedocs.io/en/stable/
+**** book
+https://sphinx-book-theme.readthedocs.io/en/latest/
+**** press
+https://schettino72.github.io/sphinx_press_site/
+**** material
+https://bashtage.github.io/sphinx-material/
+**** groundwork
+https://sphinx-themes.org/sample-sites/groundwork-sphinx-theme/
+**** readable
+https://sphinx-themes.org/sample-sites/sphinx-readable-theme/
+*** mkdocs
+https://www.mkdocs.org/user-guide/installation/
 *** pdoc
 https://github.com/mitmproxy/pdoc
 ** Exceptions

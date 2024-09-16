@@ -29,7 +29,6 @@ dependencies:
   - pytest
   - python-language-server
   - jedi-language-server
-  - cookiecutter
   - img2pdf
   - clingo
   - sphinx

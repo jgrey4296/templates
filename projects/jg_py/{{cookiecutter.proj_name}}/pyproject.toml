@@ -1,7 +1,7 @@
 ## pyproject.toml -*- mode: conf-toml  -*-
 [project]
 name            = "{{cookiecutter.proj_name}}"
-version         = "0.0.1"
+version         = "0.1.0"
 description     = ""
 readme          = "README.md"
 requires-python = ">={{cookiecutter.python}}"
@@ -85,11 +85,16 @@ include    = ["{{cookiecutter.proj_name}}*"]
 ##-- pytest
 # https://docs.pytest.org/en/8.2.x/reference/reference.html#ini-options-ref
 [tool.pytest.ini_options]
-log_cli       = false
-log_level     = "DEBUG"
-log_cli_level = "DEBUG"
-cache_dir     = ".temp/pytest_cache"
-log_file      = ".temp/logs/pytest.log"
+cache_dir       = ".temp/pytest_cache"
+log_file        = ".temp/logs/pytest.log"
+
+log_cli         = false
+log_level       = "DEBUG"
+log_cli_level   = "INFO"
+# log_format      = "%(levelname)s %(name)s : %(message)s"
+log_format      = "%(levelname)s %(module)s %(lineno)s : %(message)s"
+log_file_level  = "DEBUG"
+log_file_format = "%(asctime)s %(levelname)s %(name)s : %(message)s"
 
 ##-- end pytest
 
@@ -126,7 +131,7 @@ static      = ['_static']
 
 ##-- bumpver
 [tool.bumpver]
-current_version    = "0.0.1"
+current_version    = "0.1.0"
 version_pattern    = "MAJOR.MINOR.PATCH"
 commit_message     = "[bump]: version {old_version} -> {new_version}"
 tag_message        = "{new_version}"
@@ -142,7 +147,12 @@ commit             = true
                    '^version\s+=\s+"{version}"',
                    '^current_version\s+=\s+"{version}"'
 ]
-"{{cookiecutter.proj_name}}/__init__.py" = ['^__version__\s+=\s+"{version}"']
+"docs/conf.py"     = ["^release = '{version}'"]
+"README.md"        = ["^Version : {version}  "]
+"{{cookiecutter.proj_name}}/__init__.py" = [
+                                         '^__version__\s+=\s+"{version}"',
+                                         # '^__version__\s+:\s+Final\[str\]\s+=\s+"{version}"'
+                                         ]
 
 ##-- end bumpver
 

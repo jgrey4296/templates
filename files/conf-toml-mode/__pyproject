@@ -18,11 +18,29 @@ classifiers     = [
 
 
 ##-- dependencies
-dependencies   = []
+dependencies   = [
+    "tomlguard >= 0.4.0",
+    "networkx > 3.0",
+    "sh >= 2.0.6",
+    "stackprinter >= 0.2.10",
+    "sty >= 1.0.0",
+    "boltons >= 23.0.0",
+    "more_itertools",
+    "decorator-validation >= 3.0.0",
+    "decorator >= 5.0.0",
+    "pydantic >= 2.7.0",
+    "jgdv >= 0.3.2",
+]
 
 [project.optional-dependencies]
+docs = [
+    "Sphinx >=7.4.0",
+    "sphinx-rtd-theme",
+    "myst_parser >= 4.0.0",
+]
 test = [
-  "pytest < 5.0.0",
+  "pytest >= 8.3.0",
+  "pytest-mock >= 3.14",
 ]
 
 ##-- end dependencies
@@ -30,7 +48,7 @@ test = [
 ##-- urls
 [project.urls]
 homepage      = "https://github.com/jgrey4296/$1"
-documentation = "https://readthedocs.org/$1"
+documentation = "https://$1.readthedocs.io/en/latest/"
 repository    = "https://github.com/jgrey4296/$1"
 changelog     = "https://github.com/jgrey4296/$1/spam/blob/master/CHANGELOG.md"
 
@@ -101,13 +119,13 @@ log_file_format = "%(asctime)s %(levelname)s %(name)s : %(message)s"
 
 ##-- bumpver
 [tool.bumpver]
-current_version    = "0.7.2"
+current_version    = "0.1.0"
 version_pattern    = "MAJOR.MINOR.PATCH"
 commit_message     = "[bump]: version {old_version} -> {new_version}"
 tag_message        = "{new_version}"
 tag_scope          = "default"
 commit             = true
-# tag                = true
+tag                = false
 # push             = true
 # pre_commit_hook  = ""
 # post_commit_hook = ""
@@ -118,6 +136,7 @@ commit             = true
                    '^current_version\s+=\s+"{version}"'
 ]
 "$1/__init__.py" = ['^__version__\s+:\s+Final\[str\]\s+=\s+"{version}"']
+"docs/conf.py"     = ["^release = '{version}'"]
 "README.md"        = ["^Version : {version}  "]
 
 ##-- end bumpver

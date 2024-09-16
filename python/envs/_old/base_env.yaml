@@ -41,7 +41,6 @@ dependencies:
   - conda-env=2.6.0=1
   - conda-package-handling=1.8.0=py37hca72f7f_0
   - conda-verify=3.4.2=py_1
-  - cookiecutter=1.7.2=pyhd3eb1b0_0
   - cryptography=36.0.0=py37hf6deb26_0
   - dbus=1.13.18=h18a8e69_0
   - debugpy=1.5.1=py37he9d5cce_0

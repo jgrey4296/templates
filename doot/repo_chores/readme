@@ -1,0 +1,5 @@
+Tasks for general repo chores.
+- setting up pre-commit
+- validating git commit messages
+- running tests
+- bumping versions and building changelogs

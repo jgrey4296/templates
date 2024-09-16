@@ -3,7 +3,7 @@
 .. _index:
 
 ================================
-{{cookiecutter.proj.name}}: The Documentation
+{{cookiecutter.proj_name}}: The Documentation
 ================================
 
 
@@ -28,9 +28,9 @@ Pellentesque dapibus suscipit ligula.  Donec posuere augue in quam.  Etiam vel t
 Repo and Issues
 ---------------
 
-The repo for doot can be found `here <https://github.com/jgrey4296/____>`_.
+The repo for doot can be found `here <https://github.com/jgrey4296/{{cookiecutter.proj_name}}>`_.
 
-If you find a bug, bug me, unsurprisingly, on the `issue tracker <https://github.com/jgrey4296/____/issues>`_.
+If you find a bug, bug me, unsurprisingly, on the `issue tracker <https://github.com/jgrey4296/{{cookiecutter.proj_name}}/issues>`_.
 
 
 
@@ -44,6 +44,7 @@ Indices and Tables
 * :ref:`modindex`
 * :ref:`search`
 
+.. .. Main Sidebar Toctree
 .. toctree::
    :maxdepth: 3
    :hidden:

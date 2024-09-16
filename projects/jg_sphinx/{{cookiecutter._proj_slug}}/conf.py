@@ -8,10 +8,10 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use pl.Path.resolve to make it absolute, like shown here.
 #
-# import os
-# import sys
-# import pathlib as pl
-# sys.path.insert(0, pl.Path('../').resolve())
+import os
+import sys
+import pathlib as pl
+sys.path.insert(0, pl.Path('../').resolve())
 
 # (Relative to this file):
 templates_path   = ['_templates']
@@ -29,9 +29,9 @@ exclude_patterns = ['**/flycheck_*.py', "**/__tests/*"]
 
 # -- Project information -----------------------------------------------------
 
-project   = 'doot'
-copyright = '2024, jgrey'
-author    = 'jgrey'
+project   = '{{cookiecutter.proj_name}}'
+copyright = '2024, {{cookiecutter._author}}'
+author    = '{{cookiecutter._author}}'
 release   = '0.13.0'
 
 # -- General configuration ---------------------------------------------------
@@ -94,5 +94,4 @@ html_theme_options = {
 ##-- end rtd options
 
 # Imports --------------------------------------------------
-# import doot
-# doot._test_setup()
+ # import {{cookiecutter.proj_name}}

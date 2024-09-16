@@ -30,8 +30,8 @@ exclude_patterns = ['**/flycheck_*.py', "**/__tests/*"]
 # -- Project information -----------------------------------------------------
 
 project   = '{{cookiecutter.proj_name}}'
-copyright = '2024, {{cookiecutter.author}}'
-author    = '{{cookiecutter.author}}'
+copyright = '2024, {{cookiecutter._author}}'
+author    = '{{cookiecutter._author}}'
 release   = '0.13.0'
 
 # -- General configuration ---------------------------------------------------
@@ -94,5 +94,4 @@ html_theme_options = {
 ##-- end rtd options
 
 # Imports --------------------------------------------------
-# import doot
-# doot._test_setup()
+ # import {{cookiecutter.proj_name}}

@@ -16,7 +16,6 @@ dependencies:
   - jedi
   - pylint
   - img2pdf
-  - cookiecutter
   - sphinx
   - networkx
   - clingo

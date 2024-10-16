@@ -2,10 +2,12 @@
 # name  : ert-test
 # uuid  : ert-test
 # key   : ert-test
-# group : testing
+# group : testing ert
 # --
-(ert-deftest $1-test-$2 ()
+(ert-deftest `(f-base buffer-file-name)`-$2-test ()
   "Tests $3"
+  :tags '()
+  (`(f-base buffer-file-name)`--setup)
   (should ${0:(equal 0 1)})
   ;;(should-error nil)
   ;;(should-not (1/0) :type 'arith-error)

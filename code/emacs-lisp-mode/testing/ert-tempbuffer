@@ -2,10 +2,12 @@
 # name  : ert-tempbuffer
 # uuid  : ert-tempbuffer
 # key   : ert-tempbuffer
-# group : testing
+# group : testing ert
 # --
-(ert-deftest $1-test-temp-buffer-$2 ()
+(ert-deftest `(f-base buffer-file-name)`-$2-buff-test ()
     "Runs a test in a temp buffer"
+    :tags '(buffer)
+    (`(f-base buffer-file-name)`--setup)
     (with-temp-buffer
         $0
     )

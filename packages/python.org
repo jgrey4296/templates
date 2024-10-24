@@ -31,6 +31,16 @@ https://www.pyopensci.org/python-package-guide/
 ** buildbot
 https://buildbot.net/
 
+** rye                                           :build_tools:
+https://rye.astral.sh/
+
+prefer UV
+
+
+** uv
+https://docs.astral.sh/uv/
+https://github.com/astral-sh/uv
+
 * Main
 https://www.structlog.org/en/stable/
 https://github.com/PrefectHQ/prefect
@@ -207,6 +217,18 @@ python -m trace --ignore-dir=/home/john/_cache_/mamba/envs/default/lib/python3.1
 *** string
 *** stringprep
 *** subprocess
+
+#+NAME: Forking a detached process
+#+begin_src python :results output
+import subprocess
+# Spawns a process that will live beyond the python program
+subprocess.Popen(["python", "-m",  "http.server", "--bind", "127.0.0.1", 80000],
+                 close_fds=True,
+                 stdout=subprocess.DEVNULL,
+                 stderr=subprocess.DEVNULL)
+#+end_src
+
+
 *** symtable
 *** sysconfig
 *** tabnanny
@@ -304,6 +326,11 @@ https://github.com/asaini/Apriori
 https://github.com/ctgk/PRML
 *** returns                                     :monads:
 https://github.com/dry-python/returns
+
+*** foc
+utility functions
+https://github.com/thyeem/foc
+
 ** Apis
 
 *** bytewax
@@ -621,7 +648,10 @@ Machine.first
 statemachine.exceptions.TransitionNotAllowed
 
 #+end_src
-
+*** pipefunc
+lightweight function pipeline
+https://pipefunc.readthedocs.io/en/latest/
+https://github.com/pipefunc/pipefunc
 ** Diagrams
 *** diagrams                                    :system_diagrams:
 https://github.com/mingrammer/diagrams
@@ -1035,7 +1065,7 @@ https://github.com/dermatologist/nlp-qrmine
 *** statsmodels
 https://www.statsmodels.org/stable/index.html
 ** System
-*** pyutil                                      :monitoring:
+*** psutil                                      :monitoring:
 https://github.com/giampaolo/psutil
 *** supervisor
 https://github.com/Supervisor/supervisor
@@ -1089,6 +1119,10 @@ https://github.com/snakemake/snakemake
 https://github.com/leipzig/SandwichesWithSnakemake
 *** vistrails
 https://www.vistrails.org/usersguide/v2.2/html/
+*** cookiecutter
+https://cookiecutter.readthedocs.io/en/stable/README.html
+**** cookiecutter-uv
+https://fpgmaas.github.io/cookiecutter-uv/
 ** Testing
 *** pytest
 https://docs.pytest.org/en/7.3.x/contents.html

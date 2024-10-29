@@ -1,0 +1,2 @@
+Writing Macros:
+\newcommand{\name}[num]{def} # Declaring a macro. use #1, #2.. etc for args

@@ -1,0 +1,14 @@
+Modular Latex Commands:
+
+\input{file}                       # No page break. .ext optional
+\include{file}                     # No nested includes. no .ext. Forces page break.
+\includeonly{files}                # comman sep,no .ext. Limits compilation of includes.
+
+-------------------                # Subfiles package
+\subfile{file}                     # Lets files be full documents.
+\documentclass[main.tex]{subfiles} # For subfiles
+
+-------------------                # Standalone package
+
+
+-------------------                # pdfpages packages

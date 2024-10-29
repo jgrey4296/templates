@@ -914,6 +914,11 @@ https://github.com/ariebovenberg/slotscheck
 https://slotscheck.readthedocs.io/en/latest/
 *** schema                                      :validation:
 https://github.com/keleshev/schema
+*** RST
+https://github.com/PyCQA/doc8
+https://github.com/rstcheck/rstcheck
+https://rstcheck.readthedocs.io/en/latest/
+
 ** Logic
 *** ai-toolbox                                  :MDP:POMDP:
 https://github.com/Svalorzen/AI-Toolbox

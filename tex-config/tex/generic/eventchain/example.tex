@@ -1,0 +1,58 @@
+%% compiler:lualatex
+%% available compilers : lualatex pdflatex xelatex
+\documentclass[12pt]{article}
+% \usepackage[T1,T2A]{fontenc}
+\usepackage{fontspec}
+\usepackage[russian,english]{babel}
+\usepackage{listings}
+\usepackage[version=3]{mhchem}
+\usepackage{url}
+\usepackage[numbers]{natbib}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, pdfstartview=FitH]{hyperref}
+\usepackage{doi}
+\usepackage{eventchain}
+
+
+\title{Test}
+\author{John Grey}
+
+\begin{document}
+
+\begin{eventchain}{Testing}
+  % t:0
+  \eventStart
+  \eventContinue
+  % t:2
+  \begin{changes}[left]
+    blah($ \alpha \omega $) \\
+    bloo\\
+    blee\\
+    blee\\
+  \end{changes}
+  \begin{fluents}[right]
+    \fadd{test} \fadd{blah}
+    \fsub{bloo}
+    \fkeep{blee}
+  \end{fluents}
+  % t:3
+  \begin{changes}[left]
+    aweg\\
+    jiowjeg\\
+    joiawijge\\
+  \end{changes}
+  % t:4
+  \eventFinish
+\end{eventchain}
+
+\begin{eventchain}{Second Test Chain}
+  \eventContinue
+  \eventStart[5]
+  % \EventOccur{}
+  \eventContinue
+\end{eventchain}
+
+
+% \nocite{*}
+% \bibliographystyle{jg_custom}
+% \bibliography{}
+\end{document}

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : web-engine
+# uuid  : web-engine
+# key   : web-engine
+# group : templating web-mode
+# --
+$0 -*- engine: ENGINE_NAME -*-

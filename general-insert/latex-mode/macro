@@ -1,2 +1,15 @@
 Writing Macros:
 \newcommand{\name}[num]{def} # Declaring a macro. use #1, #2.. etc for args
+
+\show\MACRO                  # output expansion in log file
+\meaing\MACRO                # output expansion in document
+
+\tracingall
+\tracingonline
+
+\newcounter{name} #
+\setcounter{name}{val} #
+
+\numexpr \value{name} + 2 #
+
+\the\value{name} #

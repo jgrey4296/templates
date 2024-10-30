@@ -24,3 +24,7 @@ reftex                  # https://www.gnu.org/software/emacs/manual/html_mono/re
 Wikibook Lengths        # https://en.wikibooks.org/wiki/LaTeX/Lengths
 Overleaf Lengths        # https://www.overleaf.com/learn/latex/Lengths_in_LaTeX
 CTan Classes            # https://ctan.org/topic/class
+
+TexDoc.org              # https://texdoc.org/index.html
+Wikibook Macros         # https://en.m.wikibooks.org/wiki/LaTeX/Macros
+E-tex toolbook          # https://www.ctan.org/pkg/etoolbox

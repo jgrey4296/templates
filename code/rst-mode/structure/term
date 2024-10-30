@@ -2,6 +2,6 @@
 # name: term
 # key: term
 # uuid: term
-# group: meta struct sphinx
+# group: meta struct sphinx glossary
 # --
 :term:\`$0\`

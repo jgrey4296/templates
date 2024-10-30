@@ -11,7 +11,7 @@ doc_out = "{temp}/docs"
 
 [[tasks.docs]]
 disabled = true
-name    = "server"
+name    = "_.server"
 doc     = ["run a simple server in the built docs directory", "forks to run separate from doot"]
 address = "127.0.0.1"
 port    = "8000"
@@ -21,7 +21,7 @@ actions = [
 
 [[tasks.docs]]
 disabled = true
-name        = "build"
+name        = "_.build"
 doc         = ["build sphinx project documentation"]
 ctor        = "task"
 doc_builder = "html"
@@ -49,7 +49,7 @@ cleanup = []
 
 [[tasks.docs]]
 disabled = true
-name        = "test"
+name        = "_.test"
 doc         = ["run sphinx doctest"]
 ctor        = "task"
 doc_builder = "doctest"

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : keyword
+# uuid  : keyword
+# key   : keyword
+# group : org
+# --
+#+$1: $0

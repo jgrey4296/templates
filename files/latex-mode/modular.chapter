@@ -1,0 +1,34 @@
+%% compiler:pdflatex
+%% available compilers : lualatex pdflatex xelatex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, pdfstartview=FitH]{hyperref}
+\usepackage[numbers]{natbib}
+\usepackage[russian,english]{babel}
+\usepackage[version=3]{mhchem}
+\usepackage{doi}
+\usepackage{listings}
+\usepackage{titlelink}
+\usepackage{url}
+
+\IfStandalone{
+  \title{\titlelink{${1:Title}}{}}
+  \author{Stephanie Kim}
+  \date{May 11, 2022}
+  \setlength{\parskip}{2em}
+}{}
+
+\begin{document}
+
+\IfStandalone{\maketitle}{
+  \chapterlink* {$1} {}
+}
+
+# Content:
+
+
+
+\nocite{*}
+\bibliographystyle{jg_custom.bst}
+\bibliography{}
+\end{document}

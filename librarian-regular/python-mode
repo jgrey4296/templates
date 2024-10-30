@@ -170,3 +170,4 @@ liquid                                               # https://jg-rp.github.io/l
 anti-patterns                                        # https://docs.quantifiedcode.com/python-anti-patterns/index.html
 supervisor                                           # http://supervisord.org/index.html
 psutil                                               # https://psutil.readthedocs.io/en/latest/#
+typeshed                                             # https://github.com/python/typeshed

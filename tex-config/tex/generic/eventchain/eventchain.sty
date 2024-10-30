@@ -1,0 +1,119 @@
+%% __sty -*- mode: LaTeX -*-
+
+% Package ID:
+\ProvidesPackage{eventchain}
+\NeedsTeXFormat{LaTeX2e}
+
+%%-- Options
+
+%%-- Package Loads
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage{longtable}
+\usepackage{tikz}
+\usepackage{etoolbox}
+\usepackage{environ}
+\usepackage{ulem}
+\usetikzlibrary{shadows}
+\usetikzlibrary{decorations}
+\usetikzlibrary{shapes}
+\usetikzlibrary{arrows}
+\usetikzlibrary{calc}
+\usetikzlibrary{fit}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{positioning}
+\usetikzlibrary{chains}
+% \usetikzlibrary{graphs}
+\usetikzlibrary{scopes}
+
+%%-- Variables
+% \newlength{\eventchainWidth}
+% \setlength{\eventchainWidth}{5cm}
+
+\newcounter{eventcount}
+\setcounter{eventcount}{-1}
+
+\newsavebox{\eventchainCaption}
+\newsavebox{\eventchainLastNode}
+
+%%-- Environments
+%% TODO: going right
+\NewEnviron{eventchain}[1] {
+  \begin{figure*}
+    \begin{longtable}{@{}l@{}}
+      \begin{tikzpicture}[
+        start chain=trace going below,
+        node distance=1cm and 1cm,
+        every node/.style={draw, circle},
+        ]
+        \BODY
+      \end{tikzpicture}
+    \end{longtable}
+    \caption{ #1 }
+  \end{figure*}
+}
+
+\NewEnviron{changes}[1][left]{
+  %% Insert Event descriptions in between states, and increment the time step
+  { [continue chain=trace]
+    \node [on chain=trace, shape=coordinate] (mid_\eventNodeName) {};
+    \node [on chain=trace] (\eventNodeName) { \eventNodeContent };
+    \draw (\eventNodeNameLast) -- (mid_\eventNodeName) ;
+    \draw (mid_\eventNodeName) -- (\eventNodeName) ;
+  }
+  {
+    \draw (mid_\eventNodeName) node[-latex, draw=none, shape=rectangle, #1=1cm, name=text_\eventNodeNameLast, label=#1:\emph{Ev}:] {
+      \begin{tabular}{l}
+        \BODY
+        \end{tabular} } ;
+      \draw (mid_\eventNodeName) --  (text_\eventNodeNameLast);
+      \stepcounter{eventcount};
+    }
+  }
+
+\NewEnviron{fluents}[1][left]{
+  %% Annotate a timestep with fluent addition,retraction,and continuation
+  {
+    \draw (\eventNodeNameLast) node[-latex, shape=rectangle, rounded corners, #1=1cm, name=fluents_\eventNodeNameLast, label=#1:\emph{Fl}:] {
+      \begin{tabular}{ l c }
+      \BODY
+      \end{tabular} } ;
+    \draw (\eventNodeNameLast) -- (fluents_\eventNodeNameLast) ;
+  }
+}
+
+%%-- Commands
+\providecommand{\eventNodeContent}[0]{$ S_{\the\value{eventcount}} $}
+
+\providecommand*{\eventNodeNameS}[1]{$trace_{#1}$}
+\providecommand*{\eventNodeName}[0]{\eventNodeNameS{\the\value{eventcount}}}
+\providecommand{\eventNodeNameLast}[0]{\eventNodeNameS{\the\numexpr \value{eventcount} - 1}}
+
+\providecommand{\eventStart}[1][0]{
+  % Start at time [0]
+  { \setcounter{eventcount}{#1} }
+  { [continue chain=trace]
+    \node [on chain=trace, join] (\eventNodeName) { \eventNodeContent };
+  }
+  { \stepcounter{eventcount} }
+}
+
+\providecommand{\eventContinue}[1][1]{
+  % Insert an Ellipses Node and increment time by [1]
+  { [continue chain=trace]
+    \node [on chain=trace, join, draw=none] (\eventNodeName) { \ldots } ;
+  }
+  { \addtocounter{eventcount}{#1} }
+}
+
+\providecommand{\eventFinish}[0]{
+  % Finish with the Null Set
+  { [continue chain=trace]
+    \node [on chain=trace, join] (\eventNodeNameS{-1}) { \emptyset{} } ;
+  }
+}
+
+% Fluent Macros
+\providecommand{\fadd}[1]{\texttt{\textbf{#1}} & +\\}
+\providecommand{\fsub}[1]{\sout{\texttt{#1}} & -\\}
+\providecommand{\fkeep}[1]{\texttt{#1} & =\\}

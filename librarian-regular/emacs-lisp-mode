@@ -36,3 +36,4 @@ EDiff                  # https://www.gnu.org/software/emacs/manual/html_mono/edi
 EShell                 # https://www.gnu.org/software/emacs/manual/html_mono/eshell.html
 EWW                    # https://www.gnu.org/software/emacs/manual/html_mono/eww.html
 babel                  # https://orgmode.org/worg/org-contrib/babel/
+elpaca                 # https://github.com/progfolio/elpaca

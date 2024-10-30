@@ -1,5 +1,10 @@
-MDN # https://developer.mozilla.org/en-US/docs/Web/HTML
-Elements # https://developer.mozilla.org/en-US/docs/Web/HTML/Element
-Attributes # https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes
-Globals # https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes
-Content # https://developer.mozilla.org/en-US/docs/Web/HTML/Content_categories
+MDN           # https://developer.mozilla.org/en-US/docs/Web/HTML
+Elements               # https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+Attributes             # https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes
+Globals                # https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes
+Content                # https://developer.mozilla.org/en-US/docs/Web/HTML/Content_categories
+Web-mode               # https://web-mode.org/
+Jinja Filters          # https://jinja.palletsprojects.com/en/stable/templates/#list-of-builtin-filters
+Jinja Tests            # https://jinja.palletsprojects.com/en/stable/templates/#list-of-builtin-tests
+Jinja Global Functions # https://jinja.palletsprojects.com/en/stable/templates/#list-of-global-functions
+Jinja Control Structs  # https://jinja.palletsprojects.com/en/stable/templates/#list-of-control-structures

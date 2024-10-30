@@ -1,0 +1,16 @@
+RST/Sphinx Admonitions:
+attention      #
+caution        #
+danger         #
+error          #
+hint           #
+important      #
+note           #
+tip            #
+warning        #
+admonition     # add a title
+seealso        #
+versionadded   # version [explanation]
+versionchanged # version [explanation]
+deprecated     # version [explanation]
+versionremoved # version [explanation]

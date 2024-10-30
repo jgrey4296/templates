@@ -4,4 +4,4 @@
 # key   : inline_code
 # group : sphinx code
 # --
-``${1:inline code}``
+\`\`${1:inline code}\`\`

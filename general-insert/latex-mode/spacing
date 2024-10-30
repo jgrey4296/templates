@@ -6,7 +6,7 @@ Spacing:
 \par                                                                              # breaks
 
 \vspace{amnt}                                                                     # vertical space
-\hspace{amnt}                                                                           # horizontal space
+\hspace{amnt}                                                                     # horizontal space
 
 \smallskip # vertical skips
 \medskip   # vertical skips

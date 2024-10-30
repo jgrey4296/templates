@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name  : subfiles-cmds
+# uuid  : subfles-cmds
+# key   : subfiles-cmds
+# group : modular util macro
+# --
+\newcommand{\onlyinsubfile}[1]{} % For when compiled from root
+\newcommand{\notinsubfile}[1]{#1} % For Sub compile
+
+% Override after \begin{document}, disable notinsubfile:
+% \renewcommand{\onlyinsubfile}[1]{#1}
+% \renewcommand{\notinsubfile}[1]{}

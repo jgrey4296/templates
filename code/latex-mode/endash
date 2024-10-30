@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : endash
+# uuid  : endash
+# key   : endash
+# group : dash formatting
+# --
+\textendash{} $0

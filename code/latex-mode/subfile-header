@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : subfile-header
+# uuid  : subfile-header
+# key   : subfile-header
+# group : modular
+# --
+\documentclass[$1.tex]{subfiles}
+% use \onlyinsubfile and \notinsubfile

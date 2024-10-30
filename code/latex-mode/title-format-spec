@@ -1,0 +1,21 @@
+# -*- mode: snippet -*-
+# name  : title-format-spec
+# uuid  : title-format-spec
+# key   : title-format-spec
+# group : book modular title
+# --
+\titleformat
+{\\${1:chapter} } % command
+[${2:display}]  % shape
+{\bfseries\Large\itshape} % format
+{\\${3:thechapter} } % label
+{0.5ex} % sep
+{ % before-code
+    \rule{\textwidth}{1pt}
+    \vspace{1ex}
+    \centering
+}
+[% after-code
+\vspace{-0.5ex}%
+\rule{\textwidth}{0.3pt}
+] $0

@@ -96,11 +96,11 @@ function report-emacs () {
 }
 
 function emacs (){
-    `$jg_use_EMACS -nw`
+    `$jg_use_EMACS -nw $@`
 }
 
 function emacsw() {
-    `$jg_use_EMACS`
+    `$jg_use_EMACS $@`
 }
 
 export jg_use_EMACS

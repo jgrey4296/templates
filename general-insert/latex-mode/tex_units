@@ -1,0 +1,27 @@
+Latex Units and Lengths:
+# https://www.overleaf.com/learn/latex/Lengths_in_LaTeX
+
+pt                          # point
+mm                          # millimeter
+cm                          # centimeter
+in                          # inch
+ex                          # heigh of lowercase x in current font
+em                          # width of uppercase M in current font
+mu                          # 1/18 em
+sp                          # special low-level point. 65536sp=1pt
+
+\setlength{\name}{val}      #
+\baselineskip               # vertical distance between lines in paragraph
+\columnsep                  # distance between columns
+\columnwidth                #
+\evensidemargin             #
+\linewidth                  #
+\oddsidemargin              #
+\paperwidth                 #
+\paperheight                #
+\parindent                  #
+\parskip                    # vertical space between paragraphs
+\tabcolsep                  # column space in tables
+\textheight                 # of the page
+\textwidth                  # of the page
+\topmargin                  #

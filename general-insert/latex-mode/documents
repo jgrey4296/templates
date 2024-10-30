@@ -1,0 +1,12 @@
+Latex Document Types:
+article                      #
+IEEEtran                     #
+proc                         #
+minimal                      #
+report                       #
+book                         #
+slides                       #
+memoir                       #
+letter                       #
+beamer                       #
+https://ctan.org/topic/class # More

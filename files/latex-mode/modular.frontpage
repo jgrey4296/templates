@@ -1,0 +1,32 @@
+%% compiler:pdflatex
+%% available compilers : lualatex pdflatex xelatex
+\documentclass[12pt]{book}
+\usepackage[subpreambles=true]{standalone} % <--- for merging files
+\usepackage{import}                        % <--- for better importing
+\usepackage[Conny]{fncychap}               % <----
+\usepackage[T1,T2A]{fontenc}
+\usepackage[russian,english]{babel}
+\usepackage[version=3]{mhchem}
+\usepackage{listings}
+\usepackage[numbers]{natbib}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, pdfstartview=FitH]{hyperref}
+\usepackage{doi}
+\usepackage{titlelink}
+
+\title{${1:Book Title}}
+\author{${2:Book Author}}
+
+\begin{document}
+\frontmatter
+\maketitle
+\tableofcontents
+
+\mainmatter
+\setlength{\parskip}{1.5em}
+
+\import{./}{${3:a_chapter}}
+
+\nocite{*}
+% \bibliographystyle{jg_custom.bst}
+% \bibliography{}
+\end{document}

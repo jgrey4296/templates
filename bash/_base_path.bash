@@ -5,6 +5,7 @@ jgdebug Setting Initial Path
 export BASE_CACHE="$HOME/_cache_"
 export BASE_CONFIG="$HOME/.config"
 export XDG_CONFIG_HOME="$BASE_CONFIG"
+export XDG_CACHE_DIR="$BASE_CACHE"
 export JG_CONFIG="$HOME/github/_templates"
 export GH_CONFIG_DIR="$BASE_CONFIG/gh"
 export SECRETSDIR="$BASE_CONFIG/secrets"

@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name  : ert-test-struct
+# uuid  : ert-test-struct
+# key   : ert-test-struct
+# group : ert lisp testing
+# --
+(ert-deftest `(f-base buffer-file-name)`-$1-struct-test ()
+    "Basic Test of $1"
+    :tags '(struct)
+    (`(f-base buffer-file-name)`--setup)
+    (let ((res (${2:make-$1})))
+         (should res)
+         (should ($1-p res))
+         $0
+    )
+)

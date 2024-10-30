@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : subfiles
+# uuid  : subfiles
+# key   : subfiles
+# group : modular
+# --
+\usepackage{subfiles} % and subfiles-cmds

@@ -168,3 +168,6 @@ pyaml                                                # https://pyyaml.org/
 pyo3                                                 # https://pyo3.rs/v0.22.2/
 liquid                                               # https://jg-rp.github.io/liquid/introduction/getting-started
 anti-patterns                                        # https://docs.quantifiedcode.com/python-anti-patterns/index.html
+supervisor                                           # http://supervisord.org/index.html
+psutil                                               # https://psutil.readthedocs.io/en/latest/#
+typeshed                                             # https://github.com/python/typeshed

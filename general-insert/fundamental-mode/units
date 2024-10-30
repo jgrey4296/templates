@@ -1,0 +1,41 @@
+International System of Units:
+second       # time                      : base unit
+metre        # length                    : base unit
+kilogram     # mass                      : base unit
+ampere       # electrical current        : base unit
+kelvin       # thermodynamic temperature : base unit
+mole         # amount of substance       : base unit
+candela      # luminour intensity        : base unit
+
+radian       # plane angel               : derived unit
+steradian    # solid angel               : derived unit
+hertz        # frequency                 : derived unit
+newton       # force                     : derived unit
+pascal       # pressure                  : derived unit
+joule        # energy                    : derived unit
+watt         # power                     : derived unit
+coulomb      # electric charge           : derived unit
+volt         # electric potential        : derived unit
+farad        # electic capacitance       : derived unit
+ohm          # electric resistance       : derived unit
+siemens      # electric conductance      : derived unit
+weber        # magnetic flux             : derived unit
+tesla        # magnetic flux density     : derived unit
+henry        # inductance                : derived unit
+celsius      # temperature               : derived unit
+lumen        # luminous flux             : derived unit
+lux          # illuminance               : derived unit
+becquerel    # radionuclide activity     : derived unit
+gray         # absorbed dose             : derived unit
+sievert      # equivalent dose           : derived unit
+katal        # catalytic activity        : derived unit
+
+velocity     #
+acceleration #
+force        #
+energy       #
+power        #
+intensity    #
+
+Source       # https://en.m.wikipedia.org/wiki/International_System_of_Units
+Source2      # https://en.m.wikipedia.org/wiki/International_System_of_Quantities

@@ -27,6 +27,18 @@ https://betterstack.com/community/guides/logging/best-python-logging-libraries/
 ** pyopensci
 https://www.pyopensci.org/python-package-guide/
 
+** buildbot
+https://buildbot.net/
+
+** rye                                           :build_tools:
+https://rye.astral.sh/
+
+prefer UV
+
+** uv
+https://docs.astral.sh/uv/
+https://github.com/astral-sh/uv
+
 * Main
 https://www.structlog.org/en/stable/
 https://github.com/PrefectHQ/prefect
@@ -203,6 +215,17 @@ python -m trace --ignore-dir=/home/john/_cache_/mamba/envs/default/lib/python3.1
 *** string
 *** stringprep
 *** subprocess
+
+#+NAME: Forking a detached process
+#+begin_src python :results output
+import subprocess
+# Spawns a process that will live beyond the python program
+subprocess.Popen(["python", "-m",  "http.server", "--bind", "127.0.0.1", 80000],
+                 close_fds=True,
+                 stdout=subprocess.DEVNULL,
+                 stderr=subprocess.DEVNULL)
+#+end_src
+
 *** symtable
 *** sysconfig
 *** tabnanny
@@ -300,6 +323,11 @@ https://github.com/asaini/Apriori
 https://github.com/ctgk/PRML
 *** returns                                     :monads:
 https://github.com/dry-python/returns
+
+*** foc
+utility functions
+https://github.com/thyeem/foc
+
 ** Apis
 
 *** bytewax
@@ -617,7 +645,10 @@ Machine.first
 statemachine.exceptions.TransitionNotAllowed
 
 #+end_src
-
+*** pipefunc
+lightweight function pipeline
+https://pipefunc.readthedocs.io/en/latest/
+https://github.com/pipefunc/pipefunc
 ** Diagrams
 *** diagrams                                    :system_diagrams:
 https://github.com/mingrammer/diagrams
@@ -706,18 +737,26 @@ https://pandoc.org/index.html
 *** pdfs
 **** borb
 https://github.com/jorisschellekens/borb
+
 **** xmp-toolkit
 https://python-xmp-toolkit.readthedocs.io/en/latest/
+
 **** pdfrw
 https://github.com/pmaupin/pdfrw/
+
 **** pikepdf
 https://pikepdf.readthedocs.io/en/latest/index.html
+
 *** python-bibtexparser                         :bibtex:
 https://github.com/sciunto-org/python-bibtexparser
+
 *** pelican                                     :static_site_generator:
 https://docs.getpelican.com/en/latest/
+
 *** sphinx                                      :documentation:
 https://www.sphinx-doc.org/en/master/contents.html
+https://github.com/sphinx-doc/sphinx
+
 
 *** sphinx-extensions
 https://github.com/sphinx-contrib/
@@ -727,7 +766,6 @@ https://myst-parser.readthedocs.io/en/latest/intro.html
 
 **** autoapi
 https://sphinx-autoapi.readthedocs.io/en/latest/
-
 
 **** autodoc
 https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html#module-sphinx.ext.autodoc
@@ -880,6 +918,11 @@ https://github.com/ariebovenberg/slotscheck
 https://slotscheck.readthedocs.io/en/latest/
 *** schema                                      :validation:
 https://github.com/keleshev/schema
+*** RST
+https://github.com/PyCQA/doc8
+https://github.com/rstcheck/rstcheck
+https://rstcheck.readthedocs.io/en/latest/
+
 ** Logic
 *** ai-toolbox                                  :MDP:POMDP:
 https://github.com/Svalorzen/AI-Toolbox
@@ -1031,10 +1074,13 @@ https://github.com/dermatologist/nlp-qrmine
 *** statsmodels
 https://www.statsmodels.org/stable/index.html
 ** System
-*** pyutil                                      :monitoring:
+*** psutil                                      :monitoring:
 https://github.com/giampaolo/psutil
 *** supervisor
 https://github.com/Supervisor/supervisor
+*** python-sdbus
+https://github.com/python-sdbus/python-sdbus
+https://python-sdbus.readthedocs.io/en/latest/index.html
 ** Task runners
 *** bonobo
 https://docs.bonobo-project.org/en/master/
@@ -1085,6 +1131,10 @@ https://github.com/snakemake/snakemake
 https://github.com/leipzig/SandwichesWithSnakemake
 *** vistrails
 https://www.vistrails.org/usersguide/v2.2/html/
+*** cookiecutter
+https://cookiecutter.readthedocs.io/en/stable/README.html
+**** cookiecutter-uv
+https://fpgmaas.github.io/cookiecutter-uv/
 ** Testing
 *** pytest
 https://docs.pytest.org/en/7.3.x/contents.html
@@ -1116,9 +1166,11 @@ https://github.com/jg-rp/liquid
 https://jg-rp.github.io/liquid/
 https://jg-rp.github.io/liquid/introduction/getting-started
 **** jinja2                                    :macros:template:
-https://jinja.palletsprojects.com/en/3.1.x/
-**** jinja                                       :template:
-https://palletsprojects.com/p/jinja/
+https://jinja.palletsprojects.com/en/stable
+
+#+begin_src bash
+pip install Jinja2
+#+end_src
 *** nlp
 **** inflect                                   :inflection:plural:
 https://github.com/jaraco/inflect

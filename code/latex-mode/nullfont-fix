@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : nullfont-fix
+# uuid  : nullfont-fix
+# key   : nullfont-fix
+# group : font fix
+# --
+\font\nullfont=cmr10$0

@@ -1,4 +1,5 @@
-Latex Wikibook     # https://en.m.wikibooks.org/wiki/LaTeX
+
+Latex Wikibook          # https://en.m.wikibooks.org/wiki/LaTeX
 CTAN packages           # https://www.ctan.org/pkg/latex
 Overleaf docs           # https://www.overleaf.com/learn
 Latex Tutorial          # https://latex-tutorial.com/
@@ -15,6 +16,15 @@ Logic Symbols List      # https://oeis.org/wiki/List_of_LaTeX_mathematical_symbo
 Detexify                # http://detexify.kirelabs.org/classify.html
 Docs                    # https://www.latex-project.org/help/documentation/
 hboxes                  # https://www.overleaf.com/learn/how-to/Understanding_underfull_and_overfull_box_warnings#Why_the_Warning_Happens
-biblatex                # https://en.wikibooks.org/wiki/LaTeX/Bibliographies_with_biblatex_and_biber
+biblatex Wikibook       # https://en.wikibooks.org/wiki/LaTeX/Bibliographies_with_biblatex_and_biber
+biblatex ctan           # https://www.ctan.org/pkg/biber
 Tex Directory Structure # berry04:_direc_struc_tex_files_
 reftex                  # https://www.gnu.org/software/emacs/manual/html_mono/reftex.html
+
+Wikibook Lengths        # https://en.wikibooks.org/wiki/LaTeX/Lengths
+Overleaf Lengths        # https://www.overleaf.com/learn/latex/Lengths_in_LaTeX
+CTan Classes            # https://ctan.org/topic/class
+
+TexDoc.org              # https://texdoc.org/index.html
+Wikibook Macros         # https://en.m.wikibooks.org/wiki/LaTeX/Macros
+E-tex toolbook          # https://www.ctan.org/pkg/etoolbox

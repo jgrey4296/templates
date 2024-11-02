@@ -1,0 +1,167 @@
+RST and Sphinx Classes # Sphinx
+Node                                                                                   # RST Base
+Element(Node)                                                                          # RST Base
+
+Admonition(Body)                                                                       # RST Base
+Decorative(PreBibliographic)                                                           # RST Base
+FixedTextElement(TextElement)                                                          # RST Base
+General(Body)                                                                          # RST Base
+Invisible(PreBibliographic)                                                            # RST Base
+PreBibliographic                                                                       # RST Base
+Referential(Resolvable)                                                                # RST Base
+Sequential(Body)                                                                       # RST Base
+Special(Body)                                                                          # RST Base
+Targetable(Resolvable)                                                                 # RST Base
+Text(Node, str)                                                                        # RST Base
+TextElement(Element)                                                                   # RST Base
+abbreviation(Inline, TextElement)                                                      # RST Base
+acronym(Inline, TextElement)                                                           # RST Base
+address(Bibliographic, FixedTextElement)                                               # RST Base
+admonition(Admonition, Element)                                                        # RST Base
+attention(Admonition, Element)                                                         # RST Base
+attribution(Part, TextElement)                                                         # RST Base
+author(Bibliographic, TextElement)                                                     # RST Base
+authors(Bibliographic, Element)                                                        # RST Base
+block_quote(General, Element)                                                          # RST Base
+bullet_list(Sequential, Element)                                                       # RST Base
+caption(Part, TextElement)                                                             # RST Base
+caution(Admonition, Element)                                                           # RST Base
+citation(General, BackLinkable, Element, Labeled, Targetable)                          # RST Base
+citation_reference(Inline, Referential, TextElement)                                   # RST Base
+classifier(Part, TextElement)                                                          # RST Base
+colspec(Part, Element)                                                                 # RST Base
+comment(Special, Invisible, FixedTextElement)                                          # RST Base
+compound(General, Element)                                                             # RST Base
+contact(Bibliographic, TextElement)                                                    # RST Base
+container(General, Element)                                                            # RST Base
+copyright(Bibliographic, TextElement)                                                  # RST Base
+danger(Admonition, Element)                                                            # RST Base
+date(Bibliographic, TextElement)                                                       # RST Base
+decoration(Decorative, Element)                                                        # RST Base
+definition(Part, Element)                                                              # RST Base
+definition_list(Sequential, Element)                                                   # RST Base
+definition_list_item(Part, Element)                                                    # RST Base
+description(Part, Element)                                                             # RST Base
+docinfo(Bibliographic, Element)                                                        # RST Base
+doctest_block(General, FixedTextElement)                                               # RST Base
+document(Root, Structural, Element)                                                    # RST Base
+emphasis(Inline, TextElement)                                                          # RST Base
+entry(Part, Element)                                                                   # RST Base
+enumerated_list(Sequential, Element)                                                   # RST Base
+error(Admonition, Element)                                                             # RST Base
+field(Part, Element)                                                                   # RST Base
+field_body(Part, Element)                                                              # RST Base
+field_list(Sequential, Element)                                                        # RST Base
+field_name(Part, TextElement)                                                          # RST Base
+figure(General, Element)                                                               # RST Base
+footer(Decorative, Element)                                                            # RST Base
+footnote(General, BackLinkable, Element, Labeled, Targetable)                          # RST Base
+footnote_reference(Inline, Referential, TextElement)                                   # RST Base
+generated(Inline, TextElement)                                                         # RST Base
+header(Decorative, Element)                                                            # RST Base
+hint(Admonition, Element)                                                              # RST Base
+image(General, Inline, Element)                                                        # RST Base
+important(Admonition, Element)                                                         # RST Base
+inline(Inline, TextElement)                                                            # RST Base
+label(Part, TextElement)                                                               # RST Base
+legend(Part, Element)                                                                  # RST Base
+line(Part, TextElement)                                                                # RST Base
+line_block(General, Element)                                                           # RST Base
+list_item(Part, Element)                                                               # RST Base
+literal(Inline, TextElement)                                                           # RST Base
+literal_block(General, FixedTextElement)                                               # RST Base
+math(Inline, TextElement)                                                              # RST Base
+math_block(General, FixedTextElement)                                                  # RST Base
+meta(PreBibliographic, Element)                                                        # RST Base
+note(Admonition, Element)                                                              # RST Base
+option(Part, Element)                                                                  # RST Base
+option_argument(Part, TextElement)                                                     # RST Base
+option_group(Part, Element)                                                            # RST Base
+option_list(Sequential, Element)                                                       # RST Base
+option_list_item(Part, Element)                                                        # RST Base
+option_string(Part, TextElement)                                                       # RST Base
+organization(Bibliographic, TextElement)                                               # RST Base
+paragraph(General, TextElement)                                                        # RST Base
+pending(Special, Invisible, Element)                                                   # RST Base
+problematic(Inline, TextElement)                                                       # RST Base
+raw(Special, Inline, PreBibliographic, FixedTextElement)                               # RST Base
+reference(General, Inline, Referential, TextElement)                                   # RST Base
+reprunicode(str)                                                                       # RST Base
+revision(Bibliographic, TextElement)                                                   # RST Base
+row(Part, Element)                                                                     # RST Base
+rubric(Titular, TextElement)                                                           # RST Base
+section(Structural, Element)                                                           # RST Base
+sidebar(Structural, Element)                                                           # RST Base
+status(Bibliographic, TextElement)                                                     # RST Base
+strong(Inline, TextElement)                                                            # RST Base
+subscript(Inline, TextElement)                                                         # RST Base
+substitution_definition(Special, Invisible, TextElement)                               # RST Base
+substitution_reference(Inline, TextElement)                                            # RST Base
+subtitle(Titular, PreBibliographic, TextElement)                                       # RST Base
+superscript(Inline, TextElement)                                                       # RST Base
+system_message(Special, BackLinkable, PreBibliographic, Element)                       # RST Base
+table(General, Element)                                                                # RST Base
+target(Special, Invisible, Inline, TextElement, Targetable)                            # RST Base
+tbody(Part, Element)                                                                   # RST Base
+term(Part, TextElement)                                                                # RST Base
+tgroup(Part, Element)                                                                  # RST Base
+thead(Part, Element)                                                                   # RST Base
+tip(Admonition, Element)                                                               # RST Base
+title(Titular, PreBibliographic, TextElement)                                          # RST Base
+title_reference(Inline, TextElement)                                                   # RST Base
+topic(Structural, Element)                                                             # RST Base
+transition(Structural, Element)                                                        # RST Base
+version(Bibliographic, TextElement)                                                    # RST Base
+warning(Admonition, Element)                                                           # RST Base
+
+
+document(nodes.document)                                                               # Sphinx
+translatable(nodes.Node)                                                               # Sphinx
+toctree(nodes.General, nodes.Element, translatable)                                    # Sphinx
+desc(nodes.Admonition, nodes.Element)                                                  # Sphinx
+desc_signature(_desc_classes_injector, nodes.Part, nodes.Inline, nodes.TextElement)    # Sphinx
+desc_signature_line(nodes.Part, nodes.Inline, nodes.FixedTextElement)                  # Sphinx
+desc_content(nodes.General, nodes.Element)                                             # Sphinx
+desc_inline(_desc_classes_injector, nodes.Inline, nodes.TextElement)                   # Sphinx
+desc_name(_desc_classes_injector, nodes.Part, nodes.Inline, nodes.FixedTextElement)    # Sphinx
+desc_addname(_desc_classes_injector, nodes.Part, nodes.Inline, nodes.FixedTextElement) # Sphinx
+desc_type(nodes.Part, nodes.Inline, nodes.FixedTextElement)                            # Sphinx
+desc_returns(desc_type)                                                                # Sphinx
+desc_parameterlist(nodes.Part, nodes.Inline, nodes.FixedTextElement)                   # Sphinx
+desc_type_parameter_list(nodes.Part, nodes.Inline, nodes.FixedTextElement)             # Sphinx
+desc_parameter(nodes.Part, nodes.Inline, nodes.FixedTextElement)                       # Sphinx
+desc_type_parameter(nodes.Part, nodes.Inline, nodes.FixedTextElement)                  # Sphinx
+desc_optional(nodes.Part, nodes.Inline, nodes.FixedTextElement)                        # Sphinx
+desc_annotation(nodes.Part, nodes.Inline, nodes.FixedTextElement)                      # Sphinx
+desc_sig_element(nodes.inline, _desc_classes_injector)                                 # Sphinx
+desc_sig_space(desc_sig_element, _sig_element=True)                                    # Sphinx
+desc_sig_name(desc_sig_element, _sig_element=True)                                     # Sphinx
+desc_sig_operator(desc_sig_element, _sig_element=True)                                 # Sphinx
+desc_sig_punctuation(desc_sig_element, _sig_element=True)                              # Sphinx
+desc_sig_keyword(desc_sig_element, _sig_element=True)                                  # Sphinx
+desc_sig_keyword_type(desc_sig_element, _sig_element=True)                             # Sphinx
+desc_sig_literal_number(desc_sig_element, _sig_element=True)                           # Sphinx
+desc_sig_literal_string(desc_sig_element, _sig_element=True)                           # Sphinx
+desc_sig_literal_char(desc_sig_element, _sig_element=True)                             # Sphinx
+versionmodified(nodes.Admonition, nodes.TextElement)                                   # Sphinx
+seealso(nodes.Admonition, nodes.Element)                                               # Sphinx
+productionlist(nodes.Admonition, nodes.Element)                                        # Sphinx
+production(nodes.Part, nodes.Inline, nodes.FixedTextElement)                           # Sphinx
+index(nodes.Invisible, nodes.Inline, nodes.TextElement)                                # Sphinx
+centered(nodes.Part, nodes.TextElement)                                                # Sphinx
+acks(nodes.Element)                                                                    # Sphinx
+hlist(nodes.Element)                                                                   # Sphinx
+hlistcol(nodes.Element)                                                                # Sphinx
+compact_paragraph(nodes.paragraph)                                                     # Sphinx
+glossary(nodes.Element)                                                                # Sphinx
+only(nodes.Element)                                                                    # Sphinx
+start_of_file(nodes.Element)                                                           # Sphinx
+highlightlang(nodes.Element)                                                           # Sphinx
+tabular_col_spec(nodes.Element)                                                        # Sphinx
+pending_xref(nodes.Inline, nodes.Element)                                              # Sphinx
+pending_xref_condition(nodes.Inline, nodes.TextElement)                                # Sphinx
+number_reference(nodes.reference)                                                      # Sphinx
+download_reference(nodes.reference)                                                    # Sphinx
+literal_emphasis(nodes.emphasis, not_smartquotable)                                    # Sphinx
+literal_strong(nodes.strong, not_smartquotable)                                        # Sphinx
+manpage(nodes.Inline, nodes.FixedTextElement)                                          # Sphinx

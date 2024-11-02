@@ -32,3 +32,4 @@ Theme : Readable                   # https://sphinx-themes.org/sample-sites/sphi
 RST Roles                          # https://docutils.sourceforge.io/docs/ref/rst/roles.html
 RST Math                           # https://docutils.sourceforge.io/docs/ref/rst/mathematics.html
 RST Document Tree                  # https://docutils.sourceforge.io/docs/ref/doctree.html
+RSG Reference                      # https://documatt.com/restructuredtext-reference/index.html

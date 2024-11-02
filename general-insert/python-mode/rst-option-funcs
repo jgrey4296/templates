@@ -1,0 +1,17 @@
+RST Option Parse Functions (docutils.parsers.rst.directives):
+flag                                 #
+unchanged_required                   #
+unchanged                            #
+path                                 #
+uri                                  #
+nonnegative_int                      #
+class_option                         #
+unicode_code                         #
+single_char_or_unicode               #
+single_char_or_whitespace_or_unicode #
+positive_int                         #
+positive_int_list                    #
+encoding                             #
+choice                               #
+
+(or use a type ctor)                 #

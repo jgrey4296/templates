@@ -276,6 +276,9 @@ determine the exact padding."
    ;; Workspace
    ((+workspace-tab-selected-face &override) :background (doom-darken magenta 0.4))
 
+   ;; highlight indents
+   ((highlight-indent-guides-character-face &override) :background red)
+
    ;; Base theme variable overrides-
    ;;()
    )

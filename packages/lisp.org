@@ -49,6 +49,9 @@ https://github.com/wbolster/emacs-python-coverage
 ** buttercup                                     :testing:
 https://github.com/jorgenschaefer/emacs-buttercup
 
+** emacs-webdriver
+https://gitlab.com/mauroaranda/emacs-webdriver
+
 * python envs
 ** pythonic
 https://github.com/pythonic-emacs/pythonic

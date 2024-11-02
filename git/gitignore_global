@@ -93,4 +93,12 @@ log.*
 *.auctex
 
 # doot
-.doot_defaults.toml
+*.doot_defaults.toml
+
+# Latex
+*.aux
+*.out
+*.sta
+*.toc
+*.bbl
+*.blg

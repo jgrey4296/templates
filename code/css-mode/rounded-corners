@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : rounded-corners
+# uuid  : rounded-corners
+# key   : rounded-corners
+# group : css web
+# --
+border-radius: 10%; $0

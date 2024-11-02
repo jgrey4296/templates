@@ -1,3 +1,3 @@
 #!/bin/bash
 
-wmctrl -a firefox || firefox
+wmctrl -a firefox || firefox --marionette

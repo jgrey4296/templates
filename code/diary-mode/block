@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : block
+# uuid  : block
+# key   : block
+# group : diary
+# --
+%%(diary-block ${1:`(caddr (calendar-current-date))`} ${2:`(car (calendar-current-date))`} ${3:`(cadr (calendar-current-date))`} $1 $2 $3) $0

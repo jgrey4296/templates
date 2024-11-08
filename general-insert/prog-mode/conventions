@@ -20,3 +20,8 @@ build()            # Creates the type its attached to.            House.build =>
 make()             # Makes whatever the type is responsible for.  Oven.make   => Bread
 
 util               # not utils
+
+---- # Directories
+.{} # Typically Ignorable
+{}_ # Source for Generation
+_{} # Generation Output

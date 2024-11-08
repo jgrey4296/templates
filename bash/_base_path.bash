@@ -45,4 +45,5 @@ esac
 # https://www.howtogeek.com/682871/how-to-create-a-man-page-on-linux/
 MANPATH="/usr/local/man:/usr/local/share/man:/usr/share/man"
 MANPATH="$HOME/github/_templates/man/main:$MANPATH"
+MANPATH="$HOME/.local/share/man"
 INFOPATH=""

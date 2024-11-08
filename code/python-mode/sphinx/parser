@@ -1,0 +1,42 @@
+# -*- mode: snippet -*-
+# name  : sphinx.parser
+# uuid  : sphinx.parser
+# key   : sphinx.parser
+# group : sphinx parser python
+# --
+from sphinx.parsers import Parser
+from docutils.statemachine import StringList
+improt docutils.statemachine
+from docutils import nodes
+
+class $1Parser(Parser):
+      """ A Custom Parser for sphinx,
+      Add in setup function as:
+      app.add_source_parser($1Parser)
+      app.add_source_suffix("$2", "$3")
+      """
+
+      def parse(self, inputstring:str|StringList, document:nodes.document) -> None:
+          self.setup_parse(inputstring, document)
+          # TODO: self.statemachine = ...
+
+          # preprocess inputstring
+          match inputstring:
+              case StringList():
+                  inputlines = inputstring
+              case str():
+                  lines = docutils.statemachine.string2lines(inputstring,
+                                                             tab_width=document.settings.tab_width,
+                                                             convert_whitespace=True,
+                                                             )
+                  inputlines = StringList(lines, document.current_source)
+
+
+          self.decorate(inputlines)
+          # self.statemachine.run(inputlines, document, inliner=self.inliner)
+          self.finish_parse()
+
+
+      def decorate(self, content:StringList) -> None:
+          # possibly prepend and append stuff
+          pass

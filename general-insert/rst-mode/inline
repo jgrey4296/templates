@@ -1,0 +1,14 @@
+RST Inline Fragments:
+:abbreviation:`{}` # role
+:acronym:`{}`      # role
+:address:`{}`      # role
+:author:`{}`       # role
+:authors:`{}`      # role
+:math:`{}`         # role
+:literal:`{}`      # role
+*{}*               # Italics
+**{}**             # Bold
+``{}``             # Code
+>>> {}             # doctest
+`{} <{}>`_         # link
+`{}`_              # reference

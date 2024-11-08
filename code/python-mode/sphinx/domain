@@ -1,0 +1,78 @@
+
+from collections import defaultdict
+from docutils.parsers.rst import directives
+from sphinx.domains import Index
+from sphinx.roles import XRefRole
+from sphinx import addnoes
+from sphinx.directives import Directive
+from sphinx.util.nodes import make_refnode
+from sphinx.domains import Domain, ObjType
+
+class $1Directive(Directive):
+
+    has_content        = True
+    required_arguments = 0
+    option_spec        = {}
+
+
+class $1Index(Index):
+    """ A Custom index for sphinx """
+
+    name      = '$1'
+    localname = '$1 Index'
+    shortname = '$1'
+
+    def generate(self, docnames=None) -> tuple[Any, bool]:
+
+
+        return content, True
+
+class $1Domain(Domain):
+    """ Custom Domain for sphixn
+    register with app.add_domain(StandardDomain)
+    """
+
+    name       : str                               = '$1'
+    label      : str                               = '$1 Domain'
+    roles      : dict[str, Role]                   = {'ref': XRefRole()}
+    directives : dict[str,type[Directive]]         = {}
+    indices    : set[type[Index]]                  = {}
+    data_version                                   = 0
+    initial_data                                   = {
+        'objs': [],             # object list
+        # 'components': {},  # name -> object
+    }
+
+    def get_full_qualified_name(self, node) -> str:
+        return f'{self.name}.{node.arguments[0]}'
+
+    def get_objects(self) -> iterator[ObjType]:
+        yield from self.data['objs']
+
+    def resolve_xref(self, env, fromdocname, builder, typ, target, node, contnode):
+        match = [(docname, anchor)
+                 for name, sig, typ, docname, anchor, prio in self.get_objects()
+                 if sig == target
+                 ]
+
+        if not bool(match):
+            return None
+
+        todocname = match[0][0]
+        targ      = match[0][1]
+        return make_refnode(builder, fromdocname, todocname, targ, contnode, targ)
+
+    def add_obj(self, signature, components):
+        """Add a new recipe to the domain."""
+
+        name   = f'{self.name}.{signature}'
+        anchor = f'{self.name}-{signature}'
+        self.data['components'][name] = components
+        # name, dispname, type, docname, anchor, priority
+        self.data['objs'].append((name,
+                                  signature,
+                                  'Recipe',
+                                  self.env.docname,
+                                  anchor,
+                                  0,
+                                  ))

@@ -63,7 +63,6 @@ ENTRY
     volume
     year
     %% Custom -------
-    republished
     annotation
     eid
     eprint
@@ -856,7 +855,6 @@ FUNCTION {get.note}
 FUNCTION {word.in}
 { bbl.in capitalize wrap.space }
 
-% TODO format the year and republished year together
 FUNCTION {format.date} % { str }
 { duplicate$ empty$
     {

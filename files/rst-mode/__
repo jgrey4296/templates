@@ -7,6 +7,7 @@ ${1:Page Title}
 ${1:$(s-replace-regexp "." "=" yas-text)}
 
 .. contents:: Contents
+   :local:
 
 $0
 Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci

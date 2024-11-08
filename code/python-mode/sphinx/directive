@@ -1,0 +1,34 @@
+# -*- mode: snippet -*-
+# name  : sphinx.directive
+# uuid  : sphinx.directive
+# key   : sphinx.directive
+# group : sphinx python
+# --
+from docutils import nodes
+from docutils.parsers.rst import directives
+from docutils.statemachine import StringList
+from docutils.transforms import Transform, TransformError
+from sphinx.locale import __
+from sphinx.util.docutils import SphinxDirective
+
+class $1Directive(SphinxDirective):
+    """ Custom Directive for sphinx.
+    Add in a setup function as:
+    app.add_directive('dirname', $1Directive)
+    """
+
+    has_content               = True
+    required_arguments        = 0
+    optional_arguments        = 1
+    option_spec               = { "caption": str }
+
+    def run(self) -> list[nodes.Node]:
+        if not bool(self.content):
+            raise self.error("No Content")
+
+        # caption = nodes.Element(self.options.get('caption'))
+        # self.state.nested_parse([self.options.get('caption')], 0, caption)
+
+        content_node = nodes.container(rawsource="\n".join(self.content))
+        self.state.nested_parse(self.content, self.content_offset, content_node)
+        return [content_node]

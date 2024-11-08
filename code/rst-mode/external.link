@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : external.link
+# uuid  : external.link
+# key   : external.link
+# group : sphinx rst url
+# --
+.. _${1:linkname}: https://${2:url}$0

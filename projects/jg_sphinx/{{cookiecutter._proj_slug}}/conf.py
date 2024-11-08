@@ -1,42 +1,29 @@
 #!/usr/bin/env python3
 # Configuration file for the Sphinx documentation builder.
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
-
-# -- Path setup --------------------------------------------------------------
-
-# If extensions (or modules to document with autodoc) are in another directory,
-# add these directories to sys.path here. If the directory is relative to the
-# documentation root, use pl.Path.resolve to make it absolute, like shown here.
-#
+# Imports:
+# import os
+# import sys
+# import pathlib as pl
+import datetime
 import os
 import sys
 import pathlib as pl
-sys.path.insert(0, pl.Path('../').resolve())
 
-# (Relative to this file):
-templates_path   = ['_templates']
-html_static_path = ['_static']
-
-# Relative to static dir, or fully qualified urls
-html_css_files = ["custom.css"]
-html_js_files  = []
-# html_style = "custom.css"
-
-# List of patterns, relative to source directory, that match files and
-# directories to ignore when looking for source files.
-# This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['**/flycheck_*.py', "**/__tests/*"]
+from docutils import nodes
+from docutils.parsers.rst import directives
+from docutils.statemachine import StringList
+from docutils.transforms import Transform, TransformError
+from sphinx.locale import __
+from sphinx.util.docutils import SphinxDirective
 
 # -- Project information -----------------------------------------------------
 
-project   = '{{cookiecutter.proj_name}}'
-copyright = '2024, jgrey'
-author    = 'jgrey'
-release   = '0.1.0'
-
-# -- General configuration ---------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
-
+release        = "0.13.0"
+project        = 'Doot'
+author         = 'John Grey'
+copyright      = '{}, {}'.format(datetime.datetime.now().strftime("%Y"), author)
+primary_domain = "py"
 extensions = [
     'sphinx.ext.doctest',
     'sphinx.ext.autodoc',
@@ -52,13 +39,55 @@ extensions = [
     "sphinx.ext.viewcode",
     ]
 
+def setup(app):
+    app.events.connect("builder-inited", add_jinja_ext, 1)
+    app.add_directive('jgdir', JGDirective)
+    # app.add_transform
+
+def add_jinja_ext(app):
+    app.builder.templates.environment.add_extension('jinja2.ext.debug')
+
+# -- Path setup --------------------------------------------------------------
+
+# If extensions (or modules to document with autodoc) are in another directory,
+# add these directories to sys.path here. If the directory is relative to the
+# documentation root, use pl.Path.resolve to make it absolute, like shown here.
+#
+sys.path.insert(0, pl.Path('../').resolve())
+
+# (Relative to this file):
+templates_path   = ['_static/templates']
+html_static_path = ['_static']
+
+# Relative to static dir, or fully qualified urls
+html_css_files = ["css/custom.css"]
+html_js_files  = ["js/base.js"]
+
+toc_object_entries            = True
+master_doc                    = "index"
+
+# List of patterns, relative to source directory, that match files and
+# directories to ignore when looking for source files.
+# This pattern also affects html_static_path and html_extra_path.
+exclude_patterns = ['**/flycheck_*.py', "**/__tests/*"]
+
+# suppress_warnings = ["autoapi", "docutils"]
+
+# -- General configuration ---------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
+
+maximum_signature_line_length = 50
+toc_object_entries            = True
+master_doc                    = "index"
+show_warning_types            = True
 
 # -- Options for HTML output -------------------------------------------------
 # https://sphinx-rtd-theme.readthedocs.io/en/stable/configuring.html
 html_theme         = "sphinx_rtd_theme"
 html_theme_options = {}
 html_sidebars      = {}
-
+html_domain_indices = True
+html_use_index      = True
 
 html_theme_options.update({
     'logo_only'                   : False,
@@ -75,8 +104,6 @@ html_theme_options.update({
     'titles_only'                 : False
 
 })
-
-##-- end rtd options
 
 # -- Extension Options -------------------------------------------------
 # https://sphinx-autoapi.readthedocs.io/en/latest/reference/config.html
@@ -98,6 +125,3 @@ autoapi_options           = [
     # 'show-inheritance-diagram',
     # 'show-module-summary',
 ]
-
-
-# -- Imports --------------------------------------------------

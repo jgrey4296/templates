@@ -1,3 +1,147 @@
-Construct Binary Parsing:
+Construct elements for binary parsing:
+__source__                    # https://construct.readthedocs.io/en/latest/index.html
 
-__source__ # https://construct.readthedocs.io/en/latest/index.html
+Struct("fieldname" / Field..) #
+struct.build(dict, **kwargs)  # Create binary data, with kwaargs passed in context
+struct.parse(bin, **kwargs)   # Create Container, with kwargs passed in context
+Sequence(List..)              # unnamed sequence of fields
+Array(size, Field)            # repeated unit
+LazyArray
+
+Index #
+Default #
+
+
+GreedyBytes                   # Consume till End of Stream
+GreedyRange(Field)            #
+RepeatUntil(lambda..)         #
+LazyStruct
+
+
+ListContainer
+LazyContainer
+LazyListContainer
+Container
+
+Computed(lambda ctx:..)      # Using ctx._.fieldname to get an upper container
+
+Hex                          # For debugging
+HexDump                      # For Debugging
+RawCopy                      # For Debugging
+Debugger                     #
+Probe                        #
+
+
+---------------------------  # Context
+ctx._                        # parent container
+this                         # singleton to build lambdas. eg: this._.field == lambda: ctx: ctx._.field
+obj_                         # equiv to lambda obj, ctx:...
+len_(...)                    # builds lambdas
+sum_(...)                    # builds lambdas
+min_(...)                    # builds lambdas
+max_(...)                    # builds lambdas
+abs_(...)                    # builds lambdas
+
+---------------------------  # Conditionals
+Union
+Select
+
+If
+IfThenElse
+Switch
+StopIf
+
+---------------------------  # Streams
+Pointer
+Peek
+OffsettedEnd
+Seek
+Tell
+Pass
+Terminated
+
+---------------------------  # Alignment and Padding
+Padded                       #
+Padding                      #
+Aligned
+AlignedStruct
+
+---------------------------  # Bits
+BitStruct
+
+Bitwise                      #
+BitsInteger                  #
+Bit                          #
+BitsSwapped                  #
+
+---------------------------  # Strings
+PaddedString                 # Fixed length, pads and strips null bytes
+PascallString                # String prefixed with size
+CString                      # terminates with null byte
+BitwisableString             #
+GreedyString                 #
+possiblestringencodings      #
+StringEncoded                #
+
+
+---------------------------  # Mappings
+Flag                         #
+FlagsEnum                    #
+Enum                         #
+EnumIntegerString            #
+
+---------------------------  # Fields
+Byte                         # Int8ub (unsigned)
+Short                        # Int16ub (unsigned)
+Int                          # Int32ub (unsigned)
+Long                         # Int64ub (unsigned)
+Half                         # Float16b
+Single                       # Float32b
+Double                       # Float64b
+
+VarInt                       # variable length int for compactness.
+BytesInteger                 # long integer of weird size. Eg: BytesInteger(16) for 128 bit int.
+
+Const(b"")                   # Magic numbers, protocol versions etc.
+Check(lambda)                #
+OneOf                        #
+NoneOf                       #
+
+Byte                         #
+Bytes                        #
+BytesInteger                 #
+ByteSwapped                  #
+Bytewise                     #
+
+---------------------------- # Other #
+Adapter                      #
+
+
+---------------------------- # Errors #
+AdaptationError              #
+CheckError                   #
+ChecksumError                #
+CipherError                  #
+ConstError                   #
+ConstructError               #
+Error                        #
+ExplicitError                #
+FormatFieldError             #
+IndexFieldError              #
+IntegerError                 #
+MappingError                 #
+NamedTupleError              #
+PaddingError                 #
+RangeError                   #
+RepeatError                  #
+RotationError                #
+SelectError                  #
+SizeofError                  #
+StopFieldError               #
+StreamError                  #
+StringError                  #
+SwitchError                  #
+TerminatedError              #
+TimestampError               #
+UnionError                   #
+ValidationError              #

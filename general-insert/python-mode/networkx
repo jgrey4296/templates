@@ -1,1 +1,66 @@
 Networkx reminders:
+
+import networkx as nx #
+
+G = nx.Graph()
+G = nx.DiGraph()
+G = nx.MultiGraph()
+G = nx.MultiDiGraph()
+G.add_node("A") #
+G.add_nodes_from("BCDE") #
+G.add_star("GHJKL") #
+G.add_cycle("QWERT") #
+
+G[1][3]['color'] = "blue" # Add edge attributes
+G.add_edge
+G.add_edges_from
+G.has_edge
+G.has_node
+
+G.nodes()
+G.edges()
+G.neighbours()
+nx.connected_components(G)
+nx.degree(G)
+nx.clustering(G)
+
+G.remove_node
+G.remove_nodes_from
+G.remove_edge
+G.remove_edges_from
+
+--------                            # Operations:
+nx.subgraph(G, nbunch)              # induced subgraph view of G on nodes in nbunch
+nx.union(G1,G2)                     # graph union
+nx.disjoint_union(G1,G2)            # graph union assuming all nodes are different
+nx.cartesian_product(G1,G2)         # return Cartesian product graph
+nx.compose(G1,G2)                   # combine graphs identifying nodes common to both
+nx.complement(G)                    # graph complement
+nx.create_empty_copy(G)             # return an empty copy of the same graph class
+nx.convert_to_undirected(G)         # return an undirected representation of G
+nx.convert_to_directed(G)           # return a directed representation of G
+nx.connected_components(G)          # return the connected components of the graph G
+
+---------                           # Generators:
+nx.petersen_graph()                 # petersen
+nx.tutte_graph()                    # tutte
+nx.sedgewick_maze_graph()           # maze
+nx.tetrahedral_graph()              # tet
+nx.complete_graph(5)                # K_5
+nx.complete_bipartite_graph(3, 5)   # K_3_5
+nx.barbell_graph(10, 10)            # barbell
+nx.lollipop_graph(10, 20)           # lollipop
+nx.erdos_renyi_graph(100, 0.15)     # er
+nx.watts_strogatz_graph(30, 3, 0.1) # ws
+nx.barabasi_albert_graph(100, 5)    # ba
+nx.random_lobster(100, 0.9, 0.9)    # red
+
+----------------------------------- # reading and writing:
+nx.write_gml(red, "path.to.file")
+nx.read_gml("path.to.file")
+
+----- # drawing
+import pygraphviz as pgv
+A = nx.drawing.nx_agraph.to_agraph(G)
+A.layout(prog='dot')
+A.draw('test.png')

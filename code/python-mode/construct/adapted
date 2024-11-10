@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name  : adapter
+# uuid  : adapter
+# key   : adapted
+# group : construct
+# --
+
+class $1Adapted(construct.Adapted):
+
+    def _decode(self, obj, context, path):
+        """ lower representation -> higher  """
+        pass
+
+    def _encode(self, ob, context, path):
+        """ higher representation -> lower """
+        pass

@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : validator
+# uuid  : validator
+# key   : validator
+# group : construct
+# --
+class $1Validator(construct.Validator):
+    """ will raise a ValidationError if returns False """
+
+    def _validate(self, obj, context, path) -> bool:
+        return False

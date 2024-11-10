@@ -9,11 +9,11 @@
 doc_src = "docs"
 doc_out = "{temp}/docs"
 
-[[tasks.docs]]
+[[tasks.pydocs]]
 name       = "export"
-depends_on = [{task="docs::build", inject={warn=false}}]
+depends_on = [{task="pydocs::build", inject={warn=false}}]
 
-[[tasks.docs]]
+[[tasks.pydocs]]
 name        = "build"
 doc         = ["build sphinx project documentation"]
 cli         = [
@@ -42,7 +42,7 @@ actions = [
     ]
 cleanup = []
 
-[[tasks.docs]]
+[[tasks.pydocs]]
 name        = "test"
 doc         = ["run sphinx doctest"]
 ctor        = "task"
@@ -60,7 +60,7 @@ actions = [
 
 ]
 
-[[tasks.docs]]
+[[tasks.pydocs]]
 name        = "build.file"
 doc         = ["build sphinx project documentation"]
 cli         = [{name="fpath", type="str", default="", positional=true}]

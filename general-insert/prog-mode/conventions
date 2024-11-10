@@ -21,7 +21,10 @@ make()             # Makes whatever the type is responsible for.  Oven.make   =>
 
 util               # not utils
 
----- # Directories
-.{} # Typically Ignorable
-{}_ # Source for Generation
-_{} # Generation Output
+decoding           # lower -> higher
+encoding           # higher -> lower
+
+----               # Directories
+.{}                # Typically Ignorable
+{}_                # Source for Generation
+_{}                # Generation Output

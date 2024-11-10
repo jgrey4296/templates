@@ -1,5 +1,6 @@
 Pylint Checker Names:
 
+blacklisted-name                             (C0102) #
 abstract-class-instantiated                  (E0110) #  Used when an abstract class with `abc.ABCMeta` as metaclass has abstract methods and is instantiated.
 abstract-method                              (W0223) #  Used when an abstract method (i.e. raise NotImplementedError) is not overridden in concrete class.
 access-member-before-definition              (E0203) #  Used when an instance member is accessed before it's actually assigned.

@@ -25,6 +25,7 @@ decoding           # lower -> higher
 encoding           # higher -> lower
 
 ----               # Directories
-.{}                # Typically Ignorable
+.{}                # Hidden, Ignorable
 {}_                # Source for Generation
-_{}                # Generation Output
+gen_{}                # Generation Output
+__tests            # Test dirs

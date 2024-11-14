@@ -7,8 +7,7 @@ requires-python = ">={{cookiecutter.python}}"
 license         = {file = "LICENSE"}
 keywords        = []
 authors         = [
-  {name  = "{{cookiecutter._author}}"}
-  {email = "{{cookiecutter._email}}"},
+  {name  = "{{cookiecutter._author}}"}, {email = "{{cookiecutter._email}}"},
 ]
 classifiers     = [
   "Programming Language :: Python"
@@ -34,7 +33,7 @@ changelog     = "https://github.com//{{cookiecutter.proj_name}}/blob/master/CHAN
 
 ##-- scripts
 [project.scripts]
-{{cookiecutter.proj_name}} = "{{cookiecutter.proj_name}}.{{cookiecutter.entry_point}}:main"
+"{{cookiecutter.proj_name}}" = "{{cookiecutter.proj_name}}.{{cookiecutter.entry_point}}:main"
 
 [project.gui-scripts]
 # spam-gui      = "spam:main_gui"
@@ -90,7 +89,7 @@ reportUnnecessaryIsInstance = "warning"
 ##-- mypy
 # https://mypy.readthedocs.io/en/stable/config_file.html#config-file
 [mypy]
-python_version      = {{cookiecutter.python}}
+python_version      = "{{cookiecutter.python}}"
 warn_return_any     = true
 warn_unused_configs = true
 
@@ -107,37 +106,6 @@ log_level     = "DEBUG"
 log_cli_level = "DEBUG"
 
 ##-- end pytest
-
-##-- sphinx
-[tool.sphinx]
-author     = "{{cookiecutter._author}}"
-copyright  = "{% now 'utc' %}"
-extensions = ['sphinx.ext.doctest', 'sphinx.ext.autodoc', 'sphinx.ext.autosummary', 'sphinx.ext.napoleon']
-templates  = ['_templates']
-exclude    = ['**/flycheck_*.py']
-
-[tool.sphinx.autosummary]
-generate = true
-
-[tool.sphinx.autodoc]
-add_module_names   = false
-inherit_docstrings = true
-
-[tool.sphinx.autodoc.defaults]
-members           = true
-undoc-members     = true
-private-members   = false
-special-members   = false
-inherited-members = true
-show-inheritance  = true
-
-[tool.sphinx.html]
-theme       = 'alabaster'
-static      = ['_static']
-
-[tool.sphinx.html.options]
-
-##-- end sphinx
 
 ##-- bumpver
 [tool.bumpver]

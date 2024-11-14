@@ -1,14 +1,13 @@
 [project]
 name            = "{{cookiecutter.proj_name}}"
-version         = "0.0.1"
+version         = "0.1.0"
 description     = ""
 readme          = "README.md"
 requires-python = ">={{cookiecutter.python}}"
 license         = {file = "LICENSE"}
 keywords        = ["rust"]
 authors         = [
-  {name  = "J Grey"}
-  {email = "jgrey4296@gmail.com"},
+  {name  = "{{cookiecutter._author}}", email = "{{cookiecutter._email}}"},
 ]
 classifiers     = [
   "Programming Language :: Python"
@@ -35,7 +34,7 @@ changelog     = "https://github.com//{{cookiecutter.proj_name}}/blob/master/CHAN
 
 ##-- scripts
 [project.scripts]
-{{cookiecutter.proj_name}} = "{{cookiecutter.proj_name}}.{{cookiecutter.entry_point}}:main"
+"{{cookiecutter.proj_name}}" = "{{cookiecutter.proj_name}}.{{cookiecutter.entry_point}}:main"
 
 [project.gui-scripts]
 # spam-gui      = "spam:main_gui"
@@ -91,9 +90,10 @@ reportUnnecessaryIsInstance = "warning"
 ##-- mypy
 # https://mypy.readthedocs.io/en/stable/config_file.html#config-file
 [mypy]
-python_version      = {{cookiecutter.python}}
+python_version      = "{{cookiecutter.python}}"
 warn_return_any     = true
 warn_unused_configs = true
+cache_dir           = ".temp/mypy_cache"
 
 # Per-module options:
 [mypy-pyparsing]
@@ -142,7 +142,7 @@ static      = ['_static']
 
 ##-- bumpver
 [tool.bumpver]
-current_version    = "0.0.1"
+current_version    = "0.1.0"
 version_pattern    = "MAJOR.MINOR.PATCH"
 commit_message     = "[bump]: version {old_version} -> {new_version}"
 tag_message        = "{new_version}"

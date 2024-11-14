@@ -1,0 +1,12 @@
+{
+  "_author": "me",
+  "_copy_without_render": [
+    "*docs/_static",
+    "*docs/_templates"
+  ],
+  "_email": "my@email.com",
+  "_github_username": "me",
+  "_short_name": "me",
+  "edition": "2021",
+  "proj_name": "jg_rust_emacs_template"
+}

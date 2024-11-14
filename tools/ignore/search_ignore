@@ -1,0 +1,19 @@
+
+# Python project ignores
+**/__tests/*
+docs/*
+.tasks/*.org
+CHANGELOG.md
+
+# Prolog
+.sip-dir-history
+.swp
+.swt
+
+# Misc
+.TheVolumeSettingsFolder
+
+# Gtags
+GPATH
+GRTAGS
+GTAGS

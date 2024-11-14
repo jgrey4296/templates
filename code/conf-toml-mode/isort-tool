@@ -5,6 +5,7 @@
 # group : python pyproject
 # --
 ##-- isort
+# https://pycqa.github.io/isort/docs/configuration/config_files.html
 [tool.isort]
 color_output           = false
 py_version             = 311

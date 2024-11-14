@@ -171,3 +171,4 @@ anti-patterns                                        # https://docs.quantifiedco
 supervisor                                           # http://supervisord.org/index.html
 psutil                                               # https://psutil.readthedocs.io/en/latest/#
 typeshed                                             # https://github.com/python/typeshed
+pylint                                               # https://pylint.readthedocs.io/en/latest/index.html

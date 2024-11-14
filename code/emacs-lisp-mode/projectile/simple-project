@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name  : simple-project
+# uuid  : simple-project
+# key   : simple-project
+# group : projectile
+# --
+(jg-${1:mode}-project '("${2:files}")
+                      :project-file "${3:project-file}"
+                      :configure   nil
+                      :test        nil
+                      :test-dir    nil
+                      :test-prefix nil
+                      ;; :related-files-fn #'+jg-$1-related-files-fn
+                      )

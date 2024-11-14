@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : props
+# uuid  : props
+# key   : props
+# group : org
+# --
+:PROPERTIES
+$0
+:END:

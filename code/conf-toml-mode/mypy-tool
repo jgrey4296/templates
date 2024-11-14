@@ -6,11 +6,11 @@
 ##-- mypy
 [tool.mypy]
 # https://mypy.readthedocs.io/en/stable/config_file.html
-python_version      = "3.7"
+python_version      = "3.11"
 warn_return_any     = true
 warn_unused_configs = true
-exclude = [] # regexs to ignore
-cache_dir = ".temp/mypy_cache"
+exclude             = [] # regexs to ignore
+cache_dir           = ".temp/mypy_cache"
 
 # Per-module options:
 # [[tool.mypy.overrides]]

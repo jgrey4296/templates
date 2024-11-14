@@ -1,5 +1,6 @@
 ## pylint.toml -*- mode: Toml -*-
 # https://pylint.readthedocs.io/en/latest/
+# https://pylint.readthedocs.io/en/stable/user_guide/configuration/all-options.html
 
 [tool.pylint.main]
 # Always return a 0 (non-error) status code

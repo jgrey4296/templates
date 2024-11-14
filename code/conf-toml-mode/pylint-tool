@@ -5,6 +5,7 @@
 # group : python pyproject
 # --
 ##-- pylint
+# https://pylint.readthedocs.io/en/stable/user_guide/configuration/all-options.html
 [tool.pylint.main]
 # Generated on:
 # pylint 2.14.5

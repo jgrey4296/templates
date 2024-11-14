@@ -11,7 +11,8 @@ doc_out = "{temp}/docs"
 
 [[tasks.pydocs]]
 name       = "export"
-depends_on = [{task="pydocs::build", inject={warn=false}}]
+warn       = false
+depends_on = [{task="pydocs::build", inject={now=["warn"]}}]
 
 [[tasks.pydocs]]
 name        = "build"

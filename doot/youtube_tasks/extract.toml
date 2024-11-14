@@ -19,8 +19,8 @@ cli     = [
         { name="out",    type="str", default="unpacked", positional=true },
 ]
 actions = [
-    {do="job.expand", template="yt::unpack",  inject={copy=["target", "out"]}, update_="unpack"},
-    {do="job.expand", template="yt::extract", inject={copy=["target"]}, update_="extract"},
+    {do="job.expand", template="yt::unpack",  inject={now=["target", "out"]}, update_="unpack"},
+    {do="job.expand", template="yt::extract", inject={now=["target"]}, update_="extract"},
     {do="job.chain.->", unpack={literal=[], by-name=[]}},
     {do="job.queue", from_multi_=["update", "extract"]},
 ]
@@ -66,7 +66,7 @@ cleanup         = [
 ]
 actions                  = [
     {do="job.walk",   update_="files"}, # walk,
-    {do="job.expand", base_="sub_actions", from_="files", inject={copy=["jsonl"], replace=["fpath"]}, update_="tasks" },
+    {do="job.expand", base_="sub_actions", from_="files", inject={now=["jsonl"], insert=["fpath"]}, update_="tasks" },
     {do="job.limit",  from_="tasks", count_="select_limit"},
     {do="job.inject.path.elements", onto_="tasks", key="fpath"},
     {do="job.queue", from_="tasks"}, # queue

@@ -11,7 +11,8 @@ doc_out = "{temp}/docs"
 
 [[tasks.sphinx]]
 name       = "export"
-depends_on = [{task="sphinx::build", inject={warn=false}}]
+warn       = false
+depends_on = [{task="sphinx::build", inject={now=["warn"]}}]
 
 [[tasks.sphinx]]
 name        = "build"

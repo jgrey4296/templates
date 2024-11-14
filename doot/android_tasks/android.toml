@@ -29,7 +29,7 @@ accept_fn                  = "taskscode.android:select_dirs"
 roots                      = ["{push_pdfs!p}"]
 actions     = [
     {do="job.walk",   update_="files"},
-    {do="job.expand", from_="files", update_="tasks", inject={replace=['fpath'], copy=["android_root!p"]}, template_="sub_actions"},
+    {do="job.expand", from_="files", update_="tasks", inject={insert=['fpath'], now=["android_root!p"]}, template_="sub_actions"},
     {do="job.inject.path.elements", onto_="tasks", key_="fpath"},
     {do="job.queue",  from_="tasks"},
 ]

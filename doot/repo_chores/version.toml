@@ -7,12 +7,12 @@ requirements = {file="requirements.txt"}
 [[tasks.version]]
 name       = "major"
 raise      = "major"
-depends_on = [ {task="version::bump", inject={raise="raise"}} ]
+depends_on = [ {task="version::bump", inject={now=["raise"]}} ]
 
 [[tasks.version]]
 name       = "minor"
 raise      = "minor"
-depends_on = [{task="version::bump", inject={raise="raise"}},]
+depends_on = [{task="version::bump", inject={now=["raise"]}},]
 
 [[tasks.version]]
 name     = "bump"

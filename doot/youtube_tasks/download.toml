@@ -40,7 +40,7 @@ roots       = ["{data}"]
 shadow_root = "{backup}"
 actions     = [
     {do="job.walk", fn="taskcode.youtube:select_tars", update_="files"}, # walk,
-    {do="job.expand", from_="files", update_="tasks", inject={copy=["fpath"]}, template_="sub_actions"},
+    {do="job.expand", from_="files", update_="tasks", inject={insert=["fpath"]}, template_="sub_actions"},
     {do="job.inject.shadow", onto_="tasks"},
     {do="job.queue", from_="tasks"}, # queue
 

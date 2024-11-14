@@ -24,7 +24,7 @@ exts                 = [".bib"]
 actions = [
     {do="job.walk",   update_="files"},
     {do="job.limit",  count_="select_limit"},
-    {do="job.expand", from_="files", update_="tasks", inject={copy=["fpath"]}, template_="sub_actions"},
+    {do="job.expand", from_="files", update_="tasks", inject={insert=["fpath"]}, template_="sub_actions"},
     {do="job.queue",  from_="tasks"},
 ]
 sub_actions          = [

@@ -30,5 +30,5 @@ setuptools rust      # https://github.com/PyO3/setuptools-rust
 uniffi-rs            # https://mozilla.github.io/uniffi-rs/Overview.html
 lldb                 # https://lldb.llvm.org/
 Firefox Rust-Cpp     # https://firefox-source-docs.mozilla.org/writing-rust-code/cpp-interop.html
-
-Rust RFCs # https://rust-lang.github.io/rfcs/introduction.html
+lib.rs               # https://lib.rs/
+Rust RFCs            # https://rust-lang.github.io/rfcs/introduction.html

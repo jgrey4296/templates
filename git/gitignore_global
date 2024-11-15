@@ -18,27 +18,7 @@ dist/
 
 ##-- end compiled
 
-.projectile-cmds
-# Gradle
-gradle/
-gradlew
-gradlew.bat
-.gradle/
-
-# Rust:
-target/
-/Cargo.lock
-
-# Python:
-.temp/
-*.egg-info
-*.mypy_cache
-*.pyc
-*__pycache__
-docs/_generated_*
-flycheck_*
-
-# OS Generated Files:
+##-- OS generated
 *.egg
 .DS_Store
 .DS_Store?
@@ -60,12 +40,50 @@ tmp/
 ~*
 .doit.db.db
 
-# Lisp:
+##-- end OS generated
+
+##-- emacs
+.projectile-cmds
+
+##-- end emacs
+
+##-- gradle
+gradle/
+gradlew
+gradlew.bat
+.gradle/
+
+##-- end gradle
+
+##-- rust
+target/
+/Cargo.lock
+
+##-- end rust
+
+##-- python
+.Python
+*.egg-info
+*.mypy_cache
+*__pycache__
+*.py[cod]
+flycheck_*
+.installed.cfg
+.ropeproject
+*.log
+*.pot
+.idea/
+.python-version
+##-- end python
+
+##-- lisp
 ac-comphist.dat
 *.yas-compiled-snippets.el
 *.el~
 
-# Big Files
+##-- end lisp
+
+##-- big files
 *.aif
 *.aif.*
 *.gif
@@ -76,7 +94,9 @@ ac-comphist.dat
 *.png
 imgs/*
 
-# Passwords
+##-- end big files
+
+##-- passwords
 *.credentials
 *.key
 *.secret
@@ -84,21 +104,69 @@ imgs/*
 secrets.config
 secrets.toml
 
-# Logs
+##-- end passwords
+
+##-- logs
 *.log
 log.*
+pip-log.txt
+pip-delete-this-directory.txt
+pip-selfcheck.json
+##-- end logs
 
-# Auctex
+##-- translations
+*.mo
+##-- end translations
+
+##-- coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+##-- end coverage reports
+
+##-- latex
 *.auctex-auto
 *.auctex
-
-# doot
-*.doot_defaults.toml
-
-# Latex
 *.aux
 *.out
 *.sta
 *.toc
 *.bbl
 *.blg
+##-- end latex
+
+##-- doot
+*.doot_defaults.toml
+
+##-- end doot
+
+##-- static site gen
+
+.site/
+
+##-- end static site gen
+
+##-- misc directories
+.venv/
+env/
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+include/
+man/
+venv/
+docs/_generated_*
+docs/_build/
+.vscode/
+##-- end misc directories

@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name  : pyfunction
+# uuid  : pyfunction
+# key   : pyfunction
+# group : pyo3 python
+# --
+#[pyfunction(name="$1")]
+#[pyo3(signature = ())]
+fn $1 () -> PyResult<${2:u64}> {
+
+
+}

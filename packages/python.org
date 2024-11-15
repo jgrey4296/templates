@@ -604,9 +604,10 @@ https://github.com/tefra/xsdata-plantuml
 *** yaml
 **** pyaml
 https://pyyaml.org/
-*** statemachine
+*** statemachine                                :FSM:
 https://github.com/fgmacedo/python-statemachine
 https://python-statemachine.readthedocs.io/en/latest/
+https://github.com/fgmacedo/python-statemachine/issues/246
 
 Building:
 #+begin_src python :results output
@@ -645,6 +646,8 @@ Machine.first
 statemachine.exceptions.TransitionNotAllowed
 
 #+end_src
+*** statesman                                   :FSM:
+https://github.com/opsani/statesman
 *** pipefunc
 lightweight function pipeline
 https://pipefunc.readthedocs.io/en/latest/
@@ -1002,6 +1005,9 @@ https://github.com/numba/llvmlite
 *** rust
 https://github.com/PyO3/pyo3
 https://pyo3.rs/v0.22.2/
+https://pythonspeed.com/articles/intro-rust-python-extensions/
+https://www.maturin.rs/
+
 *** prolog
 **** prologterms-py                            :dsl:
 https://github.com/cmungall/prologterms-py

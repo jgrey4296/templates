@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : pyclass
+# uuid  : pyclass
+# key   : pyclass
+# group : pyo3 python class
+# --
+#[pyclass(name="${1:ClassName}")]
+struct $1 {$0}

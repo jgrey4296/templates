@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : build-maturin
+# uuid  : build-maturin
+# key   : build-maturin
+# group : build-system python rust maturin pyproject
+# --
+##-- build system: maturin
+[build-system]
+requires      = ["maturin>=1.7,<2.0"]
+build-backend = "maturin"
+##-- end build system: maturin

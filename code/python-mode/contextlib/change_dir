@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : change_dir
+# uuid  : change_dir
+# key   : change_dir
+# group : cwd with
+# --
+with contextlib.chdir(${1:path}):
+     $0

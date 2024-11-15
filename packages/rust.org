@@ -5,7 +5,6 @@
 https://doc.rust-lang.org/std/index.html
 
 ** alloc
-
 ** any
 
 ** arch
@@ -124,6 +123,7 @@ https://docs.rs/crate/cargo-sphinx/latest
 https://github.com/flamegraph-rs/flamegraph
 https://github.com/kbknapp/cargo-graph
 https://keats.github.io/tera/
+
 ** Utils
 https://docs.rs/anyhow/latest/anyhow/
 https://dylanede.github.io/cassowary-rs/cassowary/index.html
@@ -175,7 +175,6 @@ https://docs.rs/regex/latest/regex/
 https://docs.rs/syn/latest/syn/
 https://docs.rs/textwrap/latest/textwrap/
 
-
 ** CLI
 https://docs.rs/clap/latest/clap/
 
@@ -219,7 +218,6 @@ https://docs.rs/rustfix/latest/rustfix/
 https://github.com/rust-lang/rustfmt
 https://rust-lang.github.io/rustfmt/?version=v1.6.0&search=
 
-
 *** iced
 https://github.com/icedland/iced
 ** Emacs
@@ -230,6 +228,7 @@ https://github.com/ubolonton/emacs-module-rs
 ** Python
 https://pyo3.rs/v0.21.2/getting-started
 https://www.maturin.rs/
+https://pythonspeed.com/articles/intro-rust-python-extensions/
 ** just
 https://github.com/casey/just
 * Links

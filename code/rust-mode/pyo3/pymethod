@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : pymethod
+# uuid  : pymethod
+# key   : pymethod
+# group : pyo3 python method
+# --
+#[pymethods]
+impl ${1:ClassName} {
+    #[new]
+    fn new() -> PyResult<Self> {}
+}

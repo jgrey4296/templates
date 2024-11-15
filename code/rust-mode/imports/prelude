@@ -2,7 +2,7 @@
 # name  : prelude
 # uuid  : prelude
 # key   : prelude
-# group : rust.prelude
+# group : rust.prelude imports
 # --
 use std::borrow::ToOwned;
 use std::boxed::Box;

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : nullcontext
+# uuid  : nullcontext
+# key   : nullcontext
+# group : with manager
+# --
+with contextlib.nullcontext(enter_result=None):
+     $0

@@ -82,7 +82,7 @@ gdnative      = "0.11"    # ffi
 libc          = "0.2"     # ffi
 libloading    = "0.7"     # ffi
 numpy         = "0.17"    # ffi
-pyo3          = "0.17"    # ffi
+pyo3          = "0.22"    # ffi
 rustler       = "0.26"    # ffi
 
 clippy        = "0.0.302" # dev

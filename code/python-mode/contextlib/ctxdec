@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name  : ctxdec
+# uuid  : ctxdec
+# key   : ctxdec
+# group : with decorator
+# --
+class ${1:ContextCls}(contextlib.ContextDecorator):
+    """ Use as @$1 on a function """
+
+    def __enter__(self):
+        return self
+
+    def __exit(self, *exc):
+        return False

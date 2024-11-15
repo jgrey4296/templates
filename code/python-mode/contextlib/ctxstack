@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name  : ctx_stack
+# uuid  : ctx_stack
+# key   : ctx_stack
+# group : with stack
+# --
+# Maintains reverse stack of registered exit calls
+# uses enter_context(cm), push(exit), close()
+# callback(cb, /, *args, *kwargs), pop_all()
+with contextlib.ExitStack() as stack:
+
+    $0

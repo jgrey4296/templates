@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : pyo3_annotation
+# uuid  : pyo3_annotation
+# key   : pyo3_annotation
+# group : pyo3 python
+# --
+#[pyo3($0)]

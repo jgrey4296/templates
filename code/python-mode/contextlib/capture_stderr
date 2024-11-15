@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : capture_stdout
+# uuid  : capture_stdout
+# key   : capture_stdout
+# group : IO with
+# --
+with contextlib.redirect_stderr(io.StringIO()) as stdout:
+     $0

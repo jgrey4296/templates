@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name  : pymodule
+# uuid  : pymodule
+# key   : pymodule
+# group : pyo3 python
+# --
+#[pymodule] // name needs to equal the .so file
+fn ${1:module_name} (m: &Bound<'_, PyModule>) -> PyResult<()> {
+   // m.add_function(wrap_pyfunction!(${2:func_name}, m)?)?;
+   // m.add_class::<ClassName>()?;
+   Ok(())
+}

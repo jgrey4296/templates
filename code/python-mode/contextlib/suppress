@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : suppress
+# uuid  : suppress
+# key   : suppress
+# group : with context
+# --
+with contextlib.suppress(${1:exceptions}):
+     $0

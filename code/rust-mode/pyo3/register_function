@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : register_function
+# uuid  : register_function
+# key   : register_function
+# group : pyo3 python
+# --
+m.add_function( wrap_pyfunction! ( ${1:func_name}, m)? )?;

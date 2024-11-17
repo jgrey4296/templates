@@ -3,49 +3,31 @@
 notify                   = { say-on-exit = false }
 loaders                  = { commands="default", task="default", parser="default"}
 location_check           = { make_missing=true }
-# defaulted_file           = "{logs}/.doot_defaults.toml"
 
 [settings.tasks]
-# Files or directories where task specs can be loaded from, expanded according to [[locations]] keys
-sources = ["{template_tasks}/global", "{template_tasks}/android_tasks"]
-sleep   = { tasks=0.2, subtask=1, batch=1 }
-max_step = 100_000
+sources   = ["{template_tasks}/global", "{template_tasks}/android_tasks"]
+core      = []
+sleep     = { tasks=0.2, subtask=1, batch=1 }
+max_steps = 100_000
 
-[logging]
-stream  = { level="WARNING", format="{levelname:<8} : {message}", filters=["doot"], target="stdout" }
-file    = { level="DEBUG",   format="{levelname:<8} : {message:<20} :|: ({module}.{lineno}.{funcName})", filters=["doot"], target="rotate" }
-printer = { level="INFO",    format="{message}", colour=true, target="stdout", filter=[] }
-
-[logging.subprinters]
-# Divider subprinters: artifact, task_header, header
-task_header  = {format="---{message}", colour=true, target="stdout"}
-
-# Process subprinters: cmd, setup, shutdown, track, task_loop
-cmd          = {level="INFO",    format="{message}", colour=true, target="stdout"}
-setup        = {level="WARNING",    format="-- Setup: {message}"}
-shutdown     = {level="WARNING", format="-- Shutdown: {message}"}
-track        = {level="WARNING", format="-- Tracking: {message}"}
-report       = {level="INFO",    format="{message}", target="stdout", colour=true}
-
-# Event Subprinters: success, fail, skip, sleep, header, help, queue, report, task_state
-# ## action_exec, action_group, task
-task         = {}
-task_state   = {level="WARNING", format="Task State: {message}"}
-success      = {level="WARNING", format="-- Success {message}"}
-fail         = {level="WARNING", target="stdout", format="!!!! {message}"}
-queue        = {format="++++ {message}"}
-action_group = {level="WARNING", format="Action Group: {message}"}
-action_exec  = {level="WARNING", format="--------> Action Execution: {message}", target="stdout", colour=true}
+[settings.commands]
+run = { tracker = "default", runner = "default", reporter= "default", report-line = [] }
 
 [plugins] # Allows for defining shorthands
-command        = { other-run = "doot.cmds.run_cmd:RunCmd", tasks = "doot.cmds.list_cmd:ListCmd" }
-report-line    = {}
-reporter       = {}
-action         = {}
-task           = {}
+command        = { tasks = "doot.cmds.list_cmd:ListCmd" }
 
-[commands]
-run = { tracker = "default", runner = "default", reporter= "default", report-line = [] }
+[logging]
+stream  = { level="WARNING", filter=[],                 target="stdout", format="{levelname:<8} : {message}"  }
+file    = { level="DEBUG",   filter=["tomlguard"],      target="rotate", format="{levelname:<8} : {message:<20} :|: ({module}.{lineno}.{funcName})", filename_fmt="doot.log" }
+printer = { level="NOTSET",  colour=true,               target=["stdout", "rotate"], format="{message}", filename_fmt="doot_printed.log" }
+
+[logging.subprinters]
+default       = {level="WARNING"}
+shutdown      = {level="WARNING",    format="Shutdown: {message}", target="stdout"}
+cmd           = {level="INFO"}
+task          = {level="INFO" }
+header        = {level="INFO" }
+task_header   = {level="INFO"}
 
 [[locations]]
 templates      = {loc="~/.config/.templates", normOnLoad=true}

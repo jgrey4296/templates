@@ -1,10 +1,10 @@
 # mastodon.toml<2> -*- mode: conf-toml -*-
 
 [[locations]]
-mastodon_secrets = {file="~/.config/secrets/bots/bkmkorg.toml"}
+mastodon_secrets = {path="~/.config/secrets/bots/bkmkorg.toml", file=true}
 image_temp       = "{temp}/images/"
 all_bib          = "/media/john/data/github/bibliography/main/"
-image_whitelist  = {loc="~/.config/secrets/bots/whitelist", normOnLoad=true}
+image_whitelist  = {path="~/.config/secrets/bots/whitelist", normOnLoad=true, file=true}
 
 [[tasks.mastodon]] # TODO : read from image_whitelist, select, post
 name                 = "post.image"

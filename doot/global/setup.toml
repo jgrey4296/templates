@@ -2,7 +2,7 @@
 
 [[locations]]
 tools = "tools"
-home  = {loc="~", normOnLoad=true}
+home  = {path="~", normOnLoad=true}
 cache = "{home}/_cache_"
 tex   = "~/.local/texlive/current"
 

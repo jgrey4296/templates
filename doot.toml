@@ -33,10 +33,10 @@ task_header   = {level="INFO"}
 [logging.extra]
 
 [[locations]]
-temp            = {loc=".temp", cleanable=true}
+temp            = {path=".temp", cleanable=true}
 templates       = "."
 logs            = "{temp}/logs"
 build           = "{temp}/build"
 docs            = "docs"
 data            = "data"
-image_blacklist = "{temp}/image.blacklist"
+image_blacklist = {path="{temp}/image.blacklist", file=true}

@@ -172,3 +172,4 @@ supervisor                                           # http://supervisord.org/in
 psutil                                               # https://psutil.readthedocs.io/en/latest/#
 typeshed                                             # https://github.com/python/typeshed
 pylint                                               # https://pylint.readthedocs.io/en/latest/index.html
+pyi typed stub files                                 #  https://typing.readthedocs.io/en/latest/spec/distributing.html#stub-files

@@ -41,14 +41,9 @@ esac
 
 jgdebug "Setting up SDKMAN"
 SDKMAN_DIR="$BASE_CACHE/sdkman"
-if [[ -e "$SDKMAN_DIR/bin/sdkman-init.sh" ]]; then
-        source "$SDKMAN_DIR/bin/sdkman-init.sh"
-fi
 
 jgdebug "Setting Gradle"
-if [[ -d "$BASE_CACHE/gradle" ]]; then
-        GRADLE_USER_HOME="$BASE_CACHE/gradle"
-fi
+GRADLE_USER_HOME="$BASE_CACHE/gradle"
 
 jgdebug "Setting Jason"
 JASON_HOME="$HOME/github/.local/jason-3.2.2"

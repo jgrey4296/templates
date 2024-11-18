@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : href
+# uuid  : href
+# key   : href
+# group : url hyperref
+# --
+\href{${1:url}}{${2:text}}$0

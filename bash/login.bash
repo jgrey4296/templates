@@ -14,7 +14,7 @@ source "$HOME/github/_templates/bash/_basic_utils.bash"
 source "$HOME/github/_templates/bash/_base_path.bash"
 
 case "$OSTYPE" in
-	darwin*) source "$HOME/github/_templates/bash/_aliases.mac.bash"
+	darwin*)
 		 jgdebug "Activating components"
 		 for fname in $(find "$HOME/github/_templates/bash/components" -type f -name "*.bash" -not -regex "_.+?\.bash")
 		 do
@@ -22,9 +22,10 @@ case "$OSTYPE" in
 		     source "$fname"
 		 done
 		 source "$HOME/github/_templates/bash/conda.bash"
-		 setup_conda
+		 setup
+		 source "$HOME/github/_templates/bash/_aliases.mac.bash"_conda
 		 ;;
-	linux*) source "$HOME/github/_templates/bash/_aliases.linux.bash"
+	linux*)
 		 for fname in $(find "$HOME/github/_templates/bash/components" -type f -name "*.bash" -not -regex "_.+?\.bash")
 		 do
 		     jgdebug "-- Sourcing: $fname"
@@ -32,6 +33,8 @@ case "$OSTYPE" in
 		 done
         source "$JG_CONFIG/bash/conda.bash"
 		setup_conda
+		init_sdkman
+		source "$HOME/github/_templates/bash/_aliases.linux.bash"
         ;;
 esac
 

@@ -27,15 +27,19 @@ source "$HOME/github/_templates/bash/_basic_utils.bash"
 source "$HOME/github/_templates/bash/emacs.bash"
 
 case "$OSTYPE" in
-	darwin*) source "$HOME/github/_templates/bash/_aliases.bash"
+	darwin*)
 		# Setup Conda
 		source "$HOME/github/_templates/bash/conda.bash"
         setup_conda
+        source "$HOME/github/_templates/bash/_aliases.bash"
 		echo "Stopping Sarafi Bookmarks"; launchctl stop com.apple.SafariBookmarksSyncAgent
 		;;
 	linux*)
        source "$HOME/github/_templates/bash/conda.bash"
        setup_conda
+       init_sdkman
+       source "$HOME/github/_templates/bash/_aliases.linux.bash"
+
        if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
            debian_chroot=$(cat /etc/debian_chroot)
        fi

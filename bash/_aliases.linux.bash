@@ -47,3 +47,6 @@ function cd_ls {
 
 # conda environments
 alias cenv="mamba activate"
+
+alias sdkman="sdk"
+alias precommit="pre-commit"

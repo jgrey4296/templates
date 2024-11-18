@@ -351,7 +351,6 @@ https://docs.readthedocs.io/en/stable/
 https://github.com/mherrmann/selenium-python-helium
 **** helium
 *** sh                                          :executable:shell:subprocess:
-https://amoffat.github.io/sh/
 https://sh.readthedocs.io/en/latest/
 https://github.com/amoffat/sh
 *** twitter
@@ -784,6 +783,10 @@ https://www.sphinx-doc.org/en/master/usage/extensions/inheritance.html
 
 **** viewcode
 https://www.sphinx-doc.org/en/master/usage/extensions/viewcode.html
+
+**** mscgen
+https://pythonhosted.org/sphinxcontrib-mscgen/
+https://www.mcternan.me.uk/mscgen/
 
 *** sphinx-themes
 **** alabaster

@@ -1,0 +1,132 @@
+## maintenance.toml -*- mode: toml -*-
+
+[[locations]]
+records = "{templates}/.maintenance"
+
+[[tasks.chore]]
+name    = "backup.versions"
+version = "0.1"
+doc     = ["Update the list of installed software versions"]
+depends_on = [
+           "chore::_.apt.versions", "chore::_.snap.versions",
+           "chore::_.mamba.versions", "chore::_.rust.versions",
+           "chore::_.tex.versions", "chore::_.git", "chore::_.pipx",
+           "chore::_.flatpak.versions", "chore::_.android.versions",
+           "chore::_.dotnet.versions", "chore::_.asdf.versions",
+
+           # "chore::_.cron",
+]
+
+[[tasks.chore]]
+name    = "_.apt.versions"
+actions = [
+        {do="shell", args=["apt", "list", "--installed"], update_="versions", notty=true},
+        {do="write!", from_="versions", to="{records!p}/apt.versions"},
+        {do="shell", args=["apt-add-repository", "--list"], update_="repos", notty=true},
+        {do="write!", from_="repos", to="{records!p}/apt.repos"},
+]
+
+[[tasks.chore]]
+name    = "_.snap.versions"
+actions = [
+        {do="shell", args=["snap", "list"], update_="versions", notty=true},
+        {do="write!", from_="versions", to="{records!p}/snap.versions"},
+]
+
+[[tasks.chore]]
+name    = "_.mamba.versions"
+actions = [
+        # List envs
+        { do="shell", args=["mamba", "env", "list"], update_="mamba_envs" },
+        { do="write!", from_="mamba_envs", to="{records!p}/mamba.envs" },
+
+        # Write mamba info
+        { do="shell", args=["mamba", "info"], update_="info"  },
+        { do="write!", from_="info", to="{records!p}/mamba.info"},
+
+        # TODO list envs as json, parse, then generate subtasks to export each
+        { do="dootle.python.mamba:MambaEnv", env="default",   update_="default"},
+        { do="shell", args=["pip", "list"], shenv_="default", update_="pip"  },
+        { do="write!", from_="pip", to="{records!p}/mamba.versions"},
+]
+
+[[tasks.chore]]
+name    = "_.rust.versions"
+version = "0.1"
+actions = [
+        { do="shell", args=["rustup", "show", "-v"], update_="rustup"  },
+        { do="write!", from_="rustup", to="{records!p}/rustup.info"},
+]
+
+[[tasks.chore]]
+name    = "_.tex.versions"
+version = "0.1"
+actions = [
+        { do="shell", args=["tlmgr", "info", "--only-installed", "-data", "name,cat-version,localrev,shortdesc"], update_="tex"  },
+        { do="write!", from_="tex", to="{records!p}/tex.versions"},
+]
+
+[[tasks.chore]]
+name    = "_.git"
+version = "0.1"
+actions = [
+        {do="shell", args=["git", "--version"], update_="gitinfo" },
+        {do="write!", from_="gitinfo", to="{records!p}/git.version"},
+]
+
+[[tasks.chore]]
+name = "_.cron"
+version = "0.1"
+actions = [
+        {do="shell", args=["crontab", "-l"], update_="cron"},
+        {do="write!", from_="cron", to="{records!p}/cron.backup"},
+]
+
+[[tasks.chore]]
+name = "_.pipx"
+version = "0.1"
+actions = [
+        {do="shell", args=["pipx", "list"], update_="pipx"},
+        {do="write!", from_="pipx", to="{records!p}/pipx.backup"},
+]
+
+[[tasks.chore]]
+name = "_.asdf.versions"
+actions = [
+        {do="shell", args=["asdf", "info"], update_="asdf.info"},
+        {do="write!", from_="asdf.info", to="{records!p}/asdf.info"},
+        {do="shell", args=["asdf", "list"], update_="asdf.plugins"},
+        {do="write!", from_="asdf.info", to="{records!p}/asdf.plugins"},
+]
+
+[[tasks.chore]]
+disabled = true
+name = "_.sdkman.versions"
+actions = [
+        # todo
+        {do="shell", args=["bash", "-i", "-c", "sdk"] },
+]
+
+[[tasks.chore]]
+name = "_.dotnet.versions"
+actions = [
+        {do="shell", args=["dotnet", "--info"], update_="dotnet.info"},
+        {do="write!", from_="dotnet.info", to="{records!p}/dotnet.info"}
+]
+
+[[tasks.chore]]
+name = "_.android.versions"
+actions = [
+        {do="shell", args=["sdkmanager", "--list_installed"], update_="android.versions"},
+        {do="write!", from_="android.versions", to="{records!p}/android.versions"}
+]
+
+[[tasks.chore]]
+name = "_.flatpak.versions"
+actions = [
+        {do="shell", args=["flatpak", "list", "--all"], update_="flatpak.versions"},
+        {do="write!", from_="flatpak.info", to="{records!p}/flatpak.versions"},
+
+        {do="shell", args=["flatpak", "remotes"], update_="flatpak.remotes"},
+        {do="write!", from_="flatpak.remotes", to="{records!p}/flatpak.remotes"},
+]

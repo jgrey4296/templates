@@ -1,0 +1,12 @@
+Installed packages:
+  Path                 | Version      | Description                             | Location            
+  -------              | -------      | -------                                 | -------             
+  build-tools;33.0.2   | 33.0.2       | Android SDK Build-Tools 33.0.2          | build-tools/33.0.2  
+  cmake;3.10.2.4988404 | 3.10.2       | CMake 3.10.2.4988404                    | cmake/3.10.2.4988404
+  cmdline-tools;latest | 11.0         | Android SDK Command-line Tools (latest) | cmdline-tools/latest
+  ndk;23.2.8568313     | 23.2.8568313 | NDK (Side by side) 23.2.8568313         | ndk/23.2.8568313    
+  patcher;v4           | 1            | SDK Patch Applier v4                    | patcher/v4          
+  platform-tools       | 34.0.4       | Android SDK Platform-Tools              | platform-tools      
+  platforms;android-30 | 3            | Android SDK Platform 30                 | platforms/android-30
+  platforms;android-33 | 3            | Android SDK Platform 33                 | platforms/android-33
+

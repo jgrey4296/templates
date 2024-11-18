@@ -1,18 +1,21 @@
-  Name            Active  Path
-───────────────────────────────────────────────────────────────────────
-  base                    /home/john/_cache_/mamba
-  acab-dev                /home/john/_cache_/mamba/envs/acab-dev
-  cuty-dev                /home/john/_cache_/mamba/envs/cuty-dev
-  default                 /home/john/_cache_/mamba/envs/default
-  distributor             /home/john/_cache_/mamba/envs/distributor
-  doot-dev        *       /home/john/_cache_/mamba/envs/doot-dev
-  instal-dev              /home/john/_cache_/mamba/envs/instal-dev
+  Name            Active  Path                                        
+────────────────────────────────────────────────────────────────────────
+  base                    /home/john/_cache_/mamba                    
+  acab-dev                /home/john/_cache_/mamba/envs/acab-dev      
+  corana-dev              /home/john/_cache_/mamba/envs/corana-dev    
+  cuty-dev                /home/john/_cache_/mamba/envs/cuty-dev      
+  default         *       /home/john/_cache_/mamba/envs/default       
+  distributor             /home/john/_cache_/mamba/envs/distributor   
+  doot-dev                /home/john/_cache_/mamba/envs/doot-dev      
+  doot-dev312             /home/john/_cache_/mamba/envs/doot-dev312   
+  instal-dev              /home/john/_cache_/mamba/envs/instal-dev    
+  nominate                /home/john/_cache_/mamba/envs/nominate      
   provenance-dev          /home/john/_cache_/mamba/envs/provenance-dev
-  sphinx-dev              /home/john/_cache_/mamba/envs/sphinx-dev
-  sphinx-ext              /home/john/_cache_/mamba/envs/sphinx-ext
-  stats                   /home/john/_cache_/mamba/envs/stats
-  testbed                 /home/john/_cache_/mamba/envs/testbed
-  testbed311              /home/john/_cache_/mamba/envs/testbed311
-  tomlguard-dev           /home/john/_cache_/mamba/envs/tomlguard-dev
-  visual                  /home/john/_cache_/mamba/envs/visual
-  web                     /home/john/_cache_/mamba/envs/web
+  sphinx-dev              /home/john/_cache_/mamba/envs/sphinx-dev    
+  sphinx-ext              /home/john/_cache_/mamba/envs/sphinx-ext    
+  stats                   /home/john/_cache_/mamba/envs/stats         
+  testbed                 /home/john/_cache_/mamba/envs/testbed       
+  testbed311              /home/john/_cache_/mamba/envs/testbed311    
+  tomlguard-dev           /home/john/_cache_/mamba/envs/tomlguard-dev 
+  visual                  /home/john/_cache_/mamba/envs/visual        
+  web                     /home/john/_cache_/mamba/envs/web           

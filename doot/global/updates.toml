@@ -1,0 +1,44 @@
+
+[[tasks.update]]
+disabled   = true
+name       = "all"
+depends_on = [
+
+
+]
+
+[[tasks.update]]
+name = "_.uv"
+
+[[tasks.update]]
+name = "_.apt"
+
+[[tasks.update]]
+name = "_.snap"
+
+[[tasks.update]]
+name = "_.mamba"
+
+[[tasks.update]]
+name = "_.pipx"
+
+[[tasks.update]]
+name = "_.tex"
+
+[[tasks.update]]
+name = "_.opam"
+
+[[tasks.update]]
+name = "_.rust"
+
+[[tasks.update]]
+name = "_.asdf"
+
+[[tasks.update]]
+name = "_.dotnet"
+
+[[tasks.update]]
+name = "_.android"
+
+[[tasks.update]]
+name = "_.flatpak"

@@ -1,0 +1,45 @@
+.NET SDK:
+ Version:           8.0.300
+ Commit:            326f6e68b2
+ Workload version:  8.0.300-manifests.c1c70047
+ MSBuild version:   17.10.4+10fbfbf2e
+
+Runtime Environment:
+ OS Name:     ubuntu
+ OS Version:  24.04
+ OS Platform: Linux
+ RID:         linux-x64
+ Base Path:   /home/john/.local/dotnet/sdk/8.0.300/
+
+.NET workloads installed:
+There are no installed workloads to display.
+
+Host:
+  Version:      8.0.5
+  Architecture: x64
+  Commit:       087e15321b
+
+.NET SDKs installed:
+  7.0.409 [/home/john/.local/dotnet/sdk]
+  8.0.300 [/home/john/.local/dotnet/sdk]
+
+.NET runtimes installed:
+  Microsoft.AspNetCore.App 7.0.19 [/home/john/.local/dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 8.0.5 [/home/john/.local/dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.NETCore.App 7.0.19 [/home/john/.local/dotnet/shared/Microsoft.NETCore.App]
+  Microsoft.NETCore.App 8.0.5 [/home/john/.local/dotnet/shared/Microsoft.NETCore.App]
+
+Other architectures found:
+  None
+
+Environment variables:
+  DOTNET_ROOT       [/home/john/.local/dotnet]
+
+global.json file:
+  Not found
+
+Learn more:
+  https://aka.ms/dotnet/info
+
+Download .NET:
+  https://aka.ms/dotnet/download

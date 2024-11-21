@@ -101,3 +101,4 @@ Jason                                                    # https://jason-lang.gi
 Python UV                                                # https://docs.astral.sh/uv/reference/cli/
 Elixir Mix                                               # https://hexdocs.pm/mix/1.17.3/Mix.html
 Python Ruff                                              # https://docs.astral.sh/ruff/linter/#ruff-check
+Rust Bindgen                                             # https://rust-lang.github.io/rust-bindgen/command-line-usage.html

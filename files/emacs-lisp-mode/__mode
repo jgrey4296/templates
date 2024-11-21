@@ -57,9 +57,9 @@
         (modify-syntax-entry ?* "_ 23b" st)
         (modify-syntax-entry ?\n ">" st)
         ;; Strings
-        (modify-syntax-entry ?\" "\"" st)
+        (modify-syntax-entry ?\\" "\\"" st)
         ;; Pair parens, brackets, braces
-        (modify-syntax-entry ?\( "()" st)
+        (modify-syntax-entry ?\\( "()" st)
         (modify-syntax-entry ?\[ "(]" st)
         (modify-syntax-entry ?\{ "(}" st)
         (modify-syntax-entry ?: ".:2" st)

@@ -13,12 +13,12 @@ Logging                                              # https://docs.python.org/3
 Luigi                                                # https://luigi.readthedocs.io/en/stable/index.html
 Mamba                                                # https://mamba.readthedocs.io/
 Martin Heinz                                         # https://martinheinz.dev/
-Match Spec PEP                                       # https://peps.python.org/pep-0634/
 Match Statement                                      # https://docs.python.org/3/reference/compound_stmts.html#the-match-statement
 Maturin                                              # https://www.maturin.rs/index.html
 Mocks                                                # https://docs.python.org/3/library/unittest.mock.html
 Nose                                                 # https://github.com/nose-devs/nose2
 PEP 635: Match statement                             # https://peps.python.org/pep-0635
+PEP 634: Match Spec PEP                              # https://peps.python.org/pep-0634/
 PEPs                                                 # https://peps.python.org/pep-0000/
 Petl                                                 # https://petl.readthedocs.io/en/stable/index.html
 Pluggy                                               # https://pluggy.readthedocs.io/en/stable/

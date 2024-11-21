@@ -169,4 +169,5 @@ venv/
 docs/_generated_*
 docs/_build/
 .vscode/
+.temp/
 ##-- end misc directories

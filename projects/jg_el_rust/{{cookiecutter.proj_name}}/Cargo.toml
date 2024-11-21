@@ -10,6 +10,7 @@ crate-type = ["cdylib"]
 
 [dependencies]
 cty   = "0.2.2"
-emacs = "0.18"
+emacs = "0.19"
 
 [dev-dependencies]
+bindgen = "0.70.1"

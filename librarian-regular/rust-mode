@@ -13,17 +13,17 @@ cargo book           # https://doc.rust-lang.org/cargo/
 rust stdlib          # https://doc.rust-lang.org/std/index.html
 rust editions        # https://doc.rust-lang.org/edition-guide/index.html
 rustdoc manual       # https://doc.rust-lang.org/rustdoc/index.html
-cpython              # https://dgrunwald.github.io/rust-cpython/doc/cpython/
+rust-cpython         # https://dgrunwald.github.io/rust-cpython/doc/cpython/
 pyo3                 # https://pyo3.rs/latest
 pyo3 api             # https://docs.rs/crate/pyo3/latest
 manifest reference   # https://doc.rust-lang.org/cargo/reference/manifest.html
-crates               # https://crates.io/
+rust pakages/crates  # https://crates.io/
 Embedded Rust        # https://docs.rust-embedded.org/book/
-Collections          # https://doc.rust-lang.org/std/collections/index.html
-Lists                # https://rust-unofficial.github.io/too-many-lists/
+rust collections     # https://doc.rust-lang.org/std/collections/index.html
+rust Lists           # https://rust-unofficial.github.io/too-many-lists/
 Unsafe Rust          # https://doc.rust-lang.org/nightly/nomicon/
 bindgen              # https://rust-lang.github.io/rust-bindgen/introduction.html
-porting              # https://www.jelmer.uk/port-py-to-rust.html
+porting to rust      # https://www.jelmer.uk/port-py-to-rust.html
 rustup install       # https://dev.to/xs/setting-up-rust-on-macos-in-a-clean-way-13d1
 emacs api            # https://ubolonton.github.io/emacs-module-rs/latest/
 setuptools rust      # https://github.com/PyO3/setuptools-rust
@@ -32,3 +32,4 @@ lldb                 # https://lldb.llvm.org/
 Firefox Rust-Cpp     # https://firefox-source-docs.mozilla.org/writing-rust-code/cpp-interop.html
 lib.rs               # https://lib.rs/
 Rust RFCs            # https://rust-lang.github.io/rfcs/introduction.html
+python api           # https://docs.python.org/3/c-api/index.html

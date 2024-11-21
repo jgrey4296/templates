@@ -1,0 +1,16 @@
+Format of Keymaps:
+(type . binding)
+(type item-name . binding)
+(type item-name help-string . binding)
+(type menu-item . details)
+(t . binding)
+char-table
+vector
+string
+(keymap ...)
+
+
+
+
+
+Reference : https://www.gnu.org/software/emacs/manual/html_node/elisp/Format-of-Keymaps.html

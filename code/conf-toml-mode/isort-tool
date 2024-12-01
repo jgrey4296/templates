@@ -10,7 +10,7 @@
 color_output           = false
 py_version             = 311
 profile                = "black"
-comment_prefix         = "#"
+comment_prefix         = "# "
 sections               = [
 "FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"
 ]
@@ -29,11 +29,11 @@ add_imports            = [
 "import logging as logmod",
 "import pathlib as pl",
 "import re",
-"import time # for sleep()",
 "import types",
-"import collections",
 "import contextlib",
 "import hashlib",
+"from collections import defaultdict, ChainMap",
+"from time import sleep",
 "from copy import deepcopy",
 "from dataclasses import InitVar, dataclass, field",
 "from uuid import UUID, uuid1",
@@ -56,6 +56,7 @@ import_footer_firstparty  = "##-- end 1st party imports"
 import_footer_localfolder = ""
 
 [tool.isort.import_headings]
+# Currently Doesn't work
 FUTURE      = "## Imports:"
 STDLIB      = "##-- stdlib imports"
 THIRDPARTY  = "##-- 3rd party imports"
@@ -63,6 +64,7 @@ FIRSTPARTY  = "##-- 1st party imports"
 LOCALFOLDER = ""
 
 [tool.isort.import_footers]
+# Currently Doesn't work
 FUTURE      = ""
 STDLIB      = "##-- end stdlib imports"
 THIRDPARTY  = "##-- end 3rd party imports"

@@ -24,6 +24,9 @@ util               # not utils
 decoding           # lower -> higher
 encoding           # higher -> lower
 
+module  # Unit of code
+package # sub-unit of code
+crate   # compiled unit of code
 ----               # Directories
 .{}                # Hidden, Ignorable
 {}_                # Source for Generation

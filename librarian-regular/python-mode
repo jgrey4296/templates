@@ -28,7 +28,7 @@ PyPi Status                                          # https://status.python.org
 Pyarrow/parquette                                    # https://arrow.apache.org/docs/python/getstarted.html
 Pydot                                                # https://github.com/pydot/pydot
 Pyright                                              # https://microsoft.github.io/pyright/
-Pytest                                               # https://docs.pytest.org/en/7.3.x/how-to/fixtures.html
+Pytest                                               # https://docs.pytest.org/en/stable/how-to/fixtures.html
 Pytest Mock                                          # https://pytest-mock.readthedocs.io/en/latest/
 Pytest Plugins                                       # https://docs.pytest.org/en/latest/reference/plugin_list.html
 SQLAlchemy                                           # https://docs.sqlalchemy.org/en/20/
@@ -161,7 +161,7 @@ dill                                                 # https://dill.readthedocs.
 noise                                                # https://github.com/caseman/noise
 scipy                                                # https://docs.scipy.org/doc/scipy/reference/index.html
 validators                                           # https://python-validators.github.io/validators/
-mastodon                                             # https://mastodonpy.readthedocs.io/en/1.5.1/
+mastodon                                             # https://mastodonpy.readthedocs.io/en/stable/
 structlog                                            # https://www.structlog.org/en/stable/
 statemachine                                         # https://python-statemachine.readthedocs.io/en/latest/
 pyaml                                                # https://pyyaml.org/
@@ -172,4 +172,5 @@ supervisor                                           # http://supervisord.org/in
 psutil                                               # https://psutil.readthedocs.io/en/latest/#
 typeshed                                             # https://github.com/python/typeshed
 pylint                                               # https://pylint.readthedocs.io/en/latest/index.html
-pyi typed stub files                                 #  https://typing.readthedocs.io/en/latest/spec/distributing.html#stub-files
+pyi typed stub files                                 # https://typing.readthedocs.io/en/latest/spec/distributing.html#stub-files
+importlib.metadata                                   # https://importlib-metadata.readthedocs.io/en/latest/api.html

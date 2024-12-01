@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : meta.deps
+# uuid  : meta.deps
+# key   : meta.deps
+# group : python dependencies metadata
+# --
+def get_meta(name:str):
+    import importlib.metadata as md
+    data              = md.metadata(name)
+    flags : list[str] = data.get_all('Provides-Extra')
+    deps  : list[str] = data.get_all('PRovides-Dist')

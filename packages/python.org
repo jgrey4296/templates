@@ -667,6 +667,8 @@ https://github.com/MNoichl/opinionated
 https://jiffyclub.github.io/palettable/
 *** plotly
 https://github.com/plotly/plotly.py
+**** calplot                                   :calendar_heatmap:
+https://github.com/brunorosilva/plotly-calplot
 *** railroad-diagrams                           :parsing:
 https://github.com/tabatkins/railroad-diagrams
 *** seaborn

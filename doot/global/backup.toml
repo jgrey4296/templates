@@ -4,6 +4,7 @@
 data     = "/media/john/data"
 backup_1 = "/media/john/big_ex"
 backup_2 = "/media/john/BackupSD"
+backup_3 = "/media/john/LargeBackup"
 
 [[tasks.backup]]
 name                       = "assets"
@@ -65,3 +66,7 @@ actions = [
 sub_actions                = [
     {do="dootle.utils.multi_shadow:MultiBackupAction", from_="fpath", pattern="{shadow_path!p}/{fname}"}
 ]
+
+[[tasks.backup]]
+name = "pdfs"
+actions = [{do="log", msg="Use bibliography tasks to backup pdfs"}]

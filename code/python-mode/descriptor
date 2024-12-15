@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name  : descriptor
+# uuid  : descriptor
+# key   : descriptor
+# group : python descriptor protool
+# --
+class $1Property:
+    """
+    https://docs.python.org/3/howto/descriptor.html
+    """
+
+    def __get__(self, instance, owner=None) -> Any:
+        pass
+    def __set__(self, instance, value) -> None:
+        pass
+    def __delete__(self, instance) -> Any:
+        pass
+    def __set_name__(self, ownerclass, name) -> None:
+        pass

@@ -19,7 +19,6 @@ classifiers     = [
 
 ##-- dependencies
 dependencies   = [
-    "tomlguard >= 0.4.0",
     "networkx > 3.0",
     "sh >= 2.0.6",
     "stackprinter >= 0.2.10",
@@ -177,7 +176,7 @@ add_imports            = [
 "import logging as logmod",
 "import pathlib as pl",
 "from uuid import UUID, uuid1",
-"from typing import (TYPE_CHECKING, Any, Callable, ClassVar, Final, Generic, Iterable, Iterator, Mapping, Match, MutableMapping, Protocol, Sequence, Tuple, TypeAlias, TypeGuard, TypeVar, cast, final, overload, runtime_checkable, Generator)",
+"from typing import (TYPE_CHECKING, Annotated, Any, Callable, ClassVar, Final, Generic, Iterable, Iterator, Mapping, Match, MutableMapping, Protocol, Sequence, Tuple, TypeAlias, TypeGuard, TypeVar, cast, final, overload, Self, runtime_checkable, Generator)",
 ]
 
 

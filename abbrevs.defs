@@ -7,6 +7,7 @@
 
 (define-abbrev-table 'emacs-lisp-mode-abbrev-table
   '(
+    ("libenv" "librarian-envs" nil :count 1)
     ("modulie" "module" nil :count 2)
    ))
 
@@ -41,11 +42,13 @@
   '(
     ("Dkey" "DKey" nil :count 5)
     ("dootkey" "DootKey" nil :count 192)
-    ("false" "False" nil :count 4)
+    ("false" "False" nil :count 11)
     ("flase" "False" nil :count 0)
     ("isins" "isinstance(" nil :count 1)
     ("kwarp" "kwrap" nil :count 61)
     ("lamdba" "lambda" nil :count 2)
-    ("none" "None" nil :count 3)
-    ("true" "True" nil :count 4)
+    ("maybe" "Maybe" nil :count 4)
+    ("none" "None" nil :count 23)
+    ("true" "True" nil :count 8)
    ))
+

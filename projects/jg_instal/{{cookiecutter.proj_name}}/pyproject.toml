@@ -13,9 +13,7 @@ classifiers     = [
   "Programming Language :: Python"
 ]
 
-dependencies   = [
-               "tomlguard"
-]
+dependencies   = []
 
 [project.optional-dependencies]
 docs = [ "sphinx" ]

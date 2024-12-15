@@ -4,9 +4,10 @@ $0
 
 
 """
-
+# Import:
 from __future__ import annotations
 
+# ##-- stdlib imports
 import datetime
 import enum
 import functools as ftz
@@ -23,8 +24,13 @@ from typing import (TYPE_CHECKING, Any, Callable, ClassVar, Final, Generator,
                     TypeGuard, TypeVar, cast, final, overload,
                     runtime_checkable)
 from uuid import UUID, uuid1
+# ##-- end stdlib imports
 
 ##-- logging
 logging = logmod.getLogger(__name__)
 ##-- end logging
+
+# Global Vars:
+
+# Body:
 $0

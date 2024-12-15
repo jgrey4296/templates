@@ -2,7 +2,6 @@
 """
 
 
-See EOF for license/metadata/notes as applicable
 """
 
 ##-- builtin imports
@@ -41,7 +40,7 @@ printer = logmod.getLogger("doot._printer")
 
 import jsonlines
 import pandas
-import tomlguard
+from jgdv.structs.chainguard import ChainGuard
 import doot
 import doot.errors
 from doot.structs import DKey, DKeyed
@@ -67,10 +66,10 @@ output_date_format   = "%Y-%m-%d"
 @DKeyed.redirects("update_")
 @DKeyed.types("from")
 def reduce_video_metadata(spec, state, update_, from_ex):
-    update           = update_k.redirect(spec)
-    json : TomlGuard = from_ex
-    keys             = set(json.keys())
-    focus            = set(focus_keys)
+    update               = update_k.redirect(spec)
+    json : ChainGuard    = from_ex
+    keys                 = set(json.keys())
+    focus                = set(focus_keys)
     reduced              = {}
     reduced['date']      = datetime.datetime.strptime(json.on_fail("30000101").upload_date(), json_date_format).strftime(output_date_format)
 
@@ -81,7 +80,7 @@ def reduce_video_metadata(spec, state, update_, from_ex):
 
     for key in focus & keys:
         match json[key]:
-            case [*xs] if isinstance(xs[0], tomlguard.TomlGuard):
+            case [*xs] if isinstance(xs[0], ChainGuard):
                 reduced[key] = [dict(x.items()) for x in xs]
             case _:
                 reduced[key] = json[key]

@@ -2,31 +2,26 @@
 """
 $0
 """
+# Imports
 from __future__ import annotations
 
+# ##-- stdlib imports
 import logging as logmod
 import pathlib as pl
 from typing import (Any, Callable, ClassVar, Generic, Iterable, Iterator,
                     Mapping, Match, MutableMapping, Sequence, Tuple, TypeAlias,
                     TypeVar, cast)
 import warnings
+# ##-- stdlib imports
 
 import pytest
 
+# Logging:
 logging = logmod.root
 
-##-- pytest reminder
-# caplog
-# mocker.patch | patch.object | patch.multiple | patch.dict | stopall | stop | spy | stub
-# pytest.mark.filterwarnings
-# pytest.parameterize
-# pytest.skip | skipif | xfail
-# with pytest.deprecated_call
-# with pytest.raises
-# with pytest.warns(warntype)
+# Global Vars:
 
-##-- end pytest reminder
-
+# Body:
 class Test$1:
 
     @pytest.fixture(scope="function")

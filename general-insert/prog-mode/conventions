@@ -32,3 +32,7 @@ crate   # compiled unit of code
 {}_                # Source for Generation
 gen_{}                # Generation Output
 __tests            # Test dirs
+
+----
+parameter # Formal Spec
+argument  # Actual Value

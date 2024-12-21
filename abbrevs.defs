@@ -7,8 +7,11 @@
 
 (define-abbrev-table 'emacs-lisp-mode-abbrev-table
   '(
-    ("libenv" "librarian-envs" nil :count 1)
+    ("amp" "&" nil :count 3)
+    ("docc" "documentation" nil :count 7)
+    ("libenv" "librarian-envs" nil :count 16)
     ("modulie" "module" nil :count 2)
+    ("rrest" "&rest" nil :count 11)
    ))
 
 (define-abbrev-table 'fundamental-mode-abbrev-table
@@ -19,7 +22,7 @@
 (define-abbrev-table 'global-abbrev-table
   '(
     ("constriants" "constraints" nil :count 3)
-    ("lamdba" "lambda" nil :count 2)
+    ("lamdba" "lambda" nil :count 3)
     ("metdata" "metadata" nil :count 1)
     ("moduile" "module" nil :count 3)
     ("moduiles" "modules" nil :count 2)

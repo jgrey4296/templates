@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name  : bc-test-suite
+# uuid  : bc-test-suite
+# key   : bc-test-suite
+# group : tests buttercup
+# --
+(describe "$1"
+  ;; Vars:
+  :var (a)
+  ;; Setup
+  (before-each nil)
+  ;; Teardown
+  (after-each nil)
+  ;; Specs:
+  (it "is a sanity test" (expect t :to-be (not nil)))
+  $0
+)

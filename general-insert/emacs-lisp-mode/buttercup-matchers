@@ -1,0 +1,19 @@
+Buttercup expect matchers:
+:not                       #
+:to-be                     #
+:to-equal                  #
+:to-have-same-items-as     #
+:to-match                  #
+:to-be-truthy              #
+:to-contain                #
+:to-be-close-to            #
+:to-throw                  #
+
+----                       # Spys
+:to-have-been-called       #
+:to-have-been-called-with  #
+:to-have-been-called-times #
+:and-return-value          # spy-on
+:and-call-through          # spy-on
+:and-call-fake             # spy-on
+:and-throw-error           # spy-on

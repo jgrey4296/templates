@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name  : autoadvice
+# uuid  : autoadvice
+# key   : autoadvice
+# group : autoload
+# --
+;;;###(advice-add '$2 :${3:override} #'$1)
+;;;###autoload (autoload '$1 "${2:`(f-base buffer-file-name)`}")
+(defun $1 ()
+       $0
+)
+

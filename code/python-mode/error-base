@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : error-base
+# uuid  : error-base
+# key   : error-base
+# group : class error
+# --
+class $1Error(Exception):
+    """ A Base Error Class for $1 """
+$0

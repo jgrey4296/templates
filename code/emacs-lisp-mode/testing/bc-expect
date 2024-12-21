@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : bc-expect
+# uuid  : bc-expect
+# key   : bc-expect
+# group : buttercup unittest
+# --
+(expect $1 ${2::to-be} $0)

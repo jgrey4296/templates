@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : bc-spec
+# uuid  : bc-spec
+# key   : bc-spec
+# group : buttercup unittests
+# --
+(it "$1"
+  $0
+  )

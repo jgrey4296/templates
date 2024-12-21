@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : bc-var
+# uuid  : bc-var
+# key   : bc-var
+# group : buttercup unittest
+# --
+:var (($1 $2))$0

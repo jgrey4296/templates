@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : all-symbols
+# uuid  : all-symbols
+# key   : all-symbols
+# group :
+# --
+(cl-do-all-symbols (sym)
+    sym
+    )

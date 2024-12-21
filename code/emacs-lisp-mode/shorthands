@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : shorthands
+# uuid  : shorthands
+# key   : shorthands
+# group :
+# --
+;; Local Variables:
+;; read-symbol-shorthands: (
+;; ("$1-" . "$2-")
+;; )
+;; End:

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : autoalias
+# uuid  : autoalias
+# key   : autoalias
+# group : autoload
+# --
+;;;###autoload (defalias '$1 '$0)
+;;;###autoload (autoload '$1 "${2:`(f-base buffer-file-name)`}")

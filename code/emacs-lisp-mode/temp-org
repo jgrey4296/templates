@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : temp-org
+# uuid  : temp-org
+# key   : temp-org
+# group : temp-buffer
+# --
+(let ((temp-buffer-window-show-hook '(org-mode)))
+     (with-help-window "*$1*"
+     (print "* Title\n")
+     )
+)

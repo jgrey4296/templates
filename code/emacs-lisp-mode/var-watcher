@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : var-watcher
+# uuid  : var-watcher
+# key   : var-watcher
+# group : lisp variables callback
+# --
+(add-variable-watcher '$1
+                      #'(lambda (sym newval op where)
+                      $0
+                        )
+                      )

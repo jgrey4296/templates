@@ -30,9 +30,9 @@ header        = {level="INFO" }
 task_header   = {level="INFO"}
 
 [[locations]]
-templates      = {path="~/.config/.templates", normOnLoad=true}
-temp           = {path="_cache_/doot/temp",  cleanable=true}
-build          = {path="_cache_/doot/build", cleanable=true}
+templates      = "~/.config/.templates"
+temp           = "clean::_cache_/doot/temp"
+build          = "clean::_cache_/doot/build"
 logs           = "{temp}/logs"
 template_tasks = "{templates}/doot"
 records        = "{templates}/.maintenance"

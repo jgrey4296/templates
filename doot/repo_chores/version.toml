@@ -1,8 +1,8 @@
 
 
 [[locations]]
-changelog    = {path="CHANGELOG.md", file=true}
-requirements = {path="requirements.txt", file=true}
+changelog    = "file::CHANGELOG.md"
+requirements = "file::requirements.txt"
 
 [[tasks.version]]
 name       = "major"

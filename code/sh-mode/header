@@ -3,7 +3,7 @@
 # uuid  : header
 # key   : header
 # group : bash
-# from  : https://sharats.me/posts/shell-script-best-practices/
+# contributor : https://sharats.me/posts/shell-script-best-practices/
 # --
 #!/usr/bin/env bash
 # exit on various failures:

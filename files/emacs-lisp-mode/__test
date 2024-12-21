@@ -5,20 +5,17 @@
 ;;
 ;;
 ;;-- end Header
-$0
+(require 'buttercup)
 
-(require 'ert)
-
-(defun `(f-base buffer-file-name)`--setup ()
-  (add-to-list 'load-path (f-parent default-directory))
-  ;; (load "")
+(describe "sanity"
+  ;; Specs:
+  (it "is a sanity test" (expect t :to-be (not nil)))
 )
 
-(ert-deftest `(f-base buffer-file-name)`-sanity-test ()
-  "Initial Sanity Test"
-  :tags '(sanity)
-  (`(f-base buffer-file-name)`--setup)
-  (should (equal (pp-to-string '(quote quote)) "'quote"))
-  (should (equal (pp-to-string '((quote a) (quote b))) "('a 'b)\n"))
-  (should (equal (pp-to-string '('a 'b)) "('a 'b)\n"))
-  )
+$0
+
+;; Local Variables:
+;; read-symbol-shorthands: (
+;; ("blah-" . "blah-blah-")
+;; )
+;; End:

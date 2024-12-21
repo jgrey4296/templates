@@ -35,3 +35,5 @@ RST Document Tree                  # https://docutils.sourceforge.io/docs/ref/do
 RSG Reference                      # https://documatt.com/restructuredtext-reference/index.html
 
 doc8                               # https://doc8.readthedocs.io/en/latest/readme.html
+
+Guide # https://www.writethedocs.org/guide/writing/reStructuredText/

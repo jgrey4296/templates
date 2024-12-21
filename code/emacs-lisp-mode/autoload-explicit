@@ -2,6 +2,6 @@
 # name  : autoload-explicit
 # uuid  : autoload-explicit
 # key   : autoload-explicit
-# group :
+# group : autoload
 # --
-(autoload '${1:fn} "${2:`buffer-file-name`}" nil ${5:t})
+;;;###autoload (autoload '${1:fn} "${2:`(f-base buffer-file-name)`}" nil ${5:t} nil)

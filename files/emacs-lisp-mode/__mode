@@ -114,4 +114,9 @@
 ;; This file is not part of GNU Emacs.
 ;;
 ;;-- end footer
+;; Local Variables:
+;; read-symbol-shorthands: (
+;; ("blah-" . "blah-")
+;; )
+;; End:
 ;;; `(file-name-nondirectory buffer-file-name)` ends here

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : target.lib
+# uuid  : target.lib
+# key   : target.lib
+# group : cargo library rust
+# --
+[lib]
+name = ""
+path = "src/lib.rs"

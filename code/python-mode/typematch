@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name  : typematch
+# uuid  : typematch
+# key   : typematch
+# group : matching builtins types
+# contributor : https://stackoverflow.com/questions/72295812/python-match-case-by-type-of-value
+# --
+import builtins
+match type_:
+    case builtins.str:
+        pass
+    case builtins.int:
+        pass
+    case builtins.bool:
+        pass
+    case builtins.list:
+        pass
+    case _:
+        pass

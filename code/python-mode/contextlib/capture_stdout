@@ -2,7 +2,7 @@
 # name  : capture_stdout
 # uuid  : capture_stdout
 # key   : capture_stdout
-# group : IO with
+# group : IO with context redirection
 # --
 with contextlib.redirect_stdout(io.StringIO()) as stdout:
      $0

@@ -1,0 +1,3 @@
+## __assets -*- mode: conf-toml -*-
+
+`(+snippet-expand "asset")`

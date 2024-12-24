@@ -1,8 +1,8 @@
 # -*- mode: snippet -*-
-# name  : build-maturin
-# uuid  : build-maturin
-# key   : build-maturin
-# group : build-system python rust maturin pyproject
+# name  : maturin.tool
+# uuid  : maturin.tool
+# key   : maturin.tool
+# group : build-system python rust maturin pyproject tool
 # --
 ##-- build system: maturin
 [build-system]

@@ -4,7 +4,6 @@
 # key   : import.algo
 # group :
 # --
-##-- import algorithms
 import heapq                    # stdlib. https://docs.python.org/3/library/heapq.html
 import queue                    # stdlib. https://docs.python.org/3/library/queue.html
 import boltons.listutils        # lists              https://boltons.readthedocs.io/en/latest/listutils.html
@@ -14,4 +13,3 @@ import cachetools               # https://github.com/tkem/cachetools/
 import toposort                 # https://gitlab.com/ericvsmith/toposort
 import noise                    # https://github.com/caseman/noise
 import editdistance             # https://github.com/roy-ht/editdistance
-##-- end import algorithms

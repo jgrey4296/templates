@@ -1,4 +1,4 @@
-## cliff.toml -*- mode: Toml -*-
+## cliff.toml -*- mode: conf-toml -*-
 # https://git-cliff.org/docs/configuration
 
 [changelog]

@@ -4,7 +4,6 @@
 # key   : import.data
 # group :
 # --
-##-- import data accessors / writers
 import pony.orm as pony         # https://docs.ponyorm.org/
 import pandas                   # https://pandas.pydata.org/docs/
 import marshmallow              # https://marshmallow.readthedocs.io/en/stable/
@@ -34,10 +33,3 @@ import xmlschema # https://xmlschema.readthedocs.io/en/latest/usage.html
 # from bs4 import BeautifulSoup # https://beautiful-soup-4.readthedocs.io/en/latest/
 # import tomllib
 
-try:
-    # For py 3.11 onwards:
-    import tomllib as toml
-except ImportError:
-    # Fallback to external package
-    import toml
-##-- end import data accessors

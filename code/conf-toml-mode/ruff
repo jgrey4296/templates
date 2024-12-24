@@ -1,4 +1,9 @@
-## ruff.toml -*- mode: Conf[TOML] -*-
+# -*- mode: snippet -*-
+# name  : ruff
+# uuid  : ruff
+# key   : ruff
+# group : toml ruff config python
+# --
 # https://docs.astral.sh/ruff/configuration/
 
 # Extend the project settings, if theres a ruff section
@@ -14,7 +19,7 @@ exclude = [
 ]
 line-length    = 100
 indent-width   = 4
-target-version = "py311"
+target-version = "py312"
 cache-dir      = ".temp/ruff_cache"
 
 [lint]

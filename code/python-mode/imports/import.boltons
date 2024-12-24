@@ -4,7 +4,6 @@
 # key   : import.boltons
 # group :
 # --
-##-- import boltons
 boltons.cacheutils       # caching            https://boltons.readthedocs.io/en/latest/cacheutils.html
 boltons.debugutils       # debugging          https://boltons.readthedocs.io/en/latest/debugutils.html
 boltons.dictutils        # mapping            https://boltons.readthedocs.io/en/latest/dictutils.html
@@ -32,4 +31,3 @@ boltons.tbutils          # tracebacks         https://boltons.readthedocs.io/en/
 boltons.timeutils        # datetimes          https://boltons.readthedocs.io/en/latest/timeutils.html
 boltons.typeutils        # typing             https://boltons.readthedocs.io/en/latest/typeutils.html
 boltons.urlutils         # urls               https://boltons.readthedocs.io/en/latest/urlutils.html
-##-- end import boltons

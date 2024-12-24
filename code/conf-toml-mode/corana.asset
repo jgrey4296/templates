@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : corana.asset
+# uuid  : corana.asset
+# key   : corana.asset
+# group : corana assests dataset
+# --
+[[asset]]
+author  = "$1"
+source  = ["$2"]
+files   = []
+license = []

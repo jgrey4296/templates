@@ -24,24 +24,8 @@ publish     = false
 
 ##-- profiles
 # https://doc.rust-lang.org/cargo/reference/profiles.html
-[profile.gdb]
-inherits         = "dev"
-opt-level        = 0
-debug            = true
-split-debuginfo  = 'packed'
-strip            = 'none'
-debug-assertions = true
-overflow-checks  = true
-lto              = "no"
-panic            = 'unwind'
-incremental      = true
-codegen-units    = 256
-rpath            = false
-rustflags        = ['--emit=obj,link']
+`(+snippet-expand "profile.gdb")`
 
-
-[profile.release]
-# lto = true # link time optimization
 
 ##-- end profiles
 
@@ -57,10 +41,10 @@ rustfmt       = "0.10"
 [build-dependencies]
 
 [target.'cfg(unix)'.dependencies]
-
 [target.'cfg(windows)'.dependencies]
 [target.'cfg(target_arch = "x86")'.dependencies]
 [target.'cfg(target_arch = "x86_64")'.dependencies]
+
 ##-- end dependencies
 
 ##-- features
@@ -72,12 +56,11 @@ rustfmt       = "0.10"
 
 ##-- targets
 # https://doc.rust-lang.org/cargo/reference/cargo-targets.html
-[lib]
-# name = ""
-# path = "src/lib.rs"
 
-[[bin]]
-# name = ""
-# path = "src/main.rs"
+`(+snippet-expand "target.bin")`
 
 ##-- end targets
+
+# --------------------------------------------------
+
+`(+expand-snippet "cliff.rust.tool")`

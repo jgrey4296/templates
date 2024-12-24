@@ -4,7 +4,6 @@
 # key   : import.profile
 # group :
 # --
-##-- import profiling
 import sys
 import trace                    # stdlib. https://docs.python.org/3/library/trace.html
 import tracemalloc              # human     = lambda x, y=False: tracemalloc._format_size(x, y)
@@ -22,4 +21,3 @@ import boltons.tbutils          # tracebacks         https://boltons.readthedocs
 import faulthandler             # for faulthandler.enable(file=sys.stderr, all_threads=True)
 import signal                   #
 import coverage                 #
-##-- end import profiling

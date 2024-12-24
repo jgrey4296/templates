@@ -1,8 +1,8 @@
 # -*- mode: snippet -*-
-# name  : build-setuptools
-# uuid  : build-setuptools
-# key   : build-setuptools
-# group : python pyproject
+# name  : setuptools.tool
+# uuid  : setuptools.tool
+# key   : setuptools.tool
+# group : python pyproject tool
 # --
 ##-- build-system : setuptools
 # https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html

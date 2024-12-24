@@ -3,7 +3,6 @@
 # uuid: import.math
 # group: math
 # --
-##-- import numbers
 import numpy as np                        # https://numpy.org/doc/stable/user/index.html#user
 import networkx as nx                     # https://networkx.org/
 import graphviz                           # https://github.com/xflr6/graphviz
@@ -25,4 +24,3 @@ import noise                              # https://github.com/caseman/noise
 import humanfriendly                      #
 import sympy
 # import pomegranate as pom
-##-- end import numbers

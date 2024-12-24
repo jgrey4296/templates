@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : bc-sanity
+# uuid  : bc-sanity
+# key   : bc-sanity
+# group : buttercup unittest sanity
+# --
+(it "is a sanity test" (expect t :to-be (not nil)))

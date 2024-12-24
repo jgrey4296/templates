@@ -5,7 +5,6 @@
 # group : infra python pyproject
 # --
 ##-- sphinx
-# Use in doit
 # reference https://www.sphinx-doc.org/en/master/man/sphinx-build.html
 [tool.sphinx]
 builder   = "html"

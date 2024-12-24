@@ -6,10 +6,10 @@
 [profile.release]
 opt-level        = 3
 debug            = false
-split-debuginfo  = '...'  # Platform-specific.
+# split-debuginfo  = '...'  # Platform-specific.
 debug-assertions = false
 overflow-checks  = false
-lto              = false
+lto              = false # link time optiization
 panic            = 'unwind'
 incremental      = false
 codegen-units    = 16

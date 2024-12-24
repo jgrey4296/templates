@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : indent-defun
+# uuid  : indent-defun
+# key   : indent-defun
+# group : indent macro
+# --
+(declare (indent defun))$0

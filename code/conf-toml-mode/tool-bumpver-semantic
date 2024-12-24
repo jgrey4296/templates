@@ -1,9 +1,10 @@
 # -*- mode: snippet -*-
-# name  : bumpver.semantic
-# uuid  : bumpver.semantic
-# key   : bumpver.semantic
+# name  : bumpver.semantic.tool
+# uuid  : bumpver.semantic.tool
+# key   : bumpver.semantic.tool
 # group : infra python pyproject
 # --
+##-- bumpver
 [tool.bumpver]
 current_version    = "0.1.0"
 version_pattern    = "MAJOR.MINOR.PATCH"
@@ -14,11 +15,15 @@ commit             = true
 tag                = true
 # pre_commit_hook  = ""
 # post_commit_hook = ""
-# push             = true
+# push             = false
 
 [tool.bumpver.file_patterns]
 "pyproject.toml"   = [
-                   '^version         = "{version}"$',
-                   '^current_version = "{version}"$'
+                   '^version\s+=\s+"{version}"',
+                   '^current_version\s+=\s+"{version}"'
 ]
-"{}/__init__.py" = ['^__version__          : Final\[str\]         = "{version}"']
+"$1/__init__.py" = ['^__version__\s+:\s+Final\[str\]\s+=\s+"{version}"']
+"docs/conf.py"   = ["^release = '{version}'"]
+"README.md"      = ["^Version : {version}  "]
+
+##-- end bumpver

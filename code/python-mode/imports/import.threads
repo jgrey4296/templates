@@ -4,7 +4,6 @@
 # key   : import.threads
 # group :
 # --
-##-- import thread libs
 import asyncio                  # stdlib. https://docs.python.org/3/library/asyncio.html
 # from asyncio import run, create_task, gather, sleep
 import twisted                  #
@@ -15,4 +14,3 @@ import queue                    # stdlib. https://docs.python.org/3/library/queu
 import sched                    # stdlib. https://docs.python.org/3/library/sched.html
 import boltons.socketutils      # sockets            https://boltons.readthedocs.io/en/latest/socketutils.html
 import requests                 # https://docs.python-requests.org/en/latest/index.html
-##-- end import thread libs

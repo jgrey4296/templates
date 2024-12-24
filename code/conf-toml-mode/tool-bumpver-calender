@@ -1,9 +1,10 @@
 # -*- mode: snippet -*-
-# name  : bumpver.calendar
-# uuid  : bumpver.calendar
-# key   : bumpver.calendar
-# group : infra python pyproject
+# name  : bumpver.calendar.tool
+# uuid  : bumpver.calendar.tool
+# key   : bumpver.calendar.tool
+# group : infra python pyproject tool
 # --
+##-- bumpver
 [tool.bumpver]
 # https://github.com/mbarkhau/bumpver
 current_version  = "2023.10.1"
@@ -20,3 +21,5 @@ post_commit_hook = ""
 [tool.bumpver.file_patterns]
 "pyproject.toml"  = ['version = "{version}"']
 "./*/__init__.py" = [ '__version__ = "{version}"' ]
+
+##-- end bumpver

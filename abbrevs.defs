@@ -11,6 +11,7 @@
     ("docc" "documentation" nil :count 7)
     ("libenv" "librarian-envs" nil :count 16)
     ("modulie" "module" nil :count 2)
+    ("raok" "&allow-other-keys" nil :count 1)
     ("rrest" "&rest" nil :count 11)
    ))
 

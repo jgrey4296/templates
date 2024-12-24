@@ -4,6 +4,4 @@
 # key:  future.annotations
 # group : imports
 # --
-##-- imports
 from __future__ import annotations
-##-- end imports

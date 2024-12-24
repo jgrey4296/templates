@@ -1,12 +1,7 @@
-# -*- mode: snippet -*-
-# name: mypyrc
-# uuid: mypyrc
-# group: python
-# --
-# Global options:
+# -*- mode: conf-toml -*-
 #https://mypy.readthedocs.io/en/stable/config_file.html#config-file
 [mypy]
-python_version      = 3.11
+python_version      = "3.12"
 warn_return_any     = True
 warn_unused_configs = True
 cache_dir           = ".temp/mypy_cache"

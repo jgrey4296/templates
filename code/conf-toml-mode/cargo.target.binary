@@ -1,8 +1,8 @@
 # -*- mode: snippet -*-
-# name  : target
-# uuid  : target
-# key   : target
-# group : rust cargo
+# name  : target.bin
+# uuid  : target.bin
+# key   : target.bin
+# group : rust cargo binary
 # --
 [${1:bin}]
 name              = "$2"               # The name of the target.

@@ -1,10 +1,10 @@
 # -*- mode: snippet -*-
-# name  : zipthis
-# uuid  : zipthis
-# key   : zipthis
-# group : analysis
+# name  : corana.zip.this
+# uuid  : corana.zip.this
+# key   : corana.zip.this
+# group : analysis corana dataset
 # --
-[dataset]
+[dataset.instance]
 name       = ""
 tags       = []
 source     = []

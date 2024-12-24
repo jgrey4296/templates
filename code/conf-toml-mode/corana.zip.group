@@ -1,8 +1,8 @@
 # -*- mode: snippet -*-
-# name  : zipgroup
-# uuid  : zipgroup
-# key   : zipgroup
-# group : analysis
+# name  : corana.zip.group
+# uuid  : corana.zip.group
+# key   : corana.zip.group
+# group : analysis corana dataset
 # --
 [[dataset.subgroup]]
 name      = ""

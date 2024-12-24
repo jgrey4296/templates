@@ -3,7 +3,6 @@
 # uuid: file
 # group: imports
 # --
-##-- import file manip
 import pathlib as pl
 # import path # https://github.com/jaraco/path
 import tempfile
@@ -17,4 +16,3 @@ import filelock                 # https://py-filelock.readthedocs.io/en/latest/
 #      assert(isisntance(temp_dir, str))
 #      # Do Stuff
 # On Exit of context manager, dir is deleted
-##-- end import file manip

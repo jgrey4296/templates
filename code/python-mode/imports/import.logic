@@ -4,7 +4,6 @@
 # key   : import.logic
 # group :
 # --
-##-- import logic
 # import z3 # https://github.com/Z3Prover/z3/wiki
 # import z4 # https://github.com/Tyilo/z4
 # import sympy # https://docs.sympy.org/latest/guides/index.html
@@ -12,4 +11,3 @@
 # import pomegranate # https://pomegranate.readthedocs.io/en/latest/index.html
 # import pysmt # https://github.com/pysmt/pysmt
 # import clingo # https://potassco.org/
-##-- end import logic

@@ -1,10 +1,11 @@
 # -*- mode: snippet -*-
-# name  : cliff
-# uuid  : cliff
-# key   : cliff
-# group : rust changelog
+# name  : cliff.rust.tool
+# uuid  : cliff.rust.tool
+# key   : cliff.rust.tool
+# group : rust changelog tool
 # --
-##-- git-cliff
+##-- git-cliff changelog
+# https://git-cliff.org/docs/configuration
 [package.metadata.git-cliff.changelog]
 header = "All notable changes to this project will be documented in this file."
 body = "..."
@@ -16,4 +17,4 @@ conventional_commits = true
 commit_parsers = []
 filter_commits = false
 # see [git] section for more keys
-##-- end git-cliff
+##-- end git-cliff changelog

@@ -1,15 +1,15 @@
 # -*- mode: snippet -*-
-# name  : isort
-# uuid  : isort
-# key   : isort
-# group : python pyproject
+# name  : isort.tool
+# uuid  : isort.tool
+# key   : isort.tool
+# group : python pyproject tool imports
 # --
 ##-- isort
 # https://pycqa.github.io/isort/docs/configuration/config_files.html
 [tool.isort]
 color_output           = false
-py_version             = 311
-profile                = "black"
+py_version             = 312
+# profile                = "black"
 comment_prefix         = "# "
 sections               = [
 "FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"
@@ -32,13 +32,14 @@ add_imports            = [
 "import types",
 "import contextlib",
 "import hashlib",
+"import typing",
 "from collections import defaultdict, ChainMap",
 "from time import sleep",
 "from copy import deepcopy",
 "from dataclasses import InitVar, dataclass, field",
 "from uuid import UUID, uuid1",
 "from weakref import ref",
-"from typing import (TYPE_CHECKING, Annotated, Any, Callable, ClassVar, Final, Generic, Iterable, Iterator, Mapping, Match, MutableMapping, Protocol, Sequence, Tuple, TypeAlias, TypeGuard, TypeVar, cast, final, Self, overload, runtime_checkable, Generator)",
+"from typing import (TYPE_CHECKING, Any, Callable, ClassVar, Final, Generic, Iterable, Iterator, Mapping, Match, MutableMapping, Protocol, Sequence, Tuple, TypeAlias, TypeGuard, TypeVar, cast, final, Self, overload, runtime_checkable, Generator)",
 "import atexit # for @atexit.register",
 "import faulthandler",
 ]

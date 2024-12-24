@@ -1,8 +1,8 @@
 # -*- mode: snippet -*-
-# name  : coverage-tool
-# uuid  : coverage-tool
-# key   : coverage-tool
-# group : python pyproject infra
+# name  : coverage.tool
+# uuid  : coverage.tool
+# key   : coverage.tool
+# group : python pyproject infra tool
 # --
 ##-- coverage
 # https://pytest-cov.readthedocs.io/en/latest/config.html
@@ -35,6 +35,7 @@ exclude_also = [
 
     # Don't complain if non-runnable code isn't run:
     "if 0:",
+    "if False:"
     "if __name__ == .__main__.:",
 
     # Don't complain about abstract methods, they aren't run:
@@ -42,18 +43,18 @@ exclude_also = [
     ]
 
 ignore_errors = true
-# fail_under = 20 # coverage percentage
-format = "text" # or "markdown", "total"
-show_missing = false # for in the report
-skip_empty = false # skip files like __init__.py
+# fail_under  = 20 # coverage percentage
+format        = "text" # or "markdown", "total"
+show_missing  = false # for in the report
+skip_empty    = false # skip files like __init__.py
 
 [tool.coverage.html]
 directory = ".temp/coverage/html_report" # where to write output
 
 [tool.coverage.xml]
-output = ".temp/coverage/coverage.xml" # where to write output
+output    = ".temp/coverage/coverage.xml" # where to write output
 
 [tool.coverage.json]
-output = ".temp/coverage/coverage.json" # where to write output
+output    = ".temp/coverage/coverage.json" # where to write output
 pretty_print = true
 ##-- end coverage

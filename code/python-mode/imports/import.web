@@ -4,7 +4,6 @@
 # key   : import.web
 # group :
 # --
-##-- import web / network libraries
 import twisted                  #
 import scrapy # https://github.com/scrapy/scrapy
 import boltons.socketutils      # sockets            https://boltons.readthedocs.io/en/latest/socketutils.html
@@ -15,4 +14,3 @@ import waybackpy # https://akamhy.github.io/waybackpy/
 import helium # https://github.com/mherrmann/selenium-python-helium
 # import jedi
 # import beautifulsoup4
-##-- end import web libraries

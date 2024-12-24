@@ -4,7 +4,5 @@
 # key   : import logging
 # group :
 # --
-##-- import logging
 import logging as logmod
 from sys import stderr, stdout
-##-- end import logging

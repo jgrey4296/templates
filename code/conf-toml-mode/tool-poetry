@@ -1,8 +1,8 @@
 # -*- mode: snippet -*-
-# name  : build-poetry
-# uuid  : build-poetry
-# key   : build-poetry
-# group : python pyproject
+# name  : poetry.tool
+# uuid  : poetry.tool
+# key   : poetry.tool
+# group : python pyproject tool
 # --
 ##-- build-system : poetry
 # https://python-poetry.org/docs/pyproject/

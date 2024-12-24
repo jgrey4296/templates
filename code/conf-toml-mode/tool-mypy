@@ -1,12 +1,12 @@
 # -*- mode: snippet -*-
-# name: mypy-tool
-# uuid: mypy-tool
-# group: python pyproject
+# name: mypy.tool
+# uuid: mypy.tool
+# group: python pyproject tool
 # --
 ##-- mypy
-[tool.mypy]
 # https://mypy.readthedocs.io/en/stable/config_file.html
-python_version      = "3.11"
+[tool.mypy]
+python_version      = "3.12"
 warn_return_any     = true
 warn_unused_configs = true
 exclude             = [] # regexs to ignore
@@ -16,6 +16,5 @@ cache_dir           = ".temp/mypy_cache"
 # [[tool.mypy.overrides]]
 # module                = "blah"
 # disallow_untyped_defs = true
-
 
 ##-- end mypy

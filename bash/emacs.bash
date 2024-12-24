@@ -44,8 +44,14 @@ function check-emacs-d () {
 
 function set-emacs () {
     case "$1" in
+        "doom")
+            echo "doom current"
+            jg_use_EMACS="$ENAT_BIN"
+            EMACSDIR="/media/john/data/github/_libs/lisp/doom_2"
+            DOOMDIR="$HOME/.config/jg/"
+            ;;
         *native* | doom*)
-            echo "Setting Doom Native Emacs"
+            echo "Setting Obsolete Doom"
             jg_use_EMACS="$ENAT_BIN"
             EMACSDIR="$ENAT_DIR"
             DOOMDIR="$HOME/.config/jg/"
@@ -73,10 +79,12 @@ function set-emacs () {
     if [[ -d "$HOME/.emacs.d" ]] && [[ ! ( -L "$HOME/.emacs.d" ) ]]; then
         echo "Emacs Dir isn't a symlink"
     elif [[ ! ( -L "$HOME/.emacs.d" ) ]]; then
+        # Theres no emacs.d link
         ln -s "$EMACSDIR" "$HOME/.emacs.d"
     elif [[ (-L "$HOME/.emacs.d")
             && ($(readlink -f "$HOME/.emacs.d") != $(readlink -f "$EMACSDIR"))
         ]]; then
+        # There is an existing emacs.d
         rm "$HOME/.emacs.d"
         ln -s "$EMACSDIR" "$HOME/.emacs.d"
     fi

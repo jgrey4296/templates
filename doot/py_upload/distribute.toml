@@ -1,3 +1,7 @@
+## distribute.toml -*- mode: toml -*-
+doot-version = "0.13"
+
+
 [[locations]]
 build     = "{temp}/dist"
 dist_key  = {file="{secrets}/pypi/token.asc", normOnLoad=true, protected=true}

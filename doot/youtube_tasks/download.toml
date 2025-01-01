@@ -1,4 +1,6 @@
-## download.toml -*- mode: Conf[TOML] -*-
+## download.toml -*- mode: toml -*-
+doot-version = "0.13"
+
 
 [[locations]]
 archive = "dl-archive.txt"

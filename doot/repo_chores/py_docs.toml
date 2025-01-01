@@ -1,4 +1,5 @@
-## docs.toml -*- mode: conf-toml -*-
+## docs.toml -*- mode: toml -*-
+doot-version = "0.13"
 
 # autodoc : https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html
 # apidoc  : https://www.sphinx-doc.org/en/master/man/sphinx-apidoc.html

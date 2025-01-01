@@ -1,4 +1,6 @@
-## android.toml<2> -*- mode: conf-toml -*-
+## android.toml -*- mode: toml -*-
+doot-version = "0.13"
+
 [[locations]]
 pdf_source                 = "{data_drive}/library/pdfs"
 push_pdfs                  = "{pdf_source}"

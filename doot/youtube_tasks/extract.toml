@@ -1,4 +1,6 @@
-## extract.toml -*- mode: Conf[TOML] -*-
+## extract.toml -*- mode: toml -*-
+doot-version = "0.13"
+
 
 [[locations]]
 youtube        = "/media/john/big_ex/datasets/youtube/data"

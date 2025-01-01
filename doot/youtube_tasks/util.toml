@@ -1,3 +1,5 @@
+## util.toml -*- mode: toml -*-
+doot-version = "0.13"
 
 [[tasks.util]]
 name    = "count"

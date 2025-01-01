@@ -1,3 +1,5 @@
+## setup.toml -*- mode: toml -*-
+doot-version = "0.13"
 
 
 [[locations]]

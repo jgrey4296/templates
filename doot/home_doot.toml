@@ -1,14 +1,15 @@
 # -*- mode:conf-toml; -*-
-[settings.general]
-notify                   = { say-on-exit = false }
-loaders                  = { commands="default", task="default", parser="default"}
+[startup]
+doot-version             = "0.13"
+loaders                  = { commands="default", task="default", parser="default" }
 location_check           = { make_missing=true }
+sources                  = { tasks=["{template_tasks}/global", "{template_tasks}/android_tasks"], code=[] }
+sleep                    = { tasks=0.2, subtask=1, batch=1 }
+max_steps                = 100_000
 
-[settings.tasks]
-sources   = ["{template_tasks}/global", "{template_tasks}/android_tasks"]
-core      = []
-sleep     = { tasks=0.2, subtask=1, batch=1 }
-max_steps = 100_000
+[shutdown]
+notify                   = { speak=false }
+defaulted_values         = { write=false }
 
 [settings.commands]
 run = { tracker = "default", runner = "default", reporter= "default", report-line = [] }

@@ -1,21 +1,23 @@
 # -*- mode:conf-toml; -*-
-[settings.general]
-notify                   = { say-on-exit = false }
+
+[startup]
+doot-version             = "0.13"
 loaders                  = { commands="default", task="default", parser="default"}
 location_check           = { make_missing = true, print_levels={action="WARN", execute="WARN" } }
 max_steps                = 100_000
+sources                  = {tasks=["doot/global", "doot/repo_chores"], code=[]}
+sleep                    = { task=0.2, subtask=1, batch=1 }
 
-[settings.tasks]
-sources = ["doot/global", "doot/repo_chores"] # Files or directories where task specs can be loaded from, expanded according to [[locations]] keys
-code    = []                        # Directories where task specific code can be imported from, expanded according to [[locations]] keys
-sleep   = { task=0.2, subtask=1, batch=1 }
-
-[settings.commands]
+[startup.commands]
 run = { tracker = "default", runner = "default", reporter= "default", report-line = []}
 
-[plugins]
+[startup.plugins]
 # Allows for defining shorthands
 command        = { tasks = "doot.cmds.list_cmd:ListCmd" }
+
+[shutdown]
+notify    = { speak=false }
+
 
 [logging]
 stream  = { level="WARNING", filter=[],                 target="stdout", format="{levelname:<8} : {message}"  }

@@ -175,3 +175,4 @@ pylint                                               # https://pylint.readthedoc
 pyi typed stub files                                 # https://typing.readthedocs.io/en/latest/spec/distributing.html#stub-files
 importlib.metadata                                   # https://importlib-metadata.readthedocs.io/en/latest/api.html
 typing                                               # https://docs.python.org/3/library/typing.html
+Manim                                                # https://3b1b.github.io/manim/index.html

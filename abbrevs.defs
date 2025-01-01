@@ -7,7 +7,9 @@
 
 (define-abbrev-table 'emacs-lisp-mode-abbrev-table
   '(
-    ("amp" "&" nil :count 3)
+    ("amp" "&" nil :count 6)
+    ("bc" ")" nil :count 1)
+    ("bo" "(" nil :count 2)
     ("docc" "documentation" nil :count 7)
     ("libenv" "librarian-envs" nil :count 16)
     ("modulie" "module" nil :count 2)
@@ -30,6 +32,11 @@
     ("modulies" "modules" nil :count 4)
     ("pacakge" "package" nil :count 1)
     ("realtion" "relation" nil :count 1)
+   ))
+
+(define-abbrev-table 'minibuffer-mode-abbrev-table
+  '(
+    ("sstart" "^" nil :count 2)
    ))
 
 (define-abbrev-table 'org-mode-abbrev-table

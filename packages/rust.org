@@ -1,6 +1,10 @@
 #+TITLE: Rust Package Reference
 #+STARTUP: packages
 
+* Triage
+** Bindgen
+https://rust-lang.github.io/rust-bindgen/
+
 * Stdlib
 https://doc.rust-lang.org/std/index.html
 

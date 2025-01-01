@@ -39,6 +39,9 @@ prefer UV
 https://docs.astral.sh/uv/
 https://github.com/astral-sh/uv
 
+** manim   :animation:
+https://3b1b.github.io/manim/index.html
+
 * Main
 https://www.structlog.org/en/stable/
 https://github.com/PrefectHQ/prefect

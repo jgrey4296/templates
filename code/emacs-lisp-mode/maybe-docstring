@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name  : maybe-docstring
+# uuid  : maybe-docstring
+# key   : maybe-docstring
+# group : docstring args
+# --
+;; use in `let'
+(docstring (pcase docstr
+             ;; if docstring, use it
+             ((pred stringp) docstr)
+             ;; else its part of the body
+             (x (push x body) nil)))

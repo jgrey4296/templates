@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name  : bc-matcher-class-p
+# uuid  : bc-matcher-class-p
+# key   : bc-matcher-class-p
+# group : buttercup matcher unittest
+# --
+(buttercup-define-matcher :to-pass (expr test)
+  "Check the expr's return value passes a bool test.
+eg: cl-class-p
+"
+  (let ((actual-test (and test (funcall test))))
+    (if (funcall actual-test (funcall expr))
+        (cons t (format "Didn't expect to pass %s, but did" actual-test))
+      (cons nil (format "Expected to pass %s, but didn't" actual-test))
+        )
+    )
+  )

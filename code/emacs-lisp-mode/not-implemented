@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : not-implemented
+# uuid  : not-implemented
+# key   : not-implemented
+# group : error
+# --
+(error "Not Implemented")$0

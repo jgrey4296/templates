@@ -1,0 +1,27 @@
+# -*- mode: snippet -*-
+# name  : bc-cl-assert-matcher
+# uuid  : bc-cl-assert-matcher
+# key   : bc-cl-assert-matcher
+# group : buttercup cl-lib matcher unit-tet
+# --
+(buttercup-define-matcher :to-signal (expr &optional signal signal-args)
+  "Defines :to-signal, which correctly catches cl-assert failures"
+  (let ((expected-signal-symbol (and signal (funcall signal)))
+        (expected-signal-args (and signal-args (funcall signal-args)))
+        (unevaluated-expr (buttercup--enclosed-expr expr))
+        (debug-on-error nil)
+        expr-value
+        thrown-signal)
+    ;; Set the above variables
+    (condition-case err
+        (setq expr-value (funcall expr))
+      (cl--assertion-failed
+       (setq thrown-signal err)
+       nil)
+      (error
+       (setq thrown-signal err)
+       nil)
+      )
+    (buttercup--handle-to-throw thrown-signal
+                                (cons expected-signal-symbol expected-signal-args)
+                                unevaluated-expr expr-value)))

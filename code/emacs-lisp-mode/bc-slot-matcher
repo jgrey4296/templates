@@ -1,0 +1,21 @@
+# -*- mode: snippet -*-
+# name  : bc-slot-matcher
+# uuid  : bc-slot-matcher
+# key   : bc-slot-matcher
+# group : buttercup matcher cl-lib struct slot unittest
+# --
+(buttercup-define-matcher :slot (expr type slot matcher &rest args)
+  "Get the slot from a struct slot of the result of expr "
+  (let* ((expr-result (funcall expr))
+         (uneval-expr (buttercup--enclosed-expr expr))
+         (slot-val (cl-struct-slot-value (funcall type) (funcall slot) expr-result))
+         (slotw `(lambda () (quote ,uneval-expr) ,(if (symbolp slot-val)
+                                                      `(quote ,slot-val)
+                                                    slot-val)))
+         (matcher (funcall matcher))
+         (result (funcall #'buttercup--apply-matcher matcher
+                         (cons slotw args)))
+         )
+    result
+    )
+  )

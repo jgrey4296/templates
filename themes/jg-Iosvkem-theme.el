@@ -176,6 +176,7 @@ determine the exact padding."
    ((font-lock-doc-face &override)           :slant 'normal)
    ((font-lock-function-name-face &override) :weight 'bold)
    ((font-lock-operator-face &override)      :foreground blue)
+   ((font-lock-semi-unimportant &override)   :background aerugo7)
 
    ((line-number &override)                  :foreground base4)
    ((line-number-current-line &override)     :foreground iocyan :background bg)

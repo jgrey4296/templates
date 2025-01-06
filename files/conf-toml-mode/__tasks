@@ -1,0 +1,32 @@
+## `(f-filename (buffer-file-name))` -*- mode: `major-mode` -*-
+## Summary:
+#
+#
+#
+#
+##
+# reminders:
+# action = [{do= "basic", args=[], inState=[], outState=[] }]
+# cli    = [{name="", type="str", prefix="-", default="", desc="", positional=false}]
+
+doot_version = "0.13"
+
+[[state]]     # Key=vals for all tasks
+
+[[locations]] # Auto Expanding Path Keys
+src     = "src"
+codegen = "_codegen"
+temp    = ".temp"
+build   = "build"
+docs    = "docs"
+data    = "data"
+
+[tasks]
+
+[[tasks.group]]
+name        = ""
+print_level = "INFO"
+ctor        = "task"
+doc         = []
+depends-on  = []
+actions     = []

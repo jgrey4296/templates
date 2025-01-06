@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : modeline
+# uuid  : modeline
+# key   : modeline
+# group : snippets
+# --
+## \`(f-filename (buffer-file-name))\` -*- mode: \`major-mode\` -*-

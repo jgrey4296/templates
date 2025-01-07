@@ -6,7 +6,7 @@ name    = "count"
 version = "0.1"
 doc     = ["count the number of files of a tar"]
 ctor    = "task"
-cli     = [{ name="fpath", type="str", default="", positional=true }]
+cli     = [{ name="fpath", prefix=1, type="str", default=""}]
 actions = [
         {do="job.inject.path.elements", from="{fpath}"},
         {do="tar.list", from="{fpath}", update_="flist"},

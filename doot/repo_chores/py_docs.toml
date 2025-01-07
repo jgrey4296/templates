@@ -65,7 +65,7 @@ actions = [
 [[tasks.pydocs]]
 name        = "build.file"
 doc         = ["build sphinx project documentation"]
-cli         = [{name="fpath", type="str", default="", positional=true}]
+cli         = [{name="fpath", prefix=1, type="str", default=""}]
 ctor        = "task"
 doc_builder = "html"
 env_name    = "doot-dev"

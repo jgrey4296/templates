@@ -17,8 +17,8 @@ name = "joint"
 doc = ["unpack then extract from a tar"]
 ctor = "job"
 cli     = [
-        { name="target", type="str", default="{youtube!p}/northernlion.tar.gz", positional=true },
-        { name="out",    type="str", default="unpacked", positional=true },
+        { name="target", prefix=1, type="str", default="{youtube!p}/northernlion.tar.gz"},
+        { name="out",    prefix=1, type="str", default="unpacked"},
 ]
 actions = [
     {do="job.expand", template="yt::unpack",  inject={now=["target", "out"]}, update_="unpack"},
@@ -33,8 +33,8 @@ version = "0.1"
 doc     = ["unpack {target.tar.gz} into raw/{out}"]
 ctor    = "task"
 cli     = [
-        { name="target", type="str", default="{youtube!p}/northernlion.tar.gz", positional=true },
-        { name="out",    type="str", default="unpacked", positional=true },
+        { name="target", prefix=1, type="str", default="{youtube!p}/northernlion.tar.gz"},
+        { name="out",    prefix=2, type="str", default="unpacked"},
 ]
 actions = [
         {do="path.elements", from="{target!p}"},
@@ -49,7 +49,7 @@ name                     = "extract"
 version                  = "0.1"                # <str>
 doc                      = ["Walk an unpacked youtube data directory, extracting to into {extracted}/{pstem}.jsonnl"]
 ctor                     = "job"
-cli                      = [{ name="target", type="str", default="northernlion", positional=true }]
+cli                      = [{ name="target", prefix=1, type="str", default="northernlion"}]
 queue_behaviour          = "default"
 recursive                = false
 exts                     = [".json"]

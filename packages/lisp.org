@@ -57,6 +57,12 @@ https://github.com/tabfugnic/asdf.el/blob/main/asdf.el
 
 ** parsec
 https://github.com/cute-jumper/parsec.el/tree/2cbbbc2254aa7bcaa4fb5e07c8c1bf2f381dba26
+
+** dash
+https://github.com/magnars/dash.el
+
+
+
 * python envs
 ** pythonic
 https://github.com/pythonic-emacs/pythonic

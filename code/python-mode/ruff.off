@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : ruff.off
+# uuid  : ruff.off
+# key   : ruff.off
+# group : ruff lint
+# --
+# ruff: noqa$0

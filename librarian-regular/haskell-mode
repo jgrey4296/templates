@@ -1,4 +1,5 @@
-GHC reference   # https://downloads.haskell.org/ghc/latest/docs/users_guide/index.html
+GHC reference    # https://downloads.haskell.org/ghc/latest/docs/users_guide/index.html
 Typeclassopedia  # https://wiki.haskell.org/Typeclassopedia
 Cabal            # https://cabal.readthedocs.io/en/3.8/index.html
 Hackage packages # https://hackage.haskell.org/
+QuickCheck       # https://hackage.haskell.org/package/QuickCheck

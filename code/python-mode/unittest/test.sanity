@@ -5,4 +5,4 @@
 # group : testing pytest
 # --
 def test_sanity(self):
-    assert(True is not False)
+    assert(True is not False) # noqa: PLR0133

@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name  : typecheck
+# uuid  : typecheck
+# key   : typecheck
+# group : imports typecheck
+# --
+import typing
+
+# ##-- typecheck imports
+# isort: off
+if typing.TYPE_CHECKING:
+   from jgdv import Maybe
+
+# isort: on
+# ##-- end typecheck imports

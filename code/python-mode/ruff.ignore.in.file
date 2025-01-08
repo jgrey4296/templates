@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : ruff.ignore.in.file
+# uuid  : ruff.ignore.in.file
+# key   : ruff.ignore.in.file
+# group : ruff lint
+# --
+# ruff: noqa: $0

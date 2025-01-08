@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : ruff.format.off
+# uuid  : ruff.format.off
+# key   : ruff.format.off
+# group : ruff formatting
+# --
+# fmt: off$0

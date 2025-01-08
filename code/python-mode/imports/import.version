@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : import.ver.str
+# uuid  : import.ver.str
+# key   : import.ver.str
+# group : import version string packaging
+# --
+from packaging import Version, SpecifierSet

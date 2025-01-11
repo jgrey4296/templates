@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : layout-check
+# uuid  : layout-check
+# key   : layout-check
+# group : debug layout
+# --
+\usepackage{layout}
+
+%%-- layout
+\layout{}
+%%-- end layout$0

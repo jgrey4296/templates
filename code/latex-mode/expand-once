@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : expand-once
+# uuid  : expand-once
+# key   : expand-once
+# group : macros
+# --
+\csexpandonce{$0}

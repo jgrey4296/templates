@@ -1,0 +1,196 @@
+%% compiler:lualatex
+\documentclass[%
+% xcolor=svgnames,%
+% color=mycolor,%
+% DIV=19,
+% fontsize=20,
+% style=classic,% (default) OR
+% style=casual,% OR
+% style=oldstyle,%
+% fontawesome=false,
+]{komacv}
+
+%%-- packages
+\usepackage{graphicx}
+\usepackage{layout}
+\usepackage{fontspec}
+% \usepackage{fancyhdr}
+% \usepackage{hyperref}
+%%-- end packages
+
+%%-- pagestyle
+\pagestyle{scrheadings}
+\clearpairofpagestyles
+\ifoot{CV Identifier:  whimsical}
+\ofoot{\pagemark/\totalpagemark}
+% \pagestyle{fancy}
+% \clearpairofpagestyles{}
+% \fancyhead{}
+% \fancyfoot{}
+% \fancyfoot[L]{CV Identifier: shuffles}
+% \fancyfoot[R]{\pagemark/\totalpagemark}
+
+%%-- end pagestyle
+
+%%-- lengths
+\setlength{\baselineskip}{0.2ex}
+% \setlength\titlenamemaxwidth{.4\textwidth}
+% \setlength\hintscolwidth{2cm}
+% \setlength\sepcolwidth{1em}
+% \setlength\quotewidth{.3\textwidth}
+% \setlength\titlesepwidth{50pt}
+% \setlength\infocolwidth{3cm} % for oldstyle only!
+% \setlength\sepinfocolwidth{6em} % for oldstyle only!
+% \setlength\footerwidth{.5\textwidth} % for casual style only
+\setlength{\footskip}{5cm}
+\setlength{\aftertitlevspace}{0.2cm}
+% \setlength\afterquotevspace{8\baselineskip}
+% \setlength\afterelementsvspace{40pt}
+\setlength{\beforesecvspace}{0.5cm}
+\setlength{\aftersecvspace}{0.2cm}
+% \setlength\beforesubsecvspace{3\baselineskip}
+% \setlength\aftersubsecvspace{4\baselineskip}
+% \setlength\listitemsymbolwidth{1cm}
+% \setlength{\itemsep}{0.2ex}
+%%-- end lengths
+
+%%-- colours
+% \xdefinecolor{mycolor}{cmyk}{0.92,0,0.87,0.09}
+% \colorlet{firstnamecolor}{blue}
+% \colorlet{familynamecolor}{red}
+% \colorlet{headlinecolor}{pink}
+% \colorlet{acadtitlecolor}{green}
+% \colorlet{addresscolor}{gray}
+% \colorlet{quotecolor}{pink}
+% \colorlet{framecolor}{yellow}
+% \colorlet{framebackcolor}{black}
+% \colorlet{secbarcolor}{firstnamecolor}
+% \colorlet{seccolor}{familynamecolor}
+% \colorlet{subseccolor}{pink!70!black}
+% \colorlet{hintcolor}{orange}
+
+%%-- end colours
+
+%%-- fonts
+%% Fonts, for use with LuaLaTeX oder XeLaTeX
+% \defaultfontfeatures{Renderer=Basic,Ligatures=TeX}
+% \setmainfont[Numbers=OldStyle]{Palatino Linotype}
+% \setsansfont{AvantGarde Bk BT}
+% \setmonofont{Courier New}
+
+% \setkomafont{firstnamefont}{\fontsize{24}{26}\itshape}
+\addtokomafont{firstnamefont}{\fontsize{35}{50}}
+\addtokomafont{firstnamefont}{\setsansfont{NimbusSans-Bold}}
+% \addtokomafont{section}{\setsansfont{monogram.ttf}}
+% \addtokomafont{familynamefont}{\scshape}
+% \setkomafont{addressfont}{\scriptsize}
+% \setkomafont{acadtitlefont}{\usekomafont{familynamefont}}
+% \setkomafont{quotefont}{\ttfamily}
+% \addtokomafont{section}{\Huge\rmfamily\slshape}
+% \addtokomafont{subsection}{\bfseries}
+
+%%-- end fonts
+
+%%-- setup
+% \renewcommand{\headlinestyle}{\firstnamestyle}
+\renewcommand*\urlbordercolor{red}
+\hypersetup{pdfcreator=John Grey}
+
+%%-- end setup
+
+%%-- personal data
+\renewcommand*{\title}{CV}% PDF metadata
+\renewcommand*{\firstname}{John}
+\renewcommand*{\familyname}{Grey}
+\renewcommand*{\acadtitle}{BA, MSc}
+\renewcommand*{\email}{johngrey4296@gmail.com}
+\renewcommand*{\github}{\csexpandonce{\link{https://github.com/jgrey4296/}}}
+\renewcommand*{\homepage}{jgrey4295.github.io/}
+% \renewcommand*{\twitter}{twitter.com/janeeyre}
+% \renewcommand*{\addressstreet}{}
+% \renewcommand*{\addresscity}{}
+% \renewcommand*{\address}[2]{\addressstreet{#1}\addresscity{#2}}
+% \renewcommand*{\mobile}{009-87654321}
+% \renewcommand*{\phonenr}{}
+% \renewcommand*{\facebook}{facebook.com/jane.eyre}
+% \renewcommand*{\linkedin}{https://uk.linkedin.com/pub/jane-eyre}
+% \renewcommand*{\extrainfo}{Some extra info}
+% \renewcommand*{\cvquote}{\enquote{Convinced I grew that neither earth should perish, \\nor one of the souls it treasured.}} %p.373
+% \renewcommand\phonesymbol{Tel.~}
+% \headline[r]{title}[Lebenslauf] % [c|l|r]{none|name|title}[content]; default: [c]{none}[<\firstname \familyname> | Curriculum Vitae] 
+% \headline[l]{name}[Jane Elizabeth Eyre Rochester]
+
+%%-- end personal data
+
+%%-- photo
+% \setlength\fboxrule{7pt}
+% \setlength\mframepicshift{1cm}
+% \photo[frame]{3cm}{jeyre}
+%\photo[mframe]{5cm}{jeyre}
+
+%%-- end photo
+
+%%-- document
+%%-- end document
+\begin{document}
+\raggedbottom{}
+\maketitle
+% \thispagestyle{fancy}
+\setsansfont{Fira Code}
+% \cvitem{Keywords}{Computer Science, Programming, Python, Data Management, AI}
+\raggedright{}
+\setsansfont{AnnapurnaSIL-Regular.ttf}
+
+\includegraphics*[width=\textwidth]{commits.png}
+
+% \section{Summary}
+% % 1st person
+% I am an early career software developer with a passion for automation, testing, and complex systems.
+ I am adept at communicating technical concepts to lay people, and understanding the broader context of problems.
+% With a background in music, HCI and videogame AI, I find all aspects of interactive systems and production pipelines fascinating.
+
+\section{Education}
+\begin{compactitem}
+  \item {MSc Computer Science, University of California at Santa Cruz}
+  % \cventry{}{MSc, Distinction, Advanced Computing Systems: Human Computer Interaction}{}{University of Bath}{}{}
+  \item BA, First Class, Creative Music Technology, University of Bath Spa
+\end{compactitem}
+
+\section{Personal Projects}
+\begin{compactitem}
+    \item ETL Pipelines system to process 100GB of varied binary and text video game data files using Python and Construct, ad hoc DSLs and XML streaming.
+    \item Dataset Management and integrity maintenance of Bibtex academic references using Lisp, Python, and Git.
+    \item UX Design for efficient data entry and navigating code, using Lisp in Emacs, and Kotlin deploying to Android.
+    \item Twitter and Mastodon bots for archiving threads, and posting, using their APIs.
+    \item DSL design and implementation for experimental multi-agent systems in Python, Ans-Prolog, and Kotlin.
+\end{compactitem}
+
+\section{Experience}
+Graduate Teaching Assistant, University of California at Santa Cruz. \
+\begin{compactitem}
+    \item Managed classes of 100\textendash{}300 students.
+    \item Ran computer labs of up to 30 students.
+    \item Maintained online discussion forums.
+    \item Modernized Syllabus components relating to Unit Testing and OpenGL.
+    \item Mentored students of all skill levels on software design, effective debugging strategies and Linux use.
+\end{compactitem}
+
+
+% \section{Skills}
+% Programming : Python, Kotlin, Rust, Lisp, Elixir. \linebreak
+% Data Analysis : Pandas, Scrapy, SQLite. \linebreak
+% Software Engineering : Git, Bash, SSH, Cron, Sphinx. \linebreak
+% Music : ABRSM Violin Grade 7, Supercollider, Tidal Cycles. \linebreak
+
+% \section{Projects}
+% \section{Communication and Interpersonal Skills}
+% \section{Hobbies and Interests}
+% \section{Organisational Skills}
+
+%%-- layout
+% \layout{}
+%%-- end layout
+
+
+\end{document}
+

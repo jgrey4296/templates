@@ -1,0 +1,31 @@
+Python Environment Variables:
+Environment variables that change behavior:
+PYTHONSTARTUP             #  file executed on interactive startup (no default)
+PYTHONPATH                #  ':'-separated list of directories -> sys.path
+PYTHONHOME                # The default module search path uses <prefix>/lib/pythonX.X.
+PYTHONPLATLIBDIR          #  override sys.platlibdir
+PYTHONCASEOK              #  ignore case in 'import' statements (Windows)
+PYTHONIOENCODING          #  encoding[:errors] used for stdin/stdout/stderr
+PYTHONHASHSEED            #  'random' or a number for hash
+PYTHONMALLOC              # 'debug' to install debug hooks.
+PYTHONCOERCECLOCALE       #  0 or 'warn'
+PYTHONBREAKPOINT          #  0 disables the debugger, or a callable
+PYTHONDEBUG               #  enable parser debug mode (-d)
+PYTHONDEVMODE             #  enable Python Development Mode (-X dev)
+PYTHONDONTWRITEBYTECODE   #  don't write .pyc files (-B)
+PYTHONFAULTHANDLER        #  dump the Python traceback on fatal errors (-X faulthandler)
+PYTHONINSPECT             #  inspect interactively after running script (-i)
+PYTHONINTMAXSTRDIGITS     #  limit the size of int<->str conversions; 0 disables
+PYTHONNODEBUGRANGES       #  don't include extra location information in code objects
+PYTHONNOUSERSITE          #  disable user site directory (-s)
+PYTHONOPTIMIZE            #  enable level 1 optimizations (-O)
+PYTHONPERFSUPPORT         #  support the Linux "perf" profiler (-X perf)
+PYTHONPROFILEIMPORTTIME   #  show how long each import takes (-X importtime)
+PYTHONPYCACHEPREFIX       #  root directory for bytecode cache (pyc) files
+PYTHONSAFEPATH            #  don't prepend a potentially unsafe path to sys.path.
+PYTHONTRACEMALLOC         #  trace Python memory allocations (-X tracemalloc)
+PYTHONUNBUFFERED          #  disable stdout/stderr buffering (-u)
+PYTHONUTF8                #  control the UTF-8 mode (-X utf8)
+PYTHONVERBOSE             #  trace import statements (-v)
+PYTHONWARNDEFAULTENCODING #  enable opt-in EncodingWarning for 'encoding=None'
+PYTHONWARNINGS            #  warning control (-W)

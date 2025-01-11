@@ -26,11 +26,24 @@ from typing import (TYPE_CHECKING, Any, Callable, ClassVar, Final, Generator,
 from uuid import UUID, uuid1
 # ##-- end stdlib imports
 
+# ##-- typecheck imports
+# isort: off
+if typing.TYPE_CHECKING:
+   from jgdv import Maybe
+
+# isort: on
+# ##-- end typecheck imports
+
+##-- type aliases
+
+
+##-- end type aliases
+
 ##-- logging
 logging = logmod.getLogger(__name__)
 ##-- end logging
 
-# Global Vars:
+# Vars:
 
 # Body:
 $0

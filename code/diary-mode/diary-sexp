@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : diary-sexp
+# uuid  : diary-sexp
+# key   : diary-sexp
+# group : calendar
+# --
+&%%(let ((dayname (calendar-day-of-week date))
+         (day (cadr date)))
+      (or (and (= day 21) (memq dayname '(1 2 3 4 5)))
+          (and (memq day '(19 20)) (= dayname 5)))
+         ) Pay check deposited

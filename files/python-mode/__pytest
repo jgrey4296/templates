@@ -2,6 +2,8 @@
 """
 $0
 """
+# ruff: noqa: ANN201, ARG001, ANN001, ARG002, ANN202
+
 # Imports
 from __future__ import annotations
 
@@ -19,7 +21,9 @@ import pytest
 # Logging:
 logging = logmod.root
 
-# Global Vars:
+# Type Aliases:
+
+# Vars:
 
 # Body:
 class Test$1:

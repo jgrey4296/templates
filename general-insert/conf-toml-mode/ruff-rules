@@ -1,666 +1,666 @@
 Ruff Rules:
-__source__                                                     # https://beta.ruff.rs/docs/rules/
+__source__ # https://beta.ruff.rs/docs/rules/
 
-airflow-variable-name-task-id-mismatch              (AIR001)   #
-commented-out-code                                  (ERA001)   #
-sys-version-slice3                                  (YTT101)   # Checks for uses of `sys.version[:3]`.
-sys-version2                                        (YTT102)   # Checks for uses of `sys.version[2]`.
-sys-version-cmp-str3                                (YTT103)   # Checks for comparisons that test `sys.version` against string literals, failing on 3.10+
-sys-version-info0-eq3                               (YTT201)   # e.g., `sys.version_info[0] == 3`
-six-py3                                             (YTT202)   # Checks for uses of `six.PY3`.
-sys-version-info1-cmp-int                           (YTT203)   # Checks for comparisons that test `sys.version_info[1]` against an integer.
-sys-version-info-minor-cmp-int                      (YTT204)   # Checks for comparisons that test `sys.version_info.minor` against an integer.
-sys-version0                                        (YTT301)   # Checks for uses of `sys.version[0]`.
-sys-version-cmp-str10                               (YTT302)   # Checks for comparisons that test `sys.version` against string literals,
-sys-version-slice1                                  (YTT303)   # Checks for uses of `sys.version[:1]`.
-missing-type-function-argument                      (ANN001)   # Checks that function arguments have type annotations.
-missing-type-args                                   (ANN002)   # Checks that function `*args` arguments have type annotations.
-missing-type-kwargs                                 (ANN003)   # Checks that function `**kwargs` arguments have type annotations.
-missing-type-self                                   (ANN101)   # Checks that instance method `self` arguments have type annotations.
-missing-type-cls                                    (ANN102)   # Checks that class method `cls` arguments have type annotations.
-missing-return-type-undocumented-public-function    (ANN201)   # Checks that public functions and methods have return type annotations.
-missing-return-type-private-function                (ANN202)   # Checks that private functions and methods have return type annotations.
-missing-return-type-special-method                  (ANN204)   # Checks that "special" methods, like `__init__`, `__new__`, and `__call__`, have type annotations
-missing-return-type-static-method                   (ANN205)   # Checks that static methods have return type annotations.
-missing-return-type-class-method                    (ANN206)   # Checks that class methods have return type annotations.
-any-type                                            (ANN401)   # Checks that an expression is annotated with a more specific type than 'Any'.
-blocking-http-call-in-async-function                (ASYNC100) # Checks that async functions do not contain blocking HTTP calls.
-open-sleep-or-subprocess-in-async-function          (ASYNC101) # Checks that async functions do not contain calls to `open`, `time.sleep`, or 'subprocess'
-blocking-os-call-in-async-function                  (ASYNC102) # Checks that async functions do not contain calls to blocking synchronous 'os' calls.
-assert                                              (S101)     # Checks for uses of the `assert` keyword, which is removed when using -O
-exec-builtin                                        (S102)     # Checks for uses of the builtin `exec` function.
-bad-file-permissions                                (S103)     # Checks for files with overly permissive permissions.
-hardcoded-bind-all-interfaces                       (S104)     # Checks for hardcoded bindings to all network interfaces (`0.0.0.0`).
-hardcoded-password-string                           (S105)     # Checks for potential uses of hardcoded passwords in strings.
-hardcoded-password-func-arg                         (S106)     # Checks for potential uses of hardcoded passwords in function calls.
-hardcoded-password-default                          (S107)     # Checks for potential uses of hardcoded passwords in function argument defaults
-hardcoded-temp-file                                 (S108)     # Checks for the use of hardcoded temporary file or directory paths.
-try-except-pass                                     (S110)     # Checks for uses of the `try`-`except`-`pass` pattern.
-try-except-continue                                 (S112)     # Checks for uses of the `try`-`except`-`continue` pattern.
-request-without-timeout                             (S113)     # Checks for uses of the Python `requests` module that omit the `timeout` parameter.
-suspicious-pickle-usage                             (S301)     # Checks for calls to `pickle` functions or modules that wrap them.
-suspicious-marshal-usage                            (S302)     # Checks for calls to `marshal` functions.
-suspicious-insecure-hash-usage                      (S303)     # Checks for uses of weak or broken cryptographic hash functions.
-suspicious-insecure-cipher-usage                    (S304)     # Checks for uses of weak or broken cryptographic ciphers.
-suspicious-insecure-cipher-mode-usage               (S305)     # Checks for uses of weak or broken cryptographic cipher modes.
-suspicious-mktemp-usage                             (S306)     # Checks for uses of `tempfile.mktemp`. Use mkstemp.
-suspicious-eval-usage                               (S307)     # Checks for uses of the builtin `eval()` function.
-suspicious-mark-safe-usage                          (S308)     # Checks for uses of calls to `django.utils.safestring.mark_safe`.
-suspicious-url-open-usage                           (S310)     # Checks for uses of URL open functions that unexpected schemes.
-suspicious-non-cryptographic-random-usage           (S311)     # Checks for uses of cryptographically weak pseudo-random number generators.
-suspicious-telnet-usage                             (S312)     # Checks for the use of Telnet-related functions.
-suspicious-xmlc-element-tree-usage                  (S313)     # Checks for uses of insecure XML parsers. use defusedxml instead
-suspicious-xml-element-tree-usage                   (S314)     # Checks for uses of insecure XML parsers.
-suspicious-xml-expat-reader-usage                   (S315)     # Checks for uses of insecure XML parsers.
-suspicious-xml-expat-builder-usage                  (S316)     # Checks for uses of insecure XML parsers.
-suspicious-xml-sax-usage                            (S317)     # Checks for uses of insecure XML parsers.
-suspicious-xml-mini-dom-usage                       (S318)     # Checks for uses of insecure XML parsers.
-suspicious-xml-pull-dom-usage                       (S319)     # Checks for uses of insecure XML parsers.
-suspicious-xmle-tree-usage                          (S320)     # Checks for uses of insecure XML parsers.
-suspicious-ftp-lib-usage                            (S321)     # Checks for the use of FTP-related functions.
-suspicious-unverified-context-usage                 (S323)     # Checks for uses of `ssl._create_unverified_context`.
-hashlib-insecure-hash-function                      (S324)     # Checks for uses of weak or broken cryptographic hash functions.
-request-with-no-cert-validation                     (S501)     # Checks for HTTPS requests that disable SSL certificate checks.
-unsafe-yaml-load                                    (S506)     # Checks for uses of the `yaml.load` function.
-snmp-insecure-version                               (S508)     # Checks for uses of SNMPv1 or SNMPv2.
-snmp-weak-cryptography                              (S509)     # Checks for uses of the SNMPv3 protocol without encryption.
-hardcoded-sql-expression                            (S608)     # Checks for strings that resemble SQL statements involved in some form string building operation.
-unix-command-wildcard-injection                     (S609)     # Possible wildcard injection in call due to `*` usage
-logging-config-insecure-listen                      (S612)     # Use of insecure `logging.config.listen` detected
-jinja2-autoescape-false                             (S701)     # Using jinja2 templates with `autoescape=False` is dangerous and can lead to XSS. Ensure `autoescape=True` or use the `select_autoescape` function.
-blind-except                                        (BLE001)   # Checks for `except` clauses that catch all exceptions.
-boolean-positional-arg-in-function-definition       (FBT001)   # Checks for boolean positional arguments in function definitions.
-boolean-default-value-in-function-definition        (FBT002)   # Checks for the use of booleans as default values in function definitions.
-boolean-positional-value-in-function-call           (FBT003)   # Checks for boolean positional arguments in function calls.
-unary-prefix-increment                              (B002)     # Checks for uses of the unary prefix increment operator (e.g., `++n`).
-assignment-to-os-environ                            (B003)     # Checks for assignments to `os.environ`.
-unreliable-callable-check                           (B004)     # Checks for uses of `hasattr` to test if an object is callable (e.g.,
-strip-with-multi-characters                         (B005)     # Checks for uses of multi-character strings in `.strip()`, `.lstrip()`, and
-mutable-argument-default                            (B006)     # Checks for uses of mutable objects as function argument defaults.
-unused-loop-control-variable                        (B007)     # Checks for unused variables in loops (e.g., `for` and `while` statements).
-function-call-in-default-argument                   (B008)     # Checks for function calls in default function arguments.
-get-attr-with-constant                              (B009)     # Checks for uses of `getattr` that take a constant attribute value as an argument (e.g., `getattr(obj, "foo")`).
-set-attr-with-constant                              (B010)     # Checks for uses of `setattr` that take a constant attribute value as an argument (e.g., `setattr(obj, "foo", 42)`).
-assert-false                                        (B011)     # Checks for uses of `assert False`.
-jump-statement-in-finally                           (B012)     # Checks for `break`, `continue`, and `return` statements in `finally` blocks
-redundant-tuple-in-exception-handler                (B013)     # Checks for single-element tuples in exception handlers (e.g., except (ValueError,): )
-duplicate-handler-exception                         (B014)     # Checks for exception handlers that catch duplicate exceptions.
-useless-comparison                                  (B015)     # Checks for useless comparisons.
-raise-literal                                       (B016)     # Checks for `raise` statements that raise a literal value.
-assert-raises-exception                             (B017)     # Checks for `assertRaises` and `pytest.raises` context managers that catch 'Exception' or 'BaseException'
-useless-expression                                  (B018)     # Checks for useless expressions.
-cached-instance-method                              (B019)     # Checks for uses of the `functools.lru_cache` and `functools.cache`
-loop-variable-overrides-iterator                    (B020)     # Checks for loop control variables that override the loop iterable.
-f-string-docstring                                  (B021)     # Checks for docstrings that are written via f-strings.
-useless-contextlib-suppress                         (B022)     # Checks for `contextlib.suppress` without arguments.
-function-uses-loop-variable                         (B023)     # Checks for function definitions that use a loop variable.
-abstract-base-class-without-abstract-method         (B024)     # Checks for abstract classes without abstract methods.
-duplicate-try-block-exception                       (B025)     # Checks for `try-except` blocks with duplicate exception handlers.
-star-arg-unpacking-after-keyword-arg                (B026)     # Checks for function calls that use star-argument unpacking after providing a keyword argument
-empty-method-without-abstract-decorator             (B027)     # Checks for empty methods in abstract base classes without an abstract
-no-explicit-stacklevel                              (B028)     # Checks for `warnings.warn` calls without an explicit `stacklevel` keyword
-except-with-empty-tuple                             (B029)     # Checks for exception handlers that catch an empty tuple.
-except-with-non-exception-classes                   (B030)     # Checks for exception handlers that catch non-exception classes.
-reuse-of-groupby-generator                          (B031)     # Checks for multiple usage of the generator returned from
-unintentional-type-annotation                       (B032)     # Checks for the unintentional use of type annotations.
-duplicate-value                                     (B033)     # Checks for set literals that contain duplicate items.
-re-sub-positional-args                              (B034)     # Checks for calls to `re.sub`, `re.subn`, and `re.split` that pass `count`,
-raise-without-from-inside-except                    (B904)     # Checks for `raise` statements in exception handlers that lack a `from`
-zip-without-explicit-strict                         (B905)     # Checks for `zip` calls without an explicit `strict` parameter.
-builtin-variable-shadowing                          (A001)     # Checks for variable (and function) assignments that use the same name
-builtin-argument-shadowing                          (A002)     # Checks for any function arguments that use the same name as a builtin.
-builtin-attribute-shadowing                         (A003)     # Checks for any class attributes that use the same name as a builtin.
-missing-trailing-comma                              (COM812)   # Checks for the absence of trailing commas.
-trailing-comma-on-bare-tuple                        (COM818)   # Checks for the presence of trailing commas on bare (i.e., unparenthesized) tuples
-prohibited-trailing-comma                           (COM819)   # Checks for the presence of prohibited trailing commas.
-unnecessary-generator-list                          (C400)     # Checks for unnecessary generators that can be rewritten as `list` comprehensions.
-unnecessary-generator-set                           (C401)     # Checks for unnecessary generators that can be rewritten as `set` comprehensions.
-unnecessary-generator-dict                          (C402)     # Checks for unnecessary generators that can be rewritten as `dict` comprehensions.
-unnecessary-list-comprehension-set                  (C403)     # Checks for unnecessary list comprehensions.
-unnecessary-list-comprehension-dict                 (C404)     # Checks for unnecessary list comprehensions.
-unnecessary-literal-set                             (C405)     # Checks for `set` calls that take unnecessary `list` or `tuple` literals as arguments.
-unnecessary-literal-dict                            (C406)     # Checks for unnecessary `list` or `tuple` literals.
-unnecessary-collection-call                         (C408)     # Checks for unnecessary `dict`, `list` or `tuple` calls that can be rewritten as empty literals.
-unnecessary-literal-within-tuple-call               (C409)     # Checks for `tuple` calls that take unnecessary list or tuple literals as arguments.
-unnecessary-literal-within-list-call                (C410)     # Checks for `list` calls that take unnecessary list or tuple literals as arguments.
-unnecessary-list-call                               (C411)     # Checks for unnecessary `list` calls around list comprehensions.
-unnecessary-call-around-sorted                      (C413)     # Checks for unnecessary `list` or `reversed` calls around `sorted` calls.
-unnecessary-double-cast-or-process                  (C414)     # Checks for unnecessary `list`, `reversed`, `set`, `sorted`, and `tuple` call within `list`, `set`, `sorted`, and `tuple` calls.
-unnecessary-subscript-reversal                      (C415)     # Checks for unnecessary subscript reversal of iterable.
-unnecessary-comprehension                           (C416)     # Checks for unnecessary `dict`, `list`, and `set` comprehension.
-unnecessary-map                                     (C417)     # Checks for unnecessary `map` calls with `lambda` functions.
-unnecessary-literal-within-dict-call                (C418)     # Checks for `dict` calls that take unnecessary `dict` literals or `dict` comprehensions as arguments.
-unnecessary-comprehension-any-all                   (C419)     # Checks for unnecessary list comprehensions passed to `any` and `all`.
-missing-copyright-notice                            (CPY001)   # Checks for the absence of copyright notices within Python files.
-call-date-fromtimestamp                             (DTZ012)   # Checks for the presence of debugger calls and imports.
-raw-string-in-exception                             (EM101)    # Checks for the use of string literals in exception constructors.
-f-string-in-exception                               (EM102)    # Checks for the use of f-strings in exception constructors.
-dot-format-in-exception                             (EM103)    # Checks for the use of `.format` calls on string literals in exception constructors.
-shebang-not-executable                              (EXE001)   # Checks for a shebang directive in a file that is not executable.
-shebang-missing-executable-file                     (EXE002)   # Checks for executable `.py` files that do not have a shebang.
-shebang-missing-python                              (EXE003)   # Checks for a shebang directive in `.py` files that does not contain `python`.
-shebang-leading-whitespace                          (EXE004)   # Checks for whitespace before a shebang directive.
-shebang-not-first-line                              (EXE005)   # Checks for a shebang directive that is not at the beginning of the file.
-line-contains-fixme                                 (FIX001)   # Checks for "FIXME" comments.
-line-contains-todo                                  (FIX002)   # Checks for "TODO" comments.
-line-contains-xxx                                   (FIX003)   # Checks for "XXX" comments.
-line-contains-hack                                  (FIX004)   # Checks for "HACK" comments.
-future-rewritable-type-annotation                   (FA100)    # Checks for missing `from __future__ import annotations` imports upon detecting type annotations that can be written more succinctly under
-future-required-type-annotation                     (FA102)    # Checks for uses of PEP 585- and PEP 604-style type annotations in Python modules that lack the required `from __future__ import annotations` import
-f-string-in-get-text-func-call                      (INT001)   # Checks for f-strings in `gettext` function calls.
-format-in-get-text-func-call                        (INT002)   # Checks for `str.format` calls in `gettext` function calls.
-printf-in-get-text-func-call                        (INT003)   # Checks for printf-style formatted strings in `gettext` function calls.
-single-line-implicit-string-concatenation           (ISC001)   # Checks for implicitly concatenated strings on a single line.
-multi-line-implicit-string-concatenation            (ISC002)   # Checks for implicitly concatenated strings that span multiple lines.
-explicit-string-concatenation                       (ISC003)   # Checks for string literals that are explicitly concatenated (using the `+` operator).
-unconventional-import-alias                         (ICN001)   # Checks for imports that are typically imported using a common convention, like `import pandas as pd`, and enforces that convention.
-banned-import-alias                                 (ICN002)   # Checks for imports that use non-standard naming conventions, like `import tensorflow.keras.backend as K`.
-banned-import-from                                  (ICN003)   # Checks for member imports that should instead be accessed by importing the module.
-logging-string-format                               (G001)     # Checks for uses of `str.format` to format logging messages.
-logging-percent-format                              (G002)     # Checks for uses of `printf`-style format strings to format logging messages.
-logging-string-concat                               (G003)     # Checks for uses string concatenation via the `+` operator to format logging messages.
-logging-f-string                                    (G004)     # Checks for uses of f-strings to format logging messages.
-logging-warn                                        (G010)     # Checks for uses of `logging.warn` and `logging.Logger.warn`.
-logging-extra-attr-clash                            (G101)     # Checks for `extra` keywords in logging statements that clash with `LogRecord` attributes.
-logging-exc-info                                    (G201)     # Checks for uses of `logging.error` that pass `exc_info=True`.
-logging-redundant-exc-info                          (G202)     # Checks for redundant `exc_info` keyword arguments in logging statements.
-implicit-namespace-package                          (INP001)   # Checks for packages that are missing an `__init__.py` file.
-unnecessary-pass                                    (PIE790)   # Checks for unnecessary `pass` statements in class and function bodies. where it is not needed syntactically (e.g., when an indented docstring is
-duplicate-class-field-definition                    (PIE794)   # Checks for duplicate field definitions in classes.
-non-unique-enums                                    (PIE796)   # Checks for enums that contain duplicate values.
-unnecessary-spread                                  (PIE800)   # Checks for unnecessary dictionary unpacking operators (`**`).
-unnecessary-dict-kwargs                             (PIE804)   # Checks for unnecessary `dict` kwargs.
-reimplemented-list-builtin                          (PIE807)   # Checks for lambdas that can be replaced with the `list` builtin.
-multiple-starts-ends-with                           (PIE810)   # Checks for `startswith` or `endswith` calls on the same value with different prefixes or suffixes.
-print                                               (T201)     # Checks for `print` statements.
-p-print                                             (T203)     # Checks for `pprint` statements.
-unprefixed-type-param                               (PYI001)   # Checks that type `TypeVar`, `ParamSpec`, and `TypeVarTuple` definitions in stubs are prefixed with `_`.
-complex-if-statement-in-stub                        (PYI002)   # Checks for `if` statements with complex conditionals in stubs.
-unrecognized-version-info-check                     (PYI003)   # Checks for problematic `sys.version_info`-related conditions in stubs.
-patch-version-comparison                            (PYI004)   # Checks for Python version comparisons in stubs that compare against patch versions (e.g., Python 3.8.3) instead of major and minor versions (e.g.,
-wrong-tuple-length-version-comparison               (PYI005)   # Checks for Python version comparisons that compare against a tuple of the wrong length.
-bad-version-info-comparison                         (PYI006)   # Checks for uses of comparators other than `<` and `>=` for `sys.version_info` checks in `.pyi` files. All other comparators, such
-unrecognized-platform-check                         (PYI007)   # Check for unrecognized `sys.platform` checks. Platform checks should be simple string comparisons.
-unrecognized-platform-name                          (PYI008)   # Check for unrecognized platform names in `sys.platform` checks.
-pass-statement-stub-body                            (PYI009)   # Empty body should contain `...`, not `pass`
-non-empty-stub-body                                 (PYI010)   # Function body must contain only `...`
-typed-argument-default-in-stub                      (PYI011)   # Only simple default values allowed for typed arguments
-pass-in-class-body                                  (PYI012)   # Class body must not contain `pass`
-ellipsis-in-non-empty-class-body                    (PYI013)   # Removes ellipses (`...`) in otherwise non-empty class bodies.
-argument-default-in-stub                            (PYI014)   # Only simple default values allowed for arguments
-assignment-default-in-stub                          (PYI015)   # Only simple default values allowed for assignments
-duplicate-union-member                              (PYI016)   # Duplicate union member `{}`
-complex-assignment-in-stub                          (PYI017)   # Checks for assignments with multiple or non-name targets in stub files.
-quoted-annotation-in-stub                           (PYI020)   # Quoted annotations should not be included in stubs
-docstring-in-stub                                   (PYI021)   # Docstrings should not be included in stubs
-collections-named-tuple                             (PYI024)   # Checks for uses of `collections.namedtuple` in stub files.
-unaliased-collections-abc-set-import                (PYI025)   # Checks for `from collections.abc import Set` imports that do not alias `Set` to `AbstractSet`.
-type-alias-without-annotation                       (PYI026)   # Checks for type alias definitions that are not annotated with `typing.TypeAlias`.
-str-or-repr-defined-in-stub                         (PYI029)   # Checks for redundant definitions of `__str__` or `__repr__` in stubs.
-unnecessary-literal-union                           (PYI030)   # Checks for the presence of multiple literal types in a union.
-any-eq-ne-annotation                                (PYI032)   # Checks for `__eq__` and `__ne__` implementations that use `typing.Any` as the type annotation for the `obj` parameter.
-type-comment-in-stub                                (PYI033)   # Checks for the use of type comments (e.g., `x = 1  # type: int`) in stub files.
-non-self-return-type                                (PYI034)   # Checks for methods that are annotated with a fixed return type, which should instead be returning `self`.
-unassigned-special-variable-in-stub                 (PYI035)   # Derived from the **flake8-pyi** linter.
-bad-exit-annotation                                 (PYI036)   # Checks for incorrect function signatures on `__exit__` and `__aexit__` methods.
-redundant-numeric-union                             (PYI041)   # Checks for union annotations that contain redundant numeric types (e.g., `int | float`).
-snake-case-type-alias                               (PYI042)   # Type alias `{name}` should be CamelCase
-t-suffixed-type-alias                               (PYI043)   # Private type alias `{name}` should not be suffixed with `T` (the `T` suffix implies that an object is a `TypeVar`)
-future-annotations-in-stub                          (PYI044)   # `from __future__ import annotations` has no effect in stub files, since type checkers automatically treat stubs as having those semantics
-iter-method-return-iterable                         (PYI045)   # Checks for `__iter__` methods in stubs that return `Iterable[T]` instead of an `Iterator[T]`.
-stub-body-multiple-statements                       (PYI048)   # Function body must contain exactly one statement
-no-return-argument-annotation-in-stub               (PYI050)   # Prefer `{module}.Never` over `NoReturn` for argument annotations
-unannotated-assignment-in-stub                      (PYI052)   # Need type annotation for `{name}`
-string-or-bytes-too-long                            (PYI053)   # String and bytes literals longer than 50 characters are not permitted
-numeric-literal-too-long                            (PYI054)   # Numeric literals with a string representation longer than ten characters are not permitted
-pytest-fixture-incorrect-parentheses-style          (PT001)    # Use `@pytest.fixture{expected}` over `@pytest.fixture{actual}`
-pytest-fixture-positional-args                      (PT002)    # Configuration for fixture `{function}` specified via positional args, use kwargs
-pytest-extraneous-scope-function                    (PT003)    # `scope='function'` is implied in `@pytest.fixture()`
-pytest-missing-fixture-name-underscore              (PT004)    # Fixture `{function}` does not return anything, add leading underscore
-pytest-incorrect-fixture-name-underscore            (PT005)    # Fixture `{function}` returns a value, remove leading underscore
-pytest-parametrize-names-wrong-type                 (PT006)    # Wrong name(s) type in `@pytest.mark.parametrize`, expected `{expected}`
-pytest-parametrize-values-wrong-type                (PT007)    # Wrong values type in `@pytest.mark.parametrize` expected `{values}` of `{row}`
-pytest-patch-with-lambda                            (PT008)    # Use `return_value=` instead of patching with `lambda`
-pytest-unittest-assertion                           (PT009)    # Use a regular `assert` instead of unittest-style `{assertion}`
-pytest-raises-without-exception                     (PT010)    # set the expected exception in `pytest.raises()`
-pytest-raises-too-broad                             (PT011)    # `pytest.raises({exception})` is too broad, set the `match` parameter or use a more specific exception
-pytest-raises-with-multiple-statements              (PT012)    # `pytest.raises()` block should contain a single simple statement
-pytest-incorrect-pytest-import                      (PT013)    # Found incorrect import of pytest, use simple `import pytest` instead
-pytest-assert-always-false                          (PT015)    # Assertion always fails, replace with `pytest.fail()`
-pytest-fail-without-message                         (PT016)    # No message passed to `pytest.fail()`
-pytest-assert-in-except                             (PT017)    # Found assertion on exception `{name}` in `except` block, use `pytest.raises()` instead
-pytest-composite-assertion                          (PT018)    # Checks for assertions that combine multiple independent conditions.
-pytest-fixture-param-without-value                  (PT019)    # Fixture `{name}` without value is injected as parameter, use `@pytest.mark.usefixtures` instead
-pytest-deprecated-yield-fixture                     (PT020)    # `@pytest.yield_fixture` is deprecated, use `@pytest.fixture`
-pytest-fixture-finalizer-callback                   (PT021)    # Use `yield` instead of `request.addfinalizer`
-pytest-useless-yield-fixture                        (PT022)    # No teardown in fixture `{name}`, use `return` instead of `yield`
-pytest-incorrect-mark-parentheses-style             (PT023)    # Use `@pytest.mark.{mark_name}{expected_parens}` over `@pytest.mark.{mark_name}{actual_parens}`
-pytest-unnecessary-asyncio-mark-on-fixture          (PT024)    # `pytest.mark.asyncio` is unnecessary for fixtures
-pytest-erroneous-use-fixtures-on-fixture            (PT025)    # `pytest.mark.usefixtures` has no effect on fixtures
-pytest-use-fixtures-without-parameters              (PT026)    # Useless `pytest.mark.usefixtures` without parameters
-bad-quotes-inline-string                            (Q000)     # Checks for inline strings that use single quotes or double quotes, depending on the value of the [`flake8-quotes.inline-quotes`] option.
-bad-quotes-multiline-string                         (Q001)     # Checks for multiline strings that use single quotes or double quotes, depending on the value of the [`flake8-quotes.multiline-quotes`]
-bad-quotes-docstring                                (Q002)     # Checks for docstrings that use single quotes or double quotes, depending on the value of the [`flake8-quotes.docstring-quotes`] setting.
-avoidable-escaped-quote                             (Q003)     # Checks for strings that include escaped quotes, and suggests changing the quote style to avoid the need to escape them.
-unnecessary-paren-on-raise-exception                (RSE102)   # Checks for unnecessary parentheses on raised exceptions.
-unnecessary-return-none                             (RET501)   # Checks for the presence of a `return None` statement when `None` is the only possible return value.
-implicit-return-value                               (RET502)   # Checks for the presence of a `return` statement with no explicit value, for functions that return non-`None` values elsewhere.
-implicit-return                                     (RET503)   # Checks for missing explicit `return` statements at the end of functions that can return non-`None` values.
-unnecessary-assign                                  (RET504)   # Checks for variable assignments that immediately precede a `return` of the assigned variable.
-superfluous-else-return                             (RET505)   # Checks for `else` statements with a `return` statement in the preceding `if` block.
-superfluous-else-raise                              (RET506)   # Checks for `else` statements with a `raise` statement in the preceding `if` block.
-superfluous-else-continue                           (RET507)   # Checks for `else` statements with a `continue` statement in the preceding `if` block.
-superfluous-else-break                              (RET508)   # Checks for `else` statements with a `break` statement in the preceding `if` block.
-private-member-access                               (SLF001)   # Checks for accesses on "private" class members.
-duplicate-isinstance-call                           (SIM101)   # Checks for multiple `isinstance` calls on the same target.
-collapsible-if                                      (SIM102)   # Checks for nested `if` statements that can be collapsed into a single `if` statement.
-needless-bool                                       (SIM103)   # Checks for `if` statements that can be replaced with `bool`.
-suppressible-exception                              (SIM105)   # Checks for `try`-`except`-`pass` blocks that can be replaced with the `contextlib.suppress` context manager.
-return-in-try-except-finally                        (SIM107)   # Checks for `return` statements in `try`-`except` and `finally` blocks.
-if-else-block-instead-of-if-exp                     (SIM108)   # Check for `if`-`else`-blocks that can be replaced with a ternary operator.
-compare-with-tuple                                  (SIM109)   # Checks for boolean expressions that contain multiple equality comparisons to the same value.
-reimplemented-builtin                               (SIM110)   # Checks for `for` loops that can be replaced with a builtin function, like `any` or `all`.
-uncapitalized-environment-variables                 (SIM112)   # Check for environment variables that are not capitalized.
-if-with-same-arms                                   (SIM114)   # Checks for `if` branches with identical arm bodies.
-open-file-with-context-handler                      (SIM115)   # Checks for uses of the builtin `open()` function without an associated context manager.
-if-else-block-instead-of-dict-lookup                (SIM116)   # Checks for three or more consecutive if-statements with direct returns
-multiple-with-statements                            (SIM117)   # Checks for the unnecessary nesting of multiple consecutive context managers.
-in-dict-keys                                        (SIM118)   # Checks for key-existence checks against `dict.keys()` calls.
-negate-equal-op                                     (SIM201)   # Checks for negated `==` operators.
-negate-not-equal-op                                 (SIM202)   # Checks for negated `!=` operators.
-double-negation                                     (SIM208)   # Checks for double negations (i.e., multiple `not` operators).
-if-expr-with-true-false                             (SIM210)   # Checks for `if` expressions that can be replaced with `bool()` calls.
-if-expr-with-false-true                             (SIM211)   # Checks for `if` expressions that can be replaced by negating a given condition.
-if-expr-with-twisted-arms                           (SIM212)   # Checks for `if` expressions that check against a negated condition.
-expr-and-not-expr                                   (SIM220)   # Checks for `and` expressions that include both an expression and its negation.
-expr-or-not-expr                                    (SIM221)   # Checks for `or` expressions that include both an expression and its negation.
-expr-or-true                                        (SIM222)   # Checks for `or` expressions that contain truthy values.
-expr-and-false                                      (SIM223)   # Checks for `and` expressions that contain falsey values.
-yoda-conditions                                     (SIM300)   # Checks for conditions that position a constant on the left-hand side of the comparison operator, rather than the right-hand side.
-if-else-block-instead-of-dict-get                   (SIM401)   # Checks for `if` statements that can be replaced with `dict.get` calls.
-dict-get-with-none-default                          (SIM910)   # Check for `dict.get()` calls that pass `None` as the default value.
-no-slots-in-str-subclass                            (SLOT000)  # Checks for subclasses of `str` that lack a `__slots__` definition.
-no-slots-in-tuple-subclass                          (SLOT001)  # Checks for subclasses of `tuple` that lack a `__slots__` definition.
-no-slots-in-namedtuple-subclass                     (SLOT002)  # Checks for subclasses of `collections.namedtuple` that lack a `__slots__` definition.
-banned-api                                          (TID251)   # Checks for banned imports.
-relative-imports                                    (TID252)   # Checks for relative imports.
-invalid-todo-tag                                    (TD001)    # Checks that a TODO comment is labelled with "TODO".
-missing-todo-author                                 (TD002)    # Checks that a TODO comment includes an author.
-missing-todo-link                                   (TD003)    # Checks that a TODO comment is associated with a link to a relevant issue or ticket.
-missing-todo-colon                                  (TD004)    # Checks that a "TODO" tag is followed by a colon.
-missing-todo-description                            (TD005)    # Checks that a "TODO" tag contains a description of the issue following the tag itself.
-invalid-todo-capitalization                         (TD006)    # Checks that a "TODO" tag is properly capitalized (i.e., that the tag is uppercase).
-missing-space-after-todo-colon                      (TD007)    # Checks that the colon after a "TODO" tag is followed by a space.
-typing-only-first-party-import                      (TCH001)   # Checks for first-party imports that are only used for type annotations, but aren't defined in a type-checking block.
-typing-only-third-party-import                      (TCH002)   # Checks for third-party imports that are only used for type annotations, but aren't defined in a type-checking block.
-typing-only-standard-library-import                 (TCH003)   # Checks for standard library imports that are only used for type annotations, but aren't defined in a type-checking block.
-runtime-import-in-type-checking-block               (TCH004)   # Checks for runtime imports defined in a type-checking block.
-empty-type-checking-block                           (TCH005)   # Checks for an empty type-checking block.
-unused-function-argument                            (ARG001)   # Checks for the presence of unused arguments in function definitions.
-unused-method-argument                              (ARG002)   # Checks for the presence of unused arguments in instance method definitions.
-unused-class-method-argument                        (ARG003)   # Checks for the presence of unused arguments in class method definitions.
-unused-static-method-argument                       (ARG004)   # Checks for the presence of unused arguments in static method definitions.
-unused-lambda-argument                              (ARG005)   # Checks for the presence of unused arguments in lambda expression definitions.
-os-path-abspath                                     (PTH100)   # Checks for uses of `os.path.abspath`.
-os-chmod                                            (PTH101)   # Checks for uses of `os.chmod`.
-os-mkdir                                            (PTH102)   # Checks for uses of `os.mkdir`.
-os-makedirs                                         (PTH103)   # Checks for uses of `os.makedirs`.
-os-rename                                           (PTH104)   # Checks for uses of `os.rename`.
-os-replace                                          (PTH105)   # Checks for uses of `os.replace`.
-os-rmdir                                            (PTH106)   # Checks for uses of `os.rmdir`.
-os-remove                                           (PTH107)   # Checks for uses of `os.remove`.
-os-unlink                                           (PTH108)   # Checks for uses of `os.unlink`.
-os-getcwd                                           (PTH109)   # Checks for uses of `os.getcwd` and `os.getcwdb`.
-os-path-exists                                      (PTH110)   # Checks for uses of `os.path.exists`.
-os-path-expanduser                                  (PTH111)   # Checks for uses of `os.path.expanduser`.
-os-path-isdir                                       (PTH112)   # Checks for uses of `os.path.isdir`.
-os-path-isfile                                      (PTH113)   # Checks for uses of `os.path.isfile`.
-os-path-islink                                      (PTH114)   # Checks for uses of `os.path.islink`.
-os-readlink                                         (PTH115)   # Checks for uses of `os.readlink`.
-os-stat                                             (PTH116)   # Checks for uses of `os.stat`.
-os-path-isabs                                       (PTH117)   # Checks for uses of `os.path.isabs`.
-os-path-join                                        (PTH118)   # Checks for uses of `os.path.join`.
-os-path-basename                                    (PTH119)   # Checks for uses of `os.path.basename`.
-os-path-dirname                                     (PTH120)   # Checks for uses of `os.path.dirname`.
-os-path-samefile                                    (PTH121)   # Checks for uses of `os.path.samefile`.
-os-path-splitext                                    (PTH122)   # Checks for uses of `os.path.splitext`.
-builtin-open                                        (PTH123)   # Checks for uses of the `open` builtin.
-py-path                                             (PTH124)   # Checks for uses of the `py.path` library.
-path-constructor-current-directory                  (PTH201)   # Checks for `pathlib.Path` objects that are initialized with the current
-os-path-getsize                                     (PTH202)   # Checks for uses of `os.path.getsize`.
-os-path-getatime                                    (PTH203)   # Checks for uses of `os.path.getatime`.
-os-path-getmtime                                    (PTH204)   # Checks for uses of `os.path.getatime`.
-os-path-getctime                                    (PTH205)   # Checks for uses of `os.path.getatime`.
-unsorted-imports                                    (I001)     # De-duplicates, groups, and sorts imports based on the provided `isort` settings.
-missing-required-import                             (I002)     # Adds any required imports, as specified by the user, to the top of the
-complex-structure                                   (C901)     # Checks for functions with a high `McCabe` complexity.
-numpy-deprecated-type-alias                         (NPY001)   # Checks for deprecated NumPy type aliases.
-numpy-legacy-random                                 (NPY002)   # Checks for the use of legacy `np.random` function calls.
-numpy-deprecated-function                           (NPY003)   # Checks for uses of deprecated NumPy functions.
-invalid-class-name                                  (N801)     # Checks for class names that do not follow the `CamelCase` convention.
-invalid-function-name                               (N802)     # Checks for functions names that do not follow the `snake_case` naming
-invalid-argument-name                               (N803)     # Checks for argument names that do not follow the `snake_case` convention.
-invalid-first-argument-name-for-class-method        (N804)     # Checks for class methods that use a name other than `cls` for their
-invalid-first-argument-name-for-method              (N805)     # Checks for instance methods that use a name other than `self` for their
-non-lowercase-variable-in-function                  (N806)     # Checks for the use of non-lowercase variable names in functions.
-dunder-function-name                                (N807)     # Checks for functions with "dunder" names (that is, names with two
-constant-imported-as-non-constant                   (N811)     # Checks for constant imports that are aliased to non-constant-style
-lowercase-imported-as-non-lowercase                 (N812)     # Checks for lowercase imports that are aliased to non-lowercase names.
-camelcase-imported-as-lowercase                     (N813)     # Checks for `CamelCase` imports that are aliased to lowercase names.
-camelcase-imported-as-constant                      (N814)     # Checks for `CamelCase` imports that are aliased to constant-style names.
-mixed-case-variable-in-class-scope                  (N815)     # Checks for class variable names that follow the `mixedCase` convention.
-mixed-case-variable-in-global-scope                 (N816)     # Checks for global variable names that follow the `mixedCase` convention.
-camelcase-imported-as-acronym                       (N817)     # Checks for `CamelCase` imports that are aliased as acronyms.
-error-suffix-on-exception-name                      (N818)     # Checks for custom exception definitions that omit the `Error` suffix.
-invalid-module-name                                 (N999)     # Checks for module names that do not follow the `snake_case` naming
-pandas-use-of-inplace-argument                      (PD002)    # Checks for `inplace=True` usages in `pandas` function and method
-pandas-use-of-dot-is-null                           (PD003)    # Checks for uses of `.isnull` on Pandas objects.
-pandas-use-of-dot-not-null                          (PD004)    # Checks for uses of `.notnull` on Pandas objects.
-pandas-use-of-dot-ix                                (PD007)    # Checks for uses of `.ix` on Pandas objects.
-pandas-use-of-dot-at                                (PD008)    # Checks for uses of `.at` on Pandas objects.
-pandas-use-of-dot-iat                               (PD009)    # Checks for uses of `.iat` on Pandas objects.
-pandas-use-of-dot-pivot-or-unstack                  (PD010)    # Checks for uses of `.pivot` or `.unstack` on Pandas objects.
-pandas-use-of-dot-values                            (PD011)    # Checks for uses of `.values` on Pandas Series and Index objects.
-pandas-use-of-dot-read-table                        (PD012)    # Checks for uses of `pd.read_table` to read CSV files.
-pandas-use-of-dot-stack                             (PD013)    # Checks for uses of `.stack` on Pandas objects.
-pandas-use-of-pd-merge                              (PD015)    # Checks for uses of `pd.merge` on Pandas objects.
-pandas-nunique-constant-series-check                (PD101)    # Check for uses of `.nunique()` to check if a Pandas Series is constant
-pandas-df-variable-name                             (PD901)    # Checks for assignments to the variable `df`.
-unnecessary-list-cast                               (PERF101)  # Checks for explicit casts to `list` on for-loop iterables.
-incorrect-dict-iterator                             (PERF102)  # Checks for uses of `dict.items()` that discard either the key or the value
-try-except-in-loop                                  (PERF203)  # Checks for uses of except handling via `try`-`except` within `for` and
-manual-list-comprehension                           (PERF401)  # Checks for `for` loops that can be replaced by a list comprehension.
-manual-list-copy                                    (PERF402)  # Checks for `for` loops that can be replaced by a making a copy of a list.
-mixed-spaces-and-tabs                               (E101)     # Checks for mixed tabs and spaces in indentation.
-indentation-with-invalid-multiple                   (E111)     # Checks for indentation with a non-multiple of 4 spaces.
-no-indented-block                                   (E112)     # Checks for indented blocks that are lacking indentation.
-unexpected-indentation                              (E113)     # Checks for unexpected indentation.
-indentation-with-invalid-multiple-comment           (E114)     # Checks for indentation of comments with a non-multiple of 4 spaces.
-no-indented-block-comment                           (E115)     # Checks for comments in a code blocks that are lacking indentation.
-unexpected-indentation-comment                      (E116)     # Checks for unexpected indentation of comment.
-over-indented                                       (E117)     # Checks for over-indented code.
-whitespace-after-open-bracket                       (E201)     # Checks for the use of extraneous whitespace after "(".
-whitespace-before-close-bracket                     (E202)     # Checks for the use of extraneous whitespace before ")".
-whitespace-before-punctuation                       (E203)     # Checks for the use of extraneous whitespace before ",", ";" or ":".
-multiple-spaces-before-operator                     (E221)     # Checks for extraneous whitespace before an operator.
-multiple-spaces-after-operator                      (E222)     # Checks for extraneous whitespace after an operator.
-tab-before-operator                                 (E223)     # Checks for extraneous tabs before an operator.
-tab-after-operator                                  (E224)     # Checks for extraneous tabs after an operator.
-too-few-spaces-before-inline-comment                (E261)     # Checks if inline comments are separated by at least two spaces.
-no-space-after-inline-comment                       (E262)     # Checks if one space is used after inline comments.
-no-space-after-block-comment                        (E265)     # Checks if one space is used after block comments.
-multiple-leading-hashes-for-block-comment           (E266)     # Checks if block comments start with a single "#".
-multiple-spaces-after-keyword                       (E271)     # Checks for extraneous whitespace after keywords.
-multiple-spaces-before-keyword                      (E272)     # Checks for extraneous whitespace before keywords.
-tab-after-keyword                                   (E273)     # Checks for extraneous tabs after keywords.
-tab-before-keyword                                  (E274)     # Checks for extraneous tabs before keywords.
-multiple-imports-on-one-line                        (E401)     # Check for multiple imports on one line.
-module-import-not-at-top-of-file                    (E402)     # Checks for imports that are not at the top of the file.
-line-too-long                                       (E501)     # Checks for lines that exceed the specified maximum character length.
-multiple-statements-on-one-line-colon               (E701)     # Checks for compound statements (multiple statements on the same line).
-multiple-statements-on-one-line-semicolon           (E702)     # Checks for multiline statements on one line.
-useless-semicolon                                   (E703)     # Checks for statements that end with an unnecessary semicolon.
-none-comparison                                     (E711)     # Checks for comparisons to `None` which are not using the `is` operator.
-true-false-comparison                               (E712)     # Checks for comparisons to booleans which are not using the `is` operator.
-not-in-test                                         (E713)     # Checks for negative comparison using `not {foo} in {bar}`.
-not-is-test                                         (E714)     # Checks for negative comparison using `not {foo} is {bar}`.
-type-comparison                                     (E721)     # Checks for object type comparisons without using isinstance().
-bare-except                                         (E722)     # Checks for bare `except` catches in `try`-`except` statements.
-lambda-assignment                                   (E731)     # Checks for lambda expressions which are assigned to a variable.
-ambiguous-variable-name                             (E741)     # Checks for the use of the characters 'l', 'O', or 'I' as variable names.
-ambiguous-class-name                                (E742)     # Checks for the use of the characters 'l', 'O', or 'I' as class names.
-ambiguous-function-name                             (E743)     # Checks for the use of the characters 'l', 'O', or 'I' as function names.
-trailing-whitespace                                 (W291)     # Checks for superfluous trailing whitespace.
-missing-newline-at-end-of-file                      (W292)     # Checks for files missing a new line at the end of the file.
-blank-line-with-whitespace                          (W293)     # Checks for superfluous whitespace in blank lines.
-doc-line-too-long                                   (W505)     # Checks for doc lines that exceed the specified maximum character length.
-invalid-escape-sequence                             (W605)     # Checks for invalid escape sequences.
-undocumented-public-module                          (D100)     # Checks for undocumented public module definitions.
-undocumented-public-class                           (D101)     # Checks for undocumented public class definitions.
-undocumented-public-method                          (D102)     # Checks for undocumented public method definitions.
-undocumented-public-function                        (D103)     # Checks for undocumented public function definitions.
-undocumented-public-package                         (D104)     # Checks for undocumented public package definitions.
-undocumented-magic-method                           (D105)     # Checks for undocumented magic method definitions.
-undocumented-public-nested-class                    (D106)     # Checks for undocumented public class definitions, for nested classes.
-undocumented-public-init                            (D107)     # Checks for public `__init__` method definitions that are missing
-fits-on-one-line                                    (D200)     # Checks for single-line docstrings that are broken across multiple lines.
-no-blank-line-before-function                       (D201)     # Checks for docstrings on functions that are separated by one or more blank
-no-blank-line-after-function                        (D202)     # Checks for docstrings on functions that are separated by one or more blank
-one-blank-line-before-class                         (D203)     # Checks for docstrings on class definitions that are not preceded by a
-one-blank-line-after-class                          (D204)     # Checks for class methods that are not separated from the class's docstring
-blank-line-after-summary                            (D205)     # Checks for docstring summary lines that are not separated from the docstring
-indent-with-spaces                                  (D206)     # Checks for docstrings that are indented with tabs.
-under-indentation                                   (D207)     # Checks for under-indented docstrings.
-over-indentation                                    (D208)     # Checks for over-indented docstrings.
-new-line-after-last-paragraph                       (D209)     # Checks for multi-line docstrings whose closing quotes are not on their
-surrounding-whitespace                              (D210)     # Checks for surrounding whitespace in docstrings.
-blank-line-before-class                             (D211)     # Checks for docstrings on class definitions that are preceded by a blank
-multi-line-summary-first-line                       (D212)     # Checks for docstring summary lines that are not positioned on the first
-multi-line-summary-second-line                      (D213)     # Checks for docstring summary lines that are not positioned on the second
-section-not-over-indented                           (D214)     # Checks for over-indented sections in docstrings.
-section-underline-not-over-indented                 (D215)     # Checks for over-indented section underlines in docstrings.
-triple-single-quotes                                (D300)     # Checks for docstrings that use `'''triple single quotes'''` instead of
-escape-sequence-in-docstring                        (D301)     # Checks for docstrings that include backslashes, but are not defined as
-ends-in-period                                      (D400)     # Checks for docstrings in which the first line does not end in a period.
-non-imperative-mood                                 (D401)     # Checks for docstring first lines that are not in an imperative mood.
-no-signature                                        (D402)     # Checks for function docstrings that include the function's signature in
-first-line-capitalized                              (D403)     # Checks for docstrings that do not start with a capital letter.
-docstring-starts-with-this                          (D404)     # Checks for docstrings that start with `This`.
-capitalize-section-name                             (D405)     # Checks for section headers in docstrings that do not begin with capital
-new-line-after-section-name                         (D406)     # Checks that section headers in docstrings that are not followed by a
-dashed-underline-after-section                      (D407)     # Checks for section headers in docstrings that are not followed by
-section-underline-after-name                        (D408)     # Checks for section underlines in docstrings that are not on the line
-section-underline-matches-section-length            (D409)     # Checks for section underlines in docstrings that do not match the length of
-no-blank-line-after-section                         (D410)     # Checks for docstring sections that are not separated by a single blank
-no-blank-line-before-section                        (D411)     # Checks for docstring sections that are separated by a blank line.
-blank-lines-between-header-and-content              (D412)     # Checks for docstring sections that contain blank lines between the section
-blank-line-after-last-section                       (D413)     # Checks for missing blank lines after the last section of a multi-line
-empty-docstring-section                             (D414)     # Checks for docstrings that contain empty sections.
-ends-in-punctuation                                 (D415)     # Checks for docstrings in which the first line does not end in a punctuation
-section-name-ends-in-colon                          (D416)     # Checks for docstring section headers that do not end with a colon.
-undocumented-param                                  (D417)     # Checks for function docstrings that do not include documentation for all
-overload-with-docstring                             (D418)     # Checks for `@overload` function definitions that contain a docstring.
-empty-docstring                                     (D419)     # Checks for empty docstrings.
-unused-import                                       (F401)     # Checks for unused imports.
-import-shadowed-by-loop-var                         (F402)     # Checks for import bindings that are shadowed by loop variables.
-undefined-local-with-import-star                    (F403)     # Checks for the use of wildcard imports.
-late-future-import                                  (F404)     # Checks for `__future__` imports that are not located at the beginning of a
-undefined-local-with-import-star-usage              (F405)     # Checks for names that might be undefined, but may also be defined in a
-undefined-local-with-nested-import-star-usage       (F406)     # Check for the use of wildcard imports outside of the module namespace.
-future-feature-not-defined                          (F407)     # Checks for `__future__` imports that are not defined in the current Python
-percent-format-invalid-format                       (F501)     # Checks for invalid `printf`-style format strings.
-percent-format-expected-mapping                     (F502)     # Checks for named placeholders in `printf`-style format strings without
-percent-format-expected-sequence                    (F503)     # Checks for uses of mapping-type values in `printf`-style format strings
-percent-format-extra-named-arguments                (F504)     # Checks for unused mapping keys in `printf`-style format strings.
-percent-format-missing-argument                     (F505)     # Checks for named placeholders in `printf`-style format strings that are not
-percent-format-mixed-positional-and-named           (F506)     # Checks for `printf`-style format strings that have mixed positional and
-percent-format-positional-count-mismatch            (F507)     # Checks for `printf`-style format strings that have a mismatch between the
-percent-format-star-requires-sequence               (F508)     # Checks for `printf`-style format strings that use the `*` specifier with
-percent-format-unsupported-format-character         (F509)     # Checks for `printf`-style format strings with invalid format characters.
-string-dot-format-invalid-format                    (F521)     # Checks for `str.format` calls with invalid format strings.
-string-dot-format-extra-named-arguments             (F522)     # Checks for `str.format` calls with unused keyword arguments.
-string-dot-format-extra-positional-arguments        (F523)     # Checks for `str.format` calls with unused positional arguments.
-string-dot-format-missing-arguments                 (F524)     # Checks for `str.format` calls with placeholders that are missing arguments.
-string-dot-format-mixing-automatic                  (F525)     # Checks for `str.format` calls that mix automatic and manual numbering.
-f-string-missing-placeholders                       (F541)     # Checks for f-strings that do not contain any placeholder expressions.
-multi-value-repeated-key-literal                    (F601)     # Checks for dictionary literals that associate multiple values with the
-multi-value-repeated-key-variable                   (F602)     # Checks for dictionary keys that are repeated with different values.
-expressions-in-star-assignment                      (F621)     # Checks for the use of too many expressions in starred assignment statements.
-multiple-starred-expressions                        (F622)     # Checks for the use of multiple starred expressions in assignment statements.
-assert-tuple                                        (F631)     # Checks for `assert` statements that use non-empty tuples as test
-is-literal                                          (F632)     # Checks for `is` and `is not` comparisons against constant literals, like
-invalid-print-syntax                                (F633)     # Checks for `print` statements that use the `>>` syntax.
-if-tuple                                            (F634)     # Checks for `if statements that use non-empty tuples as test conditions.
-break-outside-loop                                  (F701)     # Checks for `break` statements outside of loops.
-continue-outside-loop                               (F702)     # Checks for `continue` statements outside of loops.
-yield-outside-function                              (F704)     # Checks for `yield` and `yield from` statements outside of functions.
-return-outside-function                             (F706)     # Checks for `return` statements outside of functions.
-default-except-not-last                             (F707)     # Checks for `except` blocks that handle all exceptions, but are not the last
-forward-annotation-syntax-error                     (F722)     # Checks for forward annotations that include invalid syntax.
-redefined-while-unused                              (F811)     # Checks for variable definitions that redefine (or "shadow") unused
-undefined-name                                      (F821)     # Checks for uses of undefined names.
-undefined-export                                    (F822)     # Checks for undefined names in `__all__`.
-undefined-local                                     (F823)     # Checks for undefined local variables.
-unused-variable                                     (F841)     # Checks for the presence of unused variables in function scopes.
-unused-annotation                                   (F842)     # Checks for local variables that are annotated but never used.
-raise-not-implemented                               (F901)     # Checks for `raise` statements that raise `NotImplemented`.
-eval                                                (PGH001)   # Checks for uses of the builtin `eval()` function.
-deprecated-log-warn                                 (PGH002)   # Check for usages of the deprecated `warn` method from the `logging` module.
-blanket-type-ignore                                 (PGH003)   # Check for `type: ignore` annotations that suppress all type warnings, as
-blanket-noqa                                        (PGH004)   # Check for `noqa` annotations that suppress all diagnostics, as opposed to
-invalid-mock-access                                 (PGH005)   # Checks for common mistakes when using mock objects.
-type-name-incorrect-variance                        (PLC0105)  # Checks for type names that do not match the variance of their associated
-type-bivariance                                     (PLC0131)  # Checks for `TypeVar` and `ParamSpec` definitions in which the type is
-type-param-name-mismatch                            (PLC0132)  # Checks for `TypeVar`, `TypeVarTuple`, `ParamSpec`, and `NewType`
-single-string-slots                                 (PLC0205)  # Checks for single strings assigned to `__slots__`.
-iteration-over-set                                  (PLC0208)  # Checks for iterations over `set` literals.
-useless-import-alias                                (PLC0414)  # Checks for import aliases that do not rename the original package.
-compare-to-empty-string                             (PLC1901)  # Checks for comparisons to empty strings.
-unnecessary-direct-lambda-call                      (PLC3002)  # Checks for unnecessary direct calls to lambda expressions.
-yield-in-init                                       (PLE0100)  # Checks for `__init__` methods that are turned into generators by the
-return-in-init                                      (PLE0101)  # Checks for `__init__` methods that return values.
-continue-in-finally                                 (PLE0116)  # Checks for `continue` statements inside `finally`
-nonlocal-without-binding                            (PLE0117)  # Checks for `nonlocal` names without bindings.
-load-before-global-declaration                      (PLE0118)  # Checks for uses of names that are declared as `global` prior to the
-duplicate-bases                                     (PLE0241)  # Checks for duplicate base classes in class definitions.
-unexpected-special-method-signature                 (PLE0302)  # Checks for "special" methods that have an unexpected method signature.
-invalid-str-return-type                             (PLE0307)  # Checks for `__str__` implementations that return a type other than `str`.
-invalid-all-object                                  (PLE0604)  # Checks for the inclusion of invalid objects in `__all__`.
-invalid-all-format                                  (PLE0605)  # Checks for invalid assignments to `__all__`.
-await-outside-async                                 (PLE1142)  # Checks for uses of `await` outside of `async` functions.
-logging-too-many-args                               (PLE1205)  # Checks for too many positional arguments for a `logging` format string.
-logging-too-few-args                                (PLE1206)  # Checks for too few positional arguments for a `logging` format string.
-bad-string-format-type                              (PLE1307)  # Checks for mismatched argument types in "old-style" format strings.
-bad-str-strip-call                                  (PLE1310)  # Checks duplicate characters in `str#strip` calls.
-invalid-envvar-value                                (PLE1507)  # Checks for `os.getenv` calls with an invalid `key` argument.
-yield-from-in-async-function                        (PLE1700)  # Checks for uses of `yield from` in async functions.
-bidirectional-unicode                               (PLE2502)  # Checks for bidirectional unicode characters.
-invalid-character-backspace                         (PLE2510)  # Checks for strings that contain the control character `BS`.
-invalid-character-sub                               (PLE2512)  # Checks for strings that contain the raw control character `SUB`.
-invalid-character-esc                               (PLE2513)  # Checks for strings that contain the raw control character `ESC`.
-invalid-character-nul                               (PLE2514)  # Checks for strings that contain the raw control character `NUL` (0 byte).
-invalid-character-zero-width-space                  (PLE2515)  # Checks for strings that contain the zero width space character.
-comparison-with-itself                              (PLR0124)  # Checks for operations that compare a name to itself.
-comparison-of-constant                              (PLR0133)  # Checks for comparisons between constants.
-property-with-parameters                            (PLR0206)  # Checks for property definitions that accept function parameters.
-manual-from-import                                  (PLR0402)  # Checks for submodule imports that are aliased to the submodule name.
-too-many-return-statements                          (PLR0911)  # Checks for functions or methods with too many return statements.
-too-many-branches                                   (PLR0912)  # Checks for functions or methods with too many branches.
-too-many-arguments                                  (PLR0913)  # Checks for function definitions that include too many arguments.
-too-many-statements                                 (PLR0915)  # Checks for functions or methods with too many statements.
-repeated-isinstance-calls                           (PLR1701)  # Checks for repeated `isinstance` calls on the same object.
-useless-return                                      (PLR1711)  # Checks for functions that end with an unnecessary `return` or
-repeated-equality-comparison-target                 (PLR1714)  # Checks for repeated equality comparisons that can rewritten as a membership
-sys-exit-alias                                      (PLR1722)  # Checks for uses of the `exit()` and `quit()`.
-magic-value-comparison                              (PLR2004)  # Checks for the use of unnamed numerical constants ("magic") values in
-collapsible-else-if                                 (PLR5501)  # Checks for `else` blocks that consist of a single `if` statement.
-useless-else-on-loop                                (PLW0120)  # Checks for `else` clauses on loops without a `break` statement.
-assert-on-string-literal                            (PLW0129)  # Checks for `assert` statements that use a string literal as the first
-named-expr-without-context                          (PLW0131)  # Checks for uses of named expressions (e.g., `a := 42`) that can be
-import-self                                         (PLW0406)  # Checks for import statements that import the current module.
-global-variable-not-assigned                        (PLW0602)  # Checks for `global` variables that are not assigned a value in the current
-global-statement                                    (PLW0603)  # Checks for the use of `global` statements to update identifiers.
-binary-op-exception                                 (PLW0711)  # Checks for `except` clauses that attempt to catch multiple
-invalid-envvar-default                              (PLW1508)  # Checks for `env.getenv` calls with invalid default values.
-redefined-loop-name                                 (PLW2901)  # Checks for variables defined in `for` loops and `with` statements that
-nested-min-max                                      (PLW3301)  # Checks for nested `min` and `max` calls.
-useless-metaclass-type                              (UP001)    # Checks for the use of `__metaclass__ = type` in class definitions.
-type-of-primitive                                   (UP003)    # Checks for uses of `type` that take a primitive as an argument.
-useless-object-inheritance                          (UP004)    # Checks for classes that inherit from `object`.
-deprecated-unittest-alias                           (UP005)    # Checks for uses of deprecated methods from the `unittest` module.
-non-pep585-annotation                               (UP006)    # Checks for the use of generics that can be replaced with standard library
-non-pep604-annotation                               (UP007)    # Check for type annotations that can be rewritten based on [PEP 604] syntax.
-super-call-with-parameters                          (UP008)    # Checks for `super` calls that pass redundant arguments.
-utf8-encoding-declaration                           (UP009)    # Checks for unnecessary UTF-8 encoding declarations.
-unnecessary-future-import                           (UP010)    # Checks for unnecessary `__future__` imports.
-lru-cache-without-parameters                        (UP011)    # Checks for unnecessary parentheses on `functools.lru_cache` decorators.
-unnecessary-encode-utf8                             (UP012)    # Checks for unnecessary calls to `encode` as UTF-8.
-convert-typed-dict-functional-to-class              (UP013)    # Checks for `TypedDict` declarations that use functional syntax.
-convert-named-tuple-functional-to-class             (UP014)    # Checks for `NamedTuple` declarations that use functional syntax.
-redundant-open-modes                                (UP015)    # Checks for redundant `open` mode parameters.
-datetime-timezone-utc                               (UP017)    # Checks for uses of `datetime.timezone.utc`.
-native-literals                                     (UP018)    # Checks for unnecessary calls to `str` and `bytes`.
-typing-text-str-alias                               (UP019)    # Checks for uses of `typing.Text`.
-open-alias                                          (UP020)    # Checks for uses of `io.open`.
-replace-universal-newlines                          (UP021)    # Checks for uses of `subprocess.run` that set the `universal_newlines`
-replace-stdout-stderr                               (UP022)    # Checks for uses of `subprocess.run` that send `stdout` and `stderr` to a
-deprecated-c-element-tree                           (UP023)    # Checks for uses of the `xml.etree.cElementTree` module.
-os-error-alias                                      (UP024)    # Checks for uses of exceptions that alias `OSError`.
-unicode-kind-prefix                                 (UP025)    # Checks for uses of the Unicode kind prefix (`u`) in strings.
-deprecated-mock-import                              (UP026)    # Checks for imports of the `mock` module that should be replaced with
-unpacked-list-comprehension                         (UP027)    # Checks for list comprehensions that are immediately unpacked.
-yield-in-for-loop                                   (UP028)    # Checks for `for` loops that can be replaced with `yield from` expressions.
-unnecessary-builtin-import                          (UP029)    # Checks for unnecessary imports of builtins.
-format-literals                                     (UP030)    # Checks for unnecessary positional indices in format strings.
-printf-string-formatting                            (UP031)    # Checks for `printf`-style string formatting.
-f-string                                            (UP032)    # Checks for `str#format` calls that can be replaced with f-strings.
-lru-cache-with-maxsize-none                         (UP033)    # Checks for uses of `functools.lru_cache` that set `maxsize=None`.
-extraneous-parentheses                              (UP034)    # Checks for extraneous parentheses.
-deprecated-import                                   (UP035)    # Checks for uses of deprecated imports based on the minimum supported
-outdated-version-block                              (UP036)    # Checks for conditional blocks gated on `sys.version_info` comparisons
-quoted-annotation                                   (UP037)    # Checks for the presence of unnecessary quotes in type annotations.
-non-pep604-isinstance                               (UP038)    # Checks for uses of `isinstance` and `issubclass` that take a tuple
-unnecessary-class-parentheses                       (UP039)    # Checks for class definitions that include unnecessary parentheses after
-ambiguous-unicode-character-string                  (RUF001)   # Checks for ambiguous unicode characters in strings.
-ambiguous-unicode-character-docstring               (RUF002)   # Checks for ambiguous unicode characters in docstrings.
-ambiguous-unicode-character-comment                 (RUF003)   # Checks for ambiguous unicode characters in comments.
-collection-literal-concatenation                    (RUF005)   # Checks for uses of the `+` operator to concatenate collections.
-asyncio-dangling-task                               (RUF006)   # Checks for `asyncio.create_task` and `asyncio.ensure_future` calls
-pairwise-over-zipped                                (RUF007)   # Checks for use of `zip()` to iterate over successive pairs of elements.
-mutable-dataclass-default                           (RUF008)   # Checks for mutable default values in dataclass attributes.
-function-call-in-dataclass-default-argument         (RUF009)   # Checks for function calls in dataclass attribute defaults.
-explicit-f-string-type-conversion                   (RUF010)   # Checks for uses of `str()`, `repr()`, and `ascii()` as explicit type
-static-key-dict-comprehension                       (RUF011)   # Checks for dictionary comprehensions that use a static key, like a string
-mutable-class-default                               (RUF012)   # Checks for mutable default values in class attributes.
-implicit-optional                                   (RUF013)   # Checks for the use of implicit `Optional` in type annotations when the
-unnecessary-iterable-allocation-for-first-element   (RUF015)   # Checks for uses of `list(...)[0]` that can be replaced with
-invalid-index-type                                  (RUF016)   # Checks for indexed access to lists, strings, tuples, bytes, and comprehensions
-unused-noqa                                         (RUF100)   # Checks for `noqa` directives that are no longer applicable.
-invalid-pyproject-toml                              (RUF200)   # Checks for any pyproject.toml that does not conform to the schema from the relevant PEPs.
-raise-vanilla-class                                 (TRY002)   # Checks for code that raises `Exception` directly.
-raise-vanilla-args                                  (TRY003)   # Checks for long exception messages that are not defined in the exception
-type-check-without-type-error                       (TRY004)   # Checks for type checks that do not raise `TypeError`.
-reraise-no-cause                                    (TRY200)   # Checks for exceptions that are re-raised without specifying the cause via
-verbose-raise                                       (TRY201)   # Checks for needless exception names in `raise` statements.
-try-consider-else                                   (TRY300)   # Checks for `return` statements in `try` blocks.
-raise-within-try                                    (TRY301)   # Checks for `raise` statements within `try` blocks. The only `raise`s
-useless-try-except                                  (TRY302)   # Checks for immediate uses of `raise` within exception handlers.
-error-instead-of-exception                          (TRY400)   # Checks for uses of `logging.error` instead of `logging.exception` when
-verbose-log-message                                 (TRY401)   # Checks for excessive logging of exception objects.
+AIR001     # airflow-variable-name-task-id-mismatch               :
+ERA001     # commented-out-code                                   :
+YTT101     # sys-version-slice3                                   : Checks for uses of `sys.version[:3]`.
+YTT102     # sys-version2                                         : Checks for uses of `sys.version[2]`.
+YTT103     # sys-version-cmp-str3                                 : Checks for comparisons that test `sys.version` against string literals, failing on 3.10+
+YTT201     # sys-version-info0-eq3                                : e.g., `sys.version_info[0] == 3`
+YTT202     # six-py3                                              : Checks for uses of `six.PY3`.
+YTT203     # sys-version-info1-cmp-int                            : Checks for comparisons that test `sys.version_info[1]` against an integer.
+YTT204     # sys-version-info-minor-cmp-int                       : Checks for comparisons that test `sys.version_info.minor` against an integer.
+YTT301     # sys-version0                                         : Checks for uses of `sys.version[0]`.
+YTT302     # sys-version-cmp-str10                                : Checks for comparisons that test `sys.version` against string literals,
+YTT303     # sys-version-slice1                                   : Checks for uses of `sys.version[:1]`.
+ANN001     # missing-type-function-argument                       : Checks that function arguments have type annotations.
+ANN002     # missing-type-args                                    : Checks that function `*args` arguments have type annotations.
+ANN003     # missing-type-kwargs                                  : Checks that function `**kwargs` arguments have type annotations.
+ANN101     # missing-type-self                                    : Checks that instance method `self` arguments have type annotations.
+ANN102     # missing-type-cls                                     : Checks that class method `cls` arguments have type annotations.
+ANN201     # missing-return-type-undocumented-public-function     : Checks that public functions and methods have return type annotations.
+ANN202     # missing-return-type-private-function                 : Checks that private functions and methods have return type annotations.
+ANN204     # missing-return-type-special-method                   : Checks that "special" methods, like `__init__`, `__new__`, and `__call__`, have type annotations
+ANN205     # missing-return-type-static-method                    : Checks that static methods have return type annotations.
+ANN206     # missing-return-type-class-method                     : Checks that class methods have return type annotations.
+ANN401     # any-type                                             : Checks that an expression is annotated with a more specific type than 'Any'.
+ASYNC100   # blocking-http-call-in-async-function                 : Checks that async functions do not contain blocking HTTP calls.
+ASYNC101   # open-sleep-or-subprocess-in-async-function           : Checks that async functions do not contain calls to `open`, `time.sleep`, or 'subprocess'
+ASYNC102   # blocking-os-call-in-async-function                   : Checks that async functions do not contain calls to blocking synchronous 'os' calls.
+S101       # assert                                               : Checks for uses of the `assert` keyword, which is removed when using -O
+S102       # exec-builtin                                         : Checks for uses of the builtin `exec` function.
+S103       # bad-file-permissions                                 : Checks for files with overly permissive permissions.
+S104       # hardcoded-bind-all-interfaces                        : Checks for hardcoded bindings to all network interfaces (`0.0.0.0`).
+S105       # hardcoded-password-string                            : Checks for potential uses of hardcoded passwords in strings.
+S106       # hardcoded-password-func-arg                          : Checks for potential uses of hardcoded passwords in function calls.
+S107       # hardcoded-password-default                           : Checks for potential uses of hardcoded passwords in function argument defaults
+S108       # hardcoded-temp-file                                  : Checks for the use of hardcoded temporary file or directory paths.
+S110       # try-except-pass                                      : Checks for uses of the `try`-`except`-`pass` pattern.
+S112       # try-except-continue                                  : Checks for uses of the `try`-`except`-`continue` pattern.
+S113       # request-without-timeout                              : Checks for uses of the Python `requests` module that omit the `timeout` parameter.
+S301       # suspicious-pickle-usage                              : Checks for calls to `pickle` functions or modules that wrap them.
+S302       # suspicious-marshal-usage                             : Checks for calls to `marshal` functions.
+S303       # suspicious-insecure-hash-usage                       : Checks for uses of weak or broken cryptographic hash functions.
+S304       # suspicious-insecure-cipher-usage                     : Checks for uses of weak or broken cryptographic ciphers.
+S305       # suspicious-insecure-cipher-mode-usage                : Checks for uses of weak or broken cryptographic cipher modes.
+S306       # suspicious-mktemp-usage                              : Checks for uses of `tempfile.mktemp`. Use mkstemp.
+S307       # suspicious-eval-usage                                : Checks for uses of the builtin `eval()` function.
+S308       # suspicious-mark-safe-usage                           : Checks for uses of calls to `django.utils.safestring.mark_safe`.
+S310       # suspicious-url-open-usage                            : Checks for uses of URL open functions that unexpected schemes.
+S311       # suspicious-non-cryptographic-random-usage            : Checks for uses of cryptographically weak pseudo-random number generators.
+S312       # suspicious-telnet-usage                              : Checks for the use of Telnet-related functions.
+S313       # suspicious-xmlc-element-tree-usage                   : Checks for uses of insecure XML parsers. use defusedxml instead
+S314       # suspicious-xml-element-tree-usage                    : Checks for uses of insecure XML parsers.
+S315       # suspicious-xml-expat-reader-usage                    : Checks for uses of insecure XML parsers.
+S316       # suspicious-xml-expat-builder-usage                   : Checks for uses of insecure XML parsers.
+S317       # suspicious-xml-sax-usage                             : Checks for uses of insecure XML parsers.
+S318       # suspicious-xml-mini-dom-usage                        : Checks for uses of insecure XML parsers.
+S319       # suspicious-xml-pull-dom-usage                        : Checks for uses of insecure XML parsers.
+S320       # suspicious-xmle-tree-usage                           : Checks for uses of insecure XML parsers.
+S321       # suspicious-ftp-lib-usage                             : Checks for the use of FTP-related functions.
+S323       # suspicious-unverified-context-usage                  : Checks for uses of `ssl._create_unverified_context`.
+S324       # hashlib-insecure-hash-function                       : Checks for uses of weak or broken cryptographic hash functions.
+S501       # request-with-no-cert-validation                      : Checks for HTTPS requests that disable SSL certificate checks.
+S506       # unsafe-yaml-load                                     : Checks for uses of the `yaml.load` function.
+S508       # snmp-insecure-version                                : Checks for uses of SNMPv1 or SNMPv2.
+S509       # snmp-weak-cryptography                               : Checks for uses of the SNMPv3 protocol without encryption.
+S608       # hardcoded-sql-expression                             : Checks for strings that resemble SQL statements involved in some form string building operation.
+S609       # unix-command-wildcard-injection                      : Possible wildcard injection in call due to `*` usage
+S612       # logging-config-insecure-listen                       : Use of insecure `logging.config.listen` detected
+S701       # jinja2-autoescape-false                              : Using jinja2 templates with `autoescape=False` is dangerous and can lead to XSS. Ensure `autoescape=True` or use the `select_autoescape` function.
+BLE001     # blind-except                                         : Checks for `except` clauses that catch all exceptions.
+FBT001     # boolean-positional-arg-in-function-definition        : Checks for boolean positional arguments in function definitions.
+FBT002     # boolean-default-value-in-function-definition         : Checks for the use of booleans as default values in function definitions.
+FBT003     # boolean-positional-value-in-function-call            : Checks for boolean positional arguments in function calls.
+B002       # unary-prefix-increment                               : Checks for uses of the unary prefix increment operator (e.g., `++n`).
+B003       # assignment-to-os-environ                             : Checks for assignments to `os.environ`.
+B004       # unreliable-callable-check                            : Checks for uses of `hasattr` to test if an object is callable (e.g.,
+B005       # strip-with-multi-characters                          : Checks for uses of multi-character strings in `.strip()`, `.lstrip()`, and
+B006       # mutable-argument-default                             : Checks for uses of mutable objects as function argument defaults.
+B007       # unused-loop-control-variable                         : Checks for unused variables in loops (e.g., `for` and `while` statements).
+B008       # function-call-in-default-argument                    : Checks for function calls in default function arguments.
+B009       # get-attr-with-constant                               : Checks for uses of `getattr` that take a constant attribute value as an argument (e.g., `getattr(obj, "foo")`).
+B010       # set-attr-with-constant                               : Checks for uses of `setattr` that take a constant attribute value as an argument (e.g., `setattr(obj, "foo", 42)`).
+B011       # assert-false                                         : Checks for uses of `assert False`.
+B012       # jump-statement-in-finally                            : Checks for `break`, `continue`, and `return` statements in `finally` blocks
+B013       # redundant-tuple-in-exception-handler                 : Checks for single-element tuples in exception handlers (e.g., except (ValueError,): )
+B014       # duplicate-handler-exception                          : Checks for exception handlers that catch duplicate exceptions.
+B015       # useless-comparison                                   : Checks for useless comparisons.
+B016       # raise-literal                                        : Checks for `raise` statements that raise a literal value.
+B017       # assert-raises-exception                              : Checks for `assertRaises` and `pytest.raises` context managers that catch 'Exception' or 'BaseException'
+B018       # useless-expression                                   : Checks for useless expressions.
+B019       # cached-instance-method                               : Checks for uses of the `functools.lru_cache` and `functools.cache`
+B020       # loop-variable-overrides-iterator                     : Checks for loop control variables that override the loop iterable.
+B021       # f-string-docstring                                   : Checks for docstrings that are written via f-strings.
+B022       # useless-contextlib-suppress                          : Checks for `contextlib.suppress` without arguments.
+B023       # function-uses-loop-variable                          : Checks for function definitions that use a loop variable.
+B024       # abstract-base-class-without-abstract-method          : Checks for abstract classes without abstract methods.
+B025       # duplicate-try-block-exception                        : Checks for `try-except` blocks with duplicate exception handlers.
+B026       # star-arg-unpacking-after-keyword-arg                 : Checks for function calls that use star-argument unpacking after providing a keyword argument
+B027       # empty-method-without-abstract-decorator              : Checks for empty methods in abstract base classes without an abstract
+B028       # no-explicit-stacklevel                               : Checks for `warnings.warn` calls without an explicit `stacklevel` keyword
+B029       # except-with-empty-tuple                              : Checks for exception handlers that catch an empty tuple.
+B030       # except-with-non-exception-classes                    : Checks for exception handlers that catch non-exception classes.
+B031       # reuse-of-groupby-generator                           : Checks for multiple usage of the generator returned from
+B032       # unintentional-type-annotation                        : Checks for the unintentional use of type annotations.
+B033       # duplicate-value                                      : Checks for set literals that contain duplicate items.
+B034       # re-sub-positional-args                               : Checks for calls to `re.sub`, `re.subn`, and `re.split` that pass `count`,
+B904       # raise-without-from-inside-except                     : Checks for `raise` statements in exception handlers that lack a `from`
+B905       # zip-without-explicit-strict                          : Checks for `zip` calls without an explicit `strict` parameter.
+A001       # builtin-variable-shadowing                           : Checks for variable (and function) assignments that use the same name
+A002       # builtin-argument-shadowing                           : Checks for any function arguments that use the same name as a builtin.
+A003       # builtin-attribute-shadowing                          : Checks for any class attributes that use the same name as a builtin.
+COM812     # missing-trailing-comma                               : Checks for the absence of trailing commas.
+COM818     # trailing-comma-on-bare-tuple                         : Checks for the presence of trailing commas on bare (i.e., unparenthesized) tuples
+COM819     # prohibited-trailing-comma                            : Checks for the presence of prohibited trailing commas.
+C400       # unnecessary-generator-list                           : Checks for unnecessary generators that can be rewritten as `list` comprehensions.
+C401       # unnecessary-generator-set                            : Checks for unnecessary generators that can be rewritten as `set` comprehensions.
+C402       # unnecessary-generator-dict                           : Checks for unnecessary generators that can be rewritten as `dict` comprehensions.
+C403       # unnecessary-list-comprehension-set                   : Checks for unnecessary list comprehensions.
+C404       # unnecessary-list-comprehension-dict                  : Checks for unnecessary list comprehensions.
+C405       # unnecessary-literal-set                              : Checks for `set` calls that take unnecessary `list` or `tuple` literals as arguments.
+C406       # unnecessary-literal-dict                             : Checks for unnecessary `list` or `tuple` literals.
+C408       # unnecessary-collection-call                          : Checks for unnecessary `dict`, `list` or `tuple` calls that can be rewritten as empty literals.
+C409       # unnecessary-literal-within-tuple-call                : Checks for `tuple` calls that take unnecessary list or tuple literals as arguments.
+C410       # unnecessary-literal-within-list-call                 : Checks for `list` calls that take unnecessary list or tuple literals as arguments.
+C411       # unnecessary-list-call                                : Checks for unnecessary `list` calls around list comprehensions.
+C413       # unnecessary-call-around-sorted                       : Checks for unnecessary `list` or `reversed` calls around `sorted` calls.
+C414       # unnecessary-double-cast-or-process                   : Checks for unnecessary `list`, `reversed`, `set`, `sorted`, and `tuple` call within `list`, `set`, `sorted`, and `tuple` calls.
+C415       # unnecessary-subscript-reversal                       : Checks for unnecessary subscript reversal of iterable.
+C416       # unnecessary-comprehension                            : Checks for unnecessary `dict`, `list`, and `set` comprehension.
+C417       # unnecessary-map                                      : Checks for unnecessary `map` calls with `lambda` functions.
+C418       # unnecessary-literal-within-dict-call                 : Checks for `dict` calls that take unnecessary `dict` literals or `dict` comprehensions as arguments.
+C419       # unnecessary-comprehension-any-all                    : Checks for unnecessary list comprehensions passed to `any` and `all`.
+CPY001     # missing-copyright-notice                             : Checks for the absence of copyright notices within Python files.
+DTZ012     # call-date-fromtimestamp                              : Checks for the presence of debugger calls and imports.
+EM101      # raw-string-in-exception                              : Checks for the use of string literals in exception constructors.
+EM102      # f-string-in-exception                                : Checks for the use of f-strings in exception constructors.
+EM103      # dot-format-in-exception                              : Checks for the use of `.format` calls on string literals in exception constructors.
+EXE001     # shebang-not-executable                               : Checks for a shebang directive in a file that is not executable.
+EXE002     # shebang-missing-executable-file                      : Checks for executable `.py` files that do not have a shebang.
+EXE003     # shebang-missing-python                               : Checks for a shebang directive in `.py` files that does not contain `python`.
+EXE004     # shebang-leading-whitespace                           : Checks for whitespace before a shebang directive.
+EXE005     # shebang-not-first-line                               : Checks for a shebang directive that is not at the beginning of the file.
+FIX001     # line-contains-fixme                                  : Checks for "FIXME" comments.
+FIX002     # line-contains-todo                                   : Checks for "TODO" comments.
+FIX003     # line-contains-xxx                                    : Checks for "XXX" comments.
+FIX004     # line-contains-hack                                   : Checks for "HACK" comments.
+FA100      # future-rewritable-type-annotation                    : Checks for missing `from __future__ import annotations` imports upon detecting type annotations that can be written more succinctly under
+FA102      # future-required-type-annotation                      : Checks for uses of PEP 585- and PEP 604-style type annotations in Python modules that lack the required `from __future__ import annotations` import
+INT001     # f-string-in-get-text-func-call                       : Checks for f-strings in `gettext` function calls.
+INT002     # format-in-get-text-func-call                         : Checks for `str.format` calls in `gettext` function calls.
+INT003     # printf-in-get-text-func-call                         : Checks for printf-style formatted strings in `gettext` function calls.
+ISC001     # single-line-implicit-string-concatenation            : Checks for implicitly concatenated strings on a single line.
+ISC002     # multi-line-implicit-string-concatenation             : Checks for implicitly concatenated strings that span multiple lines.
+ISC003     # explicit-string-concatenation                        : Checks for string literals that are explicitly concatenated (using the `+` operator).
+ICN001     # unconventional-import-alias                          : Checks for imports that are typically imported using a common convention, like `import pandas as pd`, and enforces that convention.
+ICN002     # banned-import-alias                                  : Checks for imports that use non-standard naming conventions, like `import tensorflow.keras.backend as K`.
+ICN003     # banned-import-from                                   : Checks for member imports that should instead be accessed by importing the module.
+G001       # logging-string-format                                : Checks for uses of `str.format` to format logging messages.
+G002       # logging-percent-format                               : Checks for uses of `printf`-style format strings to format logging messages.
+G003       # logging-string-concat                                : Checks for uses string concatenation via the `+` operator to format logging messages.
+G004       # logging-f-string                                     : Checks for uses of f-strings to format logging messages.
+G010       # logging-warn                                         : Checks for uses of `logging.warn` and `logging.Logger.warn`.
+G101       # logging-extra-attr-clash                             : Checks for `extra` keywords in logging statements that clash with `LogRecord` attributes.
+G201       # logging-exc-info                                     : Checks for uses of `logging.error` that pass `exc_info=True`.
+G202       # logging-redundant-exc-info                           : Checks for redundant `exc_info` keyword arguments in logging statements.
+INP001     # implicit-namespace-package                           : Checks for packages that are missing an `__init__.py` file.
+PIE790     # unnecessary-pass                                     : Checks for unnecessary `pass` statements in class and function bodies. where it is not needed syntactically (e.g., when an indented docstring is
+PIE794     # duplicate-class-field-definition                     : Checks for duplicate field definitions in classes.
+PIE796     # non-unique-enums                                     : Checks for enums that contain duplicate values.
+PIE800     # unnecessary-spread                                   : Checks for unnecessary dictionary unpacking operators (`**`).
+PIE804     # unnecessary-dict-kwargs                              : Checks for unnecessary `dict` kwargs.
+PIE807     # reimplemented-list-builtin                           : Checks for lambdas that can be replaced with the `list` builtin.
+PIE810     # multiple-starts-ends-with                            : Checks for `startswith` or `endswith` calls on the same value with different prefixes or suffixes.
+T201       # print                                                : Checks for `print` statements.
+T203       # p-print                                              : Checks for `pprint` statements.
+PYI001     # unprefixed-type-param                                : Checks that type `TypeVar`, `ParamSpec`, and `TypeVarTuple` definitions in stubs are prefixed with `_`.
+PYI002     # complex-if-statement-in-stub                         : Checks for `if` statements with complex conditionals in stubs.
+PYI003     # unrecognized-version-info-check                      : Checks for problematic `sys.version_info`-related conditions in stubs.
+PYI004     # patch-version-comparison                             : Checks for Python version comparisons in stubs that compare against patch versions (e.g., Python 3.8.3) instead of major and minor versions (e.g.,
+PYI005     # wrong-tuple-length-version-comparison                : Checks for Python version comparisons that compare against a tuple of the wrong length.
+PYI006     # bad-version-info-comparison                          : Checks for uses of comparators other than `<` and `>=` for `sys.version_info` checks in `.pyi` files. All other comparators, such
+PYI007     # unrecognized-platform-check                          : Check for unrecognized `sys.platform` checks. Platform checks should be simple string comparisons.
+PYI008     # unrecognized-platform-name                           : Check for unrecognized platform names in `sys.platform` checks.
+PYI009     # pass-statement-stub-body                             : Empty body should contain `...`, not `pass`
+PYI010     # non-empty-stub-body                                  : Function body must contain only `...`
+PYI011     # typed-argument-default-in-stub                       : Only simple default values allowed for typed arguments
+PYI012     # pass-in-class-body                                   : Class body must not contain `pass`
+PYI013     # ellipsis-in-non-empty-class-body                     : Removes ellipses (`...`) in otherwise non-empty class bodies.
+PYI014     # argument-default-in-stub                             : Only simple default values allowed for arguments
+PYI015     # assignment-default-in-stub                           : Only simple default values allowed for assignments
+PYI016     # duplicate-union-member                               : Duplicate union member `{}`
+PYI017     # complex-assignment-in-stub                           : Checks for assignments with multiple or non-name targets in stub files.
+PYI020     # quoted-annotation-in-stub                            : Quoted annotations should not be included in stubs
+PYI021     # docstring-in-stub                                    : Docstrings should not be included in stubs
+PYI024     # collections-named-tuple                              : Checks for uses of `collections.namedtuple` in stub files.
+PYI025     # unaliased-collections-abc-set-import                 : Checks for `from collections.abc import Set` imports that do not alias `Set` to `AbstractSet`.
+PYI026     # type-alias-without-annotation                        : Checks for type alias definitions that are not annotated with `typing.TypeAlias`.
+PYI029     # str-or-repr-defined-in-stub                          : Checks for redundant definitions of `__str__` or `__repr__` in stubs.
+PYI030     # unnecessary-literal-union                            : Checks for the presence of multiple literal types in a union.
+PYI032     # any-eq-ne-annotation                                 : Checks for `__eq__` and `__ne__` implementations that use `typing.Any` as the type annotation for the `obj` parameter.
+PYI033     # type-comment-in-stub                                 : Checks for the use of type comments (e.g., `x = 1  # type: int`) in stub files.
+PYI034     # non-self-return-type                                 : Checks for methods that are annotated with a fixed return type, which should instead be returning `self`.
+PYI035     # unassigned-special-variable-in-stub                  : Derived from the **flake8-pyi** linter.
+PYI036     # bad-exit-annotation                                  : Checks for incorrect function signatures on `__exit__` and `__aexit__` methods.
+PYI041     # redundant-numeric-union                              : Checks for union annotations that contain redundant numeric types (e.g., `int | float`).
+PYI042     # snake-case-type-alias                                : Type alias `{name}` should be CamelCase
+PYI043     # t-suffixed-type-alias                                : Private type alias `{name}` should not be suffixed with `T` (the `T` suffix implies that an object is a `TypeVar`)
+PYI044     # future-annotations-in-stub                           : `from __future__ import annotations` has no effect in stub files, since type checkers automatically treat stubs as having those semantics
+PYI045     # iter-method-return-iterable                          : Checks for `__iter__` methods in stubs that return `Iterable[T]` instead of an `Iterator[T]`.
+PYI048     # stub-body-multiple-statements                        : Function body must contain exactly one statement
+PYI050     # no-return-argument-annotation-in-stub                : Prefer `{module}.Never` over `NoReturn` for argument annotations
+PYI052     # unannotated-assignment-in-stub                       : Need type annotation for `{name}`
+PYI053     # string-or-bytes-too-long                             : String and bytes literals longer than 50 characters are not permitted
+PYI054     # numeric-literal-too-long                             : Numeric literals with a string representation longer than ten characters are not permitted
+PT001      # pytest-fixture-incorrect-parentheses-style           : Use `@pytest.fixture{expected}` over `@pytest.fixture{actual}`
+PT002      # pytest-fixture-positional-args                       : Configuration for fixture `{function}` specified via positional args, use kwargs
+PT003      # pytest-extraneous-scope-function                     : `scope='function'` is implied in `@pytest.fixture()`
+PT004      # pytest-missing-fixture-name-underscore               : Fixture `{function}` does not return anything, add leading underscore
+PT005      # pytest-incorrect-fixture-name-underscore             : Fixture `{function}` returns a value, remove leading underscore
+PT006      # pytest-parametrize-names-wrong-type                  : Wrong name(s) type in `@pytest.mark.parametrize`, expected `{expected}`
+PT007      # pytest-parametrize-values-wrong-type                 : Wrong values type in `@pytest.mark.parametrize` expected `{values}` of `{row}`
+PT008      # pytest-patch-with-lambda                             : Use `return_value=` instead of patching with `lambda`
+PT009      # pytest-unittest-assertion                            : Use a regular `assert` instead of unittest-style `{assertion}`
+PT010      # pytest-raises-without-exception                      : set the expected exception in `pytest.raises()`
+PT011      # pytest-raises-too-broad                              : `pytest.raises({exception})` is too broad, set the `match` parameter or use a more specific exception
+PT012      # pytest-raises-with-multiple-statements               : `pytest.raises()` block should contain a single simple statement
+PT013      # pytest-incorrect-pytest-import                       : Found incorrect import of pytest, use simple `import pytest` instead
+PT015      # pytest-assert-always-false                           : Assertion always fails, replace with `pytest.fail()`
+PT016      # pytest-fail-without-message                          : No message passed to `pytest.fail()`
+PT017      # pytest-assert-in-except                              : Found assertion on exception `{name}` in `except` block, use `pytest.raises()` instead
+PT018      # pytest-composite-assertion                           : Checks for assertions that combine multiple independent conditions.
+PT019      # pytest-fixture-param-without-value                   : Fixture `{name}` without value is injected as parameter, use `@pytest.mark.usefixtures` instead
+PT020      # pytest-deprecated-yield-fixture                      : `@pytest.yield_fixture` is deprecated, use `@pytest.fixture`
+PT021      # pytest-fixture-finalizer-callback                    : Use `yield` instead of `request.addfinalizer`
+PT022      # pytest-useless-yield-fixture                         : No teardown in fixture `{name}`, use `return` instead of `yield`
+PT023      # pytest-incorrect-mark-parentheses-style              : Use `@pytest.mark.{mark_name}{expected_parens}` over `@pytest.mark.{mark_name}{actual_parens}`
+PT024      # pytest-unnecessary-asyncio-mark-on-fixture           : `pytest.mark.asyncio` is unnecessary for fixtures
+PT025      # pytest-erroneous-use-fixtures-on-fixture             : `pytest.mark.usefixtures` has no effect on fixtures
+PT026      # pytest-use-fixtures-without-parameters               : Useless `pytest.mark.usefixtures` without parameters
+Q000       # bad-quotes-inline-string                             : Checks for inline strings that use single quotes or double quotes, depending on the value of the [`flake8-quotes.inline-quotes`] option.
+Q001       # bad-quotes-multiline-string                          : Checks for multiline strings that use single quotes or double quotes, depending on the value of the [`flake8-quotes.multiline-quotes`]
+Q002       # bad-quotes-docstring                                 : Checks for docstrings that use single quotes or double quotes, depending on the value of the [`flake8-quotes.docstring-quotes`] setting.
+Q003       # avoidable-escaped-quote                              : Checks for strings that include escaped quotes, and suggests changing the quote style to avoid the need to escape them.
+RSE102     # unnecessary-paren-on-raise-exception                 : Checks for unnecessary parentheses on raised exceptions.
+RET501     # unnecessary-return-none                              : Checks for the presence of a `return None` statement when `None` is the only possible return value.
+RET502     # implicit-return-value                                : Checks for the presence of a `return` statement with no explicit value, for functions that return non-`None` values elsewhere.
+RET503     # implicit-return                                      : Checks for missing explicit `return` statements at the end of functions that can return non-`None` values.
+RET504     # unnecessary-assign                                   : Checks for variable assignments that immediately precede a `return` of the assigned variable.
+RET505     # superfluous-else-return                              : Checks for `else` statements with a `return` statement in the preceding `if` block.
+RET506     # superfluous-else-raise                               : Checks for `else` statements with a `raise` statement in the preceding `if` block.
+RET507     # superfluous-else-continue                            : Checks for `else` statements with a `continue` statement in the preceding `if` block.
+RET508     # superfluous-else-break                               : Checks for `else` statements with a `break` statement in the preceding `if` block.
+SLF001     # private-member-access                                : Checks for accesses on "private" class members.
+SIM101     # duplicate-isinstance-call                            : Checks for multiple `isinstance` calls on the same target.
+SIM102     # collapsible-if                                       : Checks for nested `if` statements that can be collapsed into a single `if` statement.
+SIM103     # needless-bool                                        : Checks for `if` statements that can be replaced with `bool`.
+SIM105     # suppressible-exception                               : Checks for `try`-`except`-`pass` blocks that can be replaced with the `contextlib.suppress` context manager.
+SIM107     # return-in-try-except-finally                         : Checks for `return` statements in `try`-`except` and `finally` blocks.
+SIM108     # if-else-block-instead-of-if-exp                      : Check for `if`-`else`-blocks that can be replaced with a ternary operator.
+SIM109     # compare-with-tuple                                   : Checks for boolean expressions that contain multiple equality comparisons to the same value.
+SIM110     # reimplemented-builtin                                : Checks for `for` loops that can be replaced with a builtin function, like `any` or `all`.
+SIM112     # uncapitalized-environment-variables                  : Check for environment variables that are not capitalized.
+SIM114     # if-with-same-arms                                    : Checks for `if` branches with identical arm bodies.
+SIM115     # open-file-with-context-handler                       : Checks for uses of the builtin `open()` function without an associated context manager.
+SIM116     # if-else-block-instead-of-dict-lookup                 : Checks for three or more consecutive if-statements with direct returns
+SIM117     # multiple-with-statements                             : Checks for the unnecessary nesting of multiple consecutive context managers.
+SIM118     # in-dict-keys                                         : Checks for key-existence checks against `dict.keys()` calls.
+SIM201     # negate-equal-op                                      : Checks for negated `==` operators.
+SIM202     # negate-not-equal-op                                  : Checks for negated `!=` operators.
+SIM208     # double-negation                                      : Checks for double negations (i.e., multiple `not` operators).
+SIM210     # if-expr-with-true-false                              : Checks for `if` expressions that can be replaced with `bool()` calls.
+SIM211     # if-expr-with-false-true                              : Checks for `if` expressions that can be replaced by negating a given condition.
+SIM212     # if-expr-with-twisted-arms                            : Checks for `if` expressions that check against a negated condition.
+SIM220     # expr-and-not-expr                                    : Checks for `and` expressions that include both an expression and its negation.
+SIM221     # expr-or-not-expr                                     : Checks for `or` expressions that include both an expression and its negation.
+SIM222     # expr-or-true                                         : Checks for `or` expressions that contain truthy values.
+SIM223     # expr-and-false                                       : Checks for `and` expressions that contain falsey values.
+SIM300     # yoda-conditions                                      : Checks for conditions that position a constant on the left-hand side of the comparison operator, rather than the right-hand side.
+SIM401     # if-else-block-instead-of-dict-get                    : Checks for `if` statements that can be replaced with `dict.get` calls.
+SIM910     # dict-get-with-none-default                           : Check for `dict.get()` calls that pass `None` as the default value.
+SLOT000    # no-slots-in-str-subclass                             : Checks for subclasses of `str` that lack a `__slots__` definition.
+SLOT001    # no-slots-in-tuple-subclass                           : Checks for subclasses of `tuple` that lack a `__slots__` definition.
+SLOT002    # no-slots-in-namedtuple-subclass                      : Checks for subclasses of `collections.namedtuple` that lack a `__slots__` definition.
+TID251     # banned-api                                           : Checks for banned imports.
+TID252     # relative-imports                                     : Checks for relative imports.
+TD001      # invalid-todo-tag                                     : Checks that a TODO comment is labelled with "TODO".
+TD002      # missing-todo-author                                  : Checks that a TODO comment includes an author.
+TD003      # missing-todo-link                                    : Checks that a TODO comment is associated with a link to a relevant issue or ticket.
+TD004      # missing-todo-colon                                   : Checks that a "TODO" tag is followed by a colon.
+TD005      # missing-todo-description                             : Checks that a "TODO" tag contains a description of the issue following the tag itself.
+TD006      # invalid-todo-capitalization                          : Checks that a "TODO" tag is properly capitalized (i.e., that the tag is uppercase).
+TD007      # missing-space-after-todo-colon                       : Checks that the colon after a "TODO" tag is followed by a space.
+TCH001     # typing-only-first-party-import                       : Checks for first-party imports that are only used for type annotations, but aren't defined in a type-checking block.
+TCH002     # typing-only-third-party-import                       : Checks for third-party imports that are only used for type annotations, but aren't defined in a type-checking block.
+TCH003     # typing-only-standard-library-import                  : Checks for standard library imports that are only used for type annotations, but aren't defined in a type-checking block.
+TCH004     # runtime-import-in-type-checking-block                : Checks for runtime imports defined in a type-checking block.
+TCH005     # empty-type-checking-block                            : Checks for an empty type-checking block.
+ARG001     # unused-function-argument                             : Checks for the presence of unused arguments in function definitions.
+ARG002     # unused-method-argument                               : Checks for the presence of unused arguments in instance method definitions.
+ARG003     # unused-class-method-argument                         : Checks for the presence of unused arguments in class method definitions.
+ARG004     # unused-static-method-argument                        : Checks for the presence of unused arguments in static method definitions.
+ARG005     # unused-lambda-argument                               : Checks for the presence of unused arguments in lambda expression definitions.
+PTH100     # os-path-abspath                                      : Checks for uses of `os.path.abspath`.
+PTH101     # os-chmod                                             : Checks for uses of `os.chmod`.
+PTH102     # os-mkdir                                             : Checks for uses of `os.mkdir`.
+PTH103     # os-makedirs                                          : Checks for uses of `os.makedirs`.
+PTH104     # os-rename                                            : Checks for uses of `os.rename`.
+PTH105     # os-replace                                           : Checks for uses of `os.replace`.
+PTH106     # os-rmdir                                             : Checks for uses of `os.rmdir`.
+PTH107     # os-remove                                            : Checks for uses of `os.remove`.
+PTH108     # os-unlink                                            : Checks for uses of `os.unlink`.
+PTH109     # os-getcwd                                            : Checks for uses of `os.getcwd` and `os.getcwdb`.
+PTH110     # os-path-exists                                       : Checks for uses of `os.path.exists`.
+PTH111     # os-path-expanduser                                   : Checks for uses of `os.path.expanduser`.
+PTH112     # os-path-isdir                                        : Checks for uses of `os.path.isdir`.
+PTH113     # os-path-isfile                                       : Checks for uses of `os.path.isfile`.
+PTH114     # os-path-islink                                       : Checks for uses of `os.path.islink`.
+PTH115     # os-readlink                                          : Checks for uses of `os.readlink`.
+PTH116     # os-stat                                              : Checks for uses of `os.stat`.
+PTH117     # os-path-isabs                                        : Checks for uses of `os.path.isabs`.
+PTH118     # os-path-join                                         : Checks for uses of `os.path.join`.
+PTH119     # os-path-basename                                     : Checks for uses of `os.path.basename`.
+PTH120     # os-path-dirname                                      : Checks for uses of `os.path.dirname`.
+PTH121     # os-path-samefile                                     : Checks for uses of `os.path.samefile`.
+PTH122     # os-path-splitext                                     : Checks for uses of `os.path.splitext`.
+PTH123     # builtin-open                                         : Checks for uses of the `open` builtin.
+PTH124     # py-path                                              : Checks for uses of the `py.path` library.
+PTH201     # path-constructor-current-directory                   : Checks for `pathlib.Path` objects that are initialized with the current
+PTH202     # os-path-getsize                                      : Checks for uses of `os.path.getsize`.
+PTH203     # os-path-getatime                                     : Checks for uses of `os.path.getatime`.
+PTH204     # os-path-getmtime                                     : Checks for uses of `os.path.getatime`.
+PTH205     # os-path-getctime                                     : Checks for uses of `os.path.getatime`.
+I001       # unsorted-imports                                     : De-duplicates, groups, and sorts imports based on the provided `isort` settings.
+I002       # missing-required-import                              : Adds any required imports, as specified by the user, to the top of the
+C901       # complex-structure                                    : Checks for functions with a high `McCabe` complexity.
+NPY001     # numpy-deprecated-type-alias                          : Checks for deprecated NumPy type aliases.
+NPY002     # numpy-legacy-random                                  : Checks for the use of legacy `np.random` function calls.
+NPY003     # numpy-deprecated-function                            : Checks for uses of deprecated NumPy functions.
+N801       # invalid-class-name                                   : Checks for class names that do not follow the `CamelCase` convention.
+N802       # invalid-function-name                                : Checks for functions names that do not follow the `snake_case` naming
+N803       # invalid-argument-name                                : Checks for argument names that do not follow the `snake_case` convention.
+N804       # invalid-first-argument-name-for-class-method         : Checks for class methods that use a name other than `cls` for their
+N805       # invalid-first-argument-name-for-method               : Checks for instance methods that use a name other than `self` for their
+N806       # non-lowercase-variable-in-function                   : Checks for the use of non-lowercase variable names in functions.
+N807       # dunder-function-name                                 : Checks for functions with "dunder" names (that is, names with two
+N811       # constant-imported-as-non-constant                    : Checks for constant imports that are aliased to non-constant-style
+N812       # lowercase-imported-as-non-lowercase                  : Checks for lowercase imports that are aliased to non-lowercase names.
+N813       # camelcase-imported-as-lowercase                      : Checks for `CamelCase` imports that are aliased to lowercase names.
+N814       # camelcase-imported-as-constant                       : Checks for `CamelCase` imports that are aliased to constant-style names.
+N815       # mixed-case-variable-in-class-scope                   : Checks for class variable names that follow the `mixedCase` convention.
+N816       # mixed-case-variable-in-global-scope                  : Checks for global variable names that follow the `mixedCase` convention.
+N817       # camelcase-imported-as-acronym                        : Checks for `CamelCase` imports that are aliased as acronyms.
+N818       # error-suffix-on-exception-name                       : Checks for custom exception definitions that omit the `Error` suffix.
+N999       # invalid-module-name                                  : Checks for module names that do not follow the `snake_case` naming
+PD002      # pandas-use-of-inplace-argument                       : Checks for `inplace=True` usages in `pandas` function and method
+PD003      # pandas-use-of-dot-is-null                            : Checks for uses of `.isnull` on Pandas objects.
+PD004      # pandas-use-of-dot-not-null                           : Checks for uses of `.notnull` on Pandas objects.
+PD007      # pandas-use-of-dot-ix                                 : Checks for uses of `.ix` on Pandas objects.
+PD008      # pandas-use-of-dot-at                                 : Checks for uses of `.at` on Pandas objects.
+PD009      # pandas-use-of-dot-iat                                : Checks for uses of `.iat` on Pandas objects.
+PD010      # pandas-use-of-dot-pivot-or-unstack                   : Checks for uses of `.pivot` or `.unstack` on Pandas objects.
+PD011      # pandas-use-of-dot-values                             : Checks for uses of `.values` on Pandas Series and Index objects.
+PD012      # pandas-use-of-dot-read-table                         : Checks for uses of `pd.read_table` to read CSV files.
+PD013      # pandas-use-of-dot-stack                              : Checks for uses of `.stack` on Pandas objects.
+PD015      # pandas-use-of-pd-merge                               : Checks for uses of `pd.merge` on Pandas objects.
+PD101      # pandas-nunique-constant-series-check                 : Check for uses of `.nunique()` to check if a Pandas Series is constant
+PD901      # pandas-df-variable-name                              : Checks for assignments to the variable `df`.
+PERF101    # unnecessary-list-cast                                : Checks for explicit casts to `list` on for-loop iterables.
+PERF102    # incorrect-dict-iterator                              : Checks for uses of `dict.items()` that discard either the key or the value
+PERF203    # try-except-in-loop                                   : Checks for uses of except handling via `try`-`except` within `for` and
+PERF401    # manual-list-comprehension                            : Checks for `for` loops that can be replaced by a list comprehension.
+PERF402    # manual-list-copy                                     : Checks for `for` loops that can be replaced by a making a copy of a list.
+E101       # mixed-spaces-and-tabs                                : Checks for mixed tabs and spaces in indentation.
+E111       # indentation-with-invalid-multiple                    : Checks for indentation with a non-multiple of 4 spaces.
+E112       # no-indented-block                                    : Checks for indented blocks that are lacking indentation.
+E113       # unexpected-indentation                               : Checks for unexpected indentation.
+E114       # indentation-with-invalid-multiple-comment            : Checks for indentation of comments with a non-multiple of 4 spaces.
+E115       # no-indented-block-comment                            : Checks for comments in a code blocks that are lacking indentation.
+E116       # unexpected-indentation-comment                       : Checks for unexpected indentation of comment.
+E117       # over-indented                                        : Checks for over-indented code.
+E201       # whitespace-after-open-bracket                        : Checks for the use of extraneous whitespace after "(".
+E202       # whitespace-before-close-bracket                      : Checks for the use of extraneous whitespace before ")".
+E203       # whitespace-before-punctuation                        : Checks for the use of extraneous whitespace before ",", ";" or ":".
+E221       # multiple-spaces-before-operator                      : Checks for extraneous whitespace before an operator.
+E222       # multiple-spaces-after-operator                       : Checks for extraneous whitespace after an operator.
+E223       # tab-before-operator                                  : Checks for extraneous tabs before an operator.
+E224       # tab-after-operator                                   : Checks for extraneous tabs after an operator.
+E261       # too-few-spaces-before-inline-comment                 : Checks if inline comments are separated by at least two spaces.
+E262       # no-space-after-inline-comment                        : Checks if one space is used after inline comments.
+E265       # no-space-after-block-comment                         : Checks if one space is used after block comments.
+E266       # multiple-leading-hashes-for-block-comment            : Checks if block comments start with a single "#".
+E271       # multiple-spaces-after-keyword                        : Checks for extraneous whitespace after keywords.
+E272       # multiple-spaces-before-keyword                       : Checks for extraneous whitespace before keywords.
+E273       # tab-after-keyword                                    : Checks for extraneous tabs after keywords.
+E274       # tab-before-keyword                                   : Checks for extraneous tabs before keywords.
+E401       # multiple-imports-on-one-line                         : Check for multiple imports on one line.
+E402       # module-import-not-at-top-of-file                     : Checks for imports that are not at the top of the file.
+E501       # line-too-long                                        : Checks for lines that exceed the specified maximum character length.
+E701       # multiple-statements-on-one-line-colon                : Checks for compound statements (multiple statements on the same line).
+E702       # multiple-statements-on-one-line-semicolon            : Checks for multiline statements on one line.
+E703       # useless-semicolon                                    : Checks for statements that end with an unnecessary semicolon.
+E711       # none-comparison                                      : Checks for comparisons to `None` which are not using the `is` operator.
+E712       # true-false-comparison                                : Checks for comparisons to booleans which are not using the `is` operator.
+E713       # not-in-test                                          : Checks for negative comparison using `not {foo} in {bar}`.
+E714       # not-is-test                                          : Checks for negative comparison using `not {foo} is {bar}`.
+E721       # type-comparison                                      : Checks for object type comparisons without using isinstance().
+E722       # bare-except                                          : Checks for bare `except` catches in `try`-`except` statements.
+E731       # lambda-assignment                                    : Checks for lambda expressions which are assigned to a variable.
+E741       # ambiguous-variable-name                              : Checks for the use of the characters 'l', 'O', or 'I' as variable names.
+E742       # ambiguous-class-name                                 : Checks for the use of the characters 'l', 'O', or 'I' as class names.
+E743       # ambiguous-function-name                              : Checks for the use of the characters 'l', 'O', or 'I' as function names.
+W291       # trailing-whitespace                                  : Checks for superfluous trailing whitespace.
+W292       # missing-newline-at-end-of-file                       : Checks for files missing a new line at the end of the file.
+W293       # blank-line-with-whitespace                           : Checks for superfluous whitespace in blank lines.
+W505       # doc-line-too-long                                    : Checks for doc lines that exceed the specified maximum character length.
+W605       # invalid-escape-sequence                              : Checks for invalid escape sequences.
+D100       # undocumented-public-module                           : Checks for undocumented public module definitions.
+D101       # undocumented-public-class                            : Checks for undocumented public class definitions.
+D102       # undocumented-public-method                           : Checks for undocumented public method definitions.
+D103       # undocumented-public-function                         : Checks for undocumented public function definitions.
+D104       # undocumented-public-package                          : Checks for undocumented public package definitions.
+D105       # undocumented-magic-method                            : Checks for undocumented magic method definitions.
+D106       # undocumented-public-nested-class                     : Checks for undocumented public class definitions, for nested classes.
+D107       # undocumented-public-init                             : Checks for public `__init__` method definitions that are missing
+D200       # fits-on-one-line                                     : Checks for single-line docstrings that are broken across multiple lines.
+D201       # no-blank-line-before-function                        : Checks for docstrings on functions that are separated by one or more blank
+D202       # no-blank-line-after-function                         : Checks for docstrings on functions that are separated by one or more blank
+D203       # one-blank-line-before-class                          : Checks for docstrings on class definitions that are not preceded by a
+D204       # one-blank-line-after-class                           : Checks for class methods that are not separated from the class's docstring
+D205       # blank-line-after-summary                             : Checks for docstring summary lines that are not separated from the docstring
+D206       # indent-with-spaces                                   : Checks for docstrings that are indented with tabs.
+D207       # under-indentation                                    : Checks for under-indented docstrings.
+D208       # over-indentation                                     : Checks for over-indented docstrings.
+D209       # new-line-after-last-paragraph                        : Checks for multi-line docstrings whose closing quotes are not on their
+D210       # surrounding-whitespace                               : Checks for surrounding whitespace in docstrings.
+D211       # blank-line-before-class                              : Checks for docstrings on class definitions that are preceded by a blank
+D212       # multi-line-summary-first-line                        : Checks for docstring summary lines that are not positioned on the first
+D213       # multi-line-summary-second-line                       : Checks for docstring summary lines that are not positioned on the second
+D214       # section-not-over-indented                            : Checks for over-indented sections in docstrings.
+D215       # section-underline-not-over-indented                  : Checks for over-indented section underlines in docstrings.
+D300       # triple-single-quotes                                 : Checks for docstrings that use `'''triple single quotes'''` instead of
+D301       # escape-sequence-in-docstring                         : Checks for docstrings that include backslashes, but are not defined as
+D400       # ends-in-period                                       : Checks for docstrings in which the first line does not end in a period.
+D401       # non-imperative-mood                                  : Checks for docstring first lines that are not in an imperative mood.
+D402       # no-signature                                         : Checks for function docstrings that include the function's signature in
+D403       # first-line-capitalized                               : Checks for docstrings that do not start with a capital letter.
+D404       # docstring-starts-with-this                           : Checks for docstrings that start with `This`.
+D405       # capitalize-section-name                              : Checks for section headers in docstrings that do not begin with capital
+D406       # new-line-after-section-name                          : Checks that section headers in docstrings that are not followed by a
+D407       # dashed-underline-after-section                       : Checks for section headers in docstrings that are not followed by
+D408       # section-underline-after-name                         : Checks for section underlines in docstrings that are not on the line
+D409       # section-underline-matches-section-length             : Checks for section underlines in docstrings that do not match the length of
+D410       # no-blank-line-after-section                          : Checks for docstring sections that are not separated by a single blank
+D411       # no-blank-line-before-section                         : Checks for docstring sections that are separated by a blank line.
+D412       # blank-lines-between-header-and-content               : Checks for docstring sections that contain blank lines between the section
+D413       # blank-line-after-last-section                        : Checks for missing blank lines after the last section of a multi-line
+D414       # empty-docstring-section                              : Checks for docstrings that contain empty sections.
+D415       # ends-in-punctuation                                  : Checks for docstrings in which the first line does not end in a punctuation
+D416       # section-name-ends-in-colon                           : Checks for docstring section headers that do not end with a colon.
+D417       # undocumented-param                                   : Checks for function docstrings that do not include documentation for all
+D418       # overload-with-docstring                              : Checks for `@overload` function definitions that contain a docstring.
+D419       # empty-docstring                                      : Checks for empty docstrings.
+F401       # unused-import                                        : Checks for unused imports.
+F402       # import-shadowed-by-loop-var                          : Checks for import bindings that are shadowed by loop variables.
+F403       # undefined-local-with-import-star                     : Checks for the use of wildcard imports.
+F404       # late-future-import                                   : Checks for `__future__` imports that are not located at the beginning of a
+F405       # undefined-local-with-import-star-usage               : Checks for names that might be undefined, but may also be defined in a
+F406       # undefined-local-with-nested-import-star-usage        : Check for the use of wildcard imports outside of the module namespace.
+F407       # future-feature-not-defined                           : Checks for `__future__` imports that are not defined in the current Python
+F501       # percent-format-invalid-format                        : Checks for invalid `printf`-style format strings.
+F502       # percent-format-expected-mapping                      : Checks for named placeholders in `printf`-style format strings without
+F503       # percent-format-expected-sequence                     : Checks for uses of mapping-type values in `printf`-style format strings
+F504       # percent-format-extra-named-arguments                 : Checks for unused mapping keys in `printf`-style format strings.
+F505       # percent-format-missing-argument                      : Checks for named placeholders in `printf`-style format strings that are not
+F506       # percent-format-mixed-positional-and-named            : Checks for `printf`-style format strings that have mixed positional and
+F507       # percent-format-positional-count-mismatch             : Checks for `printf`-style format strings that have a mismatch between the
+F508       # percent-format-star-requires-sequence                : Checks for `printf`-style format strings that use the `*` specifier with
+F509       # percent-format-unsupported-format-character          : Checks for `printf`-style format strings with invalid format characters.
+F521       # string-dot-format-invalid-format                     : Checks for `str.format` calls with invalid format strings.
+F522       # string-dot-format-extra-named-arguments              : Checks for `str.format` calls with unused keyword arguments.
+F523       # string-dot-format-extra-positional-arguments         : Checks for `str.format` calls with unused positional arguments.
+F524       # string-dot-format-missing-arguments                  : Checks for `str.format` calls with placeholders that are missing arguments.
+F525       # string-dot-format-mixing-automatic                   : Checks for `str.format` calls that mix automatic and manual numbering.
+F541       # f-string-missing-placeholders                        : Checks for f-strings that do not contain any placeholder expressions.
+F601       # multi-value-repeated-key-literal                     : Checks for dictionary literals that associate multiple values with the
+F602       # multi-value-repeated-key-variable                    : Checks for dictionary keys that are repeated with different values.
+F621       # expressions-in-star-assignment                       : Checks for the use of too many expressions in starred assignment statements.
+F622       # multiple-starred-expressions                         : Checks for the use of multiple starred expressions in assignment statements.
+F631       # assert-tuple                                         : Checks for `assert` statements that use non-empty tuples as test
+F632       # is-literal                                           : Checks for `is` and `is not` comparisons against constant literals, like
+F633       # invalid-print-syntax                                 : Checks for `print` statements that use the `>>` syntax.
+F634       # if-tuple                                             : Checks for `if statements that use non-empty tuples as test conditions.
+F701       # break-outside-loop                                   : Checks for `break` statements outside of loops.
+F702       # continue-outside-loop                                : Checks for `continue` statements outside of loops.
+F704       # yield-outside-function                               : Checks for `yield` and `yield from` statements outside of functions.
+F706       # return-outside-function                              : Checks for `return` statements outside of functions.
+F707       # default-except-not-last                              : Checks for `except` blocks that handle all exceptions, but are not the last
+F722       # forward-annotation-syntax-error                      : Checks for forward annotations that include invalid syntax.
+F811       # redefined-while-unused                               : Checks for variable definitions that redefine (or "shadow") unused
+F821       # undefined-name                                       : Checks for uses of undefined names.
+F822       # undefined-export                                     : Checks for undefined names in `__all__`.
+F823       # undefined-local                                      : Checks for undefined local variables.
+F841       # unused-variable                                      : Checks for the presence of unused variables in function scopes.
+F842       # unused-annotation                                    : Checks for local variables that are annotated but never used.
+F901       # raise-not-implemented                                : Checks for `raise` statements that raise `NotImplemented`.
+PGH001     # eval                                                 : Checks for uses of the builtin `eval()` function.
+PGH002     # deprecated-log-warn                                  : Check for usages of the deprecated `warn` method from the `logging` module.
+PGH003     # blanket-type-ignore                                  : Check for `type: ignore` annotations that suppress all type warnings, as
+PGH004     # blanket-noqa                                         : Check for `noqa` annotations that suppress all diagnostics, as opposed to
+PGH005     # invalid-mock-access                                  : Checks for common mistakes when using mock objects.
+PLC0105    # type-name-incorrect-variance                         : Checks for type names that do not match the variance of their associated
+PLC0131    # type-bivariance                                      : Checks for `TypeVar` and `ParamSpec` definitions in which the type is
+PLC0132    # type-param-name-mismatch                             : Checks for `TypeVar`, `TypeVarTuple`, `ParamSpec`, and `NewType`
+PLC0205    # single-string-slots                                  : Checks for single strings assigned to `__slots__`.
+PLC0208    # iteration-over-set                                   : Checks for iterations over `set` literals.
+PLC0414    # useless-import-alias                                 : Checks for import aliases that do not rename the original package.
+PLC1901    # compare-to-empty-string                              : Checks for comparisons to empty strings.
+PLC3002    # unnecessary-direct-lambda-call                       : Checks for unnecessary direct calls to lambda expressions.
+PLE0100    # yield-in-init                                        : Checks for `__init__` methods that are turned into generators by the
+PLE0101    # return-in-init                                       : Checks for `__init__` methods that return values.
+PLE0116    # continue-in-finally                                  : Checks for `continue` statements inside `finally`
+PLE0117    # nonlocal-without-binding                             : Checks for `nonlocal` names without bindings.
+PLE0118    # load-before-global-declaration                       : Checks for uses of names that are declared as `global` prior to the
+PLE0241    # duplicate-bases                                      : Checks for duplicate base classes in class definitions.
+PLE0302    # unexpected-special-method-signature                  : Checks for "special" methods that have an unexpected method signature.
+PLE0307    # invalid-str-return-type                              : Checks for `__str__` implementations that return a type other than `str`.
+PLE0604    # invalid-all-object                                   : Checks for the inclusion of invalid objects in `__all__`.
+PLE0605    # invalid-all-format                                   : Checks for invalid assignments to `__all__`.
+PLE1142    # await-outside-async                                  : Checks for uses of `await` outside of `async` functions.
+PLE1205    # logging-too-many-args                                : Checks for too many positional arguments for a `logging` format string.
+PLE1206    # logging-too-few-args                                 : Checks for too few positional arguments for a `logging` format string.
+PLE1307    # bad-string-format-type                               : Checks for mismatched argument types in "old-style" format strings.
+PLE1310    # bad-str-strip-call                                   : Checks duplicate characters in `str#strip` calls.
+PLE1507    # invalid-envvar-value                                 : Checks for `os.getenv` calls with an invalid `key` argument.
+PLE1700    # yield-from-in-async-function                         : Checks for uses of `yield from` in async functions.
+PLE2502    # bidirectional-unicode                                : Checks for bidirectional unicode characters.
+PLE2510    # invalid-character-backspace                          : Checks for strings that contain the control character `BS`.
+PLE2512    # invalid-character-sub                                : Checks for strings that contain the raw control character `SUB`.
+PLE2513    # invalid-character-esc                                : Checks for strings that contain the raw control character `ESC`.
+PLE2514    # invalid-character-nul                                : Checks for strings that contain the raw control character `NUL` (0 byte).
+PLE2515    # invalid-character-zero-width-space                   : Checks for strings that contain the zero width space character.
+PLR0124    # comparison-with-itself                               : Checks for operations that compare a name to itself.
+PLR0133    # comparison-of-constant                               : Checks for comparisons between constants.
+PLR0206    # property-with-parameters                             : Checks for property definitions that accept function parameters.
+PLR0402    # manual-from-import                                   : Checks for submodule imports that are aliased to the submodule name.
+PLR0911    # too-many-return-statements                           : Checks for functions or methods with too many return statements.
+PLR0912    # too-many-branches                                    : Checks for functions or methods with too many branches.
+PLR0913    # too-many-arguments                                   : Checks for function definitions that include too many arguments.
+PLR0915    # too-many-statements                                  : Checks for functions or methods with too many statements.
+PLR1701    # repeated-isinstance-calls                            : Checks for repeated `isinstance` calls on the same object.
+PLR1711    # useless-return                                       : Checks for functions that end with an unnecessary `return` or
+PLR1714    # repeated-equality-comparison-target                  : Checks for repeated equality comparisons that can rewritten as a membership
+PLR1722    # sys-exit-alias                                       : Checks for uses of the `exit()` and `quit()`.
+PLR2004    # magic-value-comparison                               : Checks for the use of unnamed numerical constants ("magic") values in
+PLR5501    # collapsible-else-if                                  : Checks for `else` blocks that consist of a single `if` statement.
+PLW0120    # useless-else-on-loop                                 : Checks for `else` clauses on loops without a `break` statement.
+PLW0129    # assert-on-string-literal                             : Checks for `assert` statements that use a string literal as the first
+PLW0131    # named-expr-without-context                           : Checks for uses of named expressions (e.g., `a := 42`) that can be
+PLW0406    # import-self                                          : Checks for import statements that import the current module.
+PLW0602    # global-variable-not-assigned                         : Checks for `global` variables that are not assigned a value in the current
+PLW0603    # global-statement                                     : Checks for the use of `global` statements to update identifiers.
+PLW0711    # binary-op-exception                                  : Checks for `except` clauses that attempt to catch multiple
+PLW1508    # invalid-envvar-default                               : Checks for `env.getenv` calls with invalid default values.
+PLW2901    # redefined-loop-name                                  : Checks for variables defined in `for` loops and `with` statements that
+PLW3301    # nested-min-max                                       : Checks for nested `min` and `max` calls.
+UP001      # useless-metaclass-type                               : Checks for the use of `__metaclass__ = type` in class definitions.
+UP003      # type-of-primitive                                    : Checks for uses of `type` that take a primitive as an argument.
+UP004      # useless-object-inheritance                           : Checks for classes that inherit from `object`.
+UP005      # deprecated-unittest-alias                            : Checks for uses of deprecated methods from the `unittest` module.
+UP006      # non-pep585-annotation                                : Checks for the use of generics that can be replaced with standard library
+UP007      # non-pep604-annotation                                : Check for type annotations that can be rewritten based on [PEP 604] syntax.
+UP008      # super-call-with-parameters                           : Checks for `super` calls that pass redundant arguments.
+UP009      # utf8-encoding-declaration                            : Checks for unnecessary UTF-8 encoding declarations.
+UP010      # unnecessary-future-import                            : Checks for unnecessary `__future__` imports.
+UP011      # lru-cache-without-parameters                         : Checks for unnecessary parentheses on `functools.lru_cache` decorators.
+UP012      # unnecessary-encode-utf8                              : Checks for unnecessary calls to `encode` as UTF-8.
+UP013      # convert-typed-dict-functional-to-class               : Checks for `TypedDict` declarations that use functional syntax.
+UP014      # convert-named-tuple-functional-to-class              : Checks for `NamedTuple` declarations that use functional syntax.
+UP015      # redundant-open-modes                                 : Checks for redundant `open` mode parameters.
+UP017      # datetime-timezone-utc                                : Checks for uses of `datetime.timezone.utc`.
+UP018      # native-literals                                      : Checks for unnecessary calls to `str` and `bytes`.
+UP019      # typing-text-str-alias                                : Checks for uses of `typing.Text`.
+UP020      # open-alias                                           : Checks for uses of `io.open`.
+UP021      # replace-universal-newlines                           : Checks for uses of `subprocess.run` that set the `universal_newlines`
+UP022      # replace-stdout-stderr                                : Checks for uses of `subprocess.run` that send `stdout` and `stderr` to a
+UP023      # deprecated-c-element-tree                            : Checks for uses of the `xml.etree.cElementTree` module.
+UP024      # os-error-alias                                       : Checks for uses of exceptions that alias `OSError`.
+UP025      # unicode-kind-prefix                                  : Checks for uses of the Unicode kind prefix (`u`) in strings.
+UP026      # deprecated-mock-import                               : Checks for imports of the `mock` module that should be replaced with
+UP027      # unpacked-list-comprehension                          : Checks for list comprehensions that are immediately unpacked.
+UP028      # yield-in-for-loop                                    : Checks for `for` loops that can be replaced with `yield from` expressions.
+UP029      # unnecessary-builtin-import                           : Checks for unnecessary imports of builtins.
+UP030      # format-literals                                      : Checks for unnecessary positional indices in format strings.
+UP031      # printf-string-formatting                             : Checks for `printf`-style string formatting.
+UP032      # f-string                                             : Checks for `str#format` calls that can be replaced with f-strings.
+UP033      # lru-cache-with-maxsize-none                          : Checks for uses of `functools.lru_cache` that set `maxsize=None`.
+UP034      # extraneous-parentheses                               : Checks for extraneous parentheses.
+UP035      # deprecated-import                                    : Checks for uses of deprecated imports based on the minimum supported
+UP036      # outdated-version-block                               : Checks for conditional blocks gated on `sys.version_info` comparisons
+UP037      # quoted-annotation                                    : Checks for the presence of unnecessary quotes in type annotations.
+UP038      # non-pep604-isinstance                                : Checks for uses of `isinstance` and `issubclass` that take a tuple
+UP039      # unnecessary-class-parentheses                        : Checks for class definitions that include unnecessary parentheses after
+RUF001     # ambiguous-unicode-character-string                   : Checks for ambiguous unicode characters in strings.
+RUF002     # ambiguous-unicode-character-docstring                : Checks for ambiguous unicode characters in docstrings.
+RUF003     # ambiguous-unicode-character-comment                  : Checks for ambiguous unicode characters in comments.
+RUF005     # collection-literal-concatenation                     : Checks for uses of the `+` operator to concatenate collections.
+RUF006     # asyncio-dangling-task                                : Checks for `asyncio.create_task` and `asyncio.ensure_future` calls
+RUF007     # pairwise-over-zipped                                 : Checks for use of `zip()` to iterate over successive pairs of elements.
+RUF008     # mutable-dataclass-default                            : Checks for mutable default values in dataclass attributes.
+RUF009     # function-call-in-dataclass-default-argument          : Checks for function calls in dataclass attribute defaults.
+RUF010     # explicit-f-string-type-conversion                    : Checks for uses of `str()`, `repr()`, and `ascii()` as explicit type
+RUF011     # static-key-dict-comprehension                        : Checks for dictionary comprehensions that use a static key, like a string
+RUF012     # mutable-class-default                                : Checks for mutable default values in class attributes.
+RUF013     # implicit-optional                                    : Checks for the use of implicit `Optional` in type annotations when the
+RUF015     # unnecessary-iterable-allocation-for-first-element    : Checks for uses of `list(...)[0]` that can be replaced with
+RUF016     # invalid-index-type                                   : Checks for indexed access to lists, strings, tuples, bytes, and comprehensions
+RUF100     # unused-noqa                                          : Checks for `noqa` directives that are no longer applicable.
+RUF200     # invalid-pyproject-toml                               : Checks for any pyproject.toml that does not conform to the schema from the relevant PEPs.
+TRY002     # raise-vanilla-class                                  : Checks for code that raises `Exception` directly.
+TRY003     # raise-vanilla-args                                   : Checks for long exception messages that are not defined in the exception
+TRY004     # type-check-without-type-error                        : Checks for type checks that do not raise `TypeError`.
+TRY200     # reraise-no-cause                                     : Checks for exceptions that are re-raised without specifying the cause via
+TRY201     # verbose-raise                                        : Checks for needless exception names in `raise` statements.
+TRY300     # try-consider-else                                    : Checks for `return` statements in `try` blocks.
+TRY301     # raise-within-try                                     : Checks for `raise` statements within `try` blocks. The only `raise`s
+TRY302     # useless-try-except                                   : Checks for immediate uses of `raise` within exception handlers.
+TRY400     # error-instead-of-exception                           : Checks for uses of `logging.error` instead of `logging.exception` when
+TRY401     # verbose-log-message                                  : Checks for excessive logging of exception objects.
 
-static-join-to-f-string                             (FLY002)   # Consider `{expr}` instead of string join
-whitespace-before-parameters                        (E211)     # Whitespace before '{bracket}'
-missing-whitespace-around-operator                  (E225)     # Missing whitespace around operator
-missing-whitespace-around-arithmetic-operator       (E226)     # Missing whitespace around arithmetic operator
-missing-whitespace-around-bitwise-or-shift-operator (E227)     # Missing whitespace around bitwise or shift operator
-missing-whitespace-around-modulo-operator           (E228)     # Missing whitespace around modulo operator
-missing-whitespace                                  (E231)     # Missing whitespace after '{token}'
-unexpected-spaces-around-keyword-parameter-equals   (E251)     # Unexpected spaces around keyword / parameter equals
-missing-whitespace-around-parameter-equals          (E252)     # Missing whitespace around parameter equals
-missing-whitespace-after-keyword                    (E275)     # Missing whitespace after keyword
-syntax-error                                        (E999)     # SyntaxError: {message}
-tab-indentation                                     (W191)     # Indentation contains tabs
-debugger                                            (T100)     #
-django-nullable-model-string-field                  (DJ001)    #
-django-locals-in-render-function                    (DJ003)    #
-django-exclude-with-model-form                      (DJ006)    #
-django-all-with-model-form                          (DJ007)    #
-django-model-without-dunder-str                     (DJ008)    #
-django-unordered-body-content-in-model              (DJ012)    #
-django-non-leading-receiver-decorator               (DJ013)    #
-paramiko-call                                       (S601)     #
-subprocess-popen-with-shell-equals-true             (S602)     #
-subprocess-without-shell-equals-true                (S603)     #
-call-with-shell-equals-true                         (S604)     #
-start-process-with-a-shell                          (S605)     #
-start-process-with-no-shell                         (S606)     #
-start-process-with-partial-path                     (S607)     #
-call-datetime-without-tzinfo                        (DTZ001)   # The use of `datetime.datetime()` without `tzinfo` argument is not allowed
-call-datetime-today                                 (DTZ002)   # The use of `datetime.datetime.today()` is not allowed, use `datetime.datetime.now(tz=)` instead
-call-datetime-utcnow                                (DTZ003)   #
-call-datetime-utcfromtimestamp                      (DTZ004)   #
-call-datetime-now-without-tzinfo                    (DTZ005)   #
-call-datetime-fromtimestamp                         (DTZ006)   #
-call-datetime-strptime-without-zone                 (DTZ007)   #
-call-date-today                                     (DTZ011)   #
-io-error                                            (E902)     #
+FLY002     # static-join-to-f-string                              : Consider `{expr}` instead of string join
+E211       # whitespace-before-parameters                         : Whitespace before '{bracket}'
+E225       # missing-whitespace-around-operator                   : Missing whitespace around operator
+E226       # missing-whitespace-around-arithmetic-operator        : Missing whitespace around arithmetic operator
+E227       # missing-whitespace-around-bitwise-or-shift-operator  : Missing whitespace around bitwise or shift operator
+E228       # missing-whitespace-around-modulo-operator            : Missing whitespace around modulo operator
+E231       # missing-whitespace                                   : Missing whitespace after '{token}'
+E251       # unexpected-spaces-around-keyword-parameter-equals    : Unexpected spaces around keyword / parameter equals
+E252       # missing-whitespace-around-parameter-equals           : Missing whitespace around parameter equals
+E275       # missing-whitespace-after-keyword                     : Missing whitespace after keyword
+E999       # syntax-error                                         : SyntaxError: {message}
+W191       # tab-indentation                                      : Indentation contains tabs
+T100       # debugger                                             :
+DJ001      # django-nullable-model-string-field                   :
+DJ003      # django-locals-in-render-function                     :
+DJ006      # django-exclude-with-model-form                       :
+DJ007      # django-all-with-model-form                           :
+DJ008      # django-model-without-dunder-str                      :
+DJ012      # django-unordered-body-content-in-model               :
+DJ013      # django-non-leading-receiver-decorator                :
+S601       # paramiko-call                                        :
+S602       # subprocess-popen-with-shell-equals-true              :
+S603       # subprocess-without-shell-equals-true                 :
+S604       # call-with-shell-equals-true                          :
+S605       # start-process-with-a-shell                           :
+S606       # start-process-with-no-shell                          :
+S607       # start-process-with-partial-path                      :
+DTZ001     # call-datetime-without-tzinfo                         : The use of `datetime.datetime()` without `tzinfo` argument is not allowed
+DTZ002     # call-datetime-today                                  : The use of `datetime.datetime.today()` is not allowed, use `datetime.datetime.now(tz=)` instead
+DTZ003     # call-datetime-utcnow                                 :
+DTZ004     # call-datetime-utcfromtimestamp                       :
+DTZ005     # call-datetime-now-without-tzinfo                     :
+DTZ006     # call-datetime-fromtimestamp                          :
+DTZ007     # call-datetime-strptime-without-zone                  :
+DTZ011     # call-date-today                                      :
+E902       # io-error                                             :

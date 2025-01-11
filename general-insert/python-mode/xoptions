@@ -1,0 +1,13 @@
+Python xoptions:
+-X dev # enable Python Development Mode; also PYTHONDEVMODE
+-X faulthandler # dump the Python traceback on fatal errors;
+-X frozen_modules=[on|off] # "on" for installed Python and "off" for a local build
+-X importtime # show how long each import takes; also PYTHONPROFILEIMPORTTIME
+-X int_max_str_digits=N # limit the size of int<->str conversions; 0 disables the limit
+-X no_debug_ranges # don't include extra location information in code objects;
+-X perf # support the Linux "perf" profiler; also PYTHONPERFSUPPORT=1
+-X pycache_prefix=PATH # write .pyc files to a parallel tree instead of to the code tree
+-X showrefcount #  (debug builds) output the total reference count on finish
+-X tracemalloc[=N] # N traceback limit, trace Python memory allocations;
+-X utf8[=0|1] # enable (1) or disable (0) UTF-8 mode; also PYTHONUTF8
+-X warn_default_encoding #  enable opt-in EncodingWarning for 'encoding=None';

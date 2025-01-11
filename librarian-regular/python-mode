@@ -177,3 +177,4 @@ importlib.metadata                                   # https://importlib-metadat
 typing                                               # https://docs.python.org/3/library/typing.html
 Manim                                                # https://3b1b.github.io/manim/index.html
 hypothesis                                           # https://hypothesis.readthedocs.io/en/latest/
+Click                                                # https://click.palletsprojects.com/en/stable/

@@ -36,3 +36,13 @@ __tests            # Test dirs
 ----
 parameter # Formal Spec
 argument  # Actual Value
+
+---- UUIDS
+v1 # timestamped, monotonic counter, MAC Address
+v2 # security IDs
+v3 # from MD5 hash of data
+v4 # generated from random data
+v5 # from SHA1 hashes
+v6 # timestamped, monotonic counter, MAC address, will sort by creation time.
+v7 # timestamped and random
+v8 # entirely custom

@@ -1,0 +1,28 @@
+# -*- mode: snippet -*-
+# name  : custom-imenu
+# uuid  : custom-imenu
+# key   : custom-imenu
+# group : imenu
+# --
+(defun $1-imenu-prev-index ()
+  " Finds the next definition to put in the buffer index, scanning backward in the buffer from point.
+    Should return ‘nil’ if it doesn’t find another definition before point.
+    Otherwise it should leave point at the place it finds a definition and return any non-‘nil’ value.
+    "
+
+  nil
+  )
+
+(defun $1-custom-imenu-name ()
+  " return the name for a definition, assuming point is in that
+     definition as the ‘imenu-prev-index-position-function’ function
+     would leave it."
+
+  nil
+  )
+
+(defun $1-custom-imenu-setup-h ()
+  "Adapted from dired-imenu"
+  (setq-local imenu-prev-index-position-function nil
+              imenu-extract-index-name-function nil)
+  )

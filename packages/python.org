@@ -1230,6 +1230,7 @@ https://github.com/python-poetry/cleo
 ***** clikit
 **** click                                     :arg_parsing:cli:
 https://palletsprojects.com/p/click/
+https://click.palletsprojects.com/en/stable/
 **** construct                                 :binary:
 https://construct.readthedocs.io/en/latest/intro.html
 **** et-xmlfile                                :xml:

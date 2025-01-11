@@ -1,0 +1,5 @@
+Logging Levels:
+Error  # Total Failures
+User   # User Notification
+Trace  # Program Landmarks
+Detail # Exact values

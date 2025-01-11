@@ -11,7 +11,7 @@ rust By Example      # https://doc.rust-lang.org/rust-by-example/index.html
 rust book            # https://doc.rust-lang.org/stable/book/title-page.html
 cargo book           # https://doc.rust-lang.org/cargo/
 rust stdlib          # https://doc.rust-lang.org/std/index.html
-rust editions        # https://doc.rust-lang.org/edition-guide/index.html
+rust editions        # https://doc.rust-lang.org/nightly/edition-guide/index.html
 rustdoc manual       # https://doc.rust-lang.org/rustdoc/index.html
 rust-cpython         # https://dgrunwald.github.io/rust-cpython/doc/cpython/
 pyo3                 # https://pyo3.rs/latest

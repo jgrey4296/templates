@@ -10,14 +10,12 @@ DOOMDIR="$HOME/.config/jg/"
 
 # LOCS
 case "$OSTYPE" in
-    darwin*)
-        ENAT_DIR="$HOME/github/_libs/lisp/doomemacs"
-        ENAT_BIN="/usr/local/Cellar/emacs-plus@28/28.2/bin/emacs"
-        ;;
-
     linux*)
         ENAT_DIR="/media/john/data/github/_libs/lisp/doomemacs"
         ENAT_BIN="/usr/bin/emacs"
+        ;;
+    *)
+        echo "Bad System for emacs"
         ;;
 esac
 
@@ -50,12 +48,6 @@ function set-emacs () {
             EMACSDIR="/media/john/data/github/_libs/lisp/doom_2"
             DOOMDIR="$HOME/.config/jg/"
             ;;
-        *native* | doom*)
-            echo "Setting Obsolete Doom"
-            jg_use_EMACS="$ENAT_BIN"
-            EMACSDIR="$ENAT_DIR"
-            DOOMDIR="$HOME/.config/jg/"
-            ;;
         "blood")
             echo "BLOOD"
             jg_use_EMACS="$ENAT_BIN"
@@ -64,8 +56,14 @@ function set-emacs () {
             BLOOD_CONFIG="$EMACSDIR/example"
             ;;
         "snap")
-            echo "gtk"
+            echo "snap"
             jg_use_EMACS="/snap/bin/emacs"
+            EMACSDIR="$ENAT_DIR"
+            DOOMDIR="$HOME/.config/jg/"
+            ;;
+        "flatpak")
+            echo "flatpak"
+            jg_use_EMACS="/var/lib/flatpak/exports/bin/org.gnu.emacs"
             EMACSDIR="$ENAT_DIR"
             DOOMDIR="$HOME/.config/jg/"
             ;;

@@ -46,6 +46,10 @@ https://3b1b.github.io/manim/index.html
 ** hypothesis :unittest:
 https://hypothesis.works/
 
+** bluesky
+https://blueskyproject.io/bluesky/main/tutorial.html
+https://docs.bsky.app/docs/starter-templates/custom-feeds
+
 * Main
 https://www.structlog.org/en/stable/
 https://github.com/PrefectHQ/prefect

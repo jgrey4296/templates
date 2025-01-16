@@ -17,7 +17,7 @@ __ge__(self, other)                             # comparison. >=
 __hash__(self)                                  # hash(obj)
 __bool__(self)                                  # bool(obj)
 
-__getattr__(self, name)                         # attributes
+__getattr__(self, name)                         # attributes. see https://docs.python.org/3/reference/datamodel.html#customizing-attribute-access
 __getattribute__(self, name)                    # attributes
 __setattr__(self, name, value)                  # attributes
 __delattr__(self, name)                         # attributes

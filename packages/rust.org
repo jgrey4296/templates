@@ -5,6 +5,9 @@
 ** Bindgen
 https://rust-lang.github.io/rust-bindgen/
 
+** xan :csv:
+https://github.com/medialab/xan
+
 * Stdlib
 https://doc.rust-lang.org/std/index.html
 
@@ -236,7 +239,8 @@ https://pythonspeed.com/articles/intro-rust-python-extensions/
 ** just
 https://github.com/casey/just
 * Links
-
+https://rust-exercises.com/
+https://github.com/mainmatter/100-exercises-to-learn-rust
 https://crates.io/
 https://doc.rust-lang.org/book/
 https://doc.rust-lang.org/rust-by-example/index.html

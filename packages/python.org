@@ -50,6 +50,10 @@ https://hypothesis.works/
 https://blueskyproject.io/bluesky/main/tutorial.html
 https://docs.bsky.app/docs/starter-templates/custom-feeds
 
+** metaflow
+https://github.com/Netflix/metaflow
+https://docs.metaflow.org/
+https://docs.outerbounds.com/how-to-index/
 * Main
 https://www.structlog.org/en/stable/
 https://github.com/PrefectHQ/prefect

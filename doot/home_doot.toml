@@ -1,4 +1,5 @@
 # -*- mode:conf-toml; -*-
+
 [startup]
 doot-version             = "0.13"
 loaders                  = { commands="default", task="default", parser="default" }
@@ -18,17 +19,33 @@ run = { tracker = "default", runner = "default", reporter= "default", report-lin
 command        = { tasks = "doot.cmds.list_cmd:ListCmd" }
 
 [logging]
-stream  = { level="WARNING", filter=[],                 target="stdout", format="{levelname:<8} : {message}"  }
-file    = { level="DEBUG",   filter=["chainguard"],      target="rotate", format="{levelname:<8} : {message:<20} :|: ({module}.{lineno}.{funcName})", filename_fmt="_cache_/doot/logs/doot.log" }
-printer = { level="NOTSET",  colour=true,               target=["stdout", "rotate"], format="{message}", filename_fmt="_cache_/doot/logs/doot_printed.log" }
+
+[logging.stream]
+level = "user"
+filter = []
+target = "stdout"
+format="{levelname:<8} : {message}"
+
+[logging.file]
+level        = "trace"
+filter       = ["jgdv"]
+target       = "rotate"
+format       = "{levelname:<8} : {message:<20} :|: ({module}.{lineno}.{funcName})"
+filename_fmt = "_cache_/doot/logs/doot.log"
+
+[logging.printer]
+level        = "NOTSET"
+colour       = true
+target       = ["stdout", "rotate"]
+format       = "{message}"
+filename_fmt = "_cache_/doot/logs/doot_printed.log"
 
 [logging.subprinters]
-default       = {level="WARNING"}
-shutdown      = {level="WARNING",    format="Shutdown: {message}", target="stdout"}
-cmd           = {level="INFO"}
-task          = {level="INFO" }
-header        = {level="INFO" }
-task_header   = {level="INFO"}
+default       = {level="user"}
+cmd           = {level="user",  colour="cyan"}
+task_header   = {level="user",  colour="magenta"}
+task          = {level="user",  colour="white"}
+action_exec   = {level="user",  colour="cyan"}
 
 [[locations]]
 templates      = "~/.config/.templates"

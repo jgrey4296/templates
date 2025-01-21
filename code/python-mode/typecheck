@@ -1,11 +1,9 @@
 # -*- mode: snippet -*-
-# name  : type-block
-# uuid  : type-block
-# key   : type-block
+# name  : typealiases
+# uuid  : typealiases
+# key   : typealiases
 # group : imports typecheck
 # --
-import typing
-
 # ##-- types
 # isort: off
 if typing.TYPE_CHECKING:

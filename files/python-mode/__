@@ -2,7 +2,6 @@
 """
 $0
 
-
 """
 # Import:
 from __future__ import annotations
@@ -27,18 +26,13 @@ from typing import (TYPE_CHECKING, Any, Callable, ClassVar, Final, Generator,
 from uuid import UUID, uuid1
 # ##-- end stdlib imports
 
-# ##-- typecheck imports
+# ##-- type aliases
 # isort: off
 if typing.TYPE_CHECKING:
    from jgdv import Maybe
 
 # isort: on
-# ##-- end typecheck imports
-
-##-- type aliases
-
-
-##-- end type aliases
+# ##-- end type aliases
 
 ##-- logging
 logging = logmod.getLogger(__name__)

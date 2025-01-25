@@ -8,6 +8,26 @@ https://rust-lang.github.io/rust-bindgen/
 ** xan :csv:
 https://github.com/medialab/xan
 
+** maturin
+https://www.maturin.rs/
+
+
+*** Best Practices
+https://towardsdatascience.com/nine-rules-for-writing-python-extensions-in-rust-d35ea3a4ec29
+
+- Create a single repository containing both Rust and Python projects
+- Use maturin & PyO3 to create Python-callable translator functions in Rust
+- Have the Rust translator functions call “nice” Rust functions
+- Preallocate memory in Python
+- Translate nice Rust error handling into nice Python error handling
+- Multithread with Rayon and ndarray::parallel, returning any errors
+- Allow users to control the number of parallel threads
+- Translate nice dynamically-type Python functions into nice Rust generic functions
+- Create both Rust and Python tests
+
+** cargo-flamegraph
+https://github.com/flamegraph-rs/flamegraph
+
 * Stdlib
 https://doc.rust-lang.org/std/index.html
 

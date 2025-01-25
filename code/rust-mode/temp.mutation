@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : temp.mutation
+# uuid  : temp.mutation
+# key   : temp.mutation
+# group : mutation variables
+# --
+let mut xs = Vec<u32> = Vec::new();
+xs.push(1)
+xs.push(2)
+let xs = xs; // no longer mutable

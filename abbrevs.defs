@@ -63,3 +63,8 @@
     ("true" "True" nil :count 8)
    ))
 
+(define-abbrev-table 'rust-mode-abbrev-table
+  '(
+    (".." "=>" nil :count 0)
+   ))
+

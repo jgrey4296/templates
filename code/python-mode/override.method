@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : override.method
+# uuid  : override.method
+# key   : override.method
+# group :
+# --
+orig = obj._orig_method
+override = lambda *xs: False
+obj._orig_method = MethodType(override, obj)

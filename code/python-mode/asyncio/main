@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : async.main
+# uuid  : async.main
+# key   : async.main
+# group : async main
+# --
+##-- main
+if __name__ == '__main__':
+    asyncio.run(main())
+##-- end main

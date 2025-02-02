@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name  : pytest.suite
+# uuid  : pytest.suite
+# key   : pytest.suite
+# group : test pytest
+# --
+class TestSuite:
+
+    @pytest.fixture(scope="function")
+    def setup(self):
+        pass
+
+    @pytest.fixture(scope="function")
+    def cleanup(self):
+        pass
+
+    `(+snippet-expand "test.sanity")`

@@ -3,40 +3,13 @@
 $0
 
 """
-# Import:
-from __future__ import annotations
+`(+snippet-expand "ruff.ignore.in.file")`
 
-# ##-- stdlib imports
-import datetime
-import enum
-import functools as ftz
-import itertools as itz
-import logging as logmod
-import pathlib as pl
-import re
-import time
-import types
-import weakref
-import typing
-from typing import (TYPE_CHECKING, Any, Callable, ClassVar, Final, Generator,
-                    Generic, Iterable, Iterator, Mapping, Match,
-                    MutableMapping, Protocol, Sequence, Tuple, TypeAlias,
-                    TypeGuard, TypeVar, cast, final, overload,
-                    runtime_checkable)
-from uuid import UUID, uuid1
-# ##-- end stdlib imports
+`(+snippet-expand "import.core")`
 
-# ##-- type aliases
-# isort: off
-if typing.TYPE_CHECKING:
-   from jgdv import Maybe
+`(+snippet-expand "import.typing")`
 
-# isort: on
-# ##-- end type aliases
-
-##-- logging
-logging = logmod.getLogger(__name__)
-##-- end logging
+`(+snippet-expand "setup.loglib")`
 
 # Vars:
 

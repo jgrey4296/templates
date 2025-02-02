@@ -2,54 +2,21 @@
 """
 
 """
-# ruff: noqa: PLR0912, BLE001
-# Imports:
-from __future__ import annotations
+`(+snippet-expand "ruff.ignore.in.file")` PLR0912, BLE001
 
-# ##-- stdlib imports
-import abc
-import datetime
-import enum
-import functools as ftz
-import itertools as itz
-import logging as logmod
-import pathlib
-import pathlib as pl
-import sys
-from bdb import BdbQuit
-from copy import deepcopy
-from dataclasses import InitVar, dataclass, field
-from importlib.resources import files
-from re import Pattern
-from sys import stderr, stdout
-from typing import (TYPE_CHECKING, Any, Callable, ClassVar, Final, Generator,
-                    Generic, Iterable, Iterator, Mapping, Match,
-                    MutableMapping, Protocol, Sequence, Tuple, TypeAlias,
-                    TypeGuard, TypeVar, cast, final, overload,
-                    runtime_checkable)
-from uuid import UUID, uuid1
-from weakref import ref
-
-# ##-- end stdlib imports
+`(+snippet-expand "import.core")`
 
 # ##-- 3rd party imports
 import sh
 import stackprinter
 # ##-- end 3rd party imports
 
-##-- logging
-logging         = logmod.root
-##-- end logging
+`(+snippet-expand "import.typing")`
 
-def main() -> None:
-    """ $1 """
-    try:
+`(+snippet-expand "setup.loglib")`
 
+# Vars:
 
-    except Exception as err:
+# Body:
 
-
-##-- ifmain
-if __name__ == '__main__':
-    main()
-##-- end ifmain
+`(+snippet-expand "ifmain")`

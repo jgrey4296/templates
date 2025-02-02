@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : import.async
+# uuid  : import.async
+# key   : import.async
+# group : imports
+# --
+import asyncio
+from weakref import ref
+from asyncio import run, create_task, gather, sleep
+import struct

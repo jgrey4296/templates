@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : super.init
+# uuid  : super.init
+# key   : super.init
+# group : init
+# --
+super().__init__(*args, **kwargs)

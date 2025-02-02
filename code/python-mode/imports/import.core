@@ -4,8 +4,10 @@
 # key   : import.core
 # group : import
 # --
-from __future__ import annotations
+# Imports:
+`(+snippet-expand "future.annotations")`
 
+# ##-- stdlib imports
 import datetime
 import enum
 import functools as ftz
@@ -18,11 +20,9 @@ import types
 import collections
 import contextlib
 import hashlib
-import typing
 from copy import deepcopy
-from dataclasses import InitVar, dataclass, field
 from uuid import UUID, uuid1
-from weakref import ref # https://docs.python.org/3/library/weakref.html#module-weakref
-from typing import (TYPE_CHECKING, Any, Callable, ClassVar, Protocol, runtime_checkable)
+from weakref import ref
 import atexit # for @atexit.register
 import faulthandler
+# ##-- end stdlib imports

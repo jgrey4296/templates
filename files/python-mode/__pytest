@@ -5,36 +5,15 @@ $0
 # ruff: noqa: ANN201, ARG001, ANN001, ARG002, ANN202
 
 # Imports
-from __future__ import annotations
+`(+snippet-expand "future.annotations")`
 
-# ##-- stdlib imports
-import logging as logmod
-import pathlib as pl
-from typing import (Any, Callable, ClassVar, Generic, Iterable, Iterator,
-                    Mapping, Match, MutableMapping, Sequence, Tuple, TypeAlias,
-                    TypeVar, cast)
-import warnings
-# ##-- stdlib imports
+`(+snippet-expand "import.test")`
 
-import pytest
+`(+snippet-expand "import.typing")`
 
-# Logging:
-logging = logmod.root
-
-# Type Aliases:
+`(+snippet-expand "setup.loglib")`
 
 # Vars:
 
 # Body:
-class Test$1:
-
-    @pytest.fixture(scope="function")
-    def setup(self):
-        pass
-
-    @pytest.fixture(scope="function")
-    def cleanup(self):
-        pass
-
-    def test_sanity(self):
-        assert(True is True)
+`(+snippet-expand "pytest.suite")`

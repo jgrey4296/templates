@@ -2,4 +2,12 @@
 # name: import.test
 # uuid: import.test
 # --
+# ##-- stdlib imports
+import logging as logmod
+import pathlib as pl
+import warnings
+# ##-- end stdlib imports
+
+# ##-- 3rd party imports
 import pytest
+# ##-- end 3rd party imports

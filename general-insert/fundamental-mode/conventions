@@ -30,7 +30,7 @@ crate   # Compiled unit of code
 ----               # Directories
 .{}                # Hidden, Ignorable
 {}_                # Source for Generation
-gen_{}                # Generation Output
+gen_{}             # Generation Output
 __tests            # Test dirs
 
 ----
@@ -38,11 +38,23 @@ parameter # Formal Spec
 argument  # Actual Value
 
 ---- UUIDS
-v1 # timestamped, monotonic counter, MAC Address
-v2 # security IDs
-v3 # from MD5 hash of data
-v4 # generated from random data
-v5 # from SHA1 hashes
-v6 # timestamped, monotonic counter, MAC address, will sort by creation time.
-v7 # timestamped and random
-v8 # entirely custom
+v1 # uuid : timestamped, monotonic counter, MAC Address
+v2 # uuid : security IDs
+v3 # uuid : from MD5 hash of data
+v4 # uuid : generated from random data
+v5 # uuid : from SHA1 hashes
+v6 # uuid : timestamped, monotonic counter, MAC address, will sort by creation time.
+v7 # uuid : timestamped and random
+v8 # uuid : entirely custom
+
+---- CLI Args (GNU)
+-opt                 # cli arg : option
+-optoptopt           # cli arg : multiple args if they dont take parameters
+-a                   # cli arg : short args
+-optfoo              # cli arg : arg with param
+-opt foo             # cli arg : arg with param
+--longopt            # long options
+--longopt=foo        # long opt with param
+[options] [required] # cli arg
+--                   # cli arg : terminate all options
+-                    # stdin/out

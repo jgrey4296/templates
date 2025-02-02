@@ -19,30 +19,30 @@ UserString                              # collections
 Pattern                                 # re
 Match                                   # re
 
-abc.Set                                 # collections
-abc.Collection                          # collections
-abc.Container                           # collections
+abc.Set                                 # collections : __contains__, __iter__, __len__
+abc.Collection                          # collections : __contains__, __iter__, __len__
+abc.Container                           # collections : __contains__
 abc.ItemsView                           # collections
-abc.KeysView                            #  collections
-abc.ValuesView                          #  collections
+abc.KeysView                            # collections
+abc.ValuesView                          # collections
 abc.Mapping                             # collections
-abc.MutableMapping                      # collections
-abc.MutableSequence                     # collections
-abc.MutableSet                          # collections
-abc.Sequence                            # collections
+abc.MutableMapping                      # collections , __getitem__, __setitem__, __delitem__, __iter__, __len__
+abc.MutableSequence                     # collections : __getitem__, __setitem__, __delitem__, __len__, insert
+abc.MutableSet                          # collections : __contains__, __iter__, __len__, add, discard
+abc.Sequence                            # collections : __getitem__, __len__
 
-abc.Coroutine                           # collections
-abc.AsyncGenerator                      # collections
+abc.Coroutine                           # collections : send, throw, close
+abc.AsyncGenerator                      # collections : asend, athrow, aclose, __aiter__, __anext__
 abc.AsyncIterable                       # collections
 abc.ASyncIterator                       # collections
-abc.Awaitable                           # collections
-abc.Iterable                            # collections
-abc.Iterator                            # collections
+abc.Awaitable                           # collections : __await__
+abc.Iterable                            # collections : __iter__
+abc.Iterator                            # collections : __next__
 abc.Callable                            # collections
 abc.Generator                           # collections. [YieldType, SendType, ReturnType]
-abc.Hashable                            # collections
-abc.Reversible                          # collections
-abc.Sized                               # collections
+abc.Hashable                            # collections : __hash__
+abc.Reversible                          # collections : __reversed__
+abc.Sized                               # collections : __sized__
 
 ContextManager                          # contextlib
 AsyncContextManager                     # contextlib

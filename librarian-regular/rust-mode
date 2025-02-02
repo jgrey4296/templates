@@ -33,3 +33,5 @@ Firefox Rust-Cpp     # https://firefox-source-docs.mozilla.org/writing-rust-code
 lib.rs               # https://lib.rs/
 Rust RFCs            # https://rust-lang.github.io/rfcs/introduction.html
 python api           # https://docs.python.org/3/c-api/index.html
+Clippy               # https://doc.rust-lang.org/stable/clippy/usage.html
+rust-analyzer        # https://rust-analyzer.github.io/manual.html

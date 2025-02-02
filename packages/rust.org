@@ -28,6 +28,12 @@ https://towardsdatascience.com/nine-rules-for-writing-python-extensions-in-rust-
 ** cargo-flamegraph
 https://github.com/flamegraph-rs/flamegraph
 
+** the little book of rust macros
+https://veykril.github.io/tlborm/introduction.html
+
+** 100 exercises to learn rust
+https://github.com/mainmatter/100-exercises-to-learn-rust
+
 * Stdlib
 https://doc.rust-lang.org/std/index.html
 
@@ -260,7 +266,6 @@ https://pythonspeed.com/articles/intro-rust-python-extensions/
 https://github.com/casey/just
 * Links
 https://rust-exercises.com/
-https://github.com/mainmatter/100-exercises-to-learn-rust
 https://crates.io/
 https://doc.rust-lang.org/book/
 https://doc.rust-lang.org/rust-by-example/index.html

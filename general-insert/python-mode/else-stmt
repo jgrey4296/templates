@@ -1,4 +1,4 @@
-Python Else Statement:
+Python Else Statement. ie: "nobreak" :
 if-else     # `else` when `if` doesnt.
 while-else  # `else` when `while` fails.
 for-else    # `else` when iterator is exhausted.

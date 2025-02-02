@@ -19,6 +19,7 @@ Mocks                                                # https://docs.python.org/3
 Nose                                                 # https://github.com/nose-devs/nose2
 PEP 635: Match statement                             # https://peps.python.org/pep-0635
 PEP 634: Match Spec PEP                              # https://peps.python.org/pep-0634/
+PEP 405: Virtual Envs                                # https://peps.python.org/pep-0405
 PEPs                                                 # https://peps.python.org/pep-0000/
 Petl                                                 # https://petl.readthedocs.io/en/stable/index.html
 Pluggy                                               # https://pluggy.readthedocs.io/en/stable/
@@ -178,3 +179,4 @@ typing                                               # https://docs.python.org/3
 Manim                                                # https://3b1b.github.io/manim/index.html
 hypothesis                                           # https://hypothesis.readthedocs.io/en/latest/
 Click                                                # https://click.palletsprojects.com/en/stable/
+Type Cheatsheet                                      # https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html

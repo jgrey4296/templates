@@ -4,7 +4,7 @@ doot-version = "0.13"
 
 [[locations]]
 build     = "{temp}/dist"
-dist_key  = {file="{secrets}/pypi/token.asc", normOnLoad=true, protected=true}
+dist_key  = "file.earlycwd.protect::>{secrets}/pypi/token.asc"
 
 [[tasks.dist]]
 name                   = "build"

@@ -3,8 +3,8 @@ doot-version = "0.13"
 
 
 [[locations]]
-changelog    = "file::CHANGELOG.md"
-requirements = "file::requirements.txt"
+changelog    = "file::>CHANGELOG.md"
+requirements = "file::>requirements.txt"
 
 [[tasks.version]]
 name       = "major"
@@ -64,7 +64,7 @@ actions    = [
 name         = "pip"
 doc          = ["Generate a requirements.txt"]
 ctor         = "task"
-required_for = ["file:>requirements.txt"]
+required_for = ["file::>requirements.txt"]
 env_name     = "distributor"
 setup        = [
     { do="dootle.python.mamba:MambaEnv", env_="env_name", update_="env"},

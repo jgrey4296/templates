@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : match.args
+# uuid  : match.args
+# key   : match.args
+# group : match positional
+# --
+__match_args = ($0,)

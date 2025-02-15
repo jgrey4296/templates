@@ -34,6 +34,9 @@ https://veykril.github.io/tlborm/introduction.html
 ** 100 exercises to learn rust
 https://github.com/mainmatter/100-exercises-to-learn-rust
 
+** nom :parser:
+https://github.com/rust-bakery/nom
+
 * Stdlib
 https://doc.rust-lang.org/std/index.html
 

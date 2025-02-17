@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name  : default.extensions
+# uuid  : default.extensions
+# key   : default.extensions
+# group : sphinx
+# --
+'sphinx.ext.doctest',
+'sphinx.ext.autodoc',
+'sphinx.ext.autosummary',
+'sphinx.ext.napoleon',
+'sphinx.ext.extlinks',
+'sphinx_rtd_theme',
+'myst_parser',
+"autoapi.extension",
+"sphinx.ext.coverage",
+"sphinx.ext.imgconverter",
+"sphinx.ext.intersphinx",
+"sphinx.ext.viewcode",

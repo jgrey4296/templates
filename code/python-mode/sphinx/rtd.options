@@ -7,10 +7,14 @@
 
 ##-- rtd options
 # https://sphinx-rtd-theme.readthedocs.io/en/stable/configuring.html
+html_theme         = "sphinx_rtd_theme"
+html_theme_options = {}
+html_sidebars      = {}
+html_domain_indices = True
+html_use_index      = True
 
 html_theme_options = {
     'logo_only'                   : False,
-    'display_version'             : True,
     'prev_next_buttons_location'  : 'bottom',
     'style_external_links'        : False,
     'vcs_pageview_mode'           : '',

@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name  : jinja.ext
+# uuid  : jinja.ext
+# key   : jinja.ext
+# group : sphinx jinja
+# --
+def setup(app):
+    app.events.connect("builder-inited", add_jinja_ext, 1)
+    app.add_directive('jgdir', JGDirective)
+    # app.add_transform
+
+def add_jinja_ext(app):
+    app.builder.templates.environment.add_extension('jinja2.ext.debug')

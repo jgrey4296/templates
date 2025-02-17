@@ -4,7 +4,6 @@
 # key   : doot.imports
 # group :
 # --
-printer = logmod.getLogger("doot._printer")
 
 import doot
 import doot.errors

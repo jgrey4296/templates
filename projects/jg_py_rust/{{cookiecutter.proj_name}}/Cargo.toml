@@ -1,3 +1,5 @@
+## Cargo.toml -*- mode: toml -*-
+
 # https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [package]
@@ -7,13 +9,12 @@ edition = "{{cookiecutter.edition}}"
 authors = [ "{{cookiecutter._author}}"]
 
 [lib]
+name       = "{{cookiecutter.proj_name}}"
 crate-type = ["cdylib"]
-path       = "{{cookiecutter.proj_name}}/lib.rs"
+path       = "rust/lib.rs"
 
-[dependncies]
+[dependencies]
+pyo3 = "0.22.0"
 
-[dependencies.cpython]
-version = "0.7"
-features = ["extension-module"]
 
 [dev-dependencies]

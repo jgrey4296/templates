@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : case.false
+# uuid  : case.false
+# key   : case.false
+# group : pytest match
+# --
+case x:
+     assert(False), x

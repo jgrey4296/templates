@@ -58,9 +58,11 @@
     ("isins" "isinstance(" nil :count 1)
     ("kwarp" "kwrap" nil :count 61)
     ("lamdba" "lambda" nil :count 2)
-    ("maybe" "Maybe" nil :count 4)
+    ("maybe" "Maybe" nil :count 5)
     ("none" "None" nil :count 23)
+    ("skip" "@pytest.mark.skip" nil :count 1)
     ("true" "True" nil :count 8)
+    ("xfail" "@pytest.mark.xfail" nil :count 1)
    ))
 
 (define-abbrev-table 'rust-mode-abbrev-table

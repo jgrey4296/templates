@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# name  : pytest.fallback.false
-# uuid  : pytest.fallback.false
-# key   : pytest.fallback.false
-# group : pytest match
-# --
-case x:
-     assert(False), x

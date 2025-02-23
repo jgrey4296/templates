@@ -2,7 +2,7 @@
 """
 $0
 """
-# ruff: noqa: ANN201, ARG001, ANN001, ARG002, ANN202
+`(+snippet-expand "test.ignores")`
 
 # Imports
 `(+snippet-expand "future.annotations")`

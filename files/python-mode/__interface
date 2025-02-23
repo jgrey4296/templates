@@ -1,0 +1,12 @@
+## `(f-filename (buffer-file-name))` -*- mode: python -*-
+# Type Interface Specification
+from __future__ import annotations
+
+`(+snippet-expand "import.typing")'
+
+##-|
+__all__ = []
+
+##-| Util Types
+
+##-| Primary Types

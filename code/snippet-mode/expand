@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : expand
+# uuid  : expand
+# key   : expand
+# group : snippets yas
+# --
+\`(+snippet-expand "$1")\'$0

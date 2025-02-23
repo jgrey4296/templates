@@ -53,16 +53,17 @@
   '(
     ("Dkey" "DKey" nil :count 5)
     ("dootkey" "DootKey" nil :count 192)
-    ("false" "False" nil :count 11)
+    ("false" "False" nil :count 19)
     ("flase" "False" nil :count 0)
+    ("isi" "isinstance(" nil :count 0)
     ("isins" "isinstance(" nil :count 1)
     ("kwarp" "kwrap" nil :count 61)
     ("lamdba" "lambda" nil :count 2)
-    ("maybe" "Maybe" nil :count 5)
-    ("none" "None" nil :count 23)
+    ("maybe" "Maybe" nil :count 19)
+    ("none" "None" nil :count 62)
     ("skip" "@pytest.mark.skip" nil :count 1)
-    ("true" "True" nil :count 8)
-    ("xfail" "@pytest.mark.xfail" nil :count 1)
+    ("true" "True" nil :count 18)
+    ("xfail" "@pytest.mark.xfail" nil :count 9)
    ))
 
 (define-abbrev-table 'rust-mode-abbrev-table

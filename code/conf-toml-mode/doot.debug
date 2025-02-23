@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
-# name  : doot.debug
-# uuid  : doot.debug
-# key   : doot.debug
+# name  : util.debug
+# uuid  : util.debug
+# key   : util.debug
 # group : doot
 # --
 {do="break!"},

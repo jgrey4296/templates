@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : test.ignores
+# uuid  : test.ignores
+# key   : test.ignores
+# group : ruff
+# --
+# ruff: noqa: ANN201, ARG001, ANN001, ARG002, ANN202

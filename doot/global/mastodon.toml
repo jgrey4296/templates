@@ -2,10 +2,10 @@
 doot-version = "0.13"
 
 [[locations]]
-mastodon_secrets = "file::~/.config/secrets/bots/bkmkorg.toml"
+mastodon_secrets = "file::>~/.config/secrets/bots/bkmkorg.toml"
 image_temp       = "{temp}/images/"
 all_bib          = "/media/john/data/github/bibliography/main/"
-image_whitelist  = "earlycwd/file::~/.config/secrets/bots/whitelist"
+image_whitelist  = "earlycwd/file::>~/.config/secrets/bots/whitelist"
 
 [[tasks.mastodon]] # TODO : read from image_whitelist, select, post
 name                 = "post.image"

@@ -5,7 +5,7 @@ doot-version = "0.13"
 pdf_source                 = "{data_drive}/library/pdfs"
 push_pdfs                  = "{pdf_source}"
 data_drive                 = "/media/john/data"
-android_root               = "remote::/storage/6331-3162"
+android_root               = "remote::>/storage/6331-3162"
 
 [[tasks.android]]
 name                 = "device.find"

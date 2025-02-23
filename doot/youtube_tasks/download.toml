@@ -3,7 +3,7 @@ doot-version = "0.13"
 
 
 [[locations]]
-archive = "dl-archive.txt"
+archive = "file::>dl-archive.txt"
 data    = "data"
 backup  = "/media/john/big_ex/datasets/youtube/data/"
 

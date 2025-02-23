@@ -4,7 +4,7 @@ doot-version = "0.13"
 # doot bib::get.keys --roots="{test}" bib::get.xml --roots="{dblp}/dblp-2023-10-01-02.xml" bib::write.xml.entries
 
 [[locations]]
-data    = {protect="data"}
+data    = "protect::>data"
 bib     = "~/github/bibliography"
 results = "results"
 dblp    = "{data}"

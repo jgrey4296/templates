@@ -49,8 +49,8 @@ action_exec   = {level="user",  colour="cyan"}
 
 [[locations]]
 templates      = "~/.config/.templates"
-temp           = "clean::_cache_/doot/temp"
-build          = "clean::_cache_/doot/build"
+temp           = "clean::>_cache_/doot/temp"
+build          = "clean::>_cache_/doot/build"
 logs           = "{temp}/logs"
 template_tasks = "{templates}/doot"
 records        = "{templates}/.maintenance"

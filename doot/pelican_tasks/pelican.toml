@@ -2,8 +2,8 @@
 doot-version = "0.13"
 
 [[locations]]
-pelicanpy = "file:>pelicanconf.py"
-pelican   = "file:>pelican.toml"
+pelicanpy = "file::>pelicanconf.py"
+pelican   = "file::>pelican.toml"
 
 [[tasks.pelican]]
 name                 = "build"

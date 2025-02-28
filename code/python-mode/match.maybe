@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : match.maybe
+# uuid  : match.maybe
+# key   : match.maybe
+# group : match maybe
+# --
+match $1:
+    case None:
+        pass
+    case $2():
+        pass

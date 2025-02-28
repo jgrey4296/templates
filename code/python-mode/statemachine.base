@@ -1,0 +1,60 @@
+# -*- mode: snippet -*-
+# name  : statemachine.base
+# uuid  : statemachine.base
+# key   : statemachine.base
+# group : state fsm
+# --
+
+from statemachine import State, StateMachine
+from statemachine.states import States
+
+
+class StateBase(StateMachine):
+    """
+    Defines the states and events
+
+    Each state defines @decorators: enter|exit
+    Each event defines @decorators: before|on|after|cond|unless
+
+    plus: @state._transitions.before|after
+    """
+
+    ##--| States:
+    Start = State(initial=True)
+    # ...
+    End   = State(final=True)
+
+    ##--| Event -> Transitions
+    # event = ( state.to(state) | state.to(state) )
+    #
+
+    ##--|
+    def __init__(self, *, handler=None):
+        super().__init__(handler)
+        # self.current_state
+        # self.model
+
+class StateHandler:
+
+    def __init__(self):
+        # handler vars
+        pass
+
+    def before_transition(self):
+        pass
+
+    def on_exit_state(self):
+        pass
+
+    def on_transition(self):
+        pass
+
+    def on_enter_state(self):
+        pass
+
+    def after_transition(self):
+        pass
+
+    @StateBase.Start.enter
+    def _a_method(self):
+        pass

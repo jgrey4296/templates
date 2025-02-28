@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : pytest.patch.object
+# uuid  : pytest.patch.object
+# key   : pytest.patch.object
+# group : pytest mock
+# --
+mocker.patch.object(${1:obj}, "${2:attr}")$0

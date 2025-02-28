@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : module.getattr
+# uuid  : module.getattr
+# key   : module.getattr
+# group : module
+# --
+def __getattr__(self, name):
+    """ Offload attribute access of this module to an object """
+    raise AttributeError(name)

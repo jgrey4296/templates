@@ -1,13 +1,6 @@
 #+TITLE: Coq Package Reference
 #+STARTUP: packages
 
-* Overview :toc:
-- [[#main][Main]]
-  - [[#stdlib][StdLib]]
-  - [[#package-index][Package Index]]
-  - [[#software-foundations][Software Foundations]]
-- [[#links][Links]]
-
 * Main
 https://coq.inria.fr/coq-package-index
 https://proofgeneral.github.io/doc/master/userman/
@@ -30,6 +23,9 @@ https://softwarefoundations.cis.upenn.edu/vc-current/toc.html
 https://softwarefoundations.cis.upenn.edu/slf-current/toc.html
 
 * Links
+https://plv.mpi-sws.org/mtac/
+https://github.com/Mtac2/Mtac2
+https://github.com/coq-community/metaprogramming-rosetta-stone
 https://github.com/ProofGeneral/PG/
 https://github.com/coq-community/awesome-coq
 https://github.com/coq-community/graph-theory

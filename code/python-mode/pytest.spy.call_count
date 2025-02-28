@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : pytest.spy.call_count
+# uuid  : pytest.spy.call_count
+# key   : pytest.spy.call_count
+# group : pytest mocker spy
+# --
+assert($1.call_count == $2)$0

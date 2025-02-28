@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : pytest.spy.assert_called_with
+# uuid  : pytest.spy.assert_called_with
+# key   : pytest.spy.assert_called_with
+# group : pytest mocker spy
+# --
+${1:spy}.assert_called_once_with($2)$0

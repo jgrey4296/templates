@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : pytest.spy.return
+# uuid  : pytest.spy.return
+# key   : pytest.spy.return
+# group : pytest mocker spy
+# --
+assert($1.spy_return == $2)$0

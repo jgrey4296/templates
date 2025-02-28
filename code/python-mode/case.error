@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : case.error
+# uuid  : case.error
+# key   : case.error
+# group : match
+# --
+case x:
+    raise TypeError(type(x))

@@ -1,5 +1,5 @@
 ## precommit.toml -*- mode: toml -*-
-doot-version = "0.13"
+doot-version = "1.0"
 
 
 [[tasks.precommit]]
@@ -8,14 +8,14 @@ version = "0.1"
 doc     = ["Setup Pre-Commit"]
 actions = [
         # TODO read pre-commit yaml, find hook types, install those
-        {do="shell", args=["pre-comimit", "--install-hooks"]},
+        {do="shell!", args=["pre-comimit", "--install-hooks"]},
 ]
 
 [[tasks.precommit]]
 name                 = "validate"
 version              = "0.1"                # <str>
 doc                  = ["Validate a commit message.", "Runs in stage commit-msg"]
-cli                  = [{ name="msgfile",   prefix=1, default="", type="str"}]
+cli                  = [{ name="<1>msgfile", default="", type="str"}]
 ctor                 = "task"               # <str>
 actions              = [
    {do="read", from_="msgfile", update_="text"},

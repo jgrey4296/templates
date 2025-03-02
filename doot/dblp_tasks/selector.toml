@@ -1,5 +1,5 @@
 ## selector.toml -*- mode: toml -*-
-doot-version = "0.13"
+doot-version = "1.0"
 
 [[tasks.bib]]
 name                 = "select.venues"
@@ -19,7 +19,7 @@ cleanup             = [
       {do="write!", from_="fconfs",    to="{results!p}/confs.list"},
       {do="write!", from_="fjraw",     to="{results!p}/dblp.journals.raw"},
       {do="write!", from_="fcraw",     to="{results!p}/dblp.confs.raw"},
-      {do="shell", args=["spd-say", "complete"]},
+      {do="shell!", args=["spd-say", "complete"]},
 ]
 actions              = [
       {do="job.walk", update_="files"}, # walk,

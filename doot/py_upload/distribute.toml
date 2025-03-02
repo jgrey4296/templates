@@ -1,6 +1,5 @@
 ## distribute.toml -*- mode: toml -*-
-doot-version = "0.13"
-
+doot-version = "1.0"
 
 [[locations]]
 build     = "{temp}/dist"
@@ -17,7 +16,7 @@ setup = [
     {do="mamba.env", env_="env_name", update_="env"},
 ]
 actions = [
-    {do="shell", args=["python", "-m", "build", "--outdir", "{build!p}", "."], env_="env"},
+    {do="shell!", args=["python", "-m", "build", "--outdir", "{build!p}", "."], env_="env"},
 ]
 cleanup = [
     {do="delete!", args=["./{src}.egg-info"], lax=true, recursive=true},
@@ -36,11 +35,11 @@ depends_on             = ["dist::build"]
 setup                  = [
     # Get pypi token
     { do="mamba.env", env_="env_name", update_="env"},
-    { do="doot.actions.shell:DootShellBake", args=["gpg", "-q", "-d", "{dist_key!p}"], update_="gpg", env=false},
-    { do="doot.actions.shell:DootShellBake", args=["sed", "-n", "-E", "{match_re}"], in_="gpg", update_="token", env=false},
-    { do="doot.actions.shell:DootShellBakedRun",  in_="token", update_="token_str"},
+    { do="bake!", args=["gpg", "-q", "-d", "{dist_key!p}"], update_="gpg", env=false},
+    { do="bake!", args=["sed", "-n", "-E", "{match_re}"], in_="gpg", update_="token", env=false},
+    { do="run-bake!",  in_="token", update_="token_str"},
 ]
 actions                = [
     # Upload to pypi
-    { do="shell", args=["twine", "upload", "-u", "__token__", "-p", "{token_str}", "--skip-existing", "--non-interactive", "{build!p}/*"], env_="env"},
+    { do="shell!", args=["twine", "upload", "-u", "__token__", "-p", "{token_str}", "--skip-existing", "--non-interactive", "{build!p}/*"], env_="env"},
 ]

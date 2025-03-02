@@ -1,5 +1,5 @@
 ## extract.toml -*- mode: toml -*-
-doot-version = "0.13"
+doot-version = "1.0"
 
 
 [[locations]]
@@ -17,8 +17,8 @@ name = "joint"
 doc = ["unpack then extract from a tar"]
 ctor = "job"
 cli     = [
-        { name="target", prefix=1, type="str", default="{youtube!p}/northernlion.tar.gz"},
-        { name="out",    prefix=1, type="str", default="unpacked"},
+        { name="<1>target", type="str", default="{youtube!p}/northernlion.tar.gz"},
+        { name="<2>out",    type="str", default="unpacked"},
 ]
 actions = [
     {do="job.expand", template="yt::unpack",  inject={now=["target", "out"]}, update_="unpack"},
@@ -33,13 +33,13 @@ version = "0.1"
 doc     = ["unpack {target.tar.gz} into raw/{out}"]
 ctor    = "task"
 cli     = [
-        { name="target", prefix=1, type="str", default="{youtube!p}/northernlion.tar.gz"},
-        { name="out",    prefix=2, type="str", default="unpacked"},
+        { name="<1>target", type="str", default="{youtube!p}/northernlion.tar.gz"},
+        { name="<2>out",    type="str", default="unpacked"},
 ]
 actions = [
         {do="path.elements", from="{target!p}"},
         {do="dir?", args=["{yt_raw!p}/{out}"]},
-        {do="shell", args=["tar", "-xf", "{target!p}", "--directory", "{yt_raw!p}/{out}"]},
+        {do="shell!", args=["tar", "-xf", "{target!p}", "--directory", "{yt_raw!p}/{out}"]},
         {do="doot.actions.io:ListFiles", from="{yt_raw!p}/{out}", update_="flist"},
         {do="write!", from_="flist", to="{yt_raw!p}/{fstem}_files.list"}
 ]
@@ -49,7 +49,7 @@ name                     = "extract"
 version                  = "0.1"                # <str>
 doc                      = ["Walk an unpacked youtube data directory, extracting to into {extracted}/{pstem}.jsonnl"]
 ctor                     = "job"
-cli                      = [{ name="target", prefix=1, type="str", default="northernlion"}]
+cli                      = [{ name="<1>target", type="str", default="northernlion"}]
 queue_behaviour          = "default"
 recursive                = false
 exts                     = [".json"]

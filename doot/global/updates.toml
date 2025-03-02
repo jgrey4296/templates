@@ -1,5 +1,5 @@
 ## updates.toml -*- mode: toml -*-
-doot-version = "0.13"
+doot-version = "1.0"
 
 [[tasks.update]]
 disabled   = true

@@ -1,5 +1,5 @@
 ## docs.toml -*- mode: toml -*-
-doot-version = "0.13"
+doot-version = "1.0"
 
 # autodoc : https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html
 # apidoc  : https://www.sphinx-doc.org/en/master/man/sphinx-apidoc.html
@@ -18,9 +18,7 @@ depends_on = [{task="pydocs::build", inject={now=["warn"]}}]
 [[tasks.pydocs]]
 name        = "build"
 doc         = ["build sphinx project documentation"]
-cli         = [
-    {name="warn", type="bool", default=true},
-]
+cli         = [{name="-warn", type="bool", default=true},]
 ctor        = "task"
 doc_builder = "html"
 env_name    = "doot-dev"
@@ -32,7 +30,7 @@ setup       = [
 ]
 actions = [
     # --conf-dir {!p} : directory for conf.py
-    { do="shell", env_="env", args=["sphinx-build",
+    { do="shell!", env_="env", args=["sphinx-build",
     # "--verbose", "--verbose", "--nitpicky", "--write-all",
     "--warning-file", "{logs!p}/sphinx.log",
     "--define", "keep_warnings={warn}",
@@ -57,7 +55,7 @@ setup       = [
 ]
 actions = [
     # --conf-dir {!p} : directory for conf.py
-    { do="shell", args=["sphinx-build", "--warning-file", "{logs!p}/sphinx.log", "--builder", "{doc_builder}", "{doc_src!p}", "{doc_out!p}"] },
+    { do="shell!", args=["sphinx-build", "--warning-file", "{logs!p}/sphinx.log", "--builder", "{doc_builder}", "{doc_src!p}", "{doc_out!p}"] },
 
 
 ]
@@ -65,7 +63,7 @@ actions = [
 [[tasks.pydocs]]
 name        = "build.file"
 doc         = ["build sphinx project documentation"]
-cli         = [{name="fpath", prefix=1, type="str", default=""}]
+cli         = [{name="<1>fpath", type="str", default=""}]
 ctor        = "task"
 doc_builder = "html"
 env_name    = "doot-dev"
@@ -77,7 +75,7 @@ setup       = [
 actions = [
     {do="log", msg="Building for: {fpath}"},
     {do="log", msg="sphinx-build --builder {doc_builder} --warning-file {logs!p}/sphinx.log --keep-going --show-traceback {doc_src!p} {doc_out!p} {fpath}"},
-    { do="shell", env_="env", args=["sphinx-build",
+    { do="shell!", env_="env", args=["sphinx-build",
      "--builder", "{doc_builder}",
     "--warning-file", "{logs!p}/sphinx.log",
     "--keep-going", "--show-traceback",

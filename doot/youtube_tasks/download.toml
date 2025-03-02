@@ -1,5 +1,5 @@
 ## download.toml -*- mode: toml -*-
-doot-version = "0.13"
+doot-version = "1.0"
 
 
 [[locations]]
@@ -28,7 +28,7 @@ sub_actions          = [
     {do="touch", file="{target!p}/{flag_file}"},
     {do="tar!",  file="{target!p}"},
     {do="delete!", args=["{target!p}"], recursive=true},
-    {do="shell", args=["spd-say", "completed a channel"]},
+    {do="shell!", args=["spd-say", "completed a channel"]},
 ]
 
 [[tasks.dl]]

@@ -1,5 +1,5 @@
 ## docs.toml -*- mode: toml -*-
-doot-version = "0.13"
+doot-version = "1.0"
 
 [[locations]]
 doc_src = "docs"
@@ -12,7 +12,7 @@ doc     = ["run a simple server in the built docs directory"]
 address = "127.0.0.1"
 port    = "8000"
 actions = [
-    {do="shell", args=["python", "-m", "http.server", "--directory", "{doc_out!p}", "--bind", "{address}", "{port}"], background=true}
+    {do="shell!", args=["python", "-m", "http.server", "--directory", "{doc_out!p}", "--bind", "{address}", "{port}"], background=true}
 ]
 
 [[tasks.docs]]
@@ -30,7 +30,7 @@ setup       = [
 ]
 actions = [
     # --conf-dir {!p} : directory for conf.py
-    { do="shell", args=["sphinx-build", "-a", "--nitpicky", "--warning-file", "{logs!p}/sphinx.log", "--builder", "{doc_builder}", "{doc_src!p}", "{doc_out!p}"] },
+    { do="shell!", args=["sphinx-build", "-a", "--nitpicky", "--warning-file", "{logs!p}/sphinx.log", "--builder", "{doc_builder}", "{doc_src!p}", "{doc_out!p}"] },
 ]
 cleanup = []
 
@@ -39,7 +39,7 @@ name    = "_.api.gen"
 doc     = [ "https://www.sphinx-doc.org/en/master/man/sphinx-apidoc.html"]
 depth   = 6
 actions = [
-    { do="shell", args=[
+    { do="shell!", args=[
     "sphinx-apidoc",
     "--maxdepth", "{depth}", "--module-first",
     "--private",
@@ -53,7 +53,7 @@ actions = [
 name = "_.autogen"
 doc = ["https://www.sphinx-doc.org/en/master/man/sphinx-autogen.html"]
 actions = [
-    { do="shell", args=["sphinx-autogen", "-o", "{autodoc!p}", "{doc_src!p}/api.rst"] },
+    { do="shell!", args=["sphinx-autogen", "-o", "{autodoc!p}", "{doc_src!p}/api.rst"] },
 ]
 
 
@@ -70,7 +70,7 @@ setup       = [
 ]
 actions = [
     # --conf-dir {!p} : directory for conf.py
-    { do="shell", args=["sphinx-build", "--warning-file", "{logs!p}/sphinx.log", "--builder", "{doc_builder}", "{doc_src!p}", "{doc_out!p}"] },
+    { do="shell!", args=["sphinx-build", "--warning-file", "{logs!p}/sphinx.log", "--builder", "{doc_builder}", "{doc_src!p}", "{doc_out!p}"] },
 
 
 ]

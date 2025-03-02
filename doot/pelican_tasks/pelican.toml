@@ -1,5 +1,5 @@
 ## pelican.toml -*- mode: toml -*-
-doot-version = "0.13"
+doot-version = "1.0"
 
 [[locations]]
 pelicanpy = "file::>pelicanconf.py"
@@ -13,7 +13,7 @@ doc                  = ["Run pelican"]
 depends_on           = ["{pelican!p}"]
 actions              = [
                      { do="touch", args=["{pelicanpy!p}"] },
-                     { do="shell", args=["pelican", "."] },
+                     { do="shell!", args=["pelican", "."] },
                      { do="delete!", args=["{pelicanpy!p}"] },
 ]
 
@@ -25,5 +25,5 @@ doc                  = ["Run pelican"]                           # <list[str]>
 depends_on           = ["{pelican!p}"]                   # <list[DootTaskArtifact]>
 actions              = [
                      { do="touch", args=["{pelicanpy!p}"] },
-                     { do="shell", args=["pelican", "--listen", "--autoreload", "{.!p}"] }
+                     { do="shell!", args=["pelican", "--listen", "--autoreload", "{.!p}"] }
 ]

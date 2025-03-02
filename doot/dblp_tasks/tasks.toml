@@ -1,5 +1,5 @@
 # tasks.toml -*- mode: toml -*-
-doot-version = "0.13"
+doot-version = "1.0"
 
 # doot bib::get.keys --roots="{test}" bib::get.xml --roots="{dblp}/dblp-2023-10-01-02.xml" bib::write.xml.entries
 
@@ -88,5 +88,5 @@ sub_actions = [
         { do="task_code.bibtex:get_fstem_fpar" },
         { do="write!", from_="bib_text", to="{fpath!p}"},
         # { do="write!", from_="bib_text", to="{results}/{fstem}.bib"},
-        { do="shell", args=["spd-say", "complete"]},
+        { do="shell!", args=["spd-say", "complete"]},
 ]

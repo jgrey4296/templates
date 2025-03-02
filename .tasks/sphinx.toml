@@ -1,5 +1,5 @@
 ## docs.toml -*- mode: conf-toml -*-
-doot-version = "0.13"
+doot-version = "1.0"
 
 # autodoc : https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html
 # apidoc  : https://www.sphinx-doc.org/en/master/man/sphinx-apidoc.html
@@ -17,7 +17,7 @@ depends_on = [{task="docs::build", inject={warn=false}}]
 [[tasks.docs]]
 name        = "build"
 doc         = ["build sphinx"]
-cli         = [{name="warn", type="bool", default=true},]
+cli         = [{name="-warn", type="bool", default=true},]
 ctor        = "task"
 doc_builder = "html"
 env_name    = "default"
@@ -44,7 +44,7 @@ cleanup = []
 [[tasks.docs]]
 name        = "build.file"
 doc         = ["build sphinx project documentation"]
-cli         = [{name="fpath", type="str", default="", positional=true}]
+cli         = [{name="-fpath", type="str", default="", positional=true}]
 ctor        = "task"
 doc_builder = "html"
 env_name    = "doot-dev"

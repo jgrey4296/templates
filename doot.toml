@@ -1,15 +1,18 @@
 # -*- mode:conf-toml; -*-
-
 [startup]
-doot-version             = "0.13"
-loaders                  = { commands="default", task="default", parser="default"}
-location_check           = { make_missing = true, print_levels={action="WARN", execute="WARN" } }
-max_steps                = 100_000
-sources                  = {tasks=["doot/global", "doot/repo_chores"], code=[]}
-sleep                    = { task=0.2, subtask=1, batch=1 }
-
-[startup.commands]
-run = { tracker = "default", runner = "default", reporter= "default", report-line = []}
+doot_version         = "0.13"
+loaders              = { commands="default", task="default", parser="default" }
+location_check       = { make_missing=true }
+sources              = {tasks=["doot/global", "doot/repo_chores"], code=[]}
+sleep                = { task=0.2, subtask=1, batch=1 }
+max_steps            = 100_000
+skip_default_plugins = false
+skip_plugin_search   = false
+empty_cmd            = "list"
+implicit_task_cmd    = "run"
+# default_task       = ""
+# constants_file     = ""
+# aliases_file       = ""
 
 [startup.plugins]
 # Allows for defining shorthands
@@ -17,7 +20,18 @@ command        = { tasks = "doot.cmds.list_cmd:ListCmd" }
 
 [shutdown]
 notify    = { speak=false }
+defaulted_values = { write=false, path=".defaulted_values.toml" }
 
+[settings.commands]
+[settings.commands.run]
+tracker     = "default"
+runner      = "default"
+reporter    = "default"
+report-line = []
+
+[settings.commands.list]
+hide    = []
+aliases = { tasks=[] }
 
 [logging]
 [logging.stream]

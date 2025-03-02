@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : pytest.todo
+# uuid  : pytest.todo
+# key   : pytest.todo
+# group : test todo
+# --
+@pytest.mark.skip
+def test_todo(self):
+    pass

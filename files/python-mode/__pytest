@@ -3,7 +3,6 @@
 $0
 """
 `(+snippet-expand "test.ignores")`
-
 # Imports
 `(+snippet-expand "future.annotations")`
 

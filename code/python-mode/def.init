@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : def.init
+# uuid  : def.init
+# key   : def.init
+# group : init default
+# --
+def __init__(self, *args, **kwargs) -> None:
+    super().__init__(*args, **kwargs)

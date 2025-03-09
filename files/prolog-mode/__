@@ -1,25 +1,12 @@
 #!/usr/bin/env swipl -t halt
 %% -t halt : stops entering the repl
+%% call with a location
 %% from https://stackoverflow.com/questions/25467090
 
 %%-- setup
 :- set_prolog_flag(verbose, silent).
 :- initialization main.
 %%-- end setup
-
-%%-- main
-main :-
-    current_prolog_flag(argv, [Argv|_]),
-    format("Got: ~q~n", Argv),
-    place(Argv),
-    getPairedPerson(X, Argv),
-    likes(X, Y),
-    format("Result: ~q likes ~q in ~q~n", [X, Y, Argv]),
-    halt().
-
-main :- halt(1).
-
-%%-- end main
 
 %%-- rules
 getPairedPerson(X, Y) :- paired(X, Z), Z = Y.
@@ -37,3 +24,18 @@ paired(bob, london).
 paired(bill, ny).
 
 %%-- end data
+
+
+%%-- main
+main :-
+    current_prolog_flag(argv, [Loc|_]),
+    format("Got Location: ~q~n", Loc),
+    place(Loc),
+    getPairedPerson(X, Loc),
+    likes(X, Y),
+    format("Result: ~q likes ~q in ~q~n", [X, Y, Loc]),
+    halt().
+
+main :- halt(1).
+
+%%-- end main

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : as.false
+# uuid  : as.false
+# key   : as.false
+# group : testing assertion
+# --
+assert(False)$0

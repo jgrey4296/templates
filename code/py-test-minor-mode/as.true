@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : as.true
+# uuid  : as.true
+# key   : as.true
+# group : pytest
+# --
+assert(True)$0

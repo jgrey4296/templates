@@ -64,6 +64,31 @@ https://aroberge.github.io/ideas/docs/html/index.html
 ** pyfilesystem
 https://docs.pyfilesystem.org/en/latest/
 
+** hatch
+https://github.com/pypa/hatch
+https://hatch.pypa.io/latest/
+
+** zope.interface
+https://zopeinterface.readthedocs.io/en/latest/
+https://github.com/zopefoundation/zope.interface
+
+
+** automat                                       :FSMs:
+https://automat.readthedocs.io/en/latest/
+
+** pydoctor                                      :api_generation:
+https://pydoctor.readthedocs.io/en/latest/
+https://github.com/glyph/automat/
+
+
+** incremental                                   :versioning:
+https://github.com/twisted/incremental
+
+
+** constantly
+https://github.com/twisted/constantly
+https://constantly.readthedocs.io/en/latest/
+
 * Main
 https://www.structlog.org/en/stable/
 https://github.com/PrefectHQ/prefect

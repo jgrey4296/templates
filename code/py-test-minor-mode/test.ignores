@@ -4,4 +4,4 @@
 # key   : test.ignores
 # group : ruff
 # --
-# ruff: noqa: ANN201, ARG001, ANN001, ARG002, ANN202
+# ruff: noqa: ANN201, ARG001, ANN001, ARG002, ANN202, B011

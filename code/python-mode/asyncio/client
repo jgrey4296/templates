@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
-# name  : async.server
-# uuid  : async.server
-# key   : async.server
+# name  : async.client
+# uuid  : async.client
+# key   : async.client
 # group : async
 # --
 # BigEnd, continue?, msglen

@@ -6,6 +6,6 @@
 def __enter__(self) -> Self:
     return self
 
-def __exit__(self, exc_type, exc_value, exc_traceback) -> bool:
-   # return False to reraise errors
+def __exit__(self, etype:Maybe[type], err:Maybe[Exception], tb:Maybe[Traceback]) -> bool:
+    # return False to reraise errors
     return

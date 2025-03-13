@@ -1,9 +1,0 @@
-# -*- mode: snippet -*-
-# name  : timectx
-# uuid  : timectx
-# key   : timectx
-# group : jgdv util time
-# --
-from jgdv.util.time_ctx import TimeCtx
-with TimeCtx(logger=${1:logging}, entry_msg="${2:--- Timer Entry}", exit_msg="${3:---- Timer Exit}", level=20):
-     $0

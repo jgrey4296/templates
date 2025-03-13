@@ -1,18 +1,19 @@
 JG Conventions:
-Protocols  {}_p.   # Functional Spec.
-Data       {}_d.   # Structural Spec.
-Interfaces {}_i.   # Functional+Structural Spec.
+Protocols   {}_p.   # Functional Spec.
+Data        {}_d.   # Structural Spec.
+Interfaces  {}_i.   # Functional+Structural Spec.
 
-Structs    {}_s.   # Structs.
-Specs      {}_c.   # Declarative Specifications of runtime behaviour.
+Structs     {}_s.   # Structs.
+Specs       {}_c.   # Declarative Specifications of runtime behaviour.
 
-Enums      {}_e.   #
-Flags      {}_f.   #
-Mixins     {}_m.   # Separate Implementations.
+Enums       {}_e.   #
+Flags       {}_f.   #
+Mixins      {}_m.   # Separate Implementations.
 
-Hooks      {}_h.   #
-
-Loggers    {}_l.   #
+CtxManagers {}_ctx. # Eg: python 'with x' statements
+Hooks       {}_h.   #
+Callbacks   {}_c.   #
+Loggers     {}_l.   #
 
 Kw Conflicts  _{}. # eg: _class in python
 

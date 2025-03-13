@@ -4,8 +4,4 @@
 # key   : envar
 # group : env
 # --
-##-- imports
-import os
-##-- end imports
-
 env : dict = os.environ

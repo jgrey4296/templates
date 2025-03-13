@@ -1,20 +1,14 @@
 # -*- mode: snippet -*-
 # name: setup.sqlite
 # uuid: setup.sqlite
+# group: with sql sqlite database
 # --
 # https://www.tutorialspoint.com/sqlite/sqlite_commands.htm
-
-##-- imports
 import sqlite3
-##-- end imports
+DB_FILE : pl.Path = 'database.db'
 
-##-- consts
-DB_FILE = 'database.db'
-##-- end consts
-
-with sqlite3.connect('database.db') as conn:
-    #cursor = conn.execute()
-    #for row in cursor
-
-    #or: conn.execute() conn.commit()
-    pass
+with sqlite3.connect(DB_FILE) as conn:
+    for row in conn.execute("select * from table")
+        pass
+    else:
+        conn.commit()

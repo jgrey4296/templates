@@ -1,10 +1,10 @@
 # -*- mode: snippet -*-
-# name  : dateround
-# uuid  : dateround
-# key   : dateround
-# group :
+# name  : quantize.time
+# uuid  : quantize.time
+# key   : quantize.time
+# group : time math
 # --
-def roundTime(dt=None, roundTo=60):
+def quantize_time(dt:Maybe[Datetime]=None, roundTo:int=60) -> Datetime:
    """Round a datetime object to any time lapse in seconds
    dt : datetime.datetime object, default now.
    roundTo : Closest number of seconds to round to, default 1 minute.

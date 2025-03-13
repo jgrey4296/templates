@@ -4,7 +4,7 @@
 # key   : metaclass
 # group :
 # --
-class MyMeta(type):
+class MetaClassExample(type):
     """
     By default classes are constructed using type().
     https://docs.python.org/3/reference/datamodel.html#metaclasses
@@ -18,7 +18,7 @@ class MyMeta(type):
     4) class body execution     : exec(body, globals, namespace)
     5) class object creation    : metaclass.__new__(name, bases, namespace, **kwargs) -> classobj
     6) subclass init            : parent.__init_subclass__(cls, **kwargs)
-    7) class object init        : metaclass.__init__(cls, na,e, bases, namespace, **kwargs)
+    7) class object init        : metaclass.__init__(cls, name, bases, namespace, **kwargs)
 
     Then instances are created by:
     1) metaclass.__call__(cls, ...) -> instance

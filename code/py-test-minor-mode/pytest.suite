@@ -4,18 +4,14 @@
 # key   : pytest.suite
 # group : test pytest
 # --
-class Test${1:Suite}:
+class TestSuite:
 
     @pytest.fixture(scope="function")
     def setup(self):
         pass
 
-    @pytest.fixture(scope="function")
-    def cleanup(self):
-        pass
-
     ##--|
-    `(+snippet-expand "test.sanity")`
+    `(+snippet-expand "test.sanity" nil 'py-test-minor-mode)`
 
     ##--|
     @pytest.mark.skip

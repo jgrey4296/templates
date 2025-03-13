@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 """
-TEST File
+TEST File updated
 $0
 """
-`(+snippet-expand "test.ignores")`
-
+`(+snippet-expand "test.ignores" nil 'py-test-minor-mode)`
 # Imports
 `(+snippet-expand "future.annotations")`
 
-`(+snippet-expand "import.test")`
+`(+snippet-expand "import.test" nil 'py-test-minor-mode)`
+
+##--|
+from .. import
+##--|
 
 `(+snippet-expand "import.typing")`
 
@@ -17,4 +20,4 @@ $0
 # Vars:
 
 # Body:
-`(+snippet-expand "pytest.suite")`
+`(+snippet-expand "pytest.suite" nil 'py-test-minor-mode)`

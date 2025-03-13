@@ -1,8 +1,8 @@
 # -*- mode: snippet -*-
-# name  : exit_hanlder
-# uuid  : exit_hanlder
-# key   : exit_hanlder
-# group : debug
+# name  : exit_handler
+# uuid  : exit_handler
+# key   : exit_handler
+# group : atexit debug
 # --
 import atexit
 

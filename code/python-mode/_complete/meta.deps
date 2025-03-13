@@ -4,8 +4,10 @@
 # key   : meta.deps
 # group : python dependencies metadata
 # --
-def get_meta(name:str):
+def get_meta(name:str) -> tuple[list, list]:
+    """ Get the flags and dependencies for an installed package """
     import importlib.metadata as md
     data              = md.metadata(name)
     flags : list[str] = data.get_all('Provides-Extra')
-    deps  : list[str] = data.get_all('PRovides-Dist')
+    deps  : list[str] = data.get_all('Provides-Dist')
+    return flags, deps

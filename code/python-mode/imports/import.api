@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : import.api
+# uuid  : import.api
+# key   : import.api
+# group : imports
+# --
+from . import _interface as API # noqa: N812
+$0

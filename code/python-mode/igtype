@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : igtype
+# uuid  : igtype
+# key   : igtype
+# group : typing ignore
+# --
+# type: ignore$0

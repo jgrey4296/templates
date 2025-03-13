@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : mypy-disable
+# uuid  : mypy-disable
+# key   : mypy-disable
+# group : mypy typing
+# --
+# mypy: disable-error-code="attr-defined"

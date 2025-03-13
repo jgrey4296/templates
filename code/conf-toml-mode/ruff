@@ -24,8 +24,12 @@ target-version = "py312"
 cache-dir      = ".temp/ruff_cache"
 
 [lint]
-# Enable pycodestyle (`E`) and Pyflakes (`F`) codes by default.
-select = ["E", "F", "W", "B"]
+select = [
+       "E",  # pycodestyle errors
+       "W",  # pycodestyle warnings
+       "F",  # pyflakes
+       "B"   # flake8-bugbear
+       ]
 
 ignore = [
        "F401", "E501", "F841", "N801", "ANN204", "UP035", "TRY003",

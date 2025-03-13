@@ -89,6 +89,16 @@ https://github.com/twisted/incremental
 https://github.com/twisted/constantly
 https://constantly.readthedocs.io/en/latest/
 
+** pydocstyle                                    :linting:docstring:
+https://www.pydocstyle.org/en/stable/
+
+** remi                                          :web_gui:
+https://github.com/rawpython/remi
+
+** taskgraph                                     :firefox:tasks:
+https://github.com/taskcluster/taskgraph
+https://taskcluster-taskgraph.readthedocs.io/en/stable/
+
 * Main
 https://www.structlog.org/en/stable/
 https://github.com/PrefectHQ/prefect
@@ -414,7 +424,10 @@ https://github.com/yt-dlp/yt-dlp
 https://github.com/axcore/tartube
 *** LSP
 **** lsp-jedi                                  :lsp:
-https://github.com/fredcamps/lsp-jedi
+https://jedi.readthedocs.io/en/latest/docs/usage.html
+https://github.com/fredcamps/lsp-jedi # for emacs
+https://github.com/pappasam/jedi-language-server
+
 **** lsp-server                                :lsp:
 https://github.com/python-lsp/python-lsp-server
 **** lspprotocol
@@ -955,6 +968,7 @@ https://github.com/isidentical/refactor
 **** python-ftfy                               :refactoring:
 https://github.com/LuminosoInsight/python-ftfy
 **** rope                                      :refactoring:
+https://rope.readthedocs.io/en/latest/overview.html
 https://github.com/python-rope/rope
 ***** ropemacs
 https://github.com/python-rope/ropemacs
@@ -964,6 +978,8 @@ https://github.com/Microsoft/pyright
 **** typeshed
 https://github.com/python/typeshed
 **** mypy
+https://www.mypy-lang.org/
+https://mypy.readthedocs.io/en/latest/
 **** ruff
 https://github.com/astral-sh/ruff
 *** yapf                                        :formatting:

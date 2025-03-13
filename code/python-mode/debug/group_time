@@ -21,27 +21,27 @@ class GroupTime:
         self.total            = 0.0
         self.once_log         = []
 
-    def msg(self, str, *args):
+    def msg(self, str, *args) -> None:
         logging.debug(str, *args)
 
-    def _set_name(self, name, stmt):
+    def _set_name(self, name, stmt) -> None:
         match name, stmt:
             case str(), _:
                 self.current_name = self.group + name
             case _:
                 self.current_name = self.group + stmt.__qualname__
 
-    def autorange_cb(self, number, took):
+    def autorange_cb(self, number, took) -> None:
         self.msg("%-*10s : %-*5d calls took: %-*8.2f seconds", self.current_name, number, took)
         self.total += took
 
-    def auto(self, stmt, name=None):
+    def auto(self, stmt, name=None) -> None:
         self._set_name(name, stmt)
         self.msg("-- Autoranging: %s", self.current_name")
         timer = timeit.Timer(stmt, globals=globals())
         timer.autorange(self.autorange_cb)
 
-    def repeats(self, stmt, name=None):
+    def repeats(self, stmt, name=None) -> None:
         self._set_name(name, stmt)
         self.msg("-- Repeating %s : Timing %s repeats of %s trials", self.current_name, self.repeat, self.count)
         timer  = timeit.Timer(stmt, globals=globals())
@@ -49,14 +49,14 @@ class GroupTime:
         for i, result in enumerate(results):
             self.msg("Attempt %-*5d : %-*8.2f seconds", i, result)
 
-    def block(self, stmt, name=None):
+    def block(self, stmt, name=None) -> None:
         self._set_name(name, stmt)
         self.msg("-- Running Block %s : Timing block of %-*5f trials", self.current_name, self.count)
         timer  = timeit.Timer(stmt, globals=globals())
         result = timer.timeit(self.count)
         self.msg("%-*10s : %-*8.2f seconds", self.current_name, result)
 
-    def once(self, stmt, name=None):
+    def once(self, stmt, name=None) -> None:
         self._set_name(name, stmt)
         self.msg("-- Running Call Once: %s", self.current_name)
         timer  = timeit.Timer(stmt, globals=globals())
@@ -64,10 +64,10 @@ class GroupTime:
         self.once_log.append((self.current_name, result))
         self.msg("%-*10s : %-*8.2f seconds", self.current_name, result)
 
-    def __enter__(self):
+    def __enter__(self) -> Self:
         return self
 
-    def __exit__(self, exc_type, exc_value, exc_traceback):
+    def __exit__(self, exc_type, exc_value, exc_traceback) -> Maybe[bool]:
         self.msg("-- Finished %s : %-*8.2f", self.group, self.total)
         if self.once_log:
             self.msg("-- Largest Single Call: %s", max(self.once_log, key=lambda x: x[1]))

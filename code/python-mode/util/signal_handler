@@ -27,9 +27,9 @@ class SignalHandler:
         signal.signal(sig, signal.SIG_DFL)
 
     @staticmethod
-    def __enter__():
+    def __enter__() -> Self:
         SignalHandler.install()
-        return
+        return Self
 
     @staticmethod
     def __exit__(exc_type, exc_value, exc_traceback):

@@ -20,7 +20,7 @@ class LogContext:
         self._temp_level = level
         return self
 
-    def __enter__(self):
+    def __enter__(self) -> Self:
         match self._temp_level:
             case int() | str():
                 self._level_stack.append(self._logger.level)

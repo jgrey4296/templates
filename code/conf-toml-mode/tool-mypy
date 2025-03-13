@@ -7,10 +7,12 @@
 # https://mypy.readthedocs.io/en/stable/config_file.html
 [tool.mypy]
 python_version      = "3.12"
+follow_imports      = "skip"
+cache_dir           = ".temp/mypy_cache"
+incremental         = true
+
 warn_return_any     = true
 warn_unused_configs = true
-exclude             = [] # regexs to ignore
-cache_dir           = ".temp/mypy_cache"
 
 # Per-module options:
 # [[tool.mypy.overrides]]

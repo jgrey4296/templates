@@ -38,7 +38,7 @@ class DebugMalloc:
         self.filters         = []
         self.human = lambda num, sign=False: tracemalloc._format_size(num, sign)
 
-    def __enter__(self):
+    def __enter__(self) -> Self:
         tracemalloc.start(self.num_frames)
         self.started = True
         self.snapshot(name="init")

@@ -7,7 +7,7 @@
 class ${1:ContextCls}(contextlib.ContextDecorator):
     """ Use as @$1 on a function """
 
-    def __enter__(self):
+    def __enter__(self) -> Self:
         return self
 
     def __exit(self, *exc):

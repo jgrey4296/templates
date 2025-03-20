@@ -428,8 +428,15 @@ https://jedi.readthedocs.io/en/latest/docs/usage.html
 https://github.com/fredcamps/lsp-jedi # for emacs
 https://github.com/pappasam/jedi-language-server
 
-**** lsp-server                                :lsp:
+**** lsp-server                                :prefer:lsp:
 https://github.com/python-lsp/python-lsp-server
+
+#+begin_src bash :results output
+uv tool install --with pylsp-mypy --with ruff python-lsp-server
+#+end_src
+
+
+
 **** lspprotocol
 https://github.com/microsoft/lsprotocol
 **** ruff-lsp

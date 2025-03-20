@@ -5,9 +5,12 @@
 # group : python pyproject tool testing
 # --
 ##-- pytest
-[tool.pytest.ini_options]
 # https://docs.pytest.org/en/stable/reference/reference.html#ini-options-ref
-# addopts          = "--cov="
+[tool.pytest.ini_options]
+addopts          = [
+  # "--cov=",
+  "--ignore-glob=related_/*"
+]
 cache_dir       = ".temp/pytest_cache"
 log_file        = ".temp/logs/pytest.log"
 

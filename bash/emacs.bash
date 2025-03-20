@@ -98,7 +98,7 @@ function report-emacs () {
     echo "Emacs       : $jg_use_EMACS"
     echo "blood       : $BLOOD_SRC : $BLOOD_CONFIG"
     echo ".emacs.d    : $EMACSDIR"
-    echo " .doom.d    : $DOOMDIR"
+    echo ".doom.d     : $DOOMDIR"
 }
 
 function emacs (){

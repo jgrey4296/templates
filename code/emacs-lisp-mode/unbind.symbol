@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : unbind.symbol
+# uuid  : unbind.symbol
+# key   : unbind.symbol
+# group : intern
+# --
+(unintern "${1:sym}" nil)

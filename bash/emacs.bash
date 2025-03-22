@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# TODO use update-alternatives
+#
 jgdebug "Setting emacs data"
 BLOOD_SRC="$HOME/github/lisp/blood"
 EDITOR="vim"

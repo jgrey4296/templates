@@ -1,19 +1,20 @@
-**** Propositional
-**** First Order
-**** Second Order
-**** Classical
-**** Constructive
-**** Intuitionistic
-**** Substructural
-**** Input/Output Logics
-**** Linear Logic
+* Top
+** Propositional
+** First Order
+** Second Order
+** Classical
+** Constructive
+** Intuitionistic
+** Substructural
+** Input/Output Logics
+** Linear Logic
 linear logic               -
 
 Multiplicative Conjunction - ⨂
 Multiplicative Disjunction - ⅋
 Additive Conjunction       - &
 Additive Disjunction       - ⨁
-**** Temporal Logics
+** Temporal Logics
 temporal logic                      -
 alternating temporal logic          -
 alternating time temporal logic     -
@@ -23,15 +24,16 @@ metric temporal logic               -
 temporal action logic               -
 temporal epistemic logic            -
 temporal modal defeasible logic     -
-**** Modal Logics
+** Modal Logics
 modal logic          -
 sabotage modal logic -
 K                    -
 K45                  -
 S                    -
 S5                   -
-**** Description Logic
-**** Misc Logics
+** Description Logic
+* Logics
+** Misc Logics
 3 valued logics                     -
 BDI stit logic                      -
 KLM logic                           -

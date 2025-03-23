@@ -28,15 +28,14 @@ source "$HOME/github/_templates/bash/emacs.bash"
 
 case "$OSTYPE" in
 	darwin*)
-		# Setup Conda
-		source "$HOME/github/_templates/bash/conda.bash"
-        setup_conda
+		source "$HOME/github/_templates/bash/python_config.bash"
+        init_py_env
         source "$HOME/github/_templates/bash/_aliases.bash"
 		echo "Stopping Sarafi Bookmarks"; launchctl stop com.apple.SafariBookmarksSyncAgent
 		;;
 	linux*)
-       source "$HOME/github/_templates/bash/conda.bash"
-       setup_conda
+       source "$HOME/github/_templates/bash/python_config.bash"
+       init_py_env
        init_sdkman
        source "$HOME/github/_templates/bash/_aliases.linux.bash"
 

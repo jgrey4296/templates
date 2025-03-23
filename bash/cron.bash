@@ -8,7 +8,7 @@ source "$JG_CONFIG/bash/_base_path.bash"
 source "$JG_CONFIG/bash/components/rust.bash"
 source "$JG_CONFIG/bash/components/latex.bash"
 source "$JG_CONFIG/bash/components/jvm.bash"
-source "$JG_CONFIG/bash/conda.bash"
+source "$JG_CONFIG/bash/python_config.bash"
 
 CPU_MAX="50"
 function cpu_check(){

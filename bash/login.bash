@@ -21,9 +21,9 @@ case "$OSTYPE" in
 		     jgdebug "-- Sourcing: $fname"
 		     source "$fname"
 		 done
-		 source "$HOME/github/_templates/bash/conda.bash"
-		 setup
-		 source "$HOME/github/_templates/bash/_aliases.mac.bash"_conda
+		 source "$HOME/github/_templates/bash/python_config.bash"
+		 init_py_env
+		 source "$HOME/github/_templates/bash/_aliases.mac.bash"
 		 ;;
 	linux*)
 		 for fname in $(find "$HOME/github/_templates/bash/components" -type f -name "*.bash" -not -regex "_.+?\.bash")
@@ -31,8 +31,8 @@ case "$OSTYPE" in
 		     jgdebug "-- Sourcing: $fname"
 		     source "$fname"
 		 done
-        source "$JG_CONFIG/bash/conda.bash"
-		setup_conda
+        source "$JG_CONFIG/bash/python_config.bash"
+		init_py_env
 		init_sdkman
 		source "$HOME/github/_templates/bash/_aliases.linux.bash"
         ;;

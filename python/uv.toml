@@ -4,6 +4,10 @@
 # can be installed at $XDG_CONFIG_DIRS/uv/uv.toml
 # env vars: https://docs.astral.sh/uv/configuration/environment
 
+# XDG_CACHE_HOME
+# cache-dir = "~/_cache_/uv/"
+
+link-mode = "copy"
 [[index]]
 # according to pep 503 : https://peps.python.org/pep-0503/
 url = "https://pypi.org/simple"

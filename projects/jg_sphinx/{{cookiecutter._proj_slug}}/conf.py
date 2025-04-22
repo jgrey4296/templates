@@ -45,7 +45,12 @@ master_doc                    = "index"
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['**/flycheck_*.py', "**/__tests/*", '/obsolete/*', "README.md"]
+exclude_patterns = [
+    '**/flycheck_*.py',
+    "**/__tests/*",
+    "_docs/_templates/*",
+    "README.md",
+]
 
 # suppress_warnings = ["autoapi", "docutils"]
 

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : macro
+# uuid  : macro
+# key   : macro
+# group :
+# --
+{% macro $1($2) %}
+   $0
+{% endmacro %}

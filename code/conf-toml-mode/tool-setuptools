@@ -25,5 +25,8 @@ where = ["."]
 
 [tool.setuptools.exclude-package-data]
 
+[tool.distutils.egg_info]
+# from https://github.com/pypa/setuptools/discussions/3348#discussioncomment-6556887
+egg_base = ".temp/egg-info"
 
 ##-- end build-system : setuptools

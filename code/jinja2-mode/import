@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : import
+# uuid  : import
+# key   : import
+# group :
+# --
+{% import "$1" as $2 %}

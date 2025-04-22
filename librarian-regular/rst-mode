@@ -36,4 +36,11 @@ RSG Reference                      # https://documatt.com/restructuredtext-refer
 
 doc8                               # https://doc8.readthedocs.io/en/latest/readme.html
 
-Guide # https://www.writethedocs.org/guide/writing/reStructuredText/
+Guide                              # https://www.writethedocs.org/guide/writing/reStructuredText/
+
+Jinja Filters                      # https://jinja.palletsprojects.com/en/stable/templates/#builtin-filters
+Jinja Tests                        # https://jinja.palletsprojects.com/en/stable/templates/#builtin-tests
+Jinja Global Functions             # https://jinja.palletsprojects.com/en/stable/templates/#global-functions
+Jinja Control Structs              # https://jinja.palletsprojects.com/en/stable/templates/#control-structures
+
+RTD Examples # https://sphinx-rtd-theme.readthedocs.io/en/stable/demo/api.html

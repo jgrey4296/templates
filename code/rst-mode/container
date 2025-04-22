@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : container
+# uuid  : container
+# key   : container
+# group :
+# --
+.. container:: $1{jgcontainer}
+
+   $0

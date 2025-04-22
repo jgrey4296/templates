@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : set
+# uuid  : set
+# key   : set
+# group :
+# --
+{% set $1 = $2 %}

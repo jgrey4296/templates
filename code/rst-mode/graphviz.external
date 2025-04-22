@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : graphviz.external
+# uuid  : graphviz.external
+# key   : graphviz.external
+# group :
+# --
+.. graphviz:: ${1:file.dot}
+
+$0

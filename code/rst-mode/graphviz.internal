@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : graphviz.internal
+# uuid  : graphviz.internal
+# key   : graphviz.internal
+# group :
+# --
+.. graphviz::
+
+   $0

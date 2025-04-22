@@ -34,6 +34,12 @@
     ("realtion" "relation" nil :count 1)
    ))
 
+(define-abbrev-table 'jinja2-mode-abbrev-table
+  '(
+    ("ppc" "%}" nil :count 0)
+    ("ppo" "{%" nil :count 1)
+   ))
+
 (define-abbrev-table 'minibuffer-mode-abbrev-table
   '(
     ("sstart" "^" nil :count 2)
@@ -49,21 +55,26 @@
     ("nd" "ndarray" nil :count 25)
    ))
 
+(define-abbrev-table 'py-test-minor-mode-abbrev-table
+  '(
+    ("skip" "@pytest.mark.skip" nil :count 4)
+    ("xfail" "@pytest.mark.xfail" nil :count 9)
+   ))
+
 (define-abbrev-table 'python-mode-abbrev-table
   '(
     ("Dkey" "DKey" nil :count 5)
+    ("asinst" "assert(isinstance(" nil :count 2)
     ("dootkey" "DootKey" nil :count 192)
-    ("false" "False" nil :count 19)
+    ("false" "False" nil :count 21)
     ("flase" "False" nil :count 0)
     ("isi" "isinstance(" nil :count 0)
     ("isins" "isinstance(" nil :count 1)
     ("kwarp" "kwrap" nil :count 61)
     ("lamdba" "lambda" nil :count 2)
-    ("maybe" "Maybe" nil :count 19)
-    ("none" "None" nil :count 62)
-    ("skip" "@pytest.mark.skip" nil :count 1)
+    ("maybe" "Maybe" nil :count 33)
+    ("none" "None" nil :count 77)
     ("true" "True" nil :count 18)
-    ("xfail" "@pytest.mark.xfail" nil :count 9)
    ))
 
 (define-abbrev-table 'rust-mode-abbrev-table

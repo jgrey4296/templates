@@ -1,5 +1,5 @@
 ## test.toml -*- mode: toml -*-
-doot-version = "1.0"
+doot-version = "1.1"
 
 [[locations]]
 

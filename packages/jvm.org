@@ -2,6 +2,7 @@
 #+STARTUP: packages
 
 * Main
+https://github.com/tlaplus/tlaplus
 
 ** stdlib
 

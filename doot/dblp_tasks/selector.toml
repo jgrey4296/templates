@@ -1,11 +1,8 @@
 ## selector.toml -*- mode: toml -*-
-doot-version = "1.0"
+doot-version = "1.1"
 
 [[tasks.bib]]
-name                 = "select.venues"
-version              = "0.1"
-ctor                 = "job"
-doc                  = [""]
+name                 = "+.select.venues"
 recursive            = false
 roots                = ["{dblp}"]
 exts                 = [".xml"]

@@ -1,5 +1,5 @@
 ## download.toml -*- mode: toml -*-
-doot-version = "1.0"
+doot-version = "1.1"
 
 
 [[locations]]
@@ -8,10 +8,8 @@ data    = "data"
 backup  = "/media/john/big_ex/datasets/youtube/data/"
 
 [[tasks.dl]]
-name                 = "yt"
-version              = "0.1"                # <str>
+name                 = "+.yt"
 doc                  = ["Download each channel in a csv using yt-dlp"]                   # <list[str]>
-ctor                 = "job"             # <str>
 queue_behaviour      = "default"            # <str>                default | auto | reactive
 flag_file            = ".complete"
 subs                 = ["subs.main.csv"]
@@ -32,10 +30,8 @@ sub_actions          = [
 ]
 
 [[tasks.dl]]
-name        = "backup"
-version     = "0.1"
+name        = "+.backup"
 doc         = ["backup tars"]
-ctor        = "job"
 exts        = []
 recursive   = false
 roots       = ["{data}"]

@@ -1,6 +1,6 @@
 # -*- mode:conf-toml; -*-
 [startup]
-doot_version         = "0.13"
+doot_version         = "1.1"
 loaders              = { commands="default", task="default", parser="default" }
 location_check       = { make_missing=true }
 sources              = {tasks=["doot/global", "doot/repo_chores"], code=[]}

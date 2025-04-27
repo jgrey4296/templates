@@ -2,6 +2,7 @@
 #+STARTUP: packages
 
 * Triage
+
 ** Bindgen
 https://rust-lang.github.io/rust-bindgen/
 
@@ -36,6 +37,13 @@ https://github.com/mainmatter/100-exercises-to-learn-rust
 
 ** nom :parser:
 https://github.com/rust-bakery/nom
+
+** dotenvy
+https://github.com/allan2/dotenvy
+
+** mdbook
+https://rust-lang.github.io/mdBook/
+
 
 * Stdlib
 https://doc.rust-lang.org/std/index.html

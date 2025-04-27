@@ -16,8 +16,10 @@ NLTK_DATA="${JGCACHE}/assets/nlg/nltk"
 
 MANPATH="${ANACONDA_HOME}/man:$MANPATH"
 
-
+# Pipx for uv
 PIPX_HOME="$HOME/.local/pipx"
 PIPX_BIN_DIR="$HOME/.local/bin"
 PIPX_DEFAULT_PYTHON=
+
 USE_EMOJI=0
+

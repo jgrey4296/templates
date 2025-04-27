@@ -1,6 +1,5 @@
 ## extract.toml -*- mode: toml -*-
-doot-version = "1.0"
-
+doot-version = "1.1"
 
 [[locations]]
 youtube        = "/media/john/big_ex/datasets/youtube/data"
@@ -11,11 +10,9 @@ extract_backup = "/media/john/big_ex/datasets/youtube/extracted"
 extract_output = "/media/john/data/datasets/todo/youtube"
 
 
-
 [[tasks.yt]]
-name = "joint"
+name = "+.joint"
 doc = ["unpack then extract from a tar"]
-ctor = "job"
 cli     = [
         { name="<1>target", type="str", default="{youtube!p}/northernlion.tar.gz"},
         { name="<2>out",    type="str", default="unpacked"},
@@ -29,9 +26,7 @@ actions = [
 
 [[tasks.yt]]
 name    = "unpack"
-version = "0.1"
 doc     = ["unpack {target.tar.gz} into raw/{out}"]
-ctor    = "task"
 cli     = [
         { name="<1>target", type="str", default="{youtube!p}/northernlion.tar.gz"},
         { name="<2>out",    type="str", default="unpacked"},
@@ -45,10 +40,8 @@ actions = [
 ]
 
 [[tasks.yt]]
-name                     = "extract"
-version                  = "0.1"                # <str>
+name                     = "+.extract"
 doc                      = ["Walk an unpacked youtube data directory, extracting to into {extracted}/{pstem}.jsonnl"]
-ctor                     = "job"
 cli                      = [{ name="<1>target", type="str", default="northernlion"}]
 queue_behaviour          = "default"
 recursive                = false

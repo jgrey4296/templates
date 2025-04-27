@@ -14,7 +14,7 @@
         eol=lf
 [init]
 	defaultBranch = main
-	templateDir = ~/gitub/_templates/git/initDir
+	# templateDir = ~/gitub/_templates/git/initDir
 [commit]
 	template = ~/github/_templates/git/commit_template
 [hooks]

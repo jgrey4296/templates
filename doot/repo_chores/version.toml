@@ -1,5 +1,5 @@
 ## version.toml -*- mode: toml -*-
-doot-version = "1.0"
+doot-version = "1.1"
 
 
 [[locations]]
@@ -18,8 +18,6 @@ depends_on = [{task="version::bump", inject={now=["raise"]}},]
 
 [[tasks.version]]
 name     = "bump"
-version  = "0.1"
-ctor     = "task"
 cli = [
     { name="--raise=", type="str", default="minor", desc="", constraints=["major", "minor", "patch"]},
     { name="-dry",  type="bool", default=false, desc="" },
@@ -43,8 +41,6 @@ cleanup = [
 [[tasks.version]]
 name       = "changelog"
 doc        = ["Generates a changelog using git cliff"]
-version    = "0.1"
-ctor       = "task"
 env_name = "distributor"
 depends_on = [
     {do="dootle.python.mamba:MambaEnv", env_="env_name", update_="env"},
@@ -63,7 +59,6 @@ actions    = [
 [[tasks.requirements]]
 name         = "pip"
 doc          = ["Generate a requirements.txt"]
-ctor         = "task"
 required_for = ["file::>requirements.txt"]
 env_name     = "distributor"
 setup        = [

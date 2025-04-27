@@ -20,10 +20,15 @@ include-package-data = true
 [tool.setuptools.packages.find]
 namespaces = true
 where = ["."]
+include    = [""]
+exclude    = ["*._docs*"]
 
 [tool.setuptools.package-data]
+"*" = ["*"]
+"*.__data" = ["*.so"]
 
 [tool.setuptools.exclude-package-data]
+"*" = ["**.rst"]
 
 [tool.distutils.egg_info]
 # from https://github.com/pypa/setuptools/discussions/3348#discussioncomment-6556887

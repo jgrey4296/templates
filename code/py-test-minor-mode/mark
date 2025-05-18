@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : mark
+# uuid  : mark
+# key   : mark
+# group : pytest mark
+# --
+@pytest.mark.$0

@@ -14,6 +14,7 @@ CtxManagers {}_ctx. # Eg: python 'with x' statements
 Hooks       {}_h.   #
 Callbacks   {}_c.   #
 Loggers     {}_l.   #
+Abstract    {}_abs. #
 
 Kw Conflicts  _{}. # eg: _class in python
 

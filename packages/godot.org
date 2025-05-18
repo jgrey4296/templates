@@ -1,6 +1,11 @@
 #+TITLE: Godot Package Reference
 #+STARTUP: packages
 
+* Triage
+
+** Godot dialogue manager
+https://github.com/nathanhoad/godot_dialogue_manager/blob/main/docs/Basic_Dialogue.md
+
 * Main
 
 https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html

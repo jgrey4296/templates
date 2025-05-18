@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : reveal
+# uuid  : reveal
+# key   : reveal
+# group : typing
+# --
+from typing import reveal_type
+reveal_type($0)

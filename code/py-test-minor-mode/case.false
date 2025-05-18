@@ -5,4 +5,4 @@
 # group : pytest match
 # --
 case x:
-     assert(False), x
+    assert(False), x

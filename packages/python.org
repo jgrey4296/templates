@@ -99,6 +99,9 @@ https://github.com/rawpython/remi
 https://github.com/taskcluster/taskgraph
 https://taskcluster-taskgraph.readthedocs.io/en/stable/
 
+** supriya                                       :supercollider:
+https://supriya-project.github.io/supriya/
+
 * Main
 https://www.structlog.org/en/stable/
 https://github.com/PrefectHQ/prefect

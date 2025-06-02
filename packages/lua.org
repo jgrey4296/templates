@@ -1,9 +1,0 @@
-#+TITLE: Lua Package Reference
-#+STARTUP: packages
-
-* Main
-
-** stdlib
-
-** external
-* Links

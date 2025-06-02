@@ -1,9 +1,0 @@
-#+TITLE: Haskell Package Reference
-#+STARTUP: packages
-
-* Main
-
-** stdlib
-
-** external
-* Links

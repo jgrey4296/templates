@@ -1,9 +1,11 @@
 Basic Godot Types:
+void        #
 null        #
 bool        #
 int         #
 float       #
 String      #
+StringName  # immutable, only one instance at a time. fast to compare.
 Vector2     #
 Vector3     #
 Transform2D #
@@ -18,8 +20,8 @@ Object      #
 Sprite      #
 
 Callable    # called with {var}.call({args})
-Array       #
-Dictionary  #
+Array[type] # passed by reference
+Dictionary  # {}
 
 Signal      #
 

@@ -9,15 +9,13 @@ tex   = "~/.local/texlive/current"
 
 [[tasks.setup]]
 name       = "system"
-version    = "0.1"
 ctor       = "task"
 depends_on = ["setup::_.symlinks", "setup::_.git", "setup::_.bash", "setup::_.dirs", "setup::_.misc"]
 
 [[tasks.setup]]
 name                 = "_.symlinks"
-version              = "0.1"                # <str>
-doc                  = ["setup symlinks to templates"]                   # <list[str]>
-ctor                 = "task"               # <str>
+doc                  = ["setup symlinks to templates"]
+ctor                 = "task"
 actions              = [
    # Main
    {do="link!", link="{home!p}/.asdfrc",             to="{tools!p}/asdfrc"},
@@ -66,8 +64,6 @@ actions              = [
 
 [[tasks.setup]]
 name = "_.bash"
-version = "0.1"
-ctor = "task"
 actions = [
    {do="link!", link="{home!p}/.bashrc",       to="bash/interactive.bash"},
    {do="link!", link="{home!p}/.bash_logout",  to="bash/logout.bash"},
@@ -77,8 +73,6 @@ actions = [
 
 [[tasks.setup]]
 name    = "_.dirs"
-version = "0.1"
-ctor    = "task"
 actions = [
    {do="dir!", args=["{home!p}/.config/secrets", "{home!p}/_cache_", "{home!p}/.local/bin"]}
 
@@ -86,17 +80,13 @@ actions = [
 
 [[tasks.setup]]
 name    = "_.misc"
-version = "0.1"
-ctor    = "task"
 actions = [
    {do="touch", file="{home!p}/.browsers"}
 ]
 
 [[tasks.setup]]
 name                 = "_.git"
-version              = "0.1"                # <str>
-doc                  = ["setup git config file symlinks"]                   # <list[str]>
-ctor                 = "task"               # <str>
+doc                  = ["setup git config file symlinks"]                   
 actions              = [
    # Git General:
    {do="link!", link="{home!p}/.gitconfig",                      to="git/gitconfig"},
@@ -109,9 +99,7 @@ actions              = [
 
 [[tasks.setup]]
 name = "_.nu"
-version = "0.1"
 doc = ["symlinks nushell config into home!p"]
-ctor = "task"
 actions = [
         {do="dir!", args=["{home!p}/.config/nushell"]},
         {do="link!", link="{home!p}/.config/nushell/env.nu", to="nu/env.nu"},

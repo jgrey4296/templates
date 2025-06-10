@@ -9,20 +9,17 @@ image_whitelist  = "earlycwd/file::>~/.config/secrets/bots/whitelist"
 
 [[tasks.mastodon]] # TODO : read from image_whitelist, select, post
 name                 = "post.image"
-version              = "0.1"
 ctor                 = "task"
 doc                  = ["TODO: Post a whitelisted image to mastodon"]
 actions              = []
 
 [[tasks.mastodon]]
-name                 = "bibtex"
-version              = "0.1"
-ctor                 = "job"
-doc                  = ["Maybe Post a formatted bibtex citation to mastodon"]
-select_limit         = 1
-roots                = ["{all_bib}"]
-exts                 = [".bib"]
-actions = [
+name          = "+.bibtex"
+doc           = ["Maybe Post a formatted bibtex citation to mastodon"]
+select_limit  = 1
+roots         = ["{all_bib}"]
+exts          = [".bib"]
+actions       = [
     {do="job.walk",   update_="files"},
     {do="job.limit",  count_="select_limit"},
     {do="job.expand", from_="files", update_="tasks", inject={insert=["fpath"]}, template_="sub_actions"},

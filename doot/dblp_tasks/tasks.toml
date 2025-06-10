@@ -12,15 +12,15 @@ conf    = "{bib}/plus/conferences/"
 journ   = "{bib}/plus/journals"
 
 [[tasks.bib]]
-name                 = "get.patterns"
-version              = "0.1"                                                                # <str>
-ctor                 = "job"                                                                # <type>
-doc                  = ["find dblp keys to expand"]
-required_for         = ["bib::get.xml"]
-recursive            = true
-roots                = ["{journ}"]                                                            # <list[str|pl.Path]>  Places the job:walker will start
-exts                 = [".keys"]                                                              # <list[str]>
-cleanup         = [
+name          = "get.patterns"
+version       = "0.1"  
+ctor          = "job"  # <type>
+doc           = ["find dblp keys to expand"]
+required_for  = ["bib::get.xml"]
+recursive     = true
+roots         = ["{journ}"]                                                            
+exts          = [".keys"]                                                              
+cleanup       = [
         {do="post.get", keys="bib::get.patterns..keys"},
         {do="task_code.text:map_keys", from_="keys", update_="keymap" },
         {do="post.put", keymap="keymap"},
@@ -35,7 +35,7 @@ sub_actions          = [
         { do="read",  from_="fpath", update_="text"},
         { do="task_code.text:split_keys", from_="text", update_="keys" },
         { do="post.put", keys="keys"},
-]                                                                                                                         # <str>
+]
 
 [[tasks.bib]]
 name                 = "get.xml"
@@ -44,8 +44,8 @@ ctor                 = "job"
 doc                  = ["Stream DBLP xmls and extract entries with matching keys"]
 depends_on           = ["bib::get.patterns", "bib::get.patterns..$head$"]
 recursive            = false
-roots                = ["{dblp}"]                                                            # <list[str|pl.Path]>  Places the job:walker will start
-exts                 = [".xml"]                                                             # <list[str]>
+roots                = ["{dblp}"]
+exts                 = [".xml"]  
 entries              = ["article"]
 cleanup         = [
         {do="post.get", all_mappings="results"},

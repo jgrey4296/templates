@@ -2,17 +2,9 @@
 [startup]
 doot_version         = "1.1"
 loaders              = { commands="default", task="default", parser="default" }
-location_check       = { make_missing=true }
 sources              = {tasks=["doot/global", "doot/repo_chores"], code=[]}
-sleep                = { task=0.2, subtask=1, batch=1 }
-max_steps            = 100_000
 skip_default_plugins = false
 skip_plugin_search   = false
-empty_cmd            = "list"
-implicit_task_cmd    = "run"
-# default_task       = ""
-# constants_file     = ""
-# aliases_file       = ""
 
 [startup.plugins]
 # Allows for defining shorthands
@@ -35,10 +27,10 @@ aliases = { tasks=[] }
 
 [logging]
 [logging.stream]
-level = "user"
-filter = []
-target = "stdout"
-format="{levelname:<8} : {message}"
+level   = "user"
+filter  = []
+target  = "stdout"
+format  = "{levelname:<8}  : {message}"
 
 [logging.file]
 level        = "trace"
@@ -53,13 +45,6 @@ colour       = true
 target       = ["stdout", "rotate"]
 format       = "{message}"
 filename_fmt = "doot_printed.log"
-
-[logging.subprinters]
-default       = {level="user"}
-cmd           = {level="user",  colour="cyan"}
-task_header   = {level="user",  colour="magenta"}
-task          = {level="user",  colour="white"}
-action_exec   = {level="user",  colour="cyan"}
 
 [logging.extra]
 

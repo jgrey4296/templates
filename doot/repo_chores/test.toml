@@ -4,9 +4,9 @@ doot-version = "1.1"
 [[locations]]
 
 [[tasks.test]]
-name = "pytest"
-doc  = ["run project tests"]
-setup = [] # TODO: use the right env
-actions = [
+name     = "pytest"
+doc      = ["run project tests"]
+setup    = []  # TODO: use the right env
+actions  = [
         {do="shell!", args=["pytest"]},
 ]

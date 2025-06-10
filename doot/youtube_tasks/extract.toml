@@ -9,13 +9,12 @@ extract_tars   = "extract_tars"
 extract_backup = "/media/john/big_ex/datasets/youtube/extracted"
 extract_output = "/media/john/data/datasets/todo/youtube"
 
-
 [[tasks.yt]]
-name = "+.joint"
-doc = ["unpack then extract from a tar"]
-cli     = [
-        { name="<1>target", type="str", default="{youtube!p}/northernlion.tar.gz"},
-        { name="<2>out",    type="str", default="unpacked"},
+name  = "+.joint"
+doc   = ["unpack then extract from a tar"]
+cli   = [
+    { name="<1>target", type="str", default="{youtube!p}/northernlion.tar.gz"},
+    { name="<2>out",    type="str", default="unpacked"},
 ]
 actions = [
     {do="job.expand", template="yt::unpack",  inject={now=["target", "out"]}, update_="unpack"},
@@ -28,8 +27,8 @@ actions = [
 name    = "unpack"
 doc     = ["unpack {target.tar.gz} into raw/{out}"]
 cli     = [
-        { name="<1>target", type="str", default="{youtube!p}/northernlion.tar.gz"},
-        { name="<2>out",    type="str", default="unpacked"},
+    { name="<1>target", type="str", default="{youtube!p}/northernlion.tar.gz"},
+    { name="<2>out",    type="str", default="unpacked"},
 ]
 actions = [
         {do="path.elements", from="{target!p}"},
@@ -40,16 +39,16 @@ actions = [
 ]
 
 [[tasks.yt]]
-name                     = "+.extract"
-doc                      = ["Walk an unpacked youtube data directory, extracting to into {extracted}/{pstem}.jsonnl"]
-cli                      = [{ name="<1>target", type="str", default="northernlion"}]
-queue_behaviour          = "default"
-recursive                = false
-exts                     = [".json"]
-roots                    = ["{yt_raw!p}/{target}"]
-jsonl                    = "{extracted!p}/{pstem}.jsonl"
-select_limit             = -1
-cleanup         = [
+name             = "+.extract"
+doc              = ["Walk an unpacked youtube data directory, extracting to into {extracted}/{pstem}.jsonnl"]
+cli              = [{ name="<1>target", type="str", default="northernlion"}]
+queue_behaviour  = "default"
+recursive        = false
+exts             = [".json"]
+roots            = ["{yt_raw!p}/{target}"]
+jsonl            = "{extracted!p}/{pstem}.jsonl"
+select_limit     = -1
+cleanup          = [
     {do="dootle.actions.say:say", args=["complete"]},
     {do="pathParts", from_="target"},
     # gz and backup

@@ -4,10 +4,7 @@ doot-version = "1.1"
 [[tasks.update]]
 disabled   = true
 name       = "all"
-depends_on = [
-
-
-]
+depends_on = []
 
 [[tasks.update]]
 name = "_.uv"

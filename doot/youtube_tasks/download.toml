@@ -1,7 +1,6 @@
 ## download.toml -*- mode: toml -*-
 doot-version = "1.1"
 
-
 [[locations]]
 archive = "file::>dl-archive.txt"
 data    = "data"
@@ -9,13 +8,14 @@ backup  = "/media/john/big_ex/datasets/youtube/data/"
 
 [[tasks.dl]]
 name                 = "+.yt"
-doc                  = ["Download each channel in a csv using yt-dlp"]                   # <list[str]>
-queue_behaviour      = "default"            # <str>                default | auto | reactive
+doc                  = ["Download each channel in a csv using yt-dlp"]
+queue_behaviour      = "default"
 flag_file            = ".complete"
 subs                 = ["subs.main.csv"]
 sub_generator        = "taskcode.youtube:generate_tasks"
 actions             = [
-    {do="job.gen", fn_="sub_generator", update_="tasks", template_="sub_actions"}, # Custom expansion
+    # Custom expansion
+    {do="job.gen", fn_="sub_generator", update_="tasks", template_="sub_actions"},
     {do="job.queue", from_="tasks"},
 ]
 sub_actions          = [

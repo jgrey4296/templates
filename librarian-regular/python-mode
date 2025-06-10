@@ -175,9 +175,9 @@ typeshed                                             # https://github.com/python
 pylint                                               # https://pylint.readthedocs.io/en/latest/index.html
 pyi typed stub files                                 # https://typing.readthedocs.io/en/latest/spec/distributing.html#stub-files
 importlib.metadata                                   # https://importlib-metadata.readthedocs.io/en/latest/api.html
-typing                                               # https://docs.python.org/3/library/typing.html
+typing (stdlib)                                      # https://docs.python.org/2/library/typing.html
 Manim                                                # https://3b1b.github.io/manim/index.html
 hypothesis                                           # https://hypothesis.readthedocs.io/en/latest/
 Click                                                # https://click.palletsprojects.com/en/stable/
 Type Cheatsheet                                      # https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html
-Typing                                               # https://typing.readthedocs.io/en/latest/
+Typing (readthedocs)                                 # https://typing.readthedocs.io/en/latest/

@@ -13,7 +13,7 @@ from typing import cast, assert_type, assert_never
 from typing import Generic, NewType, Never
 from typing import no_type_check, final, override, overload
 # Protocols and Interfaces:
-from typing import Protocol, runtime_
+from typing import Protocol, runtime_checkable
 # from . import _interface as API # noqa: N812
 # Dataclasses:
 # `(+snippet-expand "pydantic")`

@@ -10,6 +10,7 @@ class ${1:My}Iterator:
 	var itr = $1Iterator.new()
 	for i in itr:
 	print(i)
+    https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_advanced.html#custom-iterators
 	"""
 
     func _init():
@@ -21,5 +22,5 @@ class ${1:My}Iterator:
 	func _iter_next() -> bool:
 		return False
 
-	func _iter_get():
+	func _iter_get() -> Variant:
 		return "value"

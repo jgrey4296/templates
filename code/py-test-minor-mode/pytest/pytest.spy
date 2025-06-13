@@ -2,6 +2,6 @@
 # name  : pytest.spy
 # uuid  : pytest.spy
 # key   : pytest.spy
-# group : test mocker
+# group : pytest mocker
 # --
 $2_spy = mocker.spy(${1:obj}, "${2:method}")$0

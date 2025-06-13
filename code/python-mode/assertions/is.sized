@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : is.sized
+# uuid  : is.sized
+# key   : is.sized
+# group : protocols
+# --
+hasattr($1, "__len__")$0

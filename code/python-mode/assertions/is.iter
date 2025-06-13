@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : is.iter
+# uuid  : is.iter
+# key   : is.iter
+# group : protocols
+# --
+hasattr($1, "__iter__")$0

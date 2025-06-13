@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : is.hash
+# uuid  : is.hash
+# key   : is.hash
+# group : protocols
+# --
+hasattr($1, "__hash__")$0

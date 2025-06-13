@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : is.generator
+# uuid  : is.generator
+# key   : is.generator
+# group : protocols
+# --
+hasattr($1, "send") and hasattr($1, "throw")$0

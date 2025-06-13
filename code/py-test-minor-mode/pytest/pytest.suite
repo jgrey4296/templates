@@ -2,7 +2,7 @@
 # name  : pytest.suite
 # uuid  : pytest.suite
 # key   : pytest.suite
-# group : test pytest
+# group : pytest pytest
 # --
 class TestSuite:
 

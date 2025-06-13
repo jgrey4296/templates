@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : as.nnone
+# uuid  : as.nnone
+# key   : as.nnone
+# group : assertions
+# --
+assert($1 is not None)$0

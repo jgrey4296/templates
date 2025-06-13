@@ -2,6 +2,6 @@
 # name  : pytest.expect.fail
 # uuid  : pytest.expect.fail
 # key   : pytest.expect.fail
-# group :
+# group : pytest
 # --
 @pytest.mark.xfail

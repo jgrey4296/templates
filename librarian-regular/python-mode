@@ -181,3 +181,4 @@ hypothesis                                           # https://hypothesis.readth
 Click                                                # https://click.palletsprojects.com/en/stable/
 Type Cheatsheet                                      # https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html
 Typing (readthedocs)                                 # https://typing.readthedocs.io/en/latest/
+stdlib protocols                                     # https://docs.python.org/3/library/collections.abc.html#collections-abstract-base-classes

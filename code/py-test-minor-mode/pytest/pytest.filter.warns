@@ -2,7 +2,7 @@
 # name  : pytest.filter.warns
 # uuid  : pytest.filter.warns
 # key   : pytest.filter.warns
-# group :
+# group : pytest
 # --
 def filter_str_warns():
     warnings.warn(DeprecationWarning("invalid escape sequence"))

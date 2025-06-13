@@ -2,7 +2,7 @@
 # name  : mock.dict
 # uuid  : mock.dict
 # key   : mock.dict
-# group :
+# group : mocking
 # --
 # https://stackoverflow.com/questions/28361564
 # Mock Objects have a keys() method which interferes, so:

@@ -2,7 +2,7 @@
 # name  : case.false
 # uuid  : case.false
 # key   : case.false
-# group : pytest match
+# group : pytest match assertions
 # --
 case x:
     assert(False), x

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : is.iterator
+# uuid  : is.iterator
+# key   : is.iterator
+# group : protocols
+# --
+hasattr($1, "__next__")$0

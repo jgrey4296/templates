@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : as.attr
+# uuid  : as.attr
+# key   : as.attr
+# group : assertions
+# --
+assert(hasattr($1, "$2"))$0

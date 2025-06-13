@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : is.container
+# uuid  : is.container
+# key   : is.container
+# group : protocols
+# --
+hasattr($1, "__contains__")$0

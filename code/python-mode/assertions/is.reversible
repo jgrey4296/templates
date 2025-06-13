@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : is.reversible
+# uuid  : is.reversible
+# key   : is.reversible
+# group : protocols
+# --
+hasattr($1, "__reversed__")$0

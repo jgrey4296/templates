@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : is.sequence
+# uuid  : is.sequence
+# key   : is.sequence
+# group : protocols
+# --
+hasattr($1, "__getitem__")$0

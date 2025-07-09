@@ -3,7 +3,8 @@
 jgdebug "Python setup"
 
 PYTHONSTARTUP="$HOME/github/_templates/python/repl_startup.py"
-IPYTHONDIR="$HOME/github/_templates/python/"
+IPYTHONDIR="${BASE_CONFIG}/ipython/"
+MYPY_CACHE_DIR="${JGCACHE}/mypy"
 
 PRE_COMMIT_USE_MICROMAMBA=1
 

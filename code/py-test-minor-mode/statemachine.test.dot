@@ -1,0 +1,27 @@
+# -*- mode: snippet -*-
+# name  : statemachine.test.dot
+# uuid  : statemachine.test.dot
+# key   : statemachine.test.dot
+# group : statemachine pytest dot graph
+# --
+class TestMachine_Dot:
+    """ Write out the dot graphs of the machines """
+
+    @pytest.fixture(scope="function")
+    def fsm(self) -> StateMachine:
+        model = None
+        return Machine(model)
+
+    @pytest.fixture(scope="function")
+    def target(self):
+        return pl.Path(__file__).parent.parent  / "_graphs"
+
+    def test_sanity(self):
+        assert(True is not False) # noqa: PLR0133
+
+    def test_task_dot(self, fsm, target):
+        fsm_name  = type(fsm).__name__
+        text      = fsm._graph().to_string()
+        tfile     = target / f"_{fsm_name}.dot"
+        tfile.write_text(text)
+        assert(tfile.exists())

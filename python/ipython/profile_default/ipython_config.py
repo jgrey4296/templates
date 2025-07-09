@@ -26,7 +26,7 @@ c = get_config()  #noqa
 ## Run the file referenced by the PYTHONSTARTUP environment
 #          variable at IPython startup.
 #  Default: True
-# c.InteractiveShellApp.exec_PYTHONSTARTUP = True
+c.InteractiveShellApp.exec_PYTHONSTARTUP = False
 
 ## List of files to run at IPython startup.
 #  Default: []

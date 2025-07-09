@@ -5,18 +5,28 @@
 # --
 ##-- mypy
 # https://mypy.readthedocs.io/en/stable/config_file.html
-[tool.mypy]
-python_version      = "3.12"
-follow_imports      = "skip"
-cache_dir           = ".temp/mypy_cache"
-incremental         = true
+  [tool.mypy]
+strict                  = false
+python_version          = "3.12"
+python_executable       = ".venv/bin/python"
+cache_dir               = "~/_cache_/mypy"
+incremental             = true
+follow_imports          = "silent"
+follow_untyped_imports  = true
+ignore_missing_imports  = false
+enable_error_code       = [
+    "explicit-override", "ignore-without-code",
+    "possibly-undefined", "unreachable",
+    "type-arg",
+    ]
+disable_error_code   = []
 
-warn_return_any     = true
-warn_unused_configs = true
+warn_return_any      = true
+warn_unused_configs  = true
 
 # Per-module options:
 # [[tool.mypy.overrides]]
-# module                = "blah"
+# module             = "blah"
 # disallow_untyped_defs = true
 
 ##-- end mypy

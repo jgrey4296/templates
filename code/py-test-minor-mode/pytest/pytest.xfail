@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : xfail
+# uuid  : xfail
+# key   : xfail
+# group : pytest
+# --
+@pytest.mark.xfail$0

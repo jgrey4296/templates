@@ -26,28 +26,47 @@
     ))
 
 (defface jg-unimportant '((t :background "#a2663c")) "" :group 'jg)
+
 (defface jg-public      '((t :background "#009591")) "" :group 'jg)
+
 (defface jg-internal    '((t :background "#8700ff")) "" :group 'jg)
+
 (defface jg-internal    '((t :background "#8700ff")) "" :group 'jg)
+
 (defface jg-dunder      '((t :background "#5f00ff")) "" :group 'jg)
+
 (defface jg-error       '((t :background "#5f0000")) "" :group 'jg)
+
 (defface jg-convention  '((t :background "#875fff")) "" :group 'jg)
+
 (defface jg-return      '((t :background "#a2663c")) "" :group 'jg)
+
 (defface jg-dict        '((t :underline t :foreground "#00aa80")) "" :group 'jg)
+
 (defface jg-list        '((t :foreground "cyan"))                 "" :group 'jg)
+
 (defface jg-args        '((t :underline t :foreground "#57aadd")) "" :group 'jg)
 
 (defface jg-normal-line       '((t :background "#000000")) "The Evil Normal State Hl-line")
+
 (defface jg-insert-line       '((t :background "#005f00")) "The Evil Insert State Hl-line")
+
 (defface jg-visual-line       '((t :background "#005fff")) "The Evil Visual State Hl-line")
+
 (defface jg-motion-line       '((t :background "#5f0000")) "The Evil Motion State Hl-line")
+
 (defface jg-iedit-line        '((t :background "#8700af")) "The Evil iedit State Hl-line")
+
 (defface jg-iedit-insert-line '((t :background "#8700af")) "The Iedit Insert state Hl-line")
 
 (defface jg-emacs-line        '((t :background "#5f00ff")) "The Evil Emacs State Hl-line")
+
 (defface jg-replace-line      '((t :background "#8700ff")) "The Evil Replace State Hl-line")
+
 (defface jg-hybrid-line       '((t :background "#0087ff")) "The Evil Hybrid State Hl-line")
+
 (defface jg-evilified-line    '((t :background "#5f5f00")) "The Evil Evilified State Hl-line")
+
 (defface jg-lisp-line         '((t :background "#875fff")) "The Evil Lisp State Hl-line")
 
 ;;-- variables
@@ -88,6 +107,7 @@ determine the exact padding."
                 (
                  ;; name        default   256       16
                  ;;-- colours:greyscale
+                 (black         '("#1b1d1e" "#1b1d1e" nil))
                  (bg         '("#1b1d1e" "#1b1d1e" nil))
                  (bg-alt     '("#262829" "#262829" nil))
                  (base0      '("#1b1d1e" "#1b1d1e" "black"))
@@ -95,13 +115,14 @@ determine the exact padding."
                  (base2      '("#303030" "#303030" "brightblack"))
                  (base3      '("#303030" "#303030" "brightblack"))
                  (base4      '("#505050" "#505050" "brightblack"))
+                 (grey       base4)
                  (base5      '("#505050" "#505050" "brightblack"))
                  (base6      '("#808080" "#808080" "brightblack"))
                  (base7      '("#808080" "#808080" "brightblack"))
                  (base8      '("#DFDFDF" "#dfdfdf" "white"))
                  (fg         '("#dddddd" "#dddddd" "white"))
                  (fg-alt     '("#5B6268" "#2d2d2d" "white"))
-                 (grey       base4)
+                 (white      '("#dddddd" "#dddddd" "white"))
 
                  ;;-- end colours:greyscale
 
@@ -224,6 +245,12 @@ determine the exact padding."
                  ((font-lock-semi-unimportant &override)   :background aerugo7)
                  ;;-- end font-lock
 
+                 ;;-- flycheck
+                 ((flycheck-error &override) :foreground red :slant 'italic)
+                 ((flycheck-warning &override) :foreground orange :slant 'italic)
+
+                ;;-- end flycheck
+
                  ;;-- line-number
                  ((line-number &override)                  :foreground base4)
                  ((line-number-current-line &override)     :foreground iocyan :background bg)
@@ -245,6 +272,21 @@ determine the exact padding."
                  ((highlight-indent-guides-character-face &override) :background red)
                  ;;-- end highlights
 
+                 ;;-- outline
+                 ((outline-1 &override) :foreground blue)
+                 ((outline-2 &override) :foreground magenta)
+                 ((outline-3 &override) :foreground dark-cyan)
+                 ((outline-6 &override) :foreground (doom-lighten dark-cyan 0.2))
+                 ((outline-7 &override) :foreground (doom-lighten blue 0.4))
+                 ((outline-8 &override) :foreground (doom-lighten magenta 0.4))
+                 ;;-- end outline
+
+                 ;;-- completion
+                 ((company-tooltip-selection &override) :foreground iopink)
+                 (ivy-current-match :background dark-blue :distant-foreground base0 :weight 'normal)
+                 (helm-selection             :distant-foreground bg :background aerugo23 :extend t )
+                 ;;-- end completion
+
                  ;;-- misc
                  ((tooltip &override)                      :background bg)
                  ((nav-flash-face &override) :background bg-alt :foreground iopink)
@@ -261,21 +303,6 @@ determine the exact padding."
                  (mode-line-emphasis :foreground (if -modeline-bright base8 highlight))
                  (mode-line-inactive :background modeline-bg-inactive :foreground modeline-fg-alt :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-inactive)))
                  ;;-- end misc
-
-                 ;;-- outline
-                 ((outline-1 &override) :foreground blue)
-                 ((outline-2 &override) :foreground magenta)
-                 ((outline-3 &override) :foreground dark-cyan)
-                 ((outline-6 &override) :foreground (doom-lighten dark-cyan 0.2))
-                 ((outline-7 &override) :foreground (doom-lighten blue 0.4))
-                 ((outline-8 &override) :foreground (doom-lighten magenta 0.4))
-                 ;;-- end outline
-
-                 ;;-- completion
-                 ((company-tooltip-selection &override) :foreground iopink)
-                 (ivy-current-match :background dark-blue :distant-foreground base0 :weight 'normal)
-                 (helm-selection             :distant-foreground bg :background aerugo23 :extend t )
-                 ;;-- end completion
 
                  ;; ----- Modes
 
@@ -335,7 +362,6 @@ determine the exact padding."
                  ;;-- base var overrides
                  ;; ()
                  ;;-- end base var overrides
-
 
                 )
 

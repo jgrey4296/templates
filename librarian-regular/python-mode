@@ -1,193 +1,193 @@
-(stdlib) stdlib                                               # https://docs.python.org/3/library/index.html
-(stdlib) Data Model                                           # https://docs.python.org/3/reference/datamodel.html
-(stdlib) Audit events                                         # https://docs.python.org/3/library/audit_events.html#audit-events
-(stdlib) Descriptors                                          # https://docs.python.org/3/howto/descriptor.html
-(stdlib) Logging                                              # https://docs.python.org/3/library/logging.html
-(stdlib) Match Statement                                      # https://docs.python.org/3/reference/compound_stmts.html#the-match-statement
-(stdlib) Mocks                                                # https://docs.python.org/3/library/unittest.mock.html
-(stdlib) Unittest                                             # https://docs.python.org/3/library/unittest.html
-(stdlib) argparse                                             # https://docs.python.org/3/howto/argparse.html
-(stdlib) datetime                                             # https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
-(stdlib) functools                                            # https://docs.python.org/3/library/functools.html
-(stdlib) itertools                                            # https://docs.python.org/3/library/itertools.html
-(stdlib) pathlib                                              # https://docs.python.org/3/library/pathlib.html
-(stdlib) python/C api                                         # https://docs.python.org/3/c-api/index.html
-(stdlib) re                                                   # https://docs.python.org/3/library/re.html
-(stdlib) stdlib protocols                                     # https://docs.python.org/3/library/collections.abc.html#collections-abstract-base-classes
-(stdlib) str formatting %                                     # https://docs.python.org/3/library/stdtypes.html#printf-style-string-formatting
-(stdlib) str formatting {}                                    # https://docs.python.org/3/library/string.html#formatspec
-(stdlib) string                                               # https://docs.python.org/3/library/string.html
-(stdlib) tomllib                                              # https://docs.python.org/3/library/tomllib.html
-(stdlib) typing (stdlib)                                      # https://docs.python.org/3/library/typing.html
-(stdlib) venv                                                 # https://docs.python.org/3/library/venv.html
-(stdlib) zlib                                                 # https://docs.python.org/3/library/zlib.html
+stdlib               (stdlib)  # https://docs.python.org/3/library/index.html
+Data Model           (stdlib)  # https://docs.python.org/3/reference/datamodel.html
+Audit events         (stdlib)  # https://docs.python.org/3/library/audit_events.html#audit-events
+Descriptors          (stdlib)  # https://docs.python.org/3/howto/descriptor.html
+Logging              (stdlib)  # https://docs.python.org/3/library/logging.html
+Match Statement      (stdlib)  # https://docs.python.org/3/reference/compound_stmts.html#the-match-statement
+Mocks                (stdlib)  # https://docs.python.org/3/library/unittest.mock.html
+Unittest             (stdlib)  # https://docs.python.org/3/library/unittest.html
+argparse             (stdlib)  # https://docs.python.org/3/howto/argparse.html
+datetime             (stdlib)  # https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
+functools            (stdlib)  # https://docs.python.org/3/library/functools.html
+itertools            (stdlib)  # https://docs.python.org/3/library/itertools.html
+pathlib              (stdlib)  # https://docs.python.org/3/library/pathlib.html
+python/C api         (stdlib)  # https://docs.python.org/3/c-api/index.html
+re                   (stdlib)  # https://docs.python.org/3/library/re.html
+stdlib protocols     (stdlib)  # https://docs.python.org/3/library/collections.abc.html#collections-abstract-base-classes
+str formatting %     (stdlib)  # https://docs.python.org/3/library/stdtypes.html#printf-style-string-formatting
+str formatting {}    (stdlib)  # https://docs.python.org/3/library/string.html#formatspec
+string               (stdlib)  # https://docs.python.org/3/library/string.html
+tomllib              (stdlib)  # https://docs.python.org/3/library/tomllib.html
+venv                 (stdlib)  # https://docs.python.org/3/library/venv.html
+zlib                 (stdlib)  # https://docs.python.org/3/library/zlib.html
 
-(typing) mypy                                                 # https://mypy.readthedocs.io/en/stable/index.html
-(typing) Pyright                                              # https://microsoft.github.io/pyright/
-(typing) Type Cheatsheet                                      # https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html
-(typing) Typing (readthedocs)                                 # https://typing.readthedocs.io/en/latest/
-(typing) typeshed                                             # https://github.com/python/typeshed
-(typing) pyi typed stub files                                 # https://typing.readthedocs.io/en/latest/spec/distributing.html#stub-files
+mypy                 (typing)  # https://mypy.readthedocs.io/en/stable/index.html
+Pyright              (typing)  # https://microsoft.github.io/pyright/
+Type Cheatsheet      (typing)  # https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html
+stdlb Typing         (typing)  # https://docs.python.org/3/library/typing.html
+Readthedocs Typing   (typing)  # https://typing.readthedocs.io/en/latest/
+typeshed             (typing)  # https://github.com/python/typeshed
+pyi typed stub files (typing)  # https://typing.readthedocs.io/en/latest/spec/distributing.html#stub-files
 
-(testing) Pytest                                               # https://docs.pytest.org/en/stable/how-to/fixtures.html
-(testing) Pytest Mock                                          # https://pytest-mock.readthedocs.io/en/latest/
-(testing) Pytest Plugins                                       # https://docs.pytest.org/en/latest/reference/plugin_list.html
-(testing) Tox                                                  # https://tox.wiki/en/4.6.4/
+Pytest               (testing) # https://docs.pytest.org/en/stable/how-to/fixtures.html
+Pytest Mock          (testing) # https://pytest-mock.readthedocs.io/en/latest/
+Pytest Plugins       (testing) # https://docs.pytest.org/en/latest/reference/plugin_list.html
+Tox                  (testing) # https://tox.wiki/en/4.6.4/
 
-PEPs                                                 # https://peps.python.org/pep-0000/
-PEP 635: Match statement                             # https://peps.python.org/pep-0635
-PEP 634: Match Spec PEP                              # https://peps.python.org/pep-0634/
-PEP 405: Virtual Envs                                # https://peps.python.org/pep-0405
-PEP 8:   Style                                       # https://peps.python.org/pep-0008/
+PEPs                           # https://peps.python.org/pep-0000/
+PEP 635: Match statement       # https://peps.python.org/pep-0635
+PEP 634: Match Spec PEP        # https://peps.python.org/pep-0634/
+PEP 405: Virtual Envs          # https://peps.python.org/pep-0405
+PEP 8:   Style                 # https://peps.python.org/pep-0008/
 
-(tooling) build                                                # https://github.com/pypa/build
-(tooling) conventional commits                                 # https://www.conventionalcommits.org/en/v1.0.0/#specification
-(tooling) importlib.metadata                                   # https://importlib-metadata.readthedocs.io/en/latest/api.html
-(tooling) doit                                                 # https://pydoit.org/contents.html
-(tooling) jinja                                                # https://palletsprojects.com/p/jinja/
-(tooling) ipython                                              # https://ipython.readthedocs.io/en/stable/index.html
-(tooling) isort                                                # https://pycqa.github.io/isort/
-(tooling) pre-commit                                           # https://pre-commit.com/
-(tooling) Semantic Release                                     # https://python-semantic-release.readthedocs.io/en/latest/
-(tooling) pyproject.toml spec                                  # https://packaging.python.org/en/latest/specifications/declaring-project-metadata/#declaring-project-metadata
-(tooling) PyPi Status                                          # https://status.python.org/
-(tooling) Maturin                                              # https://www.maturin.rs/index.html
-(tooling) setuptools                                           # https://setuptools.readthedocs.io/en/latest/userguide/index.html
-(tooling) setuptools-rust                                      # https://setuptools-rust.readthedocs.io/en/latest/
-(tooling) conda                                                # https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
-(tooling) pylint                                               # https://pylint.readthedocs.io/en/latest/index.html
-(tooling) Ruff Rules                                           # https://docs.astral.sh/ruff/rules/
-(tooling) Packaging                                            # https://packaging.pypa.io/en/stable/
-(tooling) Luigi                                                # https://luigi.readthedocs.io/en/stable/index.html
-(tooling) Mamba                                                # https://mamba.readthedocs.io/
-(tooling) Selenium                                             # https://www.selenium.dev/documentation/
-(tooling) SnakeMake                                            # https://snakemake.readthedocs.io/
-(tooling) Version specifiers                                   # https://packaging.python.org/en/latest/specifications/version-specifiers/#version-specifiers
-(tooling) sphinx                                               # https://www.sphinx-doc.org/en/master/contents.html
-(tooling) scons                                                # https://scons.org/documentation.html
-(tooling) black                                                # https://black.readthedocs.io/en/stable/
-(tooling) readthedocs                                          # https://docs.readthedocs.io/en/stable/
-(tooling) pyoxidizer                                           # https://pyoxidizer.readthedocs.io/en/stable/index.html
-(tooling) pyo3                                                 # https://pyo3.rs/v0.22.2/
-(tooling) pypi                                                 # https://pypi.org/
-(tooling) pip                                                  # https://pip.pypa.io/en/stable/
-(tooling) pipx                                                 # https://pypa.github.io/pipx/
-(tooling) poetry                                               # https://python-poetry.org/
-(tooling) pelican                                              # https://docs.getpelican.com/en/latest/
+build                (tooling) # https://github.com/pypa/build
+conventional commits (tooling) # https://www.conventionalcommits.org/en/v1.0.0/#specification
+importlib.metadata   (tooling) # https://importlib-metadata.readthedocs.io/en/latest/api.html
+doit                 (tooling) # https://pydoit.org/contents.html
+jinja                (tooling) # https://palletsprojects.com/p/jinja/
+ipython              (tooling) # https://ipython.readthedocs.io/en/stable/index.html
+isort                (tooling) # https://pycqa.github.io/isort/
+pre-commit           (tooling) # https://pre-commit.com/
+Semantic Release     (tooling) # https://python-semantic-release.readthedocs.io/en/latest/
+pyproject.toml spec  (tooling) # https://packaging.python.org/en/latest/specifications/declaring-project-metadata/#declaring-project-metadata
+PyPi Status          (tooling) # https://status.python.org/
+Maturin              (tooling) # https://www.maturin.rs/index.html
+setuptools           (tooling) # https://setuptools.readthedocs.io/en/latest/userguide/index.html
+setuptools-rust      (tooling) # https://setuptools-rust.readthedocs.io/en/latest/
+conda                (tooling) # https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
+pylint               (tooling) # https://pylint.readthedocs.io/en/latest/index.html
+Ruff Rules           (tooling) # https://docs.astral.sh/ruff/rules/
+Packaging            (tooling) # https://packaging.pypa.io/en/stable/
+Luigi                (tooling) # https://luigi.readthedocs.io/en/stable/index.html
+Mamba                (tooling) # https://mamba.readthedocs.io/
+Selenium             (tooling) # https://www.selenium.dev/documentation/
+SnakeMake            (tooling) # https://snakemake.readthedocs.io/
+Version specifiers   (tooling) # https://packaging.python.org/en/latest/specifications/version-specifiers/#version-specifiers
+sphinx               (tooling) # https://www.sphinx-doc.org/en/master/contents.html
+scons                (tooling) # https://scons.org/documentation.html
+black                (tooling) # https://black.readthedocs.io/en/stable/
+readthedocs          (tooling) # https://docs.readthedocs.io/en/stable/
+pyoxidizer           (tooling) # https://pyoxidizer.readthedocs.io/en/stable/index.html
+pyo3                 (tooling) # https://pyo3.rs/v0.22.2/
+pypi                 (tooling) # https://pypi.org/
+pip                  (tooling) # https://pip.pypa.io/en/stable/
+pipx                 (tooling) # https://pypa.github.io/pipx/
+poetry               (tooling) # https://python-poetry.org/
+pelican              (tooling) # https://docs.getpelican.com/en/latest/
 
-(core) pandas                                               # https://pandas.pydata.org/docs/
-(core) stackprinter                                         # https://github.com/cknd/stackprinter
-(core) statemachine                                         # https://python-statemachine.readthedocs.io/en/latest/
-(core) reaktiv signals                                      # https://reaktiv.readthedocs.io/en/latest/
-(core) sh                                                   # https://sh.readthedocs.io/en/latest/
-(core) pyparsing                                            # https://pyparsing-docs.readthedocs.io/en/latest/
-(core) boltons                                              # https://boltons.readthedocs.io/en/latest/
-(core) more-itertools                                       # https://more-itertools.readthedocs.io/en/stable/
-(core) pydantic                                             # https://docs.pydantic.dev/latest/concepts/models/
-(core) tqdm                                                 # https://tqdm.github.io/
-(core) seaborn                                              # https://seaborn.pydata.org/api.html
-(core) matplotlib                                           # https://matplotlib.org/stable/api/index.html
-(core) sty                                                  # https://github.com/feluxe/sty
-(core) scikit-learn                                         # https://scikit-learn.org/stable/user_guide.html
-(core) scipy                                                # https://docs.scipy.org/doc/scipy/reference/index.html
-(core) numpy                                                # https://numpy.org/doc/stable/
-(core) networkx                                             # https://networkx.github.io/
-(core) beautiful Soup                                       # https://beautiful-soup-4.readthedocs.io/en/latest/
-(core) polars api                                           # https://docs.pola.rs/py-polars/html/reference/
-(core) polars guide                                         # https://docs.pola.rs/user-guide/
-(core) construct                                            # https://construct.readthedocs.io/en/latest/
+pandas               (core)    # https://pandas.pydata.org/docs/
+stackprinter         (core)    # https://github.com/cknd/stackprinter
+statemachine         (core)    # https://python-statemachine.readthedocs.io/en/latest/
+reaktiv signals      (core)    # https://reaktiv.readthedocs.io/en/latest/
+sh                   (core)    # https://sh.readthedocs.io/en/latest/
+pyparsing            (core)    # https://pyparsing-docs.readthedocs.io/en/latest/
+boltons              (core)    # https://boltons.readthedocs.io/en/latest/
+more-itertools       (core)    # https://more-itertools.readthedocs.io/en/stable/
+pydantic             (core)    # https://docs.pydantic.dev/latest/concepts/models/
+tqdm                 (core)    # https://tqdm.github.io/
+seaborn              (core)    # https://seaborn.pydata.org/api.html
+matplotlib           (core)    # https://matplotlib.org/stable/api/index.html
+sty                  (core)    # https://github.com/feluxe/sty
+scikit-learn         (core)    # https://scikit-learn.org/stable/user_guide.html
+scipy                (core)    # https://docs.scipy.org/doc/scipy/reference/index.html
+numpy                (core)    # https://numpy.org/doc/stable/
+networkx             (core)    # https://networkx.github.io/
+beautiful Soup       (core)    # https://beautiful-soup-4.readthedocs.io/en/latest/
+polars api           (core)    # https://docs.pola.rs/py-polars/html/reference/
+polars guide         (core)    # https://docs.pola.rs/user-guide/
+construct            (core)    # https://construct.readthedocs.io/en/latest/
 
-(db) Alembic                                              # https://alembic.sqlalchemy.org/en/latest/tutorial.html
-(db) pony                                                 # https://docs.ponyorm.org/
-(db) SQLAlchemy                                           # https://docs.sqlalchemy.org/en/20/
-(db) SQLAlchemy Tutorial                                  # http://pythoncentral.io/introductory-tutorial-python-sqlalchemy/
+Alembic              (db)      # https://alembic.sqlalchemy.org/en/latest/tutorial.html
+pony                 (db)      # https://docs.ponyorm.org/
+SQLAlchemy           (db)      # https://docs.sqlalchemy.org/en/20/
+SQLAlchemy Tutorial  (db)      # http://pythoncentral.io/introductory-tutorial-python-sqlalchemy/
 
 
-(lib) Algorithm Library                                    # https://algorist.com/algorist.html
-(lib) Apache Airflow                                       # https://airflow.apache.org/docs/apache-airflow/stable/index.html
-(lib) Apache Airflow Py                                    # https://github.com/apache/airflow-client-python/blob/main/airflow_client/README.md
-(lib) Click                                                # https://click.palletsprojects.com/en/stable/
-(lib) Dagster                                              # https://docs.dagster.io/
-(lib) DoWhy                                                # https://www.pywhy.org/dowhy/v0.10.1/user_guide/foreword.html
-(lib) Helium                                               # https://github.com/mherrmann/selenium-python-helium/blob/master/docs/cheatsheet.md
-(lib) LSP Protocol                                         # https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/
-(lib) Manim                                                # https://3b1b.github.io/manim/index.html
-(lib) Nose                                                 # https://github.com/nose-devs/nose2
-(lib) Petl                                                 # https://petl.readthedocs.io/en/stable/index.html
-(lib) Pluggy                                               # https://pluggy.readthedocs.io/en/stable/
-(lib) PyCaret                                              # https://pycaret.gitbook.io/docs/
-(lib) PyGObject                                            # https://pygobject.readthedocs.io/en/latest/
-(lib) Pyarrow/parquette                                    # https://arrow.apache.org/docs/python/getstarted.html
-(lib) Pydot                                                # https://github.com/pydot/pydot
-(lib) Selenium-Python                                      # https://selenium-python.readthedocs.io/
-(lib) Twisted                                              # https://docs.twisted.org/en/stable/
-(lib) WebDriver                                            # https://developer.mozilla.org/en-US/docs/Web/WebDriver
-(lib) astroid                                              # https://pylint.pycqa.org/projects/astroid/en/latest/index.html
-(lib) bibtex parser                                        # https://bibtexparser.readthedocs.io/en/main/
-(lib) bonobo ETL                                           # https://docs.bonobo-project.org/en/master/
-(lib) cairo                                                # https://pycairo.readthedocs.io/en/latest/reference/context.html
-(lib) cleo                                                 # https://cleo.readthedocs.io/en/latest/
-(lib) coverage                                             # https://coverage.readthedocs.io/en
-(lib) cpython internals                                    # https://devguide.python.org/internals/
-(lib) dill                                                 # https://dill.readthedocs.io/en/latest/
-(lib) dirty-equals                                         # https://dirty-equals.helpmanual.io/latest/
-(lib) django                                               # https://docs.djangoproject.com/en/5.0/
-(lib) flask                                                # https://flask.palletsprojects.com/en/1.2.x/
-(lib) floweaver                                            # https://floweaver.readthedocs.io/en/latest/
-(lib) gitlint                                              # https://jorisroovers.com/gitlint/latest/
-(lib) graphviz                                             # https://graphviz.readthedocs.io/en/stable/
-(lib) guppy3                                               # https://zhuyifei1999.github.io/guppy3/
-(lib) hypothesis                                           # https://hypothesis.readthedocs.io/en/latest/
-(lib) imageio                                              # https://imageio.readthedocs.io/en/stable/index.html
-(lib) jsonlines                                            # https://jsonlines.readthedocs.io/en/latest/
-(lib) liquid                                               # https://jg-rp.github.io/liquid/introduction/getting-started
-(lib) llvmlite                                             # https://llvmlite.readthedocs.io/en/latest/index.html
-(lib) marginal effects                                     # https://marginaleffects.com/index.html
-(lib) marshmallow                                          # https://marshmallow.readthedocs.io/en/stable/
-(lib) mastodon                                             # https://mastodonpy.readthedocs.io/en/stable/
-(lib) milksnake                                            # https://github.com/getsentry/milksnake
-(lib) moderngl                                             # https://moderngl.readthedocs.io/en/5.8.2/
-(lib) moviepy                                              # https://github.com/Zulko/moviepy
-(lib) noise                                                # https://github.com/caseman/noise
-(lib) numpy-illustrated                                    # https://github.com/axil/numpy-illustrated
-(lib) petl                                                 # https://petl.readthedocs.io/en/stable/
-(lib) pgmpy                                                # https://pgmpy.org/
-(lib) pillow                                               # https://pillow.readthedocs.io/en/stable/
-(lib) pomegranate                                          # https://pomegranate.readthedocs.io/en/latest/
-(lib) pronouncingpy                                        # https://pronouncing.readthedocs.io/en/latest/
-(lib) psutil                                               # https://psutil.readthedocs.io/en/latest/#
-(lib) pyaml                                                # https://pyyaml.org/
-(lib) pycycle                                              # https://github.com/bndr/pycycle
-(lib) pyephem                                              # https://github.com/brandon-rhodes/pyephem
-(lib) pyexcel                                              # https://github.com/pyexcel/pyexcel
-(lib) pygments                                             # https://pygments.org/docs/
-(lib) pygrametl                                            # https://chrthomsen.github.io/pygrametl/doc/quickstart/beginner.html
-(lib) pylatexenc                                           # https://github.com/phfaist/pylatexenc
-(lib) pylightxl                                            # https://github.com/PydPiper/pylightxl
-(lib) pympler                                              # https://github.com/pympler/pympler
-(lib) python-twitter                                       # https://python-twitter.readthedocs.io/en/latest/
-(lib) railroad-diagrams                                    # https://github.com/tabatkins/railroad-diagrams
-(lib) requests                                             # https://requests.readthedocs.io/en/latest/
-(lib) rich                                                 # https://rich.readthedocs.io/en/stable/introduction.html
-(lib) scrapy                                               # https://docs.scrapy.org/en/latest/
-(lib) slotscheck                                           # https://slotscheck.readthedocs.io/en/latest/
-(lib) sorobn                                               # https://github.com/MaxHalford/sorobn
-(lib) spacy                                                # https://spacy.io/usage
-(lib) structlog                                            # https://www.structlog.org/en/stable/
-(lib) supervisor                                           # http://supervisord.org/index.html
-(lib) sympy                                                # https://docs.sympy.org/latest/guides/index.html
-(lib) thefuzz                                              # https://github.com/seatgeek/thefuzz
-(lib) time complexity                                      # https://wiki.python.org/moin/TimeComplexity
-(lib) tomli-w                                              # https://github.com/hukkin/tomli-w
-(lib) toolz                                                # https://toolz.readthedocs.io/en/latest/
-(lib) twine                                                # https://twine.readthedocs.io/en/stable/
-(lib) urllib3                                              # https://urllib3.readthedocs.io/en/stable/index.html
-(lib) validators                                           # https://python-validators.github.io/validators/
-(lib) xsdata                                               # https://xsdata.readthedocs.io/en/latest/
-(lib) xsdata-plantuml                                      # https://github.com/tefra/xsdata-plantuml
-(lib) z3                                                   # https://github.com/Z3Prover/z3
+Algorithm Library    (lib)     # https://algorist.com/algorist.html
+Apache Airflow       (lib)     # https://airflow.apache.org/docs/apache-airflow/stable/index.html
+Apache Airflow Py    (lib)     # https://github.com/apache/airflow-client-python/blob/main/airflow_client/README.md
+Click                (lib)     # https://click.palletsprojects.com/en/stable/
+Dagster              (lib)     # https://docs.dagster.io/
+DoWhy                (lib)     # https://www.pywhy.org/dowhy/v0.10.1/user_guide/foreword.html
+Helium               (lib)     # https://github.com/mherrmann/selenium-python-helium/blob/master/docs/cheatsheet.md
+LSP Protocol         (lib)     # https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/
+Manim                (lib)     # https://3b1b.github.io/manim/index.html
+Nose                 (lib)     # https://github.com/nose-devs/nose2
+Petl                 (lib)     # https://petl.readthedocs.io/en/stable/index.html
+Pluggy               (lib)     # https://pluggy.readthedocs.io/en/stable/
+PyCaret              (lib)     # https://pycaret.gitbook.io/docs/
+PyGObject            (lib)     # https://pygobject.readthedocs.io/en/latest/
+Pyarrow/parquette    (lib)     # https://arrow.apache.org/docs/python/getstarted.html
+Pydot                (lib)     # https://github.com/pydot/pydot
+Selenium-Python      (lib)     # https://selenium-python.readthedocs.io/
+Twisted              (lib)     # https://docs.twisted.org/en/stable/
+WebDriver            (lib)     # https://developer.mozilla.org/en-US/docs/Web/WebDriver
+astroid              (lib)     # https://pylint.pycqa.org/projects/astroid/en/latest/index.html
+bibtex parser        (lib)     # https://bibtexparser.readthedocs.io/en/main/
+bonobo ETL           (lib)     # https://docs.bonobo-project.org/en/master/
+cairo                (lib)     # https://pycairo.readthedocs.io/en/latest/reference/context.html
+cleo                 (lib)     # https://cleo.readthedocs.io/en/latest/
+coverage             (lib)     # https://coverage.readthedocs.io/en
+cpython internals    (lib)     # https://devguide.python.org/internals/
+dill                 (lib)     # https://dill.readthedocs.io/en/latest/
+dirty-equals         (lib)     # https://dirty-equals.helpmanual.io/latest/
+django               (lib)     # https://docs.djangoproject.com/en/5.0/
+flask                (lib)     # https://flask.palletsprojects.com/en/1.2.x/
+floweaver            (lib)     # https://floweaver.readthedocs.io/en/latest/
+gitlint              (lib)     # https://jorisroovers.com/gitlint/latest/
+graphviz             (lib)     # https://graphviz.readthedocs.io/en/stable/
+guppy3               (lib)     # https://zhuyifei1999.github.io/guppy3/
+hypothesis           (lib)     # https://hypothesis.readthedocs.io/en/latest/
+imageio              (lib)     # https://imageio.readthedocs.io/en/stable/index.html
+jsonlines            (lib)     # https://jsonlines.readthedocs.io/en/latest/
+liquid               (lib)     # https://jg-rp.github.io/liquid/introduction/getting-started
+llvmlite             (lib)     # https://llvmlite.readthedocs.io/en/latest/index.html
+marginal effects     (lib)     # https://marginaleffects.com/index.html
+marshmallow          (lib)     # https://marshmallow.readthedocs.io/en/stable/
+mastodon             (lib)     # https://mastodonpy.readthedocs.io/en/stable/
+milksnake            (lib)     # https://github.com/getsentry/milksnake
+moderngl             (lib)     # https://moderngl.readthedocs.io/en/5.8.2/
+moviepy              (lib)     # https://github.com/Zulko/moviepy
+noise                (lib)     # https://github.com/caseman/noise
+numpy-illustrated    (lib)     # https://github.com/axil/numpy-illustrated
+petl                 (lib)     # https://petl.readthedocs.io/en/stable/
+pgmpy                (lib)     # https://pgmpy.org/
+pillow               (lib)     # https://pillow.readthedocs.io/en/stable/
+pomegranate          (lib)     # https://pomegranate.readthedocs.io/en/latest/
+pronouncingpy        (lib)     # https://pronouncing.readthedocs.io/en/latest/
+psutil               (lib)     # https://psutil.readthedocs.io/en/latest/#
+pyaml                (lib)     # https://pyyaml.org/
+pycycle              (lib)     # https://github.com/bndr/pycycle
+pyephem              (lib)     # https://github.com/brandon-rhodes/pyephem
+pyexcel              (lib)     # https://github.com/pyexcel/pyexcel
+pygments             (lib)     # https://pygments.org/docs/
+pygrametl            (lib)     # https://chrthomsen.github.io/pygrametl/doc/quickstart/beginner.html
+pylatexenc           (lib)     # https://github.com/phfaist/pylatexenc
+pylightxl            (lib)     # https://github.com/PydPiper/pylightxl
+pympler              (lib)     # https://github.com/pympler/pympler
+python-twitter       (lib)     # https://python-twitter.readthedocs.io/en/latest/
+railroad-diagrams    (lib)     # https://github.com/tabatkins/railroad-diagrams
+requests             (lib)     # https://requests.readthedocs.io/en/latest/
+rich                 (lib)     # https://rich.readthedocs.io/en/stable/introduction.html
+scrapy               (lib)     # https://docs.scrapy.org/en/latest/
+slotscheck           (lib)     # https://slotscheck.readthedocs.io/en/latest/
+sorobn               (lib)     # https://github.com/MaxHalford/sorobn
+spacy                (lib)     # https://spacy.io/usage
+structlog            (lib)     # https://www.structlog.org/en/stable/
+supervisor           (lib)     # http://supervisord.org/index.html
+sympy                (lib)     # https://docs.sympy.org/latest/guides/index.html
+thefuzz              (lib)     # https://github.com/seatgeek/thefuzz
+time complexity      (lib)     # https://wiki.python.org/moin/TimeComplexity
+tomli-w              (lib)     # https://github.com/hukkin/tomli-w
+toolz                (lib)     # https://toolz.readthedocs.io/en/latest/
+twine                (lib)     # https://twine.readthedocs.io/en/stable/
+urllib3              (lib)     # https://urllib3.readthedocs.io/en/stable/index.html
+validators           (lib)     # https://python-validators.github.io/validators/
+xsdata               (lib)     # https://xsdata.readthedocs.io/en/latest/
+xsdata-plantuml      (lib)     # https://github.com/tefra/xsdata-plantuml
+z3                   (lib)     # https://github.com/Z3Prover/z3
 
-(blog) Martin Heinz                                         # https://martinheinz.dev/
-(blog) unicode                                              # https://tonsky.me/blog/unicode/
-(blog) Awesome Libs                                         # https://github.com/vinta/awesome-python
-(blog) anti-patterns                                        # https://docs.quantifiedcode.com/python-anti-patterns/index.html
+Martin Heinz         (blog)    # https://martinheinz.dev/
+unicode              (blog)    # https://tonsky.me/blog/unicode/
+Awesome Libs         (blog)    # https://github.com/vinta/awesome-python
+anti-patterns        (blog)    # https://docs.quantifiedcode.com/python-anti-patterns/index.html

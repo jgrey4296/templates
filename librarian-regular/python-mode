@@ -1,4 +1,4 @@
-stdlib               (stdlib)  # https://docs.python.org/3/library/index.html
+stdlib root          (stdlib)  # https://docs.python.org/3/library/index.html
 Data Model           (stdlib)  # https://docs.python.org/3/reference/datamodel.html
 Audit events         (stdlib)  # https://docs.python.org/3/library/audit_events.html#audit-events
 Descriptors          (stdlib)  # https://docs.python.org/3/howto/descriptor.html

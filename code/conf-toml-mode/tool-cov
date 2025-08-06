@@ -35,7 +35,7 @@ exclude_also = [
 
     # Don't complain if non-runnable code isn't run:
     "if 0:",
-    "if False:"
+    "if False:",
     "if __name__ == .__main__.:",
 
     # Don't complain about abstract methods, they aren't run:

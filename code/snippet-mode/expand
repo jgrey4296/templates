@@ -4,4 +4,4 @@
 # key   : expand
 # group : snippets yas
 # --
-\`(+snippet-expand "$1")\'$0
+\`(+snippet-expand "$1")\`$0

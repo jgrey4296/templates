@@ -282,8 +282,11 @@ determine the exact padding."
                  ;;-- end outline
 
                  ;;-- completion
-                 ((company-tooltip-selection &override) :foreground iopink)
-                 (ivy-current-match :background dark-blue :distant-foreground base0 :weight 'normal)
+                 ((company-tooltip-selection &override)  :foreground iopink)
+                 (ivy-current-match          :foreground magenta :distant-foreground black :background black :inverse-video nil)
+                 (ivy-cursor                 :background magenta)
+                 (ivy-prompt-match           :background yellow :inverse-video nil)
+                 (swiper-line-face           :background red :foreground white :inverse-video nil :weight 'normal)
                  (helm-selection             :distant-foreground bg :background aerugo23 :extend t )
                  ;;-- end completion
 

@@ -3,7 +3,7 @@
 function jgdebug () {
     # a debug message that only prints when JGDEBUG is true
     if [[ -n "${JGDEBUG-}" ]]; then
-        echo "%% " $@
+        echo "%% " "$@"
     fi
 }
 
@@ -12,8 +12,8 @@ jgdebug Debug is "${JGDEBUG-}"
 function jg_maybe_inc_prompt {
     # Increment the shell level each time you go into a subshell
     if [[ -n "$PROMPT_NUM" ]] && [[ $PROMPT_NUM -eq $PROMPT_NUM ]] 2> /dev/null; then
-        jgdebug Prompt Level: $PROMPT_NUM
-        PROMPT_NUM=$(($PROMPT_NUM + 1))
+        jgdebug "Prompt Level: $PROMPT_NUM"
+        PROMPT_NUM=$((PROMPT_NUM + 1))
     else
         PROMPT_NUM=1
     fi
@@ -31,24 +31,24 @@ function jg_prompt_update {
     fi
     JGPATH=$(pwd | sed -r 's/.+?\/(.+?\/.+?)/...\/\1/')
 
-    if [[ -n "ASDF_DATA_DIR" ]]; then
+    if [[ -n "${ASDF_DATA_DIR}" ]]; then
         JG_PROMPT_INFO=":asdf$JG_PROMPT_INFO"
     fi
 
-    if [[ -n "SDKMAN_PLATFORM" ]]; then
-        JG_PROMPT_INFO=":sdkman$JG_PROMPT_INFO"
+    if [[ -n "${SDKMAN_PLATFORM}" ]]; then
+        JG_PROMPT_INFO=":sdkman${JG_PROMPT_INFO}"
     fi
 
     if [[ -n "${VIRTUAL_ENV}" ]]; then
-        BASE_ENV=$(dirname $VIRTUAL_ENV);
-        BASE_ENV=$(basename $BASE_ENV;)
-        JG_PROMPT_INFO=":venv(${BASE_ENV})$JG_PROMPT_INFO"
+        BASE_ENV=$(dirname "$VIRTUAL_ENV");
+        BASE_ENV=$(basename "$BASE_ENV";)
+        JG_PROMPT_INFO=":venv(${BASE_ENV})${JG_PROMPT_INFO}"
     elif [[ -n "${CONDA_DEFAULT_ENV-}" ]]; then
-        JG_PROMPT_INFO=":mamba(${CONDA_DEFAULT_ENV-})$JG_PROMPT_INFO"
+        JG_PROMPT_INFO=":mamba(${CONDA_DEFAULT_ENV-})${JG_PROMPT_INFO}"
     fi
 
     if [[ -n "$TMUX" ]]; then
-        JG_PROMPT_INFO="TMUX:$JG_PROMPT_INFO"
+        JG_PROMPT_INFO="TMUX:${JG_PROMPT_INFO}"
     fi
 
     }
@@ -62,7 +62,7 @@ function jg_set_prompt {
 
 function randname (){
     # get a random name, for tmux session names
-    cat /usr/share/dict/words | shuf | head -n 1 | sed "s/'//g"
+    shuf < /usr/share/dict/words | head -n 1 | sed "s/'//g"
 }
 
 function loginmux () {
@@ -78,10 +78,10 @@ function loginmux () {
 
     if { tmux has-session; }; then
    	    echo "Tmux Session Running"
-   	    tmux new-session -s `randname`
+        tmux new-session -s $(randname) 
     else
    	 echo "No Tmux Session"
-     tmux new-session -s `randname`
+     tmux new-session -s $(randname)
     fi
 }
 
@@ -90,7 +90,7 @@ function attach () {
     case "$TERM_PROGRAM" in
         tmux) return ;;
         emacs) return ;;
-        *) tmux attach ;;
+        *) tmux "attach" ;;
     esac
 }
 
@@ -113,8 +113,9 @@ esac
 
 function init_sdkman () {
     # For activating sdkman in a subshell
-    if [[ -e "$SDKMAN_DIR/bin/sdkman-init.sh" ]]; then
+    if [[ -e "${SDKMAN_DIR}/bin/sdkman-init.sh" ]]; then
         jgdebug "Initialising SDKMAN"
-        source "$SDKMAN_DIR/bin/sdkman-init.sh"
+        # shellcheck disable=SC1091
+        source "${SDKMAN_DIR}/bin/sdkman-init.sh"
     fi
 }

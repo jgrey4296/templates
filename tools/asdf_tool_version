@@ -2,6 +2,6 @@
 # Symlink to ~/.tool-versions
 # Elixir and Erlang VM management
 # https://asdf-vm.com/guide/getting-started.html
-
-erlang 26.1.2
-elixir 1.15.7-otp-26
+erlang 28.0.2
+elixir 1.18.4-otp-26
+uv 0.8.4

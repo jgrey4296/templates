@@ -1,4 +1,7 @@
 /* from https://support.mozilla.org/en-US/questions/1444201 */
+/* https://firefox-source-docs.mozilla.org/devtools-user/browser_toolbox/index.html */
+/* in the browser toolbox, look at the contextmenu.css file */
+/* set about:config toolkit.legacyUserProfileCustomizations.stylesheets to true */
 #context-navigation,
 #context-navigation > menuitem,
 #context-sep-navigation {
@@ -8,5 +11,17 @@
   display: none;
 }
 #context-reload:has(+ #context-stop:not([disabled])) {
+  display: none;
+}
+#context-openlinkinusercontext-menu {
+  display: none;
+}
+#context-sendimage {
+  display: none;
+}
+#context-setDesktopBackground {
+  display: none;
+}
+#context-translate-selection {
   display: none;
 }

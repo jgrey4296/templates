@@ -1,0 +1,59 @@
+/* custom.css -*- mode: CSS -*- */
+
+div.document{
+    width: 100%;
+}
+
+div.documentwrapper{
+    float: left;
+    width: 70%;
+    padding: 0;
+    margin-left: 30%;
+}
+
+div.bodywrapper {
+    margin: 0;
+}
+
+div.sphinxsidebar {
+    width: 30%;
+    left: 0px;
+    position: fixed;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+dl {
+    padding: 10px;
+}
+
+dl.py{
+    background-color: #843b6280;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+dl.py.data {
+    background-color: aqua;
+}
+
+div.jgcontainer{
+    background-color: #6b8b8c;
+    padding: 10px;
+    margin: 10px;
+}
+
+div.math {
+    background-color: #EFE6DD;
+    padding: 10px;
+}
+
+
+a.image-reference{
+    display: block;
+    margin: auto;
+
+}
+

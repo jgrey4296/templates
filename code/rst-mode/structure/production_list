@@ -4,7 +4,7 @@
 # key   : production.list
 # group : sphinx struct
 # --
-.. container::
+.. container:: highlight
 
    .. productionlist::
 

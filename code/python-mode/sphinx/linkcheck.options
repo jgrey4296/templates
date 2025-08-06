@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name  : linkcheck.options
+# uuid  : linkcheck.options
+# key   : linkcheck.options
+# group : sphinx links
+# --
+# ##-- LinkCheck ---------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-the-linkcheck-builder
+linkcheck_anchors                 = True
+linkcheck_anchors_ignore          = []
+linkcheck_anchors_ignore_for_url  = []
+linkcheck_exclude_documents       = []
+linkcheck_ignore                  = []
+linkcheck_allowed_redirects       = {}

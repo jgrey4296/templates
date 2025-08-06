@@ -4,7 +4,7 @@
 # key   : alabaster.options
 # group : sphinx docs
 # --
-##-- alabaster options
+# ##-- HTML Theme: Alabaster -------------------
 # https://alabaster.readthedocs.io/en/latest/index.html
 html_theme       = "alabaster"
 extlinks         = {}
@@ -18,7 +18,6 @@ html_sidebars    = {
     ]
 }
 
-
 html_theme_options = {
     "description"   : "",
     "github_user"   : "",
@@ -26,4 +25,3 @@ html_theme_options = {
     "fixed_sidebar" : True,
     "github_banner" : False,
 }
-##-- end alabaster

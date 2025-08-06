@@ -1,0 +1,40 @@
+# -*- mode: snippet -*-
+# name  : html.options
+# uuid  : html.options
+# key   : html.options
+# group : sphinx
+# --
+# ##-- HTML --------------------------------------
+"""By default, the read the docs theme.
+https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
+"""
+html_use_index                = True
+html_split_index              = False
+html_permalinks               = True
+html_copy_source              = True
+html_show_sourcelink          = True
+html_show_search_summary      = False
+html_codeblock_linenos_style  = 'inline'  # or 'table'
+# --
+html_theme_options            = {}
+html_sidebars                 = {} # Maps doc names -> templates
+html_additional_pages         = {} # Maps doc names -> templates
+html_context                  = {}
+html_search_options           = {}
+# (Relative to this file):
+html_theme_path   = []
+html_static_path  = ['_static']
+html_extra_path   = []  # for things like robots.txt
+html_style        = []
+# html_logo       = ''
+# html_favicon    = ''
+# Relative to static dir, or fully qualified urls
+html_css_files       = ["custom.css"]
+html_js_files        = ["custom.js"]
+# Generate additional domain specific indices
+html_domain_indices  = ["py-modindex"]
+#
+html_additional_pages.update({})
+html_context.update({
+    "collapse_index_py": True,
+})

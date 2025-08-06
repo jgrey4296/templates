@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : rst.options
+# uuid  : rst.options
+# key   : rst.options
+# group : sphinx
+# --
+# ##-- RST Options -------------------------------
+# rst_prolog = ""
+# rst_epilog = ""

@@ -1,8 +1,8 @@
 # -*- mode: snippet -*-
-# name  : docutils.imports
-# uuid  : docutils.imports
-# key   : docutils.imports
-# group : rst directive import
+# name  : import.docutils
+# uuid  : import.docutils
+# key   : import.docutils
+# group : rst directive import docutils sphinx
 # --
 from docutils import nodes
 from docutils.parsers.rst import directives

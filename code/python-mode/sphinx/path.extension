@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : path.extension
+# uuid  : path.extension
+# key   : path.extension
+# group : sphinx
+# --
+# -- Path setup ----------------------------------
+local_mod = str(pl.Path('../../').resolve())
+sys.path.insert(0, local_mod)

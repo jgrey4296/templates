@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name  : math.options
+# uuid  : math.options
+# key   : math.options
+# group : sphinx math
+# --
+# ##-- Math --------------------------------------
+"""
+https://docs.mathjax.org/en/latest/
+https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-math_eqref_format
+"""
+html_math_renderer = "mathjax" # or 'imgmath'
+math_eqref_format  = "({number})"
+math_number_all    = False
+math_numfig        = True
+math_numsep        = "."

@@ -1,0 +1,30 @@
+Directives:
+
+Python Domain           # https://www.sphinx-doc.org/en/master/usage/domains/python.html
+py:module::             #
+py:currentmodule::      #
+py:function::           #
+py:data::               #
+py:exception::          #
+py:class::              #
+py:attribute::          #
+py:property::           #
+py:type::               #
+py:method::             #
+py:staticmethod::       #
+py:classmethod::        #
+py:decorator::          #
+py:decoratormethod::    #
+
+Standard Domain         # https://www.sphinx-doc.org/en/master/usage/domains/standard.html
+option::                #
+confval::               #
+envvar::                #
+program::               #
+describe::              #
+object::                #
+
+RST Domain              # https://www.sphinx-doc.org/en/master/usage/domains/restructuredtext.html
+rst:directive::         #
+rst:directive:option::  #
+rst:role::              #

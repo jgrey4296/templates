@@ -2,7 +2,7 @@
 # name  : sphinx.parser
 # uuid  : sphinx.parser
 # key   : sphinx.parser
-# group : sphinx parser python
+# group : sphinx parser docutils
 # --
 from sphinx.parsers import Parser
 from docutils.statemachine import StringList

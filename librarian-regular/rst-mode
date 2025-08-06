@@ -15,6 +15,7 @@ Sphinx Config                      # https://www.sphinx-doc.org/en/master/usage/
 Sphinx Config Reference            # https://www.sphinx-doc.org/en/master/usage/configuration.html#build-config
 Sphinx Coverage                    # https://www.sphinx-doc.org/en/master/usage/extensions/coverage.html
 Sphinx Directives                  # https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html
+Sphinx Py Domain                   # https://www.sphinx-doc.org/en/master/usage/domains/python.html
 Sphinx Graphviz                    # https://www.sphinx-doc.org/en/master/usage/extensions/graphviz.html
 Sphinx Inheritance                 # https://www.sphinx-doc.org/en/master/usage/extensions/inheritance.html
 Sphinx Rst Basics                  # https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html

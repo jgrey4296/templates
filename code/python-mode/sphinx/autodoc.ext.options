@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name  : autodoc.ext.options
+# uuid  : autodoc.ext.options
+# key   : autodoc.ext.options
+# group : sphinx
+# --
+# ##-- Autodoc -----------------------------------
+# https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html
+#-- Events
+# autodoc-process-docstring
+# autodoc-before-process-signature
+# autodoc-process-signature
+# autodoc-process-bases
+# autodoc-skip-member
+#--
+autodoc_typehints           = 'description'
+autodoc_typehints_format    = 'short'
+autodoc_inherit_docstrings  = False

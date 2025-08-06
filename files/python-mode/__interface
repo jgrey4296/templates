@@ -2,7 +2,7 @@
 # Type Interface Specification
 from __future__ import annotations
 
-`(+snippet-expand "import.typing")'
+`(+snippet-expand "import.typing")`
 
 ##-|
 __all__ = []

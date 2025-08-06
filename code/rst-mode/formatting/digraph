@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name: digraph
-# key: graph
-# uuid: graph
+# key: digraph
+# uuid: digraph
 # group: graphics sphinx format
 # --
 .. digraph:: $1

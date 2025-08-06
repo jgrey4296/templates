@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name  : imgconvert.ext.options
+# uuid  : imgconvert.ext.options
+# key   : imgconvert.ext.options
+# group : sphinx imagemagick
+# --
+# ##-- imgconvert --------------------------------
+# https://www.sphinx-doc.org/en/master/usage/extensions/imgconverter.html
+#--
+# Path to conversion command:
+image_converter       = "convert"
+image_converter_args  = ()

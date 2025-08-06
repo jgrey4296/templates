@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name  : python.options
+# uuid  : python.options
+# key   : python.options
+# group : sphinx python domain
+# --
+# ##-- Python Domain -----------------------------
+python_maximum_signature_line_length  : int | None
+#--
+add_module_names                                = True
+python_display_short_literal_types              = False
+python_trailing_comma_in_multi_line_signatures  = True
+python_user_unqualified_type_names              = False
+trim_doctest_flags                              = True
+# Remove prefixes for indexiing
+modindex_common_prefix                = ["jgdv."]
+python_maximum_signature_line_length  = None

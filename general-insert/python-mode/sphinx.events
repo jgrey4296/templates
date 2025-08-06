@@ -1,0 +1,24 @@
+Sphinx Events:
+https://www.sphinx-doc.org/en/master/extdev/event_callbacks.html#events        # Source
+----                                                                           # ----
+config-inited(app, config)                                                     #
+builder-inited(app)                                                            #
+even-get-outdated(app, env, added, changed, removed) -> list[str]              #
+env-purge-doc(app, env, docname)                                               #
+env-before-read-docs(app, env, docnames)                                       #
+source-read(app, docname, content)                                             #
+include-read(app, relative_path, parent_docname, content)                      #
+object-description-transform(app, domain, objtype, contentnode)                #
+doctree-read(app, doctree)                                                     #
+missing-reference(app, env, node, contnode) -> Maybe[Node]                     #
+warn-missing-reference(app, domain, node) -> Maybe[True]                       #
+doctree-resolve(app, doctree, docname)                                         #
+env-merge-info(app, env, docnames, other)                                      #
+env-updated(app, env) -> list[str]                                             #
+env-get-updated(app, env) -> list[str]                                         #
+env-check-consistency(app, env)                                                #
+write-started(app, builder)                                                    #
+build-finished(app, exception)                                                 #
+html-collect-pages(app) -> list[(pagename, context, templatename)]             #
+html-page-context(app, pagename, templatename, context, doctree) -> Maybe[str] #
+linkcheck-process-uri(app, uri) -> Maybe[str]                                  #

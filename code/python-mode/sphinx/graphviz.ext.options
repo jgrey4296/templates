@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name  : graphviz.ext.options
+# uuid  : graphviz.ext.options
+# key   : graphviz.ext.options
+# group : sphinx graphviz
+# --
+# ##-- Graphviz ----------------------------------
+# https://www.sphinx-doc.org/en/master/usage/extensions/graphviz.html
+#--
+# Command name to invoke dot:
+graphviz_dot            =  "dot"
+graphviz_dot_args       = ()
+graphviz_output_format  = "svg"  # or "dot"

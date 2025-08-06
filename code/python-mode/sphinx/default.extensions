@@ -4,15 +4,33 @@
 # key   : default.extensions
 # group : sphinx
 # --
-'sphinx.ext.doctest',
-'sphinx.ext.autodoc',
-'sphinx.ext.autosummary',
-'sphinx.ext.napoleon',
-'sphinx.ext.extlinks',
-'sphinx_rtd_theme',
-'myst_parser',
-"autoapi.extension",
-"sphinx.ext.coverage",
+"myst_parser",
+"sphinx_rtd_theme",
+# Shorten external links: https://www.sphinx-doc.org/en/master/usage/extensions/extlinks.html
+"sphinx.ext.extlinks",
+# Runs docstring code? https://www.sphinx-doc.org/en/master/usage/extensions/doctest.html
+"sphinx.ext.doctest",
+# Alternative docstring formats: https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html
+"sphinx.ext.napoleon",
+# imagemagick conversion: https://www.sphinx-doc.org/en/master/usage/extensions/imgconverter.html
 "sphinx.ext.imgconverter",
+# Graph diagrams: https://www.sphinx-doc.org/en/master/usage/extensions/graphviz.html
+"sphinx.ext.graphviz",
+# Generates API by parsing, not importing: https://sphinx-autoapi.readthedocs.io/en/latest/
+"autoapi.extension",
+# For autapi's show-inheritance-diagram: https://www.sphinx-doc.org/en/master/usage/extensions/inheritance.html#module-sphinx.ext.inheritance_diagram
+"sphinx.ext.inheritance_diagram",
+# Link to other projects: https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html
 "sphinx.ext.intersphinx",
+# Refernce sections by title: https://www.sphinx-doc.org/en/master/usage/extensions/autosectionlabel.html
+"sphinx.ext.autosectionlabel",
+#--
+# Extensions which IMPORT CODE:
+# https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html
+"sphinx.ext.autodoc",
+# Generate autodocs: https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html
+"sphinx.ext.autosummary",
+# Build test coverage reports: https://www.sphinx-doc.org/en/master/usage/extensions/coverage.html
+"sphinx.ext.coverage",
+# Link descriptions to code: https://www.sphinx-doc.org/en/master/usage/extensions/viewcode.html
 "sphinx.ext.viewcode",

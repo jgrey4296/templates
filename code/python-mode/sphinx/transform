@@ -2,7 +2,7 @@
 # name  : sphinx.transform
 # uuid  : sphinx.transform
 # key   : sphinx.transform
-# group : sphinx python
+# group : sphinx docutils rst
 # --
 from docutils import nodes
 from docutils.parsers.rst import directives

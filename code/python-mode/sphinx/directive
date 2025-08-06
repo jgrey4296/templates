@@ -2,7 +2,7 @@
 # name  : sphinx.directive
 # uuid  : sphinx.directive
 # key   : sphinx.directive
-# group : sphinx python
+# group : sphinx docutils
 # --
 from docutils import nodes
 from docutils.parsers.rst import directives

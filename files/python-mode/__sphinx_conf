@@ -1,121 +1,85 @@
 #!/usr/bin/env python3
-# Configuration file for the Sphinx documentation builder.
-# https://www.sphinx-doc.org/en/master/usage/configuration.html
+"""
+Configuration file for the Sphinx documentation builder.
+https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+"""
+# ruff: noqa: TC003, A001, DTZ005, ERA001, PLR2044, ARG001, ANN001, ANN201, TC002
+# Imports --------------------------------
 from __future__ import annotations
-# -- Imports ----------------------------------------------------------------
-# import os
-# import sys
-# import pathlib as pl
+import os
+import sys
+import pathlib as pl
 import datetime
+from collections.abc import Sequence
+from typing import Literal
+from docutils import nodes
+from docutils.parsers.rst import directives
+from docutils.statemachine import StringList
+from sphinx.locale import __
+from sphinx.util.docutils import SphinxDirective
+# Types ----------------------------------
+exclude_patterns       : list[str]
+extensions             : list[str]
+highlight_options      : dict
+html_domain_indices    : bool|Sequence[str]
+html_additional_pages  : dict
+html_search_options    : dict
+html_js_files          : list
+html_sidebars          : dict
+html_static_path       : list
+html_theme_path        : list
+html_extra_path        : list
+html_style             : list[str] | str
+include_patterns       : list[str]
+needs_extensions       : dict[str, str]
+nitpick_ignore         : set[tuple[str, str]]
+nitpick_ignore_regex   : set[tuple[str, str]]
+source_suffix          : dict[str, str]
+templates_path         : list
+napoleon_type_aliases  : dict
+# ##--|
 
-# -- Project information -----------------------------------------------------
+# ##-- a: Project information --------------------
+`(+snippet-expand "project.info")`
 
-project        = 'Mostly Harmless'
-author         = 'John Grey'
-copyright      = '{}, {}'.format(datetime.datetime.now().strftime("%Y"), author)
-primary_domain = "py"
-extensions = [
-    'sphinx.ext.doctest',
-    'sphinx.ext.autodoc',
-    'sphinx.ext.autosummary',
-    'sphinx.ext.napoleon',
-    'sphinx.ext.extlinks',
-    'sphinx_rtd_theme',
-    'myst_parser',
-    "autoapi.extension",
-    "sphinx.ext.coverage",
-    "sphinx.ext.imgconverter",
-    "sphinx.ext.intersphinx",
-    "sphinx.ext.viewcode",
+# ##-- b: Extensions -----------------------------
+extensions      = [
+`(+snippet-expand "default.extensions" 4)`
+    
 ]
+needs_extensions  = {
+    # ExtName : Version
+}
 
-# -- Sphinx and Jina configuration -------------------------------------------
+`(+snippet-expand "path.extension")`
 
-def setup(app):
-    app.events.connect("builder-inited", add_jinja_ext, 1)
+`(+snippet-expand "html.options")`
 
-def add_jinja_ext(app):
-    app.builder.templates.environment.add_extension('jinja2.ext.debug')
+`(+snippet-expand "rtd.theme.options")`
 
-# -- Path setup --------------------------------------------------------------
+`(+snippet-expand "rst.options")`
 
-# If extensions (or modules to document with autodoc) are in another directory,
-# add these directories to sys.path here. If the directory is relative to the
-# documentation root, use pl.Path.resolve to make it absolute, like shown here.
-#
-local_mod = str(pl.Path('../$1').resolve())
-# sys.path.insert(0, local_mod)
+`(+snippet-expand "python.options")`
 
-# (Relative to this file):
-templates_path   = ['_static/templates']
-html_static_path = ['_static']
+# ##-- c: Extension Options ----------------------
+`(+snippet-expand "autodoc.ext.options")`
 
-# --------------------------------------------------------------------------
-# Relative to static dir, or fully qualified urls
-html_css_files = ["css/custom.css"]
-html_js_files  = ["js/base.js"]
+`(+snippet-expand "autoapi.ext.options")`
 
-toc_object_entries            = True
-master_doc                    = "index"
+`(+snippet-expand "extlinks.ext.options")`
 
-# List of patterns, relative to source directory, that match files and
-# directories to ignore when looking for source files.
-# This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['**/flycheck_*.py', "**/__tests/*"]
+`(+snippet-expand "intersphinx.ext.options")`
 
-# suppress_warnings = ["autoapi", "docutils"]
+`(+snippet-expand "graphviz.ext.options")`
 
+`(+snippet-expand "imgconvert.ext.options")`
 
-# -- General configuration ---------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
+`(+snippet-expand "viewcode.ext.options")`
 
-maximum_signature_line_length = 50
-toc_object_entries            = True
-master_doc                    = "index"
-show_warning_types            = True
+`(+snippet-expand "autosection.ext.options")`
 
-# -- Options for HTML output -------------------------------------------------
-# https://sphinx-rtd-theme.readthedocs.io/en/stable/configuring.html
-html_theme          = "sphinx_rtd_theme"
-html_theme_options  = {}
-html_sidebars       = {}
-html_domain_indices = True
-html_use_index      = True
-
-html_theme_options.update({
-    'logo_only'                   : False,
-    'display_version'             : True,
-    'prev_next_buttons_location'  : 'bottom',
-    'style_external_links'        : False,
-    'vcs_pageview_mode'           : '',
-    'style_nav_header_background' : 'grey',
-    # TOC options:
-    'collapse_navigation'         : True,
-    'sticky_navigation'           : True,
-    'navigation_depth'            : 4,
-    'includehidden'               : True,
-    'titles_only'                 : False
-
-})
-
-# -- Extension Options -------------------------------------------------
-# https://sphinx-autoapi.readthedocs.io/en/latest/reference/config.html
-autoapi_generate_api_docs = True
-autoapi_add_toctree_entry = True
-autoapi_type              = "python"
-autoapi_template_dir      = "_templates"
-autoapi_root              = "autoapi"
-autoapi_dirs              = ['../doot']
-autoapi_file_patterns     = ["*.py", "*.pyi"]
-autoapi_ignore            = ['*/__tests', '*/test_*.py', '/obsolete/*']
-autoapi_options           = [
-    'imported-members',
-    'members',
-    # 'undoc-members',
-    'private-members',
-    'special_members',
-    'show-inheritance',
-    # 'show-inheritance-diagram',
-    # 'show-module-summary',
-]
+`(+snippet-expand "napoleon.ext.options")`
+                  
+# ##-- d: Sphinx App Customisation ---------------
+`(+snippet-expand "sphinx.app.setup")`

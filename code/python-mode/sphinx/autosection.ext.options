@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name  : autosection.ext.options
+# uuid  : autosection.ext.options
+# key   : autosection.ext.options
+# group : sphinx
+# --
+# ##-- Autosection Labels ------------------------
+# https://www.sphinx-doc.org/en/master/usage/extensions/autosectionlabel.html
+#--
+# If true, ref is :ref:\`docname:title\`, else :ref:\`title\`
+autosectionlabel_prefix_document  : bool        = False
+autosectionlabel_maxdepth         : int | None  = None

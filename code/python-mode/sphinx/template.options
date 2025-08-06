@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : template.options
+# uuid  : template.options
+# key   : template.optionsc
+# group : sphinx
+# --
+# ##-- Templates ---------------------------------
+# Fully qualified class of TemplateBridge
+template_bridge = ''
+# Relative to this file:
+templates_path    = ['_templates']

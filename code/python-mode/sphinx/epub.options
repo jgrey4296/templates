@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : epub.options
+# uuid  : epub.options
+# key   : epub.options
+# group : sphinx epub
+# --
+# ##-- Epub --------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-epub-output

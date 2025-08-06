@@ -1,0 +1,35 @@
+# -*- mode: snippet -*-
+# name  : viewcode.ext.options
+# uuid  : viewcode.ext.options
+# key   : viewcode.ext.options
+# group : sphinx
+# --
+# ##-- Viewcode ----------------------------------
+# https://www.sphinx-doc.org/en/master/usage/extensions/viewcode.html
+#-- Events:
+# viewcode-find-source(app, modname) -> tuple[str, dict]
+# viewcode-follow-imported(app, modname, attribute)
+#--
+# Blocks 'viewcode-follow-imported' event:
+viewcode_follow_imported_members  = False
+viewcode_enable_epub              = False
+viewcode_line_numbers             = True
+
+def no_import_viewcode_find_source(app, modname) -> tuple[str, dict]:
+    """Event handler to find sourcecode *without* importing it"""
+    type SourceCode  = str
+    type Definition  = str
+    type LineNum     = int
+    type Tag         = Literal["class"] | Literal["def"] | Literal["other"]
+    type TagsDict    = dict[str, dict[Definition, tuple[Tag, LineNum, LineNum]]]
+    tags    : TagsDict
+    source  : SourceCode
+    #--      
+    source  = ""
+    tags    = {}    
+
+    # Find the file
+    # Parse the File
+    # Map to dict
+    # return
+    return (source, tags)

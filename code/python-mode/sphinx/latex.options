@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : latex.options
+# uuid  : latex.options
+# key   : latex.options
+# group : sphinx latex
+# --
+# ##-- Latex -------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-latex-output
+latex_engine                     = "pdflatex" # xelatex | lualatex ...
+latex_documents  : list[tuple]]  = []

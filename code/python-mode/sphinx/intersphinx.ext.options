@@ -1,0 +1,21 @@
+# -*- mode: snippet -*-
+# name  : intersphinx.ext.options
+# uuid  : intersphinx.ext.options
+# key   : intersphinx.ext.options
+# group : sphinx
+# --
+# ##-- Intersphinx -------------------------------
+# https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html
+type InterTuple      = tuple[str, tuple[str, str | None] | None]
+intersphinx_mapping      : dict[str, InterTuple]
+intersphinx_cache_limit  : int
+intersphinx_timeout      : int | float | None
+#--
+# Map to other documentation using :external:
+intersphinx_mapping = {
+    # eg: :external+python:ref:`comparisons\`
+    "python" : ("https://docs.python.org/3", None),
+
+}
+intersphinx_cache_limit  = 5 # days
+intersphinx_timeout      = None

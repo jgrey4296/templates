@@ -1,6 +1,6 @@
 ## backup.toml -*- mode: toml -*-
 doot-version = "1.1"
-
+# TODO use rsync --archive --progress --partial
 [[locations]]
 data     = "/media/john/data"
 backup_1 = "/media/john/big_ex"

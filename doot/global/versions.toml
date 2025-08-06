@@ -33,23 +33,6 @@ actions = [
 ]
 
 [[tasks.chore]]
-name    = "_.mamba.versions"
-actions = [
-        # List envs
-        { do="shell!", args=["mamba", "env", "list"], update_="mamba_envs" },
-        { do="write!", from_="mamba_envs", to="{records!p}/mamba.envs" },
-
-        # Write mamba info
-        { do="shell!", args=["mamba", "info"], update_="info"  },
-        { do="write!", from_="info", to="{records!p}/mamba.info"},
-
-        # TODO list envs as json, parse, then generate subtasks to export each
-        { do="dootle.python.mamba:MambaEnv", env="default",   update_="default"},
-        { do="shell!", args=["pip", "list"], shenv_="default", update_="pip"  },
-        { do="write!", from_="pip", to="{records!p}/mamba.versions"},
-]
-
-[[tasks.chore]]
 name    = "_.rust.versions"
 actions = [
         { do="shell!", args=["rustup", "show", "-v"], update_="rustup"  },
@@ -77,12 +60,6 @@ actions = [
         {do="write!", from_="cron", to="{records!p}/cron.backup"},
 ]
 
-[[tasks.chore]]
-name = "_.pipx"
-actions = [
-        {do="shell!", args=["pipx", "list"], update_="pipx"},
-        {do="write!", from_="pipx", to="{records!p}/pipx.backup"},
-]
 
 [[tasks.chore]]
 name = "_.asdf.versions"
@@ -123,4 +100,10 @@ actions = [
 
         {do="shell!", args=["flatpak", "remotes"], update_="flatpak.remotes"},
         {do="write!", from_="flatpak.remotes", to="{records!p}/flatpak.remotes"},
+]
+
+[[tasks.chore]]
+name = "_.uvx"
+actions = [
+        # uv tool list
 ]

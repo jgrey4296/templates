@@ -124,21 +124,71 @@ poetry_url   = "https://github.com/asdf-community/asdf-poetry.git"
 graalvm_url  = "https://github.com/asdf-community/asdf-graalvm.git"
 opam_url     = "https://github.com/asdf-community/asdf-opam.git"
 haskell_url  = "https://github.com/vic/asdf-haskell.git"
+uv_url       = "https://github.com/asdf-community/asdf-uv"
 # fstar_url  = "https://github.com/asdf-community/asdf-fstar.git"
 asdf_ver     = "v0.14.0"
 setup        = [
+      # -- install go
+      # -- install asdf through go
       # -- install dependencies of the runtimes here --
 ]
 actions    = [
-   # {do="sh", args=["git", "clone", "{url}", "{cache}/asdf", "--branch", "{asdf_ver}"]},
    # # -- possibly need to add environment var state here --
    # {do="sh", args=["asdf", "plugin", "add", "erlang", "{erlang_url}"]},
    # {do="sh", args=["asdf", "plugin", "add", "elixir", "{elixir_url}"]},
    # {do="sh", args=["asdf", "plugin", "add", "ruby",    "{ruby_url}"]},
-   # {do="sh", args=["asdf", "plugin", "add", "python"]},
+   # {do="sh", args=["asdf", "plugin", "add", "uv" "{uv_url}"]},
 ]
 cleanup = [
    # {do="sh", args=["asdf", "global", "erlang", "latest"]},
    # {do="sh", args=["asdf", "global", "elixir", "latest"]},
    # {do="sh", args=["asdf", "global", "ruby", "latest"]},
+   # {do="sh", args=["asdf", "global", "uv", "latest"]},
+   # reshim
+]
+
+[[tasks.setup]]
+name = "_.android"
+setup = [
+      # Install android tools
+      # install android cli tools
+      # install android libraries / kotlin through android sdkmanager
+]
+
+[[tasks.setup]]
+name = "_.flatpak"
+[[tasks.setup]]
+name = "_.rust"
+depends_on = [
+   # install rustup
+]
+actions = [
+   # install toolchains via rustup
+]       
+
+[[tasks.setup]]
+name = "_.dotnet"
+depends_on = [
+   # Install dotnet
+]
+actions = [
+   # Install c# runtimes
+]
+
+[[tasks.setup]]
+name = "_.tex"
+depends_on = [
+   # install mactex
+]
+actions = [
+   # install tex packages through tlmgr
+]
+
+[[tasks.setup]
+name = "_.jvm"
+depends_on = [
+   # install SDKMAN! 
+]
+actions = [
+   # install jvm and jdk
 ]

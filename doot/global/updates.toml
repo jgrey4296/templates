@@ -4,10 +4,17 @@ doot-version = "1.1"
 [[tasks.update]]
 disabled   = true
 name       = "all"
-depends_on = []
+depends_on = [
+ # apt
+ # snap
+ # flatpak
+ # asdf
+ # rust
+ # uv
+ # android
+ # dotnet
 
-[[tasks.update]]
-name = "_.uv"
+]
 
 [[tasks.update]]
 name = "_.apt"
@@ -16,10 +23,13 @@ name = "_.apt"
 name = "_.snap"
 
 [[tasks.update]]
-name = "_.mamba"
+name = "_.flatpak"
 
 [[tasks.update]]
-name = "_.pipx"
+name = "_.asdf"
+
+[[tasks.update]]
+name = "_.uv"
 
 [[tasks.update]]
 name = "_.tex"
@@ -31,13 +41,8 @@ name = "_.opam"
 name = "_.rust"
 
 [[tasks.update]]
-name = "_.asdf"
-
-[[tasks.update]]
 name = "_.dotnet"
 
 [[tasks.update]]
 name = "_.android"
 
-[[tasks.update]]
-name = "_.flatpak"

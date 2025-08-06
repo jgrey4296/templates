@@ -14,7 +14,7 @@ from sphinx.util.docutils import SphinxDirective
 class $1Transform(Transform):
     """ Custom Sphinx Transform
     Register in a setup function as:
-    app.register_transform('name', $1Transform)
+    app.register_transform("name", $1Transform)
     """
 
     def apply(self):

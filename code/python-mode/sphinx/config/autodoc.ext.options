@@ -13,6 +13,6 @@
 # autodoc-process-bases
 # autodoc-skip-member
 #--
-autodoc_typehints           = 'description'
-autodoc_typehints_format    = 'short'
+autodoc_typehints           = "description"
+autodoc_typehints_format    = "short"
 autodoc_inherit_docstrings  = False

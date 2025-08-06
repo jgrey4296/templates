@@ -11,7 +11,7 @@ import os
 import sys
 import pathlib as pl
 import datetime
-from collections.abc import Sequence
+from collections.abc import Sequence, Callable
 from typing import Literal
 from docutils import nodes
 from docutils.parsers.rst import directives
@@ -53,6 +53,8 @@ needs_extensions  = {
 }
 
 `(+snippet-expand "path.extension")`
+
+`(+snippet-expand "template.options")`
 
 `(+snippet-expand "html.options")`
 

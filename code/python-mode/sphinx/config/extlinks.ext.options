@@ -1,15 +1,15 @@
 # -*- mode: snippet -*-
-# name  : extlinks.options
-# uuid  : extlinks.options
-# key   : extlinks.options
+# name  : extlinks.ext.options
+# uuid  : extlinks.ext.options
+# key   : extlinks.ext.options
 # group : sphinx
 # --
 # ##-- Extlinks ----------------------------------
 extlinks : dict[str, tuple[str, str]]
 #--
-extlinks_detect_hardcoded_links  : False
+extlinks_detect_hardcoded_links = False
 # create roles to simplify urls. format: {rolename: [linkpattern, caption]}
 extlinks = {
     # Add ':issue:' role:
-    'issue': ('https://github.com/jgrey4296/jgdv/issues/%s', 'issue %s')}
+    "issue": ("https://github.com/jgrey4296/jgdv/issues/%s", "issue %s"),
 }

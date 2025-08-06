@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
-# name  : autoapi.options
-# uuid  : autoapi.options
-# key   : autoapi.options
+# name  : autoapi.ext.options
+# uuid  : autoapi.ext.options
+# key   : autoapi.ext.options
 # group : sphinx autoapi
 # --
 
@@ -20,25 +20,25 @@ autoapi_add_toctree_entry     = False
 autoapi_type                  = "python"
 # Whether to use class docstring ro __init__ docstring.
 autoapi_python_class_content  = "class" # 'both' | 'init'
-autoapi_own_page_level        = 'module' # class | function | method | attribute
+autoapi_own_page_level        = "module" # class | function | method | attribute
 # Relative to source dir:
 autoapi_template_dir          = "_docs/_templates/autoapi"
 # Directory to generate to. relative to source directory.
 autoapi_root              = "_docs/autoapi"
-autoapi_dirs              = ['.']
+autoapi_dirs              = ["."]
 autoapi_file_patterns     = ["*.py", "*.pyi"]
 autoapi_ignore            = [*exclude_patterns, "*_docs/conf.py"]
 autoapi_member_order      = "groupwise" # 'alphabetical' | 'bysource' | 'groupwise'
 autoapi_options           = [
-    # 'imported-members',
+    # "imported-members",
     # "inherited-members",
-    # 'show-inheritance-diagram',
-    'members',
-    'undoc-members',
-    'private-members',
-    'special_members',
-    'show-inheritance',
-    'show-module-summary',
+    # "show-inheritance-diagram",
+    "members",
+    "undoc-members",
+    "private-members",
+    "special_members",
+    "show-inheritance",
+    "show-module-summary",
 ]
 # Warnings
 suppress_warnings += [

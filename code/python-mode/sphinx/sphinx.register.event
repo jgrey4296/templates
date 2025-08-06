@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : sphinx.register
+# uuid  : sphinx.register
+# key   : sphinx.register
+# group : sphinx events
+# --
+app.events.connect("${1:builder-inited}", ${2:handler}, 1)

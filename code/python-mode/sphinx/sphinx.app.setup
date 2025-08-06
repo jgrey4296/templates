@@ -4,20 +4,11 @@
 # key   : sphinx.app.setup
 # group : sphinx
 # --
-# ##-- Sphinx and Jinja configuration
-
-def setup(app):
-    app.events.connect("builder-inited", add_jinja_ext, 1)
-
-def add_jinja_ext(app):
-    app.builder.templates.environment.add_extension("jinja2.ext.debug")
-
-
-# ##-- Jinja --------------------------------------------------
+# ##-- Jinja
 try:
     import jinja2
 except ImportError:
-    pass
+    jinja2 = None
 else:
     def filter_contains(val:list|str, *needles:str) -> bool:
         match val:
@@ -32,3 +23,14 @@ else:
     def autoapi_prepare_jinja_env(jinja_env: jinja2.Environment) -> None:
         jinja_env.add_extension("jinja2.ext.debug")
         jinja_env.tests['contains'] = filter_contains
+        
+    def add_jinja_ext(app):
+        app.builder.templates.environment.add_extension("jinja2.ext.debug")
+
+        
+# ##-- Sphinx and Jinja configuration ------------ 
+
+def setup(app):
+    if jinja2 is not None:
+        app.events.connect("builder-inited", add_jinja_ext, 1)
+

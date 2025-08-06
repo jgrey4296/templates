@@ -18,9 +18,9 @@ class $1Directive(Directive):
 class $1Index(Index):
     """ A Custom index for sphinx """
 
-    name      = '$1'
-    localname = '$1 Index'
-    shortname = '$1'
+    name      = "$1"
+    localname = "$1 Index"
+    shortname = "$1"
 
     def generate(self, docnames=None) -> tuple[Any, bool]:
 
@@ -32,22 +32,22 @@ class $1Domain(Domain):
     register with app.add_domain(StandardDomain)
     """
 
-    name       : str                               = '$1'
-    label      : str                               = '$1 Domain'
-    roles      : dict[str, Role]                   = {'ref': XRefRole()}
+    name       : str                               = "$1"
+    label      : str                               = "$1 Domain"
+    roles      : dict[str, Role]                   = {"ref": XRefRole()}
     directives : dict[str,type[Directive]]         = {}
     indices    : set[type[Index]]                  = {}
     data_version                                   = 0
     initial_data                                   = {
-        'objs': [],             # object list
-        # 'components': {},  # name -> object
+        "objs": [],             # object list
+        # "components": {},  # name -> object
     }
 
     def get_full_qualified_name(self, node) -> str:
-        return f'{self.name}.{node.arguments[0]}'
+        return f"{self.name}.{node.arguments[0]}"
 
     def get_objects(self) -> iterator[ObjType]:
-        yield from self.data['objs']
+        yield from self.data["objs"]
 
     def resolve_xref(self, env, fromdocname, builder, typ, target, node, contnode):
         match = [(docname, anchor)
@@ -65,13 +65,13 @@ class $1Domain(Domain):
     def add_obj(self, signature, components):
         """Add a new recipe to the domain."""
 
-        name   = f'{self.name}.{signature}'
-        anchor = f'{self.name}-{signature}'
-        self.data['components'][name] = components
+        name   = f"{self.name}.{signature}"
+        anchor = f"{self.name}-{signature}"
+        self.data["components"][name] = components
         # name, dispname, type, docname, anchor, priority
-        self.data['objs'].append((name,
+        self.data["objs"].append((name,
                                   signature,
-                                  'Recipe',
+                                  "Recipe",
                                   self.env.docname,
                                   anchor,
                                   0,

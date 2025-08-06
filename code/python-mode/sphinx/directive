@@ -26,8 +26,8 @@ class $1Directive(SphinxDirective):
         if not bool(self.content):
             raise self.error("No Content")
 
-        # caption = nodes.Element(self.options.get('caption'))
-        # self.state.nested_parse([self.options.get('caption')], 0, caption)
+        # caption = nodes.Element(self.options.get("caption"))
+        # self.state.nested_parse([self.options.get("caption")], 0, caption)
 
         content_node = nodes.container(rawsource="\n".join(self.content))
         self.state.nested_parse(self.content, self.content_offset, content_node)

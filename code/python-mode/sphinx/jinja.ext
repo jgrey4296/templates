@@ -7,11 +7,11 @@
 def setup(app):
     """ Called on sphinx startup to connect extra settings """
     app.events.connect("builder-inited", add_jinja_ext, 1)
-    app.add_directive('jgdir', JGDirective)
+    app.add_directive("jgdir", JGDirective)
     # app.add_transform
 
 def add_jinja_ext(app):
-    app.builder.templates.environment.add_extension('jinja2.ext.debug')
+    app.builder.templates.environment.add_extension("jinja2.ext.debug")
 
 def filter_contains(val:list|str, *needles:str) -> bool:
     """ A custom filter for jinja """
@@ -27,4 +27,4 @@ def filter_contains(val:list|str, *needles:str) -> bool:
 def autoapi_prepare_jinja_env(jinja_env: jinja2.Environment) -> None:
     """ The autoapi hook for modifying jinja  """
     jinja_env.add_extension("jinja2.ext.debug")
-    jinja_env.tests['contains'] = filter_contains
+    jinja_env.tests["contains"] = filter_contains

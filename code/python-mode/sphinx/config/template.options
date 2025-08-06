@@ -6,6 +6,6 @@
 # --
 # ##-- Templates ---------------------------------
 # Fully qualified class of TemplateBridge
-template_bridge = ''
+template_bridge = ""
 # Relative to this file:
-templates_path    = ['_templates']
+templates_path    = ["_templates"]

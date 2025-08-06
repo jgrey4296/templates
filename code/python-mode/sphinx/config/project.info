@@ -4,19 +4,19 @@
 # key   : project.info
 # group : sphinx
 # --
-project    = 'Mostly Harmless'
-author     = 'John Grey'
-copyright  = '{}, {}'.format(datetime.datetime.now().strftime("%Y"), author)
+project    = "Mostly Harmless"
+author     = "John Grey"
+copyright  = "{}, {}".format(datetime.datetime.now().strftime("%Y"), author)
 language   = "en"
 
 
 
 """https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration"""
-root_doc        = "index"
-primary_domain  = "py"
-default_role    = None
+root_doc                       = "index"
+primary_domain                 = "py"
+default_role                   = None
 
-master_doc                     = "index"
+root_doc                       = "index"
 suppress_warnings              = ["autoapi", "docutils"]
 maximum_signature_line_length  = 50
 toc_object_entries             = True
@@ -25,8 +25,8 @@ show_warning_types             = True
 nitpick_ignore                 = set()
 nitpick_ignore_regex           = set()
 # Pygments: https://pygments.org/docs/lexers
-highlight_options  = {}
-pygments_style     = 'sphinx'
+highlight_options              = {}
+pygments_style                 = "sphinx"
 
 """List of patterns, relative to source directory, that match files and
 directories to incldue/ignore when looking for source files.

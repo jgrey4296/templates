@@ -8,7 +8,7 @@ temp_dir = ".temp/tox/temp"
 skip_missing_interpreters = false
 
 [gh-actions]
-pythron = ["3.12", "type", "lint", "doc", "release_notes"]
+python = ["3.12", "type", "lint", "doc", "release_notes"]
 
 [env_run_base]
 description = "base_env"

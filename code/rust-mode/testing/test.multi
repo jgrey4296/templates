@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
-# name  : test.solo
-# uuid  : test.solo
-# key   : test.solo
+# name  : test.multi
+# uuid  : test.multi
+# key   : test.multi
 # group : jg
 # --
 #[test]

@@ -32,7 +32,7 @@ pyi typed stub files (typing)  # https://typing.readthedocs.io/en/latest/spec/di
 Pytest               (testing) # https://docs.pytest.org/en/stable/how-to/fixtures.html
 Pytest Mock          (testing) # https://pytest-mock.readthedocs.io/en/latest/
 Pytest Plugins       (testing) # https://docs.pytest.org/en/latest/reference/plugin_list.html
-Tox                  (testing) # https://tox.wiki/en/4.6.4/
+Tox                  (testing) # https://tox.wiki/en/latest/user_guide.html
 
 PEPs                           # https://peps.python.org/pep-0000/
 PEP 635: Match statement       # https://peps.python.org/pep-0635
@@ -191,3 +191,5 @@ Martin Heinz         (blog)    # https://martinheinz.dev/
 unicode              (blog)    # https://tonsky.me/blog/unicode/
 Awesome Libs         (blog)    # https://github.com/vinta/awesome-python
 anti-patterns        (blog)    # https://docs.quantifiedcode.com/python-anti-patterns/index.html
+uv                   (tool)    # https://docs.astral.sh/uv/
+ruff                 (tool)    # https://docs.astral.sh/ruff/

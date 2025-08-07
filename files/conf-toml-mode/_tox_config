@@ -1,0 +1,91 @@
+## tox.toml -*- mode: toml-mode -*-
+# https://tox.wiki/en/4.28.4/user_guide.html
+requires = ["tox>=4"]
+env_list = ["docs"]
+# env_list = ["lint", "type", "test", "docs", "release_notes", "4.12"]
+work_dir = ".temp/tox/work"
+temp_dir = ".temp/tox/temp"
+skip_missing_interpreters = false
+
+[gh-actions]
+pythron = ["3.12", "type", "lint", "doc", "release_notes"]
+
+[env_run_base]
+description = "base_env"
+
+[env.lint]
+description   = "run linters"
+skip_install  = true
+deps          = ["ruff"]
+commands = [
+    ["ruff", "check", "--diff", {replace="posargs", default=[], extend=true}],
+]
+
+[env.type]
+description   = "run type checker"
+skip_install  = true
+deps          = ["mypy"]
+commands      = [
+    ["mypy", {replace="posargs", default=[], extend=true}],
+]
+
+[env.type-strict]
+base      = ["env.type"]
+commands  = [
+    ["mypy", "--strict", {replace="posargs", default=[], extend=true}],
+]
+
+[env.test]
+desciption    = "run tests"
+skip_install  = false
+deps          = [
+     "pytest>=8.3.5",
+     "pytest-cov>6.0",
+     "pytest-mock>=3.14",
+     "pydot>=4.0.1" ,
+]
+commands = [
+    ["pytest", { replace="posargs", default=["./jgdv"], extend=true }],
+]
+
+[env.test-cov]
+base      = ["env.test"]
+commands  = [
+    ["pytest",
+     "--cov=./jgdv",
+     "--cov-report=json",
+     "--cov-report=term",
+     "--cov-report=xml",
+     "--cov-report=html",
+     "--no-cov-on-fail",
+     { replace="posargs", default=["./jgdv"], extend=true }
+     ],
+]
+
+
+[env.docs]
+description   = "build documentation"
+skip_install  = true
+deps          = [
+    "sphinx>=8.2.3",
+    "myst-parser>=4.0.1",
+    "sphinx-autoapi>=3.6.0",
+    "sphinx-rtd-theme>=3.0.2",
+    "pydot>=4.0.1",
+]
+commands      = [
+    ["sphinx-build",
+    "-q",
+    "--conf-dir", "./jgdv/_docs/",
+    "--warning-file", "./.temp/logs/sphinx.log",
+    "--builder", "html",
+    "./jgdv",
+    "./.temp/docs",
+    {replace="posargs", default=[], extend=true}
+    ]
+]
+
+[env.release_notes]
+description  = "generate changelog"
+deps         = []
+commands     = []

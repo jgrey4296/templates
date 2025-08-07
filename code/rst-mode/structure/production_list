@@ -7,6 +7,5 @@
 .. container:: highlight
 
    .. productionlist::
-
-      $1 : $2
+      ${1:No empty line} : $2
       $0

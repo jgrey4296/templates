@@ -1,7 +1,7 @@
 ## Cargo.toml -*- mode: Toml -*-
 
 [package]
-name           = "alib"
+name           = "{{cookiecutter.proj_name}}"
 version        = "0.1.0"
 edition        = { workspace = true }
 rust-version   = { workspace = true }
@@ -30,10 +30,10 @@ default  = []
 # Targets
 # https://doc.rust-lang.org/cargo/reference/cargo-targets.html
 [[bin]]
-name               = "alib"
+name               = "{{cookiecutter.proj_name}}"
 
 [lib]
-crate-type         = ["lib"]
+crate-type         = ["cdylib"]
 proc-macro         = false
 required-features  = []
 

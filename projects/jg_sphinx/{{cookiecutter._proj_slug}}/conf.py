@@ -1,69 +1,88 @@
 #!/usr/bin/env python3
-# Configuration file for the Sphinx documentation builder.
-# https://www.sphinx-doc.org/en/master/usage/configuration.html
-# Imports:
-import datetime
+"""
+Configuration file for the Sphinx documentation builder.
+https://www.sphinx-doc.org/en/master/usage/configuration.html
+
+"""
+# ruff: noqa: TC003, A001, DTZ005, ERA001, PLR2044, ARG001, ANN001, ANN201, TC002
+# Imports --------------------------------
+from __future__ import annotations
 import os
 import sys
 import pathlib as pl
+import datetime
+from collections.abc import Sequence, Callable
+import tomllib
+from typing import Literal
+from docutils import nodes
+from docutils.parsers.rst import directives
+from docutils.statemachine import StringList
+from sphinx.locale import __
+from sphinx.util.docutils import SphinxDirective
+# Types ----------------------------------
+exclude_patterns       : list[str]
+extensions             : list[str]
+highlight_options      : dict
+html_domain_indices    : bool|Sequence[str]
+html_additional_pages  : dict
+html_search_options    : dict
+html_js_files          : list
+html_sidebars          : dict
+html_static_path       : list
+html_theme_path        : list
+html_extra_path        : list
+html_style             : list[str] | str
+include_patterns       : list[str]
+needs_extensions       : dict[str, str]
+nitpick_ignore         : set[tuple[str, str]]
+nitpick_ignore_regex   : set[tuple[str, str]]
+source_suffix          : dict[str, str]
+templates_path         : list
+napoleon_type_aliases  : dict
+# ##--|
 
-`(+snippet-expand "docutils.imports")
+# ##-- a: Project information --------------------
+`(+snippet-expand "project.info")`
 
-# -- Project information -----------------------------------------------------
-
-release        = "0.1.0"
-project        = 'TODO'
-author         = 'John Grey'
-copyright      = '{}, {}'.format(datetime.datetime.now().strftime("%Y"), author)
-primary_domain = "py"
-extensions = [
-    `(+snippet-expand "default.extensions")`
-    ]
-
-`(+snippet-expand "jinja.ext")
-
-# -- Path setup --------------------------------------------------------------
-
-# If extensions (or modules to document with autodoc) are in another directory,
-# add these directories to sys.path here. If the directory is relative to the
-# documentation root, use pl.Path.resolve to make it absolute, like shown here.
-#
-local_mod = str(pl.Path('../').resolve())
-sys.path.insert(0, local_mod)
-
-# (Relative to this file):
-templates_path   = ['_static/templates']
-html_static_path = ['_static']
-
-# Relative to static dir, or fully qualified urls
-html_css_files = ["css/custom.css"]
-html_js_files  = ["js/base.js"]
-
-toc_object_entries            = True
-master_doc                    = "index"
-
-# List of patterns, relative to source directory, that match files and
-# directories to ignore when looking for source files.
-# This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = [
-    '**/flycheck_*.py',
-    "**/__tests/*",
-    "_docs/_templates/*",
-    "README.md",
+# ##-- b: Extensions -----------------------------
+extensions      = [
+`(+snippet-expand "default.extensions" 4)`
+    
 ]
+needs_extensions  = {
+    # ExtName : Version
+}
 
-# suppress_warnings = ["autoapi", "docutils"]
+`(+snippet-expand "path.extension")`
 
-# -- General configuration ---------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
+`(+snippet-expand "template.options")`
 
-maximum_signature_line_length = 50
-toc_object_entries            = True
-master_doc                    = "index"
-show_warning_types            = True
+`(+snippet-expand "html.options")`
 
-# -- Options for HTML output -------------------------------------------------
-`(+snippet-expand "rtd.options")`
+`(+snippet-expand "rtd.theme.options")`
 
-# -- Extension Options -------------------------------------------------
-`(+snippet-expand "autoapi.options")`
+`(+snippet-expand "rst.options")`
+
+`(+snippet-expand "python.options")`
+
+# ##-- c: Extension Options ----------------------
+`(+snippet-expand "autodoc.ext.options")`
+
+`(+snippet-expand "autoapi.ext.options")`
+
+`(+snippet-expand "extlinks.ext.options")`
+
+`(+snippet-expand "intersphinx.ext.options")`
+
+`(+snippet-expand "graphviz.ext.options")`
+
+`(+snippet-expand "imgconvert.ext.options")`
+
+`(+snippet-expand "viewcode.ext.options")`
+
+`(+snippet-expand "autosection.ext.options")`
+
+`(+snippet-expand "napoleon.ext.options")`
+                  
+# ##-- d: Sphinx App Customisation ---------------
+`(+snippet-expand "sphinx.app.setup")`

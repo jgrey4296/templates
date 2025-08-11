@@ -30,32 +30,31 @@ edition        = "{{cookiecutter.edition}}"
 
 [patch.crates-io]
 
-
 [workspace.lints.rust]
 
 [workspace.lints.clippy]
 
 [profile.release]
-strip = true
-lto = "fat"
+strip  = true
+lto    = "fat"
 
 [profile.profiling]
-inherits = "release"
-strip = false
-debug = "full"
-lto = false
+inherits  = "release"
+strip     = false
+debug     = "full"
+lto       = false
 
 [profile.minimal-size]
-inherits = "release"
-opt-level = "z"
+inherits   = "release"
+opt-level  = "z"
 # This will still show a panic message, we only skip the unwind
-panic = "abort"
-codegen-units = 1
+panic          = "abort"
+codegen-units  = 1
 
 [profile.dist]
 inherits = "release"
 
 [profile.fast-build]
-inherits = "dev"
-debug = 0
-strip = "debuginfo"
+inherits  = "dev"
+debug     = 0
+strip     = "debuginfo"

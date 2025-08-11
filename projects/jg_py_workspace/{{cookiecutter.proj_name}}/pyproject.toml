@@ -27,7 +27,7 @@ test = [
 ##-- urls
 [project.urls]
 homepage      = "https://github.com/{{cookiecutter._github_username}}/{{cookiecutter.proj_name}}"
-documentation = "https://readthedocs.org/{{cookiecutter.proj_name}}"
+documentation = "https://{{cookiecutter.proj_name}}.readthedocs.io"
 repository    = "https://github.com/{{cookiecutter._github_username}}/{{cookiecutter.proj_name}}"
 changelog     = "https://github.com//{{cookiecutter.proj_name}}/blob/master/CHANGELOG.md"
 
@@ -91,4 +91,4 @@ include    = ["{{cookiecutter.proj_name}}*"]
 
 `(+snippet-expand "towncrier")`
 
-`(+snippet-expand "uv.tool")`
+`(+snippet-expand "uv.workspace")`

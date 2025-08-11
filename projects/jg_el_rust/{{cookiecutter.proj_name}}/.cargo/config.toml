@@ -1,4 +1,5 @@
 # https://doc.rust-lang.org/cargo/reference/config.html
+# paths = [] # path dependency overrides
 
 [alias]
 gdb = "build --profile gdb"

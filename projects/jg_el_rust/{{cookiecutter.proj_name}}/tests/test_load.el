@@ -24,8 +24,8 @@
 
 (add-to-list 'load-path (expand-file-name ".temp"))
 
-(require 'jgtest)
+(require '{{cookiecutter.proj_name}})
 
-(jgtest-say-hello "blah")
+({{cookiecutter.proj_name}}-say-hello "blah")
 
 ;;; test_load.el ends here

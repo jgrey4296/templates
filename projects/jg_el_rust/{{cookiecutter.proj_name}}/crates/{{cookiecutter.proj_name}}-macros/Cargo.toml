@@ -1,5 +1,5 @@
 [package]
-name     = "alib-macros"
+name     = "{{cookiecutter.proj_name}}-macros"
 version  = "0.0.1"
 edition  = { workspace = true }
 

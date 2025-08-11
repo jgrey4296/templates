@@ -1,0 +1,32 @@
+[package]
+name           = "{{cookiecutter.proj_name}}-rs"
+version        = "0.1.0"
+edition        = { workspace = true }
+rust-version   = { workspace = true }
+homepage       = { workspace = true }
+documentation  = { workspace = true }
+repository     = { workspace = true }
+authors        = { workspace = true }
+license        = { workspace = true }
+default-run    = "uv"
+
+[lints]
+workspace = true
+
+[dependencies]
+
+[dev-dependencies]
+
+[package.metadata.cargo-shear]
+
+[features]
+# https://doc.rust-lang.org/cargo/reference/features.html
+default = []
+
+[package.metadata.dist]
+dist = true
+
+[lib]
+crate-type         = ["lib"]
+proc-macro         = false
+required-features  = []

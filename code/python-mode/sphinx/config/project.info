@@ -8,6 +8,7 @@ project    = "Mostly Harmless"
 author     = "John Grey"
 copyright  = "{}, {}".format(datetime.datetime.now().strftime("%Y"), author)
 language   = "en"
+release    = tomllib.loads(pl.Path.cwd() / "../../pyproject.toml")['project']['version']
 
 
 

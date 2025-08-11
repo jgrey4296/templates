@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name  : tool.towncrier
+# uuid  : tool.towncrier
+# key   : tool.towncrier
+# group : pyproject towncrier changelog
+# --
+##-- towncrier
+[tool.towncrier]
+package    = ""
+directory  = "_changes"
+file       = "CHANGELOG.md"
+
+##-- end towncrier

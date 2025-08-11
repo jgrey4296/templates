@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : package.version
+# uuid  : package.version
+# key   : package.version
+# group : packaging version metadata
+# --
+from importlib.metadata import version
+__version__ = version("$1")

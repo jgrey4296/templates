@@ -127,8 +127,8 @@ haskell_url  = "https://github.com/vic/asdf-haskell.git"
 uv_url       = "https://github.com/asdf-community/asdf-uv"
 # fstar_url  = "https://github.com/asdf-community/asdf-fstar.git"
 asdf_ver     = "v0.14.0"
+depends_on = ["setup::_.go"]
 setup        = [
-      # -- install go
       # -- install asdf through go
       # -- install dependencies of the runtimes here --
 ]
@@ -184,11 +184,19 @@ actions = [
    # install tex packages through tlmgr
 ]
 
-[[tasks.setup]
+[[tasks.setup]]
 name = "_.jvm"
 depends_on = [
    # install SDKMAN! 
 ]
 actions = [
    # install jvm and jdk
+]
+
+[[tasks.setup]]
+name        = "_.go"
+actionlint  = "github.com/rhysd/actionlint/cmd/actionlint@latest"
+actions     = [
+  # install go
+  # install actionlint
 ]

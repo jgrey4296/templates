@@ -4,4 +4,4 @@
 # key   : comment-line
 # group :
 # --
-`comment-start``comment-line` --------------------------------------------------
+`(or comment-start "")``(or comment-start "")` --------------------------------------------------

@@ -1,0 +1,17 @@
+# https://cookiecutter.readthedocs.io/en/stable/
+# symlink to ~/.cookiecutterrc
+# set COOKIECUTTER_CONFIG
+# project layout generation
+
+default_context:
+    _author: "John Grey"
+    _short_name: "J Grey"
+    _email: "jgrey.n.plus.one at gmail.com"
+    _github_username : "jgrey4296"
+
+cookiecutters_dir: "~/github/_templates/projects/"
+replay_dir: "~/_cache_/cookiecutter/replay/"
+abbreviations:
+    pp: https://github.com/audreyr/cookiecutter-pypackage.git
+    gh: https://github.com/{0}.git
+    bb: https://bitbucket.org/{0}

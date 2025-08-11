@@ -1,0 +1,15 @@
+{
+  "proj_name": "rust_py_template",
+  "_author": "me",
+  "_copy_without_render": [
+    "*docs/_static",
+    "*docs/_templates"
+  ],
+  "_email": "my@email.com",
+  "_github_username": "me",
+  "_short_name": "me",
+  "edition": "2021",
+  "entry_point": "__main__",
+  "env": "base310",
+  "python": "3.10"
+}

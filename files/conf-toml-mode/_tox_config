@@ -1,57 +1,63 @@
 ## tox.toml -*- mode: toml-mode -*-
 # https://tox.wiki/en/4.28.4/user_guide.html
-requires = ["tox>=4"]
-env_list = ["docs"]
-# env_list = ["lint", "type", "test", "docs", "release_notes", "4.12"]
-work_dir = ".temp/tox/work"
-temp_dir = ".temp/tox/temp"
-skip_missing_interpreters = false
-
-[gh-actions]
-python = ["3.12", "type", "lint", "doc", "release_notes"]
+# https://github.com/tox-dev/tox-uv
+# String substitution: "{[<table>]<key>}"
+requires                   = ["tox>=4", "tox-uv>=1"]
+env_list                   = ["docs"]
+work_dir                   = ".temp/tox/work"
+temp_dir                   = ".temp/tox/temp"
+skip_missing_interpreters  = false
 
 [env_run_base]
-description = "base_env"
+description          = "base_env"
+runner               = "uv-venv-lock-runner"
+uv_sync_flags        = ["--no-editable", "--no-sources"]
+allowlist_externals  = ["echo", "mkdir"]
+set_env.PKGNAME      = {replace="env", name="PKGNAME", default="jgdv"}
 
 [env.lint]
 description   = "run linters"
 skip_install  = true
-deps          = ["ruff"]
-commands = [
-    ["ruff", "check", "--diff", {replace="posargs", default=[], extend=true}],
+commands      = [
+    ["uv", "run", "ruff", "check",
+    "--output-format", "concise",
+    {replace="posargs", default=[], extend=true},
+    ],
 ]
 
 [env.type]
-description   = "run type checker"
+description   = "type check files"
 skip_install  = true
-deps          = ["mypy"]
 commands      = [
-    ["mypy", {replace="posargs", default=[], extend=true}],
+    ["uv", "run", "mypy",
+    {replace="posargs", default=[], extend=true},
+    "{[vals]package}",
+    ],
 ]
 
 [env.type-strict]
-base      = ["env.type"]
+description = "mypy, but strict"
+skip_install = true
 commands  = [
-    ["mypy", "--strict", {replace="posargs", default=[], extend=true}],
+    ["uv", "run", "mypy", "--strict",
+    {replace="posargs", default=[], extend=true},
+    "{[vals]package}"],
 ]
 
 [env.test]
-desciption    = "run tests"
+description   = "run tests"
 skip_install  = false
-deps          = [
-     "pytest>=8.3.5",
-     "pytest-cov>6.0",
-     "pytest-mock>=3.14",
-     "pydot>=4.0.1" ,
-]
-commands = [
-    ["pytest", { replace="posargs", default=["./jgdv"], extend=true }],
+commands      = [
+    ["uv", "run", "pytest",
+    { replace="posargs", default=["./jgdv"], extend=true },
+    ],
 ]
 
 [env.test-cov]
+description = "Generate test coverage report"
 base      = ["env.test"]
 commands  = [
-    ["pytest",
+    ["uv", "run", "pytest",
      "--cov=./jgdv",
      "--cov-report=json",
      "--cov-report=term",
@@ -62,30 +68,33 @@ commands  = [
      ],
 ]
 
-
 [env.docs]
 description   = "build documentation"
 skip_install  = true
-deps          = [
-    "sphinx>=8.2.3",
-    "myst-parser>=4.0.1",
-    "sphinx-autoapi>=3.6.0",
-    "sphinx-rtd-theme>=3.0.2",
-    "pydot>=4.0.1",
+set_env = [
+    {replace="ref", of=["env_run_base", "set_env"]},
+    {CONFDIR  = {replace="env", name="CONFDIR",  default="./jgdv/_docs/"}},
+    {OUTDIR   = {replace="env", name="OUTDIR",   default="./.temp/docs/"}},
+    {DOCTREE  = {replace="env", name="DOCTREE",  default="./.temp/docs/.doctrees/"}},
 ]
 commands      = [
-    ["sphinx-build",
-    "-q",
-    "--conf-dir", "./jgdv/_docs/",
+    ["echo", "Building Documentation to:", "{env:OUTDIR}"],
+    ["echo", "Doctrees to:", "{env:DOCTREE}"],
+    ["echo", "Config in:", "{env:CONFDIR}"],
+    ["uv", "run", "--frozen", "sphinx-build",
+    # "-q",
+    # "--fresh-env",
+    "--conf-dir", "{env:CONFDIR}",
+    "--doctree-dir", "{env:DOCTREE}",
     "--warning-file", "./.temp/logs/sphinx.log",
     "--builder", "html",
-    "./jgdv",
-    "./.temp/docs",
+     "./{env:PKGNAME}",
+     "{env:OUTDIR}",
     {replace="posargs", default=[], extend=true}
     ]
 ]
 
+
 [env.release_notes]
-description  = "generate changelog"
-deps         = []
+description  = "TODO generate changelog"
 commands     = []

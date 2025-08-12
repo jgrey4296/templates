@@ -196,7 +196,9 @@ actions = [
 [[tasks.setup]]
 name        = "_.go"
 actionlint  = "github.com/rhysd/actionlint/cmd/actionlint@latest"
+glab        = "gitlab.com/gitlab-org/cli/cmd/glab@main"
 actions     = [
   # install go
   # install actionlint
+  # install glab
 ]

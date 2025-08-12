@@ -11,10 +11,10 @@
 name: Upload Python Package
 
 on:
+  workflow_dispatch: # for manual triggers
   release:
     types: [published]
 
-  workflow_dispatch: # for manual triggers
     
 permissions:
   contents: read
@@ -32,12 +32,13 @@ jobs:
           version: "latest"
       - name: setup
         run: |
+          mkdir --parents .temp/egg-info
           uv lock --no-sources
-          uv env
-          uv sync --frozen --group test
+          uv venv
+          UV_FROZEN=1 uv sync --group test
       - name: test
         run: |
-          uv run tox -e test
+          UV_NO_SYNC=1 uv run tox -e test
   
   build:
     needs:
@@ -47,8 +48,7 @@ jobs:
     steps:
       - name: Build package
         run: |
-          mkdir --parents .temp/egg-info
-          uv build .
+          UV_NO_SYNC=1 uv build .
       - name: Store dist packages
         uses: actions/upload-artifact@v4
         with:

@@ -32,8 +32,9 @@ jobs:
           version: "latest"
       - name: setup
         run: |
+          mkdir --parents .temp/egg-info
           uv lock --no-sources
-          uv env
+          uv venv
           uv sync --frozen --group test
       - name: test
         run: |
@@ -47,7 +48,6 @@ jobs:
     steps:
       - name: Build package
         run: |
-          mkdir --parents .temp/egg-info
           uv build .
       - name: Store dist packages
         uses: actions/upload-artifact@v4

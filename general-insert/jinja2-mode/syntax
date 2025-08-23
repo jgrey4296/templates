@@ -1,0 +1,8 @@
+Jinja Syntax:
+{% ... %}  # Statements
+{{ ... }}  # Output printing expressions
+{# ... #}  # Comments
+{{- ... }} # Enable strip prefix whitespace
+{{+ ... }} # Disable strip prefix whitespace
+{{ ... -}} # Enable strip suffix whitespace
+{{ ... +}} # Disable strip suffix whitespace

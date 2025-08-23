@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : last.exit.code
+# uuid  : last.exit.code
+# key   : last.exit.code
+# group : bash
+# --
+echo $?

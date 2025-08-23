@@ -21,7 +21,7 @@ permissions:
 
 # --------------------------------------------------
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     environment: publishing
     steps:
@@ -38,17 +38,10 @@ jobs:
           uv sync --frozen --group test
       - name: test
         run: |
-          uv run tox -e test
-  
-  build:
-    needs:
-      - test
-    runs-on: ubuntu-latest
-    environment: publishing
-    steps:
+          UV_NO_SYNC=1 uv run tox -e test
       - name: Build package
         run: |
-          uv build .
+          UV_NO_SYNC=1 uv build .
       - name: Store dist packages
         uses: actions/upload-artifact@v4
         with:

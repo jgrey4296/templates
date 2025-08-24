@@ -11,7 +11,8 @@ skip_missing_interpreters  = false
 [env_run_base]
 description          = "base_env"
 runner               = "uv-venv-lock-runner"
-uv_sync_flags        = ["--no-editable", "--no-sources"]
+# uv_sync_locked       = false
+# uv_sync_flags        = ["--no-editable", "--no-sources"]
 allowlist_externals  = ["echo", "mkdir"]
 set_env.PKGNAME      = {replace="env", name="PKGNAME", default="jgdv"}
 
@@ -69,9 +70,12 @@ commands  = [
 ]
 
 [env.docs]
-description   = "build documentation"
-skip_install  = true
-set_env = [
+description       = "build documentation"
+uv_sync_locked       = false
+uv_sync_flags      = ["--no-editable", "--no-sources"]
+dependncy_groups  = ["docs"]
+skip_install      = true
+set_env           = [
     {replace="ref", of=["env_run_base", "set_env"]},
     {CONFDIR  = {replace="env", name="CONFDIR",  default="./jgdv/_docs/"}},
     {OUTDIR   = {replace="env", name="OUTDIR",   default="./.temp/docs/"}},

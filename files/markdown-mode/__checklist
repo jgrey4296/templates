@@ -6,6 +6,7 @@
     - [ ] towncrier
     - [ ] test dependencies
     - [ ] docs dependencies
+    - [ ] ruff.toml
 - [ ] rust
     - [ ] cargo.toml
     - [ ] config.toml
@@ -20,14 +21,18 @@
     - [ ] templates
     - [ ] license
 - [ ] dot files
+    - [ ] python-version
     - [ ] related
     - [ ] tool-versions
     - [ ] tox
     - [ ] pre-commit
+    - [ ] gitignore
+    - [ ] lenvs
 - [ ] github
     - [ ] publish yaml
     - [ ] test yaml
-    - [ ] maturing CI
+    - [ ] maturin CI yaml
+    - [ ] pages yaml
 - [ ] scripts
     - [ ] release script
 - [ ] related

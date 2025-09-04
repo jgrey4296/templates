@@ -1,0 +1,33 @@
+# -*- mode: snippet -*-
+# name  : tool.hatch
+# uuid  : tool.hatch
+# key   : tool.hatch
+# group : python build-system
+# --
+##-- build-system
+[build-system]
+requires       = ["hatchling>=1.13"]
+build-backend  = "hatchling.build"
+
+[tool.hatch.build]
+skip-excluded-dirs  = true
+# directory           = ".temp/build"  # or HATCH_BUILD_LOCATION
+
+[tool.hatch.build.targets.sdist]
+packages   = ["${1:PACKAGE}"]
+artifacts  = ["*.so"]
+exclude    = [
+    ".temp", "**.rst",
+    "$1/*/__tests", "$1/_docs", "$1/__tests",
+]
+
+[tool.hatch.build.targets.wheel]
+packages   = ["$1"]
+artifacts  = ["*.so"]
+exclude    = [
+    ".temp", "**.rst",
+    "$1/*/__tests", "$1/__tests",
+    "$1/_docs",
+]
+
+##-- end build-system

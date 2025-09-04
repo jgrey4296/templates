@@ -1,7 +1,7 @@
 {
     "proj_name"   : "rust_template",
     "env"         : "default",
-    "edition"     : "2021",
+    "edition"     : "2024",
     "entry_point" : "./src/main.rs",
     "_author"     : "me",
     "_email"      : "my@email.com",

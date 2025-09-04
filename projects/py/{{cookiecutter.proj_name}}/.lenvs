@@ -1,8 +1,8 @@
 # Librarian-Envs Spec file
 # Lines of:
 # {handler} arg*
-
-# mamba doot-dev312
+venv
 # lsp
 # py-lsp
-# # flycheck
+# mypy
+# flycheck

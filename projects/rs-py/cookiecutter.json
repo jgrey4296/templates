@@ -8,8 +8,7 @@
   "_email": "my@email.com",
   "_github_username": "me",
   "_short_name": "me",
-  "edition": "2021",
+  "edition": "2024",
   "entry_point": "__main__",
-  "env": "base310",
-  "python": "3.10"
+  "python": "3.12"
 }

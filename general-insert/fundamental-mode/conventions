@@ -36,8 +36,11 @@ gen_{}             # Generation Output
 __tests            # Test dirs
 
 ----
-parameter # Formal Spec
-argument  # Actual Value
+parameter                 # Formal Spec
+argument                  # Actual Value
+
+Protocols for Parameters  #
+Types for Returns         #
 
 ---- UUIDS
 v1 # uuid : timestamped, monotonic counter, MAC Address

@@ -4,6 +4,7 @@ $0
 
 """
 `(+snippet-expand "ruff.ignore.in.file")`
+`(+snippet-expand "future.annotations")`
 
 `(+snippet-expand "import.core")`
 

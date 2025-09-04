@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : pytest.skip.module
+# uuid  : pytest.skip.module
+# key   : pytest.skip.module
+# group : pytest skip
+# --
+try:
+    from .. import something
+except ImportError:
+    pytest.skip("Skipping Tests due to an import error",
+                allow_module_level=True)

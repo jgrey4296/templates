@@ -5,8 +5,6 @@
 # group : import
 # --
 # Imports:
-`(+snippet-expand "future.annotations")`
-
 # ##-- stdlib imports
 import datetime
 import enum

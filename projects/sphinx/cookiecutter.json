@@ -2,11 +2,11 @@
   "proj_name": "sphinx_template",
   "_author": "me",
   "_copy_without_render": [
-    "*docs/_static",
-    "*docs/_templates"
+    "*_static",
+    "*_templates"
   ],
   "_email": "my@email.com",
   "_github_username": "me",
   "_proj_slug": "docs",
-  "_short_name": "me",
+  "_short_name": "me"
 }

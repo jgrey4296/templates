@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : add.index.entry
+# uuid  : add.index.entry
+# key   : add.index.entry
+# group : rst sphinx
+# --
+.. index:: $1

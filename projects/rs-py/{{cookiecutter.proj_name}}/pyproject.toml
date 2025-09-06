@@ -47,7 +47,6 @@ changelog     = "https://github.com//{{cookiecutter.proj_name}}/blob/master/CHAN
 
 ##-- end scripts
 
-##-- build system
 maturin.build
 
 # Tools #######################################################################

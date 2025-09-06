@@ -6,7 +6,7 @@ name            = "$1"
 version         = "0.1.0"
 description     = ""
 readme          = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 license         = {file = "LICENSE"}
 keywords        = []
 authors         = [
@@ -65,46 +65,15 @@ changelog     = "https://github.com/jgrey4296/$1/spam/blob/master/CHANGELOG.md"
 
 ##-- end entry points
 
-##-- build-system
-[build-system]
-# frontend: https://pypa-build.readthedocs.io/en/latest/index.html
-# frontend: https://pdm.fming.dev/latest/
-requires = [
-         "setuptools >= 63.1.0",
-         "wheel >= 0.37.1"
-         # https://flit.pypa.io/en/stable/index.html
-         # "flit_core > 3.2, <4",
-         # https://pdm-backend.fming.dev/
-         # "pdm-backend"
-
-]
-
-build-backend = "setuptools.build_meta"
-# build-backend = "flit_core.buildapi"
-# build-backend = "pdm.backend"
-
-[tool.setuptools]
-include-package-data = true
-
-[tool.setuptools.packages.find]
-namespaces = true
-where      = ["."]
-include    = ["$1*"]
-
-[tool.setuptools.package-data]
-"*" = ["*"]
-
-[tool.setuptools.exclude-package-data]
-
-##-- end build-system
+`(snippet-expand "tool.hatch")`
 
 # Tools #######################################################################
 
 `(+snippet-expand "bumpver.semantic.tool")`
 
-`(+snippet-expand "cliff.py.tool")`
-
 `(+snippet-expand "pytest.tool")`
+
+`(+snippet-expand "mypy.tool")`
 
 `(+snippet-expand "isort.tool")`
 

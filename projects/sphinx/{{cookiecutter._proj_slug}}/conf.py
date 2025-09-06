@@ -42,47 +42,47 @@ napoleon_type_aliases  : dict
 # ##--|
 
 # ##-- a: Project information --------------------
-`(+snippet-expand "project.info")`
+project.info
 
 # ##-- b: Extensions -----------------------------
 extensions      = [
-`(+snippet-expand "default.extensions" 4)`
+default.extensions)`
     
 ]
 needs_extensions  = {
     # ExtName : Version
 }
 
-`(+snippet-expand "path.extension")`
+path.extension
 
-`(+snippet-expand "template.options")`
+template.options
 
-`(+snippet-expand "html.options")`
+html.options
 
-`(+snippet-expand "rtd.theme.options")`
+rtd.theme.options
 
-`(+snippet-expand "rst.options")`
+rst.options
 
-`(+snippet-expand "python.options")`
+python.options
 
 # ##-- c: Extension Options ----------------------
-`(+snippet-expand "autodoc.ext.options")`
+autodoc.ext.options
 
-`(+snippet-expand "autoapi.ext.options")`
+autoapi.ext.options
 
-`(+snippet-expand "extlinks.ext.options")`
+extlinks.ext.options
 
-`(+snippet-expand "intersphinx.ext.options")`
+intersphinx.ext.options
 
-`(+snippet-expand "graphviz.ext.options")`
+graphviz.ext.options
 
-`(+snippet-expand "imgconvert.ext.options")`
+imgconvert.ext.options
 
-`(+snippet-expand "viewcode.ext.options")`
+viewcode.ext.options
 
-`(+snippet-expand "autosection.ext.options")`
+autosection.ext.options
 
-`(+snippet-expand "napoleon.ext.options")`
+napoleon.ext.options
                   
 # ##-- d: Sphinx App Customisation ---------------
-`(+snippet-expand "sphinx.app.setup")`
+sphinx.app.setup

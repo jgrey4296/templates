@@ -48,18 +48,18 @@ changelog     = "https://github.com//{{cookiecutter.proj_name}}/blob/master/CHAN
 ##-- end scripts
 
 ##-- build system
-`(+snippet-expand "maturin.build")`
+maturin.build
 
 # Tools #######################################################################
 
-`(+snippet-expand "maturin.tool")`
+maturin.tool
 
-`(+snippet-expand "mypy.tool")`
+mypy.tool
 
-`(+snippet-expand "pytest.tool")`
+pytest.tool
 
-`(+snippet-expand "isort.tool")`
+isort.tool
 
-`(+snippet-expand "coverage.tool")`
+coverage.tool
 
-`(+snippet-expand "towncrier")`
+towncrier

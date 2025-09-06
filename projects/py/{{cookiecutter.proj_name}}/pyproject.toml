@@ -81,14 +81,14 @@ include    = ["{{cookiecutter.proj_name}}*"]
 
 # Tools #######################################################################
 
-`(+snippet-expand "mypy.tool")`
+mypy.tool
 
-`(+snippet-expand "pytest.tool")`
+pytest.tool
 
-`(+snippet-expand "isort.tool")`
+isort.tool
 
-`(+snippet-expand "coverage.tool")`
+coverage.tool
 
-`(+snippet-expand "towncrier")`
+towncrier
 
-`(+snippet-expand "uv.tool")`
+uv.tool

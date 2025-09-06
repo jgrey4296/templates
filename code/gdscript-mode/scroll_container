@@ -1,0 +1,98 @@
+# -*- mode: snippet -*-
+# name  : scroll.container
+# uuid  : scroll.container
+# key   : scroll.container
+# group : gui
+# --
+# https://8bit-memories.com/projects/godot-recipes/scrollcontainer_plus.gd
+class_name ScrollContainerPlus
+extends ScrollContainer
+
+# Extension to ScrollContainer with two main features:
+# 1) Focus following using a safe zone margin around the focused item.
+# 2) Smooth scrolling using smooth_cd class
+# NOTE: This script assumes that the contents of a scroll container might change during runtime.
+#		Hence this script re-initializes each time the scroll container becomes visible and caches
+#		as little as possible. Adjust if needed.
+
+@export var scroll_safezone: Vector2 = Vector2(32,64)
+@export var do_smooth_scroll: bool = true
+@export var smooth_time: float = 0.1
+var items_container: Control
+var focus_items: Array[Control]
+var smooth_scroll: SmoothCD.SCDVector2
+var smooth_scroll_cur: Vector2 = Vector2.ZERO
+var smooth_scroll_to: Vector2 = Vector2.ZERO
+
+
+func _ready() -> void:
+	set_process(false)
+	visibility_changed.connect(_on_visibility_changed)
+	if do_smooth_scroll:
+		smooth_scroll = SmoothCD.SCDVector2.new()
+
+
+func _on_visibility_changed() -> void:
+	if is_visible_in_tree():
+		set_process(do_smooth_scroll)
+		activate()
+	else:
+		set_process(false)
+		deactivate()
+
+
+func _process(delta: float) -> void:
+	if do_smooth_scroll && smooth_scroll_to != smooth_scroll_cur:
+		smooth_scroll_cur = smooth_scroll.smooth(smooth_scroll_cur, smooth_scroll_to, smooth_time, delta)
+		if smooth_scroll_to.distance_to(smooth_scroll_cur) <= 2: # close enough. no need to smooth further.
+			smooth_scroll_cur = smooth_scroll_to
+		scroll_horizontal = (int)(smooth_scroll_cur.x)
+		scroll_vertical = (int)(smooth_scroll_cur.y)
+
+
+func activate() -> void:
+	await get_tree().process_frame # need to wait for scroll container to be done with its magic.
+	scroll_safezone = scroll_safezone.min(size/2) # ensure sanity of safezone (i love gamedev).
+	for n: Node in get_children():
+		if n is Control:
+			items_container = n as Control
+			break
+	focus_items.clear()
+	for n: Node in items_container.find_children("*", "Control", true, false):
+		var c: Control = n as Control
+		if c.focus_mode != Control.FocusMode.FOCUS_NONE:
+			focus_items.append(c)
+			if !c.focus_entered.is_connected(_on_item_focus_enter):
+				c.focus_entered.connect(_on_item_focus_enter.bind(c))
+
+
+func deactivate() -> void:
+	for c: Control in focus_items:
+		if c.focus_entered.is_connected(_on_item_focus_enter):
+			c.focus_entered.disconnect(_on_item_focus_enter)
+	focus_items.clear()
+
+
+func _on_item_focus_enter(c: Control) -> void:
+	var scroll_cur: Vector2 = Vector2(scroll_horizontal, scroll_vertical)
+	var scroll_to: Vector2 = scroll_cur
+	var scrollbar_offset: Vector2 = Vector2(get_v_scroll_bar().size.x if get_v_scroll_bar().visible else 0, get_h_scroll_bar().size.y if get_h_scroll_bar().visible else 0)
+	# position of item in its position relative to scroll container.
+	var c_pos: Vector2 = c.global_position - global_position + scroll_cur
+	# item bounds based on their position, their size, safezone (clamped to container bounds).
+	var item_min: Vector2 = (c_pos - scroll_safezone).max(Vector2.ZERO)
+	var item_max: Vector2 = (c_pos + c.size + scroll_safezone - size).min(items_container.size - size + scrollbar_offset)
+
+	# check which scroll values need to be adjusted to keep item (+safezone) visible.
+	if scroll_to.x > item_min.x: scroll_to.x = item_min.x
+	elif scroll_to.x < item_max.x: scroll_to.x = item_max.x
+	if scroll_to.y > item_min.y: scroll_to.y = item_min.y
+	elif scroll_to.y < item_max.y: scroll_to.y = item_max.y
+
+	if !scroll_to.is_equal_approx(scroll_cur):
+		if do_smooth_scroll:
+			smooth_scroll_cur = Vector2(scroll_cur)
+			smooth_scroll_to = scroll_to
+		else:
+			scroll_horizontal = (int)(scroll_to.x)
+			scroll_vertical = (int)(scroll_to.y)

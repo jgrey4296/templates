@@ -1,0 +1,101 @@
+# -*- mode: snippet -*-
+# name  : smooth.cd
+# uuid  : smooth.cd
+# key   : smooth.cd
+# group :
+# --
+# https://8bit-memories.com/projects/godot-recipes/smooth_cd.gd
+extends RefCounted
+class_name SmoothCD
+
+# Critically Damped Smoothing based on Game Programming Gems 4, 1.10 (p.95)
+
+class SCDFloat:
+	var cur_vel: float = 0
+
+	func smooth(from: float, to: float, smooth_time: float, delta: float) -> float:
+		if smooth_time < 0.0001 || is_equal_approx(from, to):
+			cur_vel = 0
+			return to
+
+		var omega: float = 2.0 / smooth_time
+		var x: float = omega * delta
+		var exponent: float = 1.0 / (1.0 + x + 0.48 * x * x + 0.235 * x * x * x)
+		var change: float = from - to;
+		var temp: float = (cur_vel + omega * change) * delta
+		cur_vel = (cur_vel - omega * temp) * exponent
+
+		return to + (change + temp) * exponent;
+
+
+class SCDVector2:
+	var cur_vel: Vector2 = Vector2.ZERO
+
+	func smooth(from: Vector2, to: Vector2, smooth_time: float, delta: float) -> Vector2:
+		if smooth_time < 0.0001 || from.is_equal_approx(to):
+			cur_vel = Vector2.ZERO
+			return to
+
+		var omega: float = 2.0 / smooth_time;
+		var x: float = omega * delta;
+		var exponent: float = 1.0 / (1.0 + x + 0.48 * x * x + 0.235 * x * x * x)
+		var change: Vector2 = from - to
+		var temp: Vector2 = (cur_vel + omega * change) * delta
+		cur_vel = (cur_vel - omega * temp) * exponent
+		return to + (change + temp) * exponent
+
+
+class SCDVector3:
+	var cur_vel: Vector3 = Vector3.ZERO
+
+	func smooth(from: Vector3, to: Vector3, smooth_time: float, delta: float) -> Vector3:
+		if smooth_time < 0.0001 || from.is_equal_approx(to):
+			cur_vel = Vector3.ZERO
+			return to
+
+		var omega: float = 2.0 / smooth_time;
+		var x: float = omega * delta;
+		var exponent: float = 1.0 / (1.0 + x + 0.48 * x * x + 0.235 * x * x * x)
+		var change: Vector3 = from - to
+		var temp: Vector3 = (cur_vel + omega * change) * delta
+		cur_vel = (cur_vel - omega * temp) * exponent
+
+		return to + (change + temp) * exponent
+
+
+class SCDBasis:
+	var cur_vel: Basis = Basis.IDENTITY
+
+	func smooth(from: Basis, to: Basis, smooth_time: float, delta: float, normalize: float) -> Basis:
+		if smooth_time < 0.0001 || from.is_equal_approx(to):
+			cur_vel = Basis.IDENTITY
+			return to
+
+		# If opposing "from/to" axes, shortest path is inversion. Not allowed if normalize given, stalling/locking rotation!
+		# In this case, rotate opposing "to" axis by 0.1 rad to provide a way to reach "to" by rotation.
+		if normalize:
+			if is_equal_approx(from.z.dot(to.z), -1.0): to = to.rotated(to.y, 0.1)
+			if is_equal_approx(from.y.dot(to.y), -1.0): to = to.rotated(to.z, 0.1)
+			if is_equal_approx(from.x.dot(to.x), -1.0): to = to.rotated(to.y, 0.1)
+
+		var omega: float = 2.0 / smooth_time;
+		var x: float = omega * delta;
+		var exponent: float = 1.0 / (1.0 + x + 0.48 * x * x + 0.235 * x * x * x)
+		var change: Basis = Basis.IDENTITY
+		change.x = from.x - to.x
+		change.y = from.y - to.y
+		change.z = from.z - to.z
+		var temp: Basis = Basis.IDENTITY
+		temp.x = (cur_vel.x + omega * change.x) * delta
+		temp.y = (cur_vel.y + omega * change.y) * delta
+		temp.z = (cur_vel.z + omega * change.z) * delta
+		cur_vel.x = (cur_vel.x - omega * temp.x) * exponent
+		cur_vel.y = (cur_vel.y - omega * temp.y) * exponent
+		cur_vel.z = (cur_vel.z - omega * temp.z) * exponent
+		var out: Basis = Basis.IDENTITY
+		out.x = to.x + (change.x + temp.x) * exponent
+		out.y = to.y + (change.y + temp.y) * exponent
+		out.z = to.z + (change.z + temp.z) * exponent
+		if normalize:
+			out = out.orthonormalized()
+		return out

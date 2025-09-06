@@ -1,0 +1,42 @@
+# -*- mode: snippet -*-
+# name  : smooth.cd.joint
+# uuid  : smooth.cd.joint
+# key   : smooth.cd.joint
+# group : physics
+# --
+# https://8bit-memories.com/projects/godot-recipes/smooth_cd_joint.gd
+extends Node3D
+class_name SmoothCDJoint
+
+@export var smooth_position: bool = true
+@export var smooth_rotation: bool = true
+@export var position_smooth_time: float = 0.25
+@export var rotation_smooth_time: float = 0.25
+@export var rotation_smooth_normalize: bool = true
+
+var parent: Node3D
+var scd_pos: SmoothCD.SCDVector3
+var scd_rot: SmoothCD.SCDBasis
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	parent = get_parent_node_3d()
+
+	if parent == null:
+		smooth_position = false
+		smooth_rotation = false
+
+	set_as_top_level(smooth_position || smooth_rotation)
+	if smooth_position:
+		scd_pos = SmoothCD.SCDVector3.new()
+	if smooth_rotation:
+		scd_rot = SmoothCD.SCDBasis.new()
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if smooth_position:
+		global_transform.origin = scd_pos.smooth(global_transform.origin, parent.global_transform.origin, position_smooth_time, delta)
+	if smooth_rotation:
+		global_transform.basis = scd_rot.smooth(global_transform.basis, parent.global_transform.basis, rotation_smooth_time, delta, rotation_smooth_normalize)

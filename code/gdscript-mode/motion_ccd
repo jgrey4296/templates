@@ -1,0 +1,74 @@
+# -*- mode: snippet -*-
+# name  : motion.ccd
+# uuid  : motion.ccd
+# key   : motion.ccd
+# group :
+# --
+# https://8bit-memories.com/projects/godot-recipes/motion_ccd.gd
+# Motion-based Continuous Collision Detection for Godot.
+# Problem: If a RigidBody encounters concave/trimesh collision shape, builtin CCD may be ineffective (see NOTE below),
+#          once magnitude of velocity per physics tick (i.e. movement per physics tick) is larger than RB radius.
+#          If this happens, tunneling (Rigidbody passing through collision shape) may occur.
+#          NOTE: Shape and settings (such as backface collision check) of convace collision shape can contribute
+#                to the issue, as well as allowed penetration setting in project setings and maybe others.
+#                Explore other options first, before considering this solution as it is not perfect.
+# Solution: If above velocity threshold, test safe motion and
+#           1) Skip backwards by velocity times fraction body moves too much. (default) OR
+#           2) Reduce velocity by fraction body moves too much. (enable below if desired)
+# Usage: Attach script to RigidBody3D or sub-Node3D, set up in inspector as needed.
+# NOTE: This was made for and works best with spherical objects but results may be acceptable for other shapes, too.
+#       To achieve this, adjust col_rad as needed.
+# NOTE 2: Script may contain issues and/or may not be suitable for your use.
+#         Use at your own risk and adjust as needed.
+
+class_name MotionCCD
+extends Node3D
+
+@export var rb: RigidBody3D
+@export var col_rad: float = 0.025 # Collision radius of this RigidBody. I.e. if RB moves further than this per physics tick, it might tunnel.
+@export_flags_3d_physics var col_mask: int # Collision layers to test for.
+@onready var space_state: PhysicsDirectSpaceState3D = get_world_3d().direct_space_state # NOTE: If you use threaded physics, you may want to get this from a safe place.
+@onready var query: PhysicsShapeQueryParameters3D = PhysicsShapeQueryParameters3D.new()
+var query_results: PackedFloat32Array = [1.0, 1.0] # Safe/unsafe fraction of motion returned by cast_motion.
+@onready var frames_suspend: int = 2
+
+
+func _ready() -> void:
+	query.shape = SphereShape3D.new()
+	query.shape.radius = col_rad
+	query.collision_mask = col_mask
+
+
+func _physics_process(delta: float) -> void:
+	# Allows for CCD to pause for a frame. Done to prevent object to get stuck if encountering
+	# a seemingly impossible situation/collision.
+	if frames_suspend > 0:
+		frames_suspend -= 1
+		return
+
+	# Check if object travels fast enough to make tunneling possible.
+	if rb.linear_velocity.length() * delta < col_rad:
+		return
+
+	query.transform.origin = rb.global_transform.origin
+	query.motion = rb.linear_velocity * delta # motion per physics tick.
+	query_results = space_state.cast_motion(query)
+
+	# Cast if result determined that we can't make full move without collision!
+	if query_results[0] < 1:
+		frames_suspend = 1 # Ensure pause next frame.
+		### METHOD 1 ###
+		# Skip backwards by velocity times fraction body moves too much to hit collider safely.
+		# Assumes velocity does not change drastically between frames (magnitude or direction).
+		# If it does, next test may sufficiently counteract, but your mileage may vary.
+		# Highly depends on the collision shape(s) the Rigidbody encounters or is already in contact with.
+		# But if Rigidbody moves straight and does not accelerate much, next collision frame should be perfect.
+		rb.global_transform.origin -= (rb.linear_velocity*delta*(1.0-query_results[0]))
+		### METHOD 2 ###
+		# Reduce velocity by fraction body moves too much to hit collider safely.
+		# Safer, but negatively affects bounciness, which may be undesirable at fast speeds.
+		# rb.linear_velocity = (rb.linear_velocity*query_results[0])
+
+
+func suspend(num_frames: int) -> void:
+	frames_suspend = num_frames

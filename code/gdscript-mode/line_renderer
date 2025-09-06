@@ -1,0 +1,129 @@
+# -*- mode: snippet -*-
+# name  : line.renderer
+# uuid  : line.renderer
+# key   : line.renderer
+# group :
+# --
+# https://8bit-memories.com/projects/godot-recipes/line_renderer.gd
+extends MeshInstance3D # Needs to be set up with ImmediateMesh
+class_name LineRenderer
+
+@export var line_points: Array[Vector3] = [Vector3(0,0,0), Vector3(0,0,-1)]
+@export var line_transforms: Array[Transform3D] = []
+@export var line_width_start: float = 0.01
+@export var line_width_end: float = 0.01
+@export_range(2, 64) var line_sides_num: int = 4
+@export var draw_end_caps: bool = true
+var line_verts: Array[Vector3]
+
+
+func _ready() -> void:
+	line_draw()
+
+
+func line_set_points(points: Array[Vector3]) -> void:
+	line_points = points
+	line_transforms.clear()
+	line_draw()
+
+
+func line_set_transforms(transforms: Array[Transform3D]) -> void:
+	line_transforms = transforms
+	line_draw()
+
+
+func line_transforms_from_points() -> bool:
+	if line_points.size() < 2:
+		return false
+
+	line_transforms.clear()
+	line_transforms.resize(line_points.size())
+
+	for i: int in line_points.size():
+		line_transforms[i].origin = line_points[i]
+		var line_dir: Vector3 = Vector3.ZERO
+		var up_dir: Vector3 = basis.y
+		if i > 0:
+			line_dir = (line_points[i-1] - line_transforms[i].origin).normalized()
+			up_dir = line_transforms[i-1].basis.y
+		if i < line_points.size()-1:
+			line_dir = (line_transforms[i].origin - line_points[i+1]).normalized()
+		if line_dir.abs().is_equal_approx(up_dir.abs()) || is_equal_approx(line_dir.length(), 0):
+			line_transforms[i].basis = basis
+		else:
+			line_transforms[i].basis = Basis.looking_at(line_dir, up_dir, true)
+
+	return true
+
+
+func line_verts_generate() -> bool:
+	line_verts.clear()
+
+	if line_transforms.size() < 2:
+		if !line_transforms_from_points():
+			return false
+
+	for i: int in line_transforms.size():
+		var pnt_tr: Transform3D = line_transforms[i]
+		var offset: float = lerp(line_width_start, line_width_end, line_frac(i)) / sqrt(line_sides_num)
+		var rot_step: float = deg_to_rad(-360.0/line_sides_num)
+		for j: int in line_sides_num:
+			line_verts.append(Vector3(pnt_tr.origin + (pnt_tr.basis.y.rotated(pnt_tr.basis.z, rot_step*j) * offset)))
+
+	return true
+
+
+func line_draw() -> void:
+	mesh.clear_surfaces()
+
+	if line_sides_num < 2:
+		return
+	if !line_verts_generate():
+		return
+
+	mesh.surface_begin(Mesh.PRIMITIVE_TRIANGLES)
+
+	for i: int in (line_transforms.size()-1):
+		for j: int in line_sides_num:
+			var s0: int = j
+			var s1: int = (j + 1) % line_sides_num
+			mesh.surface_set_uv(Vector2(line_frac(i), 0))
+			mesh.surface_add_vertex(line_verts[(i*line_sides_num)+s0])
+			mesh.surface_set_uv(Vector2(line_frac(i+1), 0))
+			mesh.surface_add_vertex(line_verts[((i+1)*line_sides_num)+s0])
+			mesh.surface_set_uv(Vector2(line_frac(i+1), 0))
+			mesh.surface_add_vertex(line_verts[((i+1)*line_sides_num)+s1])
+			mesh.surface_set_uv(Vector2(line_frac(i), 0))
+			mesh.surface_add_vertex(line_verts[(i*line_sides_num)+s0])
+			mesh.surface_set_uv(Vector2(line_frac(i+1), 0))
+			mesh.surface_add_vertex(line_verts[((i+1)*line_sides_num)+s1])
+			mesh.surface_set_uv(Vector2(line_frac(i), 0))
+			mesh.surface_add_vertex(line_verts[(i*line_sides_num)+s1])
+
+	if draw_end_caps && line_width_start > 0:
+		for i: int in line_sides_num:
+			var s0: int = i
+			var s1: int = (i + 1) % line_sides_num
+			mesh.surface_set_uv(Vector2(0, 0))
+			mesh.surface_add_vertex(line_verts[s0])
+			mesh.surface_set_uv(Vector2(0, 0))
+			mesh.surface_add_vertex(line_verts[s1])
+			mesh.surface_set_uv(Vector2(0, 0))
+			mesh.surface_add_vertex(line_transforms[0].origin)
+
+	if draw_end_caps && line_width_end > 0:
+		for i: int in line_sides_num:
+			var s0: int = i
+			var s1: int = (i + 1) % line_sides_num
+			mesh.surface_set_uv(Vector2(1, 1))
+			mesh.surface_add_vertex(line_verts[(line_verts.size()-1) - s0])
+			mesh.surface_set_uv(Vector2(1, 1))
+			mesh.surface_add_vertex(line_verts[(line_verts.size()-1) - s1])
+			mesh.surface_set_uv(Vector2(1, 1))
+			mesh.surface_add_vertex(line_transforms[line_transforms.size()-1].origin)
+
+	mesh.surface_end()
+
+
+func line_frac(idx: int) -> float:
+	return inverse_lerp(0, (line_transforms.size()-1), idx)

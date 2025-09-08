@@ -1,19 +1,19 @@
-## __mod.rs -*- mode: rustic -*-
+// __mod.rs -*- mode: rustic -*-
 // Module: $1
 // Author: `user-full-name`
 // Date  : `(format-time-string "%Y-%m-%d")`
 //
 //
 
-////-- submodules
+// //--// submodules
 mod $2;
-////-- end submodules
+// //--// end submodules
 
-////-- exports
+// //--// exports
 pub use $3;
-////-- end exports
+// //--// end exports
 
-////-- test submodules
+// //--// test submodules
 #[cfg(test)]
 mod tests;
-////-- end test submodules
+// //--// end test submodules

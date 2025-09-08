@@ -1,0 +1,69 @@
+Rust Built-in Attributes:
+cfg                           # compile time
+cfg_attr                      # compile time
+recursion_limit               # compile time
+type_length_limit             # compile time
+
+panic_handler                 # runtime
+global_allocator              # runtime
+windows_subsystem             # runtime
+
+test                          # mark test
+ignore                        # disable test
+should_panic                  # test result
+
+derive                        # traits
+automatically_derived         # traits
+
+macro_export                  # public macros
+macro_use                     # macro import
+
+proc_macro                    # define
+proc_macro_derive             # define
+proc_macro_attribute          # define
+
+allow                         # lint level
+expect                        # lint level
+warn                          # lint level
+deny                          # lint level
+forbid                        # lint level
+
+deprecated                    # lint
+must_use                      # lint
+diagnostic::on_unimplemented  # lint
+diagnostic::do_not_recommend  # lint
+
+link                          # extern lib
+link_name                     # extern
+link_ordinal                  # extern
+no_link                       # extern prevent
+repr                          # type layout
+crate_type                    #
+no_main                       #
+export_name                   #
+link_section                  #
+no_mangle                     #
+used                          # static item forcing
+crate_name                    #
+
+inline                        # code gen
+cold                          # code gen hint
+naked                         # code gen no prologue
+no_builtins                   # code gen
+target_feature                # code gen
+track_caller                  # code gen
+instruction_set               # code g en
+
+doc                           # documentation
+
+no_std                        # prelude control
+no_implicit_prelude           # prelude control
+
+path                          # module filename
+
+feature                       #
+
+non_exhaustive                # type hinting
+
+debugger_visualizer           # debugging
+collapse_debuginfo            # debugging

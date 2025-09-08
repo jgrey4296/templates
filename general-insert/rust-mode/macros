@@ -1,14 +1,17 @@
 Rust Macros
-#[macroName] # General Invocation
-macroName!   # Macro Rule Invocation
+#[macroName]            # Outer Attribute invocation
+#![macroName]           # Inner Attribute invocation
+macroName!              # Macro Rules Invocation
+macroName!(args...)     # Macro Func Invocation
 
-#[attribute = "value"]    # Attributes
+#[attribute="value"]    # Attributes
 #[attrbute(key="value")]  # Attributes
 #[attribute(value)]       # Attributes
 
 #[allow(dead_code)] # Compiler warning control
 #[link(name = "m")] # External library linking. Link to libm
-#[derive(...)] # Auto Trait Derivation
+#[derive(...)]      # Auto Trait Derivation
+#[macro_export]     #
 
 #[cfg(test)] # Mark module as for testing
 #[test] # Mark as a test

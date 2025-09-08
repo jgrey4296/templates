@@ -4,12 +4,16 @@
 # key   : test.mod
 # group : jg
 # --
-////-- tests
+// //--// tests
 #[cfg(test)]
 mod tests {
+    use super::*;
+
     #[test]
-    fn test_basic() {
+    fn test_sanity() {
         assert!(True);
     }
+
+
 }
-////-- end tests
+// //--// end tests

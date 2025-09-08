@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: Vec::with_capacity(...)
+# name: Vector capacity
 # key: vwc
 # uuid: vwc
 # --

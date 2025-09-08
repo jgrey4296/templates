@@ -4,5 +4,5 @@
 # uuid: extc
 # --
 extern "C" {
-    `%`$0
+    $0
 }

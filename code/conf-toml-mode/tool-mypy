@@ -1,6 +1,7 @@
 # -*- mode: snippet -*-
 # name: mypy.tool
 # uuid: mypy.tool
+# key: mypy.tool
 # group: python pyproject tool
 # --
 ##-- mypy

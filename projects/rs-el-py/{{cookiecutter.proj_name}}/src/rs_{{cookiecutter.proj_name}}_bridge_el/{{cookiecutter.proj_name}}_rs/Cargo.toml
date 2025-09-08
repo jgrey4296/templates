@@ -1,0 +1,41 @@
+[package]
+name                     = "{{cookiecutter.proj_name}}_rs"
+version                  = "0.1.0"
+description              = "rust binary crate for project"
+edition.workspace        = true
+rust-version.workspace   = true
+homepage.workspace       = true
+documentation.workspace  = true
+repository.workspace     = true
+authors.workspace        = true
+license.workspace        = true
+
+[package.metadata.dist]
+dist                     = true
+
+[features]
+# https://doc.rust-lang.org/cargo/reference/features.html
+default = []
+
+[dependencies]
+
+[dev-dependencies]
+
+[build-dependencies]
+
+[lints]
+workspace = true
+
+[[bin]]
+name               = "{{cookiecutter.proj_name}}-rs"
+path               = "src/main.rs"
+proc-macro         = false        
+
+[lib]
+path = "src/lib.rs"
+
+# [target.'cfg(debug)'.dependencies]
+
+
+
+

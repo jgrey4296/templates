@@ -4,7 +4,10 @@
 # key   : pymodule
 # group : pyo3 python
 # --
-#[pymodule] // name needs to equal the .so file
+
+// Match name to cargo.toml's lib.name
+#[pymodule]
+#[pyo3(name="_mod")
 fn ${1:module_name} (m: &Bound<'_, PyModule>) -> PyResult<()> {
    // m.add_function(wrap_pyfunction!(${2:func_name}, m)?)?;
    // m.add_class::<ClassName>()?;

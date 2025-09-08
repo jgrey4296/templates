@@ -1,8 +1,0 @@
-# Librarian-Envs Spec file
-# Lines of:
-# {handler} arg*
-venv
-# lsp
-# py-lsp
-# mypy
-# flycheck

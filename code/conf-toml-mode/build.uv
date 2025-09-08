@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : uv.build
+# uuid  : uv.build
+# key   : uv.build
+# group : workspace uv build-system
+# --
+[build-system]
+requires = ["uv_build>=0.8.15,<0.9.0"]
+build-backend = "uv_build"

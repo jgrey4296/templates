@@ -2,7 +2,7 @@
 """
 
 """
-`(+snippet-expand "ruff.ignore.in.file")` PLR0912, BLE001
+# ruff.ignore.in.file PLR0912, BLE001
 
 `(+snippet-expand "import.core")`
 

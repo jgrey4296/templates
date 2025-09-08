@@ -16,7 +16,6 @@ classifiers     = [
   "Programming Language :: Python"
 ]
 
-
 ##-- dependencies
 dependencies   = [
     "networkx > 3.0",
@@ -31,15 +30,28 @@ dependencies   = [
     "jgdv >= 0.3.2",
 ]
 
-[project.optional-dependencies]
-docs = [
-    "Sphinx >=7.4.0",
-    "sphinx-rtd-theme",
-    "myst_parser >= 4.0.0",
+[dependency-groups]
+dev = [
+    "ipython>=9.4.0",
+    "towncrier>=24.8.0",
 ]
 test = [
-  "pytest >= 8.3.0",
-  "pytest-mock >= 3.14",
+    "pydot>=4.0.1",
+    "pytest>=8.3.5",
+    "pytest-cov>=6.0.0",
+    "pytest-mock>=3.14.0",
+    "tox>=4.28.4",
+    "tox-uv>=1.27.0",
+    "ruff>=0.12.8",
+]
+docs = [
+    "myst-parser>=4.0.1",
+    "sphinx>=8.2.3",
+    "sphinx-autoapi>=3.6.0",
+    "sphinx-rtd-theme>=3.0.2",
+    "pydot>=4.0.1",
+    "tox>=4.28.4",
+    "tox-uv>=1.27.0",
 ]
 
 ##-- end dependencies
@@ -54,18 +66,12 @@ changelog     = "https://github.com/jgrey4296/$1/spam/blob/master/CHANGELOG.md"
 ##-- end urls
 
 ##-- entry points
-[project.scripts] # CLI
-# $1 = $1.default:main
-
-[project.gui-scripts] #GUI
-# spam-gui      = "spam:main_gui"
-
-[project.entry-points."nothing"] # Plugins
-# tomatoes      = "spam:main_tomatoes"
-
+[project.scripts] 
+[project.gui-scripts] 
+[project.entry-points."$1"] 
 ##-- end entry points
 
-`(snippet-expand "tool.hatch")`
+`(snippet-expand "hatch.build")`
 
 # Tools #######################################################################
 
@@ -78,3 +84,6 @@ changelog     = "https://github.com/jgrey4296/$1/spam/blob/master/CHANGELOG.md"
 `(+snippet-expand "isort.tool")`
 
 `(+snippet-expand "coverage.tool")`
+
+`(+snippet-expand "uv.tool")`
+

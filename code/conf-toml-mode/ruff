@@ -54,7 +54,7 @@ logger-objects     = ["logging", "printer"]
 # Silences N805
 extend-ignore-names = ["cls", "mcls"]
 
-[lint.per-file-ignore]
+[lint.per-file-ignores]
 # "__init__.py" = ["E402"]
 # "**/{test,docs,tools}/*" = ["E402"]
 

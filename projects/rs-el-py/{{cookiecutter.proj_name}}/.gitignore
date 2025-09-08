@@ -1,0 +1,10 @@
+log.*
+.log
+*.auto
+build/
+.temp/
+
+# Added by cargo
+
+/target
+/Cargo.lock

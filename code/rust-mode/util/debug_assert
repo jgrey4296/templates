@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
-# name: debug_assert!(...)
+# name: debug assert
 # key: dass
 # uuid: dass
 # --
-debug_assert!(`%`$0);
+debug_assert!($0);

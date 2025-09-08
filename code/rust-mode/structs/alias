@@ -2,6 +2,6 @@
 # name  : alias
 # uuid  : alias
 # key   : alias
-# group :
+# group : types
 # --
 type ${1:ident} = ${2:type};

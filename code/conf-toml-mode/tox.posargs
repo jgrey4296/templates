@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : tox.posargs
+# uuid  : tox.posargs
+# key   : tox.posargs
+# group : tox
+# --
+{ replace="posargs", default=[], extend=true }$0

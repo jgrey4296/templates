@@ -1,0 +1,28 @@
+# -*- mode: snippet -*-
+# name  : maturin.build
+# uuid  : maturin.build
+# key   : maturin.build
+# group : maturin python rust
+# --
+##-- build system: maturin
+[build-system]
+requires      = ["maturin>=1.7,<2.0"]
+build-backend = "maturin"
+
+[tool.maturin]
+# https://www.maturin.rs/config.html
+# compatibility  = "pypi"
+bindings         = "pyo3"
+features         = ["pyo3/extension-module"]
+manifest-path    = "src/MOD_bridge_py_rs/Cargo.toml"
+
+# full import path
+# leaf match to cargo.toml's lib.name
+module-name      = "MOD._rust"
+
+python-packages  = ["MOD"]
+python-source    = "src"
+
+include          = []
+exclude          = ["**_tests"]
+##-- end build system: maturin

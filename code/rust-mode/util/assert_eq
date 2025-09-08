@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: assert_eq!(..., ...)
-# key: asse
-# uuid: asse
+# key: as.eq
+# uuid: as.eq
 # --
-assert_eq!(${1:`%`}, $2);
+assert_eq!($1, $2);

@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: assert_ne!(..., ...)
-# key: assn
-# uuid: assn
+# key: as.not
+# uuid: as.not
 # --
-assert_ne!(${1:`%`}, $2);
+assert_ne!($1, $2);

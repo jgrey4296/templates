@@ -46,7 +46,7 @@ project.info
 
 # ##-- b: Extensions -----------------------------
 extensions      = [
-default.extensions)`
+default.extensions
     
 ]
 needs_extensions  = {

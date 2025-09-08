@@ -2,7 +2,9 @@
 # name: enum
 # key: enum
 # uuid: enum
+# group: types
 # --
 enum ${1:EnumName} {
-    `%`$0
+    // EnumName(Type, ...),
+    $0
 }

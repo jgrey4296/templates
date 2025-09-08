@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
-# name  : tool.towncrier
-# uuid  : tool.towncrier
-# key   : tool.towncrier
+# name  : towncrier.tool
+# uuid  : towncrier.tool
+# key   : towncrier.tool
 # group : pyproject towncrier changelog
 # --
 ##-- towncrier

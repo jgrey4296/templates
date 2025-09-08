@@ -1,0 +1,111 @@
+# ## pyproject.toml -*- mode: Toml -*-
+
+[project]
+name            = "{{cookiecutter.proj_name}}"
+version         = "0.1.0"
+requires-python = ">={{cookiecutter.python}}"
+description     = ""
+readme          = "README.md"
+license         = {file = "LICENSE"}
+keywords        = ["rust"]
+authors         = [
+  {name  = "{{cookiecutter._author}}", email = "{{cookiecutter._email}}"},
+]
+classifiers     = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+# dynamic = ["version"]
+
+##-- dependencies
+dependencies   = [
+    "{{cookiecutter.proj_name}}_dep",
+]
+
+[dependency-groups]
+dev = [
+    "ipython>=9.4.0",
+    "towncrier>=24.8.0",
+    "sh",   
+    "jgdv"
+]
+test = [
+    "pydot>=4.0.1",
+    "pytest>=8.3.5",
+    "pytest-cov>=6.0.0",
+    "pytest-mock>=3.14.0",
+    "tox>=4.28.4",
+    "tox-uv>=1.27.0",
+    "ruff>=0.12.8",
+]
+docs = [
+    "myst-parser>=4.0.1",
+    "sphinx>=8.2.3",
+    "sphinx-autoapi>=3.6.0",
+    "sphinx-rtd-theme>=3.0.2",
+    "pydot>=4.0.1",
+    "tox>=4.28.4",
+    "tox-uv>=1.27.0",
+]
+
+# https://docs.astral.sh/uv/concepts/configuration-files/
+# https://docs.astral.sh/uv/concepts/projects/workspaces/#workspace-sources
+[tool.uv]
+[tool.uv.sources]
+# dep-name = {workspace=true}
+{{cookiecutter.proj_name}}_dep = {workspace=true}
+
+[tool.uv.workspace]
+members = ["src/py_*"]
+exclude = [
+    "src/_*",
+    "src/el_*",
+    "src/rs_*",
+    "src/c_*",
+    "src/_docs"
+]
+
+##-- end dependencies
+
+##-- urls
+[project.urls]
+homepage      = "https://github.com/{{cookiecutter._github_username}}/{{cookiecutter.proj_name}}"
+documentation = "https://{{cookiecutter.proj_name}}.readthedocs.io"
+repository    = "https://github.com/{{cookiecutter._github_username}}/{{cookiecutter.proj_name}}"
+changelog     = "https://github.com//{{cookiecutter.proj_name}}/blob/master/CHANGELOG.md"
+
+##-- end urls
+
+##-- build system: maturin
+[build-system]
+requires         = ["uv_build>=0.8.15,<0.9.0"]
+build-backend    = "uv_build"
+# requires      = ["maturin>=1.7,<2.0"]
+# build-backend = "maturin"
+# requires       = ["hatchling>=1.13"]
+# build-backend  = "hatchling.build"
+
+##-- end build system: maturin
+
+##-- scripts
+[project.scripts]
+"{{cookiecutter.proj_name}}" = "{{cookiecutter.proj_name}}.{{cookiecutter.entry_point}}:main"
+
+# [project.gui-scripts]
+# [project.entry-points."{{cookiecutter.proj_name}}"]
+##-- end scripts
+
+# Tools #######################################################################
+
+towncrier.tool
+
+mypy.tool
+
+isort.tool
+
+pytest.tool
+
+coverage.tool
+
+

@@ -1,11 +1,16 @@
+// build.rs -*- mode: rustic -*-
 // https://doc.rust-lang.org/cargo/reference/build-scripts.html
-////-- imports
+//
+//
+//
+
+// //--// imports
 use $1;
-////-- end imports
+// //--// end imports
 
-////-- public fns
+// //--// public fns
 
-////-- end public fns
+// //--// end public fns
 
 fn main() {
 

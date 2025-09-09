@@ -1,3 +1,4 @@
+;; .reminder -*- mode: fundamental ; -*-
 
 Login Shell : "bash -" | "bash --login"
 Interactive Shell: "bash" | "bash -s" | "bash -i" , with stdin and stderr connected to terminals

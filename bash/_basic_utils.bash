@@ -9,15 +9,13 @@ function jgdebug () {
 
 jgdebug Debug is "${JGDEBUG-}"
 
-function jg_maybe_inc_prompt {
-    # Increment the shell level each time you go into a subshell
-    if [[ -n "$PROMPT_NUM" ]] && [[ $PROMPT_NUM -eq $PROMPT_NUM ]] 2> /dev/null; then
-        jgdebug "Prompt Level: $PROMPT_NUM"
-        PROMPT_NUM=$((PROMPT_NUM + 1))
-    else
-        PROMPT_NUM=1
-    fi
-    jgdebug Depth Prompt: "${DEPTH_PROMPT-}"
+# Prompt manipulation ----------------------------------------------
+
+function jg_set_prompt {
+    # Set the term prompt with useful info
+    PROMPT_COMMAND='_direnv_hook;jg_prompt_update'
+    # Also modified in .condarc
+    PS1='[${JG_PROMPT_INFO}] | u:\u | j:\j |= $JGPATH: '
 }
 
 function jg_prompt_update {
@@ -53,17 +51,32 @@ function jg_prompt_update {
 
     }
 
-function jg_set_prompt {
-    # Set the term prompt with useful info
-    PROMPT_COMMAND='jg_prompt_update'
-    # Also modified in .condarc
-    PS1='[${JG_PROMPT_INFO}] | u:\u | j:\j |= $JGPATH: '
+function jg_maybe_inc_prompt {
+    # Increment the shell level each time you go into a subshell
+    if [[ -n "$PROMPT_NUM" ]] && [[ $PROMPT_NUM -eq $PROMPT_NUM ]] 2> /dev/null; then
+        jgdebug "Prompt Level: $PROMPT_NUM"
+        PROMPT_NUM=$((PROMPT_NUM + 1))
+    else
+        PROMPT_NUM=1
+    fi
+    jgdebug Depth Prompt: "${DEPTH_PROMPT-}"
 }
 
 function randname (){
     # get a random name, for tmux session names
     shuf < /usr/share/dict/words | head -n 1 | sed "s/'//g"
 }
+
+function _direnv_hook() {
+  # https://direnv.net/
+  local previous_exit_status=$?;
+  trap -- '' SIGINT;
+  eval "$("/usr/bin/direnv" export bash)";
+  trap - SIGINT;
+  return $previous_exit_status;
+};
+
+# Tmux --------------------------------------------------
 
 function loginmux () {
     # tmux aware session creation
@@ -78,10 +91,10 @@ function loginmux () {
 
     if { tmux has-session; }; then
    	    echo "Tmux Session Running"
-        tmux new-session -s $(randname) 
+        tmux new-session -s "$(randname)"
     else
    	 echo "No Tmux Session"
-     tmux new-session -s $(randname)
+     tmux new-session -s "$(randname)"
     fi
 }
 
@@ -93,6 +106,8 @@ function attach () {
         *) tmux "attach" ;;
     esac
 }
+
+# user switching --------------------------------------------------
 
 if [[ -z "$SU_WHITELIST" ]]; then
     SU_WHITELIST="TMUX,TERM_PROGRAM,PROMPT_NUM,TMUX_PANE"
@@ -111,6 +126,8 @@ case "$USER" in
     *) ;;
 esac
 
+# JVM  --------------------------------------------------
+
 function init_sdkman () {
     # For activating sdkman in a subshell
     if [[ -e "${SDKMAN_DIR}/bin/sdkman-init.sh" ]]; then
@@ -119,3 +136,4 @@ function init_sdkman () {
         source "${SDKMAN_DIR}/bin/sdkman-init.sh"
     fi
 }
+

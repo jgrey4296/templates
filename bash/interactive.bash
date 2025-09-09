@@ -45,5 +45,6 @@ case "$OSTYPE" in
        ;;
 esac
 
+# Setup prompt
 jg_maybe_inc_prompt
 jg_set_prompt

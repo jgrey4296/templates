@@ -5,7 +5,8 @@ https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 """
 # ruff: noqa: TC003, A001, DTZ005, ERA001, PLR2044, ARG001, ANN001, ANN201, TC002
-# Imports --------------------------------
+
+##-- imports
 from __future__ import annotations
 import os
 import sys
@@ -19,7 +20,10 @@ from docutils.parsers.rst import directives
 from docutils.statemachine import StringList
 from sphinx.locale import __
 from sphinx.util.docutils import SphinxDirective
-# Types ----------------------------------
+
+##-- end imports
+
+##-- types
 exclude_patterns       : list[str]
 extensions             : list[str]
 highlight_options      : dict
@@ -39,7 +43,7 @@ nitpick_ignore_regex   : set[tuple[str, str]]
 source_suffix          : dict[str, str]
 templates_path         : list
 napoleon_type_aliases  : dict
-# ##--|
+##-- end types
 
 # ##-- a: Project information --------------------
 `(+snippet-expand "project.info")`

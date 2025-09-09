@@ -1,20 +1,25 @@
-Toml Spec                    # https://toml.io/en/v1.0.0
-pypi                         # https://pypi.org/
-setuptools-rust              # https://setuptools-rust.readthedocs.io/en/latest/
-setuptools toml              # https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
-pip toml                     # https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/
-Cargo.toml                   # https://doc.rust-lang.org/cargo/reference/manifest.html
-pyproject.toml               # https://packaging.python.org/en/latest/specifications/pyproject-toml/
-maturin config               # https://www.maturin.rs/config
-poetry                       # https://python-poetry.org/docs/configuration/
-Lib.rs                       # https://lib.rs/
-crates                       # https://crates.io/
+Toml Spec                     # https://toml.io/en/v1.0.0
+pypi                          # https://pypi.org/
+setuptools-rust               # https://setuptools-rust.readthedocs.io/en/latest/
+setuptools toml               # https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+pip toml                      # https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/
+Cargo.toml                    # https://doc.rust-lang.org/cargo/reference/manifest.html
+pyproject.toml                # https://packaging.python.org/en/latest/specifications/pyproject-toml/
+maturin config                # https://www.maturin.rs/config
+poetry                        # https://python-poetry.org/docs/configuration/
+Lib.rs                        # https://lib.rs/
+crates.io                     # https://crates.io/
 
-PEP 440: Python Version Spec # https://peps.python.org/pep-0440/
-PEP 508: Python Dep Spec     # https://peps.python.org/pep-0508/
+PEP 440: Python Version Spec  # https://peps.python.org/pep-0440/
+PEP 508: Python Dep Spec      # https://peps.python.org/pep-0508/
 
-Ruff Rules                   # https://docs.astral.sh/ruff/rules/
-Rust Editions                # https://doc.rust-lang.org/edition-guide/index.html
+Ruff Rules                    # https://docs.astral.sh/ruff/rules/
+Rust Editions                 # https://doc.rust-lang.org/edition-guide/index.html
 
-uv                           # https://docs.astral.sh/uv/
-hatchling                    # https://hatch.pypa.io/1.13/config/build/
+uv                            # https://docs.astral.sh/uv/
+hatchling                     # https://hatch.pypa.io/1.13/config/build/
+
+rust Md Book                  # https://rust-lang.github.io/mdBook/
+rustup                        # https://rust-lang.github.io/rustup/overrides.html#the-toolchain-file
+rustdoct                      # https://doc.rust-lang.org/rustdoc/command-line-arguments.html
+

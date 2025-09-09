@@ -4,12 +4,14 @@
 # key   : project.info
 # group : sphinx
 # --
-project    = "Mostly Harmless"
+_target = pl.Path.cwd() / "../../pyproject.toml"
+assert(_target.exists())
+pyproject  = tomllib.loads(_target.read_text())
+project    = pyproject['project']['name']
 author     = "John Grey"
 copyright  = "{}, {}".format(datetime.datetime.now().strftime("%Y"), author)
 language   = "en"
-release    = tomllib.loads(pl.Path.cwd() / "../../pyproject.toml")['project']['version']
-
+release    = pyproject['project']['version']
 
 
 """https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration"""

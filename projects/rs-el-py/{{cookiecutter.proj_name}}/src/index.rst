@@ -28,4 +28,4 @@ tortor.  Nam euismod tellus id erat.
    _docs/*
    genindex
    modindex
-   API Reference <_docs/_autoapi/{{cookiecutter.proje_name}}/index>
+   API Reference <_docs/_autoapi/{{cookiecutter.proj_name}}/index>

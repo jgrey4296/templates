@@ -21,7 +21,7 @@ build-backend = "maturin"
 # compatibility  = "pypi"
 bindings         = "pyo3"  
 features         = ["pyo3/extension-module"]
-manifest-path    = "../{{cookiecutter.proj_name}}_bridge_py_rs/Cargo.toml"
+manifest-path    = "../rs_{{cookiecutter.proj_name}}_bridge_py/Cargo.toml"
 module-name      = "{{cookiecutter.proj_name}}_dep._rust"
 
 python-packages  = ["{{cookiecutter.proj_name}}_dep"]

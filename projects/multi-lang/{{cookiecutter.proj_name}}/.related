@@ -1,0 +1,38 @@
+;; dot.related -*- mode: elisp -*-
+;; A Related dirs file
+;; ';;' are comment lines
+;; Others are :{name} : {path} pairs
+;; paths are relative
+:root : .
+
+;; Temp sub locs:
+:temp          : .temp
+:logs          : .temp/logs
+:docs-build    : .temp/docs
+
+;; Dot Files and configs
+:related       : .related
+:tasks         : .tasks
+:github        : .github/workflows
+:doot          : doot.toml
+:tox           : tox.toml
+:pyproject     : pyproject.toml
+:cargo         : Cargo.toml
+:cargo-config  : .cargo/config.toml
+:build-script  : build.rs
+:book-config   : book.toml
+
+;; Docs
+:docs          : src/_docs
+:readme        : README.md
+:checklist     : checklist.md
+
+;; Source sublocs
+:src           : src
+:py            : src/py_{{cookiecutter.proj_name}}
+:macros        : src/rs_{{cookiecutter.proj_name}}_macros
+:el            : src/el_{{cookiecutter.proj_name}}
+:rust          : src/rs_{{cookiecutter.proj_name}}
+:py-bridge     : src/rs_{{cookiecutter.proj_name}}_bridge_py
+:el-bridge     : src/rs_{{cookiecutter.proj_name}}_bridge_el
+:jacamo        : src/kt_{{cookiecutter.proj_name}}

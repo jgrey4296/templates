@@ -1,0 +1,7 @@
+<!-- https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory -->
+<Project>
+  <PropertyGroup>
+    <BaseOutputPath>$(MSBuildStartupDirectory)/.temp/bin/$(Configuration)/$(MSBuildProjectName)/</BaseOutputPath>
+    <BaseIntermediateOutputPath>$(MSBuildStartupDirectory)/.temp/obj/$(Configuration)/$(MSBuildProjectName)/</BaseIntermediateOutputPath>
+  </PropertyGroup>
+</Project>

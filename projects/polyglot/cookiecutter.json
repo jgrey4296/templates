@@ -1,0 +1,16 @@
+{
+  "proj_name": "polyglot project template",
+  "edition": "2024",
+  "entry_point": "__main__",
+  "python": "3.12",
+  "_author": "me",
+  "_copy_without_render": [
+    "src/_docs/_static",
+    "src/_docs/**.jinja",
+    "src/_docs/_templates",
+    ".github"
+  ],
+  "_email": "my@email.com",
+  "_github_username": "me",
+  "_short_name": "me"
+}

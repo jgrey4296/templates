@@ -1,0 +1,76 @@
+## Cargo.toml -*- mode: toml -*-
+# https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[workspace]
+resolver         = "3"
+members          = ["src/rs_*"]
+default-members  = ["src/rs_{{cookiecutter.proj_name}}"]
+exclude          = [
+    "src/_*",
+    "src/_docs",
+    "src/c_*",
+    "src/cs_*", 
+    "src/el_*",
+    "src/ex_*",
+    "src/gd_*",
+    "src/kt_*",
+    "src/pl_*",
+    "src/py_*",
+    "src/rq_*",     
+]
+
+[workspace.package]
+version        = "0.1.0"
+rust-version   = "1.86"
+edition        = "{{cookiecutter.edition}}"
+authors        = [ "{{cookiecutter._author}}"]
+homepage       = "https://{{cookiecutter.proj_name}}.readthedocs.io"
+documentation  = "https://{{cookiecutter.proj_name}}.readthedocs.io"
+repository     = "https://github.com/jgrey4296/{{cookiecutter.proj_name}}"
+license        = "ACAB"
+
+##-- dependencies
+[workspace.dependencies]
+# Internal deps:
+# lib = { path="src/rs_lib", default-features=false, features=[] }
+{{cookiecutter.proj_name}}_rs = {path="src/rs_{{cookiecutter.proj_name}}"}
+
+# External deps:
+# lib        = { version="1.0" }
+proc-macro2  = "1.0.101"
+quote        = "1.0.40"
+syn          = "2.0.106"
+textwrap     = "0.16.2"
+cty          = "0.2.2."
+emacs        = "0.19"
+pyo3         = "0.22.0"
+libc         = "0.2.175"
+
+[workspace.dev-dependencies]
+
+[workspace.build-dependencies]
+bindgen         = "0.72.1"
+cc              = "1.2.36"
+
+[patch.crates-io]
+
+##-- end dependencies
+
+##-- tools
+[workspace.metadata]
+
+[workspace.lints]
+# https://doc.rust-lang.org/cargo/reference/manifest.html#the-lints-section
+
+[workspace.lints.rust]
+unused_imports          = "allow"
+dead_code               = "allow"
+unused_variables        = "allow"
+unsafe-op-in-unsafe-fn  = "allow"
+unused_parens           = "allow"
+
+[workspace.lints.clippy]
+single_component_path_imports  = "allow"
+
+##-- end tools
+

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : raw.borrow
+# uuid  : raw.borrow
+# key   : raw.borrow
+# group : pointers unsafe
+# --
+&raw ${1:$$(yas-choose-value '(const mut))} ${2:expr};$0

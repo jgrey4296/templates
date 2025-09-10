@@ -1,39 +1,46 @@
-rustup                 # https://rust-lang.github.io/rustup/index.html
-rust lang ref          # https://doc.rust-lang.org/stable/reference/index.html
-rust Documentation     # https://doc.rust-lang.org/stable/
-rust Md Book           # https://rust-lang.github.io/mdBook/
-rust error codes       # https://doc.rust-lang.org/stable/error_codes/index.html
-rust Decompiler        # https://rust.godbolt.org/
-Rustc                  # https://doc.rust-lang.org/rustc/index.html
-rust CLI               # https://rust-cli.github.io/book/index.html
-rust Design Patterns   # https://rust-unofficial.github.io/patterns/additional_resources/design-principles.html
-rust By Example        # https://doc.rust-lang.org/rust-by-example/index.html
-rust book              # https://doc.rust-lang.org/stable/book/title-page.html
-cargo book             # https://doc.rust-lang.org/cargo/
-rust stdlib            # https://doc.rust-lang.org/std/index.html
-rust editions          # https://doc.rust-lang.org/nightly/edition-guide/index.html
-rustdoc manual         # https://doc.rust-lang.org/rustdoc/index.html
-rust-cpython           # https://dgrunwald.github.io/rust-cpython/doc/cpython/
-pyo3                   # https://pyo3.rs/latest
-pyo3 api               # https://docs.rs/crate/pyo3/latest
-manifest reference     # https://doc.rust-lang.org/cargo/reference/manifest.html
-rust pakages/crates    # https://crates.io/
-Embedded Rust          # https://docs.rust-embedded.org/book/
-rust collections       # https://doc.rust-lang.org/std/collections/index.html
-rust Lists             # https://rust-unofficial.github.io/too-many-lists/
-Unsafe Rust            # https://doc.rust-lang.org/nightly/nomicon/
-bindgen                # https://rust-lang.github.io/rust-bindgen/introduction.html
-porting to rust        # https://www.jelmer.uk/port-py-to-rust.html
-rustup install         # https://dev.to/xs/setting-up-rust-on-macos-in-a-clean-way-13d1
-emacs api              # https://ubolonton.github.io/emacs-module-rs/latest/
-setuptools rust        # https://github.com/PyO3/setuptools-rust
-uniffi-rs              # https://mozilla.github.io/uniffi-rs/Overview.html
-lldb                   # https://lldb.llvm.org/
-Firefox Rust-Cpp       # https://firefox-source-docs.mozilla.org/writing-rust-code/cpp-interop.html
-lib.rs                 # https://lib.rs/
-Rust RFCs              # https://rust-lang.github.io/rfcs/introduction.html
-python api             # https://docs.python.org/3/c-api/index.html
-Clippy                 # https://doc.rust-lang.org/stable/clippy/usage.html
-rust-analyzer          # https://rust-analyzer.github.io/manual.html
-Little book of Macros  # https://lukaswirth.dev/tlborm
-Built in Attributes    # https://doc.rust-lang.org/reference/attributes.html#built-in-attributes-index
+Effective rust          # https://www.effective-rust.com/preface.html
+Firefox Rust-Cpp        # https://firefox-source-docs.mozilla.org/writing-rust-code/cpp-interop.html
+Little book of Macros   # https://lukaswirth.dev/tlborm
+cargo book              # https://doc.rust-lang.org/cargo/
+cargo manifest          # https://doc.rust-lang.org/cargo/reference/manifest.html
+lldb                    # https://lldb.llvm.org/
+python api              # https://docs.python.org/3/c-api/index.html
+rs Assembly             # https://rust-for-c-programmers.com/ch24/24_10_inspecting_generated_assembly.html
+rs Built in Attributes  # https://doc.rust-lang.org/reference/attributes.html#built-in-attributes-index
+rs By Example           # https://doc.rust-lang.org/rust-by-example/index.html
+rs CC Crate             # https://docs.rs/cc/latest/cc/
+rs CLI                  # https://rust-cli.github.io/book/index.html
+rs Decompiler           # https://rust.godbolt.org/
+rs Design Patterns      # https://rust-unofficial.github.io/patterns/additional_resources/design-principles.html
+rs Documentation        # https://doc.rust-lang.org/stable/
+rs Embedded             # https://docs.rust-embedded.org/book/
+rs Lists                # https://rust-unofficial.github.io/too-many-lists/
+rs Md Book              # https://rust-lang.github.io/mdBook/
+rs RFCs                 # https://rust-lang.github.io/rfcs/introduction.html
+rs Unsafe               # https://doc.rust-lang.org/nightly/nomicon/
+rs bindgen              # https://rust-lang.github.io/rust-bindgen/introduction.html
+rs book                 # https://doc.rust-lang.org/stable/book/title-page.html
+rs clippy               # https://doc.rust-lang.org/stable/clippy/usage.html
+rs collections          # https://doc.rust-lang.org/std/collections/index.html
+rs compiler             # https://doc.rust-lang.org/rustc/index.html
+rs cpython              # https://dgrunwald.github.io/rust-cpython/doc/cpython/
+rs crate search         # https://lib.rs/
+rs doc                  # https://doc.rust-lang.org/rustdoc/index.html
+rs editions             # https://doc.rust-lang.org/nightly/edition-guide/index.html
+rs emacs api            # https://ubolonton.github.io/emacs-module-rs/latest/
+rs error codes          # https://doc.rust-lang.org/stable/error_codes/index.html
+rs for C                # https://rust-for-c-programmers.com
+rs gdb                  # https://github.com/lipk/rust-gdb
+rs lang ref             # https://doc.rust-lang.org/stable/reference/index.html
+rs lsp                  # https://rust-analyzer.github.io/manual.html
+rs packages/crates      # https://crates.io/
+rs porting              # https://www.jelmer.uk/port-py-to-rust.html
+rs pyo3                 # https://pyo3.rs/latest
+rs pyo3 api             # https://docs.rs/crate/pyo3/latest
+rs setuptools           # https://github.com/PyO3/setuptools-rust
+rs stdlib               # https://doc.rust-lang.org/std/index.html
+rs uniffi               # https://mozilla.github.io/uniffi-rs/Overview.html
+rustfmt                 # https://rust-lang.github.io/rustfmt/
+rustup                  # https://rust-lang.github.io/rustup/index.html
+rustup install          # https://dev.to/xs/setting-up-rust-on-macos-in-a-clean-way-13d1
+Comprehensive Rust      # https://google.github.io/comprehensive-rust/index.html

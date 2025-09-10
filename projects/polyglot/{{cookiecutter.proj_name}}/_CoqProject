@@ -1,0 +1,4 @@
+# https://rocq-prover.org/doc/V9.0.0/refman/practical-tools/utilities.html#building-a-project-with-coqproject-overview
+# https://rocq-prover.org/doc/V9.0.0/refman/practical-tools/coq-commands.html#command-line-options
+-Q ./src/rq_{{cookiecutter.proj_name}} JG
+-R ./src/rq_{{cookiecutter.proj_name}} JGR

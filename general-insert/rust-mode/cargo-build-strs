@@ -1,0 +1,19 @@
+Cargo Build Script Strs for printn:
+cargo::rerun-if-changed=              # PATH
+cargo::rerun-if-env-changed=          # VAR
+cargo::rustc-link-arg=                # FLAG
+cargo::rustc-link-arg-cdylib=         # FLAG
+cargo::rustc-link-arg-bin=BIN=FLAG    #
+cargo::rustc-link-arg-bins=           # FLAG
+cargo::rustc-link-arg-tests=          # FLAG
+cargo::rustc-link-arg-examples=       # FLAG
+cargo::rustc-link-arg-bences=         # FLAG
+cargo::rustc-link-lib=                # LIB
+cargo::rustc-link-search=[KIND=]PATH  #
+cargo::rustc-flags=                   # FLAGS
+cargo::rustc-cfg=KEY[="VALUE"]        #
+cargo::rustc-check-cfg=               # CHECK_CFG
+cargo::rustc-env=VAR=VALUE            #
+cargo::error=                         # MESSAGE
+cargo::warning=                       # MESSAGE
+cargo::metadata=KEY=VALUE             #

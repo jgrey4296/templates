@@ -3,15 +3,16 @@
 //
 //
 //
-
-// //-- imports (only build-dependencies)
+// //--// imports
 extern crate bindgen;
 
 use std::{env, path::PathBuf};
 
-// --------------------------------------------------
+// //--// end imports
 fn main() {
     let out_dir = env::var("OUT_DIR").unwrap();
+
+    println!("cargo::rerun-if-changed=c_src/simple.c");
 
     // C compilation
     cc::Build::new()
@@ -35,5 +36,4 @@ fn main() {
     bindings
         .write_to_file("bindings.rs")
         .expect("couldn't write local bindings");
-
 }

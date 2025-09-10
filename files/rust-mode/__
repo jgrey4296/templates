@@ -3,11 +3,38 @@
 //
 //
 
-// //--// imports
+// //--// extern crates
+
+// //--// end extern crates
+
+// //--// stdlib imports
 use std::io;
-use log::{info, trace, warn};
-use $1;
-// //--// end imports
+// //--// end stdlib imports
+
+// //--// 3rd party imports
+
+// //--// end 3rd party imports
+
+// Local Module Declarations and imports
+
+
+
+// // --------------------------------------------------
+
+// Type Aliases
+
+// Static values
+
+
+// //--// Enums
+
+
+// //--// end Enums
+
+// //--// structs
+
+
+// //--// end structs
 
 // //--// public fns
 

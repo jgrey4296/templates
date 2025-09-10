@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : cast.to.raw
+# uuid  : cast.to.raw
+# key   : cast.to.raw
+# group : pointers unsafe
+# --
+&${2:var} as *${1:$$(yas-choose-value '("const" "mut"))} ${3:Type};$0

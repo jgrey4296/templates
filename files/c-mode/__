@@ -1,0 +1,18 @@
+// __ -*- mode: C/*l -*-
+// Preprocessor directive/header file inclusion section
+#include <stdio.h>
+#include <stdlib.h>
+//#include "local.h"
+
+// Declarations
+
+
+// Main
+int main(int argc, char *argv[]) {
+   int x, y;
+
+
+   return 0;
+}
+
+// Definitions

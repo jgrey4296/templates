@@ -1,6 +1,20 @@
-Yaml Home    # http://yaml.org/
-Learn X in Y # https://learnxinyminutes.com/docs/yaml/
-Spec 1.2. 2  # https://yaml.org/spec/1.2.2/
-PyYaml       # https://pyyaml.org/
-Pre-Commit   # https://pre-commit.com/
-readthedocs  # https://docs.readthedocs.io/en/stable/config-file/v2.html
+Yaml Home                     # http://yaml.org/
+Learn X in Y                  # https://learnxinyminutes.com/docs/yaml/
+Spec 1.2. 2                   # https://yaml.org/spec/1.2.2/
+PyYaml                        # https://pyyaml.org/
+Pre-Commit                    # https://pre-commit.com/
+readthedocs                   # https://docs.readthedocs.io/en/stable/config-file/v2.html
+GH Action: emacs              # https://github.com/purcell/setup-emacs
+GH Action: Pre-commit         # https://github.com/pre-commit/pre-commit-hooks
+GH Action: GHA Lint           # https://github.com/rhysd/actionlint
+GH Action: Ruff pre-commit    # https://github.com/astral-sh/ruff-pre-commit
+GH Action: Spellcheck         # https://github.com/shellcheck-py/shellcheck-py
+GH Action: Checkout           # https://github.com/actions/checkout
+GH Action: uv                 # https://github.com/astral-sh/setup-uv
+GH Action: GH pages           # https://github.com/actions/configure-pages
+GH Action: download-artifact  # https://github.com/actions/download-artifact
+GH Action: upload-artifact    # https://github.com/actions/upload-artifact
+GH Action: upload-pages       # https://github.com/actions/upload-pages-artifact
+GH Action: deploy-pages       # https://github.com/actions/deploy-pages
+GH Action: asdf               # https://github.com/asdf-vm/actions
+GH Action: pypi publish       # https://github.com/pypa/gh-action-pypi-publish

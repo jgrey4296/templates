@@ -44,3 +44,4 @@ rustfmt                 # https://rust-lang.github.io/rustfmt/
 rustup                  # https://rust-lang.github.io/rustup/index.html
 rustup install          # https://dev.to/xs/setting-up-rust-on-macos-in-a-clean-way-13d1
 Comprehensive Rust      # https://google.github.io/comprehensive-rust/index.html
+rs docs root            # https:://docs.rs

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : code.inline
+# uuid  : code.inline
+# key   : code.inline
+# group :
+# --
+`$1`

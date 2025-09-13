@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : list.unordered
+# uuid  : list.unordered
+# key   : list.unordered
+# group :
+# --
+- $1

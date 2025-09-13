@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : bold-italic
+# uuid  :
+# key   :
+# group :
+# --
+***$1***

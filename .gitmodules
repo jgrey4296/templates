@@ -1,3 +1,6 @@
 [submodule "wiki_"]
 	path = wiki_
 	url = git@github.com:jgrey4296/templates.wiki.git
+[submodule "projects/polyglot"]
+	path = projects/polyglot
+	url = git@github.com:jgrey4296/polyglot-template.git

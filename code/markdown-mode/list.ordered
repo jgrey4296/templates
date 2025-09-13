@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : list.ordered
+# uuid  : list.ordered
+# key   : list.ordered
+# group :
+# --
+1. $1

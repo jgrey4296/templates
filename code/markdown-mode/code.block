@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : code.block
+# uuid  : code.block
+# key   : code.block
+# group :
+# --
+```${1:lang}
+
+$0
+
+```

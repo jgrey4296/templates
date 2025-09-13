@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : heading
+# uuid  : heading
+# key   : heading
+# group :
+# --
+
+# ${1:Heading}$0

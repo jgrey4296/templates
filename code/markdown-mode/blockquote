@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : blockquote
+# uuid  : blockquote
+# key   : blockquote
+# group :
+# --
+> $1

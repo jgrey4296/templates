@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : for.map
+# uuid  : for.map
+# key   : for.map
+# group :
+# --
+for ((k, v) in ${1:map}) {
+    $0
+}

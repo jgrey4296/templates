@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : nullable.type
+# uuid  : nullable.type
+# key   : nullable.type
+# group :
+# --
+var ${1:varName}: ${2:Type}? = $0

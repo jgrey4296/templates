@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : throws
+# uuid  : throws
+# key   : throws
+# group :
+# --
+@Throws(${1:ExceptionType}::class)$0

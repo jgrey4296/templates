@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : type.alias
+# uuid  : type.alias
+# key   : type.alias
+# group : types
+# --
+typealias ${1:AliasName} = ${2:Type}

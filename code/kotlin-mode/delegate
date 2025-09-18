@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : delegate
+# uuid  : delegate
+# key   : delegate
+# group :
+# --
+var ${1:varName}: ${2:Type} by ${3:source}

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : read.string
+# uuid  : read.string
+# key   : read.string
+# group : io
+# --
+val ${1:variable}: String = readln()

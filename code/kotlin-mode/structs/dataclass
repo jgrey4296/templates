@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : dataclass
+# uuid  : dataclass
+# key   : dataclass
+# group : data
+# --
+data class $1(val ${2:valname}: ${3:type})$0

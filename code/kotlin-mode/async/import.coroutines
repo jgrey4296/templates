@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : import.coroutines
+# uuid  : import.coroutines
+# key   : import.coroutines
+# group : async coroutine
+# --
+import kotlinx.coroutines

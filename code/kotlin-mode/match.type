@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : match.type
+# uuid  : match.type
+# key   : match.type
+# group :
+# --
+when (${1:varname}) {
+     // is Type -> {}
+     is ${2:Type} -> {}
+     else -> {}
+}

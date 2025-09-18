@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : new.list
+# uuid  : new.list
+# key   : new.list
+# group :
+# --
+val ${1:varName} = listOf(${2:"a" "b" "c"})

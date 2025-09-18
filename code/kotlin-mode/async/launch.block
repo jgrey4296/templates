@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : launch.block
+# uuid  : launch.block
+# key   : launch.block
+# group : async
+# --
+launch {
+    val ${1:varName} = ${2:asyncFunc}()
+    $0
+}

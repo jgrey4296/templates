@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : file.jvm.name
+# uuid  : file.jvm.name
+# key   : file.jvm.name
+# group :
+# --
+// to compile package functions
+// for java as: $2.$1.{fun}
+@file:JvmName("$1")
+package jg.$2$0

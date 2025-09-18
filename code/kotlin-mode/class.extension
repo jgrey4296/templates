@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : class.extension
+# uuid  : class.extension
+# key   : class.extension
+# group :
+# --
+fun ${1:TypeName}.${2:funName}() {
+    $0
+}

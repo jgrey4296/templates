@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : null.call
+# uuid  : null.call
+# key   : null.call
+# group :
+# --
+${1:varName}?.$0

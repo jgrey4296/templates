@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : not.null
+# uuid  : not.null
+# key   : not.null
+# group :
+# --
+${1:varName}!!.$0

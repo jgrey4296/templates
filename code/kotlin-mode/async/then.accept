@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : then.accept
+# uuid  : then.accept
+# key   : then.accept
+# group : async
+# --
+${1:aPromise}.thenAccept { $0 }

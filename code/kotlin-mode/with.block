@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : with.block
+# uuid  : with.block
+# key   : with.block
+# group :
+# --
+with(${1:obj}) {
+    // Call methods on obj
+
+}

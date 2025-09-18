@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : singleton
+# uuid  : singleton
+# key   : singleton
+# group :
+# --
+object ${1:Resource} {
+    val name = "Example"
+    $0
+}

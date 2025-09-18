@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : new.map
+# uuid  : new.map
+# key   : new.map
+# group :
+# --
+val ${1:varName} = mapOf("a" to 1, "b" to 2)

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : async.func
+# uuid  : async.func
+# key   : async.func
+# group : async
+# --
+suspend fun ${1:funcName}() { $0 }

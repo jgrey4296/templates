@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name  : new.annotation
+# uuid  : new.annotation
+# key   : new.annotation
+# group : annotation
+# --
+// https://kotlinlang.org/docs/annotations.html#constructors
+@Target()
+@Retention
+@MustBeDocumented
+annotation class ${1:Name} {
+    $0
+}

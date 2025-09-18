@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : jvm.name
+# uuid  : jvm.name
+# key   : jvm.name
+# group :
+# --
+@JvmName("$1")

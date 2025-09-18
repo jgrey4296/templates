@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : get.type
+# uuid  : get.type
+# key   : get.type
+# group : reflect
+# --
+${1:varName}::class.qualifiedName$0

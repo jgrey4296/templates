@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : null.else
+# uuid  : null.else
+# key   : null.else
+# group :
+# --
+${1:varName} ?: ${2:otherVal}

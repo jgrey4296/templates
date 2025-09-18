@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : then.compose
+# uuid  : then.compose
+# key   : then.compose
+# group : async
+# --
+${1:aPromise}.thenCompose { $0 }

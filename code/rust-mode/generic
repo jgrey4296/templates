@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : generic
+# uuid  : generic
+# key   : generic
+# group : types
+# --
+<$1, ${2:...}>$0

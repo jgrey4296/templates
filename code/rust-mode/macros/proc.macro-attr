@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name  : proc.macro.attr
+# uuid  : proc.macro.attr
+# key   : proc.macro.attr
+# group : macros procedural attribute
+# --
+#[proc_macro_attribute]
+pub fn ${1:name}(attr:TokenStream, item:TokenStream) -> TokenStream {
+    let _attr = proc_macro2::TokenStream::from(attr);
+    let _item = proc_macro2::TokenStream::from(item);
+    let output: proc_macro2::Tokenstream = {
+        $0
+    };
+    return proc_macro::Tokenstream::from(output)
+}

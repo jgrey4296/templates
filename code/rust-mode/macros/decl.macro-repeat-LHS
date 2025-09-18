@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : macro-repeat-LHS
+# uuid  : macro-repeat-LHS
+# key   : macro-repeat-LHS
+# group : macros
+# --
+$( $${3:matcher}:expr ) ${2:,} ${1:$$(yas-choose-value '("+" "*" "?"))} $0

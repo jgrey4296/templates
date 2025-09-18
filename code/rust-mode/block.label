@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : block.label
+# uuid  : block.label
+# key   : block.label
+# group :
+# --
+'${1:name}: {}

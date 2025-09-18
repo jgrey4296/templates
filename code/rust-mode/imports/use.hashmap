@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: use.hashmap
+# key: use.hashmap
+# uuid: use.hashmap
+# --
+use std::collections::HashMap;

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : lifetime.raw
+# uuid  : lifetime.raw
+# key   : lifetime.raw
+# group :
+# --
+'r#${1:a}$0

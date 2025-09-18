@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : tuple
+# uuid  : tuple
+# key   : tuple
+# group : structs
+# --
+struct ${1:name} ($2, ${3:...});

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: use.file
+# key: use.file
+# uuid: use.file
+# --
+use std::fs::File;

@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name  : proc.macro.derive
+# uuid  : proc.macro.derive
+# key   : proc.macro.derive
+# group : macros procedural derive struct
+# --
+#[proc_macro_derive(${1:deriveName})]
+pub fn derive_$1_impl(item:TokenStream) -> TokenStream {
+    let _item = proc_macro2::TokenStream::from(item);
+    let output: proc_macro2::Tokenstream = {
+        $0
+    };
+    return proc_macro::Tokenstream::from(output)
+}

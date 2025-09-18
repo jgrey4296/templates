@@ -1,0 +1,35 @@
+# -*- mode: snippet -*-
+# name  : ffi.wrapper
+# uuid  : ffi.wrapper
+# key   : ffi.wrapper
+# group : ffi c_lang struct idiom
+# --
+struct ${1:Wrapper}(*mut ${2:CStruct});
+
+impl $1 {
+    fn new() -> $1 {
+       // malloc on c side.
+       unsafe { $1 (struct_ctor() ) }
+    }
+}
+
+impl Drop for $1 {
+    fn drop(&mut self) {
+        // free on c side.
+        unsafe { free_struct(self.0) }
+    }
+}
+
+impl std::ops::Deref for $1 {
+    type Target = $2;
+
+    fn deref(&self) -> &$2{
+        unsafe { &*(self.0) as &$2}
+    }
+}
+
+impl std::ops::DerefMut for $1 {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        unsafe { &mut *(self.0) as &mut $2}
+    }
+}

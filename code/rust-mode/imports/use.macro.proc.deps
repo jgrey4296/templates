@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : use.macro.proc.deps
+# uuid  : use.macro.proc.deps
+# key   : use.macro.proc.deps
+# group : macros dependencies procedural
+# --
+use proc_macro::TokenStream;
+use proc_macro2;
+use syn::{pase_macro_input, Result};
+use sync::parse::{Parse, ParseStream};
+use quote::quote;

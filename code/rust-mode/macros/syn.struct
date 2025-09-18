@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name  : syn.struct
+# uuid  : syn.struct
+# key   : syn.struct
+# group : macros procedural lib:syn
+# --
+// Build with parse_macro_input!(tokens as $1)
+struct ${1:MyMacroStruct} {
+
+}
+
+impl sync::parse::Parse for $1 {
+     fn parse(input:syn::parse::ParseStream) -> sync::Result<Self> {
+        $0
+     }
+}

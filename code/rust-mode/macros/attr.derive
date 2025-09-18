@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: #[derive(...)]
+# key: der
+# uuid: der
+# group: data
+# --
+#[derive($1)]

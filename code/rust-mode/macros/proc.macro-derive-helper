@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name  : proc.macro.derive.helper
+# uuid  : proc.macro.derive.helper
+# key   : proc.macro.derive.helper
+# group : macros procedural derive attributes
+# --
+#[proc_macro_derive(${1:AttrName}, attributes(${2:attributes}))]
+pub fn derive_$1_attr(item:TokenStream) -> TokenStream {
+    let _item = proc_macro2::TokenStream::from(item);
+    let output: proc_macro2::Tokenstream = {
+        $0
+    };
+    return proc_macro::Tokenstream::from(output)
+}

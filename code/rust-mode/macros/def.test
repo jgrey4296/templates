@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: test function
+# key: test
+# uuid: test
+# group: testing
+# --
+#[test]
+fn ${1:test_name}() {
+   $0
+}

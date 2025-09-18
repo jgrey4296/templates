@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : use.macro
+# uuid  : use.macro
+# key   : use.macro
+# group : macros import
+# --
+#[macro_use($1)]
+extern crate $2;$0

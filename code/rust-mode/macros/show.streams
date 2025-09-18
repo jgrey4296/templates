@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name  : show.streams
+# uuid  : show.streams
+# key   : show.streams
+# group : macros procedural debug
+# --
+#[proc_macro_attribute]
+pub fn show_streams(_attr:TokenStream, item:TokenStream) -> TokenStream {
+    /// from https://doc.rust-lang.org/reference/procedural-macros.html#attribute-macros
+    // call as #[show_streams]
+    // or #[show_streams(expr)]
+    println!("attr: \"{_attr}\"");
+    println!("item: \"{item}\"");
+    item
+}

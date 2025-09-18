@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : quote.block
+# uuid  : quote.block
+# key   : quote.block
+# group : lib:quote macros procedural
+# --
+let expanded = quote! {
+
+};
+return TokenStream::from(expanded)

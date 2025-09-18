@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name  : #[deny(lint)]
+# key   : deny
+# group : lint
+# --
+#[deny(${1:lint})]

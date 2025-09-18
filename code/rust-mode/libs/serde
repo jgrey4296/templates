@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : serde
+# uuid  : serde
+# key   : serde
+# group : lib:serde data
+# --
+todo!("serde template");

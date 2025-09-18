@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : lifetime
+# uuid  : lifetime
+# key   : lifetime
+# group :
+# --
+'${1:a}$0

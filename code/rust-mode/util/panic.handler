@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name  : panic.handler
+# uuid  : panic.handler
+# key   : panic.handler
+# group : error handler
+# --
+#![no_std]
+use std::panic::PanicInfo;
+
+#[panic_handler]
+fn panic(info: &PanicInfo) -> ! {
+   println!("{}", info);
+}

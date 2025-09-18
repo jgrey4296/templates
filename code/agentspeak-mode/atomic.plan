@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : atomic.plan
+# uuid  :
+# key   :
+# group :
+# --
+@${1:label}[atomic]
++!${2:goal} <- true.

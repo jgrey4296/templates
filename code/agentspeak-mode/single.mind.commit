@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name  : single.mind.commit
+# uuid  : single.mind.commit
+# key   : single.mind.commit
+# group :
+# --
+// "Cohen & Levesque. Intention is choice with commitment. Artificial Intelligence 42(3), 213–261, 1990."
+
++!g : g. // nothing to do.
++!g : .intend(g). // nothing to do.
+
+// Possible Plans to achieve g.
++!g : ctx1 <- action; ?g.
++!g : ctx2 <- action; ?g.
+
++!g : !g. // Fallback, keep trying.
+-!g <- !g. // if above have failed, try hopping.
++g <- .succeed_goal(g). // Stop trying
++f <- .fail_goald(g). // Stop trying.

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : include
+# uuid  : include
+# key   : include
+# group :
+# --
+{ include(${1:module}${2:, namespace}) }$0

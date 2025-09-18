@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : namespace
+# uuid  : namespace
+# key   : namespace
+# group :
+# --
+${1:namespaceName}::$0

@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : for.each
+# uuid  : for.each
+# key   : for.each
+# group :
+# --
++!forEach(List)
+    <- for (.member(M, List)) {
+            doHead(M);
+       }.

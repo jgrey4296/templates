@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : for.each.query
+# uuid  : for.each.query
+# key   : for.each.query
+# group :
+# --
+// For all solutions of query
++!forQuery
+    <- for (${1:query}) {
+        doSomething;
+    }.

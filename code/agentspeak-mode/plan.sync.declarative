@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : plan.sync.declarative
+# uuid  : plan.sync.declarative
+# key   : plan.sync.declarative
+# group :
+# --
++!a <- action.
++!b <- .wait(a); action.

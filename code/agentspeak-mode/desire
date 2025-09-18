@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : desire
+# uuid  : desire
+# key   : desire
+# group :
+# --
+!${1:goal}$0

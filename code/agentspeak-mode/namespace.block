@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : namespace.block
+# uuid  : namespace.block
+# key   : namespace.block
+# group :
+# --
+{ begin namespace($1, types) }
+$0
+{ end }

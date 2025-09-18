@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : fork.xor
+# uuid  : fork.xor
+# key   : fork.xor
+# group :
+# --
+${1:goal1} ||| ${2:goal2}$0

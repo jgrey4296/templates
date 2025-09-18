@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : plan.sync.procedural
+# uuid  : plan.sync.procedural
+# key   : plan.sync.procedural
+# group :
+# --
++!a <- action1; .resume(b).
++!b <- .suspend; action2.

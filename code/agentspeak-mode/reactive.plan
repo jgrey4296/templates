@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : reactive.plan
+# uuid  : reactive.plan
+# key   : reactive.plan
+# group :
+# --
++${1:goal} : ctx <- actions.

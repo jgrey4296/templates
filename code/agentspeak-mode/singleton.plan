@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : singleton.plan
+# uuid  : singleton.plan
+# key   : singleton.plan
+# group :
+# --
+// Only doSomething when g isn't already an intention.
++!g : not .intend(g) <- doSomething.
++!g.

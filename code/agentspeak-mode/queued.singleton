@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name  : queued.singleton
+# uuid  : queued.singleton
+# key   : queued.singleton
+# group :
+# --
+// Do first g, then create new intention to resume others.
++!g : not .indent(g) <- doSomething; !!resume(g).
+
+// pause other intentions to g then try again when resumed.
++!g <- .suspend; !!g.
+
+// restart paused goals.
++!resume(G) <- .resume(G).

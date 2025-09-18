@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : fork.join
+# uuid  : fork.join
+# key   : fork.join
+# group :
+# --
+${1:goal1} |&| ${2:goal2}$0

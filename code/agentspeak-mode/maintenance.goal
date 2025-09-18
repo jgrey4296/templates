@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name  : maintenance.goal
+# uuid  : maintenance.goal
+# key   : maintenance.goal
+# group :
+# --
+-g <- !g.
+
+{begin bc(g)} // bc: Bline Commitment
++!g : ctx1 <- action1;
++!g : ctx2 <- action2;
+{end}

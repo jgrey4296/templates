@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : simple.plan
+# uuid  : simple.plan
+# key   : simple.plan
+# group :
+# --
+!{1:desire}
+    : ${2:ctx}
+    <- ${3:actions}.

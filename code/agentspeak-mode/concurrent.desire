@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : concurrent.desire
+# uuid  : concurrent.desire
+# key   : concurrent.desire
+# group :
+# --
+!!${1:goal}$0

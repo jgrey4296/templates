@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : recursive
+# uuid  : recursive
+# key   : recursive
+# group :
+# --
++!iterate([]).
++!iterate([Head|Tail])
+    <- doHeaad(Head);
+       !iterate(Tail).

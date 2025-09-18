@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : believe
+# uuid  : believe
+# key   : believe
+# group :
+# --
+${1:value}.

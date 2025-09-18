@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name  : todo
-# uuid  : todo
-# key   : todo
-# group : error
-# --
-todo!("$1")

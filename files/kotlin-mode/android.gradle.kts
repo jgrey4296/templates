@@ -1,4 +1,5 @@
-# from https://docs.gradle.org/current/samples/sample_building_android_apps.html
+// `(f-filename (buffer-file-name))` -*- mode: kotlin-ts -*-
+// from https://docs.gradle.org/current/samples/sample_building_android_apps.html
 
 plugins {
     id("com.android.application") version "7.1.1"

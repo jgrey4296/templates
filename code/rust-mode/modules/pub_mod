@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
-# name: pub mod
-# key: pmod
-# uuid: pmod
+# name: pub.mod.block
+# key: pub.mod.block
+# uuid: pub.mod.block
 # --
 pub mod ${1:name} {
     $0

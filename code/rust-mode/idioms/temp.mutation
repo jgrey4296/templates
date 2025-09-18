@@ -2,7 +2,7 @@
 # name  : temp.mutation
 # uuid  : temp.mutation
 # key   : temp.mutation
-# group : mutation variables
+# group : mutation variables idiom
 # --
 let mut xs = Vec<u32> = Vec::new();
 xs.push(1)

@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# name  : logging
-# uuid  : logging
-# key   : logging
-# group : setup
-# --
-use simple_logger;
-simple_logger::init().unwrap(); // in main

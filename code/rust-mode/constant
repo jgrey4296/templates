@@ -2,6 +2,6 @@
 # name  : constant
 # uuid  : constant
 # key   : constant
-# group :
+# group : inline constants
 # --
-static ${1:ident} : ${2:type} = ${3:value};
+const ${1:name}:${2:type} = ${3:val};

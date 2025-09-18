@@ -1,3 +1,4 @@
+// `(f-filename (buffer-file-name))` -*- mode: kotlin-ts -*-
 pluginManagement {
     repositories {
         gradlePluginPortal()

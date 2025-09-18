@@ -1,15 +1,34 @@
-# -*- mode: snippet -*-
-# group: file templates
-# contributor: Henrik Lissner
-# condition: (executable-find "nix-env")
-# --
-if type lorri &>/dev/null; then
-    echo "direnv: using lorri"
-    eval "$(lorri direnv)"
-else
-    # fall back to using direnv's builtin nix support
-    # to prevent bootstrapping problems.
-    use nix
+#  .envrc -*- mode: direnv-envrc-mode -*-
+# See https://direnv.net/
+# export VAR=VAL
+# PATH_add val
+
+# venv location
+export UV_PROJECT_ENVIRONMENT="$PWD/.temp/venv"
+if [ -d "$UV_PROJECT_ENVIRONMENT" ]; then
+    source "$UV_PROJECT_ENVIRONMENT/bin/activate"
 fi
 
-`%`$0
+# user local
+PATH_add "$HOME/.local/bin"
+
+# asdf
+PATH_add "$ASDF_DATA_DIR/shims"
+
+# For JVM setup
+source "$SDKMAN_DIR/bin/sdkman-init.sh"
+sdk env > /dev/null
+
+# For Android:
+PATH_add "$ANDROID_HOME/cmdline-tools/latest/bin"
+PATH_add "$ANDROID_HOME/platform-tools"
+
+# For dotnet
+PATH_add "$DOTNET_ROOT"
+PATH_add "$DOTNET_CLI_HOME/.dotnet/tools"
+
+# latex
+PATH_add "$HOME/.local/texlive/current/bin/x86_64-linux"
+
+# For repo-local tasks
+PATH_add "$PWD/.tasks"

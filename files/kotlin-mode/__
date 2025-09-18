@@ -1,3 +1,6 @@
+// `(f-filename (buffer-file-name))` -*- mode: kotlin-ts -*-
+
+
 fun main(): Unit {
     TODO('Not yet implemented')
 }

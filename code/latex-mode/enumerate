@@ -4,5 +4,5 @@
 # uuid: en
 # --
 \begin{enumerate}
-${0:`%`}
+${0}
 \end{enumerate}

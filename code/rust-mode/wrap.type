@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name  : wrap.type
-# uuid  : wrap.type
-# key   : wrap.type
-# group : newtype
-# --
-struct ${1:Wrapper}(pub ${2:f64});$0

@@ -1,0 +1,97 @@
+Basic Agentspeak Actions:
+
+----                # BDI
+desire              #
+drop_desire         #
+drop_all_desires    #
+intend              #
+drop_intention      #
+drop_all_intention  #
+intention           #
+succeed_goal        #
+fail_goal           #
+drop_event          #
+drop_all_events     #
+suspend             #
+resume              #
+suspended           #
+
+----                # Beliefs
+abolish             #
+belief              #
+findall             #
+setof               #
+count               #
+namespace           #
+relevant_rules      #
+list_rules          #
+
+----                # Plans
+add_plan            #
+remove_plan         #
+plan_label          #
+relevant_plans      #
+relevant_plan       #
+list_plans #
+
+---- Communication
+send           #
+broadcast      #
+my_name        #
+all_names      #
+df_register    #
+df_deregister  #
+df_search      #
+df_subscribe   #
+
+---- Collections
+member                #
+length                #
+empty                 #
+concat                #
+delete                #
+reverse               #
+shuffle               #
+nth                   #
+max                   #
+min                   #
+sort                  #
+list                  #
+suffix                #
+prefix                #
+sublist               #
+difference            #
+intersection          #
+union                 #
+
+----                  # Meta
+atom                  #
+structure             #
+literal               #
+list                  #
+ground                #
+number                #
+string                #
+type                  #
+eval                  #
+
+
+----                  # Misc
+at                    #
+wait                  #
+create_agent          #
+save_agent            #
+kill_agent            #
+clone                 #
+stopMAS(1000)         # Wait ms before shutting down.
+stopMAS(0, 1)         # shutdown now, return 1
+version               #
+date                  #
+time                  #
+fail                  #
+perceive              #
+range                 #
+random                #
+math.set_random_seed  #
+include               #
+printf                #

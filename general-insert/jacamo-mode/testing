@@ -1,0 +1,8 @@
+Jacamo Testing:
+
+{ include("$jason/test/jason/inc/test_assert.asl") }  # import testing fns
+
+@[test]                                               # mark a plan as a test
+
+!assert_true(X)                                       #
+!assert_false(X)                                      #

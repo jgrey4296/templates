@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : include.code
+# uuid  : include.code
+# key   : include.code
+# group :  import code file
+# --
+.. include:: ${1:./the/file.txt}
+   :code: ${2:python}
+
+$0

@@ -1,0 +1,30 @@
+Metavariables for macro_rules! :
+
+--                       # syntax: $valname:type
+
+block                    # a block of statements
+expr                     # an expression
+ident                    # an identifier / keyword
+item                     # fn, struct, module, impl, etc.
+lifetime                 # eg: 'foo
+literal                  # literal string, number etc.
+meta                     # things in #[...] etc.
+pat                      # pattern
+path                     # std::mem::... etc
+stmt                     # a statement
+tt                       # token tree. (use for passing matches to sub macros).
+ty                       # a type
+vis                      # visibility qualifer. possibly empty.
+
+$crate                   # refers to current crate.
+
+--                       # Repetitions
+$( $matcher ) sep rep    # LHS repetitions eg: $($val:literal) , ?
+$( pattern )rep          # RHS repetitions. eg: $(println!($val);)*
+
+--                       # Metavariables
+${count($ident, depth)}  # repeats at a certain depth
+${index(depth)}          # current repetition index
+${len(depth)}            # number of times to repeat
+${ignore($ident)}        # binds but expands to nothing
+$$                       # escape the $ token

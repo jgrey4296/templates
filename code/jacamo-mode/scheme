@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : scheme
+# uuid  : scheme
+# key   : scheme
+# group :
+# --
+scheme ${1:name} : ${2:source} {
+    // debug
+
+}

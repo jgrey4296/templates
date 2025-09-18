@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name  : agent
+# uuid  : agent
+# key   : agent
+# group :
+# --
+agent ${1:name} : ${2:script.asl} {
+    verbose: 1
+    instances: 1
+    // Orgs
+    join:
+    roles:
+    // Workspace Artifacts
+    focus:
+    // BDI
+    beliefs: default
+    goals: start
+    // Custom Parameters:
+    // myParameter: "a value"
+}

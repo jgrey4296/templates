@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name  : environment
+# uuid  : environment
+# key   : environment
+# group : workspace
+# --
+workspace ${1:name} {
+    // Artifacts
+
+    // Agents
+    agents:
+
+    // debug
+}

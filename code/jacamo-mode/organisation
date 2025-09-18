@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name  : organisation
+# uuid  : organisation
+# key   : org
+# group :
+# --
+organisation ${1:name} : ${2:source}.xml {
+    // Groups
+
+    // Schemes
+
+    // debug
+}

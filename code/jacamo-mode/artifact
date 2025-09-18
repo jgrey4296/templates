@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : artifact
+# uuid  : artifact
+# key   : artifact
+# group :
+# --
+artifact ${1:name}: ${2:TypeCtor} {
+    //focused-by: agent1, namespace::agent2
+
+}

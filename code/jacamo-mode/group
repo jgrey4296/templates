@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name  : group
+# uuid  : group
+# key   : group
+# group :
+# --
+group ${1:name} : ${2:source} {
+    // source is in owning org's xml.
+
+    // responsible-for: scheme, scheme...
+
+    // owner: agent
+
+    // players: agent role
+
+    // group name : as (subgroups)
+
+
+    // debug
+}

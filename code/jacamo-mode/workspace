@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : workspace
+# uuid  : workspace
+# key   : workspace
+# group :
+# --
+workspace ${1:name} {
+    // debug
+
+}

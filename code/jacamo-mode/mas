@@ -1,0 +1,30 @@
+# -*- mode: snippet -*-
+# name  : mas
+# uuid  :
+# key   :
+# group :
+# --
+mas ${1:name} ${2:uses otherJCMNoSuffix} {
+
+    // agents
+
+    // Workspace environments
+
+    // organisations
+
+    // execution
+    asl-path: "."
+
+    org-path: "."
+
+    java-path: "."
+
+    class-path: "..."
+
+
+    platform:
+    // local
+    // cartago
+    // jade
+
+}

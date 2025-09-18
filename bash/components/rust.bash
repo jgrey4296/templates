@@ -9,6 +9,6 @@ PATH="${CARGO_HOME}/bin:$PATH"
 
 CARGO_BUILD_JOBS=1
 
-if [[ -e "${CARGO_HOME}/env" ]]; then
-    source "$CARGO_HOME/env"
-fi
+# if [[ -e "${CARGO_HOME}/env" ]]; then
+#     source "$CARGO_HOME/env"
+# fi

@@ -11,6 +11,3 @@ CEPTRE_HOME="$HOME/github/_libs/ai/ceptre"
 # jgdebug "Setting Prompter"
 # alias prompter="perl /Volumes/documents/github/MAS/cotillion/packages/prompter/prompter/prompter.pl"
 
-JG_AI="$CEPTRE_HOME:$CLIPS_HOME:$SOAR_HOME"
-
-PATH="$JG_AI:$PATH"

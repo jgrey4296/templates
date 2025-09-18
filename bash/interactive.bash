@@ -22,21 +22,16 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-
 source "$HOME/github/_templates/bash/_basic_utils.bash"
 source "$HOME/github/_templates/bash/emacs.bash"
 
 case "$OSTYPE" in
 	darwin*)
-		source "$HOME/github/_templates/bash/python_config.bash"
-        init_py_env
         source "$HOME/github/_templates/bash/_aliases.bash"
 		echo "Stopping Sarafi Bookmarks"; launchctl stop com.apple.SafariBookmarksSyncAgent
 		;;
 	linux*)
-       source "$HOME/github/_templates/bash/python_config.bash"
-       init_py_env
-       init_sdkman
+       # init_sdkman
        source "$HOME/github/_templates/bash/_aliases.linux.bash"
 
        if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then

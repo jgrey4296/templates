@@ -21,8 +21,6 @@ case "$OSTYPE" in
 		     jgdebug "-- Sourcing: $fname"
 		     source "$fname"
 		 done
-		 source "$HOME/github/_templates/bash/python_config.bash"
-		 init_py_env
 		 source "$HOME/github/_templates/bash/_aliases.mac.bash"
 		 ;;
 	linux*)
@@ -31,9 +29,7 @@ case "$OSTYPE" in
 		     jgdebug "-- Sourcing: $fname"
 		     source "$fname"
 		 done
-        source "$JG_CONFIG/bash/python_config.bash"
-		init_py_env
-		init_sdkman
+		# init_sdkman
 		source "$HOME/github/_templates/bash/_aliases.linux.bash"
         ;;
 esac

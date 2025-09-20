@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name  : prop.group
+# uuid  : prop.group
+# key   : prop.group
+# group :
+# --
+<PropertyGroup>
+    <BuildDir> </BuildDir>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    $0
+</PropertyGroup>

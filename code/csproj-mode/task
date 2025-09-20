@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : task
+# uuid  : task
+# key   : task
+# group :
+# --
+<UsingTask TaskName="${1:TaskName}"
+           AssemblyName="AssemblyName"
+           TaskFactory="ClassName"/>$0

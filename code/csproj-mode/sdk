@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : sdk
+# uuid  : sdk
+# key   : sdk
+# group :
+# --
+<Sdk Name="${1:My.Sdk}" Version="${2:1.2.3}" />$0

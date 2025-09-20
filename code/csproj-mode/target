@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : target
+# uuid  : target
+# key   : target
+# group :
+# --
+<Target Name="${1:Name}">
+    <MakeDir Directorys="$(BuildDir)" />$0
+</Target>

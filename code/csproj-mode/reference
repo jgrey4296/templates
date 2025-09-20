@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : reference
+# uuid  : reference
+# key   : reference
+# group :
+# --
+$(${1:PropName})$0

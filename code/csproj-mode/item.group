@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : item.group
+# uuid  : item.group
+# key   : item.group
+# group :
+# --
+<ItemGroup>
+    <Compile Include="${1:file.cs}" />$0
+    <Compile Remove="test/*"/>
+</ItemGroup>

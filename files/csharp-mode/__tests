@@ -1,0 +1,14 @@
+// https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-csharp-with-xunit
+//
+namespace tests;
+using NAMESPACE;
+public class UnitTest1
+{
+    [Fact]
+    public void TestSanity()
+    {
+        var result = false;
+        Assert.False(result, "value should not be true");
+    }
+
+}

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : import
+# uuid  : import
+# key   : import
+# group :
+# --
+<Import Project="Sdk.props"   Sdk="${1:My.Sdk}" />
+<Import Project="Sdk.targets" Sdk="$1" />$0

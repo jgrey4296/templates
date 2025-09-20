@@ -1,18 +1,8 @@
 
 jgdebug "Setting Up Godot"
 
-case "$OSTYPE" in
-    darwin*)
-        PATH=/Applications/Godot.app/Contents/MacOS:$PATH
-        ;;
-    linux*)
-
-        ;;
-esac
-
 # alias gscript="godot --headless --script"
 # alias gslint="godot --headless --check-only --script"
-
 
 function gdscript () {
     case "$OSTYPE" in

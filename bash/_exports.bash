@@ -14,9 +14,9 @@ export PATH
 export EDITOR
 export PROMPT_NUM
 export TERM
-export GPG_TTY
 export MANPATH
 export BASH_ENV
+export GPG_TTY
 export GNUPGHOME
 export GTAGSLABEL
 export BASH_SILENCE_DEPRECATION_WARNING=1
@@ -37,17 +37,17 @@ export CLIPS_HOME
 export EMACSDIR
 export DOOMDIR
 
+# Latex
+export TEXBASE
+
 # CMake
 export CMAKE_BUILD_PARALLEL_LEVEL
 export CMAKE_BUILD_PARALLEL_LEVEL
 export make_jobs
 
 # Python
-export ANACONDA_HOME
 export DYLD_FALLBACK_LIBRARY_PATH
 export PYTHONSTARTUP
-export PRE_COMMIT_USE_MICROMAMBA
-export PIPX_HOME
 export IPYTHONDIR
 export USE_EMOJI
 
@@ -75,19 +75,12 @@ export MBOX
 export DOTNET_ROOT
 export NUGET_PACKAGES
 export DOTNET_CLI_HOME
+export DOTNET_BUNDLE_EXTRACT_BASE_DIR
+export DOTNET_CLI_TELEMETRY_OPTOUT
 
 # Elixir
 export ASDF_DATA_DIR
 
-# OS Type
-case "$OSTYPE" in
-    darwin*)
-        export HOMEBREW_MAKE_JOBS=1
-        ;;
-    linux*)
-
-        ;;
-esac
 
 # Functions
 export -f jgdebug

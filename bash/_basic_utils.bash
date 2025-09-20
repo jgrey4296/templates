@@ -126,14 +126,3 @@ case "$USER" in
     *) ;;
 esac
 
-# JVM  --------------------------------------------------
-
-function init_sdkman () {
-    # For activating sdkman in a subshell
-    if [[ -e "${SDKMAN_DIR}/bin/sdkman-init.sh" ]]; then
-        jgdebug "Initialising SDKMAN"
-        # shellcheck disable=SC1091
-        source "${SDKMAN_DIR}/bin/sdkman-init.sh"
-    fi
-}
-

@@ -14,29 +14,14 @@
 jgdebug "Setting JVM"
 BUILD_TOOLS="33.0.2"
 
-case "$OSTYPE" in
-    darwin*)
-        STUDIO_HOME="/Applications/Android\ Studio.app/contents"
-        ANDROID_HOME="$HOME/Library/Android/sdk"
-        ANDROID_USER_HOME="$HOME/.android"
-        ADB_VENDOR_KEYS="$HOME/.android"
-        ANDROID_LIB="$STUDIO_HOME/lib/"
-        ANDROID_JARS="$STUDIO_HOME/plugins/android/lib/"
-        ANDROID_SDKS="$ANDROID_HOME/platforms/"
-        STUDIO_JDK="$STUDIO_HOME/jbr/Contents/Home/"
-        ANDROID_TOOLS="$ANDROID_HOME/bin"
-        ;;
-    linux*)
-        STUDIO_HOME="/snap/android-studio/current"
-        # ANDROID_HOME="/usr/lib/android-sdk"
-        ANDROID_HOME="$HOME/android"
-        ANDROID_USER_HOME="$BASE_CACHE/android"
-        ADB_VENDOR_KEYS="$BASE_CONFIG/secrets/android"
-        ANDROID_TOOLS="$ANDROID_HOME/cmdline-tools/latest/bin"
-        ANDROID_TOOLS="$ANDROID_HOME/build-tools/$BUILD_TOOLS/bin:$ANDROID_TOOLS"
-        ANDROID_TOOLS="$ANDROID_HOME/platform-tools:$ANDROID_TOOLS"
-        ;;
-esac
+# ANDROID_HOME="/usr/lib/android-sdk"
+ANDROID_HOME="$BASE_CACHE/android"
+ANDROID_USER_HOME="$BASE_CACHE/android"
+ADB_VENDOR_KEYS="$BASE_CONFIG/secrets/android"
+
+# ANDROID_TOOLS="$ANDROID_HOME/cmdline-tools/latest/bin"
+# ANDROID_TOOLS="$ANDROID_HOME/build-tools/$BUILD_TOOLS/bin:$ANDROID_TOOLS"
+# ANDROID_TOOLS="$ANDROID_HOME/platform-tools:$ANDROID_TOOLS"
 
 
 jgdebug "Setting up SDKMAN"
@@ -46,9 +31,16 @@ jgdebug "Setting Gradle"
 GRADLE_USER_HOME="$BASE_CACHE/gradle"
 
 jgdebug "Setting Jason"
-JASON_HOME="$HOME/github/.local/jason-3.2.2"
+JASON_HOME="$HOME/.local/jason-3.2.2"
 
 jgdebug "Setting JACAMO"
 JACAMO_HOME="$HOME/.local/jacamo-1.2.2"
 
-PATH="$ANDROID_TOOLS:$PATH"
+function init_sdkman () {
+    # For activating sdkman in a subshell
+    if [[ -e "${SDKMAN_DIR}/bin/sdkman-init.sh" ]]; then
+        jgdebug "Initialising SDKMAN"
+        # shellcheck disable=SC1091
+        source "${SDKMAN_DIR}/bin/sdkman-init.sh"
+    fi
+}

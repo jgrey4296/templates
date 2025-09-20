@@ -20,13 +20,12 @@ use dotnet.nu *
 mut general = {
     show_banner                      : false # true or false to enable or disable the welcome banner at startup
     color_config                     : $dark_theme   # if you want a light theme, replace `$dark_theme` to `$light_theme`
-    use_grid_icons                   : true
-    footer_mode                      : "25" # always, never, number_of_rows, auto
+    footer_mode                      : 25 # always, never, number_of_rows, auto
     float_precision                  : 2 # the precision for displaying floats in tables
     # buffer_editor                  : "emacs" # command that will be used to edit the current line buffer with ctrl+o, if unset fallback to $env.EDITOR and $env.VISUAL
     use_ansi_coloring                : true
     edit_mode                        : vi # emacs, vi
-    shell_integration                : true # enables terminal markers and a workaround to arrow keys stop working issue
+    # shell_integration                : true # enables terminal markers and a workaround to arrow keys stop working issue
     render_right_prompt_on_last_line : false # true or false to enable or disable right prompt to be rendered on last line of the prompt.
     use_kitty_protocol               : false # enables keyboard enhancement protocol implemented by kitty console, only if your terminal support this.
     highlight_resolved_externals     : false # true enables highlighting of external commands in the repl resolved by which.
@@ -46,8 +45,7 @@ $general.completions = {
     }
   }
 $general.filesize = {
-    metric : true # true => KB, MB, GB (ISO standard), false => KiB, MiB, GiB (Windows standard)
-    format : "auto" # b, kb, kib, mb, mib, gb, gib, tb, tib, pb, pib, eb, eib, zb, zib, auto
+
   }
 $general.cursor_shape = {
         emacs     : line # block, underscore, line, blink_block, blink_underscore, blink_line, inherit to skip setting cursor shape (line is the default)

@@ -4,9 +4,9 @@
 # key   : keybinding
 # group : nu
 # --
-$_bindings ++= {name    : $1
+$_bindings ++= [{name    : $1
                 modifier : none
                 keycode :
                 mode    : vi_normal
                 event   : []
-                }
+                }]

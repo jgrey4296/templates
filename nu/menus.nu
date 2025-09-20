@@ -2,7 +2,7 @@
 print "Configuring Menus..."
 
 mut _menus = []
-$_menus ++= {name: completion_menu
+$_menus ++= [{name: completion_menu
         only_buffer_difference: false
         marker: "| "
         type: {
@@ -18,8 +18,8 @@ $_menus ++= {name: completion_menu
                 match_text: { attr: u }
                 selected_match_text: { attr: ur }
         }
-      }
-$_menus ++= {name: history_menu
+      }]
+$_menus ++= [{name: history_menu
         only_buffer_difference: true
         marker: "? "
         type: {
@@ -31,8 +31,8 @@ $_menus ++= {name: history_menu
             selected_text: green_reverse
             description_text: yellow
         }
-      }
-$_menus ++= {name: help_menu
+      }]
+$_menus ++= [{name: help_menu
         only_buffer_difference: true
         marker: "? "
         type: {
@@ -48,11 +48,11 @@ $_menus ++= {name: help_menu
             selected_text: green_reverse
             description_text: yellow
         }
-      }
-      # Example of extra menus created using a nushell source
-      # Use the source field to create a list of records that populates
+      }]
+# Example of extra menus created using a nushell source
+# Use the source field to create a list of records that populates
 
-$_menus ++= {name: commands_menu
+$_menus ++= [{name: commands_menu
         only_buffer_difference: false
         marker: "# "
         type: {
@@ -71,8 +71,8 @@ $_menus ++= {name: commands_menu
             | where name =~ $buffer
             | each { |it| {value: $it.name description: $it.usage} }
         }
-      }
-$_menus ++= {name: vars_menu
+      }]
+$_menus ++= [{name: vars_menu
         only_buffer_difference: true
         marker: "# "
         type: {
@@ -90,8 +90,8 @@ $_menus ++= {name: vars_menu
             | sort-by name
             | each { |it| {value: $it.name description: $it.type} }
         }
-      }
-$_menus ++= {name: commands_with_description
+      }]
+$_menus ++= [{name: commands_with_description
         only_buffer_difference: true
         marker: "# "
         type: {
@@ -112,7 +112,7 @@ $_menus ++= {name: commands_with_description
             | where name =~ $buffer
             | each { |it| {value: $it.name description: $it.usage} }
         }
-      }
+      }]
 
 let menus = $_menus
 let menus = { menus : $menus }

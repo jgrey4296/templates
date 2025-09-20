@@ -4,7 +4,7 @@
 print "Configuring bindings..."
 mut _bindings = []
 
-$_bindings ++= {name: completion_menu
+$_bindings ++= [ {name: completion_menu
                 modifier: none
                 keycode: tab
                 mode: [emacs vi_normal vi_insert]
@@ -14,28 +14,28 @@ $_bindings ++= {name: completion_menu
                        { send: menunext }
                 ]
       }
-    }
+    }]
 
-$_bindings ++= {name: completion_previous
+$_bindings ++= [{name: completion_previous
                 modifier: shift
                 keycode: backtab
                 mode: [emacs, vi_normal, vi_insert] # Note: You can add the same keybinding to all modes by using a list
                 event: { send: menuprevious }
-    }
-$_bindings ++= {name: history_menu
+    }]
+$_bindings ++= [{name: history_menu
                modifier: control
                keycode: char_r
                mode: [emacs, vi_insert, vi_normal]
                event: { send: menu name: history_menu }
-    }
+    }]
 
-$_bindings ++= {name: next_page
+$_bindings ++= [{name: next_page
                modifier: control
                keycode: char_x
                mode: emacs
                event: { send: menupagenext }
-    }
-$_bindings ++= {name: undo_or_previous_page_menu
+    }]
+$_bindings ++= [{name: undo_or_previous_page_menu
                modifier: control
                keycode: char_z
                mode: emacs
@@ -45,14 +45,14 @@ $_bindings ++= {name: undo_or_previous_page_menu
                              { edit: undo }
                              ]
                       }
-    }
-$_bindings ++= {name: yank
+    }]
+$_bindings ++= [{name: yank
                modifier: control
                keycode: char_y
                mode: emacs
                event: { until: [{edit: pastecutbufferafter}]}
-    }
-$_bindings ++= {name: unix-line-discard
+    }]
+$_bindings ++= [{name: unix-line-discard
                modifier: control
                keycode: char_u
                mode: [emacs, vi_normal, vi_insert]
@@ -61,8 +61,8 @@ $_bindings ++= {name: unix-line-discard
                              {edit: cutfromlinestart}
                              ]
                      }
-    }
-$_bindings ++= {name: kill-line
+    }]
+$_bindings ++= [{name: kill-line
                 modifier: control
                 keycode: char_k
                 mode: [emacs, vi_normal, vi_insert]
@@ -71,7 +71,7 @@ $_bindings ++= {name: kill-line
                     {edit: cuttolineend}
                   ]
                 }
-    }
+    }]
 
 # Menus
 $_bindings = $_bindings ++ [

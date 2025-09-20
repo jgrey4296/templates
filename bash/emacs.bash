@@ -2,30 +2,151 @@
 
 # TODO use update-alternatives
 #
+## --- Startup
 jgdebug "Setting emacs data"
 BLOOD_SRC="$HOME/github/lisp/blood"
 EDITOR="vim"
 
-jg_use_EMACS="$(which emacs)"
 EMACSDIR="$HOME/.emacs.d"
 DOOMDIR="$HOME/.config/jg/"
-
-# LOCS
-case "$OSTYPE" in
-    linux*)
-        ENAT_DIR="/media/john/data/github/_libs/lisp/doomemacs"
-        ENAT_BIN="/usr/bin/emacs"
-        ;;
-    *)
-        echo "Bad System for emacs"
-        ;;
-esac
 
 if [[ -n "$INSIDE_EMACS" ]]; then
     echo "Inside Emacs"
     set disable-completion on
     TERM=dumb
 fi
+
+## --- Main Entry
+function set-emacs () {
+    # Call as: set-emacs [doom|blood] [apt|flatpak]
+    case "$1" in
+        "doom")
+            set-doom
+            ;;
+        "doom2")
+            set-doom-alt
+            ;;
+        "blood")
+            set-blood
+            ;;
+        *)
+            echo "Unrecognised emacs framework: $1"
+            ;;
+        esac
+
+    case "$2" in
+        "apt")
+            set-apt-emacs
+            ;;
+        "flatpak")
+            set-flatpak-emacs
+            ;;
+        "snap")
+            set-snap-emacs
+            ;;
+        *)
+            echo "Unrecognized emacs type: $2"
+            ;;
+        esac
+}
+
+## --- Specific variants
+function set-doom () {
+    echo "doom current"
+    EMACSDIR="/media/john/data/github/_libs/lisp/doom_2"
+    DOOMDIR="$HOME/.config/jg/"
+
+    if [[ -e "$HOME/.local/bin/doom" ]]; then
+        rm "$HOME/.local/bin/doom"
+    fi
+    ln -s "$EMACSDIR/bin/doom" "$HOME/.local/bin/doom"
+
+    retarget-emacs-d "$EMACSDIR"
+}
+
+function set-doom-alt () {
+    echo "doom alt"
+    EMACSDIR="/media/john/data/github/_libs/lisp/doomemacs"
+    DOOMDIR="$HOME/.config/jg/"
+
+    if [[ -e "$HOME/.local/bin/doom" ]]; then
+        rm "$HOME/.local/bin/doom"
+    fi
+    ln -s "$EMACSDIR/bin/doom" "$HOME/.local/bin/doom"
+
+    retarget-emacs-d "$EMACSDIR"
+}
+
+function set-blood () {
+    echo "BLOOD"
+    EMACSDIR="$BLOOD_SRC"
+    BLOOD_CONFIG="$EMACSDIR/example"
+    if [[ -e "$HOME/.local/bin/doom" ]]; then
+        rm "$HOME/.local/bin/doom"
+    fi
+
+    retarget-emacs-d "$EMACSDIR"
+}
+
+function set-apt-emacs () {
+    echo "apt"
+    EMACSBIN="/usr/bin/emacs"
+
+    retarget-emacs-bin "$EMACSBIN"
+}
+
+function set-snap-emacs () {
+    echo "snap"
+    EMACSBIN="/snap/bin/emacs"
+
+    retarget-emacs-bin "$EMACSBIN"
+}
+
+function set-flatpak-emacs () {
+    echo "flatpak"
+    EMACSBIN="/var/lib/flatpak/exports/bin/org.gnu.emacs"
+
+    retarget-emacs-bin "$EMACSBIN"
+}
+
+## --- Utils
+function retarget-emacs-d () {
+    if [[ -d "$HOME/.emacs.d" ]] && [[ ! ( -L "$HOME/.emacs.d" ) ]]; then
+        echo "Emacs Dir isn't a symlink"
+        exit 1
+    elif [[ (-L "$HOME/.emacs.d") ]]; then
+        # There is an existing emacs.d
+        rm "$HOME/.emacs.d"
+    fi
+
+    ln -s "$1" "$HOME/.emacs.d"
+
+}
+
+function retarget-emacs-bin () {
+    # Link emacsdir and emacs into local
+    if [[ -e "$HOME/.local/bin/emacs" ]] && [[ ! ( -L "$HOME/.local/bin/emacs" ) ]]; then
+        echo "local emacs bin isn't a symlink"
+        exit 1
+    elif [[ -L "$HOME/.local/bin/emacs" ]]; then
+        rm "$HOME/.local/bin/emacs"
+    fi
+
+    ln -s "$1" "$HOME/.local/bin/emacs"
+}
+
+## --- Info
+function read-emacs () {
+    local curr_emacs="$(basename $(readlink -f $HOME/.emacs.d))"
+    echo "Emacs: $curr_emacs"
+}
+
+function report-emacs () {
+    echo "Emacs       : $(readlink $HOME/.local/bin/emacs)"
+    echo "blood       : $BLOOD_SRC : $BLOOD_CONFIG"
+    echo ".emacs.d    : $(readlink -f $HOME/.emacs.d)"
+    echo ".doom.d     : $DOOMDIR"
+}
 
 function check-emacs-d () {
     if [[ ! -e "$HOME/.emacs.d" ]]; then
@@ -41,76 +162,3 @@ function check-emacs-d () {
         ln -s "$EMACSDIR" "$HOME/.emacs.d"
     fi
 }
-
-function set-emacs () {
-    case "$1" in
-        "doom")
-            echo "doom current"
-            jg_use_EMACS="$ENAT_BIN"
-            EMACSDIR="/media/john/data/github/_libs/lisp/doom_2"
-            DOOMDIR="$HOME/.config/jg/"
-            ;;
-        "blood")
-            echo "BLOOD"
-            jg_use_EMACS="$ENAT_BIN"
-            EMACSDIR="$BLOOD_SRC"
-            # TODO
-            BLOOD_CONFIG="$EMACSDIR/example"
-            ;;
-        "snap")
-            echo "snap"
-            jg_use_EMACS="/snap/bin/emacs"
-            EMACSDIR="$ENAT_DIR"
-            DOOMDIR="$HOME/.config/jg/"
-            ;;
-        "flatpak")
-            echo "flatpak"
-            jg_use_EMACS="/var/lib/flatpak/exports/bin/org.gnu.emacs"
-            EMACSDIR="$ENAT_DIR"
-            DOOMDIR="$HOME/.config/jg/"
-            ;;
-        *)
-            echo "Unrecognized emacs type: $1"
-            # EMACS="$NAT_BIN"
-            EMACSDIR="$ENAT_DIR"
-        ;;
-        esac
-
-    if [[ -d "$HOME/.emacs.d" ]] && [[ ! ( -L "$HOME/.emacs.d" ) ]]; then
-        echo "Emacs Dir isn't a symlink"
-    elif [[ ! ( -L "$HOME/.emacs.d" ) ]]; then
-        # Theres no emacs.d link
-        ln -s "$EMACSDIR" "$HOME/.emacs.d"
-    elif [[ (-L "$HOME/.emacs.d")
-            && ($(readlink -f "$HOME/.emacs.d") != $(readlink -f "$EMACSDIR"))
-        ]]; then
-        # There is an existing emacs.d
-        rm "$HOME/.emacs.d"
-        ln -s "$EMACSDIR" "$HOME/.emacs.d"
-    fi
-    PATH="$EMACSDIR/bin/:$PATH"
-}
-
-function read-emacs () {
-    local curr_emacs="$(basename $(readlink -f $HOME/.emacs.d))"
-    echo "Emacs: $curr_emacs"
-}
-
-function report-emacs () {
-    echo "Emacs       : $jg_use_EMACS"
-    echo "blood       : $BLOOD_SRC : $BLOOD_CONFIG"
-    echo ".emacs.d    : $EMACSDIR"
-    echo ".doom.d     : $DOOMDIR"
-}
-
-function emacs (){
-    `$jg_use_EMACS -nw $@`
-}
-
-function emacsw() {
-    `$jg_use_EMACS $@`
-}
-
-export jg_use_EMACS
-export -f emacs
-export -f emacsw

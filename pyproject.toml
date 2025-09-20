@@ -35,18 +35,6 @@ changelog     = "https://github.com/jgrey4296//spam/blob/master/CHANGELOG.md"
 
 ##-- end urls
 
-##-- entry points
-[project.scripts] # CLI
-#  = .default:main
-
-[project.gui-scripts] #GUI
-# spam-gui      = "spam:main_gui"
-
-[project.entry-points."nothing"] # Plugins
-# tomatoes      = "spam:main_tomatoes"
-
-##-- end entry points
-
 # Tools #######################################################################
 
 ##-- git-cliff changelog

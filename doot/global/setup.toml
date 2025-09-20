@@ -41,7 +41,6 @@ actions              = [
    {do="link!", link="{home!p}/.vimrc",              to="vim/vimrc"},
    {do="link!", link="{home!p}/.ispell_english",     to="ispell/ispell_english"},
    {do="link!", link="{home!p}/.aspell.conf",        to="ispell/aspell.conf"},
-   {do="link!", link="{home!p}/.mambarc",            to="python/condarc"},
 
    # subdirs
    {do="link!", link="{home!p}/.ssh/config",                     to="{tools!p}/ssh_config"},

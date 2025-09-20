@@ -9,7 +9,7 @@ name        = "backup.versions"
 doc         = ["Update the list of installed software versions"]
 depends_on  = [
         "chore::_.apt.versions", "chore::_.snap.versions",
-        "chore::_.mamba.versions", "chore::_.rust.versions",
+        "chore::_.rust.versions",
         "chore::_.tex.versions", "chore::_.git", "chore::_.pipx",
         "chore::_.flatpak.versions", "chore::_.android.versions",
         "chore::_.dotnet.versions", "chore::_.asdf.versions",

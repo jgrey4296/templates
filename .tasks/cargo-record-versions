@@ -1,0 +1,19 @@
+# #  cargo-record-versions -*- mode: sh -*-
+
+echo "TODO: record versions"
+
+
+# apt
+# snap
+# flatpak
+# git
+# rust
+# tex
+# cron
+# asdf
+# sdkman
+# dotnet
+# android
+# uvx
+
+# .local

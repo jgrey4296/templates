@@ -1,25 +1,31 @@
-API Reference               # https://learn.microsoft.com/en-us/dotnet/api/?view=dotnet-plat-ext-8.0
-Config File Reference       # https://learn.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/
-DotNet CLI                  # https://learn.microsoft.com/en-gb/dotnet/core/tools/
-DotNet Project Templates    # https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new#c-templates
-DotNet SDK                  # https://learn.microsoft.com/en-gb/dotnet/core/sdk
-Env Vars                    # https://learn.microsoft.com/en-gb/dotnet/core/tools/dotnet-environment-variables
+.net API Search             # https://learn.microsoft.com/en-us/dotnet/api/?view=dotnet-plat-ext-8.0
+.net CLI                    # https://learn.microsoft.com/en-gb/dotnet/core/tools/
+.net Config File Reference  # https://learn.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/
+.net Custom Tasks           # https://learn.microsoft.com/en-us/visualstudio/msbuild/task-writing?view=vs-2022
+.net Env Vars               # https://learn.microsoft.com/en-gb/dotnet/core/tools/dotnet-environment-variables
+.net Pearls                 # https://www.dotnetperls.com
+.net Project Files          # https://learn.microsoft.com/en-us/visualstudio/ide/solutions-and-projects-in-visual-studio?view=vs-2022
+.net Project Templates      # https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new#c-templates
+.net SDK                    # https://learn.microsoft.com/en-gb/dotnet/core/sdk
+.net Samples                # https://learn.microsoft.com/en-us/samples/browse/
+.net Task Reference         # https://learn.microsoft.com/en-us/visualstudio/msbuild/msbuild-task-reference?view=vs-2022
+.net XUnit Tests            # https://xunit.net/
+.net build properties       # https://learn.microsoft.com/en-us/visualstudio/msbuild/msbuild-reserved-and-well-known-properties?view=vs-2022
+.net csproj file schema     # https://learn.microsoft.com/en-us/visualstudio/msbuild/msbuild-project-file-schema-reference?view=vs-2022
+.net sln file               # https://learn.microsoft.com/en-us/visualstudio/extensibility/internals/solution-dot-sln-file?view=vs-2022
+FSharp Docs                 # https://fsharp.org/docs/
 Godot C sharp               # https://docs.godotengine.org/en/stable/tutorials/scripting/c_sharp/index.html
 Linqpad                     # https://www.linqpad.net/
 MSBuild                     # https://learn.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props
 Microsoft C sharp           # https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/
-Microsoft F sharp reference # https://docs.microsoft.com/en-us/dotnet/fsharp/language-reference
-FSharp Docs                 # https://fsharp.org/docs/
-Microsoft Tests             # https://github.com/microsoft/testfx
+Microsoft F sharp           # https://docs.microsoft.com/en-us/dotnet/fsharp/language-reference
+Microsoft Testing Platform  # https://github.com/microsoft/testfx
 Mono Reference              # http://docs.go-mono.com/
 NUnit Tests                 # https://nunit.org/
 NuSpec XML                  # https://learn.microsoft.com/en-gb/nuget/reference/nuspec
 Nuget                       # https://learn.microsoft.com/en-gb/nuget/
 Nuget Config                # https://learn.microsoft.com/en-gb/nuget/reference/nuget-config-file
 Nuget Packages              # https://www.nuget.org/packages
-Pearls                      # https://www.dotnetperls.com/s#c#
-Project Files               # https://learn.microsoft.com/en-us/visualstudio/ide/solutions-and-projects-in-visual-studio?view=vs-2022
-Samples                     # https://learn.microsoft.com/en-us/samples/browse/
 Unity C sharp               # https://docs.unity3d.com/ScriptReference/index.html
 Unity Manual                # https://docs.unity3d.com/Manual/index.html
-XUnit Tests                 # https://xunit.net/
+.net xunit tutorial         # https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-csharp-with-xunit

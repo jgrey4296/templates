@@ -237,6 +237,12 @@ determine the exact padding."
 
                 ;; ---- faces
                 (
+                 (custom-button                   :foreground blue   :background bg     :box nil)
+                 (custom-button-mouse             :foreground bg :background blue :box nil)
+                 (custom-button-unraised          :foreground violet :background bg     :box nil)
+                 (custom-button-pressed-unraised  :foreground bg     :background violet :box nil)
+                 (custom-button-pressed           :foreground bg     :background blue   :box nil)
+                 (custom-button-mouse             :foreground bg     :background blue   :box nil)
                  ;;-- font-lock
                  ((font-lock-comment-face &override)       :background (if jg-iosvkem-comment-bg (doom-lighten bg 0.05)) :slant 'italic)
                  ((font-lock-doc-face &override)           :slant 'normal)

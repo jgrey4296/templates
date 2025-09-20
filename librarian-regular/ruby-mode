@@ -1,1 +1,9 @@
-Gems # https://guides.rubygems.org/
+Gems             # https://guides.rubygems.org/
+ruby home        # https://www.ruby-lang.org/en/
+Ruby 3.4         # https://docs.ruby-lang.org/en/3.4/
+Gem Bundler      # https://gembundler.com/
+Rake             # https://ruby.github.io/rake/
+Rubocop Linting  # https://rubocop.org/
+Rspec            # https://rspec.info/
+minitest         # https://docs.seattlerb.org/minitest/
+ruby on rails    # https://rubyonrails.org/

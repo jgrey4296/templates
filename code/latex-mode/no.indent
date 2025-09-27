@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : no.indent
+# uuid  : no.indent
+# key   : no.indent
+# group : indent
+# --
+\noindent $0

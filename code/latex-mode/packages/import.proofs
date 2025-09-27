@@ -1,0 +1,33 @@
+# -*- mode: snippet -*-
+# name  : import.proofs
+# uuid  : import.proofs
+# key   : import.proofs
+# group : imports
+# --
+%%-- tableau
+% TODO: https://ctan.org/pkg/natded
+% TODO: https://ctan.org/pkg/logicproof
+% TODO: https://ctan.org/pkg/synproof
+% TODO: https://ctan.org/pkg/lplfitch
+% https://ctan.org/pkg/fitch
+\usepackage{fitch}
+
+%%-- end tableau
+
+%%-- sequents
+% https://ctan.org/pkg/bussproofs
+\usepackage{bussproofs}
+% https://ctan.org/pkg/cmll
+% \usepackage{cmll}
+
+% TODO: https://ctan.org/pkg/prftree
+% TODO: https://ctan.org/pkg/proofs
+% TODO: https://ctan.org/pkg/ebproof
+
+%%-- end sequents
+
+%%-- other proofs
+% Other:
+% TODO: https://ctan.org/pkg/ribbonproofs
+
+%%-- end other proofs

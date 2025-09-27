@@ -1,0 +1,43 @@
+# -*- mode: snippet -*-
+# name  : bussproof
+# uuid  : bussproof
+# key   : bussproof
+# group :
+# --
+% https://ctan.org/pkg/bussproofs
+% \usepackage{bussproofs}
+
+\begin{figure*}[h]
+\begin{prooftree}
+                \AxiomC{$\Gamma \Delta \vdash A$ blah}
+            \UnaryInfC{$B \to C$}
+        \RightLabel{Label C}
+        \UnaryInfC{C}
+        \AxiomC{$\diamond Q$}
+    \LeftLabel{Label D}
+    \BinaryInfC{D}
+    \AxiomC{$E \parr B$}
+\BinaryInfC{$\bot$}
+\end{prooftree}
+\centering
+\caption{Proof 1}
+\label{p1}
+\end{figure*}
+
+And Another:
+
+\begin{figure*}[h]
+\[
+  \AxiomC{blah}
+  \LL{A}
+  \UIC{bloo \quad C}
+  \DisplayProof
+  \quad
+  \AxiomC{aweg}
+  \RL{B}
+  \UIC{awegjio}
+  \DP
+\]
+\caption{Proof 2}
+\label{p2}
+\end{figure*}

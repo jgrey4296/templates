@@ -1,8 +1,11 @@
+%% chain -*- mode: LaTeX/FP -*-
 %% compiler:pdflatex
 %% --------------------------------------------------
 % Pdf Tex prelude
 %% --------------------------------------------------
 \documentclass{article}
+
+%%-- imports
 \usepackage{todonotes}
 \usepackage{array}
 \usepackage{longtable}
@@ -24,6 +27,8 @@
 %% Only if the base font of the document is to be sans serif:
 \renewcommand*\familydefault{\sfdefault}
 \usepackage[normalem]{ulem}
+
+%%-- end imports
 
 \newlength{\tableWidth}
 \setlength{\tableWidth}{5cm}

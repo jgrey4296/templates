@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : new.error
+# uuid  : new.error
+# key   : new.error
+# group : macros error
+# --
+\PackageError{${1:name}}{${2:msg}}{${3:help}}$0

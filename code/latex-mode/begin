@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : begin
+# uuid  : begin
+# key   : begin
+# group : environment
+# --
+\begin{$1}
+    $0
+\end{$1}

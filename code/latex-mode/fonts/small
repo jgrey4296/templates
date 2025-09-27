@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : small
+# uuid  : small
+# key   : small
+# group : fonts size
+# --
+\small
+$0
+\normalsize

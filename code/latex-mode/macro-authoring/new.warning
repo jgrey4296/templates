@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : new.warning
+# uuid  : new.warning
+# key   : new.warning
+# group : macros warning
+# --
+\PackageWarning{${1:Name}}{${2:Msg}}$0

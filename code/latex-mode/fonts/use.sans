@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : use.sans
+# uuid  : use.sans
+# key   : use.sans
+# group :
+# --
+\sffamily $0

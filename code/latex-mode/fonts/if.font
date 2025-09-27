@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : if.font
+# uuid  : if.font
+# key   : if.font
+# group : fonts
+# --
+\IfFontExistsTF{${1:name}}
+    {True}
+    {False}
+$0

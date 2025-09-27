@@ -1,27 +1,33 @@
-CTAN packages           # https://www.ctan.org/pkg/latex
-CTan Classes            # https://ctan.org/topic/class
-Detexify                # http://detexify.kirelabs.org/classify.html
-Docs                    # https://www.latex-project.org/help/documentation/
-E-tex toolbook          # https://www.ctan.org/pkg/etoolbox
-Font Installation       # https://tug.org/fonts/fontinstall.html
-Fonts                   # https://tug.org/FontCatalogue/
-Latex Tutorial          # https://latex-tutorial.com/
-Latex Wikibook          # https://en.m.wikibooks.org/wiki/LaTeX
-Logic Symbols           # https://www.logicmatters.net/latex-for-logicians/symbols/
-Logic Symbols List      # https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols
-Overleaf Lengths        # https://www.overleaf.com/learn/latex/Lengths_in_LaTeX
-Overleaf docs           # https://www.overleaf.com/learn
-Tex Directory Structure # berry04:_direc_struc_tex_files_
-TexDoc.org              # https://texdoc.org/index.html
-What the font?          # https://www.myfonts.com/pages/whatthefont
-Wikibook Lengths        # https://en.wikibooks.org/wiki/LaTeX/Lengths
-Wikibook Macros         # https://en.m.wikibooks.org/wiki/LaTeX/Macros
-biblatex Wikibook       # https://en.wikibooks.org/wiki/LaTeX/Bibliographies_with_biblatex_and_biber
-biblatex ctan           # https://www.ctan.org/pkg/biber
-font space              # https://www.fontspace.com/
-fonts                   # https://web.archive.org/web/20180721043841/https://www.cl.cam.ac.uk/~rf10/pstex/latexcommands.htm
-hboxes                  # https://www.overleaf.com/learn/how-to/Understanding_underfull_and_overfull_box_warnings#Why_the_Warning_Happens
-kpathsea                # https://www.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files
-luatex                  # http://www.luatex.org/
-reftex                  # https://www.gnu.org/software/emacs/manual/html_mono/reftex.html
-xetex                   # https://www.tug.org/xetex/
+CTAN packages            # https://www.ctan.org/pkg/latex
+CTan Classes             # https://ctan.org/topic/class
+Detexify                 # http://detexify.kirelabs.org/classify.html
+Docs                     # https://www.latex-project.org/help/documentation/
+E-tex toolbook           # https://www.ctan.org/pkg/etoolbox
+Font Installation        # https://tug.org/fonts/fontinstall.html
+Fonts                    # https://tug.org/FontCatalogue/
+Latex Tutorial           # https://latex-tutorial.com/
+Latex Wikibook           # https://en.m.wikibooks.org/wiki/LaTeX
+Logic Symbols            # https://www.logicmatters.net/latex-for-logicians/symbols/
+Logic Symbols List       # https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols
+Overleaf Lengths         # https://www.overleaf.com/learn/latex/Lengths_in_LaTeX
+Overleaf docs            # https://www.overleaf.com/learn
+Tex Directory Structure  # berry04:_direc_struc_tex_files_
+TexDoc.org               # https://texdoc.org/index.html
+What the font?           # https://www.myfonts.com/pages/whatthefont
+Wikibook Lengths         # https://en.wikibooks.org/wiki/LaTeX/Lengths
+Wikibook Macros          # https://en.m.wikibooks.org/wiki/LaTeX/Macros
+biblatex Wikibook        # https://en.wikibooks.org/wiki/LaTeX/Bibliographies_with_biblatex_and_biber
+biblatex ctan            # https://www.ctan.org/pkg/biber
+font space               # https://www.fontspace.com/
+fonts                    # https://web.archive.org/web/20180721043841/https://www.cl.cam.ac.uk/~rf10/pstex/latexcommands.htm
+hboxes                   # https://www.overleaf.com/learn/how-to/Understanding_underfull_and_overfull_box_warnings#Why_the_Warning_Happens
+kpathsea                 # https://www.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files
+luatex                   # http://www.luatex.org/
+reftex                   # https://www.gnu.org/software/emacs/manual/html_mono/reftex.html
+xetex                    # https://www.tug.org/xetex/
+
+Tex FAQs                 # https://texfaq.org
+MikTex                   # https://docs.miktex.org/manual/
+TexLive                  # https://www.tug.org/texlive/doc.html
+LuaTex                   # https://gitlab.lisn.upsaclay.fr/texlive/luatex
+biber                    # https://biblatex-biber.sourceforge.net/

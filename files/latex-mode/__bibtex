@@ -1,4 +1,7 @@
+%% __bibtex -*- mode: LaTeX/FP -*-
 \documentclass[12pt]{article}
+
+%%-- imports
 \usepackage[T1,T2A]{fontenc}
 \usepackage[russian,english]{babel}
 \usepackage{listings}
@@ -7,6 +10,8 @@
 \usepackage[numbers]{natbib}
 \usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, pdfstartview=FitH]{hyperref}
 \usepackage{doi}
+
+%%-- end imports
 
 \title{}
 \author{John Grey}

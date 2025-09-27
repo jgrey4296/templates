@@ -1,10 +1,12 @@
 # -*- mode: snippet -*-
-# name: figure
-# key: fig
-# uuid: fig
+# name  : figure
+# uuid  : figure
+# key   : figure
+# group :
 # --
-\begin{figure}[ht]
-  \centering
-  \includegraphics[${1:options}]{figures/${2:path.pdf}}
-  \caption{\label{fig:${3:label}} $0}
+% h=here, t, b, p=special page, !=override, H=exactly here
+\begin{figure}[]
+    $0
+    \centering
+    \caption{\label{$1}}
 \end{figure}

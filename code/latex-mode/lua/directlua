@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : direct.lua
+# uuid  : direct.lua
+# key   : direct.lua
+# group : lua
+# --
+\directlua { $0 }

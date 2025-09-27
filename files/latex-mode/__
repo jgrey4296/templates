@@ -1,24 +1,57 @@
+%% __ -*- mode: LaTeX/FP -*-
 %% compiler:lualatex
 %% available compilers : lualatex pdflatex xelatex
-\documentclass[12pt]{article}
-\usepackage[T1,T2A]{fontenc}
-\usepackage[russian,english]{babel}
-\usepackage{listings}
-\usepackage[version=3]{mhchem}
-\usepackage{url}
-\usepackage[numbers]{natbib}
-\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, pdfstartview=FitH]{hyperref}
-\usepackage{doi}
+\documentclass[class=article, crop=false]{standalone}
 
-\title{}
-\author{John Grey}
+%%-- imports
+
+# \usepackage[T1,T2A]{fontenc}
+\usepackage{fontspec}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, pdfstartview=FitH]{hyperref}
+\usepackage[numbers]{natbib}
+\usepackage[russian,english]{babel}
+\usepackage[version=3]{mhchem}
+\usepackage{doi}
+\usepackage{listings}
+\usepackage{titlelink}
+\usepackage{url}
+\usepackage{marginnote}
+\usepackage[bottom]{footmisc}
+\usepackage{sidecap}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{latexsym}
+
+%%-- end imports
+
+\def\\${1:$$(f-no-ext (f-filename (buffer-file-name)))}title{${2:Title}}
+
+\IfStandalone{
+  \title{\titlelink{\\$1title}{}}
+  \author{John Grey}
+  \date{`(format-time-string "%d-%m-%Y")`}
+  \setlength{\parskip}{2em}
+}{}
 
 \begin{document}
-\maketitle
+\IfStandalone{\maketitle}{\chapterlink*{\\$1title}{}}
+
+%% ---------- Content ----------
 
 
+%% ---------- Footnotes ----------
 
-\nocite{*}
-\bibliographystyle{jg_custom}
-\bibliography{}
+% \footnotemark[N]
+% \footnotetext[N]{Cras placerat accumsan nulla.}
+
+%% --------------------------------------------------
+
+
+\IfStandalone{
+  \nocite{*}
+  \bibliographystyle{jg_custom.bst}
+  \bibliography{}
+  }{}
+
 \end{document}

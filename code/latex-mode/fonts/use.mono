@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : use.mono
+# uuid  : use.mono
+# key   : use.mono
+# group : fonts
+# --
+\ttfamily $0

@@ -4,6 +4,9 @@
 \ProvidesPackage{$1}
 \NeedsTeXFormat{LaTeX2e}
 
+\RequirePackage{xkeyval}
+\RequirePackage{xspace}
+
 %%-- Options
 
 

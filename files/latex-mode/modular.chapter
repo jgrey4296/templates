@@ -1,6 +1,10 @@
+%% modular.chapter -*- mode: LaTeX/FP -*-
 %% compiler:pdflatex
 %% available compilers : lualatex pdflatex xelatex
 \documentclass[class=article, crop=false]{standalone}
+
+%%-- imports
+
 \usepackage[T1,T2A]{fontenc}
 \usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, pdfstartview=FitH]{hyperref}
 \usepackage[numbers]{natbib}
@@ -11,24 +15,29 @@
 \usepackage{titlelink}
 \usepackage{url}
 
+%%-- end imports
+
 \IfStandalone{
   \title{\titlelink{${1:Title}}{}}
-  \author{Stephanie Kim}
+  \author{John Grey}
   \date{May 11, 2022}
   \setlength{\parskip}{2em}
 }{}
 
 \begin{document}
 
-\IfStandalone{\maketitle}{
-  \chapterlink* {$1} {}
-}
+\IfStandalone{\maketitle}{\chapterlink* {$1} {}}
 
-# Content:
+%% ---------- Content ----------
 
 
 
-\nocite{*}
-\bibliographystyle{jg_custom.bst}
-\bibliography{}
+%% --------------------------------------------------
+
+\IfStandalone{
+  \nocite{*}
+  \bibliographystyle{jg_custom.bst}
+  \bibliography{}
+  }{}
+
 \end{document}

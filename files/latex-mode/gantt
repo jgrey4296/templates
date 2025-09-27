@@ -1,8 +1,11 @@
+%% gantt -*- mode: LaTeX/FP -*-
 %% compiler:pdflatex
 %% --------------------------------------------------
 %  Gantt Tex Prelude
 %% --------------------------------------------------
 \documentclass{article}
+
+%%-- imports
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{lscape}
@@ -10,6 +13,8 @@
 \usepackage{pgfgantt}
 \usepackage{longtable}
 \usepackage[margin=1cm]{geometry}
+%%-- end imports
+
 \pagestyle{empty}
 \thispagestyle{empty}
 %% Only if the base font of the document is to be sans serif:

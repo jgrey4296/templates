@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : set.font
+# uuid  : set.font
+# key   : set.font
+# group : fonts
+# --
+\setmainfont{$1}

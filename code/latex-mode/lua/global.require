@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : global.require
+# uuid  : global.require
+# key   : global.require
+# group : lua
+# --
+\directlua { ${1:var} = require("${2:filename}") }$0

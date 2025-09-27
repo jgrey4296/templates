@@ -1,11 +1,15 @@
+%% newspaper -*- mode: LaTeX/FP -*-
 %% compiler:pdflatex
 \documentclass{article}
 
+%%-- imports
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{microtype}
 
 \usepackage{newspaper}
+
+%%-- end imports
 
 \date{\today}
 \currentvolume{1}

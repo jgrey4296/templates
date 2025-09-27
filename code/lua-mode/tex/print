@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : tex.print
+# uuid  : tex.print
+# key   : tex.print
+# group : latex lualatex io
+# --
+tex.print([[
+    $0
+
+]])

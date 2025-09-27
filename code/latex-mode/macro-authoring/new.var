@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : new.var
+# uuid  : new.var
+# key   : new.var
+# group : new macros
+# --
+\def\@$1{$0}

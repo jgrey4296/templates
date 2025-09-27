@@ -1,0 +1,21 @@
+# -*- mode: snippet -*-
+# name  : import.std
+# uuid  : import.std
+# key   : import.std
+# group : imports
+# --
+%%-- imports
+
+\usepackage{import}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, pdfstartview=FitH]{hyperref}
+\usepackage[numbers]{natbib}
+\usepackage[russian,english]{babel}
+\usepackage[version=3]{mhchem}
+\usepackage{doi}
+\usepackage{listings}
+\usepackage{titlelink}
+\usepackage{url}
+\usepackage{pdflscape}
+
+%%-- end imports

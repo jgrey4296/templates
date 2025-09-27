@@ -1,0 +1,64 @@
+%% __sty -*- mode: LaTeX -*-
+
+% Package ID:
+\ProvidesPackage{quickfont}
+\NeedsTeXFormat{LaTeX2e}
+
+\RequirePackage{xkeyval}
+\RequirePackage{xspace}
+\RequirePackage{fontspec}
+\RequirePackage{etoolbox}
+%%-- Options
+
+
+%%-- Package Loads
+
+
+%%-- Variables
+\def\@quickfontloc{/home/john/.local/share/fonts/}
+
+\newfontfamily\quickfontfam[]{C059}
+
+%%-- Commands
+\newcommand{\setQuickFontLoc}[1]{
+  \def\@quickfontloc{#1}
+}
+
+\newcommand*{\getQuickFontLoc}[0]{The Quickfont Loc is: ``\@quickfontloc''}
+
+\newcommand*{\setquickmain}[1]{
+  \ifstrempty{#1}{
+      \setfontfamily\quickfontfam{C059}
+    }
+    {\setfontfamily\quickfontfam{#1}[
+      Path= \@quickfontloc ,
+      Ligatures = TeX ,
+      ]
+      % \PackageWarning{QuickFont}{Set Main Font to #1}
+    }
+}
+
+\newcommand*{\setlocalfont}[1]{
+  \ifstrempty{#1}{
+      \setfontfamily\quickfontfam{C059}
+    }{\setfontfamily\quickfontfam[
+      Path= ./ ,
+      Ligatures= TeX ,
+      ]{#1}
+      % \PackageWarning{QuickFont}{Set Local Font to #1}
+    }
+  }
+
+%% Environments --------------------------------------------------
+
+\newenvironment{quickmain}[1]
+{ % before
+  \setquickmain{#1} \quickfontfam
+  \noindent \ignorespaces
+}
+{ % after
+  \noindent
+  \normalfont
+  \noindent\ignorespacesafterend
+}
+

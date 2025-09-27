@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : warnings
+# uuid  : warnings
+# key   : warnings
+# group :
+# --
+set Warnings "-notation-overridden,-parsing,-deprecated-hint-without-locality"$0

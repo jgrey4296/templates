@@ -1,0 +1,28 @@
+%% __sty -*- mode: LaTeX -*-
+
+% A Simple package to providing:
+% - resptitle{TitleWithFormatting}{TitleinToc}
+
+% for easy creation of hrefs for titles
+
+
+% Package ID:
+\ProvidesPackage{responsive-title}
+\NeedsTeXFormat{LaTeX2e}
+
+\RequirePackage{standalone}
+\RequirePackage{hyperref}
+\RequirePackage{titling}
+
+%%-- Commands
+
+\DeclareRobustCommand{\resptitle}[2]{
+  \IfStandalone{
+    \maketitle
+  }{
+    \chapter*{#1}
+    \markboth{#1}{}
+    \addcontentsline{toc}{chapter}{#2}
+  }
+}
+

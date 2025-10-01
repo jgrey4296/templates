@@ -13,16 +13,18 @@
 \RequirePackage{standalone}
 \RequirePackage{hyperref}
 \RequirePackage{titling}
+\RequirePackage{titlesec}
 
 %%-- Commands
 
 \DeclareRobustCommand{\resptitle}[2]{
   \IfStandalone{
+    \title{#1}
     \maketitle
   }{
-    \chapter*{#1}
-    \markboth{#1}{}
-    \addcontentsline{toc}{chapter}{#2}
+    \chapter[#2]{#1}
+    \markboth{#1}{} % left and right page headings
+    % \addcontentsline{toc}{chapter}{#2}
   }
 }
 

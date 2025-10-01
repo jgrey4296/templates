@@ -20,6 +20,8 @@
 \usepackage{lettrine}
 \usepackage{titling}
 \usepackage{silence}
+\usepackage{etoc}
+\usepackage{titlesec}
 %%-- end imports
 
 \usepackage{responsive-title}
@@ -30,12 +32,11 @@
 \WarningsOff*
 \ErrorsOff*
 
+%%-- title formatting
 \pretitle{
   \begin{center}
     \ttfamily \huge
 }
-\title{${1:Book Title}}
-\author{${2:Book Author}}
 \posttitle{
   \linebreak
   \normalsize
@@ -43,7 +44,28 @@
   \linebreak
   \end{center}
 }
+\AfterPreamble{\hypersetup{
+    pdfauthor={John Grey},
+    pdftitle={MacroTest},
+    pdfsubject={},
+    pdfkeywords={}
+  }}
 
+% args: shape, format, label, sep, before, after
+% shape: hang,block,display,runin,{left|right}margin,drop,wrap,frame
+% \renewcommand{\thechapter}{\Roman{chapter}}
+\titleformat{\chapter}
+[display]
+{\bfseries\Large}
+{\filright\MakeUppercase{\chaptertitlename} \Huge\thechapter}
+{4ex}
+{\titlerule \vspace{2ex} \filright}
+[\vspace{2ex} \titlerule]
+
+%%-- end title formatting
+
+\title{${1:Book Title}}
+\author{${2:Book Author}}
 
 \begin{document}
 \frontmatter

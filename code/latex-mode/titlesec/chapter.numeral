@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name  : chapter.numeral
+# uuid  : chapter.numeral
+# key   : chapter.numeral
+# group : package:titlesec
+# --
+\renewcommand{\thechapter}{\Roman{chapter}}
+% args: shape, format, label, sep, before, after.
+\titleformat{\chapter}
+[display]
+{\bfseries\Large}
+{\filleft\MakeUppercase{\chaptertitlename} \Huge\thechapter}
+{4ex}
+{\titlerule \vspace{2ex} \filright}
+[\vspace{2ex} \titlerule]$0

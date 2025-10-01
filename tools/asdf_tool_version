@@ -2,6 +2,16 @@
 # Symlink to ~/.tool-versions
 # Elixir and Erlang VM management
 # https://asdf-vm.com/guide/getting-started.html
-erlang 28.0.2
-elixir 1.18.4-otp-26
-uv 0.8.4
+dotnet          9.0.305
+elixir          1.18.4-otp-26
+erlang          28.0.2
+kotlin          2.2.20
+ktlint          1.7.1
+ocaml           5.3.0
+opam            2.4.1
+pandoc          3.8
+pre-commit      4.3.0
+swiprolog       9.2.9
+uv              0.8.4
+texlive         2025
+yt-dlp          2025.09.26

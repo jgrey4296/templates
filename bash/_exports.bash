@@ -57,6 +57,7 @@ export CABAL_DIR
 export CARGO_HOME
 
 # Ocaml
+export OPAMROOT
 export OPAM_SWITCH_PREFIX
 export CAML_LD_LIBRARY_PATH
 export OCAML_TOPLEVEL_PATH

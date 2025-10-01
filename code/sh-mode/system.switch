@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name  : system.switch
+# uuid  : system.switch
+# key   : system.switch
+# group :
+# --
+case "$uname_s" in
+    Linux)
+    $1
+    ;;
+    *) echo "OS Not Supported: $uname_s" ;;
+esac

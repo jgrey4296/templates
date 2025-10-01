@@ -2,29 +2,33 @@
 % (Public domain.)
 % symlink into $HOME/.local/texlive/YYYY/texmf.cnf
 %
+% TEXMFCACHE      ConTeXt MkIV and LuaLaTeX to store (cached) runtime data
 % TEXMFDIST       holds all of the ﬁles in the original distribution
+
+%% System Dirs:
+% TEXMFLOCAL      administrators can use for system-wide installation
 % TEXMFSYSVAR     used by texconfig-sys, updmap-sys and fmtutil-sys
 % TEXMFSYSCONFIG  tree used by the utilities texconfig-sys, updmap-sys, and fmtutil-sys to store modiﬁed conﬁguration data.
-% TEXMFLOCAL      administrators can use for system-wide installation
+
+%% User Dirs:
 % TEXMFHOME       for user individual installations of additional or updated macros, fonts, etc.
 % TEXMFVAR        stores cached user data
 % TEXMFCONFIG     user tree for texconfig, updmap-sys, and fmtutil-sys
-% TEXMFCACHE      ConTeXt MkIV and LuaLaTeX to store (cached) runtime data
 % tlmgr usertree is a TEXMFHOME/web2c and TEXMFHOME/tlpkg/tlpobj
 % note: tlmgr option docfiles 1
 
-TEXBASE     = $HOME/.local/texlive/2023/texmf-dist
-TEXMFHOME   = $HOME/_cache_/texlive/2023/home
-TEXMFVAR    = $HOME/_cache_/texlive/2023/var
-TEXMFSYSVAR = $HOME/_cache_/texlive/2023/sys
-TEXMFOUT    = $TEXMFDOTDIR
-TEXMFCONFIG = $HOME/github/_templates/tex-config
+# TEXBASE     = $HOME/.local/texlive/2023/texmf-dist
+# TEXMFHOME   = $HOME/_cache_/texlive/2023/home
+# TEXMFVAR    = $HOME/_cache_/texlive/2023/var
+# TEXMFSYSVAR = $HOME/_cache_/texlive/2023/sys
+# TEXMFOUT    = $TEXMFDOTDIR
+# TEXMFCONFIG = $HOME/github/_templates/tex-config
 
 JG_FONTS = /media/john/data/assets/fonts/
 JG_BIB   = $HOME/github/bibliography/main
 
-BIBINPUTS=$TEXMFDOTDIR/bib//:$TEXMFDOTDIR:$JG_BIB:$TEXMFCONFIG/bibtex//:$TEXMFHOME/bibtex//:$TEXBASE/bibtex/bib//
-BSTINPUTS=$TEXMFDOTDIR/bib//:$TEXMFDOTDIR:$TEXMFCONFIG/bibtex//:$TEXMFHOME/bibtex//:$TEXBASE/bibtex/bst//
+BIBINPUTS=$TEXMFDOTDIR/bib//:$TEXMFDOTDIR:$JG_BIB:$TEXMFCONFIG/bibtex//:$TEXMFHOME/bibtex//:$TEXMFDIST/bibtex/bib//
+BSTINPUTS=$TEXMFDOTDIR/bib//:$TEXMFDOTDIR:$TEXMFCONFIG/bibtex//:$TEXMFHOME/bibtex//:$TEXMFDIST/bibtex/bst//
 
 TTFONTS=$TEXMFDOTDIR/fonts//:$TEXMFDOTDIR:$JG_FONTS/from_tablet:$JG_FONTS:$TEXMFCONFIG/fonts//:$TEXMFHOME/fonts//:$TEXMFMAIN/fonts//:/usr/share/fonts/truetype//
 OPENTYPEFONTS=$TEXMFDOTDIR/fonts//:$TEXMFDOTDIR:$JG_FONTS/from_tablet:$JG_FONTS:$TEXMFCONFIG/fonts//:$TEXMFHOME/fonts//:$TEXMFMAIN/fonts//:/usr/share/fonts/opentype//

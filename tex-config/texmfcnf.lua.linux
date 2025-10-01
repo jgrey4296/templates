@@ -1,3 +1,5 @@
+-- --  texmfcnf.lua.linux -*- mode: Lua -*-
+
 -- (Public domain.)
 -- This texmfcnf.lua file should contain only your personal changes from the
 -- original texmfcnf.lua (for example, as chosen in the installer).
@@ -10,10 +12,7 @@
 return {
   content = {
     variables = {
-      TEXMFSYSVAR = "$HOME/_cache_/texlive/2023/sys",
-      TEXMFHOME = "$HOME/_cache_/texlive/2023/home",
-      TEXMFVAR = "$HOME/_cache_/texlive/2023/var",
-      TEXMFCONFIG = "$HOME/github/_templates/tex-config",
+
     },
   },
 }

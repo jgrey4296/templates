@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : strict
+# uuid  : strict
+# key   : strict
+# group :
+# --
+set -euo pipefail$0

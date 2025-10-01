@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : fail
+# uuid  : fail
+# key   : fail
+# group :
+# --
+function fail () {
+    echo -e "$1 Failed"
+    exit 1
+}

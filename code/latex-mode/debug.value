@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : debug.value
+# uuid  : debug.value
+# key   : debug.value
+# group :
+# --
+\\show\\${1:macrodef}$0

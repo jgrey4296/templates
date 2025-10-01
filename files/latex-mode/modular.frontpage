@@ -1,31 +1,57 @@
 %% modular.frontpage -*- mode: LaTeX/FP -*-
 %% compiler:pdflatex
 %% available compilers : lualatex pdflatex xelatex
+% !TeX TS-program = lualatex
+% !TeX encoding = UTF-8
 \documentclass[12pt]{book}
 
 %%-- imports
 
+\usepackage{iftex}
 \usepackage[subpreambles=true]{standalone} % <--- for merging files
 \usepackage{import}                        % <--- for better importing
-\usepackage[Conny]{fncychap}               % <----
-\usepackage[T1,T2A]{fontenc}
+\usepackage[Conny]{fncychap}               % <---- Fancy Chapter Headings
 \usepackage[russian,english]{babel}
 \usepackage[version=3]{mhchem}
 \usepackage{listings}
 \usepackage[numbers]{natbib}
 \usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, pdfstartview=FitH]{hyperref}
 \usepackage{doi}
-\usepackage{titlelink}
-
+\usepackage{lettrine}
+\usepackage{titling}
+\usepackage{silence}
 %%-- end imports
 
+\usepackage{responsive-title}
+\usepackage{quickfont}
+
+\hfuzz=5pt % silences overfull hboxes up to 5pts
+\hbadness=100000 % silences underfull hbox warnings
+\WarningsOff*
+\ErrorsOff*
+
+\pretitle{
+  \begin{center}
+    \ttfamily \huge
+}
 \title{${1:Book Title}}
 \author{${2:Book Author}}
+\posttitle{
+  \linebreak
+  \normalsize
+  \rule{\linewidth}{1ex}
+  \linebreak
+  \end{center}
+}
+
 
 \begin{document}
 \frontmatter
 \maketitle
 \tableofcontents
+% \listoffigures
+% \listoftables
+% \etocsettocstyle{\subsection*{Chapter Contents:}}
 
 \mainmatter
 \setlength{\parskip}{1.5em}
@@ -36,6 +62,7 @@
 
 
 %% --------------------------------------------------
+\backmatter
 \nocite{*}
 % \bibliographystyle{jg_custom.bst}
 % \bibliography{}

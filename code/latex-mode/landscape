@@ -2,8 +2,9 @@
 # name  : landscape
 # uuid  : landscape
 # key   : landscape
-# group : landscape pdflscape
+# group : landscape package:pdflscape package:geometry
 # --
 \begin{landscape}
     $0
 \end{landscape}
+\restoregeometry % <- combats trailing blank pages

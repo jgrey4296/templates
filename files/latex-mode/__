@@ -1,11 +1,12 @@
 %% __ -*- mode: LaTeX/FP -*-
 %% compiler:lualatex
 %% available compilers : lualatex pdflatex xelatex
+% !TeX TS-program = lualatex
+% !TeX encoding = UTF-8
 \documentclass[class=article, crop=false]{standalone}
 
 %%-- imports
 
-# \usepackage[T1,T2A]{fontenc}
 \usepackage{fontspec}
 \usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, pdfstartview=FitH]{hyperref}
 \usepackage[numbers]{natbib}
@@ -13,7 +14,6 @@
 \usepackage[version=3]{mhchem}
 \usepackage{doi}
 \usepackage{listings}
-\usepackage{titlelink}
 \usepackage{url}
 \usepackage{marginnote}
 \usepackage[bottom]{footmisc}
@@ -22,21 +22,30 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{latexsym}
+\usepackage{silence}
+\usepackage{etoc}
+\usepackage{import}
 
 %%-- end imports
+\usepackage{responsive-title}
+\usepackage{quickfont}
 
-\def\\${1:$$(f-no-ext (f-filename (buffer-file-name)))}title{${2:Title}}
+\def\\${1:$$(f-no-ext (f-filename (buffer-file-name)))}Title{${2:Title}}
 
-\IfStandalone{
-  \title{\titlelink{\\$1title}{}}
-  \author{John Grey}
-  \date{`(format-time-string "%d-%m-%Y")`}
-  \setlength{\parskip}{2em}
-}{}
+\author{John Grey}
+\date{`(format-time-string "%d-%m-%Y")`}
+\setlength{\parskip}{2em}
 
 \begin{document}
-\IfStandalone{\maketitle}{\chapterlink*{\\$1title}{}}
-
+\resptitle{\\#1}{\\#1}
+\renewcommand{\abstractname}{}
+\begin{abstract}
+  Pellentesque condimentum, magna ut suscipit hendrerit, ipsum augue ornare nulla,
+  non luctus diam neque sit amet urna.
+\end{abstract}
+\hrulefill
+\vfill
+\pagebreak
 %% ---------- Content ----------
 
 

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : centered
+# uuid  : centered
+# key   : centered
+# group : spacing
+# --
+\begin{center}
+    $0
+\end{center}

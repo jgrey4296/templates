@@ -1,35 +1,48 @@
 %% modular.chapter -*- mode: LaTeX/FP -*-
 %% compiler:pdflatex
 %% available compilers : lualatex pdflatex xelatex
+% !TeX TS-program = lualatex
+% !TeX encoding = UTF-8
 \documentclass[class=article, crop=false]{standalone}
 
 %%-- imports
 
-\usepackage[T1,T2A]{fontenc}
+\usepackage{iftex}
+\usepackage{fontspec}
 \usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, pdfstartview=FitH]{hyperref}
 \usepackage[numbers]{natbib}
 \usepackage[russian,english]{babel}
 \usepackage[version=3]{mhchem}
 \usepackage{doi}
 \usepackage{listings}
-\usepackage{titlelink}
 \usepackage{url}
+\usepackage{lettrine}
+\usepackage{titling}
 
 %%-- end imports
 
-\IfStandalone{
-  \title{\titlelink{${1:Title}}{}}
-  \author{John Grey}
-  \date{May 11, 2022}
-  \setlength{\parskip}{2em}
-}{}
+\usepackage{responsive-title}
+\usepackage{quickfont}
+
+\title{\titlelink{${1:Title}}{}}
+\author{John Grey}
+\date{May 11, 2022}
+\setlength{\parskip}{2em}
 
 \begin{document}
-
-\IfStandalone{\maketitle}{\chapterlink* {$1} {}}
+\resptitle{TITLE}{TOC TITLE}
+\renewcommand{\abstractname}{}
+\begin{abstract}
+  Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et
+  dictum nunc justo sit amet elit.
+\end{abstract}
+\hrulefill
+\vfill
+\pagebreak
 
 %% ---------- Content ----------
 
+\lettrine[lines=3]{A}{liquam} era volutpat.
 
 
 %% --------------------------------------------------

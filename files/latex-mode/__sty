@@ -4,6 +4,8 @@
 \ProvidesPackage{$1}
 \NeedsTeXFormat{LaTeX2e}
 
+\RequirePackage{environ}
+\RequirePackage{etoolbox}
 \RequirePackage{xkeyval}
 \RequirePackage{xspace}
 

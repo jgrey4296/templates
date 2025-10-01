@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name  : document.start
+# uuid  : document.start
+# key   : document.start
+# group :
+# --
+\resptitle{FANCY_TITLE}{TOC_TITLE}
+\begin{center}
+    $0
+\end{center}
+\hrulefill
+% \localtableofcontents
+\vfill
+\pagebreak

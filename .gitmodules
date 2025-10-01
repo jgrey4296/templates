@@ -4,6 +4,6 @@
 [submodule "projects/polyglot"]
 	path = projects/polyglot
 	url = git@github.com:jgrey4296/polyglot-template.git
-[submodule "tex-config/tex/generic/tikz-eventchain"]
-	path = tex-config/tex/generic/tikz-eventchain
+[submodule "tex-config/tex/luatex/tikz-eventchain"]
+	path = tex-config/tex/luatex/tikz-eventchain
 	url = git@github.com:jgrey4296/tikz-eventchain.git

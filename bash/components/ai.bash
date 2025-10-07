@@ -1,7 +1,4 @@
 
-jgdebug "Setting Soar"
-SOAR_HOME="$HOME/github/_libs/ai/soar"
-
 jgdebug "Setting CLIPS"
 CLIPS_HOME="$HOME/github/_libs/ai/clips"
 

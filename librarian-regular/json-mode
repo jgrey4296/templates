@@ -1,1 +1,2 @@
-jq # https://jqlang.github.io/jq/
+jq               # https://jqlang.github.io/jq/
+treesit-grammar  # https://www.gnu.org/software/emacs/manual/html_node/elisp/Language-Grammar.html

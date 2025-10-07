@@ -30,7 +30,6 @@ export JAVA_HOME
 export JACAMO_HOME
 export GRADLE_USER_HOME
 export SDKMAN_DIR
-export SOAR_HOME
 export CLIPS_HOME
 
 # Emacs

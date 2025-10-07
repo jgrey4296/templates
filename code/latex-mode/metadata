@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name  : metadata
+# uuid  : metadata
+# key   : metadata
+# group : package:hyperref
+# --
+\AfterPreamble{\hypersetup{
+    pdftitle={},
+    pdfauthor={},
+    pdfsubject={},
+    pdfkeywords={}
+  }}$0

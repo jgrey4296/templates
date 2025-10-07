@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name  : abstract
+# uuid  : abstract
+# key   : abstract
+# group :
+# --
+\renewcommand{\abstractname}{}
+\begin{abstract}
+
+\end{abstract}
+
+\hrulefill
+\vfill
+\pagebreak$0

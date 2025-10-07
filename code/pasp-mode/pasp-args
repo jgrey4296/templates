@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name  : pasp-args
+# uuid  : pasp-args
+# key   : pasp-args
+# group : pasp-args
+# --
+%%-- settings
+%% pasp-arg: --help=2
+%% pasp-arg: --pre=aspif
+%% pasp-arg: --text
+%% pasp-arg: --output reify
+
+% pasp-arg: -W all
+% pasp-arg: --keep-facts
+% pasp-arg: --stats=1
+% pasp-arg: -n 4
+% pasp-arg: --time-limit=5
+% pasp-arg: --verbose=0
+
+%%-- end settings

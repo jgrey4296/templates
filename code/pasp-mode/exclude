@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : exclude
+# uuid  : exclude
+# key   : exclude
+# group :
+# --
+:- ${1:state}.

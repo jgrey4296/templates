@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : output
+# uuid  : output
+# key   : output
+# group :
+# --
+#show ${1:fact}/${2:arity}.

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : choice
+# uuid  : choice
+# key   : choice
+# group :
+# --
+% lower{}upper
+1{a;b;c}3

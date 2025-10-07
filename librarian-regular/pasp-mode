@@ -1,1 +1,5 @@
-Potassco homepage # https://potassco.org/doc/
+Potassco homepage  # https://potassco.org/doc/
+clingo examples    # https://github.com/potassco/guide/tree/master/examples
+clingo github      # https://github.com/potassco/clingo
+clasp github       # https://github.com/potassco/clasp
+treesitter clingo  # https://github.com/potassco/tree-sitter-clingo

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : ret.val
+# uuid  : ret.val
+# key   : ret.val
+# group :
+# --
+$?

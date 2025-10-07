@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : disable.check
+# uuid  : disable.check
+# key   : disable.check
+# group : shellcheck
+# --
+# shellcheck disable=$1

@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name  : arg.parse
+# uuid  : arg.parse
+# key   : arg.parse
+# group :
+# --
+while [[ $# -gt 0 ]]; do
+    case \$1 in
+        -t|--target)
+            echo "Target: \$2"
+            ;;
+        --*=*)
+            echo "Assignment: \$1"
+            ;;
+        *) # Positional
+            echo "Positional: \$1"
+            ;;
+    esac
+    shift
+done

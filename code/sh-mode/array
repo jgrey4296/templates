@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name  : array
+# uuid  : array
+# key   : array
+# group :
+# --
+declare -a ARGS=(
+    "val"
+    "val"
+    "val
+)
+echo "Args: \${#ARGS[@]}"
+echo "Args: \${ARGS[0]}"
+echo "Args: \${ARGS[1]}"
+echo "Args: \${ARGS[2]}"

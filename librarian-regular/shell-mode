@@ -102,3 +102,5 @@ Python UV                                                # https://docs.astral.s
 Elixir Mix                                               # https://hexdocs.pm/mix/1.17.3/Mix.html
 Python Ruff                                              # https://docs.astral.sh/ruff/linter/#ruff-check
 Rust Bindgen                                             # https://rust-lang.github.io/rust-bindgen/command-line-usage.html
+
+coreutils # https://www.gnu.org/software/coreutils/manual/html_node/index.html#SEC_Contents

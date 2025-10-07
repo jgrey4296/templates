@@ -4,6 +4,7 @@
 # key   : system.switch
 # group :
 # --
+uname_s=$(uname)
 case "$uname_s" in
     Linux)
     $1

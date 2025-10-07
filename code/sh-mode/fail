@@ -5,6 +5,6 @@
 # group :
 # --
 function fail () {
-    echo -e "$1 Failed"
+    echo -e "\$1 Failed"
     exit 1
 }

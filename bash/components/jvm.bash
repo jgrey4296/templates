@@ -44,3 +44,5 @@ function init_sdkman () {
         source "${SDKMAN_DIR}/bin/sdkman-init.sh"
     fi
 }
+
+init_sdkman

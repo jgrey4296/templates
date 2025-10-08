@@ -1,7 +1,10 @@
 /*  -*- Prolog -*-
 
-    SWI-Prolog personalization file
+  SWI-Prolog personalization file
+
+  symlink to ~/.config/swi-prolog/init.pl
 */
+%% :- format("An Example message").
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 This is a sample user-initialisation file for SWI-Prolog. If you wish to

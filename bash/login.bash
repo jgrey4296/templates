@@ -32,7 +32,6 @@ case "$OSTYPE" in
 					  ;;
 			 esac
 		 done
-		 # init_sdkman
 		 # shellcheck disable=SC1091
 		 source "$HOME/github/_templates/bash/_aliases.linux.bash"
          ;;

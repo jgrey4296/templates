@@ -3,7 +3,7 @@
 
 jgdebug "ASDF Setup"
 
-ASDF_DATA_DIR="${XDG_CONFIG_HOME}/asdf"
+ASDF_DATA_DIR="${XDG_CACHE_HOME}/asdf"
 ASDF_DIR="${ASDF_HOME}"
 
 PATH="${ASDF_DATA_DIR}/shims:${HOME}/go/bin:$PATH"

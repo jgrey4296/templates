@@ -1,0 +1,16 @@
+# #  flake.nix -*- mode: Nix -*-
+
+{
+    description = "Simple Flake";
+    outputs = { self, nixpkgs, ... }: let
+       sys = "x86_64-linux";
+       pkgs = import nixpkgs { system = sys; };
+    in {
+     packages."${sys}".default = with pkgs; [lolcat bash];
+     devShells."${sys}".default = pkgs.mkShell {
+        shellHook = ''
+            echo "An Example Hook"
+        '';
+       };
+    };
+}

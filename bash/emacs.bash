@@ -29,6 +29,9 @@ function set-emacs () {
         "blood")
             set-blood
             ;;
+        "")
+            set-doom
+            ;;
         *)
             echo "Unrecognised emacs framework: $1"
             ;;
@@ -42,6 +45,9 @@ function set-emacs () {
             set-flatpak-emacs
             ;;
         "snap")
+            set-snap-emacs
+            ;;
+        "")
             set-snap-emacs
             ;;
         *)

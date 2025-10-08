@@ -15,9 +15,9 @@ jgdebug "Setting JVM"
 BUILD_TOOLS="33.0.2"
 
 # ANDROID_HOME="/usr/lib/android-sdk"
-ANDROID_HOME="$BASE_CACHE/android"
-ANDROID_USER_HOME="$BASE_CACHE/android"
-ADB_VENDOR_KEYS="$BASE_CONFIG/secrets/android"
+ANDROID_HOME="$XDG_CACHE_HOME/android"
+ANDROID_USER_HOME="$XDG_CACHE_HOME/android"
+ADB_VENDOR_KEYS="$XDG_CONFIG_HOME/secrets/android"
 
 # ANDROID_TOOLS="$ANDROID_HOME/cmdline-tools/latest/bin"
 # ANDROID_TOOLS="$ANDROID_HOME/build-tools/$BUILD_TOOLS/bin:$ANDROID_TOOLS"
@@ -25,10 +25,10 @@ ADB_VENDOR_KEYS="$BASE_CONFIG/secrets/android"
 
 
 jgdebug "Setting up SDKMAN"
-SDKMAN_DIR="$BASE_CACHE/sdkman"
+SDKMAN_DIR="$XDG_CACHE_HOME/sdkman"
 
 jgdebug "Setting Gradle"
-GRADLE_USER_HOME="$BASE_CACHE/gradle"
+GRADLE_USER_HOME="$XDG_CACHE_HOME/gradle"
 
 jgdebug "Setting Jason"
 JASON_HOME="$HOME/.local/jason-3.2.2"

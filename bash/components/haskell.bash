@@ -5,5 +5,5 @@ jgdebug "Setting haskell"
 alias whaskell="ghci -Wall -fwarn-name-shadowing"
 alias hs="haskell"
 
-CABAL_CONFIG="$HOME/.cabalrc"
-CABAL_DIR="$BASE_CACHE/cabal"
+CABAL_CONFIG="$XDG_CONFIG_HOME/.cabalrc"
+CABAL_DIR="$XDG_CACHE_HOME/cabal"

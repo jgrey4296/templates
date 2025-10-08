@@ -4,12 +4,12 @@
 #
 jgdebug "Ocaml/Rocq Setup"
 
-OPAMROOT="$BASE_CACHE/opam"
-OPAM_SWITCH_PREFIX="$BASE_CACHE/opam/default"
-CAML_LD_LIBRARY_PATH="$BASE_CACHE/opam/default/lib/stublibs"
-OCAML_TOPLEVEL_PATH="$BASE_CACHE/opam/default/lib/toplevel"
+OPAMROOT="$XDG_CACHE_HOME/opam"
+OPAM_SWITCH_PREFIX="$XDG_CACHE_HOME/opam/default"
+CAML_LD_LIBRARY_PATH="$XDG_CACHE_HOME/opam/default/lib/stublibs"
+OCAML_TOPLEVEL_PATH="$XDG_CACHE_HOME/opam/default/lib/toplevel"
 
-# PATH="$BASE_CACHE/opam/default/bin":$PATH
+# PATH="$XDG_CACHE_HOME/opam/default/bin":$PATH
 
 # COQPATH
 # COQ_COLORS

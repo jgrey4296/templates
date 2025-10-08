@@ -2,6 +2,7 @@
 
 function imgconv () {
     shopt -s nullglob
+    local potentials=""
     local allargs=( "$@" )
     local outname="$1"
     local imgnames=("${allargs[@]:1}")
@@ -21,17 +22,18 @@ function imgconv () {
 
     for target in "${imgnames[@]}"
     do
-        local base=`basename "$target"`
+        local base
+        base=$(basename "$target")
         echo "Converting: $base"
         convert "$target" -alpha off "$HOME/.temp/imgconv/$base"
         mogrify -orient bottom-left "$HOME/.temp/imgconv/$base"
         img2pdf --output "$HOME/.temp/imgconv/$base.pdf" --rotation=ifvalid --pagesize A4 --auto-orient "$HOME/.temp/imgconv/$base"
     done
-    local potentials=$(find "$HOME/.temp/imgconv/" -name "*.pdf")
-    echo "Combining: ${potentials[@]}"
-    pdftk ${potentials[@]} cat output "./$outname.pdf"
+    potentials=$(find "$HOME/.temp/imgconv/" -name "*.pdf")
+    echo "Combining: ${potentials[*]}"
+    pdftk "${potentials[@]}" cat output "./$outname.pdf"
 
-    read -p "Delete Temp Files? y/* : " dodel
+    read -r -p "Delete Temp Files? y/* : " dodel
     if [[ "$dodel" = "y" ]]; then
         echo "Deleting"
         rm -rf "$HOME/.temp/imgconv"

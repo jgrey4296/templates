@@ -12,9 +12,10 @@
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
     if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
+        # shellcheck disable=SC1091
+	    source "$HOME/.bashrc"
     fi
 fi
 
-export BLOOD_CONFIG="~/.config/blood"
-export BLOOD_SRC="~/github/lisp/blood/blood"
+export BLOOD_CONFIG="$HOME/.config/blood"
+export BLOOD_SRC="$HOME/github/lisp/blood/blood"

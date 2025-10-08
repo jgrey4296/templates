@@ -40,7 +40,7 @@ alias txt2pdf="cupsfilter"
 # cd + ls
 alias cd="cd_ls"
 function cd_ls {
-    builtin cd $@
+    builtin cd "$@" || return
     ls
 }
 
@@ -55,11 +55,6 @@ alias q="exit"
 # alias pipupdate="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U"
 
 # conda environments
-alias cenv="mamba activate"
-alias cexp="conda env export"
-alias clist="mamba env list"
-alias cexport="mamba env export --from-history"
-
 alias wake="wakeonlan -i 192.168.1.20 90e6ba7391f9"
 
 # Nushell

@@ -16,16 +16,17 @@ export XDG_STATE_HOME="$HOME/.local/state"
 # xdg_runtime_dir
 
 # wipe the path, and mark it so I know its mine
+# shellcheck disable=SC2123
 PATH="/jg_path"
 
 case "$OSTYPE" in
-    darwin*)
-        BREW_PREFIX="/usr/local"
-        ;;
     linux*)
         PATH="/snap/bin:$PATH"
         PATH="/usr/local/games:$PATH"
         ;;
+    *)
+        echo "---- BAD OS: $OSTYPE ----"
+        exit 1
 esac
 
 PATH="/bin:/sbin:$PATH"                                  # Core
@@ -52,4 +53,5 @@ esac
 MANPATH="/usr/local/man:/usr/local/share/man:/usr/share/man"
 MANPATH="$HOME/.local/share/man:$MANPATH"
 MANPATH="$HOME/github/_templates/man/main:$MANPATH"
+# shellcheck disable=SC2034
 INFOPATH=""

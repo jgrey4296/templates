@@ -7,11 +7,11 @@ jgdebug "Setting Up Godot"
 function gdscript () {
     case "$OSTYPE" in
         darwin*)
-            godot --headless -s $@
+            godot --headless -s "$@"
             osascript -e "tell application \"iTerm\"" -e "activate" -e "end tell"
             ;;
         linux*)
-            godot-4 --headless -s $@
+            godot-4 --headless -s "$@"
             ;;
     esac
 }

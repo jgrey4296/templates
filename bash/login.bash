@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-ISLOGIN="yes"
+# shellcheck disable=SC2034
+IS_LOGIN="yes"
 
 if [[ $TMUX ]]; then
 	echo "Login: $OSTYPE : $TERM : TMUX"
@@ -10,32 +11,41 @@ echo "Date  : $(date).  CWD: $(pwd)"
 
 export NO_AT_BRIDGE=1
 
+# shellcheck disable=SC1091
 source "$HOME/github/_templates/bash/_basic_utils.bash"
+# shellcheck disable=SC1091
 source "$HOME/github/_templates/bash/_base_path.bash"
 
+shopt -s globstar
 case "$OSTYPE" in
-	darwin*)
-		 jgdebug "Activating components"
-		 for fname in $(find "$HOME/github/_templates/bash/components" -type f -name "*.bash" -not -regex "_.+?\.bash")
-		 do
-		     jgdebug "-- Sourcing: $fname"
-		     source "$fname"
-		 done
-		 source "$HOME/github/_templates/bash/_aliases.mac.bash"
-		 ;;
 	linux*)
-		 for fname in $(find "$HOME/github/_templates/bash/components" -type f -name "*.bash" -not -regex "_.+?\.bash")
+		 for i in "$HOME"/github/_templates/bash/components/*.bash;
 		 do
-		     jgdebug "-- Sourcing: $fname"
-		     source "$fname"
+			 case $(basename "$i") in
+				 _*.bash)
+					  jgdebug "-- SKIPPING: $i"
+					  ;;
+				 *)
+					  jgdebug "-- Sourcing: $i"
+					  # shellcheck disable=SC1090,SC1091
+					  source "$i"
+					  ;;
+			 esac
 		 done
-		# init_sdkman
-		source "$HOME/github/_templates/bash/_aliases.linux.bash"
-        ;;
+		 # init_sdkman
+		 # shellcheck disable=SC1091
+		 source "$HOME/github/_templates/bash/_aliases.linux.bash"
+         ;;
+	*)
+		 echo "-- BAD OSTYPE: $OSTYPE --"
+		 exit 1
+		 ;;
 esac
 
 BASH_ENV="$HOME/github/_templates/bash/non_interactive.bash"
+# shellcheck disable=1091
 source "$HOME/github/_templates/bash/emacs.bash"
+# shellcheck disable=1091
 source "$HOME/github/_templates/bash/_exports.bash"
 
 jgdebug "Path  : $PATH"

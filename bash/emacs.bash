@@ -5,6 +5,7 @@
 ## --- Startup
 jgdebug "Setting emacs data"
 BLOOD_SRC="$HOME/github/lisp/blood"
+# shellcheck disable=SC2034
 EDITOR="vim"
 
 EMACSDIR="$HOME/.emacs.d"
@@ -18,42 +19,43 @@ fi
 
 ## --- Main Entry
 function set-emacs () {
-    # Call as: set-emacs [doom|blood] [apt|flatpak]
-    case "$1" in
-        "doom")
-            set-doom
-            ;;
-        "doom2")
-            set-doom-alt
-            ;;
-        "blood")
-            set-blood
-            ;;
-        "")
-            set-doom
-            ;;
-        *)
-            echo "Unrecognised emacs framework: $1"
-            ;;
-        esac
+    local framework=""
+    local binary=""
 
-    case "$2" in
-        "apt")
-            set-apt-emacs
-            ;;
-        "flatpak")
-            set-flatpak-emacs
-            ;;
-        "snap")
-            set-snap-emacs
-            ;;
-        "")
-            set-snap-emacs
-            ;;
-        *)
-            echo "Unrecognized emacs type: $2"
-            ;;
+    # Call as: set-emacs [doom|blood] [apt|flatpak]
+    while [[ $# -gt 0 ]]; do
+        case $1 in
+            -f|--framework)
+                echo "Framework: $2"
+                framework="$2"
+                ;;
+            -b|--bin)
+                echo "Binary: $2"
+                binary="$2"
+                ;;
+            *)
+                if [[ framework -eq "" ]]; then
+                    framework="$1"
+                else
+                    binary="$1"
+                fi
+                ;;
         esac
+        shift
+    done
+
+    case $framework in
+        "doom")  set-doom     ;;
+        "doom2") set-doom-alt ;;
+        "blood") set-blood    ;;
+        "")      set-doom     ;;
+    esac
+
+    case $binary in
+        "apt")      set-apt-binary     ;;
+        "snap")     set-snap-binary    ;;
+        "flatpak")  set-flatpak-binary ;;
+    esac
 }
 
 ## --- Specific variants
@@ -94,21 +96,21 @@ function set-blood () {
     retarget-emacs-d "$EMACSDIR"
 }
 
-function set-apt-emacs () {
+function set-apt-binary () {
     echo "apt"
     EMACSBIN="/usr/bin/emacs"
 
     retarget-emacs-bin "$EMACSBIN"
 }
 
-function set-snap-emacs () {
+function set-snap-binary () {
     echo "snap"
     EMACSBIN="/snap/bin/emacs"
 
     retarget-emacs-bin "$EMACSBIN"
 }
 
-function set-flatpak-emacs () {
+function set-flatpak-binary () {
     echo "flatpak"
     EMACSBIN="/var/lib/flatpak/exports/bin/org.gnu.emacs"
 
@@ -143,13 +145,17 @@ function retarget-emacs-bin () {
 
 ## --- Info
 function read-emacs () {
-    local curr_emacs="$(basename $(readlink -f $HOME/.emacs.d))"
+    local curr_emacs
+    # shellcheck disable=SC2046,SC2086
+    curr_emacs="$(basename $(readlink -f $HOME/.emacs.d))"
     echo "Emacs: $curr_emacs"
 }
 
 function report-emacs () {
+    # shellcheck disable=SC2086
     echo "Emacs       : $(readlink $HOME/.local/bin/emacs)"
     echo "blood       : $BLOOD_SRC : $BLOOD_CONFIG"
+    # shellcheck disable=SC2086
     echo ".emacs.d    : $(readlink -f $HOME/.emacs.d)"
     echo ".doom.d     : $DOOMDIR"
 }

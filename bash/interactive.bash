@@ -4,7 +4,8 @@
 if [[ $- != *i* ]]; then
 	return
 fi
-ISINTERACTIVE="yes"
+# shellcheck disable=SC2034
+IS_INTERACTIVE="yes"
 
 echo "Interactive"
 # don't put duplicate lines or lines starting with space in the history.
@@ -22,21 +23,25 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# shellcheck disable=SC1091
 source "$HOME/github/_templates/bash/_basic_utils.bash"
+# shellcheck disable=SC1091
 source "$HOME/github/_templates/bash/emacs.bash"
 
 case "$OSTYPE" in
 	darwin*)
+       # shellcheck disable=SC1091
         source "$HOME/github/_templates/bash/_aliases.bash"
-		echo "Stopping Sarafi Bookmarks"; launchctl stop com.apple.SafariBookmarksSyncAgent
+		echo "Stopping Safari Bookmarks"; launchctl stop com.apple.SafariBookmarksSyncAgent
 		;;
 	linux*)
-       # init_sdkman
+       # shellcheck disable=SC1091
        source "$HOME/github/_templates/bash/_aliases.linux.bash"
 
        if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
            debian_chroot=$(cat /etc/debian_chroot)
        fi
+       init_sdkman
        ;;
 esac
 

@@ -14,4 +14,4 @@ OCAML_TOPLEVEL_PATH="$XDG_CACHE_HOME/opam/default/lib/toplevel"
 # COQPATH
 # COQ_COLORS
 
-test -r '/home/john/_cache_/opam/opam-init/init.sh' && . '/home/john/_cache_/opam/opam-init/init.sh' > /dev/null 2> /dev/null || true
+(test -r '/home/john/_cache_/opam/opam-init/init.sh' && . '/home/john/_cache_/opam/opam-init/init.sh' > /dev/null 2> /dev/null) || true

@@ -22,7 +22,7 @@ alias lsl="ls -l"
 
 # enable color support of ls and also add handy aliases
 if [[ -x /usr/bin/dircolors ]] && [[ "$TERM" != "dumb" ]]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    (test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)") || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
@@ -38,15 +38,12 @@ alias duh="du -hd 1 | sort"
 # cd + ls
 alias cd="cd_ls"
 function cd_ls {
-    builtin cd $@
+    builtin cd "$@" || exit
     ls
 }
 
 #for automating the update of pip packages:
 # alias pipupdate="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U"
 
-# conda environments
-alias cenv="mamba activate"
-
 alias sdkman="sdk"
-alias precommit="pre-commit"
+alias precom="pre-commit"

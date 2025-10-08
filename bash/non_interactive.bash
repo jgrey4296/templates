@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-ISNONINTERACTIVE="yes"
+IS_NONINTERACTIVE="yes"
 
 # echo "Non_Interactive"
 # Nothing to do currently, path is exported

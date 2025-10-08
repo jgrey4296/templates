@@ -1,4 +1,4 @@
-#/usr/bin/bash
+#!/usr/bin/bash
 #
 ## Bootstrapping script for new systems
 # https://stackoverflow.com/questions/18544359/how-do-i-read-user-input-into-a-variable-in-bash
@@ -9,11 +9,12 @@
 # read -p "Test: " testval
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-CONFIG_REPO=$(realpath $(dirname "$SCRIPT_DIR"))
+CONFIG_REPO=$(realpath "$(dirname "$SCRIPT_DIR")")
 
 echo "----- BOOTSTRAPPING SYSTEM -----"
 echo "Location: $CONFIG_REPO"
 
+# shellcheck disable=SC2034
 GITHUB=""
 
 # Temp
@@ -65,5 +66,3 @@ case "$OSTYPE" in
        # curl -s "https://get.sdkman.io" | bash
       ;;
 esac
-
-# create conda envs

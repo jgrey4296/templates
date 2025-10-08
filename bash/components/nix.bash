@@ -17,4 +17,5 @@ NIX_HOME="/nix/var/nix/profiles/default"
 
 PATH="$NIX_HOME/bin:$PATH"
 
+# shellcheck disable=SC1091
 source "$NIX_HOME/etc/profile.d/nix-daemon.sh"

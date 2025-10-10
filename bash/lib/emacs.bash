@@ -120,8 +120,7 @@ function set-flatpak-binary () {
 ## --- Utils
 function retarget-emacs-d () {
     if [[ -d "$HOME/.emacs.d" ]] && [[ ! ( -L "$HOME/.emacs.d" ) ]]; then
-        echo "Emacs Dir isn't a symlink"
-        exit 1
+        fail "Emacs Dir isn't a symlink"
     elif [[ (-L "$HOME/.emacs.d") ]]; then
         # There is an existing emacs.d
         rm "$HOME/.emacs.d"
@@ -134,8 +133,7 @@ function retarget-emacs-d () {
 function retarget-emacs-bin () {
     # Link emacsdir and emacs into local
     if [[ -e "$HOME/.local/bin/emacs" ]] && [[ ! ( -L "$HOME/.local/bin/emacs" ) ]]; then
-        echo "local emacs bin isn't a symlink"
-        exit 1
+        fail "local emacs bin isn't a symlink"
     elif [[ -L "$HOME/.local/bin/emacs" ]]; then
         rm "$HOME/.local/bin/emacs"
     fi
@@ -145,10 +143,12 @@ function retarget-emacs-bin () {
 
 ## --- Info
 function read-emacs () {
-    local curr_emacs
+    local curr_framework
+    local curr_binary
     # shellcheck disable=SC2046,SC2086
-    curr_emacs="$(basename $(readlink -f $HOME/.emacs.d))"
-    echo "Emacs: $curr_emacs"
+    curr_framework="$(basename $(readlink -f $HOME/.emacs.d))"
+    curr_binary="$(readlink -f "$HOME/.local/bin/emacs")"
+    echo "Emacs: $curr_framework : $curr_binary"
 }
 
 function report-emacs () {

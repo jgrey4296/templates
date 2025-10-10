@@ -17,5 +17,5 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-export BLOOD_CONFIG="$HOME/.config/blood"
+export BLOOD_CONFIG="$XDG_CONFIG_HOME/blood"
 export BLOOD_SRC="$HOME/github/lisp/blood/blood"

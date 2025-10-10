@@ -1,5 +1,5 @@
-## `(f-filename (buffer-file-name))` -*- mode: `major-mode` -*-
-# Summary:
-#
-# Tags:
-#
+`comment-start` `(f-filename (buffer-file-name))` -*- mode: `major-mode` -*-
+`comment-start` Summary:
+`comment-start`
+`comment-start` Tags:
+`comment-start`

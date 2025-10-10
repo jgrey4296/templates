@@ -1,14 +1,13 @@
 #!/usr/bin/env bash
-set -o pipefail
+
 # # from: https://itecnotes.com/server/cron-how-to-use-the-aliases-in-the-crontab/
 shopt -s expand_aliases
 
-source "$JG_CONFIG/bash/_basic_utils.bash"
-source "$JG_CONFIG/bash/_base_path.bash"
-source "$JG_CONFIG/bash/components/rust.bash"
-source "$JG_CONFIG/bash/components/latex.bash"
-source "$JG_CONFIG/bash/components/jvm.bash"
-source "$JG_CONFIG/bash/python_config.bash"
+source "$XDG_CONFIG_HOME/.templates/bash/lib/utils.bash"
+source "$XDG_CONFIG_HOME/.templates/bash/lib/path.bash"
+source "$XDG_CONFIG_HOME/.templates/bash/components/rust.bash"
+source "$XDG_CONFIG_HOME/.templates/bash/components/latex.bash"
+source "$XDG_CONFIG_HOME/.templates/bash/components/jvm.bash"
 
 CPU_MAX="50"
 function cpu_check(){

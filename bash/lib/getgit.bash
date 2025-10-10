@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -euo pipefail
 
 function getgit () {
     # Prints the remote urls for each git repo found directly below the cwd

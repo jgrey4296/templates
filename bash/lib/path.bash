@@ -25,8 +25,7 @@ case "$OSTYPE" in
         PATH="/usr/local/games:$PATH"
         ;;
     *)
-        echo "---- BAD OS: $OSTYPE ----"
-        exit 1
+        fail "---- BAD OS: $OSTYPE ----"
 esac
 
 PATH="/bin:/sbin:$PATH"                                  # Core

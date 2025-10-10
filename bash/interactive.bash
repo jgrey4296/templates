@@ -6,7 +6,6 @@ if [[ $- != *i* ]]; then
 fi
 # shellcheck disable=SC2034
 IS_INTERACTIVE="yes"
-
 echo "Interactive"
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -23,27 +22,27 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+root_dir="$XDG_CONFIG_HOME/.templates/bash"
+echo "Root Dir: $root_dir"
+
 # shellcheck disable=SC1091
-source "$HOME/github/_templates/bash/_basic_utils.bash"
+source "$root_dir/lib/utils.bash"
 # shellcheck disable=SC1091
-source "$HOME/github/_templates/bash/emacs.bash"
+source "$root_dir/lib/emacs.bash"
 
 case "$OSTYPE" in
-	darwin*)
-       # shellcheck disable=SC1091
-        source "$HOME/github/_templates/bash/_aliases.bash"
-		echo "Stopping Safari Bookmarks"; launchctl stop com.apple.SafariBookmarksSyncAgent
-		;;
 	linux*)
        # shellcheck disable=SC1091
-       source "$HOME/github/_templates/bash/_aliases.linux.bash"
+       source "$root_dir/lib/aliases.bash"
 
        if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
            debian_chroot=$(cat /etc/debian_chroot)
        fi
+       # Setup prompt
+       jg_maybe_inc_prompt
+       jg_set_prompt
+       ;;
+    *)
+       fail "Bad OS"
        ;;
 esac
-
-# Setup prompt
-jg_maybe_inc_prompt
-jg_set_prompt

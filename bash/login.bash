@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# shellcheck disable=SC2034
+# shellcheck disable=SC2033
 IS_LOGIN="yes"
 
 if [[ $TMUX ]]; then
@@ -11,46 +11,23 @@ echo "Date  : $(date).  CWD: $(pwd)"
 
 export NO_AT_BRIDGE=1
 
+
+current_script_path="${BASH_SOURCE[0]}"
+root_dir="$XDG_CONFIG_HOME/.templates/bash"
+
 # shellcheck disable=SC1091
-source "$HOME/github/_templates/bash/_basic_utils.bash"
+source "$root_dir/lib/utils.bash"
 # shellcheck disable=SC1091
-source "$HOME/github/_templates/bash/_base_path.bash"
-
-shopt -s globstar
-case "$OSTYPE" in
-	linux*)
-		 for i in "$HOME"/github/_templates/bash/components/*.bash;
-		 do
-			 case $(basename "$i") in
-				 _*.bash)
-					  jgdebug "-- SKIPPING: $i"
-					  ;;
-				 *)
-					  jgdebug "-- Sourcing: $i"
-					  # shellcheck disable=SC1090,SC1091
-					  source "$i"
-					  ;;
-			 esac
-		 done
-		 # shellcheck disable=SC1091
-		 source "$HOME/github/_templates/bash/_aliases.linux.bash"
-         ;;
-	*)
-		 echo "-- BAD OSTYPE: $OSTYPE --"
-		 exit 1
-		 ;;
-esac
-
-BASH_ENV="$HOME/github/_templates/bash/non_interactive.bash"
+source "$root_dir/lib/path.bash"
 # shellcheck disable=1091
-source "$HOME/github/_templates/bash/emacs.bash"
+source "$root_dir/lib/emacs.bash"
 # shellcheck disable=1091
-source "$HOME/github/_templates/bash/_exports.bash"
+source "$root_dir/lib/exports.bash"
 
+BASH_ENV="$root_dir/non_interactive.bash"
 jgdebug "Path  : $PATH"
-
+source_components
 read-emacs
 jg_maybe_inc_prompt
 jg_set_prompt
-
 loginmux

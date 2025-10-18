@@ -7,6 +7,12 @@ UseKeychain yes
 AddKeysToAgent yes
 IdentityFile ~/.config/secrets/github/github_ssh
 
+Host gitlab.com
+UseKeychain yes
+AddKeystoAgent yes
+IdentityFile ~/.config/secrets/gitlab/gitlab_ssh
+PreferredAuthentications publickey
+
 # For Unicode over ssh:
 # planetcjd.co.yk/blog/read/fixing-cygwin-unicode-issues
 # use SenEnd LANG LC_*

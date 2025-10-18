@@ -11,9 +11,11 @@ echo "Date  : $(date).  CWD: $(pwd)"
 
 export NO_AT_BRIDGE=1
 
+XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 
 current_script_path="${BASH_SOURCE[0]}"
 root_dir="$XDG_CONFIG_HOME/.templates/bash"
+echo "Root Dir: $root_dir"
 
 # shellcheck disable=SC1091
 source "$root_dir/lib/utils.bash"

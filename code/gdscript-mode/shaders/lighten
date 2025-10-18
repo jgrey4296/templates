@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : lighten.blend
+# uuid  : lighten.blend
+# key   : lighten.blend
+# group : shaders
+# --
+vec4 lighten(vec4 base, vec4 blend) {
+	return max(base, blend);
+}

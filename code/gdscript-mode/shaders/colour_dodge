@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : colour_dodge.blend
+# uuid  : colour_dodge.blend
+# key   : colour_dodge.blend
+# group : shaders
+# --
+vec4 color_dodge(vec4 base, vec4 blend) {
+	return base / (1.0 - blend);
+}

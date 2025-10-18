@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : comline
+# uuid  : comline
+# key   : comline
+# group :
+# --
+`comment-start` $1 --------------------------------------------------

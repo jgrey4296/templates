@@ -45,4 +45,6 @@ function init_sdkman () {
     fi
 }
 
+
+export -f init_sdkman
 init_sdkman

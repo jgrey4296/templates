@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : hard_light.blend
+# uuid  : hard_light.blend
+# key   : hard_light.blend
+# group : shaders
+# --
+vec4 hard_light(vec4 base, vec4 blend) {
+	vec4 limit = step(0.5, blend);
+	return mix(2.0 * base * blend, 1.0 - 2.0 * (1.0 - base) * (1.0 - blend), limit);
+}

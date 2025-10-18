@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: def.module
+# key: def.module
+# --
+defmodule $1 do
+  $0
+end

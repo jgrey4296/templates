@@ -1,0 +1,23 @@
+# -*- mode: snippet -*-
+# name  : for.each
+# uuid  : for.each
+# key   : for.each
+# group :
+# --
+function loop_over () {
+    local LOOP_ARGS=("$@")
+    if [[ \${#LOOP_ARGS[@]} -eq 1 ]] && [[ \${LOOP_ARGS[0]} = "--all" ]]; then
+        LOOP_ARGS=( "ADD ALL ALTS HERE"  )
+    fi
+
+    for key in "\${LOOP_ARGS[@]}"
+    do
+        case "$key" in
+
+            *)
+                echo "Unknown option: $key"
+                exit 1
+                ;;
+        esac
+    done
+}

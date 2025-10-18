@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: fn
+# key: fn
+# group: lambda
+# --
+fn ${1:x} -> $1$0 end

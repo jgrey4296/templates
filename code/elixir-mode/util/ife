@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: if-else
+# key: ife
+# group: control_flow
+# --
+if ${1:condition} do
+  $2
+else
+  $3
+end

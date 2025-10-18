@@ -1,13 +1,14 @@
-MDN                         # https://developer.mozilla.org/en-US/docs/Web/HTML
-HTML Elements               # https://developer.mozilla.org/en-US/docs/Web/HTML/Element
-HTML Attributes             # https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes
-HTML Globals                # https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes
-HTML Content                # https://developer.mozilla.org/en-US/docs/Web/HTML/Content_categories
-HTML Reference              # https://htmlreference.io/
-Web-mode                    # https://web-mode.org/
-Jinja Filters               # https://jinja.palletsprojects.com/en/stable/templates/#list-of-builtin-filters
-Jinja Tests                 # https://jinja.palletsprojects.com/en/stable/templates/#list-of-builtin-tests
-Jinja Global Functions      # https://jinja.palletsprojects.com/en/stable/templates/#list-of-global-functions
-Jinja Control Structs       # https://jinja.palletsprojects.com/en/stable/templates/#list-of-control-structures
+MDN                     # https://developer.mozilla.org/en-US/docs/Web/HTML
+HTML Elements           # https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+HTML Attributes         # https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes
+HTML Globals            # https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes
+HTML Content            # https://developer.mozilla.org/en-US/docs/Web/HTML/Content_categories
+HTML Reference          # https://htmlreference.io/
+Web-mode                # https://web-mode.org/
+Jinja Filters           # https://jinja.palletsprojects.com/en/stable/templates/#list-of-builtin-filters
+Jinja Tests             # https://jinja.palletsprojects.com/en/stable/templates/#list-of-builtin-tests
+Jinja Global Functions  # https://jinja.palletsprojects.com/en/stable/templates/#list-of-global-functions
+Jinja Control Structs   # https://jinja.palletsprojects.com/en/stable/templates/#list-of-control-structures
+Handlebars docs         # https://handlebarsjs.com/guide/
 
-Cheatsheet             # https://htmlcheatsheet.com/
+Cheatsheet              # https://htmlcheatsheet.com/

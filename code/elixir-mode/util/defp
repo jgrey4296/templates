@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: def.private.func
+# key: def.private.func
+# --
+defp $1 do
+  $0
+end

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : screen.blend
+# uuid  : screen.blend
+# key   : screen.blend
+# group : shaders
+# --
+vec4 screen(vec4 base, vec4 blend) {
+	return 1.0 - (1.0 - base) * (1.0 - blend);
+}

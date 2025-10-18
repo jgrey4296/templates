@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: def.private.macro
+# key: def.private.macro
+# --
+defmacrop $1 do
+  $0
+end

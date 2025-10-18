@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : define
+# uuid  : define
+# key   : define
+# group : arrays
+# --
+${1:MY_ARRAY}=( ${2:values} )$0

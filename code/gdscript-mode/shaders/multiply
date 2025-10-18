@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : multiply.blend
+# uuid  : multiply.blend
+# key   : multiply.blend
+# group : shaders
+# --
+vec4 multiply(vec4 base, vec4 blend) {
+	return base * blend;
+}

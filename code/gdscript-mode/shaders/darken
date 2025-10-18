@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : darken.blend
+# uuid  : darken.blend
+# key   : darken.blend
+# group : shaders
+# --
+vec4 darken(vec4 base, vec4 blend) {
+	return min(base, blend);
+}

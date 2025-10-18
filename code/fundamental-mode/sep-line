@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name  : sep-line
-# uuid  : sep-line
-# key   : sep-line
-# group : separator
-# --
-`comment-start``comment-start` --------------------------------------------------

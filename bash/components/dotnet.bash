@@ -1,7 +1,7 @@
 # Settings for dotnet / c#
 # https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-environment-variables
 #
-DOTNET_ROOT="$HOME/.local/dotnet"
+# for DOTNET_ROOT, use `asdf where dotnet`
 DOTNET_CLI_HOME="$XDG_CACHE_HOME/dotnet"
 NUGET_PACKAGES="$XDG_CACHE_HOME/dotnet/packages"
 

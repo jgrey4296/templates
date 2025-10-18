@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : link.to
+# uuid  : link.to
+# key   : link.to
+# group :
+# --
+<a href="$1" >$0

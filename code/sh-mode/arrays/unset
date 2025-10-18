@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : unset
+# uuid  : unset
+# key   : unset
+# group : arrays
+# --
+unset '${1:array}[${2:idx}]'$0

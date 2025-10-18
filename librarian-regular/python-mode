@@ -193,3 +193,4 @@ Awesome Libs         (blog)    # https://github.com/vinta/awesome-python
 anti-patterns        (blog)    # https://docs.quantifiedcode.com/python-anti-patterns/index.html
 uv                   (tool)    # https://docs.astral.sh/uv/
 ruff                 (tool)    # https://docs.astral.sh/ruff/
+pytest-cov           (test)    # https://pytest-cov.readthedocs.io/en/latest/

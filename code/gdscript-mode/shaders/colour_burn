@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : colour_burn.blend
+# uuid  : colour_burn.blend
+# key   : colour_burn.blend
+# group : shaders
+# --
+vec4 color_burn(vec4 base, vec4 blend) {
+	return 1.0 - (1.0 - base) / blend;
+}

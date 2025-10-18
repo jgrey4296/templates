@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : linear_dodge.blend
+# uuid  : linear_dodge.blend
+# key   : linear_dodge.blend
+# group : shaders
+# --
+vec4 linear_dodge(vec4 base, vec4 blend) {
+	return base + blend;
+}

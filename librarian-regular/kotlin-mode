@@ -24,6 +24,7 @@ Gradle Task API           # https://docs.gradle.org/current/kotlin-dsl/gradle/or
 Gradle JVM Compatibility  # https://docs.gradle.org/current/userguide/compatibility.html
 
 SARL                      # http://www.sarl.io/docs/index.html
+SARL API                  # https://www.sarl.io/docs/api/index.html
 
 Scala Documentation       # https://docs.scala-lang.org/
 Scala API                 # https://docs.scala-lang.org/api/all.html
@@ -36,5 +37,6 @@ Scala CLI                 # https://scala-cli.virtuslab.org/docs/overview/
 
 Google Maven              # https://maven.google.com/web/index.html?
 Maven Central             # https://mvnrepository.com/
+Maven Search              # https://central.sonatype.com/
 
 ktlint                    # https://pinterest.github.io/ktlint/latest/rules/configuration-ktlint/

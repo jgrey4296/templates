@@ -14,3 +14,6 @@ Erlang Nifs              # https://www.erlang.org/doc/tutorial/nif.html
 ASDF vm                  # https://asdf-vm.com/guide/getting-started.html
 Elixir School            # https://elixirschool.com/en/
 Hex Packages             # https://hex.pm/
+
+ExDoc                   #  https://hexdocs.pm/ex_doc/readme.html
+elxiir bridge tutorials # https://elixirbridge.org/04_Mix_Applications/01-mix.html

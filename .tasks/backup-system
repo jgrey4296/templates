@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+#  cargo-backup -*- mode: sh -*-
+
+set -o nounset
+
+# TODO use rsync --archive --progress --partial
+#
+# data     = "/media/john/data"
+# backup_1 = "/media/john/big_ex"
+# backup_2 = "/media/john/BackupSD"
+# backup_3 = "/media/john/LargeBackup"
+
+
+function backup_assets () {
+    echo "TODO: backup assets"
+    # data/assets
+    # to backups_1/assets
+    # to backup_2/assets
+
+}
+function backup_datasets () {
+    echo "TODO: backup datasets"
+    # data/datasets
+    # to backup_1/datasets
+    # to backup_2/datasets
+}
+function backup_photos  () {
+    echo "TODO: backup photos"
+    # backup_1/pictures
+    # to backup_2/pictures
+
+}
+function backup_library () {
+    echo "TODO: backup library"
+}
+

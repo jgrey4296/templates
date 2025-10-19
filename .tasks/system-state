@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #  cargo-record-versions -*- mode: sh -*-
 
-
 function record_versions () {
     set -o nounset
     local TARGET="$PROJ_ROOT/.maintenance"

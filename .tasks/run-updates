@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+#  cargo-run-updates -*- mode: sh -*-
+
+
+
+function update_apt () {
+    echo "TODO update apt"
+}
+
+function update_snap () {
+    echo "TODO update snap"
+}
+
+function update_flatpak () {
+    echo "TODO update flatpak"
+}
+
+function update_asdf () {
+    echo "TODO update asdf"
+}
+
+function update_uv () {
+    echo "TODO update uv"
+}
+
+function update_opam () {
+    echo "TODO update opam"
+}
+
+function update_rust () {
+    echo "TODO update rust"
+}
+
+function update_dotnet () {
+    echo "TODO update dotnet"
+}
+
+function update_android () {
+    echo "TODO update android"
+}

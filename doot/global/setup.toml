@@ -146,51 +146,6 @@ cleanup = [
    # reshim
 ]
 
-[[tasks.setup]]
-name = "_.android"
-setup = [
-      # Install android tools
-      # install android cli tools
-      # install android libraries / kotlin through android sdkmanager
-]
-
-[[tasks.setup]]
-name = "_.flatpak"
-[[tasks.setup]]
-name = "_.rust"
-depends_on = [
-   # install rustup
-]
-actions = [
-   # install toolchains via rustup
-]       
-
-[[tasks.setup]]
-name = "_.dotnet"
-depends_on = [
-   # Install dotnet
-]
-actions = [
-   # Install c# runtimes
-]
-
-[[tasks.setup]]
-name = "_.tex"
-depends_on = [
-   # install mactex
-]
-actions = [
-   # install tex packages through tlmgr
-]
-
-[[tasks.setup]]
-name = "_.jvm"
-depends_on = [
-   # install SDKMAN! 
-]
-actions = [
-   # install jvm and jdk
-]
 
 [[tasks.setup]]
 name        = "_.go"

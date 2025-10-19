@@ -1,5 +1,5 @@
 OS:
-Linux john-UM700 6.8.0-48-generic #48-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep 27 14:04:52 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+Linux john-UM700 6.8.0-85-generic #85-Ubuntu SMP PREEMPT_DYNAMIC Thu Sep 18 15:26:59 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
 
 SHELL:
 GNU bash, version 5.2.21(1)-release (x86_64-pc-linux-gnu)
@@ -13,18 +13,51 @@ BASH VERSION:
 5.2.21(1)-release
 
 ASDF VERSION:
-v0.14.0
+0.18.0 (revision unknown)
 
 ASDF INTERNAL VARIABLES:
-ASDF_DEFAULT_TOOL_VERSIONS_FILENAME=.tool-versions
+ASDF_TOOL_VERSIONS_FILENAME=.tool-versions
 ASDF_DATA_DIR=/home/john/_cache_/asdf
-ASDF_DIR=/media/john/data/github/__libs/erlang/asdf
 ASDF_CONFIG_FILE=/home/john/.asdfrc
 
 ASDF INSTALLED PLUGINS:
-elixir                       https://github.com/asdf-vm/asdf-elixir.git master a4c42e1
-erlang                       https://github.com/asdf-vm/asdf-erlang.git master 6744df7
-kotlin                       https://github.com/asdf-community/asdf-kotlin.git master d7d9ae8
-racket                       https://github.com/vic/asdf-racket.git master 87cb419
-rust                         https://github.com/asdf-community/asdf-rust.git master 8436012
-
+clojure    https://github.com/asdf-community/asdf-clojure
+           790f4f98ff3d9075305ef89b0ef2ab9d5d9b479f
+dotnet     https://github.com/hensou/asdf-dotnet
+           ba176a81f2ce97039ae27dc9be8d148ca4353906
+elixir     https://github.com/asdf-vm/asdf-elixir.git
+           89098d5c31fd3a240a25b1dacf881a6eeed426c4
+erlang     https://github.com/asdf-vm/asdf-erlang.git
+           5f27baa62864bb433be9c7f2f7d69b475f534376
+golang     https://github.com/asdf-community/asdf-golang.git
+           50c8f58237da34223d31ac9e62e5d5f8dcc13f5f
+ktlint     https://github.com/esensar/asdf-ktlint.git
+           90a02f5f711f7ce3200f46d2505e8ba74229f570
+ocaml      https://github.com/asdf-community/asdf-ocaml.git
+           a8712b240b95b2284a12f37c8e19497fa1d255de
+opam       https://github.com/asdf-community/asdf-opam.git
+           83a5180b492c889241ea6e071b56a36f3dbb8dcd
+pandoc     https://github.com/Fbrisset/asdf-pandoc.git
+           22b70a1e8b3491e35547c11ff79c671cbd8c10b8
+plantuml   git@gitlab.com:jgrey4296/asdf-plantuml.git
+           5ccf32a6123fdbace297a4a9e7ebf32b6a21b000
+polyglot   git@gitlab.com:jgrey4296/asdf-polyglot-cli.git
+           cf7f94c551f7c6ab8d2d30deb0bddc7a65cd12b5
+pre-commit https://github.com/jonathanmorley/asdf-pre-commit.git
+           26bfc420d6009f700514d6218cc28947d1c3aad9
+racket     https://github.com/vic/asdf-racket.git
+           f7451d0932ef3baba5dc03301898a8956f64db71
+ruby       https://github.com/asdf-vm/asdf-ruby.git
+           c90f670a5740400eb8aa1411b4b950df10664cd0
+rust       https://github.com/asdf-community/asdf-rust.git
+           bb9de4503b55fd290fcc95f55df1b439d4d1513c
+soar       git@gitlab.com:jgrey4296/asdf-soar.git
+           83a93aa16b051d0231677797a25104b6ae96795a
+swiprolog  https://github.com/mracos/asdf-swiprolog.git
+           ae764d9e68fc0d983c01b190f1a533170ebce8ec
+texlive    git@gitlab.com:jgrey4296/asdf-texlive.git
+           b6fb8faaf959111385766e45226eb5980ffab637
+uv         https://github.com/asdf-community/asdf-uv
+           90d1ea389b86c9c1a2bef3edc446f486c25b2604
+yt-dlp     https://github.com/duhow/asdf-yt-dlp
+           152effb2c3f4d4f4b4bdf7eaf1a69a672bb96973

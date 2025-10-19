@@ -1,30 +1,47 @@
-OS:
-Linux john-UM700 6.8.0-48-generic #48-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep 27 14:04:52 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
-
-SHELL:
-GNU bash, version 5.2.21(1)-release (x86_64-pc-linux-gnu)
-Copyright (C) 2022 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-
-This is free software; you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law.
-
-BASH VERSION:
-5.2.21(1)-release
-
-ASDF VERSION:
-v0.14.0
-
-ASDF INTERNAL VARIABLES:
-ASDF_DEFAULT_TOOL_VERSIONS_FILENAME=.tool-versions
-ASDF_DATA_DIR=/home/john/_cache_/asdf
-ASDF_DIR=/media/john/data/github/__libs/erlang/asdf
-ASDF_CONFIG_FILE=/home/john/.asdfrc
-
-ASDF INSTALLED PLUGINS:
-elixir                       https://github.com/asdf-vm/asdf-elixir.git master a4c42e1
-erlang                       https://github.com/asdf-vm/asdf-erlang.git master 6744df7
-kotlin                       https://github.com/asdf-community/asdf-kotlin.git master d7d9ae8
-racket                       https://github.com/vic/asdf-racket.git master 87cb419
-rust                         https://github.com/asdf-community/asdf-rust.git master 8436012
-
+clojure
+  No versions installed
+dotnet
+  8.0.300
+ *9.0.305
+elixir
+  1.15.7-otp-26
+ *1.18.4-otp-26
+erlang
+  26.1.2
+ *28.0.2
+golang
+  No versions installed
+ktlint
+ *1.7.1
+ocaml
+ *5.3.0
+opam
+  2.1.5
+ *2.4.1
+pandoc
+ *3.8
+plantuml
+ *1.2025.8
+polyglot
+ *0.1.0
+pre-commit
+ *4.3.0
+racket
+  No versions installed
+ruby
+ *3.4.5
+rust
+  No versions installed
+soar
+ *9.6.4
+swiprolog
+ *9.2.9
+texlive
+ *2025
+uv
+ *0.8.15
+  0.8.4
+  0.8.8
+  0.8.9
+yt-dlp
+ *2025.09.26

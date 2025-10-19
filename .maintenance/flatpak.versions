@@ -1,0 +1,41 @@
+BespokeSynth	com.bespokesynth.BespokeSynth	1.3.0	stable	system
+Flatseal	com.github.tchx84.Flatseal	2.4.0	stable	system
+Bforartists	de.bforartists.Bforartists	4.5.2	stable	system
+Codecs	de.bforartists.Bforartists.Codecs		stable	system
+Bforartists translations	de.bforartists.Bforartists.Locale		stable	system
+Qt Creator	io.qt.QtCreator	17.0.2	stable	system
+QtCreator translations	io.qt.QtCreator.Locale		stable	system
+Bustle	org.freedesktop.Bustle	0.13.0	stable	system
+Bustle translations	org.freedesktop.Bustle.Locale		stable	system
+Freedesktop Platform	org.freedesktop.Platform	freedesktop-sdk-24.08.27	24.08	system
+Mesa	org.freedesktop.Platform.GL.default	25.0.7	23.08	system
+Mesa (Extra)	org.freedesktop.Platform.GL.default	25.0.7	23.08-extra	system
+Mesa	org.freedesktop.Platform.GL.default	25.2.4	24.08	system
+Mesa (Extra)	org.freedesktop.Platform.GL.default	25.2.4	24.08extra	system
+Mesa	org.freedesktop.Platform.GL.default	25.2.4	25.08	system
+Mesa (Extra)	org.freedesktop.Platform.GL.default	25.2.4	25.08-extra	system
+freedesktop platform translations	org.freedesktop.Platform.Locale		24.08	system
+Codecs Extra Extension	org.freedesktop.Platform.codecs-extra		25.08-extra	system
+FFmpeg extension with extra codecs	org.freedesktop.Platform.ffmpeg-full		23.08	system
+openh264	org.freedesktop.Platform.openh264	2.5.1	2.5.1	system
+Freedesktop SDK	org.freedesktop.Sdk	freedesktop-sdk-23.08.34	23.08	system
+Freedesktop SDK	org.freedesktop.Sdk	freedesktop-sdk-24.08.27	24.08	system
+freedesktop development platform translations	org.freedesktop.Sdk.Locale		23.08	system
+freedesktop development platform translations	org.freedesktop.Sdk.Locale		24.08	system
+GNOME Application Platform version 49	org.gnome.Platform		49	system
+gnome platform translations	org.gnome.Platform.Locale		49	system
+Disk Usage Analyzer	org.gnome.baobab	49.0	stable	system
+baobab translations	org.gnome.baobab.Locale		stable	system
+GNU Emacs	org.gnu.emacs	30.1	stable	system
+Yaru-dark Gtk Theme	org.gtk.Gtk3theme.Yaru-dark		3.22	system
+KDE Application Platform	org.kde.Platform		5.15-23.08	system
+kde platform translations	org.kde.Platform.Locale		5.15-23.08	system
+QGnomePlatform	org.kde.PlatformTheme.QGnomePlatform		5.15-23.08	system
+KDE Software Development Kit	org.kde.Sdk		6.9	system
+kde development platform translations	org.kde.Sdk.Locale		6.9	system
+QAdwaitaDecorations	org.kde.WaylandDecoration.QAdwaitaDecorations		5.15-23.08	system
+QGnomePlatform-decoration	org.kde.WaylandDecoration.QGnomePlatform-decoration		5.15-23.08	system
+Kiwix	org.kiwix.desktop	2.4.1	stable	system
+desktop translations	org.kiwix.desktop.Locale		stable	system
+Firefox	org.mozilla.firefox	144.0	stable	system
+firefox translations	org.mozilla.firefox.Locale		stable	system

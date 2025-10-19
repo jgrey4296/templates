@@ -3,17 +3,23 @@ rustup home:  /home/john/_cache_/rustup
 
 installed toolchains
 --------------------
+stable-x86_64-unknown-linux-gnu (active, default)
+  rustc 1.89.0 (29483883e 2025-08-04)
+  path: /home/john/_cache_/rustup/toolchains/stable-x86_64-unknown-linux-gnu
 
-stable-x86_64-unknown-linux-gnu (default)
-rustc 1.82.0 (f6e511eec 2024-10-15)
+nightly-x86_64-unknown-linux-gnu
+  rustc 1.91.0-nightly (7ad23f43a 2025-09-09)
+  path: /home/john/_cache_/rustup/toolchains/nightly-x86_64-unknown-linux-gnu
 
-1.77.2-x86_64-unknown-linux-gnu
-rustc 1.77.2 (25ef9e3d8 2024-04-09)
-
+1.88-x86_64-unknown-linux-gnu
+  rustc 1.88.0 (6b00bc388 2025-06-23)
+  path: /home/john/_cache_/rustup/toolchains/1.88-x86_64-unknown-linux-gnu
 
 active toolchain
 ----------------
-
-stable-x86_64-unknown-linux-gnu (default)
-rustc 1.82.0 (f6e511eec 2024-10-15)
-
+name: stable-x86_64-unknown-linux-gnu
+active because: overridden by environment variable RUSTUP_TOOLCHAIN
+compiler: rustc 1.89.0 (29483883e 2025-08-04)
+path: /home/john/_cache_/rustup/toolchains/stable-x86_64-unknown-linux-gnu
+installed targets:
+  x86_64-unknown-linux-gnu

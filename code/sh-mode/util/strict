@@ -4,4 +4,6 @@
 # key   : strict
 # group :
 # --
-set -euo pipefail$0
+set -o errexit
+set -o nounset
+set -o pipefail

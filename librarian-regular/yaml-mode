@@ -18,3 +18,8 @@ GH Action: upload-pages       # https://github.com/actions/upload-pages-artifact
 GH Action: deploy-pages       # https://github.com/actions/deploy-pages
 GH Action: asdf               # https://github.com/asdf-vm/actions
 GH Action: pypi publish       # https://github.com/pypa/gh-action-pypi-publish
+GH Actions                    # https://docs.github.com/en/actions/tutorials
+GH Actions reference          # https://docs.github.com/en/actions/reference/workflows-and-actions
+GH Action Events              # https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows
+Gitlab CI Reference           # https://docs.gitlab.com/ci/yaml/
+Gitlab Variables              # https://docs.gitlab.com/ci/variables/predefined_variables/

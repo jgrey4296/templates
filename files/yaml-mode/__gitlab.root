@@ -1,0 +1,25 @@
+## .gitlab-ci.yml -*- mode: yaml -*-
+# https://docs.gitlab.com/ci/yaml/
+# https://docs.gitlab.com/ci/variables/predefined_variables/
+
+default:
+    interruptible: true
+    timeout: 10m
+    
+include:
+    - local: .gitlab/ci/*.gitlab-ci.yml
+
+stages:
+    - .pre
+    - build
+    - test
+    - deploy
+    - .post
+
+workflow:
+    name: "Basic Workflow"
+    rules:
+    
+variables:
+    JG_VAR: "My variable"
+    

@@ -1,0 +1,8 @@
+## `(f-filename (buffer-file-name))` -*- mode: yaml-ts -*-
+# https://docs.gitlab.com/ci/yaml/
+# https://docs.gitlab.com/ci/variables/predefined_variables/
+
+basic-job:
+    stage: build
+    script: |
+            echo "Example"

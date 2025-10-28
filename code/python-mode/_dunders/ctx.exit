@@ -2,7 +2,7 @@
 # name  : ctx.exit
 # uuid  : ctx.exit
 # key   : ctx.exit
-# group : with
+# group : with context manager
 # --
 def __exit__(self, etype:Maybe[type], err:Maybe[Exception], tb:Maybe[Traceback]) -> bool:
     pass

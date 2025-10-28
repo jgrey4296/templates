@@ -2,7 +2,7 @@
 # name  : descriptor
 # uuid  : descriptor
 # key   : descriptor
-# group : python descriptor protool
+# group : python descriptor protool util
 # --
 class $1Property:
     """
@@ -11,9 +11,12 @@ class $1Property:
 
     def __get__(self, instance, owner=None) -> Any:
         pass
+
     def __set__(self, instance, value) -> None:
         pass
+
     def __delete__(self, instance) -> Any:
         pass
+
     def __set_name__(self, ownerclass, name) -> None:
         pass

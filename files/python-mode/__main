@@ -4,7 +4,7 @@
 """
 # ruff.ignore.in.file PLR0912, BLE001
 
-`(+snippet-expand "import.core")`
+`(+snippet-expand "import.main")`
 
 # ##-- 3rd party imports
 import sh

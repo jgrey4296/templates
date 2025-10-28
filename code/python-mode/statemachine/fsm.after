@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : fsm.after
+# uuid  : fsm.after
+# key   : fsm.after
+# group : statemachine
+# --
+def after_${1:event}(self, event:str, source:State, target:State):
+    pass

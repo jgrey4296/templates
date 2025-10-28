@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name  : async.timeout
+# uuid  : async.timeout
+# key   : async.timeout
+# group : asyncio timeout
+# --
+async def build_timeout():
+    try:
+        async with asyncio.timeout(3):
+            await subcmd(4)
+    except asyncio.TimeoutError as err:
+        print("Timed Out")

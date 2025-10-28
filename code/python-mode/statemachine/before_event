@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# name  : before.event
-# uuid  : before.event
-# key   : before.event
-# group : fsm statemachine
-# --
-def before_${1:event}(self, event:str, source:State, target:State):
-    pass

@@ -1,4 +1,4 @@
-;; dot.related -*- mode: elisp -*-
+;; .related -*- mode: elisp -*-
 ;; A Related dirs file
 ;; ';;' are comment lines
 ;; Others are :{name} : {path} pairs

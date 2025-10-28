@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: hash.sha256
+# uuid: hash.sha256
+# group: util
+# --
+from hashlib import sha256
+
+def file_to_hash(filename:pl.Path|str):
+    path = pathlib.Path(filename)
+    assert(path.exists())
+    with open(path, 'br') as f:
+        return sha256(f.read()).hexdigest()

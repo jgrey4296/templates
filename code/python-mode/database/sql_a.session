@@ -1,0 +1,29 @@
+# -*- mode: snippet -*-
+# name  : sql_a.session
+# uuid  : sql_a.session
+# key   : sql_a.session
+# group : sqlalchemy
+# --
+def run_session(loc:pl.Path) -> None:
+    """ Run a set of actions in a sql session.
+    loc is the database file.
+
+    """
+    assert(loc.resolve().exists())
+    meta         = alc.MetaData()
+    engine       = alc.create_engine(f"sqlite:///{loc!s}", echo=ECHO)
+    bkmks        = alc.Table("the_table", meta, autoload_with=engine)
+
+    select_stmt  = alc.select(ORMOBject).where(ORMObject.type == 4)
+    match_stmt   = alc.select(ORMObject, ORMObject).where(ORMObject.parent == ORMObject.id)
+    results      = []
+    matched      = []
+
+    with orm.Session(engine) as sesh:
+        for x in sesh.scalars(select_stmt):
+            results.append(x.title)
+
+        for x,y in sesh.execute(match_stmt):
+            matched.append(x,y)
+
+    return

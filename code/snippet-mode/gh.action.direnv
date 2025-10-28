@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : gh.action.direnv
+# uuid  : gh.action.direnv
+# key   : gh.action.direnv
+# group : github direnv
+# --
+- name: activate direnv
+  run: |
+    direnv allow
+    direnv export gha >> "$GITHUB_ENV"$0

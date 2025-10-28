@@ -1,9 +1,0 @@
-# -*- mode: snippet -*-
-# name  : field_validator
-# uuid  : field_validator
-# key   : field_validator
-# group : pydantic, decorators
-# --
-@field_validator("$1")
-def _validate_$1(cls, val):
-$0

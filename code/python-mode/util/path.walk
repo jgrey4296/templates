@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name  : path.walk
+# uuid  : path.walk
+# key   : path.walk
+# group : util pathlib
+# --
+visited : set = set()
+for args in pl.Path().walk(top_down=${2:True}, on_error=${2:None}, follow_symlinks=${3:False}):
+    dpath     : pl.Path   = args[0]
+    dnames    : list[str] = args[1] # Edit to control descent
+    filenames : list[str] = args[2]
+    if dpath in visited:
+        dnames.clear()
+    else:
+        visited.add(dpath)
+
+    $1
+    pass

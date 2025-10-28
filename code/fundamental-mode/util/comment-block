@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: comblock
+# uuid: comblock
+# group: comments block
+# --
+`comment-start`------------------------------`comment-end`
+`comment-start` def $1`comment-end`
+`comment-start`------------------------------`comment-end`
+$0

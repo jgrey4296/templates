@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : fsm.exit
+# uuid  : fsm.exit
+# key   : fsm.exit
+# group : statemachine
+# --
+def on_exit_${1:state}(self):
+    pass

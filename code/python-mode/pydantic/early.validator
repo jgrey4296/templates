@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : early.validator
+# uuid  : early.validator
+# key   : early.validator
+# group : pydantic decorators
+# --
+@model_validator(mode="before")
+def $1 (cls, data:dict) -> dict:
+$0

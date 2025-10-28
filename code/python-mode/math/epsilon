@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: math.epsilon
+# uuid: math.epsilon
+# group: util
+# --
+import sys
+sys.float_info.epsilon

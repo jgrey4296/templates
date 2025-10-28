@@ -2,6 +2,6 @@
 # name  : comline
 # uuid  : comline
 # key   : comline
-# group :
+# group : comments
 # --
-`comment-start` $1 --------------------------------------------------
+`comment-start` $1 --------------------------------------------------`comment-end`

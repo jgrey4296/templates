@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : sep
+# uuid  : sep
+# key   : sep
+# group : separator folding
+# --
+`comment-start`#--| `comment-end`

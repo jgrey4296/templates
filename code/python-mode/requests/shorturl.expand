@@ -1,0 +1,29 @@
+# -*- mode: snippet -*-
+# name  : shorturl.expand
+# uuid  : shorturl.expand
+# key   : shorturl.expand
+# group : url shortened
+# --
+
+def expander(current:str, *, agent:Maybe[str]=None) -> str:
+    """ expand a shorted url using requests.
+
+    requests the url, allowing redirects, and gets the header of the redirect.
+    """
+    import requests
+    header = {}
+    if agent:
+       header['user-agent'] = args.agent
+    try:
+        response = requests.head(current, allow_redirects=True, timeout=2, headers=header)
+        if response.ok:
+            expanded[current] = response.url
+        else:
+            expanded[current] = response.status_code
+
+        return "{} |%| {}".format(current, args.separator, expanded[current])
+    except Exception as err:
+        cmd    = 'say -v Moira -r 50 "Error"'
+        system(cmd)
+        expanded[current] = f"400.1 : {str(err)}"
+        logging.info("Error: %s", str(err))

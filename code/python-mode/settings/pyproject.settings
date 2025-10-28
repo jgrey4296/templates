@@ -1,0 +1,29 @@
+# -*- mode: snippet -*-
+# name  : pyproject.settings
+# uuid  : pyproject.settings
+# key   : pyproject.settings
+# group : pydantic settings toml pyproject
+# --
+from pydantic import Field, BaseModel
+from pydantic_settings import (
+    BaseSettings,
+    SettingsConfigDict,
+    PydanticBaseSettingsSource,
+    PyprojectTomlConfigSettingsSource,
+    SettingsError,
+)
+
+class PyProjSettings(BaseSettings):
+    """ pyproject.toml settings reader  """
+    model_config = SettingsConfigDict(
+        extra="ignore",
+        pyproject_toml_table_header=("project",),
+        pyproject_toml_depth=2,
+    )
+
+    name     : str
+    version  : str
+
+    @classmethod
+    def settings_customise_sources(cls, settings_cls:type[BaseSettings], **kwargs) -> tuple:
+        return (PyprojectTomlConfigSettingsSource(settings_cls),)$0

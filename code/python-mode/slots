@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name  : slots
-# uuid  : slots
-# key   : slots
-# group :
-# --
-__slots__ = ($0)

@@ -2,6 +2,6 @@
 # name  : sepline
 # uuid  : sepline
 # key   : sepline
-# group : separator
+# group : separator comments
 # --
-`comment-start`--------------------------------------------------
+`comment-start`--------------------------------------------------`comment-end`

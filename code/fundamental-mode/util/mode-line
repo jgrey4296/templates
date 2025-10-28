@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : modeline
+# uuid  : modeline
+# key   : modeline
+# group : comments
+# --
+`comment-start` `(buffer-name)` -*- mode: `mode-name` -*- `comment-end`

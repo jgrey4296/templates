@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
-# name: util.context
-# uuid: util.context
-# group: contextual
+# name: context
+# uuid: context
+# group: context-manager util
 # --
 def __enter__(self) -> Self:
     return self

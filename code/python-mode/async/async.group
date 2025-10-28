@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name  : async.group
+# uuid  : async.group
+# key   : async.group
+# group : asyncio taskgroup
+# --
+async def build_group():
+    try:
+        async with asyncio.TaskGroup() as tg:
+            task1 = tg.create_task(subcmd(1))
+            task2 = tg.create_task(subcmd(2))
+    except Exception as err:
+        print(f"Group Error: {err}")

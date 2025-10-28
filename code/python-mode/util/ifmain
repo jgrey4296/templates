@@ -1,12 +1,21 @@
 # -*- mode: snippet -*-
 # name: ifmain
 # uuid: ifmain
-# group: util
+# group: util __main__ asyncio
 # --
 $0
 
+def exit_handler():
+    print("Exiting")
+    return
+
+async def async_init ():
+      pass
+
 def main():
-    pass
+    atexit.register(exit_handler)
+    with AsyncRunner() as runner:
+         runner.run(async_init())
 
 ##-- ifmain
 if __name__ == "__main__":

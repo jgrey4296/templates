@@ -1,0 +1,30 @@
+# -*- mode: snippet -*-
+# name  : fsm.machine
+# uuid  : fsm.machine
+# key   : fsm.machine
+# group : statemachine
+# --
+class ${1:Machine}(StateMachine):
+    """
+
+    """
+    # States:
+
+    # Events:
+
+    # Callbacks
+
+    def before_transition(self):
+        pass
+
+    def on_exit_state(self):
+        pass
+
+    def on_transition(self):
+        pass
+
+    def on_enter_state(self):
+        pass
+
+    def on_after_transition(self):
+        pass

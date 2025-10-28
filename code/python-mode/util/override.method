@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : patch.method
+# uuid  : patch.method
+# key   : patch.method
+# group : override util
+# --
+def override_method(obj:Any, method:str, overrider:Callable) -> obj:
+    """ Patch an existing object with a new method """
+    orig = getattr(obj, method)
+    setattr(obj, method, MethodType(override, obj))
+    return obj

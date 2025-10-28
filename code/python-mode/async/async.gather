@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name  : async.gather
+# uuid  : async.gather
+# key   : async.gather
+# group : asyncio
+# --
+async def build_gather():
+    try:
+        tg2 = asyncio.gather(
+            subcmd(3), subcmd(4), subcmd(5)
+        )
+        await tg2
+    except Exception as err:
+        print(f"Gather Error: {err}")

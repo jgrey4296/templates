@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name  : gh.a.asdf.load.plugins
+# uuid  : gh.a.asdf.load.plugins
+# key   : gh.a.asdf.load.plugins
+# group : github actions
+# --
+- name: add asdf plugins
+run: |
+    if [[ -e ".asdf.plugins" ]]; then
+    echo "Adding ASDF Plugins"
+    while read -r pname url; do
+        if [[ -n "$pname" ]]; then
+        echo "Adding: $pname : (\${url:-})"
+        asdf plugin add "$pname" "\${url:-}"
+        fi
+    done < ".asdf.plugins"
+    fi

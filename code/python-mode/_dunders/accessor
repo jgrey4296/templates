@@ -1,8 +1,8 @@
 # -*- mode: snippet -*-
-# name: util.accessor
-# uuid: util.accessor
-# key:  util.accessor
-# group :
+# name: accessor
+# uuid: accessor
+# key:  accessor
+# group : util
 # --
 def __set_name__(self, owner, name):
     self.public_name = name

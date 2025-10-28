@@ -1,0 +1,34 @@
+# -*- mode: snippet -*-
+# name  : import.main
+# uuid  : import.main
+# key   : import.main
+# group : __main__
+# --
+# Imports:
+# ##-- stdlib imports
+from copy import deepcopy
+from uuid import UUID, uuid1
+from weakref import ref
+from asyncio import Runner as AsyncRunner
+from asyncio import (
+     create_task, gather, sleep, timeout, shield,
+     to_thread, current_task, all_tasks,
+     TaskGroup,
+     CancelledError,
+)
+import asyncio
+import atexit
+import collections
+import contextlib
+import datetime
+import enum
+import faulthandler
+import functools as ftz
+import hashlib
+import itertools as itz
+import logging as logmod
+import pathlib as pl
+import re
+import time
+import sys
+# ##-- end stdlib imports

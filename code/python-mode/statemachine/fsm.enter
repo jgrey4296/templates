@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : fsm.enter
+# uuid  : fsm.enter
+# key   : fsm.enter
+# group : statemachine
+# --
+def on_enter_${1:state}(self):
+    pass

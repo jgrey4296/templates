@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name: setup.pyqtree
+# uuid: setup.pyqtree
+# group: data structures quadtree
+# --
+##-- imports
+import pyqtree
+##-- end imports
+
+def setup_quadtree(bounds:Maybe[list]=None):
+    """
+    see https://github.com/karimbahgat/Pyqtree
+    """
+    import pyqtree
+    bounds = [0,0,1,1]
+    qtree = pyqtree.Index(bbox=bounds)
+    #qtree.insert(item=item, bbox=item.bbox)
+    #matches = qtree.intersect(bbox)
+    return qtree

@@ -1,0 +1,60 @@
+# -*- mode: snippet -*-
+# name  : cli.settings
+# uuid  : cli.settings
+# key   : cli.settings
+# group : pydantic settings cli
+# --
+from pydantic import Field, BaseModel
+from pydantic_settings import (
+    BaseSettings,
+    CliApp,
+    SettingsConfigDict,
+    SettingsError,
+)
+
+
+class Init_sub(BaseModel):
+    """ init subcommand
+
+    {prog} init [--a_flag, --no-a_flag] {directory}
+    """
+    directory : CliPositionalArg[str] = Field(alias="dir")
+    a_flag : CliImplicitFlag[bool = False
+
+    @override
+    def cli_cmd(self) -> None:
+        """ Called from CliApp.run_subcommand(self) in root settings cli_cmd.
+
+        """
+        pass
+
+
+class List_sub(BaseModel):
+    """ list subcommand.
+
+    {prog} list --vals 1 --vals 2 ...
+
+    """
+    vals : list[int]
+
+class Settings(BaseSettings):
+    """
+    Basic CLI Settings for the program.
+    """
+    model_config = SettingsConfigDict(case_sensitive=False,
+                                      cli_parse_args=True,
+                                      cli_exit_on_error=True,
+                                      cli_kebab_case=True,
+                                      )
+
+    ignored_args  : CliUnknownArgs
+    init          : CliSubCommand[Init_sub]
+    list          : CliSubCommand[List_sub]$0
+
+    @override
+    def cli_cmd(self) -> None:
+        """ Called from CliApp.run(Settings, cli_args=sys.argv)
+
+        (can be async).
+        """
+        pass

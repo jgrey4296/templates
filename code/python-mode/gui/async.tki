@@ -1,0 +1,53 @@
+# -*- mode: snippet -*-
+# name  : async.tki
+# uuid  : async.tki
+# key   : async.tki
+# group : asyncio tkinter gui
+# --
+class AsyncTk(tki.Tk):
+    """ An asyncio compatible Tkinter base.
+
+    await on obj.build_gui()
+    instead of running mainloop
+
+    Adapted from:
+    https://stackoverflow.com/questions/47895765
+    """
+    _active       : bool
+    _interval     : float
+    _update_task  : asyncio.Task
+
+    def __init__(self, interval:float, *args, **kwargs):
+        super().__init__()
+        self._active       = True
+        self._interval     = interval
+        self._update_task  = asyncio.create_task(self.update(self._interval))
+
+    def close(self):
+        self._active = False
+        self.destroy()
+
+    def build_gui(self) -> asyncio.Task:
+        frame = ttk.Frame(self, padding=10)
+        frame.grid()
+        (ttk
+         .Label(frame, text="Nullam tristique diam non turpis.")
+         .grid(column=0, row=0)
+         )
+        (ttk.Button(frame,
+                    text="Quit",
+                    command=self.close)
+         .grid(column=1, row=0)
+         )
+        return self._update_task
+
+    @override
+    async def update(self, interval):
+        while self._active:
+            super().update()
+            await asyncio.sleep(interval)
+
+
+
+    def mainloop(self):
+        raise Exception("await on AsyncTk.build_gui instead")

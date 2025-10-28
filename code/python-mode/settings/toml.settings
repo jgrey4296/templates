@@ -1,0 +1,30 @@
+# -*- mode: snippet -*-
+# name  : toml.settings
+# uuid  : toml.settings
+# key   : toml.settings
+# group : pydantic settings toml
+# --
+from pydantic import Field, BaseModel
+from pydantic_settings import (
+    BaseSettings,
+    SettingsConfigDict,
+    PydanticBaseSettingsSource,
+    TomlConfigSettingsSource,
+    SettingsError,
+)
+
+class TomlHeadSets(BaseSettings):
+    """ Settings for subtable [head] """
+    name : str
+
+class TomlSettings(BaseSettings):
+    model_config = SettingsConfigDict(
+        extra="ignore",
+        toml_file="basic.toml",
+    )
+
+    head : TomlHeadSets
+
+    @classmethod
+    def settings_customise_sources(cls, settings_cls:type[BaseSettings], **kwargs) -> tuple:
+        return (TomlConfigSettingsSource(settings_cls),)$0

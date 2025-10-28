@@ -1,0 +1,29 @@
+# -*- mode: snippet -*-
+# name: math.soft_knee
+# uuid: math.soft_knee
+# group: util shaping
+# --
+
+def soft_knee(input:np.ndarray, threshold:np.ndarray, ratio:np.ndarray, knee:np.ndarray) -> np.ndarrary:
+    """
+    A Simple soft_knee compression curve in numpy
+    Source: https://se.mathworks.com/help/audio/ref/compressor-class.html
+    """
+    k2 = knee/2
+    lower_bound = threshold - k2
+    upper_bound = threshold + k2
+
+    under             = np.array([x for x in input if x < lower_bound])
+    inKnee            = np.array([x for x in input if lower_bound <= x and x <= upper_bound])
+    over              = np.array([x for x in input if upper_bound < x])
+
+    k_f               = (1/ratio - 1)
+    intermediate      = inKnee - upper_bound
+    intermediate_pow  = pow(intermediate,2)
+    k_div_amnt        = 2 * knee
+    k_mod             = (k_f * intermediate_pow) / k_div_amnt
+    k_red             = inKnee + k_mod
+
+    over_red          = threshold + ((over - threshold)) / ratio
+
+    return np.concatenate((under,k_red,over_red))

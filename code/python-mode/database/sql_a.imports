@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : sql_a.imports
+# uuid  : sql_a.imports
+# key   : sql_a.imports
+# group : sqlalchemy database
+# --
+import sqlalchemy as alc
+from sqlalchemy import orm

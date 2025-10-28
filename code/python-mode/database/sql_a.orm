@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name  : sql_a.orm
+# uuid  : sql_a.orm
+# key   : sql_a.orm
+# group : sqlalchemy ORM
+# --
+class ORMBase(orm.DeclarativeBase):
+    """ Base class for this programs ORM's """
+    pass
+
+class ${1:ORMObject}(ORMBase):
+    """ An ORM Object.
+
+    """
+    __tablename__ = "the_table"
+    id      : orm.Mapped[int] = orm.mapped_column(primary_key=True)
+    type    : orm.Mapped[int]
+    title   : orm.Mapped[str]
+    parent  : orm.Mapped[int]

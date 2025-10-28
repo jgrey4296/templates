@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: math.polynomial
+# uuid: math.polynomial
+# group: math
+# --
+def poly_shape(x:float):
+    """ An example shaping function """
+    return (4/9 * pow(x,6)) - (17/9 * pow(x,4)) + (22/9 * pow(x,2))

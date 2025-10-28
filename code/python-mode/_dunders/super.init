@@ -2,6 +2,6 @@
 # name  : super.init
 # uuid  : super.init
 # key   : super.init
-# group : init
+# group : init class
 # --
 super().__init__(*args, **kwargs)

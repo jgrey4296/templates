@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : date.code
+# uuid  : date.code
+# key   : date.code
+# group : lisp
+# --
+(caddr (calendar-current-date)) (car (calendar-current-date)) (cadr (calendar-current-date))

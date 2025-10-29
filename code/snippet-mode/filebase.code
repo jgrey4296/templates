@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : filebase.code
+# uuid  : filebase.code
+# key   : filebase.code
+# group : lisp
+# --
+(f-base buffer-file-name)

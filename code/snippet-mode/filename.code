@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : filename.code
+# uuid  : filename.code
+# key   : filename.code
+# group : lisp
+# --
+(f-filename buffer-file-name)

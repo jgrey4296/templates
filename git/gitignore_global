@@ -44,7 +44,7 @@ tmp/
 
 ##-- emacs
 .projectile-cmds
-
+.eask
 ##-- end emacs
 
 ##-- gradle

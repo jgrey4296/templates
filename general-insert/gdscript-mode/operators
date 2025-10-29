@@ -1,0 +1,47 @@
+Godot Operators:
+()                      #
+x[index]                # subscript
+x.attribute             # attributes
+foo()                   # function call
+await x                 # async
+x is Node               # type checking
+x is not Node           # type checking
+x ** y                  # power
+~x                      # bitwise NOT
++x                      # identity
+-x                      # negation
+x * y                   # multiply
+x / y                   # divide
+x % y                   # remainder
+x + y                   # addition
+x - y                   # subtraction
+x << y                  # bitshift
+x >> y                  # bitshift
+x & y                   # bitwise AND
+x ^ y                   # bitwise XOR
+x | y                   # bitwise OR
+x == y                  # comparison
+x != y                  # comparison
+x < y                   # comparison
+x > y                   # comparison
+x <= y                  # comparison
+x >= y                  # comparison
+x in y                  # inclusion check
+x not in y              # inclusion check
+not x                   # boolean NOT
+x and y                 # boolean AND
+x or y                  # boolean OR
+expr if cond else expr  # ternary
+x as Node               # type cast
+x = y                   # assignment
+x += y                  # assignment
+x -= y                  # assignment
+x *= y                  # assignment
+x /= y                  # assignment
+x **= y                 # assignment
+x %= y                  # assignment
+x &= y                  # assignment
+x |= y                  # assignment
+x ^= y                  # assignment
+x <<= y                 # assignment
+x >>= y                 # assignment

@@ -5,18 +5,15 @@
 ;;
 ;;-- end header
 
-;;-- imports
+;;--| imports
 
-;;-- end imports
-
-;;-- keymap
+;;--| keymap
 
 (defvar-local $1-mode-map
     (make-sparse-keymap))
 
-;;-- end keymap
 
-;;-- font lock
+;;--| font lock
 
 (defconst $1-font-lock-keywords
     (rx-let ((w (x) (: x (0+ blank)))
@@ -34,8 +31,6 @@
         )
     "Highlighting for $1-mode"
     )
-
-;;-- end font lock
 
 ;;-- syntax
 
@@ -97,26 +92,4 @@
 ;;-- end mode definition
 
 (provide '`(file-name-base buffer-file-name)`)
-
-;;-- footer
-;; Copyright (C) `(format-time-string "%Y")` `user-full-name`
-;;
-;; Author: `user-full-name` <https://github.com/`(cl-find-if-not #'string-empty-p (list (cdr (doom-call-process "git" "config" "user.github")) user-login-name))`>
-;; Maintainer: `user-full-name` <`user-mail-address`>
-;; Created: `(format-time-string "%B %d, %Y")`
-;; Modified: `(format-time-string "%B %d, %Y")`
-;; Version: 0.0.1
-;; Keywords:
-;; Homepage: https://github.com/`(cl-find-if-not #'string-empty-p (list (cdr (doom-call-process "git" "config" "user.github")) user-login-name))`
-;; Package-Requires: ((emacs "24.3"))
-;; Package written on: ((emacs `emacs-version`))
-;;
-;; This file is not part of GNU Emacs.
-;;
-;;-- end footer
-;; Local Variables:
-;; read-symbol-shorthands: (
-;; ("blah-" . "blah-")
-;; )
-;; End:
 ;;; `(file-name-nondirectory buffer-file-name)` ends here

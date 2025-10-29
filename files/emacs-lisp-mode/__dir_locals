@@ -1,6 +1,7 @@
 ;; Directory locals file. name .dir-locals.el
 ;; a List of form:
 ;; (mode . (list (varname . value)))
+;; see: https://www.gnu.org/software/emacs/manual/html_node/elisp/Directory-Local-Variables.html
 
 ((${1:mode-name}. ((${2:var-name} . ${3:value})
                   ;;(eval . (a_func))

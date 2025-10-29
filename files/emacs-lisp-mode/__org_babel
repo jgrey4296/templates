@@ -1,11 +1,4 @@
 ;;; ob-$1.el --- org-babel functions for $1 evaluation -*- lexical-binding: t; no-byte-compile: t; -*-
-;;-- header
-;; File Commentary:
-;;
-;; An org-babel implementation for:
-;;
-;;
-;;-- end header
 
 ;;; Code:
 (require 'ob)
@@ -109,37 +102,4 @@ Return the initialized session."
     ))
 
 (provide 'ob-$1)
-
-;;-- footer
-;; Author: `user-full-name` <https://github.com/`(cl-find-if-not #'string-empty-p (list (cdr (doom-call-process "git" "config" "user.github")) user-login-name))`>
-;; Maintainer: `user-full-name` <`user-mail-address`>
-;; Created: `(format-time-string "%B %d, %Y")`
-;; Modified: `(format-time-string "%B %d, %Y")`
-;; Version: 0.0.1
-;; Keywords:
-;; Homepage: https://github.com/`(cl-find-if-not #'string-empty-p (list (cdr (doom-call-process "git" "config" "user.github")) user-login-name))`
-;; Package-Requires: ((emacs "24.3"))
-;; Package written on: ((emacs `emacs-version`))
-
-;;; License:
-;; This program is free software; you can redistribute it and/or modify
-;; it under the terms of the GNU General Public License as published by
-;; the Free Software Foundation; either version 3, or (at your option)
-;; any later version.
-;;
-;; This program is distributed in the hope that it will be useful,
-;; but WITHOUT ANY WARRANTY; without even the implied warranty of
-;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-;; GNU General Public License for more details.
-;;
-;; You should have received a copy of the GNU General Public License
-;; along with GNU Emacs; see the file COPYING.  If not, write to the
-;; Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-;; Boston, MA 02110-1301, USA.
-;;-- end footer
-;; Local Variables:
-;; read-symbol-shorthands: (
-;; ("blah-" . "blah-")
-;; )
-;; End:
 ;;; ob-$1.el ends here

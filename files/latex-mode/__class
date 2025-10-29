@@ -1,0 +1,32 @@
+% `(f-filename buffer-file-name)` -*- mode: LaTeX/FP -*- 
+% See: https://www.overleaf.com/learn/latex/Writing_your_own_class
+% Usage: 'documentclass[]{`(f-base buffer-file-name)`}
+
+% Errors:   \ClassError{`(f-base buffer-file-name)`}{err text}{help text}
+% Warnings: \ClassWarning{`(f-base buffer-file-name)`}{warn text}
+% Warnings: \ClassWarningNoLine{`(f-base buffer-file-name)`}{warn text}
+% Info:     \ClassInfo{`(f-base buffer-file-name)`}{info text}
+
+% Identification --------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{`(f-base buffer-file-name)`}[`(caddr (calendar-current-date))`/`(car (calendar-current-date))`/`(cadr (calendar-current-date))`]
+
+% Package Requirements --------------------------------------------------
+% \RequirePackage{xcolor}
+
+% Options --------------------------------------------------
+% \DeclareOption{onecolumn}{\OptionNotUsed}
+
+% Undeclared option handling:
+% \DeclareOption*{\PassOptionsToClass{\CurrentOption{article}}
+
+\ProcessOptions\relax
+% Class Inheritance --------------------------------------------------
+% \LoadClass[twocolumn]{article}
+
+% Commands --------------------------------------------------
+% \newcommand{\headlinecolor}{\normalcolor}
+% \definecolor{slcolor}{HTML}{882B21}
+
+
+% Body --------------------------------------------------

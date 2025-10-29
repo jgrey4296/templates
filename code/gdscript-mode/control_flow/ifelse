@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name  : ifelse
+# uuid  : ifelse
+# key   : ifelse
+# group :
+# --
+if (${1:expr}):
+    pass
+elif (expr):
+    pass
+else:
+    pass

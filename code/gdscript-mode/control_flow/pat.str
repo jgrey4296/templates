@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : pat.str
+# uuid  : pat.str
+# key   : pat.str
+# group : match
+# --
+"${1:a str}":
+    pass

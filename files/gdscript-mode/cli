@@ -1,11 +1,10 @@
-##-- setup
-class_name Test
+#  `(f-filename buffer-file-name)` -*- mode: gdscript -*-
+class_name `(f-base buffer-file-name)`
 extends SceneTree
 
 """
 
 """
-##-- end setup
 
 func _init():
     # Constructor

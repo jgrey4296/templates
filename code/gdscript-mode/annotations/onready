@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : annotate.onready
+# uuid  : annotate.onready
+# key   : annotate.onready
+# group :
+# --
+@onready

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : while
+# uuid  : while
+# key   : while
+# group :
+# --
+while (${1:expr}):
+    pass

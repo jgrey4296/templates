@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : static.ctor
+# uuid  : static.ctor
+# key   : static.ctor
+# group :
+# --
+static func _static_init():
+    # Called when class is loaded,
+    # after static variables are initialized.
+    pass

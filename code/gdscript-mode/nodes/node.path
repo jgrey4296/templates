@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : node.path
+# uuid  : node.path
+# key   : node.path
+# group :
+# --
+\$${1:Node/Path}

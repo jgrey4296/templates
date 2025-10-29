@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : lifecycle.input
+# uuid  : lifecycle.input
+# key   : lifecycle.input
+# group :
+# --
+func _input(event):
+    pass
+
+func _unhandled_input(event):
+    pass

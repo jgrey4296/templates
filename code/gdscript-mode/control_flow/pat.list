@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : pat.list
+# uuid  : pat.list
+# key   : pat.list
+# group :
+# --
+[var ${1:var}, _, ..]:
+    pass

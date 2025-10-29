@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : node.path.str
+# uuid  : node.path.str
+# key   : node.path.str
+# group :
+# --
+^"${1:Node/Label}"

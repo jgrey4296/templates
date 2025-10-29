@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : queue.free
+# uuid  : queue.free
+# key   : queue.free
+# group :
+# --
+.queue_free()

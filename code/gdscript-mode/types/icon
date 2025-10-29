@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : icon
+# uuid  : icon
+# key   : icon
+# group :
+# --
+# icon for editor dialogs
+@icon("res://")

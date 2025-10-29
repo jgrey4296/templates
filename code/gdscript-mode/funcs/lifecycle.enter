@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name  : lifecycle.enter
+# uuid  : lifecycle.enter
+# key   : lifecycle.enter
+# group :
+# --
+func _enter_tree():
+    # On entrance to scene, can be called multiple times
+    pass
+
+func _exit_tree():
+    # Upon leaving the scene
+    pass

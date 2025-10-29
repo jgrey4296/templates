@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : super
+# uuid  : super
+# key   : super
+# group :
+# --
+super(args)

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : pat.dict
+# uuid  : pat.dict
+# key   : pat.dict
+# group : match
+# --
+{"name": "value", ..}:
+    pass

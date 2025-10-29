@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : lifecycle.ready
+# uuid  : lifecycle.ready
+# key   : lifecycle.ready
+# group :
+# --
+func _ready():
+    # called once, after first entrance to scene
+    # and all children have entered scene too.
+    pass

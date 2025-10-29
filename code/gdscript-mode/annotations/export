@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : annotate.export
+# uuid  : annotate.export
+# key   : annotate.export
+# group :
+# --
+@export

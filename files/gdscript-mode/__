@@ -1,14 +1,12 @@
-##-- setup
-class_name $1
-extends ${2:Node}
+#  `(f-filename buffer-file-name)` -*- mode: gdscript -*-
+class_name `(f-base buffer-file-name)`
+extends Node
+"""
 
 """
-${3:docstring}
-"""
-##-- end setup
 
 ##-- signals
-signal ${4:example}
+
 ##-- end signals
 
 ##-- enums
@@ -25,7 +23,7 @@ const TEST = 42
 ##-- end exported vars
 
 ##-- member variables
-var ${5:test : int = 42}
+var a_var : int = 42
 
 ##-- end member variables
 
@@ -33,37 +31,9 @@ var ${5:test : int = 42}
 
 ##-- end onready vars
 
-##-- lifecycle methods
-func _init(${6:args}):
+##--| lifecycle methods
+func _init(args):
     # Constructor
     pass
 
-func _enter_tree():
-    # On entrance to scene, can be called multiple times
-    pass
-
-func _ready():
-    # called once, after first entrance to scene
-    # and all children have entered scene too.
-    pass
-
-
-func _process(delta):
-    pass
-
-func _physics_process(delta):
-    pass
-
-func _input(event):
-    pass
-
-func _unhandled_input(event):
-    pass
-
-func _exit_tree():
-    # Upon leaving the scene
-    pass
-
-##-- end lifecycle methods
-
-$0
+##--| Other Methods

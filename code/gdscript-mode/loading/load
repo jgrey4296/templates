@@ -4,4 +4,4 @@
 # key   : load
 # group : godot
 # --
-var $1{1:varName} = load("${2:path}")
+var $1{1:varName} = load("res://${2:path}")

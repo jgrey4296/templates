@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : weakref
+# uuid  : weakref
+# key   : weakref
+# group :
+# --
+weakref($1)

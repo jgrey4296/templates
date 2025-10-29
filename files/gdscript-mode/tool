@@ -1,11 +1,8 @@
-##-- tool setup
+#  `(f-filename buffer-file-name)` -*- mode: gdscript -*-
 tool
 extends ${1:BaseClass}
+class_name `(f-base buffer-file-name)`
 
-# Optional
-class_name $2
-
-##-- end tool setup
 
 ##-- member variables
 var ${3:test : int = 5}

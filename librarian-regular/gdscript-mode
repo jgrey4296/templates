@@ -9,3 +9,5 @@ Godot Shaders      # https://godotshaders.com/
 Android            # https://developer.android.com/games/engines/godot/godot-configure
 kidscancode        # https://kidscancode.org/godot_recipes/3.x/recent/
 Dialogic           # https://github.com/dialogic-godot/dialogic
+
+NodePaths # https://docs.godotengine.org/en/stable/classes/class_nodepath.html#class-nodepath

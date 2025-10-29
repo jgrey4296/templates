@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : pat.int
+# uuid  : pat.int
+# key   : pat.int
+# group : match
+# --
+${1:1}:
+    pass

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : free
+# uuid  : free
+# key   : free
+# group :
+# --
+.free()

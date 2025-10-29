@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : lifecycle.physics
+# uuid  : lifecycle.physics
+# key   : lifecycle.physics
+# group :
+# --
+func _physics_process(delta):
+    pass

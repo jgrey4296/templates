@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : annotate.abstract
+# uuid  : annotate.abstract
+# key   : annotate.abstract
+# group :
+# --
+@abstract

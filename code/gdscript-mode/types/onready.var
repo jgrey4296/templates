@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : onready.var
+# uuid  : onready.var
+# key   : onready.var
+# group :
+# --
+@onready var $1 = get_node("$2")

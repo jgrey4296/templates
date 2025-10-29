@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : static.var
+# uuid  : static.var
+# key   : static.var
+# group :
+# --
+static var $1 = $2

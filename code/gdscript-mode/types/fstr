@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : fstr
+# uuid  : fstr
+# key   : fstr
+# group :
+# --
+var a_str = "Blah %s bloo" % "aweg"

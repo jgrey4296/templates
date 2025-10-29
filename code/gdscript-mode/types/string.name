@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : str.name
+# uuid  : str.name
+# key   : str.name
+# group :
+# --
+&"${1:name}"

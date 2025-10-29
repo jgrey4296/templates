@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : annotate.unload
+# uuid  : annotate.unload
+# key   : annotate.unload
+# group :
+# --
+@static_unload

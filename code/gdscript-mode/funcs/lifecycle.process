@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : lifecycle.process
+# uuid  : lifecycle.process
+# key   : lifecycle.process
+# group :
+# --
+func _process(delta):
+    pass

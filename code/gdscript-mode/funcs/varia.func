@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : varia.func
+# uuid  : varia.func
+# key   : varia.func
+# group : args variadic
+# --
+func ${1:varia_func}(...vals:Array):
+     return

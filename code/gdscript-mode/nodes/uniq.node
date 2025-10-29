@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : uniq.node
+# uuid  : uniq.node
+# key   : uniq.node
+# group :
+# --
+%${1:UniqueNode}

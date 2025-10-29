@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : property
+# uuid  : property
+# key   : property
+# group :
+# --
+var ${1:aProp} : ${2:int}:
+    get:
+        return 1
+    set(value):
+        ${3:someVar} = value

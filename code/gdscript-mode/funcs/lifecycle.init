@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : lifecycle.init
+# uuid  : lifecycle.init
+# key   : lifecycle.init
+# group :
+# --
+func _init(${1:args}):
+    # Constructor
+    pass

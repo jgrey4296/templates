@@ -1,0 +1,25 @@
+# -*- mode: snippet -*-
+# name  : match
+# uuid  : match
+# key   : match
+# group :
+# --
+match ${1:val}:
+      1:
+        pass
+      "a str":
+        pass
+      var new_var:
+        pass
+      []:
+        pass
+      [1,2,3]:
+        pass
+      [var head, _, "last"]:
+        pass
+      [42, ..]:
+        pass
+      pattern when guard:
+        pass
+      _:
+        pass

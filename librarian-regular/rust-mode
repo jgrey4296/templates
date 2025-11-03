@@ -2,6 +2,7 @@ Effective rust                   # https://www.effective-rust.com/preface.html
 Firefox Rust-Cpp                 # https://firefox-source-docs.mozilla.org/writing-rust-code/cpp-interop.html
 Little book of Macros            # https://lukaswirth.dev/tlborm
 cargo book                       # https://doc.rust-lang.org/cargo/
+performance book                 # https://nnethercote.github.io/perf-book/introduction.html
 cargo manifest                   # https://doc.rust-lang.org/cargo/reference/manifest.html
 lldb                             # https://lldb.llvm.org/
 api:python                       # https://docs.python.org/3/c-api/index.html

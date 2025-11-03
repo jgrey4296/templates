@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+function notify () {
+    notify-send "$1" 2>/dev/null
+}
+
 function fail () {
     echo "Failed: $*"
     exit 1

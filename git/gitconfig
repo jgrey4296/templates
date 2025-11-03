@@ -34,3 +34,8 @@ jgsimple = format:"!!! %h : %aI : %s "
 jglog = log --pretty=jgsimple --name-only
 [github]
 	user = jgrey4296
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f

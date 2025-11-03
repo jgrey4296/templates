@@ -2,7 +2,7 @@ Godot Docs         # https://docs.godotengine.org/en/stable/
 GdScript Reference # https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html
 Godot Class API    # https://docs.godotengine.org/en/stable/classes/index.html
 GDScript           # https://gdscript.com/solutions/
-GuT                # https://bitwes.github.io/GutWiki/Godot4/Home.html
+GuT                # https://gut.readthedocs.io/en/v9.5.0/Quick-Start.html
 GdUnit             # https://mikeschulze.github.io/gdUnit4/
 Shaders            # https://www.ronja-tutorials.com/
 Godot Shaders      # https://godotshaders.com/

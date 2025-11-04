@@ -11,3 +11,11 @@ kidscancode        # https://kidscancode.org/godot_recipes/3.x/recent/
 Dialogic           # https://github.com/dialogic-godot/dialogic
 
 NodePaths # https://docs.godotengine.org/en/stable/classes/class_nodepath.html#class-nodepath
+
+Gdscript Globals   # https://docs.godotengine.org/en/stable/classes/index.html#globals
+Gdscript Nodes     # https://docs.godotengine.org/en/stable/classes/index.html#nodes
+Gdscript Resources # https://docs.godotengine.org/en/stable/classes/index.html#resources
+Gdscript Objects   # https://docs.godotengine.org/en/stable/classes/index.html#other-objects
+Gdscript Types     # https://docs.godotengine.org/en/stable/classes/index.html#variant-types
+
+Gut Assertions # https://gut.readthedocs.io/en/v9.5.0/class_ref/class_guttest.html

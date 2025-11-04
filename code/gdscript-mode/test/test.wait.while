@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : test.wait.while
+# uuid  : test.wait.while
+# key   : test.wait.while
+# group : gut await
+# --
+await wait_while(${1:callable}, "Waiting until $1 returns false")$0

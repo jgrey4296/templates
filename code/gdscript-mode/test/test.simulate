@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : test.simulate
+# uuid  : test.simulate
+# key   : test.simulate
+# group : gut simulation physics
+# --
+var count = 5
+var gap = 0.5
+gut.simulate(treeRoot, count, gap)$0

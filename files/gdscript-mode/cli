@@ -3,7 +3,10 @@ class_name `(f-base buffer-file-name)`
 extends SceneTree
 
 """
+A Basic CLI Script for godot.
 
+Run with:
+godot --headless -s `(f-filename buffer-file-name)`
 """
 
 func _init():

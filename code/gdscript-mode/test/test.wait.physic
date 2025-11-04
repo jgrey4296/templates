@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : test.wait.physic
+# uuid  : test.wait.physic
+# key   : test.wait.physic
+# group : gut await time
+# --
+await wait_physics_frames(${1:10}, "Waiting for $1 physics frames")$0

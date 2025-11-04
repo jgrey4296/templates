@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : test.print
+# uuid  : test.print
+# key   : test.print
+# group : gut unit_test
+# --
+gut.p("$1", 2)

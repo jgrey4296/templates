@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name  : gut.test.class
+# uuid  : gut.test.class
+# key   : gut.test.class
+# group : gut unit_test
+# --
+
+class Test$1:
+    extends GutTest
+
+    var an_obj = null
+
+    func test_something():
+        assert_true(an_obj == null, "Should be null")

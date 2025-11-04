@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name  : test.hooks
+# uuid  : test.hooks
+# key   : test.hooks
+# group : gut hooks unit_test
+# --
+func before_each():
+    pass
+
+func after_each():
+    pass
+
+func before_all():
+    pass
+
+func after_all():
+    pass

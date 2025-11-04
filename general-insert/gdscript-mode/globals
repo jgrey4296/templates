@@ -1,5 +1,5 @@
 Godot Global Scope:
-AudioServer             #
+AudioServer             # Servers
 CameraServer            #
 ClassDB                 #
 DisplayServer           #

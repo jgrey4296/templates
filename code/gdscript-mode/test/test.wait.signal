@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : test.wait.signal
+# uuid  : test.wait.signal
+# key   : test.wait.signal
+# group : gut await signal
+# --
+await wait_for_signal(${1:signal}, ${2:10}, "Waiting for signal $1 < $2 seconds")

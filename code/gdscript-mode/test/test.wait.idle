@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : test.wait.idle
+# uuid  : test.wait.idle
+# key   : test.wait.idle
+# group : gut await
+# --
+await wait_idle_frames(${1:10})$0

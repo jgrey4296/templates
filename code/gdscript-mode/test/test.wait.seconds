@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : test.wait.seconds
+# uuid  : test.wait.seconds
+# key   : test.wait.seconds
+# group : gut async time
+# --
+await wait_seconds(${1:1}, "Waiting for $1 seconds")$0

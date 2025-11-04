@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : test.fn
+# uuid  : test.fn
+# key   : test.fn
+# group : gut unit_test
+# --
+func test_$1():
+     pass

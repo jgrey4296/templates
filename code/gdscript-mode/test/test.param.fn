@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : test.param.fn
+# uuid  : test.param.fn
+# key   : test.param.fn
+# group : gut unit_test parameterized
+# --
+func test_$1(params=use_parameters(${1:['defaults']})):
+     $0assert_eq(params[0], "defaults")

@@ -2,7 +2,7 @@
 [startup]
 doot_version         = "1.1"
 loaders              = { commands="default", task="default", parser="default" }
-sources              = {tasks=["doot/global", "doot/repo_chores"], code=[]}
+sources              = {tasks=["doot/global"], code=[]}
 skip_default_plugins = false
 skip_plugin_search   = false
 

@@ -1,0 +1,21 @@
+{%- extends "layout.html" %}
+{% import "bib_domain/entry.html.jinja" as entryT %}
+
+{% block body %}
+
+  {% if entries  %}
+
+    <h1>{{ title }}</h1>
+    
+    {% for entry in entries %} 
+      {{ entryT.Entry(entry) }}
+      
+    {% endfor %}
+    
+  {% else %}
+
+    {{ body }}
+
+  {% endif %}
+
+{% endblock %}

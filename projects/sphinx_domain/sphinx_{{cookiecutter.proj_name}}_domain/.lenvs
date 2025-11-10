@@ -1,0 +1,7 @@
+# Librarian-Envs Spec file
+# Lines of:
+# {handler} arg*
+lsp
+py-lsp
+mypy
+flycheck

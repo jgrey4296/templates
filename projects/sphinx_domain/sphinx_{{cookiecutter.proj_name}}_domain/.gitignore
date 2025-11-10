@@ -1,0 +1,5 @@
+log.*
+.log
+*.auto
+dist/
+/sphinx_{{cookiecutter.proj_name}}_domain/_docs/_autoapi/

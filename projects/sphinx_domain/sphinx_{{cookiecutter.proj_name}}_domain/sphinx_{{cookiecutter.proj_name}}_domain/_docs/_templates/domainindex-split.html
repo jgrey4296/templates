@@ -1,0 +1,32 @@
+{# Template for a "split" index overview page. #}
+{%- extends "layout.html" %}
+{% set title = _(indextitle) %}
+
+{% block body %}
+
+   <h1 id="index">{{ _(indextitle) }}</h1>
+
+   <p>{{ _('Index pages by letter') }}:</p>
+
+   <div class="modindex-jumpbox">
+      <table>
+         {% for key, name, count_a, count_b in subpages -%}
+         <tr>
+            <td><a href="{{ pathto(name) }}"><strong>{{ key }} </strong></a></td>
+            <td>({{count_a}} : {{count_b}})</td>
+         </tr>
+         {%- endfor %}
+      </table>
+   </div>
+
+{% endblock %}
+
+{% block sidebarrel %}
+   <h4>Index</h4>
+   <p>{% for key, name, count_a, count_b in subpages -%}
+   <a href="{{ pathto(name) }}"><strong>{{ key }}</strong></a>
+     {% if not loop.last %}| {% endif %}
+   {%- endfor %}</p>
+
+   {{ super() }}
+{% endblock %}

@@ -1,0 +1,40 @@
+{# Template for a "single" page of a split index. #}
+
+{%- extends "layout.html" %}
+{% set title = _(title) %}
+{% block body %}
+   {%- set groupid = idgen() %}
+
+{# We use ``&#x2013;`` instead of ``&ndash;`` for XHTML compatibility #}
+<h1 id="index">{{ title }}</h1>
+
+  <div class="modindex-jumpbox">
+    <button id="expandall">(Toggle Expansion)</button>
+  </div>
+
+
+<table style="width: 100%" class="indextable"><tr>
+  {%- for column in entries|slice(1) if column %}
+  <td style="width: auto; vertical-align: top;"><ul>
+    {%- for (name, grouptype, page, anchor, extra, qualifier, description) in column %}
+      <tr{% if grouptype == 2 %} class="cg-{{ groupid.current() }}"{% endif %}>
+        <td>{% if grouptype == 1 -%}
+          <img src="{{ pathto('_static/minus.png', 1) }}" class="toggler"
+               id="toggle-{{ groupid.next() }}" style="display: none" alt="-" />
+             {%- endif %}</td>
+             <td>{% if grouptype == 2 %}&#160;&#160;&#160;{% endif %}
+               {% if page %}<a href="{{ pathto(page)|e }}#{{ anchor }}">{% endif -%}
+               <code class="xref">{{ name|e }}</code>
+               {%- if page %}</a>{% endif %}
+               {%- if extra %} <em>({{ extra|e }})</em>{% endif -%}
+             </td>
+        <td>{% if qualifier %}<strong>{{ qualifier|e }}:</strong>{% endif %}
+          <em>{{ description|e }}</em>
+        </td>
+      </tr>
+    {%- endfor %}
+  </ul></td>
+  {%- endfor %}
+</tr></table>
+
+{% endblock %}

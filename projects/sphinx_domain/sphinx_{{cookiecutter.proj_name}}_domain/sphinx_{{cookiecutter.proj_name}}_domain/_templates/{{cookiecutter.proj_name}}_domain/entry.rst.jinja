@@ -1,0 +1,12 @@
+{# Jinja Template for Bibtex -> rst export -#}
+{% set roles = ["author", "editor", "doi", "title", "subtitle", "institution", "journal", "publisher", "series", "tags", "year", "url", "number", "volume", "short_parties",
+    "edition", "edition_year", "isbn", "identifier"] -%}
+
+.. bibtex:entry:: {{ key }}
+{% for key,val in entry|items %}
+{%   if key == "author" or key == "editor" %}
+  {{ (':' ~ key ~ ':  ' ~ val.value|join(" | ")) }}
+{%   elif key in roles and val.value is ne("") %}
+  {{ (':' ~ key ~ ':  ' ~ val.value) }}
+{%   endif %}
+{% endfor %}

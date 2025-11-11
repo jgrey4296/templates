@@ -20,6 +20,7 @@ tortor.  Nam euismod tellus id erat.
 
 
 .. toctree::
+   :glob:
 
    *
 

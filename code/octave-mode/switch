@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name  : switch
+# uuid  : switch
+# key   : switch
+# group : control.flow
+# --
+switch (${1:var})
+    case { 1, 2 }
+        1;
+    otherwise
+        2;
+endswitch

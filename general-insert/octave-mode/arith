@@ -1,0 +1,57 @@
+Octave Arithmetic:
+
+exp(x)    # e^x
+expm1(x)  # e^x - 1
+log
+reallog
+log1p
+log10
+log2
+pow2
+nextpow2
+realpow
+sqrt
+realsqrt
+cbrt # cube root
+nthroot
+
+abs
+t = theta(z) # = ata2(y,x)
+conj(z) #
+imag(z)
+real(z)
+
+sum
+prod
+cumsum
+cumprod
+sumsq
+
+ceil
+fix
+floor
+round
+roundb
+max
+min
+cummax
+cummin
+hypot
+
+factorial
+factor
+gcd
+lcm
+rem
+mod
+primes
+list_primes
+signbit
+
+rat
+rats
+
+cart2pol
+pol2cart
+cart2sph
+sph2cart

@@ -1,0 +1,26 @@
+Octave Debugging:
+
+disp(val)
+list_in_columsn(arg, width, prefix)
+terminal_size
+format
+printf
+
+
+help
+plot
+typestr   = typeinfo(expr) #
+classname = class(obj)
+isa(obj, "classname")
+isna(obj)
+y = cast(x, "type")      # convert x to type
+y = typecast(x, "class") # cast array into class
+
+error("error msg")
+warning("warn msg")
+
+debug_on_interrupt(1)
+debug_on_warning
+debug_on_error
+
+page_screen_output(false) #

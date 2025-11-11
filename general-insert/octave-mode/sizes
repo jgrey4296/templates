@@ -1,0 +1,14 @@
+Octave Object Sizes:
+
+ndims
+columns
+width
+rows
+height
+numel
+length
+size
+isempty
+isnull
+sizeof
+size_equal

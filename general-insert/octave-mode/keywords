@@ -1,0 +1,31 @@
+Octave Keywords:
+
+__FILE__
+__LINE__
+
+global
+
+classdef / endclassdef
+methods / endmethods
+function / endfunction
+
+switch / case / endswitch
+for / continue / break / endfor
+do / until
+while / endwhile
+if / else / elseif / endif
+try / catch / end_try_catch
+unwind_protect / unwind_protect_cleanup / end_unwind_protect
+
+end
+endarguments
+endenumeration
+endevents
+endparfor
+endproperties
+endspmd
+otherwise
+parfor
+persistent
+return
+spmd

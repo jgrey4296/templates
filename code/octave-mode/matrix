@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : matrix
+# uuid  : matrix
+# key   : matrix
+# group :
+# --
+rowVec = [x  y  z]
+colVec = [x; y; z]
+mat    = [x y z; a b c]
+val    = mat(2,3)

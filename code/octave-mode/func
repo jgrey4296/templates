@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : func
+# uuid  : func
+# key   : func
+# group :
+# --
+# or [retVar1, retVar2] = ...
+function ${3:retVar =} ${1:func} (${2:args})
+    $0;
+endfunction

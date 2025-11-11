@@ -1,0 +1,5 @@
+# `(f-filename (buffer-file-name))` -*- mode: Octave -*-
+
+function __func = `(f-base (buffer-file-name))` ()
+
+endfunction

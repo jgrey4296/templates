@@ -1,0 +1,26 @@
+Octave Format Options:
+
+format(options)
+
+default
+short
+long
+shorte    # exponential
+longe     # exponential
+shortg    # fixed point
+longg     # fixed point
+shorteng  # engineering
+longeng   # engineering
+free
+none
+
+bank # currency
+bit #  binary
+native-bit # native in memory
+hex #
+native-hex #
+rat # rational approximation
+lowercase
+uppercase
+compact
+loose

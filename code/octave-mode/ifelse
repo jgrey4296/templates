@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : ifelse
+# uuid  : ifelse
+# key   : ifelse
+# group : control.flow
+# --
+if (${1:i < 5})
+   $0;
+else
+   1;
+endif

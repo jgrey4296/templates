@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : while
+# uuid  : while
+# key   : while
+# group : control.flow
+# --
+i = 100;
+while (0 <= i)
+
+    i = i - 1
+endwhile

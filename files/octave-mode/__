@@ -1,0 +1,4 @@
+## `(f-filename (buffer-file-name))` -*- mode: octave -*-
+
+printf("Starting `(f-filename (buffer-file-name))`");
+pkg load symbolic;

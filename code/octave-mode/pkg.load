@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : pkg.load
+# uuid  : pkg.load
+# key   : pkg.load
+# group :
+# --
+pkg load ${1:package}

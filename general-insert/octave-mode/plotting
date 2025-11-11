@@ -1,0 +1,63 @@
+Octave Plotting:
+
+var = plot(x, y, fmt, ..., prop, value, ...)
+plotyy(x1, y1, x2, y2)
+semilogx(x, y)
+semilogy(x, y)
+loglog(x, y)
+bar(x, y)
+barh(x, y)
+hist(x, y, norm)
+stemleaf(x, caption)
+stairs(x, y)
+stem(x ,y)
+scatter
+plotmatrix
+pareto
+rose
+contour
+contourf
+contourc
+errorbar
+semilogxerr
+semilogyerr
+loglogerr
+
+polar
+pie
+quiver
+streamribbon
+streamtube
+ostreamtube
+streamline
+compass
+feather
+pcolor
+area
+fill
+comet
+
+printd(obj, filename)
+
+
+[x,y,z]label
+title
+legend
+text
+box
+grid
+colorbar
+annotation
+axis
+[x,y,z,c]lim
+[x,y,z,r,theta]ticks
+[x,y,z,r,theta]ticklabels
+[x,y,z]tickangle
+
+fplot # function plotting
+ez[plot,contour,contourf,polar] #
+rectangle #
+mesh
+
+subplot
+figure

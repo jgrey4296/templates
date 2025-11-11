@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : pkg.install
+# uuid  : pkg.install
+# key   : pkg.install
+# group :
+# --
+pkg install -forge "${1:url}"

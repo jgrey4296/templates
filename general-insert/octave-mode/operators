@@ -1,0 +1,48 @@
+Octave Operators:
+=
+==
+! # element not
+!=
+~ # element not
+~=
+<=
+>=
+<
+>
+
+*
++
+-
+^ # power
+/ # right division (inv(y) * x)
+\ # left division  (inv(x) * y)
+
+.' # transpose
+.* # vectorized mult
+.^ # vectorized power
+./ # vectorized right div
+.\ # vectorized left div
+
+x' # commplex congjugate transpose
+
+x++ / ++x # increment
+x-- / --x # decrement
+
++= # assign add
+-= # assign sub
+*= # assign mul
+/= # assign div
+
+& # element by element and
+| # element by element or
+&& # short circuit and
+|| # short circuit or
+" "
+()
+[]
+;
+%
+%{ %} # block comments
+...
+,
+:

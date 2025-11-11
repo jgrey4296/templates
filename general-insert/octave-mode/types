@@ -1,0 +1,16 @@
+Octave Types:
+
+"strings"
+["vectors", "vectors"]
+[a, b; x, y]     # matrix
+
+31               # decimal
+.105             # decimal
+1.05e-1          # scientific
+3 + 42i          # complex
+complex(re, im)  # complex
+double(x)        # double precision
+0x2A             # hex
+0b101010         # binary
+0b10_1010        # binary
+NA               # null data

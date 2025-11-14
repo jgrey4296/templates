@@ -4,5 +4,5 @@
 # key: fun
 # --
 fun ${1:name}($2)${3:: ${4:Unit}} {
-    ${0:TODO('Not yet implemented')}
+    ${0:TODO("Not yet implemented")}
 }

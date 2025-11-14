@@ -1,4 +1,4 @@
-#  .envrc -*- mode: direnv-envrc-mode -*-
+#  .envrc -*- mode: direnv-envrc -*-
 # See https://direnv.net/
 # export VAR=VAL
 # PATH_add val

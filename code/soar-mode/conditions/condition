@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : condition
+# uuid  : condition
+# key   : condition
+# group : condition
+# --
+( ${1:wme} )

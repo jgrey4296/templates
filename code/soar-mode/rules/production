@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name  : production
+# uuid  : production
+# key   : production
+# group : rule
+# --
+sp {${1:rule-name}
+   # Conditions
+   (state <s>)
+   -->
+   # Actions
+
+}

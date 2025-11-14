@@ -1,6 +1,7 @@
 Soar Actions:
 ([wme])                     # assert
 ([wme] -)                   # retract
+([wme] [preference])
 
 (write |[text]| (crlf) )    # action. print, with a newline
 (log [channel] |[message]|) # log to [channel:int]

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : negation
+# uuid  : negation
+# key   : negation
+# group : condition predicate
+# --
+-${1:test}

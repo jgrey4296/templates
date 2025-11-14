@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : conjunctive
+# uuid  : conjunctive
+# key   : conjunctive
+# group : condition
+# --
+{ ${1:a b c} }

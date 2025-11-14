@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : lti.different
+# uuid  : lti.different
+# key   : lti.different
+# group : condition long-term predicate
+# --
+!@ ${1:val}

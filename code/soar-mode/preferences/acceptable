@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : acceptable
+# uuid  : acceptable
+# key   : acceptable
+# group : preference
+# --
+( <${1:id}> ^${2:op} <${3:value}> +)

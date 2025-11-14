@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : neg.attribute
+# uuid  : neg.attribute
+# key   : neg.attribute
+# group : condition
+# --
+<${1:var}> -^{2:attr} ${3:val}

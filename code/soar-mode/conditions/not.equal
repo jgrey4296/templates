@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : not.equal
+# uuid  : not.equal
+# key   : not.equal
+# group : condition predicate
+# --
+<> ${1:val}

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : indifferent
+# uuid  : indifferent
+# key   : indifferent
+# group : preference
+# --
+( <${1:id}> ^${2:op} <${3:val}> = <${4:opt-val}> )

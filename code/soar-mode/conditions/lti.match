@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : lti.match
+# uuid  : lti.match
+# key   : lti.match
+# group : condition long-term predicate
+# --
+@+ ${1:val}

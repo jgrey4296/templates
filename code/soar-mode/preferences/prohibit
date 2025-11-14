@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : prohibit
+# uuid  : prohibit
+# key   : prohibit
+# group : preference
+# --
+( <${1:id}> ^${2:op} <${3:val}> ~)

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : variable
+# uuid  : variable
+# key   : variable
+# group : condition
+# --
+<${1:varname}>

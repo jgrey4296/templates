@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : action.add
+# uuid  : action.add
+# key   : action.add
+# group : action
+# --
+( ${1:wme} )

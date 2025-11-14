@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : disjunctive
+# uuid  : disjunctive
+# key   : disjunctive
+# group : condition
+# --
+<< ${1:a b c} >>

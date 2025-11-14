@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : type.match
+# uuid  : type.match
+# key   : type.match
+# group : condition predicate
+# --
+<=> ${1:val}

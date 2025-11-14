@@ -64,7 +64,7 @@ function _direnv_hook() {
   # https://direnv.net/
   local previous_exit_status=$?;
   trap -- '' SIGINT;
-  eval "$("/usr/bin/direnv" export bash)";
+  eval "$(/usr/bin/env direnv export bash)";
   trap - SIGINT;
   return $previous_exit_status;
 };

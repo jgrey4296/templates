@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : worst
+# uuid  : worst
+# key   : worst
+# group : preference
+# --
+( <${1:id}> ^${2:op} <${3:val}> < ${4:<opt-val>} )

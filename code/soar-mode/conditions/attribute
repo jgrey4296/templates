@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : attribute
+# uuid  : attribute
+# key   : attribute
+# group : condition
+# --
+<${1:var}> ^${2:attr} ${3:value}

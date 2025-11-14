@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : action.remove
+# uuid  : action.remove
+# key   : action.remove
+# group : action
+# --
+( ${1:wme} -)

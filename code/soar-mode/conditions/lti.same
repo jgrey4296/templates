@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : lti.same
+# uuid  : lti.same
+# key   : lti.same
+# group : condition long-term predicate
+# --
+@ ${1:val}

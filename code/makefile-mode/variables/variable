@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : variable
+# uuid  : variable
+# key   : variable
+# group : variables
+# --
+${1:var_name} := ${2:value}

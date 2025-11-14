@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : wildcard
+# uuid  : wildcard
+# key   : wildcard
+# group : functions
+# --
+$(wildcard *.${1:c})

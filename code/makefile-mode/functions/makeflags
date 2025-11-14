@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : makeflags
+# uuid  : makeflags
+# key   : makeflags
+# group : functions
+# --
+$(MAKEFLAGS)

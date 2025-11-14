@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : first.dep
+# uuid  : first.dep
+# key   : first.dep
+# group : automatic variables
+# --
+$<

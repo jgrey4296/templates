@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : filter.negated
+# uuid  : filter.negated
+# key   : filter.negated
+# group : functions
+# --
+$(filter-out ${1:pattern}, ${2:list})

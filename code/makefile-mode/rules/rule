@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : rule
+# uuid  : rule
+# key   : rule
+# group : rules
+# --
+${1:target}: ${2:deps}
+	echo "Starting: $1"

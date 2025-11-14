@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : shell
+# uuid  : shell
+# key   : shell
+# group : automatic variables
+# --
+SHELL=/bin/bash

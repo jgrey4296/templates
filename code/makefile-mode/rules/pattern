@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : pattern
+# uuid  : pattern
+# key   : pattern
+# group : rules
+# --
+%.${1:o}: %.${2:c}
+	echo "Matched Target:" $@ " to Dep:" $<

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : value
+# uuid  : value
+# key   : value
+# group : expansion variables
+# --
+\$(${1:varname})

@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : overload
+# uuid  : overload
+# key   : overload
+# group : rules
+# --
+${1:rulename}::
+	@echo "$1 First"
+
+$1::
+	@echo "$1 Second"

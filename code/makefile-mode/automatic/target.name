@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : target.name
+# uuid  : target.name
+# key   : target.name
+# group : automatic variables
+# --
+"$@"

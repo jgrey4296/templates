@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : clean
+# uuid  : clean
+# key   : clean
+# group : rules
+# --
+clean:
+    rm -f ${1:a_file}

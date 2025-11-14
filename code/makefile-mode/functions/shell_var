@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : shell.var
+# uuid  : shell.var
+# key   : shell.var
+# group : functions
+# --
+$(${1:SHELLVAR})

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : filter
+# uuid  : filter
+# key   : filter
+# group : functions
+# --
+$(filter ${1:pattern %.o}, ${2:list})

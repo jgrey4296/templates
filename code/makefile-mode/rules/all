@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : all
+# uuid  : all
+# key   : all
+# group : rules
+# --
+all: ${1:defaults}

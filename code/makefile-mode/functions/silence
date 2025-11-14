@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : silence.cmd
+# uuid  : silence.cmd
+# key   : silence.cmd
+# group : functions
+# --
+@${1:echo}

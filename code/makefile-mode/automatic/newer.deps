@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : newer.deps
+# uuid  : newer.deps
+# key   : newer.deps
+# group : automatic variables
+# --
+$?

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : suppress.error
+# uuid  : suppress.error
+# key   : suppress.error
+# group : functions
+# --
+-${1:false}

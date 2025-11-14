@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : all.deps
+# uuid  : all.deps
+# key   : all.deps
+# group : automatic variables
+# --
+$^

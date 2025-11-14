@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : phony
+# uuid  : phony
+# key   : phony
+# group : rules
+# --
+.phony: ${1:rule-that-could-be-a-filename}

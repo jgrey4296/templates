@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : static.pattern
+# uuid  : static.pattern
+# key   : static.pattern
+# group : rules
+# --
+${1:target}: ${2:target-pattern %.o}: ${3:dep-pattern %.c}
+    echo "Matching $2 onto $1 to extract stem for $3"

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : hashbang
+# uuid  : hashbang
+# key   : hashbang
+# group :
+# --
+#!/usr/bin/env ${1:bash}

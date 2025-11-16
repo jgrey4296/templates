@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name  : apply
+# uuid  : apply
+# key   : apply
+# group : rules operators
+# --
+sp{$1*apply
+    (state <s> ^type state)
+    (<s> ^operator $1)
+-->
+    (write |-- Applying $1| (crlf))
+    $0
+}

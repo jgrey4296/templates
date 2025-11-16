@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : log
+# uuid  : log
+# key   : log
+# group : action io
+# --
+(log ${1:channelNum} ${2:msg} (crlf))

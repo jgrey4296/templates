@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : newline
+# uuid  : newline
+# key   : newline
+# group : io
+# --
+(crlf)

@@ -5,8 +5,8 @@
 # group : rule
 # --
 sp {${1:rule-name}
+   (state <s> ^type state)
    # Conditions
-   (state <s>)
    -->
    # Actions
 

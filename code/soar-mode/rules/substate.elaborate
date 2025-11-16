@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name  : substate.elaborate
+# uuid  : substate.elaborate
+# key   : substate.elaborate
+# group : rules substate elaboration
+# --
+sp {$1*elaboration
+   (state <s> ^superstate <ss>)
+   (<ss> ^val <v>)
+    -->
+   (<s> ^val <v>)
+}

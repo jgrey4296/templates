@@ -9,3 +9,6 @@ Soar Actions:
 (halt)                      # action. stop agent.
 (interrupt)                 # pause and return to prompt
 (wait [int])                # wait for int milliseconds
+
+(exec ${1:Cmd}) # Run user-registered function
+(cmd ${1:Cmd})  # Run Built-in Soar Command

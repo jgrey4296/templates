@@ -43,6 +43,7 @@ case "$OSTYPE" in
         PATH="/usr/local/opt/sqlite/bin:$PATH"
         ;;
     linux*)
+        PATH="$JG_CONFIG/bash/utilities:$PATH"
         ;;
 esac
 

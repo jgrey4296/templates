@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#  ppath.bash -*- mode: sh -*-
+
+echo "PPath: "
+count=0
+IFS=":"
+for i in $PATH; do
+    echo "- $i"
+    ((count++))
+done
+echo "Size: $count"

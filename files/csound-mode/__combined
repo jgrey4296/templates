@@ -1,4 +1,14 @@
-;;  `(f-filename (buffer-file-name))` -*- mode: Csound Mode -*-
+;;  `(f-filename (buffer-file-name))` -*- mode: csound -*-
 ;;  Combined orchestra and score
 ;; .csd
+<CsoundSynthesizer>
+<CsOptions>
 
+<CsOptions>
+<CsInstruments>
+
+</CsInstruments>
+<CsScore>
+
+</CsScore>
+</CsoundSynthesizer>

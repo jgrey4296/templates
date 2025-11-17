@@ -1,3 +1,11 @@
 Getting Started # https://csound.com/get-started.html
 Manual          # https://flossmanual.csound.com/
 Reference       # https://csound.com/docs/manual/index.html
+
+Opcodes                # https://flossmanual.csound.com/miscellanea/opcode-guide
+Opcode Quick Reference # https://csound.com/docs/manual/MiscQuickref.html
+Command Line           # https://csound.com/docs/manual/CommandFlags.html
+Env Vars               # https://csound.com/docs/manual/CommandEnvironment.html
+Orchestra Syntax       # https://csound.com/docs/manual/OrchTop.html
+Score Syntax           # https://csound.com/docs/manual/ScoreTop.html
+Examples # https://github.com/csound/examples

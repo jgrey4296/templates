@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : score.line
+# uuid  : score.line
+# key   : score.line
+# group :
+# --
+${1:EventNum} "${2:Instrument}" ${3:Start} ${4:Duration}

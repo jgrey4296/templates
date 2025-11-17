@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name  : effect
+# uuid  : effect
+# key   : effect
+# group :
+# --
+instr ${1:Name}
+      aleftin inleta "leftin"
+      arightin inleta "rightin"
+      $0
+
+      outleta "leftout", leftout
+      outleta "rightout", arightout
+endin

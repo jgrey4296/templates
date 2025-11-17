@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : instrument
+# uuid  : instrument
+# key   : instrument
+# group :
+# --
+instr ${1:InstrumentName}
+
+
+endin

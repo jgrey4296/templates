@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : scope
+# uuid  : scope
+# key   : scope
+# group :
+# --
+(push)
+$0
+(pop)

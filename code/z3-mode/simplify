@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : simplify
+# uuid  : simplify
+# key   : simplify
+# group : pretty-print
+# --
+(simplify ${1:expr})

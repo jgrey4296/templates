@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : sort
+# uuid  : sort
+# key   : sort
+# group : define type
+# --
+(define-sort ${1:TypeName} () ())

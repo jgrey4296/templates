@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : check
+# uuid  : check
+# key   : check
+# group :
+# --
+(check-sat)
+(get-model)

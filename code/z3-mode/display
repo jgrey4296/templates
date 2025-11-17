@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : display
+# uuid  : display
+# key   : display
+# group : pretty-print
+# --
+(display ${1:expr})

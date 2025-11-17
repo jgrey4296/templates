@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : option
+# uuid  : option
+# key   : option
+# group :
+# --
+(set-option :${1:print-success} ${2:true})

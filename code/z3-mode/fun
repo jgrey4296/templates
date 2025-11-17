@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : fun
+# uuid  : fun
+# key   : fun
+# group :
+# --
+(declare-fun ${1:name} (${2:args}) ${3:retType})

@@ -1,0 +1,5 @@
+Z3 Options:
+print-success #
+unsat_core_true
+produce-models
+proof

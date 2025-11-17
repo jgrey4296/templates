@@ -1,0 +1,9 @@
+;;; `(f-filename (buffer-file-name))` -*- mode: z3 -*-
+;;
+;;
+(echo "Loading: `(f-filename (buffer-file-name))`")
+
+
+
+(check-sat)
+(get-model)

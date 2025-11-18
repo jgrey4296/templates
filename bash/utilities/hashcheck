@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#  hashcheck.bash -*- mode: sh -*-
+
+echo "
+     TODO hashcheck: simplify md5 hash checking
+
+hashcheck {file}.hashes {globs}
+
+1st Run: create a file of hashes
+Else:    check globbed file hashes against record
+"

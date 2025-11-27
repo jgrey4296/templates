@@ -7,5 +7,6 @@
 #[cfg(test)]
 #[test]
 fn ${1:test_name}() {
+   assert!(true);
     $0
 }

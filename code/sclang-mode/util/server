@@ -3,6 +3,7 @@
 # key: server
 # --
 //server commands
+Server.default.boot;
 s.boot;
 s.reboot;
 s.quit;

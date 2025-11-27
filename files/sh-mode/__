@@ -1,4 +1,8 @@
-#!/usr/bin/env `(if (equal (file-name-extension buffer-file-name) "zsh") "zsh" "bash")`
-set -euo pipefail
+#!/usr/bin/env bash
+# `(f-filename (buffer-file-name))` -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
 
 $0

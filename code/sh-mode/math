@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : math
+# uuid  : math
+# key   : math
+# group :
+# --
+$(( ${1:expr} ))

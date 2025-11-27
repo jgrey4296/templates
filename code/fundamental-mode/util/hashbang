@@ -4,4 +4,4 @@
 # key   : hashbang
 # group :
 # --
-#!/usr/bin/env ${1:bash}
+#!/usr/bin/env -S ${1:bash}

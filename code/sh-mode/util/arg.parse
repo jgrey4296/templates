@@ -11,6 +11,9 @@ while [[ $# -gt 0 ]]; do
             ;;
         --*=*)
             echo "Assignment: \$1"
+            IFS="=" read -ra KEYVAL <<< "\$1"
+            echo "Key: \${KEYVAL[0]/--/}"
+            echo "Val: \${KEYVAL[1]}"
             ;;
         *) # Positional
             echo "Positional: \$1"

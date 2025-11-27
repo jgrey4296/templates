@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : find.to.array
+# uuid  : find.to.array
+# key   : find.to.array
+# group :
+# --
+readaray -d '' ${1:arrayName} < <(find "." -print0)

@@ -11,7 +11,7 @@ mod tests {
 
     #[test]
     fn test_sanity() {
-        assert!(True);
+        assert!(true);
     }
 
 

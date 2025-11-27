@@ -3,7 +3,7 @@ ASDF vm management             # https://asdf-vm.com/guide/getting-started.html
 AWK Examples                   # https://en.m.wikibooks.org/wiki/An_Awk_Primer/Awk_Command-Line_Examples
 Agda CLI                       # https://agda.readthedocs.io/en/v2.6.2.2/tools/command-line-options.html
 Apt                            # https://manpages.ubuntu.com/manpages/xenial/man8/apt.8.html
-Bash Reference                 # https://www.gnu.org/software/bash/manual/bash.html
+GNU Bash Reference             # https://www.gnu.org/software/bash/manual/bash.html
 Bash Scripting                 # https://tldp.org/LDP/abs/html/
 Bibtex                         # https://tug.org/texinfohtml/web2c.html#BibTeX
 Calibre Ebook                  # https://manual.calibre-ebook.com/generated/en/cli-index.html
@@ -103,6 +103,6 @@ Elixir Mix                     # https://hexdocs.pm/mix/1.17.3/Mix.html
 Python Ruff                    # https://docs.astral.sh/ruff/linter/#ruff-check
 Rust Bindgen                   # https://rust-lang.github.io/rust-bindgen/command-line-usage.html
 
-coreutils                      # https://www.gnu.org/software/coreutils/manual/html_node/index.html#SEC_Contents
+GNU coreutils                      # https://www.gnu.org/software/coreutils/manual/html_node/index.html#SEC_Contents
 bash style guide               # https://style.ysap.sh/
 shellcheck directives          # https://github.com/koalaman/shellcheck/wiki/Directive#shellcheck-directives

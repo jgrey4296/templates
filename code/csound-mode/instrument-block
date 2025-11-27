@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name  : instrument-block
+# uuid  : instrument-block
+# key   : instrument-block
+# group :
+# --
+<CsInstruments>
+sr     = 48000
+ksmps  = 64
+nchnls = 2
+0dbfs  = 1
+seed(235234)
+
+$0
+
+
+</CsInstruments>

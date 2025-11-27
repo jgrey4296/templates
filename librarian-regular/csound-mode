@@ -8,4 +8,5 @@ Command Line           # https://csound.com/docs/manual/CommandFlags.html
 Env Vars               # https://csound.com/docs/manual/CommandEnvironment.html
 Orchestra Syntax       # https://csound.com/docs/manual/OrchTop.html
 Score Syntax           # https://csound.com/docs/manual/ScoreTop.html
-Examples # https://github.com/csound/examples
+Examples               # https://github.com/csound/examples
+CLI Flags              # https://csound.com/docs/manual/CommandFlagsCategory.html

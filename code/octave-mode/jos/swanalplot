@@ -1,0 +1,27 @@
+# -*- mode: snippet -*-
+# name  : swanalplot
+# uuid  : swanalplot
+# key   : swanalplot
+# group : jos filters
+# --
+%swanalplot.m - plots needed by swanal.m
+
+doplots = 1; % set to 0 to skip plots
+dopause = 0; % set to 1 to pause after each plot
+if doplots
+  figure();
+  %figure(gcf);
+  subplot(2,1,1);
+  ttl=sprintf('Filter Input Sinusoid, f(%d)=%0.2f',k,f(k));
+  timeplot(t,s,'*k',ttl);
+  tinterp=0:(t(2)-t(1))/10:t(end); % interpolated time axis
+  si = ampIn*cos(2*pi*f(k)*tinterp+phaseIn); % for plot
+  text(-1.5,0,'(a)');
+  hold on; plot(tinterp,si,'--k'); hold off;
+  subplot(2,1,2);
+  ttl='Filter Output Sinusoid';
+  timeplot(t,y,'*k',ttl);
+  text(-1.5,0,'(b)');
+  if dopause, disp('PAUSING - [RETURN] to continue . . .'); pause; end
+  saveplot(sprintf('../eps/swanal-%d.eps',k));
+end

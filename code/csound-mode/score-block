@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : score-block
+# uuid  : score-block
+# key   : score-block
+# group :
+# --
+<CsScore>
+
+</CsScore>

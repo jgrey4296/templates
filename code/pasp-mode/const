@@ -4,4 +4,4 @@
 # key   : const
 # group :
 # --
-#const ${1:name} :- ${2:5}.
+#const ${1:name} = ${2:5}.

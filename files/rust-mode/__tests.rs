@@ -12,5 +12,5 @@
 #[test]
 fn test_$1() {
     $0;
-    assert!();
+    assert!(true);
 }

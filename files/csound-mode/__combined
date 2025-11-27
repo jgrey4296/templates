@@ -3,9 +3,16 @@
 ;; .csd
 <CsoundSynthesizer>
 <CsOptions>
-
-<CsOptions>
+-o `(f-filename (buffer-file-name))`.wav
+;; -o dac
+;; +rtaudio=jack
+;; --realtime
+</CsOptions>
 <CsInstruments>
+sr      = 4800
+ksmps   = 64
+nchnls  = 2
+0dbfs   = 1
 
 </CsInstruments>
 <CsScore>

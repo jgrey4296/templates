@@ -18,7 +18,6 @@ use std::io;
 // Local Module Declarations and imports
 
 
-
 // // --------------------------------------------------
 
 // Type Aliases
@@ -45,9 +44,14 @@ $0
 
 // //--// tests
 #[cfg(test)]
-#[test]
-fn test_basic() {
-    assert!(True);
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_basic() {
+        assert!(true);
+    }
+
 }
 
 // //--// end tests

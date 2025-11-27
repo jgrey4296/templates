@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : show
+# uuid  : show
+# key   : show
+# group : display
+# --
+#show ${1:name}/${2:0}.$0

@@ -47,3 +47,4 @@ function cd_ls {
 
 alias sdkman="sdk"
 alias precom="pre-commit"
+alias ckct="cookiecutter"

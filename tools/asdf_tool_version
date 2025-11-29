@@ -12,13 +12,13 @@ opam            2.4.1
 pandoc          3.8
 pre-commit      4.3.0
 swiprolog       9.2.9
-uv              0.8.4
+uv              0.8.15
 texlive         2025
 yt-dlp          2025.09.26
 plantuml        1.2025.8
 soar            9.6.4
 ruby            3.4.5
-polyglot        0.1.0
+polyglot        0.2.0
 direnv          2.37.1
 cask 0.9.1
 eask 0.11.8

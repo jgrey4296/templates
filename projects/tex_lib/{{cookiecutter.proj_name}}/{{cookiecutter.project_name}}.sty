@@ -1,0 +1,64 @@
+%% {{cookiecutter.project_name}}.sty -*- mode: LaTeX -*-
+
+% Provides: TODO
+
+% Package ID:
+\ProvidesPackage{{{cookiecutter.project_name}}}
+\NeedsTeXFormat{LaTeX2e}
+
+%%-- Options
+% \SetupKeyvalOptions{
+%   family=eventchain,
+%   prefix=eventchain@
+%   }
+\DeclareBoolOption{debug}
+\ProcessKeyvalOptions*
+
+%%-- imports
+\RequirePackage{iftex}
+\RequirePackage{kvoptions}
+\RequirePackage{calc}
+\RequirePackage{etoolbox}
+\RequirePackage{longtable}
+\RequirePackage{environ}
+\RequirePackage{ulem}
+\RequirePackage{keyval}
+\RequirePackage{xparse}
+\RequirePackage{cprotect}
+\RequirePackage{xkeyval}
+\RequirePackage{xspace}
+
+% \RequirePackage{tikz}
+% \usetikzlibrary{graphs}
+
+%%-- end imports
+
+% Guard to only luatex
+\RequireLuaTeX
+
+%%-- Variables
+
+%-- Environments
+\newenvironment{eventchain}[1][]
+{ \ignorespaces
+  \checkenvcommands
+  \setkeys{eventchain@keys}{dir=below, dist=1cm, start=-1, #1}
+  \directlua{
+    current = eventchain:new("\eventchain@dir", "\eventchain@dist")
+    current:open()
+    current:start("\eventchain@start")
+  }
+}
+{
+  \directlua{
+    current:close()
+    current = nil
+  }
+}
+
+%%-- Internal Commands
+\newenvcommand{eventchain}{\jumpto}[1][nil]{% Insert an Ellipses Node and increment time by [1]
+  \directlua{ current:continue("#1") }
+}
+
+%%-- Public Commands

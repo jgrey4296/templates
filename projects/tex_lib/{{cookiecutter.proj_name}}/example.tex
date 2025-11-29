@@ -1,0 +1,41 @@
+%% compiler:lualatex
+%% available compilers : lualatex pdflatex xelatex
+% !TeX TS-program = lualatex
+% !TeX encoding = UTF-8
+\documentclass[class=article, crop=false]{standalone}
+
+%%-- imports
+\usepackage{iftex}
+\usepackage{fontspec}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, pdfstartview=FitH]{hyperref}
+\usepackage[numbers]{natbib}
+\usepackage[russian,english]{babel}
+\usepackage[version=3]{mhchem}
+\usepackage{doi}
+\usepackage{listings}
+\usepackage{url}
+\usepackage{lettrine}
+\usepackage{titling}
+\usepackage{pdflscape}
+\usepackage{geometry}
+%%-- end imports
+
+\usepackage{responsive-title}
+\usepackage[debug]{{{cookiecutter.project_name}}}
+
+\def\eventChainTitle{{{cookiecutter.project_name}} Example}
+\title{\eventChainTitle}
+\author{John Grey}
+\date{21-09-2025}
+\setlength{\parskip}{2em}
+
+\begin{document}
+\resptitle{\eventChainTitle}{\eventChainTitle}
+
+Examples of the use of `{{cookiecutter.project_name}}`. 
+
+
+% \nocite{*}
+% \bibliographystyle{jg_custom}
+% \bibliography{}
+\end{document}

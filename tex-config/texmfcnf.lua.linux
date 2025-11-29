@@ -12,7 +12,10 @@
 return {
   content = {
     variables = {
-
+      TEXMFLOCAL = "selfautoparent:/texmf-local",
+      TEXMFHOME = "selfautoparent:/user",
+      TEXMFVAR = "selfautoparent:/user/texmf-var",
+      TEXMFCONFIG = "/home/john/.config/texlive",
     },
   },
 }

@@ -1,6 +1,6 @@
 # #  _base_path.bash -*- mode: sh -*-
 
-jgdebug Setting Initial Path
+# jgdebug Setting Initial Path
 
 export BASE_CACHE="$HOME/_cache_"
 export BASE_CONFIG="$HOME/.config"
@@ -39,11 +39,11 @@ case "$OSTYPE" in
         PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
         PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
         PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
-        jgdebug Setting sqlite
+        # jgdebug Setting sqlite
         PATH="/usr/local/opt/sqlite/bin:$PATH"
         ;;
     linux*)
-        PATH="$JG_CONFIG/bash/utilities:$PATH"
+        PATH="$JG_CONFIG/shells/bash/utilities:$PATH"
         ;;
 esac
 

@@ -83,7 +83,7 @@ export ASDF_DATA_DIR
 
 
 # Functions
-export -f jgdebug
+# export -f jgdebug
 export -f jg_maybe_inc_prompt
 export -f jg_prompt_update
 export -f jg_set_prompt

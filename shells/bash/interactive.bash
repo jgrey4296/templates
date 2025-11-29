@@ -22,7 +22,7 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-root_dir="$XDG_CONFIG_HOME/.templates/bash"
+root_dir="$XDG_CONFIG_HOME/.templates/shells/bash"
 echo "Root Dir: $root_dir"
 
 # shellcheck disable=SC1091

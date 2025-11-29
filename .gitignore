@@ -1,4 +1,4 @@
-!bash/lib
+!shells/bash/lib
 .DS_Store
 .idea
 *.log

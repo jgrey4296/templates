@@ -3,11 +3,11 @@
 # # from: https://itecnotes.com/server/cron-how-to-use-the-aliases-in-the-crontab/
 shopt -s expand_aliases
 
-source "$XDG_CONFIG_HOME/.templates/bash/lib/utils.bash"
-source "$XDG_CONFIG_HOME/.templates/bash/lib/path.bash"
-source "$XDG_CONFIG_HOME/.templates/bash/components/rust.bash"
-source "$XDG_CONFIG_HOME/.templates/bash/components/latex.bash"
-source "$XDG_CONFIG_HOME/.templates/bash/components/jvm.bash"
+source "$XDG_CONFIG_HOME/.templates/shells/bash/lib/utils.bash"
+source "$XDG_CONFIG_HOME/.templates/shells/bash/lib/path.bash"
+source "$XDG_CONFIG_HOME/.templates/shells/bash/components/rust.bash"
+source "$XDG_CONFIG_HOME/.templates/shells/bash/components/latex.bash"
+source "$XDG_CONFIG_HOME/.templates/shells/bash/components/jvm.bash"
 
 CPU_MAX="50"
 function cpu_check(){

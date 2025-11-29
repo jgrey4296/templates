@@ -1,8 +1,8 @@
 # Nushell Environment Config File
 # version = "0.93.0"
 use std
-source ~/.config/.templates/nu/utils.nu
-source ~/.config/.templates/nu/path.nu
+source ~/.config/.templates/shells/nu/utils.nu
+source ~/.config/.templates/shells/nu/path.nu
 
 # Use nushell functions to define your right and left prompt
 # $env.PROMPT_COMMAND       = {|| create_left_prompt }

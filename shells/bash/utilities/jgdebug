@@ -2,5 +2,5 @@
 #  jgdebug.bash -*- mode: sh -*-
 
 if [[ -n "${JGDEBUG-}" ]]; then
-    echo "%% " "$@"
+    echo -e "%% " "$@"
 fi

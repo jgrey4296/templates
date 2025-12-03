@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : load.ugen
+# uuid  : load.ugen
+# key   : load.ugen
+# group :
+# --
+#include "${1:file}"

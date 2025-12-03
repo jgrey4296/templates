@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name  : new
+# uuid  : new
+# key   : new
+# group : opcode UDO
+# --
+;; In/out types: a/k/i
+opcode ${1:OpName} ${2:a}, ${3:a}
+  aSnd xin
+       $0
+  aOut = aSnd
+  xout aOut
+endop

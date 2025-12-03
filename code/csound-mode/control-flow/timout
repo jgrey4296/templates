@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name  : timout
+# uuid  : timout
+# key   : timout
+# group : control-flow time
+# --
+;; play $2 at time $3 every $4
+${1:label1}:
+    timout ${3:0} ${4:1}, $2
+    reinit $1 ;; keep looping
+${2:label2}:
+    prints "Done%n"
+
+;; -- end of $2

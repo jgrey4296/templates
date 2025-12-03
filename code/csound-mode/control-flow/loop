@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name  : loop
+# uuid  : loop
+# key   : loop
+# group : control-flow ugen
+# --
+icount = 1
+${1:loopName}:
+    $0
+    ;; loop_lt | loop_le | loop_gt | loop_ge
+    loop_lt icount, 1, 10, $1
+    prints "$1 terminated%n"
+;; -- end of loop

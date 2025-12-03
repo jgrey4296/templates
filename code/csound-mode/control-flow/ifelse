@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name  : ifelse
+# uuid  : ifelse
+# key   : ifelse
+# group : control-flow ugen
+# --
+if $1 then
+    prints "if"
+   $0
+else
+    prints "else"
+endif

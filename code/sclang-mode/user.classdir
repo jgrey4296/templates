@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : user.classdir
+# uuid  : user.classdir
+# key   : user.classdir
+# group :
+# --
+Platform.userExtensionDir$0

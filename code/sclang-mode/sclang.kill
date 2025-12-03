@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : sclang.kill
+# uuid  : sclang.kill
+# key   : sclang.kill
+# group :
+# --
+# thisProcess.platform.killProcessByID(thisProcess.pid);
+0.exit;

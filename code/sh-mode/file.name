@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : file.name
+# uuid  : file.name
+# key   : file.name
+# group : local
+# --
+fname=\$(basename "\${BASH_SOURCE[0]}")
+dname=\$(dirname "\${BASH_SOURCE[0]}")

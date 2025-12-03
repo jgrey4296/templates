@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : pushd
+# uuid  : pushd
+# key   : pushd
+# group :
+# --
+pushd "$1" || fail "Failed to go to dir"
+$0
+popd || fail "Failed to return from dir"

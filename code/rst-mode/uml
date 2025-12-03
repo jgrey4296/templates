@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : uml
+# uuid  : uml
+# key   : uml
+# group :
+# --
+.. uml:: ${1:file.pu}
+   :align: center
+
+$0

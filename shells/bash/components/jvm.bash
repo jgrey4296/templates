@@ -36,7 +36,7 @@ JASON_HOME="$HOME/.local/jason-3.2.2"
 jgdebug "Setting JACAMO"
 JACAMO_HOME="$HOME/.local/jacamo-1.2.2"
 
-function init_sdkman () {
+function init-sdkman () {
     # For activating sdkman in a subshell
     if [[ -e "${SDKMAN_DIR}/bin/sdkman-init.sh" ]]; then
         jgdebug "Initialising SDKMAN"
@@ -46,5 +46,5 @@ function init_sdkman () {
 }
 
 
-export -f init_sdkman
-init_sdkman
+export -f init-sdkman
+init-sdkman

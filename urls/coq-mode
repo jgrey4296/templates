@@ -16,6 +16,7 @@ Ocaml                             # https://ocaml.org/manual/5.2/index.html
 Oaml Repl                         # https://ocaml.org/manual/5.2/toplevel.html
 Ocaml Stdlib                      # https://ocaml.org/manual/5.2/api/index.html
 Dune Build System                 # https://dune.build/
+Dune Docs                         # https://dune.readthedocs.io/en/stable/
 Standard ML                       # https://smlfamily.github.io/
 FStar Lang                        # https://fstar-lang.org/tutorial/book/index.html
 Idris Documentation               # https://www.idris-lang.org/pages/documentation.html
@@ -23,3 +24,5 @@ Idris Manual                      # https://idris2.readthedocs.io/en/latest/inde
 Idris REPL                        # https://idris2.readthedocs.io/en/latest/reference/debugging.html#repl-commands
 Agda                              # https://agda.readthedocs.io/en/v2.6.2.2/
 Agda CLI                          # https://agda.readthedocs.io/en/v2.6.2.2/tools/command-line-options.html
+Tactics in Plain English          # https://charlesaverill.github.io/ctpe/
+Mtac Tutorial                     # https://plv.mpi-sws.org/mtac/mtac_tutorial-1.1.html

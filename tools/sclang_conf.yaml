@@ -1,8 +1,5 @@
-# #  sclang_conf.yaml -*- mode: YAML -*-
-# symlink to ~/.config/SuperCollider/sclang_conf.yaml
-
 includePaths:
-    - /home/john/.local/share/SuperCollider/downloaded-quarks/scel
+    -   /home/john/.local/share/SuperCollider/downloaded-quarks/scel
 excludePaths:
     []
 postInlineWarnings: false

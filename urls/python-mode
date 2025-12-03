@@ -112,6 +112,7 @@ DoWhy                (lib)     # https://www.pywhy.org/dowhy/v0.10.1/user_guide/
 Helium               (lib)     # https://github.com/mherrmann/selenium-python-helium/blob/master/docs/cheatsheet.md
 LSP Protocol         (lib)     # https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/
 Manim                (lib)     # https://3b1b.github.io/manim/index.html
+Manim-Community Docs (lib)     # https://docs.manim.community/en/stable/index.html
 Nose                 (lib)     # https://github.com/nose-devs/nose2
 Petl                 (lib)     # https://petl.readthedocs.io/en/stable/index.html
 Pluggy               (lib)     # https://pluggy.readthedocs.io/en/stable/

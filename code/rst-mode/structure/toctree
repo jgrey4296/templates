@@ -9,5 +9,6 @@
    ..
       :titlesonly:
       :hidden:
+      :glob:
 
     $0

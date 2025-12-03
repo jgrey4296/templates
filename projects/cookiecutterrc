@@ -16,5 +16,13 @@ abbreviations:
     gh: https://github.com/{0}.git
     gl: https://gitlab.com/{0}.git
     bb: https://bitbucket.org/{0}
+
     my: /media/john/data/github/_templates/projects/{0}
-    poly: /media/john/data/github/polyglot/poly-tasks/{0}
+
+    polyglot: /media/john/data/github/polyglot/polyglot-template
+    poly: /media/john/data/github/polyglot/{0}
+    parts: /media/john/data/github/polyglot/poly-tasks/{0}
+    lang: /media/john/data/github/polyglot/poly-tasks/langs-main/{0}
+    util: /media/john/data/github/polyglot/poly-tasks/langs-util/{0}
+    tool: /media/john/data/github/polyglot/poly-tasks/tools-main/{0}
+    task: /media/john/data/github/polyglot/poly-tasks/tasks-main/{0}

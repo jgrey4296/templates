@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : join.array
+# uuid  : join.array
+# key   : join.array
+# group :
+# --
+function join-array () {
+    local sep="\$1"
+    shift
+    printf %s "$sep" "\${@/#/$sep}"
+}

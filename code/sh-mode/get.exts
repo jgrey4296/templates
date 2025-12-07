@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : get.exts
+# uuid  : get.exts
+# key   : get.exts
+# group :
+# --
+exts=$(fdfind -t f | sed -rn 's|.*/[^/]+\.([^/.]+)$|.\1|p' | sort -u | sed -r '{:q;N;s/\n/, /g;t q}')

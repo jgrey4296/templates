@@ -2,7 +2,7 @@
 
 jgdebug "Python setup"
 
-PYTHONSTARTUP="${XDG_CONFIG_HOME}/python/repl_startup.py"
+PYTHONSTARTUP="${XDG_CONFIG_HOME}/.templates/python/repl_startup.py"
 IPYTHONDIR="${XDG_CONFIG_HOME}/python/ipython/"
 MYPY_CACHE_DIR="${XDG_CACHE_HOME}/mypy"
 

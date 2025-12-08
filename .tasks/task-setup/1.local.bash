@@ -5,3 +5,4 @@ set -o nounset
 set -o pipefail
 
 mkdir -p "$HOME/.local/bin"
+mkdir -p "$HOME/.local/modules"

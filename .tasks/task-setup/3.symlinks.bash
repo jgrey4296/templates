@@ -20,3 +20,7 @@ mkdir -p "$XDG_CONFIG_HOME/gh"
 ln -s "$XDG_CONFIG_HOME/.templates/git/gitconfig" "$XDG_CONFIG_HOME/git/config"
 ln -s "$XDG_CONFIG_HOME/.templates/git/gitignore_global" "$XDG_CONFIG_HOME/git/gitignore_global"
 ln -s "$XDG_CONFIG_HOME/.templates/git/github/github_config.yml" "$XDG_CONFIG_HOME/gh/config.yml"
+
+# python
+mkdir -p "$XDG_CONFIG_HOME/uv"
+ln -s "$XDG_CONFIG_HOME/.templates/python/uv.toml" "$XDG_CONFIG_HOME/uv/uv.toml"

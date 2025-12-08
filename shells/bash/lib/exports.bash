@@ -81,10 +81,13 @@ export DOTNET_CLI_TELEMETRY_OPTOUT
 # Elixir
 export ASDF_DATA_DIR
 
+# golang
+export GOPATH
+export GOBIN
+
 
 # Functions
 # export -f jgdebug
-export -f jg_maybe_inc_prompt
-export -f jg_prompt_update
-export -f jg_set_prompt
-export -f randname
+# export -f jg_maybe_inc_prompt
+# export -f jg_prompt_update
+# export -f jg_set_prompt

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#  gdscript -*- mode: sh -*-
+
+case "$OSTYPE" in
+    darwin*)
+        godot --headless -s "$@"
+        osascript -e "tell application \"iTerm\"" -e "activate" -e "end tell"
+        ;;
+    linux*)
+        godot --headless -s "$@"
+        ;;
+esac

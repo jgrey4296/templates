@@ -46,3 +46,8 @@ case "$OSTYPE" in
        fail "Bad OS"
        ;;
 esac
+
+# #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+# export SDKMAN_DIR="~/.cache/sdkman"
+# [[ -s "~/.cache/sdkman/bin/sdkman-init.sh" ]] && source "~/.cache/sdkman/bin/sdkman-init.sh"
+init-sdkman

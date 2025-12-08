@@ -29,8 +29,3 @@ function attach () {
         *) tmux "attach" ;;
     esac
 }
-
-function randname (){
-    # get a random name, for tmux session names
-    shuf < /usr/share/dict/words | head -n 1 | sed "s/'//g"
-}

@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+#  jg_promp_update -*- mode: sh -*-
+# setting up the prompt:
+# from https://unix.stackexchange.com/questions/216953
+
+BASE_ENV=""
+PROMPT_INFO=()
+DEPTH_PROMPT="${PROMPT_NUM-1}"
+SEP="."
+
+function append () {
+    if [[ "${#PROMPT_INFO}" = 0 ]]; then
+        PROMPT_INFO+="$1"
+    else
+        PROMPT_INFO+="$SEP"
+        PROMPT_INFO+="$1"
+    fi
+}
+
+# Get the location:
+PATH_SEGMENT=$(pwd | sed -r 's/.+?\/(.+?\/.+?)/...\/\1/')
+
+# Get the depth:
+if [ "${PROMPT_NUM-}" -lt 2 ]; then
+    DEPTH_PROMPT="⟘"
+fi
+if [[ -n "${DEPTH_PROMPT}" ]]; then
+    append "$DEPTH_PROMPT"
+fi
+# See whats activated:
+if [[ -n "$TMUX" ]]; then
+    append "TMUX"
+fi
+if [[ -n "${INSIDE_EMACS}" ]]; then
+    append "emacs"
+fi
+if [[ -n "$DIRENV_DIR" ]]; then
+    append "direnv"
+fi
+if [[ -n "${ASDF_DATA_DIR}" ]]; then
+    append "asdf"
+fi
+if [[ -n "${SDKMAN_PLATFORM}" ]]; then
+    append "sdkman"
+fi
+
+
+if [[ -n "${VIRTUAL_ENV}" ]]; then
+    BASE_ENV=$(dirname "$VIRTUAL_ENV");
+    BASE_ENV=$(basename "$BASE_ENV";)
+    append "venv(${BASE_ENV})"
+elif [[ -n "${CONDA_DEFAULT_ENV-}" ]]; then
+    append "mamba(${CONDA_DEFAULT_ENV-})"
+fi
+
+
+# Assemble it
+echo "${PROMPT_INFO[@]}"
+echo "${PATH_SEGMENT}"
+exit 0

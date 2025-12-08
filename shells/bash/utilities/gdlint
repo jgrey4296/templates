@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#  gdlint -*- mode: sh -*-
+
+
+godot --headless --check-only --script "$@"

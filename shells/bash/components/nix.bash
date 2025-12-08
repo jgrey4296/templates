@@ -15,7 +15,7 @@ NIX_HOME="/nix/var/nix/profiles/default"
 # NIX_COUNT_CALLS
 # GC_INITIAL_HEAP_SIZE
 
-PATH="$NIX_HOME/bin:$PATH"
+# PATH="$NIX_HOME/bin:$PATH"
 
 # shellcheck disable=SC1091
-source "$NIX_HOME/etc/profile.d/nix-daemon.sh"
+# source "$NIX_HOME/etc/profile.d/nix-daemon.sh"

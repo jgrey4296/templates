@@ -33,4 +33,5 @@ source_components
 read-emacs
 jg_maybe_inc_prompt
 jg_set_prompt
+init-sdkman
 loginmux

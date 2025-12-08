@@ -1,5 +1,6 @@
 ## gitignore_global -*- mode: Gitignore -*-
 # https://git-scm.com/docs/gitignore
+# symlink to ~/.gitignore_global
 ##-- compiled
 *.beam
 *.bl

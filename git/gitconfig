@@ -1,5 +1,7 @@
+# gitconfig -*- mode: Gitconfig -*- 
 # git configuration
 # https://git-scm.com/docs/git-config
+# symlink to XDG_CONFIG_HOME/git/config
 [user]
 	name	= John Grey
 	email	= johngrey4296@gmail.com
@@ -9,14 +11,14 @@
 [credential]
 	helper = cache
 [core]
-	excludesfile = ~/.gitignore_global
-        autocrlf=input
-        eol=lf
+	excludesfile = ~/.config/git/gitignore_global
+	autocrlf=input
+	eol=lf
 [init]
 	defaultBranch = main
-	# templateDir = ~/gitub/_templates/git/initDir
+	# templateDir = ~/.config/git//initDir
 [commit]
-	template = ~/github/_templates/git/commit_template
+	template = ~/.config/git/commit_template
 [hooks]
 	allownonascii = false
 [merge]
@@ -32,6 +34,7 @@ jgsimple = format:"!!! %h : %aI : %s "
 
 [alias]
 jglog = log --pretty=jgsimple --name-only
+	
 [github]
 	user = jgrey4296
 [filter "lfs"]

@@ -1,7 +1,19 @@
 # Apparmor fix for Tor in Ubuntu 24.04 LTS
 # see https://bugs.launchpad.net/ubuntu/+source/torbrowser-launcher/+bug/2056578/comments/10
-
+# https://support.mozilla.org/en-US/kb/linux-security-warning
 # Symlink into /etc/apparmor.d/local/
 
 # Add IBus socket access
-owner @{HOME}/.cache/ibus/dbus-* rw,
+# owner @{HOME}/.cache/ibus/dbus-* rw,
+
+# This profile allows everything and only exists to give the
+# application a name instead of having the label "unconfined"
+abi <abi/4.0>,
+include <tunables/global>
+profile 
+/home/john/.local/tor-browser/Browser/{firefox,updater,firefox.real}
+flags=(unconfined) {
+	userns,
+	# Site-specific additions and overrides. See local/README for details.
+	include if exists <local/firefox>
+}

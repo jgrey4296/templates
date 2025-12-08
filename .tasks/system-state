@@ -55,7 +55,7 @@ function record_versions () {
     ls -l "$HOME/.local" > "$TARGET/local.installs"
 }
 
-record_sdkman () {
+function record_sdkman () {
     set +o nounset
     # sdkman
     local TARGET="$PROJ_ROOT/.maintenance"

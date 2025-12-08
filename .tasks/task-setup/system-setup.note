@@ -1,0 +1,26 @@
+0) install secrets
+0) apt install git
+1) install and log in to proton
+2) log in to firefox
+
+3) snap install emacs --classic
+4) snap install libreoffice remmina vivaldi vlc ghidra
+5) apt install vim neovim clamav csound graphviz imagemagick jackd
+   supercollider lldb tesseract-ocr tmux tree-sitter-cli 
+   trash-cli z3 golang-go fd-find gh curl ripgrep
+   build-essential autoconf m4 libwxgtk3.2-dev libwxgtk-webview3.2-dev 
+   libgl1-mesa-dev libglu1-mesa-dev libpng-dev libssh-dev unixodbc-dev xsltproc fop libxml2-utils libncurses-dev openjdk-11-jdk
+   btop calibre
+
+6) dropbox
+8) link .bashrc and .bash_profile, cookiecutter, tmux, vim, sdkman, git ...
+
+10) update clamav
+11) ssh-add keys, and verify
+14) add and install asdf plugins
+15) mkdir .local/bin for emacs/doom
+16) install sdkman
+17) install android command line tools
+18) install tor
+20) install uv tools
+21) install cargo tools

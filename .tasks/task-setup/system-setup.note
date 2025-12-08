@@ -5,12 +5,7 @@
 
 3) snap install emacs --classic
 4) snap install libreoffice remmina vivaldi vlc ghidra
-5) apt install vim neovim clamav csound graphviz imagemagick jackd
-   supercollider lldb tesseract-ocr tmux tree-sitter-cli 
-   trash-cli z3 golang-go fd-find gh curl ripgrep
-   build-essential autoconf m4 libwxgtk3.2-dev libwxgtk-webview3.2-dev 
-   libgl1-mesa-dev libglu1-mesa-dev libpng-dev libssh-dev unixodbc-dev xsltproc fop libxml2-utils libncurses-dev openjdk-11-jdk
-   btop calibre
+5) apt install dependencies
 
 6) dropbox
 8) link .bashrc and .bash_profile, cookiecutter, tmux, vim, sdkman, git ...

@@ -1,0 +1,37 @@
+BespokeSynth	com.bespokesynth.BespokeSynth	1.3.0	stable	flathub	system
+Flatseal	com.github.tchx84.Flatseal	2.4.0	stable	flathub	system
+Inform 7	com.inform7.IDE	6M62	main	ide-origin	system
+Inform	com.inform7.IDE	2.0.1	stable	flathub	system
+Bforartists	de.bforartists.Bforartists	5.0.0	stable	flathub	system
+Codecs	de.bforartists.Bforartists.Codecs		stable	flathub	system
+Qt Creator	io.qt.QtCreator	18.0.0	stable	flathub	system
+Bustle	org.freedesktop.Bustle	0.13.0	stable	flathub	system
+Freedesktop Platform	org.freedesktop.Platform	freedesktop-sdk-24.08.28	24.08	flathub	system
+Freedesktop Platform	org.freedesktop.Platform	freedesktop-sdk-25.08.5	25.08	flathub	system
+Mesa	org.freedesktop.Platform.GL.default	21.3.9	21.08	flathub	system
+Mesa	org.freedesktop.Platform.GL.default	25.0.7	23.08	flathub	system
+Mesa (Extra)	org.freedesktop.Platform.GL.default	25.0.7	23.08-extra	flathub	system
+Mesa	org.freedesktop.Platform.GL.default	25.2.6	24.08	flathub	system
+Mesa (Extra)	org.freedesktop.Platform.GL.default	25.2.6	24.08extra	flathub	system
+Mesa	org.freedesktop.Platform.GL.default	25.2.6	25.08	flathub	system
+Mesa (Extra)	org.freedesktop.Platform.GL.default	25.2.6	25.08-extra	flathub	system
+Codecs Extra Extension	org.freedesktop.Platform.codecs-extra		25.08-extra	flathub	system
+FFmpeg extension with extra codecs	org.freedesktop.Platform.ffmpeg-full		24.08	flathub	system
+openh264	org.freedesktop.Platform.openh264	2.1.0	2.0	flathub	system
+openh264	org.freedesktop.Platform.openh264	2.4.1	2.4.1	flathub	system
+openh264	org.freedesktop.Platform.openh264	2.5.1	2.5.1	flathub	system
+Freedesktop SDK	org.freedesktop.Sdk	freedesktop-sdk-23.08.34	23.08	flathub	system
+Freedesktop SDK	org.freedesktop.Sdk	freedesktop-sdk-24.08.28	24.08	flathub	system
+GNOME Application Platform version 42	org.gnome.Platform		42	flathub	system
+GNOME Application Platform version 46	org.gnome.Platform		46	flathub	system
+GNOME Application Platform version 49	org.gnome.Platform		49	flathub	system
+Disk Usage Analyzer	org.gnome.baobab	49.1	stable	flathub	system
+GNU Emacs	org.gnu.emacs	30.1	stable	flathub	system
+Yaru-dark Gtk Theme	org.gtk.Gtk3theme.Yaru-dark		3.22	flathub	system
+KDE Application Platform	org.kde.Platform		5.15-23.08	flathub	system
+QGnomePlatform	org.kde.PlatformTheme.QGnomePlatform		5.15-23.08	flathub	system
+KDE Software Development Kit	org.kde.Sdk		6.10	flathub	system
+QAdwaitaDecorations	org.kde.WaylandDecoration.QAdwaitaDecorations		5.15-23.08	flathub	system
+QGnomePlatform-decoration	org.kde.WaylandDecoration.QGnomePlatform-decoration		5.15-23.08	flathub	system
+Kiwix	org.kiwix.desktop	2.4.1	stable	flathub	system
+Firefox	org.mozilla.firefox	145.0.2	stable	flathub	system

@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: revert
-# key: r
-# uuid: r
+# key: rev
+# uuid: rev
 # --
 revert

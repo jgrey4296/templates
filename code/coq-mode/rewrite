@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: rewrite
-# key: r
-# uuid: r
+# key: rewr
+# uuid: rewr
 # --
 rewrite $1

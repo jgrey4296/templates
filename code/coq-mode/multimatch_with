@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name: multimatch with
-# key: m
-# uuid: m
+# key: mm
+# uuid: mm
 # --
 multimatch $1 with
 | $2 => $3

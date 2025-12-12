@@ -1,0 +1,90 @@
+; test.dat -*- mode: Ledger -*-
+
+; include "filename.ledger"
+
+;; Accounts --------------------------------------------------
+account Equity:Opening Balance
+account Assets
+account Assets:Checking
+account Assets:Savings
+
+account Income
+account Income:Salary
+account Income:Investments
+
+account Liabilities
+account Liabilities:Bills
+account Liabilities:Misc
+
+account Expenses
+account Expenses:Food
+account Expenses:Bills:Electricity
+account Expenses:Bills:Gas
+
+commodity $
+
+tag init
+tag food
+
+;; For balancing:
+; bucket Assets:Checking
+
+; aliases --------------------------------------------------
+alias elec=Expenses:Bills:Electricity
+alias gas=Expenses:Bills:Gas
+
+;; assert
+;; check
+
+; Budgets --------------------------------------------------
+~ Monthly
+    Assets:Checking                            $500
+    Income
+
+~ Monthly
+    Expenses:Food                               $80
+    Assets:Checking
+
+
+; Transactions ---------------------------------------------
+
+apply tag init
+
+2025-10-01  * Initialisation
+    Assets:Checking                             $100
+    Assets:Savings                              $99
+    Equity:Opening Balance
+
+end apply tag
+
+2025-12-13 * (1) Tesco
+    Expenses:Food                                $21
+    Assets:Checking
+    ; :food:
+
+2025-12-14 ! Tesco
+    Liabilities:Misc                          $13.50
+    Assets:Checking
+    ; more food
+
+2025-12-16 * Pay
+    Assets:Checking                             $100
+    Assets:Savings                              $50
+    Income:Salary
+
+2025-12-22 * Bills
+    elec                                         $80
+    gas                                          $70
+    Assets:Checking
+
+2026-01-05 Income
+    Assets:Checking                             $200
+    Income:Salary
+
+2026-01-13 Food
+    Expenses:Food                                $41
+    Assets:Checking
+
+2026-01-21 Todo Bills
+    Liabilities:Bills                            $80
+    Assets:Checking

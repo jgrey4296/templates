@@ -1,0 +1,18 @@
+## `(f-filename (buffer-file-name))` -*- mode: `(string-remove-suffix "-mode" major-mode)` -*-
+
+;; Accounts --------------------------------------------------
+account Assets
+account Income
+account Liabilities
+account Expenses
+
+; aliases --------------------------------------------------
+alias elec=Expenses:Bills:Electricty
+alias gas=Expenses:Bills:Gas
+
+; Budgets --------------------------------------------------
+~ Monthly
+    Assets:Checking                            $5000
+    Income:Salary
+
+; Transactions ---------------------------------------------

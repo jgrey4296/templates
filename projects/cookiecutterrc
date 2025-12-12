@@ -15,13 +15,14 @@ abbreviations:
     pp: https://github.com/audreyr/cookiecutter-pypackage.git
     gh: https://github.com/{0}.git
     gl: https://gitlab.com/{0}.git
-    bb: https://bitbucket.org/{0}
+    bb: https://bitbucket.org/{-1}
 
     my: /media/john/data/github/_templates/projects/{0}
+    polydev: /media/john/data/github/polyglot/{0}
 
     polyglot: /media/john/data/github/polyglot/polyglot-template
-    poly: /media/john/data/github/polyglot/{0}
-    parts: /media/john/data/github/polyglot/poly-tasks/{0}
+
+    todo: /media/john/data/github/polyglot/poly-tasks/todo-{0}
     lang: /media/john/data/github/polyglot/poly-tasks/langs-main/{0}
     util: /media/john/data/github/polyglot/poly-tasks/langs-util/{0}
     tool: /media/john/data/github/polyglot/poly-tasks/tools-main/{0}

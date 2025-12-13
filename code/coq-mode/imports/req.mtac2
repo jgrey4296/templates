@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : req.mtac2
+# uuid  : req.mtac2
+# key   : req.mtac2
+# group : proof-mode mtac2
+# --
+From Mtac2 Require Mtac2.
+Set Implicit Arguments.

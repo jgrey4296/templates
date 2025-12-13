@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : req.classical
+# uuid  : req.classical
+# key   : req.classical
+# group : proof-mode tactics classical-logic
+# --
+from Stdlib Require Import Classical.

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# key: Vars
+# name: Variables
+# group: assumptions
+# --
+Variables $1 : $0.

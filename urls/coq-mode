@@ -1,28 +1,39 @@
-Proof general github              # https://github.com/ProofGeneral/PG/
-Proof General Manual              # https://proofgeneral.github.io/doc/master/userman/
-Rocq Github                       # https://github.com/rocq-prover/rocq
-Rocq Syntax                       # https://rocq-prover.org/doc/V9.0.0/refman/language/core/basic.html#syntax-and-lexical-conventions
-Rocq Manual                       # https://rocq-prover.org/doc/V9.0.0/refman/index.html
-Rocq Standard Lib                 # https://rocq-prover.org/doc/V9.0.0/stdlib/index.html
-Logical Foundations 1             # https://softwarefoundations.cis.upenn.edu/lf-current/toc.html
-Prog Lang Foundations 2           # https://softwarefoundations.cis.upenn.edu/plf-current/toc.html
-Verified Functional Algorithms 3  # https://softwarefoundations.cis.upenn.edu/vfa-current/toc.html
-Quickchik 4                       # https://softwarefoundations.cis.upenn.edu/qc-current/toc.html
-Verified C 5                      # https://softwarefoundations.cis.upenn.edu/vc-current/toc.html
-Separation Logic 6                # https://softwarefoundations.cis.upenn.edu/slf-current/toc.html
-Opam                              # https://opam.ocaml.org/doc/Usage.html
-Ocaml Docs                        # https://ocaml.org/docs
-Ocaml                             # https://ocaml.org/manual/5.2/index.html
-Oaml Repl                         # https://ocaml.org/manual/5.2/toplevel.html
-Ocaml Stdlib                      # https://ocaml.org/manual/5.2/api/index.html
-Dune Build System                 # https://dune.build/
-Dune Docs                         # https://dune.readthedocs.io/en/stable/
-Standard ML                       # https://smlfamily.github.io/
-FStar Lang                        # https://fstar-lang.org/tutorial/book/index.html
-Idris Documentation               # https://www.idris-lang.org/pages/documentation.html
-Idris Manual                      # https://idris2.readthedocs.io/en/latest/index.html
-Idris REPL                        # https://idris2.readthedocs.io/en/latest/reference/debugging.html#repl-commands
-Agda                              # https://agda.readthedocs.io/en/v2.6.2.2/
-Agda CLI                          # https://agda.readthedocs.io/en/v2.6.2.2/tools/command-line-options.html
-Tactics in Plain English          # https://charlesaverill.github.io/ctpe/
-Mtac Tutorial                     # https://plv.mpi-sws.org/mtac/mtac_tutorial-1.1.html
+Proof general github             # https://github.com/ProofGeneral/PG/
+Proof General Manual             # https://proofgeneral.github.io/doc/master/userman/
+Rocq Github                      # https://github.com/rocq-prover/rocq
+Rocq Syntax                      # https://rocq-prover.org/doc/V9.1.0/refman/language/core/basic.html#syntax-and-lexical-conventions
+Rocq Manual                      # https://rocq-prover.org/doc/V9.1.0/refman/index.html
+Rocq Standard Lib                # https://rocq-prover.org/doc/V9.1.0/stdlib/index.html
+Stdlib docs                      # https://rocq-prover.org/doc/V9.1.0/refman-stdlib/index.html
+SSReflect                        # https://rocq-prover.org/doc/V9.1.0/refman/proof-engine/ssreflect-proof-language.html
+Ltac2                            # https://rocq-prover.org/doc/V9.1.0/refman/proof-engine/ltac2.html
+Corelib Theories                 # https://rocq-prover.org/doc/V9.1.0/corelib/index.html
+Rocq Notation                    # https://rocq-prover.org/doc/V9.1.0/refman/user-extensions/syntax-extensions.html
+
+Tactics in Plain English         # https://charlesaverill.github.io/ctpe/
+Mtac Tutorial                    # https://plv.mpi-sws.org/mtac/mtac_tutorial-1.1.html
+
+Logical Foundations 1            # https://softwarefoundations.cis.upenn.edu/lf-current/toc.html
+Prog Lang Foundations 2          # https://softwarefoundations.cis.upenn.edu/plf-current/toc.html
+Verified Functional Algorithms 3 # https://softwarefoundations.cis.upenn.edu/vfa-current/toc.html
+Quickchik 4                      # https://softwarefoundations.cis.upenn.edu/qc-current/toc.html
+Verified C 5                     # https://softwarefoundations.cis.upenn.edu/vc-current/toc.html
+Separation Logic 6               # https://softwarefoundations.cis.upenn.edu/slf-current/toc.html
+
+Opam                             # https://opam.ocaml.org/doc/Usage.html
+Opam Manual                      # https://opam.ocaml.org/doc/Manual.html
+Ocaml Docs                       # https://ocaml.org/docs
+Ocaml                            # https://ocaml.org/manual/5.4/index.html
+Oaml Repl                        # https://ocaml.org/manual/5.4/toplevel.html
+Ocaml Stdlib                     # https://ocaml.org/manual/5.4/api/index.html
+
+Dune Build System                # https://dune.build/
+Dune Docs                        # https://dune.readthedocs.io/en/stable/
+
+Standard ML                      # https://smlfamily.github.io/
+FStar Lang                       # https://fstar-lang.org/tutorial/book/index.html
+Idris Documentation              # https://www.idris-lang.org/pages/documentation.html
+Idris Manual                     # https://idris2.readthedocs.io/en/latest/index.html
+Idris REPL                       # https://idris2.readthedocs.io/en/latest/reference/debugging.html#repl-commands
+Agda                             # https://agda.readthedocs.io/en/v2.6.2.2/
+Agda CLI                         # https://agda.readthedocs.io/en/v2.6.2.2/tools/command-line-options.html

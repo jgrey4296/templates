@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : notation.ltac2
+# uuid  : notation.ltac2
+# key   : notation.ltac2
+# group : notation tactics ltac2
+# --
+Ltac2 Notation "$1" := $2.

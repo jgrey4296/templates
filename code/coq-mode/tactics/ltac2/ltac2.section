@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name  : ltac2.section
+# uuid  : ltac2.section
+# key   : ltac2.section
+# group : ltac2 document
+# --
+Section $1.
+  Import Ltac2.
+  Set Default Proof Mode "Ltac2".
+
+  Example of_next_day1:
+    1 + 1 = 2.
+  Proof.
+    simpl.
+    reflexivity.
+  Qed.
+
+End $1.

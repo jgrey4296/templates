@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Locate Notation
+# group: debug
+# --
+Locate Notation ($1) $2

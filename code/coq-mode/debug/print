@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# key: P
+# name: Print
+# group: debug
+# --
+Print $1.
+$0

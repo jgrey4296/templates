@@ -1,0 +1,53 @@
+Rocq Attributes/Settings Commands:
+
+Print Options         # current values of all flags and options.
+Print Table {table}   # values in a table.
+
+Attributes {attr}     # Associate attributes with the document.
+Set {flag}            #
+Unset {flag}          #
+Add {attr} '{val}'    #
+Remove {attr} '{val}' #
+Test {attr}           # Get the value of an attribute.
+
+----- # Command Flags
+Fast Name Printing # use faster alg for unambigous names.
+
+----- # Record Flags/Settings
+Printing Records              # use default display fmt for records.
+Printing Record {qualid}                 #
+Printing Constructor {qualid}            # records to display as ctors.
+Printing Projections                     # dot notation for projections.
+Primitive Projections                    #
+Printing Primitive Projection Parameters #
+Printing Unfolded Projection As Match    #
+
+----- # Inductive Type Flags
+Dependent Propostion Elimitators #
+Uniform Inductive Parameters #
+
+----- # Module Flags
+Short Module Printing #
+
+
+----- # Proof Irelevant Proposition flags
+Allow StrictProp        # controls use of SProp
+Definitional UIP        # allows non-squashed inductive types in SProp.
+Printing Relevant Marks #
+
+----- # Display settings
+Silent #
+Warnings "{+/-} {ident}"      #  configure display of warnings.
+Debug "{-} {ident}"           # Enable/-disable components debug messages.
+Printing Width {nat}          #
+Printing Depth {nat}          # control nesting depth.
+Printing Compact Contexts     #
+Printing Unfocused            #
+Printing Dependent Evars Line #
+Printing All                  #
+
+----- # Typing Flags
+Guard Checking # guard checking of fixpoints
+Positivity Checking #
+Universe Checking #
+

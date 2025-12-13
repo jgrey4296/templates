@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : export
+# uuid  : export
+# key   : export
+# group :
+# --
+Export $1.

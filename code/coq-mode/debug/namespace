@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : namespace
+# uuid  : namespace
+# key   : namespace
+# group : debug
+# --
+Print Namespace ${1:Top}.

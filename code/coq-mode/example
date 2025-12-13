@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: Example
-# key: examp
-# uuid: examp
-# --
-Example $1:$2 := $3.

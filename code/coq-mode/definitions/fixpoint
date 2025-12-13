@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# key: Fixp
+# name: Fixpoint
+# group: definitions recursive
+# --
+Fixpoint $1 ($2 : $3) : $4 :=
+  $0.

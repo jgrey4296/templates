@@ -1,0 +1,194 @@
+Rocq Ltac Tactics:
+
+----- # Basic
+
+
+
+----- #
+
+abstract {tactic} using {name}                                   # Separate out a subproof into a separate lemma to solve.
+absurd {type}                                                    # False elimination. generates subgoals ~P and P.
+admit
+assert {ident}                                                   # Add new hypothesis and matching subgoal before current
+assert {ident} by {tactic}                                       # Add new hypothesis, try to prove with tactic.
+assert_fails tac
+assumption                                                       #
+auto
+autounfold
+autounfold_one
+bapply lemma todo
+case {clause} {principle}                                        # Case Analysis without recursion.
+case_eq x
+cbn                                                              # Call by name reduction. Faster than simpl.                                                                  Reduction.
+cbv  {reduction} {occurrences}                                   # Weak-head normal form reduction. Call by value. {beta | delta {ref} | match | fix | cofix | iota | zeta }   Reduction.
+change {term} with {term} {occurrents}                           # replace terms with definitionally equivalent/reducible terms
+classical_left                                                   # Prove Left hand of disjunction, assuming Right is negated. Require Import Classical.
+classical_right                                                  # Prove Right hand of disjunction, assuming Left is negated. Require Import Classical.
+clear
+clear {ident?}                                                   # Remove unneeded hypotheses from context.
+cofix {ident} with {idents}                                      #
+compare $1 $2
+compute
+congruence
+constr_eq $1 $2
+constr_eq_nounivs $1 $2
+constr_eq_strict $1 $2
+constructor
+constructor {int | var} with {bindings}                          # repeat intro; hnf. Then apply constructors.
+contradict H
+contradict {ident}                                               # Transform hypothesis and goal into negation. eg: ~A |- B  -> |- A.
+contradiction
+contradiction {term}                                             # prove by finding a contradiction.
+convert $1 $2
+cut {type}                                                       # Modus Ponens
+Declare Reduction {ident} = {reduction}                          # alias reduction strategy.
+decompose record {term}                                          # decompose record types.
+decompose sum {term}                                             # decompose sum types.
+decompose {term}                                                 # recursively decompose proposition
+dependent destruction {ident} generalizing {ident} using {term}
+destauto
+destr_eq H
+destruct {clause} {principle}                                    # Case Analysis using induction. Generates subgoals for each type constructor.
+destruct_all t
+dintuition
+discriminate {arg}                                               # Prove structural equality
+dtauto
+eassert {ident}                                                  # new hypothesis with existential variables / holes
+eassumption
+easy
+easy'
+eauto
+econstructor
+ediscriminate
+eenough {ident} by {tactic}                                      # new hypothesis with existential varaibles / holes.
+eexact $1
+eexists
+einjection
+eintros {pattern}                                                # intro existential variables
+eleft
+enough {ident} by {tactic}                                       # Add new hypothesis and matching subgoal *after* current
+eright
+eset {alias ident} {ident} {occrences?}                          # Alias with existential variables
+esimplify_eq
+esplit
+etransitivity
+eval {reduction} in {term}                                       # Apply conversion rules, don't change proof state.
+Eval {reduction} in {term}                                       # Displays result and its type.
+evar {ident : type}                                              # create fresh existential variable
+exact {term}                                                     #
+exact_no_check $1
+exfalse                                                          # elimtype False. Add goal to prove False is provable.
+exfalso
+exists {bindings}                                                #
+f_equal                                                          # Subgoal Function application checking. f(a,b) = g(c,d) -> G1:f=g, G2:a=c, G3:b=d
+fail
+false_hyp H G
+find_equiv H
+finish_timing
+first _0
+firstorder
+fix {ident} {int} with {idents}                                  #
+fold {term} {occurrences}                                        # reduce term, replace occurrences of the result with the term.                                               Reduction.
+fresh
+generalize {goal}                                                # generalize goal to ∀x:T, goal'
+give_up
+has_evar $1
+hnf {occurrences}                                                # Reduce goal to weak head normal form, without recursion.                                                    Reduction.
+hnf {occurrences}                                                # reduce goal to its head normal form
+idtac                                                            # idempotent tactic.
+induction {clause} {principle}                                   # generate subgoals for each constructor of type. Generates induction hypothesis as well.
+info_auto
+info_eauto
+info_trivial
+injection {arg}                                                  # Prove using injectiveness. ie: C t1 = C t2 -> t1 = t2
+instantiate {ident := term}                                      # refine specific term.
+intro {ident} {where}                                            # Add variables and definitions to context using hnf.
+intros until {ident}                                             # intro until a dependent premise is added.
+intros {pattern}                                                 #
+intuition
+intuition_solver
+inversion {ident} using {term}                                   # Create new goals for each constructor that isn't self-contradictory.
+inversion_sigma
+inversion_sigma {ident} as {pattern}                             # Turns "existT P x p = existT P y q" into pairs of equalities "H: x = y" + "rew H in p = q"
+inversion_sigma_on H
+inversion_sigma_on_as H ip
+inversion_sigma_step
+is_cofix $1
+is_const $1
+is_constructor $1
+is_evar $1
+is_fix $1
+is_ground $1
+is_ind $1
+is_proj $1
+is_var $1
+lapply $1
+lazy {reduction} {occurrences}                                   # Weak-head normal form reduction. Call by need. {beta | delta {ref} | match | fix | cofix | iota | zeta }    Reduction.
+left
+left with {bindings}                                             #
+lookup_inversion_sigma_rect H
+move {ident} {where}                                             # Reorder hypotheses in context. Where = [at top, at bottom, before {ident}, after {ident}]
+native_cast_no_check $1
+native_compute                                                   # converts to ocaml. Has overhead, but can be 2-5 times faster.                                               Reduction.
+not_evar $1
+now_show c
+Opaque {constant}                                                # Mark constant as unable to be unfolded..
+optimize_heap
+pattern {pattern} {occurrences}                                  # generate goal through beta-expansion pattern matching                                                       Reduction.
+pose {term} {ident?}                                             # add alias to context without any replacement.
+rapply p
+rapply {term}                                                    # apply with refinement of created existential variables.
+red                                                              # Reduce Application                                                                                          Reduction.
+reflexivity                                                      # Checks Definitional equality.
+remember {term} {ident?}                                         #
+rename {ident} into {ident}                                      # rename hypothesis in context. (*Not* in proof term)
+replace {-> | <-} {term} {occurrences}                           # replace free occurrences
+replace {term} with {term} {occurrences} by {tactic}             # replace free occurrences
+restart_timer
+revert {ident}                                                   # inverse of intro. Move hypotheses and definitions from context into the goal.
+revgoals
+rewrite   {-> | <-} {occurrences} {count}                        # int, ?=(0+), !=(1+)
+rewrite * {-> | <-} {term} in {ident}                            #
+rewrite -> {occrrences} by {tactic}                              # Replace terms in right with equal terms from left
+rewrite <- {occrrences} by {tactic}                              # Replace terms in left with equal terms from right
+right
+right with {bindings}                                            #
+Scheme {ident} := {Induction | Minimality | Elimination | Case } # Generate induction principles.
+set {alias ident} {ident} {occurrences?}                         # Create an alias for context term
+setoid_etransitivity
+setoid_reflexivity
+setoid_symmetry
+shelve
+shelve_unifiable
+simpl
+simpl {delta} {pattern} {occurrences}                            # Limited Reduction. Reduction.
+simple destruct {ident}                                          #
+simple refine {term}                                             #
+simple stubst                                                    #
+simplify_eq
+simplify_eq {arg}                                                # prove equality using discriminate or injection
+solve _0
+solve_constraints
+specialize {term} {with bindings?}                               # Apply arguments to a term.
+split
+split with {bindings}                                            #
+stepl {term} by {tactic}                                         # chain rewrite steps, assuming relation R {term1} {term2}. Apply tactic to left.
+stepr {term} by {tactic}                                         # chain rewrite steps, assuming relation R {term1} {term2}. Apply tactic to right
+Strategy {opaque | int | expand | transparent} {reference}       # Set unfolding priority.
+subst
+subst {ident}                                                    # replace idents with their local definition
+substitute {-> | <-}                                             # replace idents with their local definition
+symmetry {occurrences}                                           # Swaps t = u to u = t
+tauto
+time_constr tac
+transitivity $1
+transitivity {term}                                              # ∀{term}, t = u -> G1: t = {term}, G2: u = {term}
+Transparent {constant}                                           # Mark constant as unfoldable. (Proofs ending in QED are always opaque).
+transparent_abstract {tactic} using {name}                       # Separate out a transparent subproof into a separate lemma to solve.
+trivial
+unfold {occurrences}                                             # delta reduction                                                                                             Reduction.
+vm_cast_no_check $1
+vm_compute                                                       # brute force normalization and comparison of terms.                                                          Reduction.
+with strategy {level} {reference} {tactice}                      #
+{simple?} apply {term}                                           #
+{simple?} eapply {term}                                          # apply and create existential variables

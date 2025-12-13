@@ -1,0 +1,49 @@
+Commands for Debugging:
+Fail {sentence}    #
+Succeed {sentence} #
+
+Print All                            #
+Print Assumptions {ref}              # all axioms, parameters, variables a theorem depends on.
+Print Typing Flags                   # status of typing flags
+
+Print Opaque Dependencies {ref}      #
+Print Transparent Dependencies {ref} #
+Print All Dependencies               #
+
+Print Debug GC    #
+Print LoadPath    #
+Print ML Path     #
+Print Section     #
+Print Libraries   # display loaded libraries.
+Print Strategy    #
+Print Strategies  #
+Print Module      #
+Print Module Type #
+Print Namespace   #
+Print ML Modules  # print loaded Ocaml libraries.
+Print Registered  #
+Print Registered Schemes #
+
+Inspect                        #
+About                          #
+Check                          #
+Type                           #
+
+Locate {ref}                   #
+Locate Term {ref}              #
+Locate Module {qualid}         #
+Locate Library {qualid}        #
+Locate File {str}              #
+Locate Ltac {tactic}           #
+Locate Ltac2 {tactic}          #
+
+Search                         #
+SearchPattern                  #
+SearchRewrite                  #
+SearchBlacklist                #
+Search Output Name Only        #
+
+Time {sentence}         #
+Instructions {sentence} # display number of CPU instructions needed to execute sentence.
+Profile {sentence}      #
+

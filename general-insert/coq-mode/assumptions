@@ -1,6 +1,10 @@
 Coq Extensions of Global Environment:
 Axiom      #
-Conjection #
+Axioms     #
+Conjecture #
 Parameter  #
-Hypothesis #
-Variable   #
+Parameters #
+Hypothesis # Use inside sections.
+Hypotheses # Use inside sections.
+Variable   # Use inside sections.
+Variables  # Use inside sections.

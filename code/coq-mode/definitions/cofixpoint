@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : CoFixpoint
+# uuid  : CoFixpoint
+# key   : CoFixpoint
+# group : definitions fun corecursive
+# --
+CoFixpoint $1 (${2:args}) :=
+    $0.

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : variant
+# uuid  : variant
+# key   : variant
+# group : definition types
+# --
+Variant ${1:unit : Set} :=
+    | ${3:tt : unit}
+.

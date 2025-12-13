@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : import.selection
+# uuid  : import.selection
+# key   : import.selection
+# group : imports
+# --
+Import $1($0).

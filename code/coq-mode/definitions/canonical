@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : canonical
+# uuid  : canonical
+# key   : canonical
+# group : definition type canonical unification
+# --
+Canonical $1.

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : collection
+# uuid  : collection
+# key   : collection
+# group : definitions hypotheses
+# --
+Collection $1 := ${2: aHyp bHyp cHyp}

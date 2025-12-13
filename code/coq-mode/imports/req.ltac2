@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : req.ltac2
+# uuid  : req.ltac2
+# key   : req.ltac2
+# group : proof-mode ltac2
+# --
+From Ltac2 Require Import Ltac2.

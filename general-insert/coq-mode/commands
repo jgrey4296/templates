@@ -1,50 +1,9 @@
 Coq Commands:
-Proof                          # Enter Proof mode.
-Proof Using                    # Enter Proof Mode with section variables.
-Qed                            # Exit Proof Mode with all goals completed.
-Admitted                       # Exit Proof Mode with incomplete goals.
-Default Proof Mode             # Noedit, Classic, Ltac2...
-Proof Mode                     # Noedit, Classic, Ltac2...
-
 Print                          #
-Print All                      #
-Print Assumptions              #
-Print Opaque Dependencies      #
-Print Transparent Dependencies #
-Print All Dependencies         #
-Print Debug GC                 #
-Print LoadPath                 #
-Print Section                  #
-Print Libraries                #
-Print Strategy                 #
-Print Strategies               #
-Print Module                   #
-Print Module Type              #
-Print Namespace                #
 
-
-Inspect                        #
-About                          #
-Check                          #
-Type                           #
-
-Search                         #
-SearchPattern                  #
-SearchRewrite                  #
-SearchBlacklist                #
-Search Output Name Only        #
-
-Locate                         #
-Locate Term                    #
-Locate Module                  #
-Locate Ltac                    #
-Locate Ltac2                   #
-Locate Library                 #
-Locate File                    #
-
-Load                           #
-From {} Require Import         #
-From {} Require Export         #
+Load                           # Load a file in load path.
+From {dirpath} Require Import {} # make components available by short names.
+From {dirpath} Require Export {} # component short names, and mark to export.
 
 Pwd                            #
 Cd                             #
@@ -59,8 +18,8 @@ BackTo                         #
 
 Quit                           #
 Drop                           #
-Time                           #
 Redirect                       #
-Timeout                        #
-Fail                           #
-Succeed                        #
+
+----- # Ocaml
+Declare ML Module {} # load an ocaml plugin.
+Register {qualid} as {qualid}. # make qualid's accessible to ocaml libraries.

@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : module.type
+# uuid  : module.type
+# key   : module.type
+# group : definitions module type
+# --
+Module Type $1.
+Parameter $2 : Set.
+$0
+End $1.

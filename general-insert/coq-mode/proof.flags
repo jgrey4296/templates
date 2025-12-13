@@ -1,0 +1,24 @@
+Coq Proof Flags:
+Implicit Arguments
+Strict Arguments
+Printing Implicit Defensive
+
+Diffs "{on, off, removed}"                 # (option)
+
+Solve Unification Constraints              # control delayed typechecking unification
+
+Mangle Names                               # (flag)
+Mangle Names Prefix {str}                  # (option)
+Mangle Names Light                         # (flag)
+
+Default Proof Using "{}"                   # (Option) Add default sections to use for proofs.
+Suggest Proof Using                        # (flag)
+Bullet Behavior "{None, Strict Subproofs}" # bullet behaviour in proofs.
+
+Hyps Limit {nat}                           # (option) control max number of hypotheses displayed in goals.
+Nested Proofs Allowed                      # (floag)
+Printing Goal Names                        # (flag)
+Printing Goal Tags                         # (flag)
+
+SsrRewrite # (flag) controls incompatible rewrite syntax of ssreflect.
+SSrIdents # (flag)

@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name  : mutual.types
+# uuid  : mutual.types
+# key   : mutual.types
+# group : definitions types
+# --
+
+Parameters A B : Set.
+Inductive ${1:tree} : Set := node : A -> $2 -> $1
+with $2 : Set :=
+    | left : B -> $2
+    | cons : $1 -> $2 -> $2.

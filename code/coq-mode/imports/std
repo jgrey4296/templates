@@ -4,11 +4,11 @@
 # key   : import.std
 # group : imports
 # --
-From Coq Require Import Bool.Bool.
-From Coq Require Import Arith.Arith.
-From Coq Require Import Init.Nat.
-From Coq Require Import Arith.PeanoNat. Import Nat.
-From Coq Require Import Arith.EqNat.
-From Coq Require Import Lia.
-From Coq Require Import Lists.List. Import ListNotations.
-From Coq Require Import Logic.FunctionalExtensionality.
+From Stdlib Require Import Bool.Bool.
+From Stdlib Require Import Arith.Arith.
+From Stdlib Require Import Init.Nat.
+From Stdlib Require Import Arith.PeanoNat. Import Nat.
+From Stdlib Require Import Arith.EqNat.
+From Stdlib Require Import Lia.
+From Stdlib Require Import Lists.List. Import ListNotations.
+From Stdlib Require Import Logic.FunctionalExtensionality.

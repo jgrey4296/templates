@@ -1,0 +1,47 @@
+Coq Proof Commands:
+Proof                       # Enter Proof mode.
+Proof Using                 # Enter Proof Mode with section variables.
+Qed                         # Exit Proof Mode with all goals completed.
+Admitted                    # Exit Proof Mode with incomplete goals.
+Default Proof Mode "{name}" # Noedit, Classic, Ltac2...
+Proof Mode "{name}"         # Noedit, Classic, Ltac2...
+
+nat : { ... }       # focus on goal nat
+[ ident ] : { ... } # focus on goal ident
+
+Unfocused         # Command. Succeed if there are no more goals.
+Focus {ID}        # Focus on a goal. Or: ID { ... }
+shelve            # Pause goal and don't display in proof state.
+shelve_unifiable  # Shelve goals that are mentioned in other goals.
+Unshelve          # Add all shelved goals back into focus.
+unshelve {tactic} # Perform tactic, then unshelve existential variables added to the shelve by that tactic.
+admit             # Skip goal.
+give_up           # Skip goal.
+cycle             # Reorder goals.
+swap              # Exchange two goals position in proof state.
+all: revgoals     # Reverse the order of goals.
+Undo              # undo last tactic.
+Restart           # restore proof to original goal.
+Guarded           # Check recursive conditions aren't violated.
+Validate Proof    # check the current partial proof.
+
+---- # Proof debugging
+Show {goal?}                # Display current goal or all goals
+Show {goal} {nat} at {nat}  #
+Show Proof                  # Show the current proof term.
+Show Conjectures            # Name all theorems being proved. (such as abstracted lemmas)
+Show Intro                  # Simulate naming process of 'intros'
+Show Intros                 # Simulate naming process of 'intros'
+Show Existentials           # Display all open goals / existential variables.
+Show Match {type}           # Display match paths for a type.
+Show Universes              # Display universe constraints.
+Show Goal {goal} at {state} # Display a goal at a specific position
+
+Print Ltac2 {qualid} #
+Print Ltac2 Type {qualid} #
+Ltac2 Check {expr} #
+Print Ltac2 Signatures #
+Print Ltac Signatures #
+
+Optimize Proof                             #
+Optimize Heap                              #

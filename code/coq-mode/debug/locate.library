@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Locate Library
+# group: debug
+# --
+Locate Library $1.

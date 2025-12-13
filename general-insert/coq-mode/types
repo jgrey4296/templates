@@ -1,0 +1,8 @@
+Basic Rocq Types:
+unit       #
+bool       # true | false
+nat        # 0 | S(n)
+option (A) # Some (A) | None
+
+sum (A B)  # inl (A) | inr (B)
+prod (A B) # pair (A) (B)

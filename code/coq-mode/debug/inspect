@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Inspect
+# group: debug
+# --
+Inspect $1.

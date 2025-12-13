@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name  : typeclass
+# uuid  : typeclass
+# key   : typeclass
+# group : definition type
+# --
+Class $1 (A:Type) : ${2:sort} :=
+{
+    eqb : A -> A -> bool ;
+}.
+
+Instance ${3:instName} : $1 unit := {
+    eqb x y := true ;
+
+}.

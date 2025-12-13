@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Inductive
+# key: Ind
+# group: definitions type
+# --
+Inductive $1 : $2 :=
+| $0
+.

@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name  : module
+# uuid  : module
+# key   : module
+# group :
+# --
+Module $1.
+    (* imports: *)
+$0
+
+    (* types *)
+
+
+    (* functions *)
+
+End $1.

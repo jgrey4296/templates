@@ -1,6 +1,6 @@
-Coq Sorts:
-Set      #
-Prop     #
-SProp    #
-Type     #
-Type @{} #
+Coq Sorts, types of types:
+Set              # Small sets / Program types.
+Prop             # Logical Propositions
+SProp            # Propositions with irrelevant proofs.
+Type             #
+Type @{universe} #

@@ -1,0 +1,10 @@
+Rocq Conversion Rules:
+alpha-conversion # syntactic equivalence ignoring variable name differences.
+beta-reduction   # rewriting function applications with their arguments.
+delta-reduction  # replaces variables/constants with their values.
+iota-reduction   # destructors applied to object / match+fix+cofix reduction.
+zeta-reduction   # removes let-in definitions with the values.
+eta-expansion    # expands terms into lambda functions.
+match-reduction  # eliminates 'match'
+fix-reduction    # replaces 'fix' with beta reduction.
+cofix-reduction  # replaces 'cofix' with beta reduction.

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# key: SP
+# name: SearchPattern
+# group: debug
+# --
+SearchPattern ($1).
+$0

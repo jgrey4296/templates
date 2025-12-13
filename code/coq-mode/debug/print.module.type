@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : print.module.type
+# uuid  : print.module.type
+# key   : print.module.type
+# group : debug
+# --
+Print Module Type $1.

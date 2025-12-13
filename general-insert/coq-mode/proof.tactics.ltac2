@@ -1,0 +1,612 @@
+Rocq Ltac2 Tactics:
+()                                              # equivalent to ltac's idtac.
+abstract0                                       #  (unit -> unit) -> unit
+absurd0                                         #  (unit -> constr) -> unit
+apply0                                          # Std.advanced_flag -> Std.evar_flag -> (unit -> Std.constr_with_bindings) list -> (ident * Std.intro_pattern option) option -> unit
+assert0                                         #  bool -> (unit -> Std.assertion) -> unit
+auto0                                           #  int option -> Std.reference list option -> ident list option option -> unit
+change0                                         #  pattern option * (constr array -> constr) -> Std.clause option -> unit
+clear0                                          #  ident list -> unit
+complete                                        #  (unit -> 'a) -> 'a
+destruct0                                       #  bool -> Std.induction_clause list -> (unit -> Std.constr_with_bindings option) -> unit
+dispatch0                                       # (unit -> 'a) -> (unit -> unit) list * ((unit -> unit) * (unit -> unit) list) option -> unit
+do0                                             #  (unit -> int) -> (unit -> 'a) -> unit
+eauto0                                          #  int option -> Std.reference list option -> ident list option option -> unit
+elim0                                           #  bool -> (unit -> constr) -> (unit -> Std.bindings) -> (unit -> Std.constr_with_bindings option) -> unit
+enough0                                         #  bool -> (unit -> Std.assertion) -> unit
+enough_from_assertion                           #  Std.assertion -> unit
+enter_h                                         #  bool -> (bool -> 'a -> unit) -> (unit -> 'a) -> unit
+Evar.equal                                      #  Evar.t -> Evar.t -> bool
+exact0                                          #  bool -> (unit -> constr) -> unit
+exact1                                          #  bool -> preterm -> unit
+exists0                                         #  bool -> (unit -> Std.bindings) list -> unit
+f_equal0                                        #  unit -> unit
+fail0                                           #  unit -> unit
+first0                                          #  (unit -> unit) list -> unit
+Float.equal                                     #  Float.t -> Float.t -> bool
+fold0                                           #  (unit -> constr list) -> Std.clause option -> unit
+fst                                             #  'a * 'b -> 'a
+generalize0                                     #  (unit -> (constr * Std.occurrences * ident option) list) -> unit
+ifcatch                                         #  (unit -> 'b) -> ('b -> 'a) -> (exn -> 'a) -> 'a
+intros0                                         #  Std.evar_flag -> Std.intro_pattern list -> unit
+left0                                           #  bool -> (unit -> Std.bindings) -> unit
+Meta.equal                                      #  Meta.t -> Meta.t -> bool
+now0                                            #  (unit -> 'a) -> unit
+pose0                                           #  bool -> (unit -> ident option * constr) -> unit
+progress0                                       #  (unit -> unit) -> unit
+repeat0                                         #  (unit -> unit) -> unit
+rewrite0                                        #  Std.evar_flag -> Std.rewriting list -> Std.clause option -> (unit -> unit) option -> unit
+right0                                          #  bool -> (unit -> Std.bindings) -> unit
+show_profile                                    #  unit -> unit
+snd                                             #  'b * 'a -> 'a
+solve0                                          #  (unit -> unit) list -> unit
+specialize0                                     #  (unit -> Std.constr_with_bindings) -> Std.intro_pattern option -> unit
+split0                                          #  bool -> (unit -> Std.bindings) -> unit
+start_profiling                                 #  unit -> unit
+stop_profiling                                  #  unit -> unit
+symmetry0                                       #  Std.clause option -> unit
+time0                                           #  (unit -> 'a) -> 'a
+trivial0                                        #  Std.reference list option -> ident list option option -> unit
+try0                                            #  (unit -> unit) -> unit
+
+-----                                           # Array
+Array.append                                    #  'a array -> 'a array -> 'a array
+Array.blit                                      #  'a array -> int -> 'a array -> int -> int -> unit
+Array.concat                                    #  'a array list -> 'a array
+Array.copy                                      #  'a array -> 'a array
+Array.empty                                     #  'a array
+Array.equal                                     #  ('b -> 'a -> bool) -> 'b array -> 'a array -> bool
+Array.exist                                     #  ('a -> bool) -> 'a array -> bool
+Array.exist_aux                                 #  ('a -> bool) -> 'a array -> int -> int -> bool
+Array.fill                                      #  'a array -> int -> int -> 'a -> unit
+Array.fold_left                                 #  ('a -> 'b -> 'a) -> 'a -> 'b array -> 'a
+Array.fold_left_aux                             #  ('a -> 'b -> 'a) -> 'a -> 'b array -> int -> int -> 'a
+Array.fold_right                                #  ('b -> 'a -> 'a) -> 'b array -> 'a -> 'a
+Array.fold_right_aux                            #  ('b -> 'a -> 'a) -> 'b array -> 'a -> int -> int -> 'a
+Array.for_all                                   #  ('a -> bool) -> 'a array -> bool
+Array.for_all2                                  #  ('b -> 'a -> bool) -> 'b array -> 'a array -> bool
+Array.for_all2_aux                              #  ('b -> 'a -> bool) -> 'b array -> 'a array -> int -> int -> bool
+Array.for_all_aux                               #  ('a -> bool) -> 'a array -> int -> int -> bool
+Array.get                                       #  'a array -> int -> 'a
+Array.init                                      #  int -> (int -> 'a) -> 'a array
+Array.iter                                      #  ('a -> unit) -> 'a array -> unit
+Array.iter2                                     #  ('b -> 'a -> unit) -> 'b array -> 'a array -> unit
+Array.iter2_aux                                 #  ('b -> 'a -> unit) -> 'b array -> 'a array -> int -> int -> unit
+Array.iter_aux                                  #  ('a -> unit) -> 'a array -> int -> int -> unit
+Array.iteri                                     #  (int -> 'a -> unit) -> 'a array -> unit
+Array.iteri_aux                                 #  (int -> 'a -> unit) -> 'a array -> int -> int -> unit
+Array.length                                    #  'a array -> int
+Array.lowlevel_blit                             #  'a array -> int -> 'a array -> int -> int -> unit
+Array.lowlevel_fill                             #  'a array -> int -> int -> 'a -> unit
+Array.lowlevel_sub                              #  'a array -> int -> int -> 'a array
+Array.make                                      #  int -> 'a -> 'a array
+Array.make_matrix                               #  int -> int -> 'a -> 'a array array
+Array.map                                       #  ('b -> 'a) -> 'b array -> 'a array
+Array.map2                                      #  ('c -> 'b -> 'a) -> 'c array -> 'b array -> 'a array
+Array.mapi                                      #  (int -> 'b -> 'a) -> 'b array -> 'a array
+Array.mem                                       #  ('a -> 'a -> bool) -> 'a -> 'a array -> bool
+Array.of_list                                   #  'a list -> 'a array
+Array.of_list_aux                               #  'a list -> 'a array -> int -> unit
+Array.rev                                       #  'a array -> 'a array
+Array.set                                       #  'a array -> int -> 'a -> unit
+Array.sub                                       #  'a array -> int -> int -> 'a array
+Array.to_list                                   #  'a array -> 'a list
+Array.to_list_aux                               #  'a array -> int -> int -> 'a list
+
+
+----                                            # bool
+Bool.and                                        #  bool -> bool -> bool
+Bool.equal                                      #  bool -> bool -> bool
+Bool.impl                                       #  bool -> bool -> bool
+Bool.neg                                        #  bool -> bool
+Bool.or                                         #  bool -> bool -> bool
+Bool.xor                                        #  bool -> bool -> bool
+
+----                                            # char
+Char.compare                                    #  char -> char -> int
+Char.equal                                      #  char -> char -> bool
+Char.of_int                                     #  int -> char
+Char.to_int                                     #  char -> int
+
+----                                            # constant
+Constant.equal                                  #  constant -> constant -> bool
+
+----                                            # constraint
+Constr.Binder.make                              #  ident option -> constr -> binder
+Constr.Binder.name                              #  binder -> ident option
+Constr.Binder.relevance                         #  binder -> Constr.Binder.relevance
+Constr.Binder.type                              #  binder -> constr
+Constr.Binder.unsafe_make                       #  ident option -> Constr.Binder.relevance -> constr -> binder
+Constr.Cast.default                             #  cast
+Constr.Cast.equal                               #  cast -> cast -> bool
+Constr.Cast.native                              #  cast
+Constr.Cast.vm                                  #  cast
+Constr.equal                                    #  constr -> constr -> bool
+Constr.has_evar                                 #  constr -> bool
+Constr.in_context                               #  ident -> constr -> (unit -> unit) -> constr
+Constr.is_array                                 #  constr -> bool
+Constr.is_cofix                                 #  constr -> bool
+Constr.is_const                                 #  constr -> bool
+Constr.is_constructor                           #  constr -> bool
+Constr.is_evar                                  #  constr -> bool
+Constr.is_fix                                   #  constr -> bool
+Constr.is_float                                 #  constr -> bool
+Constr.is_ind                                   #  constr -> bool
+Constr.is_proj                                  #  constr -> bool
+Constr.is_uint63                                #  constr -> bool
+Constr.is_var                                   #  constr -> bool
+Constr.pretype                                  #  preterm -> constr
+Constr.Pretype.expected_istype                  #  Constr.Pretype.expected_type
+Constr.Pretype.expected_oftype                  #  constr -> Constr.Pretype.expected_type
+Constr.Pretype.expected_without_type_constraint #  Constr.Pretype.expected_type
+Constr.Pretype.Flags.constr_flags               #  Constr.Pretype.Flags.t
+Constr.Pretype.Flags.set_allow_evars            #  bool -> Constr.Pretype.Flags.t -> Constr.Pretype.Flags.t
+Constr.Pretype.Flags.set_nf_evars               #  bool -> Constr.Pretype.Flags.t -> Constr.Pretype.Flags.t
+Constr.Pretype.Flags.set_use_coercions          #  bool -> Constr.Pretype.Flags.t -> Constr.Pretype.Flags.t
+Constr.Pretype.Flags.set_use_typeclasses        #  bool -> Constr.Pretype.Flags.t -> Constr.Pretype.Flags.t
+Constr.Pretype.pretype                          #  Constr.Pretype.Flags.t -> Constr.Pretype.expected_type -> preterm -> constr
+Constr.type                                     #  constr -> constr
+Constr.Unsafe.case                              #  inductive -> Constr.Unsafe.case
+Constr.Unsafe.Case.equal                        #  Constr.Unsafe.case -> Constr.Unsafe.case -> bool
+Constr.Unsafe.check                             #  constr -> constr result
+Constr.Unsafe.closedn                           #  int -> constr -> bool
+Constr.Unsafe.closenl                           #  ident list -> int -> constr -> constr
+Constr.Unsafe.constructor                       #  inductive -> int -> constructor
+Constr.Unsafe.is_closed                         #  constr -> bool
+Constr.Unsafe.iter                              #  (constr -> unit) -> constr -> unit
+Constr.Unsafe.iter_with_binders                 # ('a -> binder -> 'a) -> ('a -> constr -> unit) -> 'a -> constr -> unit
+Constr.Unsafe.kind                              #  constr -> Constr.Unsafe.kind
+Constr.Unsafe.kind_nocast                       #  constr -> Constr.Unsafe.kind
+Constr.Unsafe.liftn                             #  int -> int -> constr -> constr
+Constr.Unsafe.make                              #  Constr.Unsafe.kind -> constr
+Constr.Unsafe.map                               #  (constr -> constr) -> constr -> constr
+Constr.Unsafe.map_with_binders                  # ('a -> binder -> 'a) -> ('a -> constr -> constr) -> 'a -> constr -> constr
+Constr.Unsafe.noccur_between                    #  int -> int -> constr -> bool
+Constr.Unsafe.noccurn                           #  int -> constr -> bool
+Constr.Unsafe.occur_between                     #  int -> int -> constr -> bool
+Constr.Unsafe.occurn                            #  int -> constr -> bool
+Constr.Unsafe.substnl                           #  constr list -> int -> constr -> constr
+
+----                                            # constructor
+Constructor.equal                               #  Constructor.t -> Constructor.t -> bool
+Constructor.index                               #  Constructor.t -> int
+Constructor.inductive                           #  Constructor.t -> inductive
+constructor0                                    #  bool -> int -> (unit -> Std.bindings) -> unit
+
+----                                            # control
+Control.abstract                                #  ident option -> (unit -> unit) -> unit
+Control.assert_bounds                           #  string -> bool -> unit
+Control.assert_false                            #  bool -> unit
+Control.assert_true                             #  bool -> unit
+Control.assert_valid_argument                   #  string -> bool -> unit
+Control.backtrack_tactic_failure                #  string -> 'a
+Control.case                                    #  (unit -> 'a) -> ('a * (exn -> 'a)) result
+Control.check_interrupt                         #  unit -> unit
+Control.clear_err_info                          #  err -> err
+Control.clear_exn_info                          #  exn -> exn
+Control.dispatch                                #  (unit -> unit) list -> unit
+Control.enter                                   #  (unit -> unit) -> unit
+Control.extend                                  #  (unit -> unit) list -> (unit -> unit) -> (unit -> unit) list -> unit
+Control.focus                                   #  int -> int -> (unit -> 'a) -> 'a
+Control.goal                                    #  unit -> constr
+Control.hyp                                     #  ident -> constr
+Control.hyp_value                               #  ident -> constr option
+Control.hyps                                    #  unit -> (ident * constr option * constr) list
+Control.new_goal                                #  evar -> unit
+Control.numgoals                                #  unit -> int
+Control.once                                    #  (unit -> 'a) -> 'a
+Control.once_plus                               #  (unit -> 'a) -> (exn -> 'a) -> 'a
+Control.once_plus_bt                            #  (unit -> 'a) -> (exn -> exninfo -> 'a) -> 'a
+Control.plus                                    #  (unit -> 'a) -> (exn -> 'a) -> 'a
+Control.plus_bt                                 #  (unit -> 'a) -> (exn -> exninfo -> 'a) -> 'a
+Control.progress                                #  (unit -> 'a) -> 'a
+Control.refine                                  #  (unit -> constr) -> unit
+Control.shelve                                  #  unit -> unit
+Control.shelve_unifiable                        #  unit -> unit
+Control.throw                                   #  exn -> 'a
+Control.throw_bt                                #  exn -> exninfo -> 'a
+Control.throw_invalid_argument                  #  string -> 'a
+Control.throw_out_of_bounds                     #  string -> 'a
+Control.time                                    #  string option -> (unit -> 'a) -> 'a
+Control.timeout                                 #  int -> (unit -> 'a) -> 'a
+Control.timeoutf                                #  float -> (unit -> 'a) -> 'a
+Control.unshelve                                #  (unit -> 'a) -> 'a
+Control.with_holes                              #  (unit -> 'b) -> ('b -> 'a) -> 'a
+Control.zero                                    #  exn -> 'a
+Control.zero_bt                                 #  exn -> exninfo -> 'a
+
+----                                            # default
+default_db                                      #  'a list option option -> 'a list option
+default_everywhere                              #  Std.clause option -> Std.clause
+default_list                                    #  'a list option -> 'a list
+default_on_concl                                #  Std.clause option -> Std.clause
+
+----                                            # env
+Env.expand                                      #  ident list -> Std.reference list
+Env.get                                         #  ident list -> Std.reference option
+Env.instantiate                                 #  Std.reference -> constr
+Env.path                                        #  Std.reference -> ident list
+
+----                                            # fmap
+FMap.add                                        #  'a -> 'b -> ('a, 'b) FMap.t -> ('a, 'b) FMap.t
+FMap.bindings                                   #  ('a, 'b) FMap.t -> ('a * 'b) list
+FMap.cardinal                                   #  ('a, 'b) FMap.t -> int
+FMap.domain                                     #  ('a, 'b) FMap.t -> 'a FSet.t
+FMap.empty                                      #  'a FSet.Tags.tag -> ('a, 'b) FMap.t
+FMap.find_opt                                   #  'b -> ('b, 'a) FMap.t -> 'a option
+FMap.fold                                       #  ('b -> 'c -> 'a -> 'a) -> ('b, 'c) FMap.t -> 'a -> 'a
+FMap.is_empty                                   #  ('a, 'b) FMap.t -> bool
+FMap.mapi                                       #  ('a -> 'c -> 'b) -> ('a, 'c) FMap.t -> ('a, 'b) FMap.t
+FMap.mem                                        #  'a -> ('a, 'b) FMap.t -> bool
+FMap.remove                                     #  'a -> ('a, 'b) FMap.t -> ('a, 'b) FMap.t
+
+----                                            # Fresh
+Fresh.Free.of_constr                            #  constr -> Fresh.Free.t
+Fresh.Free.of_goal                              #  unit -> Fresh.Free.t
+Fresh.Free.of_ids                               #  ident list -> Fresh.Free.t
+Fresh.Free.union                                #  Fresh.Free.t -> Fresh.Free.t -> Fresh.Free.t
+Fresh.fresh                                     #  Fresh.Free.t -> ident -> ident
+Fresh.in_goal                                   #  ident -> ident
+
+----                                            # fset
+FSet.add                                        #  'a -> 'a FSet.t -> 'a FSet.t
+FSet.cardinal                                   #  'a FSet.t -> int
+FSet.diff                                       #  'a FSet.t -> 'a FSet.t -> 'a FSet.t
+FSet.elements                                   #  'a FSet.t -> 'a list
+FSet.empty                                      #  'a FSet.Tags.tag -> 'a FSet.t
+FSet.equal                                      #  'a FSet.t -> 'a FSet.t -> bool
+FSet.inter                                      #  'a FSet.t -> 'a FSet.t -> 'a FSet.t
+FSet.is_empty                                   #  'a FSet.t -> bool
+FSet.mem                                        #  'a -> 'a FSet.t -> bool
+FSet.remove                                     #  'a -> 'a FSet.t -> 'a FSet.t
+FSet.subset                                     #  'a FSet.t -> 'a FSet.t -> bool
+FSet.Tags.constant_tag                          #  constant FSet.Tags.tag
+FSet.Tags.constructor_tag                       #  constructor FSet.Tags.tag
+FSet.Tags.ident_tag                             #  ident FSet.Tags.tag
+FSet.Tags.inductive_tag                         #  inductive FSet.Tags.tag
+FSet.Tags.int_tag                               #  int FSet.Tags.tag
+FSet.Tags.string_tag                            #  string FSet.Tags.tag
+FSet.union                                      #  'a FSet.t -> 'a FSet.t -> 'a FSet.t
+
+----                                            # Ident
+Ident.equal                                     #  Ident.t -> Ident.t -> bool
+Ident.of_string                                 #  string -> Ident.t option
+Ident.to_string                                 #  Ident.t -> string
+
+----                                            # ind
+Ind.data                                        #  Ind.t -> Ind.data
+Ind.equal                                       #  Ind.t -> Ind.t -> bool
+Ind.get_block                                   #  Ind.data -> int -> Ind.data
+Ind.get_constructor                             #  Ind.data -> int -> constructor
+Ind.get_projections                             #  Ind.data -> projection array option
+Ind.index                                       #  Ind.t -> int
+Ind.nblocks                                     #  Ind.data -> int
+Ind.nconstructors                               #  Ind.data -> int
+Ind.repr                                        #  Ind.data -> Ind.t
+induction0                                      #  bool -> Std.induction_clause list -> (unit -> Std.constr_with_bindings option) -> unit
+
+----                                            # Int
+Int.abs                                         # int -> int
+Int.add                                         #  int -> int -> int
+Int.asr                                         #  int -> int -> int
+Int.compare                                     #  int -> int -> int
+Int.div                                         #  int -> int -> int
+Int.equal                                       #  int -> int -> bool
+Int.ge                                          #  int -> int -> bool
+Int.gt                                          #  int -> int -> bool
+Int.land                                        #  int -> int -> int
+Int.le                                          #  int -> int -> bool
+Int.lnot                                        #  int -> int
+Int.lor                                         #  int -> int -> int
+Int.lsl                                         #  int -> int -> int
+Int.lsr                                         #  int -> int -> int
+Int.lt                                          #  int -> int -> bool
+Int.lxor                                        #  int -> int -> int
+Int.mod                                         #  int -> int -> int
+Int.mul                                         #  int -> int -> int
+Int.neg                                         #  int -> int
+Int.sub                                         #  int -> int -> int
+
+----                                            # Lazy
+Lazy.force                                      #  'a Lazy.t -> 'a
+Lazy.from_fun                                   #  (unit -> 'a) -> 'a Lazy.t
+Lazy.from_val                                   #  'a -> 'a Lazy.t
+Lazy.is_val                                     #  'a Lazy.t -> bool
+Lazy.map                                        #  ('b -> 'a) -> 'b Lazy.t -> 'a Lazy.t
+Lazy.map_val                                    #  ('b -> 'a) -> 'b Lazy.t -> 'a Lazy.t
+
+----                                            # List
+List.append                                     #  'a list -> 'a list -> 'a list
+List.assoc                                      #  ('b -> 'b -> bool) -> 'b -> ('b * 'a) list -> 'a
+List.assoc_opt                                  #  ('b -> 'b -> bool) -> 'b -> ('b * 'a) list -> 'a option
+List.combine                                    #  'a list -> 'b list -> ('a * 'b) list
+List.compare_length_with                        #  'a list -> int -> int
+List.compare_lengths                            #  'b list -> 'a list -> int
+List.concat                                     #  'a list list -> 'a list
+List.concat_rev                                 #  'a list list -> 'a list
+List.cons                                       #  'a -> 'a list -> 'a list
+List.count_occ                                  #  ('a -> 'a -> bool) -> 'a -> 'a list -> int
+List.dest                                       #  'a list -> 'a * 'a list
+List.enumerate                                  #  'a list -> (int * 'a) list
+List.equal                                      #  ('b -> 'a -> bool) -> 'b list -> 'a list -> bool
+List.exist                                      #  ('a -> bool) -> 'a list -> bool
+List.exist2                                     #  ('b -> 'a -> bool) -> 'b list -> 'a list -> bool
+List.filter                                     #  ('a -> bool) -> 'a list -> 'a list
+List.filter_out                                 #  ('a -> bool) -> 'a list -> 'a list
+List.find                                       #  ('a -> bool) -> 'a list -> 'a
+List.find_all                                   #  ('a -> bool) -> 'a list -> 'a list
+List.find_opt                                   #  ('a -> bool) -> 'a list -> 'a option
+List.find_rev                                   #  ('a -> bool) -> 'a list -> 'a
+List.find_rev_opt                               #  ('a -> bool) -> 'a list -> 'a option
+List.firstn                                     #  int -> 'a list -> 'a list
+List.flat_map                                   #  ('b -> 'a list) -> 'b list -> 'a list
+List.flatten                                    #  'a list list -> 'a list
+List.fold_left                                  #  ('a -> 'b -> 'a) -> 'a -> 'b list -> 'a
+List.fold_left2                                 #  ('a -> 'c -> 'b -> 'a) -> 'a -> 'c list -> 'b list -> 'a
+List.fold_lefti                                 #  (int -> 'a -> 'b -> 'a) -> 'a -> 'b list -> 'a
+List.fold_right                                 #  ('b -> 'a -> 'a) -> 'b list -> 'a -> 'a
+List.fold_right2                                #  ('c -> 'b -> 'a -> 'a) -> 'c list -> 'b list -> 'a -> 'a
+List.for_all                                    #  ('a -> bool) -> 'a list -> bool
+List.for_all2                                   #  ('b -> 'a -> bool) -> 'b list -> 'a list -> bool
+List.for_all2_aux                               #  ('b list -> 'a list -> bool) -> ('b -> 'a -> bool) -> 'b list -> 'a list -> bool
+List.hd                                         #  'a list -> 'a
+List.hd_opt                                     #  'a list -> 'a option
+List.inclusive_range                            #  int -> int -> int list
+List.init                                       #  int -> (int -> 'a) -> 'a list
+List.is_empty                                   #  'a list -> bool
+List.iter                                       #  ('a -> unit) -> 'a list -> unit
+List.iter2                                      #  ('b -> 'a -> unit) -> 'b list -> 'a list -> unit
+List.iter_merge                                 #  ('a -> 'a -> int) -> 'a list option list -> 'a list -> 'a list
+List.iteri                                      #  (int -> 'a -> unit) -> 'a list -> unit
+List.iteri_aux                                  #  int -> (int -> 'a -> unit) -> 'a list -> unit
+List.last                                       #  'a list -> 'a
+List.last_opt                                   #  'a list -> 'a option
+List.lastn                                      #  int -> 'a list -> 'a list
+List.length                                     #  'a list -> int
+List.list_power                                 #  'a list -> 'b list -> ('a * 'b) list list
+List.list_prod                                  #  'a list -> 'b list -> ('a * 'b) list
+List.map                                        #  ('b -> 'a) -> 'b list -> 'a list
+List.map2                                       #  ('c -> 'b -> 'a) -> 'c list -> 'b list -> 'a list
+List.map_filter                                 #  ('b -> 'a option) -> 'b list -> 'a list
+List.mapi                                       #  (int -> 'b -> 'a) -> 'b list -> 'a list
+List.mapi_aux                                   #  int -> (int -> 'b -> 'a) -> 'b list -> 'a list
+List.mem                                        #  ('a -> 'a -> bool) -> 'a -> 'a list -> bool
+List.mem_assoc                                  #  ('a -> 'a -> bool) -> 'a -> ('a * 'b) list -> bool
+List.merge                                      #  ('a -> 'a -> int) -> 'a list -> 'a list -> 'a list
+List.merge_list_to_stack                        # ('a -> 'a -> int) -> 'a list option list -> 'a list -> 'a list option list
+List.merge_stack                                #  ('a -> 'a -> int) -> 'a list option list -> 'a list
+List.nodup                                      #  ('a -> 'a -> bool) -> 'a list -> 'a list
+List.nth                                        #  'a list -> int -> 'a
+List.nth_opt                                    #  'a list -> int -> 'a option
+List.nth_opt_aux                                #  'a list -> int -> 'a option
+List.partition                                  #  ('a -> bool) -> 'a list -> 'a list * 'a list
+List.range                                      #  int -> int -> int list
+List.remove                                     #  ('a -> 'a -> bool) -> 'a -> 'a list -> 'a list
+List.remove_assoc                               #  ('a -> 'a -> bool) -> 'a -> ('a * 'b) list -> ('a * 'b) list
+List.removelast                                 #  'a list -> 'a list
+List.repeat                                     #  'a -> int -> 'a list
+List.rev                                        #  'a list -> 'a list
+List.rev_append                                 #  'a list -> 'a list -> 'a list
+List.rev_map                                    #  ('b -> 'a) -> 'b list -> 'a list
+List.rev_map2                                   #  ('c -> 'b -> 'a) -> 'c list -> 'b list -> 'a list
+List.seq                                        #  int -> int -> int -> int list
+List.skipn                                      #  int -> 'a list -> 'a list
+List.sort                                       #  ('a -> 'a -> int) -> 'a list -> 'a list
+List.sort_uniq                                  #  ('a -> 'a -> int) -> 'a list -> 'a list
+List.split                                      #  ('a * 'b) list -> 'a list * 'b list
+List.tl                                         #  'a list -> 'a list
+
+----                                            # Ltac1
+Ltac1.apply                                     #  Ltac1.t -> Ltac1.t list -> (Ltac1.t -> unit) -> unit
+Ltac1.lambda                                    #  (Ltac1.t -> Ltac1.t) -> Ltac1.t
+Ltac1.of_constr                                 #  constr -> Ltac1.t
+Ltac1.of_ident                                  #  ident -> Ltac1.t
+Ltac1.of_int                                    #  int -> Ltac1.t
+Ltac1.of_intro_pattern                          #  Std.intro_pattern -> Ltac1.t
+Ltac1.of_list                                   #  Ltac1.t list -> Ltac1.t
+Ltac1.of_preterm                                #  preterm -> Ltac1.t
+Ltac1.ref                                       #  ident list -> Ltac1.t
+Ltac1.run                                       #  Ltac1.t -> unit
+Ltac1.tag_name                                  #  Ltac1.t -> string
+Ltac1.to_constr                                 #  Ltac1.t -> constr option
+Ltac1.to_ident                                  #  Ltac1.t -> ident option
+Ltac1.to_int                                    #  Ltac1.t -> int option
+Ltac1.to_intro_pattern                          #  Ltac1.t -> Std.intro_pattern option
+Ltac1.to_list                                   #  Ltac1.t -> Ltac1.t list option
+Ltac1.to_preterm                                #  Ltac1.t -> preterm option
+
+----                                            # Message
+Message.break                                   #  int -> int -> message
+Message.concat                                  #  message -> message -> message
+Message.force_new_line                          #  message
+Message.Format.alpha                            #  ('a, 'd, 'c, 'e) format -> (('d -> 'b -> 'c) -> 'b -> 'a, 'd, 'c, 'e) format
+Message.Format.constr                           #  ('a, 'b, 'c, 'd) format -> (constr -> 'a, 'b, 'c, 'd) format
+Message.Format.ident                            #  ('a, 'b, 'c, 'd) format -> (ident -> 'a, 'b, 'c, 'd) format
+Message.Format.ikfprintf                        #  ('b -> 'c) -> 'b -> ('a, unit, 'b, 'c) format -> 'a
+Message.Format.int                              #  ('a, 'b, 'c, 'd) format -> (int -> 'a, 'b, 'c, 'd) format
+Message.Format.kfprintf                         #  (message -> 'b) -> ('a, unit, message, 'b) format -> 'a
+Message.Format.literal                          #  string -> ('a, 'b, 'c, 'd) format -> ('a, 'b, 'c, 'd) format
+Message.Format.stop                             #  ('a, 'b, 'c, 'a) format
+Message.Format.string                           #  ('a, 'b, 'c, 'd) format -> (string -> 'a, 'b, 'c, 'd) format
+Message.hbox                                    #  message -> message
+Message.hovbox                                  #  int -> message -> message
+Message.hvbox                                   #  int -> message -> message
+Message.of_constr                               #  constr -> message
+Message.of_exn                                  #  exn -> message
+Message.of_ident                                #  ident -> message
+Message.of_int                                  #  int -> message
+Message.of_string                               #  string -> message
+Message.print                                   #  message -> unit
+Message.space                                   #  message
+Message.to_string                               #  message -> string
+Message.vbox                                    #  int -> message -> message
+
+----                                            # Option
+Option.bind                                     #  'b option -> ('b -> 'a option) -> 'a option
+Option.default                                  #  'a -> 'a option -> 'a
+Option.equal                                    #  ('b -> 'a -> bool) -> 'b option -> 'a option -> bool
+Option.get                                      #  'a option -> 'a
+Option.get_bt                                   #  'a option -> 'a
+Option.lift                                     #  ('b -> 'a) -> 'b option -> 'a option
+Option.map                                      #  ('b -> 'a) -> 'b option -> 'a option
+Option.map_default                              #  ('b -> 'a) -> 'a -> 'b option -> 'a
+Option.may                                      #  ('a -> unit) -> 'a option -> unit
+Option.ret                                      #  'a -> 'a option
+orelse                                          #  (unit -> 'a) -> (exn -> 'a) -> 'a
+
+----                                            # Pattern
+Pattern.empty_context                           #  Pattern.context
+Pattern.instantiate                             #  Pattern.context -> constr -> constr
+Pattern.lazy_goal_match0                        #  bool -> 'a Pattern.goal_matching -> 'a
+Pattern.lazy_match0                             #  constr -> 'a Pattern.constr_matching -> 'a
+Pattern.matches                                 #  Pattern.t -> constr -> (ident * constr) list
+Pattern.matches_goal                            # bool -> ((Pattern.match_kind * Pattern.t) option * (Pattern.match_kind * Pattern.t)) list -> Pattern.match_kind * Pattern.t -> ident array * Pattern.context array * Pattern.context array * constr array * Pattern.context
+Pattern.matches_subterm                         #  Pattern.t -> constr -> Pattern.context * (ident * constr) list
+Pattern.matches_subterm_vect                    #  Pattern.t -> constr -> Pattern.context * constr array
+Pattern.matches_vect                            #  Pattern.t -> constr -> constr array
+Pattern.multi_goal_match0                       #  bool -> 'a Pattern.goal_matching -> 'a
+Pattern.multi_match0                            #  constr -> 'a Pattern.constr_matching -> 'a
+Pattern.one_goal_match0                         #  bool -> 'a Pattern.goal_matching -> 'a
+Pattern.one_match0                              #  constr -> 'a Pattern.constr_matching -> 'a
+
+----                                            # printf
+Printf.fprintf                                  #  ('a, unit, message, message) format -> 'a
+Printf.printf                                   #  ('a, unit, message, unit) format -> 'a
+
+----                                            # proj
+Proj.equal                                      #  Proj.t -> Proj.t -> bool
+Proj.ind                                        #  Proj.t -> inductive
+Proj.index                                      #  Proj.t -> int
+Proj.of_constant                                #  constant -> Proj.t option
+Proj.set_unfolded                               #  Proj.t -> bool -> Proj.t
+Proj.to_constant                                #  Proj.t -> constant option
+Proj.unfolded                                   #  Proj.t -> bool
+
+----                                            # redflags
+RedFlags.all                                    #  RedFlags.t
+RedFlags.beta                                   #  RedFlags.t
+RedFlags.beta_delta_zeta                        #  RedFlags.t
+RedFlags.beta_iota                              #  RedFlags.t
+RedFlags.beta_iota_zeta                         #  RedFlags.t
+RedFlags.beta_zeta                              #  RedFlags.t
+RedFlags.delta                                  #  RedFlags.t
+RedFlags.none                                   #  Std.red_flags
+RedFlags.zeta                                   #  RedFlags.t
+
+----                                            # ref
+Ref.decr                                        #  int Ref.ref -> unit
+Ref.get                                         #  'a Ref.ref -> 'a
+Ref.incr                                        #  int Ref.ref -> unit
+Ref.ref                                         #  'a -> 'a Ref.ref
+Ref.set                                         #  'a Ref.ref -> 'a -> unit
+Ref.update                                      #  'a Ref.ref -> ('a -> 'a) -> unit
+
+----                                            # std
+Std.absurd                                      #  constr -> unit
+Std.admit                                       #  unit -> unit
+Std.apply                                       # Std.advanced_flag -> Std.evar_flag -> (unit -> Std.constr_with_bindings) list -> (ident * Std.intro_pattern option) option -> unit
+Std.assert                                      #  Std.assertion -> unit
+Std.assumption                                  #  unit -> unit
+Std.auto                                        #  Std.debug -> int option -> Std.reference list -> ident list option -> unit
+Std.autorewrite                                 #  bool -> (unit -> unit) option -> ident list -> Std.clause -> unit
+Std.case                                        #  Std.evar_flag -> Std.constr_with_bindings -> unit
+Std.cbn                                         #  Std.red_flags -> Std.clause -> unit
+Std.cbv                                         #  Std.red_flags -> Std.clause -> unit
+Std.change                                      #  pattern option -> (constr array -> constr) -> Std.clause -> unit
+Std.clear                                       #  ident list -> unit
+Std.clearbody                                   #  ident list -> unit
+Std.cofix_                                      #  ident -> unit
+Std.congruence                                  #  int option -> constr list option -> unit
+Std.constructor                                 #  Std.evar_flag -> unit
+Std.constructor_n                               #  Std.evar_flag -> int -> Std.bindings -> unit
+Std.contradiction                               #  Std.constr_with_bindings option -> unit
+Std.cut                                         #  constr -> unit
+Std.destruct                                    #  Std.evar_flag -> Std.induction_clause list -> Std.constr_with_bindings option -> unit
+Std.discriminate                                #  Std.evar_flag -> Std.destruction_arg option -> unit
+Std.eauto                                       #  Std.debug -> int option -> Std.reference list -> ident list option -> unit
+Std.elim                                        #  Std.evar_flag -> Std.constr_with_bindings -> Std.constr_with_bindings option -> unit
+Std.enough                                      #  constr -> (unit -> unit) option option -> Std.intro_pattern option -> unit
+Std.etransitivity                               #  unit -> unit
+Std.eval_cbn                                    #  Std.red_flags -> constr -> constr
+Std.eval_cbv                                    #  Std.red_flags -> constr -> constr
+Std.eval_fold                                   #  constr list -> constr -> constr
+Std.eval_hnf                                    #  constr -> constr
+Std.eval_lazy                                   #  Std.red_flags -> constr -> constr
+Std.eval_native                                 #  (pattern * Std.occurrences) option -> constr -> constr
+Std.eval_pattern                                #  (constr * Std.occurrences) list -> constr -> constr
+Std.eval_red                                    #  constr -> constr
+Std.eval_simpl                                  #  Std.red_flags -> (pattern * Std.occurrences) option -> constr -> constr
+Std.eval_unfold                                 #  (Std.reference * Std.occurrences) list -> constr -> constr
+Std.eval_vm                                     #  (pattern * Std.occurrences) option -> constr -> constr
+Std.exact_no_check                              #  constr -> unit
+Std.fix_                                        #  ident -> int -> unit
+Std.fold                                        #  constr list -> Std.clause -> unit
+Std.generalize                                  #  (constr * Std.occurrences * ident option) list -> unit
+Std.hnf                                         #  Std.clause -> unit
+Std.induction                                   # Std.evar_flag -> Std.induction_clause list -> Std.constr_with_bindings option -> unit
+Std.injection                                   #  Std.evar_flag -> Std.intro_pattern list option -> Std.destruction_arg option -> unit
+Std.intro                                       #  ident option -> Std.move_location option -> unit
+Std.intros                                      #  Std.evar_flag -> Std.intro_pattern list -> unit
+Std.intros_until                                #  Std.hypothesis -> unit
+Std.inversion                                   # Std.inversion_kind -> Std.destruction_arg -> Std.intro_pattern option -> ident list option -> unit
+Std.keep                                        #  ident list -> unit
+Std.lazy                                        #  Std.red_flags -> Std.clause -> unit
+Std.left                                        #  Std.evar_flag -> Std.bindings -> unit
+Std.move                                        #  ident -> Std.move_location -> unit
+Std.native                                      #  (pattern * Std.occurrences) option -> Std.clause -> unit
+Std.native_cast_no_check                        #  constr -> unit
+Std.pattern                                     #  (constr * Std.occurrences) list -> Std.clause -> unit
+Std.pose                                        #  ident option -> constr -> unit
+Std.red                                         #  Std.clause -> unit
+Std.reflexivity                                 #  unit -> unit
+Std.remember                                    # Std.evar_flag -> ident option -> (unit -> constr) -> Std.intro_pattern option -> Std.clause -> unit
+Std.rename                                      #  (ident * ident) list -> unit
+Std.resolve_tc                                  #  constr -> unit
+Std.revert                                      #  ident list -> unit
+Std.rewrite                                     #  Std.evar_flag -> Std.rewriting list -> Std.clause -> (unit -> unit) option -> unit
+Std.right                                       #  Std.evar_flag -> Std.bindings -> unit
+Std.set                                         #  Std.evar_flag -> (unit -> ident option * constr) -> Std.clause -> unit
+Std.setoid_rewrite                              # Std.orientation -> (unit -> Std.constr_with_bindings) -> Std.occurrences -> ident option -> unit
+Std.simpl                                       #  Std.red_flags -> (pattern * Std.occurrences) option -> Std.clause -> unit
+Std.simple_congruence                           #  int option -> constr list option -> unit
+Std.specialize                                  #  Std.constr_with_bindings -> Std.intro_pattern option -> unit
+Std.split                                       #  Std.evar_flag -> Std.bindings -> unit
+Std.subst                                       #  ident list -> unit
+Std.subst_all                                   #  unit -> unit
+Std.symmetry                                    #  Std.clause -> unit
+Std.transitivity                                #  constr -> unit
+Std.trivial                                     #  Std.debug -> Std.reference list -> ident list option -> unit
+Std.typeclasses_eauto                           #  Std.strategy option -> int option -> ident list option -> unit
+Std.unfold                                      #  (Std.reference * Std.occurrences) list -> Std.clause -> unit
+Std.unify                                       #  constr -> constr -> unit
+Std.vm                                          #  (pattern * Std.occurrences) option -> Std.clause -> unit
+Std.vm_cast_no_check                            #  constr -> unit
+
+----                                            # string
+String.app                                      #  string -> string -> string
+String.compare                                  #  string -> string -> int
+String.concat                                   #  string -> string list -> string
+String.equal                                    #  string -> string -> bool
+String.get                                      #  string -> int -> char
+String.is_empty                                 #  string -> bool
+String.length                                   #  string -> int
+String.make                                     #  int -> char -> string
+String.set                                      #  string -> int -> char -> unit
+String.sub                                      #  string -> int -> int -> string
+subst0                                          #  ident list -> unit
+
+----                                            # transparent state
+TransparentState.current                        #  unit -> TransparentState.t
+TransparentState.empty                          #  TransparentState.t
+TransparentState.full                           #  TransparentState.t
+
+----                                            # uint63
+Uint63.compare                                  #  Uint63.t -> Uint63.t -> int
+Uint63.equal                                    #  Uint63.t -> Uint63.t -> bool
+Uint63.of_int                                   #  int -> Uint63.t
+Uint63.print                                    #  Uint63.t -> message
+
+----                                            # unification
+Unification.unify                               #  TransparentState.t -> constr -> constr -> unit
+Unification.unify_with_current_ts               #  constr -> constr -> unit
+Unification.unify_with_full_ts                  #  constr -> constr -> unit

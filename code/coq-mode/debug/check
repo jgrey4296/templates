@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# key: C
+# name: Check
+# group: debug
+# --
+Check $1.
+$0

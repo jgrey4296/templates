@@ -1,0 +1,33 @@
+# -*- mode: snippet -*-
+# name  : ltac2.module
+# uuid  : ltac2.module
+# key   : ltac2.module
+# group : ltac2 tactics
+# --
+From Ltac2 Require Ltac2.
+Module $1.
+  (* import/exports: *)
+  Export Ltac2.
+  Export Ltac2.Printf.
+  Export Ltac2.Message.
+  Export Ltac3.Option.
+
+  (* tactics: *)
+  Ltac2 _by_msg (tac) (y:string) : unit :=
+    tac;
+    printf "Value: %s" y;
+    ().
+  Ltac2 Notation "byy" := _by_msg.
+  Ltac2 _by_ (tac) : unit :=
+    tac;
+    ().
+  Ltac2 Notation "by" := _by_.
+
+  (* aliases/utilities *)
+  Ltac2 pass0 () := printf "...".
+  Ltac2 Notation "pass" := pass0 ().
+  Ltac2 Notation simplify := simpl.
+
+  (* checks *)
+  Ltac2 Eval pass.
+End $1.

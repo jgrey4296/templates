@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# key: S
+# name: Search
+# group: debug
+# --
+Search $1.
+$0

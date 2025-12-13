@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: About
+# group: debug
+# --
+About $1.

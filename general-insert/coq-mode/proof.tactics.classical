@@ -1,0 +1,3 @@
+Rocq Classical Proof Tactics:
+classical_left  # for disjunctions using excluded middle.
+classical_right # for disjunctions using excluded middle.

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# key: L
+# name: Locate
+# group: debug
+# --
+Locate "$1".
+$0

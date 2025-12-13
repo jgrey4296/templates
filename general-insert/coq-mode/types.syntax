@@ -1,0 +1,17 @@
+Rocq Ltac2 Syntax Classes:
+string        #
+integer       #
+name          #
+name({class}) #
+
+opt({class})  #
+seq({class})  #
+
+contr({scope})
+preterm({scope})
+ident
+
+tactic
+next
+thunk({class})
+pattern

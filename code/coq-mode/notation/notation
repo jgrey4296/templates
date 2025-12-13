@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: notation.func
+# key: notation.func
+# group: notation function
+# --
+Notation "${1: A / B}" := (${2: div A B})
+         (at level $3, $4 associativity).
+$0

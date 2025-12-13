@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : record
+# uuid  : record
+# key   : record
+# group : definition type record dict
+# --
+Record ${1:Rat} : Set := make$1
+{ varName : type
+; varName2 : Type2
+}.

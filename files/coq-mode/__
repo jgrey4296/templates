@@ -1,8 +1,22 @@
 (* __ -*- mode: Coq -*- *)
 
+(*-- proof mode imports  *)
+(* From Stdlib Require Import ssreflect ssrfun ssrbool. *)
+(* From Ltac2 Require Import Ltac2. *)
+(* From Mtac1 Require Import Mtac2. *)
+
+(*-- end proof mode imports  *)
+Set Default Proof Mode "Noedit".
+
 (* -- imports *)
 
 (*-- end imports  *)
+
+(*-- tactic aliases  *)
+Ltac2 Notation "by" := fun x => x.
+Ltac2 Notation simplify := simpl.
+
+(*-- end tactic aliases  *)
 
 
 Module `(f-filename (buffer-file-name))`.

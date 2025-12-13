@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# key: Param
+# name: Parameters
+# group: assumptions
+# --
+Parameter $1 : $0.

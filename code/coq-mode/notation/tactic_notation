@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: notation.tactic
+# key: notation.tactic
+# group: notations tactics
+# --
+Tactic Notation "$0" := $2.

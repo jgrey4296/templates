@@ -15,7 +15,7 @@ Example    {ident} {body}                                 #
 Record {ident} : {sort}    := { [field ;] }               # Data structures
 Class {ident}              := { [field ; ] }              # Typeclass
 Inductive {ident} {params} := [ | {ident} : {type} ]      # Recursive
-Variant {ident}            := {constructor}               # Non-recursive
+Variant {ident}            := {constructor}               # Non-recursive. Define inhabitants of type by constructors.
 
 match {term} return {term} with [{pattern} => {term}] end #
 

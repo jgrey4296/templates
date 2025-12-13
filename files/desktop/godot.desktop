@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Godot
+Terminal=false
+Exec=godot
+Comment=Start Godot.
+Icon=utilities-terminal
+StartupNotify=true

@@ -1,0 +1,6 @@
+# symlink to ~./infokey
+#info
+j next-line
+k prev-line
+
+#var

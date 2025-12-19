@@ -1,0 +1,17 @@
+Rocq Corelib (in theories):
+Array
+BinNums
+Classes
+Compat
+Floats
+Init
+Lists
+Numbers
+Program
+Relations
+Setoids
+Strings
+derive
+extraction
+ssr
+ssrmatching

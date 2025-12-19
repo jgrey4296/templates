@@ -1,0 +1,15 @@
+Coq Notation Scopes:
+type_scope
+function_scope
+nat_scope
+N_scope
+Z_scope
+positive_scope
+Q_scope
+Qc_scope
+R_scope
+bool_scope
+list_scope
+core_scope
+string_scope
+char_scope

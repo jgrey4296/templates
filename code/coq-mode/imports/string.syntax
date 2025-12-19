@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : string.syntax
+# uuid  : string.syntax
+# key   : string.syntax
+# group :
+# --
+From Stdlib Require Import Strings.String.
+Import StringSyntax.
+Open Scope string_scope.

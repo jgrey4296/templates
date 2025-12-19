@@ -4,4 +4,4 @@
 # key   : req.classical
 # group : proof-mode tactics classical-logic
 # --
-from Stdlib Require Import Classical.
+From Stdlib Require Import Classical.

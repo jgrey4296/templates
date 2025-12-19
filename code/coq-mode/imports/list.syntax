@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : list.syntax
+# uuid  : list.syntax
+# key   : list.syntax
+# group :
+# --
+From Stdlib Require Import Lists.List.
+Import ListNotations.

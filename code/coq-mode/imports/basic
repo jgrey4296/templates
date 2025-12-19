@@ -1,0 +1,25 @@
+# -*- mode: snippet -*-
+# name  : req.basic
+# uuid  : req.basic
+# key   : req.basic
+# group : imports
+# --
+From Corelib Require Import Logic.
+From Corelib Require Import Datatypes.
+From Corelib Require Import Notations.
+From Corelib Require Import ssreflect.
+
+From Stdlib Require Import Bool.
+From Stdlib Require Import Lists.List.
+From Stdlib Require Import Strings.String.
+From Stdlib Require Notations.
+From Stdlib Require Datatypes.
+
+From Mtac2 Require Mtac2.
+From Ltac2 Require Ltac2.
+From HB Require Import structures.
+
+Import Lists.List.ListNotations.
+Import Strings.String.StringSyntax.
+
+Open Scope string_scope.

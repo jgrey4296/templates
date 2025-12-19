@@ -1,0 +1,31 @@
+# -*- mode: snippet -*-
+# name  : notation
+# uuid  : notation
+# key   : notation
+# group :
+# --
+Declare Scope $1_scope.
+Delimit Scope $1_scope with $1.
+
+(* Reserved Notation .... *)
+(* Notation .... (format "a b '/' c d"). *)
+Notation "${2:shortcut}" := ($3) (at level 50, right associativity) : $1_scope.
+
+
+
+Bind Scope $1_scope with bool.
+
+Close Scope $1_scope.
+
+
+Print Keywords.
+Print Grammar. (* full *)
+Print Grammar constr. (* for terms *)
+Print Grammar tactic. (* for proof tactics *)
+Print Grammar vernac. (* for commands *)
+(* Print Grammar ltac2. *)
+Print Notation "$1_scope".
+(* all, only parsing/printing, in custom ident, in constr *)
+Print Scopes.
+
+Enable Notation "$2" (all) : $1_scope.

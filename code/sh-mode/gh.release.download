@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name  : gh.release.download
+# uuid  : gh.release.download
+# key   : gh.release.download
+# group :
+# --
+repo="${1:qpdf/qpdf}"
+tag=$(gh release list --repo "$repo" --json tagName | jq .[0].tagName | sed -E "s/v//")
+target="$1-${tag}-bin-linux-x86_64.zip"
+directory="$HOME/Downloads"
+
+# Download:
+gh release download --repo "$repo" -p "$target" -D "$directory"
+# unzip:
+unzip "$directory/$target" -d "$directory"

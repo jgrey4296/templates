@@ -1,118 +1,103 @@
 #!/usr/bin/env bash
 #  set-emacs -*- mode: sh -*-
 
-jgdebug "Setting emacs data"
 BLOOD_SRC="$HOME/github/lisp/blood"
-# shellcheck disable=SC2034
-EDITOR="vim"
-
+BLOOD_CONFIG="$BLOOD_SRC/example"
 EMACSDIR="$HOME/.emacs.d"
 DOOMDIR="$HOME/.config/jg/"
 
+function _fail () {
+    echo -e "$@"
+    exit 1
+}
+
 ## --- Main Entry
-function set-emacs () {
+function _set-emacs () {
     local framework=""
     local binary=""
 
     # Call as: set-emacs [doom|blood] [apt|flatpak]
     while [[ $# -gt 0 ]]; do
-        case $1 in
+        case "$1" in
             -f|--framework)
                 echo "Framework: $2"
                 framework="$2"
+                shift
                 ;;
             -b|--bin)
                 echo "Binary: $2"
                 binary="$2"
+                shift
                 ;;
-            *)
-                if [[ framework -eq "" ]]; then
-                    framework="$1"
-                else
-                    binary="$1"
-                fi
-                ;;
+            *) ;;
         esac
         shift
     done
 
     case $framework in
-        "doom")  set-doom     ;;
-        "doom2") set-doom-alt ;;
-        "blood") set-blood    ;;
-        "")      set-doom     ;;
+        "doom") _set-doom-alt  ;;
+        "doom2")  _set-doom    ;;
+        "blood") _set-blood    ;;
+        "")      _set-doom     ;;
+        *)       _set-custom-framework "$framework" ;;
     esac
 
     case $binary in
-        "apt")      set-apt-binary     ;;
-        "snap")     set-snap-binary    ;;
-        "flatpak")  set-flatpak-binary ;;
+        "apt")      _set-apt-binary     ;;
+        "snap")     _set-snap-binary    ;;
+        "flatpak")  _set-flatpak-binary ;;
+        "")         _set-snap-binary    ;;
     esac
 }
 
 ## --- Specific variants
-function set-doom () {
-    echo "doom current"
-    EMACSDIR="/media/john/data/github/_libs/lisp/doom_2"
-    DOOMDIR="$HOME/.config/jg/"
+function _set-doom () {
+    echo "setting framework to: doom current"
+    base="/media/john/data/github/_libs/lisp/doom_2"
 
-    if [[ -e "$HOME/.local/bin/doom" ]]; then
-        rm "$HOME/.local/bin/doom"
-    fi
-    ln -s "$EMACSDIR/bin/doom" "$HOME/.local/bin/doom"
-
-    retarget-emacs-d "$EMACSDIR"
+    _retarget-emacs-d "$base"
+    _retarget-doom-bin "$base"
 }
 
-function set-doom-alt () {
-    echo "doom alt"
-    EMACSDIR="/media/john/data/github/_libs/lisp/doomemacs"
-    DOOMDIR="$HOME/.config/jg/"
+function _set-doom-alt () {
+    echo "setting framework to: doom alt"
+    base="/media/john/data/github/_libs/lisp/doomemacs"
 
-    if [[ -e "$HOME/.local/bin/doom" ]]; then
-        rm "$HOME/.local/bin/doom"
-    fi
-    ln -s "$EMACSDIR/bin/doom" "$HOME/.local/bin/doom"
-
-    retarget-emacs-d "$EMACSDIR"
+    _retarget-emacs-d "$base"
+    _retarget-doom-bin "$base"
 }
 
-function set-blood () {
-    echo "BLOOD"
-    EMACSDIR="$BLOOD_SRC"
-    BLOOD_CONFIG="$EMACSDIR/example"
-    if [[ -e "$HOME/.local/bin/doom" ]]; then
-        rm "$HOME/.local/bin/doom"
-    fi
-
-    retarget-emacs-d "$EMACSDIR"
+function _set-blood () {
+    echo "setting framework to: BLOOD"
+    base="$BLOOD_SRC"
+    _retarget-emacs-d "$EMACSDIR"
+    _retarget-doom-bin
 }
 
-function set-apt-binary () {
-    echo "apt"
-    EMACSBIN="/usr/bin/emacs"
-
-    retarget-emacs-bin "$EMACSBIN"
+function _set-custom-framework () {
+    echo "setting framework to custom location: $1"
+    _retarget-emacs-d "$1"
 }
 
-function set-snap-binary () {
-    echo "snap"
-    EMACSBIN="/snap/bin/emacs"
-
-    retarget-emacs-bin "$EMACSBIN"
+function _set-apt-binary () {
+    echo "setting binary to: apt"
+    _retarget-emacs-bin "/usr/bin/emacs"
 }
 
-function set-flatpak-binary () {
-    echo "flatpak"
-    EMACSBIN="/var/lib/flatpak/exports/bin/org.gnu.emacs"
+function _set-snap-binary () {
+    echo "setting binary to: snap"
+    _retarget-emacs-bin "/snap/bin/emacs"
+}
 
-    retarget-emacs-bin "$EMACSBIN"
+function _set-flatpak-binary () {
+    echo "setting binary to: flatpak"
+    _retarget-emacs-bin "/var/lib/flatpak/exports/bin/org.gnu.emacs"
 }
 
 ## --- Utils
-function retarget-emacs-d () {
+function _retarget-emacs-d () {
     if [[ -d "$HOME/.emacs.d" ]] && [[ ! ( -L "$HOME/.emacs.d" ) ]]; then
-        fail "Emacs Dir isn't a symlink"
+        _fail "Emacs Dir isn't a symlink"
     elif [[ (-L "$HOME/.emacs.d") ]]; then
         # There is an existing emacs.d
         rm "$HOME/.emacs.d"
@@ -122,47 +107,75 @@ function retarget-emacs-d () {
 
 }
 
-function retarget-emacs-bin () {
+function _retarget-emacs-bin () {
     # Link emacsdir and emacs into local
     if [[ -e "$HOME/.local/bin/emacs" ]] && [[ ! ( -L "$HOME/.local/bin/emacs" ) ]]; then
-        fail "local emacs bin isn't a symlink"
+        _fail "local emacs bin isn't a symlink"
     elif [[ -L "$HOME/.local/bin/emacs" ]]; then
         rm "$HOME/.local/bin/emacs"
+    elif [[ ! -e "$1" ]]; then
+        fail "Target Binary doesn't exist: $1"
     fi
 
     ln -s "$1" "$HOME/.local/bin/emacs"
 }
 
+function _retarget-doom-bin () {
+    if [[ -h "$HOME/.local/bin/doom" ]]; then
+        rm "$HOME/.local/bin/doom"
+    fi
+    if [[ -n "${1:-}"  ]]; then
+        ln -s "$1/bin/doom" "$HOME/.local/bin/doom"
+    fi
+}
+
 ## --- Info
-function read-emacs () {
-    local curr_framework
-    local curr_binary
-    # shellcheck disable=SC2046,SC2086
-    curr_framework="$(basename $(readlink -f $HOME/.emacs.d))"
-    curr_binary="$(readlink -f "$HOME/.local/bin/emacs")"
-    echo "Emacs: $curr_framework : $curr_binary"
-}
-
 function report-emacs () {
-    # shellcheck disable=SC2086
-    echo "Emacs       : $(readlink $HOME/.local/bin/emacs)"
-    echo "blood       : $BLOOD_SRC : $BLOOD_CONFIG"
-    # shellcheck disable=SC2086
-    echo ".emacs.d    : $(readlink -f $HOME/.emacs.d)"
-    echo ".doom.d     : $DOOMDIR"
+    case "${@: -1}" in
+        -e|--env) ;;
+        *) return ;;
+    esac
+    echo "Current Emacs Environment:
+
+- Binary    : $(readlink $HOME/.local/bin/emacs)
+- .emacs.d  : $(readlink $HOME/.emacs.d)
+- blood     : ${BLOOD_SRC:-} : ${BLOOD_CONFIG:-}
+- .doom.d   : ${DOOMDIR:-}
+"
+    exit 0
 }
 
-function check-emacs-d () {
-    if [[ ! -e "$HOME/.emacs.d" ]]; then
-        echo "ERROR: No emacs.d"
-        # ln -s "$EMACSDIR" "$HOME/.emacs.d"
-    fi
+function print-help () {
+    # test args, if the last one is -h or --help
+    # print help and exit
+    case "${@: -1}" in
+        -h|--help) ;;
+        *) if [[ "$#" -gt 0 ]]; then
+               return
+           fi
+           ;;
+    esac
+    echo -e "usage: set-emacs [-h] [-e
 
-    if [[ (-L "$HOME/.emacs.d")
-            && ($(readlink -f "$HOME/.emacs.d") != $(readlink -f "$EMACSDIR"))
-        ]]; then
-        echo "ERROR: emacs.d does not match EMACSDIR"
-        rm "$HOME/.emacs.d"
-        ln -s "$EMACSDIR" "$HOME/.emacs.d"
-    fi
+options:
+-h, --help            : show this help message and exit
+-e, --env             : show the current environment
+
+-f,--framework {arg}  : set .emacs.d framework. (blood/doom or a custom location)
+-b,--bin {arg}        : set the emacs binary to use (apt/flatpak/snap)
+"
+    exit "${PRINTED_HELP:-2}"
 }
+
+#   --------------------------------------------------
+print-help "$@"
+report-emacs "$@"
+
+if [[ -n "$INSIDE_EMACS" ]]; then
+    echo "Inside Emacs, aborting"
+    # set disable-completion on
+    # TERM=dumb
+    exit 0
+fi
+
+_set-emacs "$@"

@@ -11,7 +11,7 @@ export LESSHISTFILE="$XDG_CACHE_HOME/logs/lesshst"
 export NODE_REPL_HISTORY="$XDG_CACHE_HOME/logs/node_repl_history"
 export G_MESSAGES_PREFIXED="" # To get rid of atk-bridge complaints
 export PATH
-export EDITOR
+export EDITOR="vim"
 export PROMPT_NUM
 export TERM
 export MANPATH

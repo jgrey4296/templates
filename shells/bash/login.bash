@@ -24,7 +24,7 @@ source "$root_dir/lib/path.bash"
 # shellcheck disable=1091
 source "$root_dir/lib/exports.bash"
 # shellcheck disable=1091
-source "$root_dir/lib/emacs.bash"
+# source "$root_dir/lib/emacs.bash"
 
 BASH_ENV="$root_dir/non_interactive.bash"
 jgdebug "Path  : $PATH"

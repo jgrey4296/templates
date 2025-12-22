@@ -19,19 +19,19 @@ echo "Bash Config Root Dir: $root_dir"
 
 # shellcheck disable=SC1091
 source "$root_dir/lib/utils.bash"
+# shellcheck disable=1091
+source "$root_dir/lib/sshconfig.bash"
 # shellcheck disable=SC1091
 source "$root_dir/lib/path.bash"
 # shellcheck disable=1091
 source "$root_dir/lib/exports.bash"
-# shellcheck disable=1091
-# source "$root_dir/lib/emacs.bash"
 
 BASH_ENV="$root_dir/non_interactive.bash"
 jgdebug "Path  : $PATH"
 
 source_components
-read-emacs
 jg_maybe_inc_prompt
 jg_set_prompt
 init-sdkman
+init-ssh
 loginmux

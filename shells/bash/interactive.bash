@@ -27,8 +27,6 @@ echo "Root Dir: $root_dir"
 
 # shellcheck disable=SC1091
 source "$root_dir/lib/utils.bash"
-# shellcheck disable=SC1091
-# source "$root_dir/lib/emacs.bash"
 
 case "$OSTYPE" in
 	linux*)

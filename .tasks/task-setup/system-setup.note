@@ -1,13 +1,13 @@
 0) install secrets
-0) apt install git
-1) install and log in to proton
-2) log in to firefox
+1) apt install git
+2) install and log in to proton
+3) log in to firefox
 
-3) snap install emacs --classic
-4) snap install libreoffice remmina vivaldi vlc ghidra
-5) apt install dependencies
+4) snap install emacs --classic
+5) snap install libreoffice remmina vivaldi vlc ghidra
+6) apt install dependencies
 
-6) dropbox
+7) dropbox
 8) link .bashrc and .bash_profile, cookiecutter, tmux, vim, sdkman, git ...
 
 10) update clamav

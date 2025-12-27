@@ -7,7 +7,11 @@
 function init-ssh () {
     echo "Initialising SSH"
     base="$XDG_CONFIG_HOME/secrets"
-    targets=("ssh" "github" "gitlab" "android")
+    if [[ -z "${TMUX:-}" ]]; then
+        targets=("ssh" "github" "gitlab" "android")
+    else
+        targets=("ssh")
+    fi
 
     for val in "${targets[@]}"
     do

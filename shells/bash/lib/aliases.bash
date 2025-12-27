@@ -38,7 +38,10 @@ alias duh="du -hd 1 | sort"
 # cd + ls
 alias cd="cd_ls"
 function cd_ls {
-    builtin cd "$@" || exit
+    builtin cd "$@"
+    if [[ "$?" -gt 0 ]]; then
+        return
+    fi
     ls
 }
 

@@ -1,5 +1,6 @@
 ## cliff.toml -*- mode: conf-toml -*-
 # https://git-cliff.org/docs/configuration
+# symlink to ~/.config/git-cliff/cliff.toml
 
 [changelog]
 # changelog header

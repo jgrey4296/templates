@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#  notify.bash -*- mode: sh -*-
+
+if [[ -z "${1:-}" ]]; then
+    notify-send "Finished (Anon)" 2>/dev/null
+else
+    notify-send "$@" 2>/dev/null
+fi

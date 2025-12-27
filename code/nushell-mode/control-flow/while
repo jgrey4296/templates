@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : while
+# uuid  : while
+# key   : while
+# group : control-flow
+# --
+mut x = 10
+while $x > 0 { $x = $x - 1 };
+$x | print

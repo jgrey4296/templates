@@ -1,5 +1,5 @@
 ## hooks.nu -*- mode: Nushell -*-
-print "Configuring Hooks..."
+print "- Hooks..."
 
 let hooks = {
   hooks: {

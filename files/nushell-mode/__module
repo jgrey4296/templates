@@ -1,0 +1,11 @@
+#  `(f-filename (buffer-file-name))` -*- mode: Nushell -*-
+# Summary:
+#
+#
+#
+use std
+
+export def a_function []: _ => [] {
+
+    []
+}

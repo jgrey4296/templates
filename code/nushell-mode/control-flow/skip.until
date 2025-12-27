@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : skip.until
+# uuid  : skip.until
+# key   : skip.until
+# group : control-flow
+# --
+${1:cmd} | skip until { |x| $x > 0 } $0

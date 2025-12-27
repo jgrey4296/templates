@@ -1,0 +1,27 @@
+Nu String Pipelines:
+
+data | lines                                           #
+data | split column "|"                                #
+data | split column "|" col1 col2 col3                 #
+data | split row    ","                                #
+data | split chars                                     #
+
+data | str contains "l,h"                              # substring checking
+data | str trim                                        #
+data | str join                                        #
+data | str replace -r "^regex" "replacement"           #
+data | str distance "bloo"                             #
+
+
+"Blah 0.8" | parse "{name} {version}"                  # parse to named columns
+data | parse --regex "(?P<name>\w+) (?P<version>\d+)"  # parse using regex
+
+"value" | $"value is ($in)"                            # $in var, and str formatting.
+
+----                                                   # Conversion
+[one two three] | to {yaml,json,jsonl}                 # convert data to strings
+{"val": "blah"} | to {toml,csv}                        # convert data to strings
+'{"val": "blah"}' | from json                          # convert text to data
+
+----                                                   # String colour
+$'(ansi blue) blah (ansi reset)'                       #

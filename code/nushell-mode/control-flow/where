@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : where
+# uuid  : where
+# key   : where
+# group : control-flow
+# --
+${1:cmd} | where { |elt| ${2:test} } $0

@@ -1,8 +1,31 @@
 # Nushell Environment Config File
 # version = "0.93.0"
+# First file loaded on startup.
 use std
-source ~/.config/.templates/shells/nu/utils.nu
-source ~/.config/.templates/shells/nu/path.nu
+print $"(ansi green_italic)----------
+Configuring Env...
+----------(ansi reset)"
+
+# Directories to search for scripts when calling source or use
+# The default for this is $nu.default-config-dir/scripts
+const nu_in_templates = $nu.config-path | path dirname
+
+source $"($nu_in_templates)/lib/path.nu"
+
+$env.NU_LIB_DIRS = [
+    $nu_in_templates
+    ($nu_in_templates | path join "lib")
+    ($nu_in_templates | path join "bindings")
+    ($nu_in_templates | path join "components")
+    ($nu_in_templates | path join "overlays")
+    # ($nu_in_templates | path join 'scripts') # add <nushell-config-dir>/scripts
+]
+
+# Directories to search for plugin binaries when calling register
+# The default for this is $nu.default-config-dir/plugins
+$env.NU_PLUGIN_DIRS = [
+    ($nu.default-config-dir | path join 'plugins') # add <nushell-config-dir>/plugins
+]
 
 # Use nushell functions to define your right and left prompt
 # $env.PROMPT_COMMAND       = {|| create_left_prompt }
@@ -31,25 +54,24 @@ $env.ENV_CONVERSIONS = {
   }
 }
 
-# Directories to search for scripts when calling source or use
-# The default for this is $nu.default-config-dir/scripts
-let nu_in_templates = $nu.config-path | path dirname
-$env.NU_LIB_DIRS = [
-    $nu_in_templates
-    ($nu_in_templates | path join 'scripts') # add <nushell-config-dir>/scripts
-    ($nu_in_templates | path join "components")
-]
+$env.JG = {}
+$env.JG.locations = {
+  cache      : ($env.HOME       | path join "_cache_")
+  config     : ($env.HOME       | path join ".config")
+  secrets    : ($env.HOME       | path join ".config/secrets")
+  local      : ($env.HOME       | path join ".local")
+  github     : ($env.HOME       | path join "github")
+  templates  : ($env.HOME       | path join "github/_templates")
+  logs       : ($env.HOME       | path join "logs")
+}
 
-# Directories to search for plugin binaries when calling register
-# The default for this is $nu.default-config-dir/plugins
-$env.NU_PLUGIN_DIRS = [
-    ($nu.default-config-dir | path join 'plugins') # add <nushell-config-dir>/plugins
-]
+$env.BASECACHE     = $env.jg.locations.cache
+$env.BASECONFIG    = $env.jg.locations.config
+$env.BASELOCAL     = $env.jg.locations.local
+$env.GITHUB        = $env.jg.locations.github
+$env.TEMPLATES     = $env.jg.locations.templates
+$env.BASELOGS      = $env.jg.locations.logs
+$env.SECRETS       = $env.jg.locations.secrets
 
-$env.BASECACHE     = ($env.HOME | path join "_cache_")
-$env.BASECONFIG    = ($env.HOME | path join ".config")
-$env.BASELOCAL     = ($env.HOME | path join ".local")
-$env.GITHUB        = ($env.HOME | path join "github")
-$env.TEMPLATES     = ($env.GITHUB | path join "_templates")
-$env.BASELOGS      = ($env.BASECACHE | path join "logs")
-$env.SECRETS       = ($env.BASECONFIG | path join "secrets")
+
+print ""

@@ -4,6 +4,6 @@
 # key   : command
 # group : nushell
 # --
-def ${1:name} [${2:types}] {
+def ${1:name} [${2:types}] nothing -> nothing {
     $0
 }

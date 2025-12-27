@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : reduce
+# uuid  : reduce
+# key   : reduce
+# group : control-flow
+# --
+${1:cmd} | reduce --fold 0 { |elc, acc| ${2:action} } $0

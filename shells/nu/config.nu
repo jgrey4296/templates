@@ -1,25 +1,31 @@
 # Nushell Config File
 #
 # version = "0.93.0"
+# Second file loaded on startup
+# followed by $nu.vendor-autoload-dirs
+# then $nu.user-autoload-dirs
 
 # For more information on defining custom themes, see
 # https://www.nushell.sh/book/coloring_and_theming.html
 # And here is the theme collection
 # https://github.com/nushell/nu_scripts/tree/main/themes
 #
-print "Configuring Nu..."
+use std
+use std/dirs
+
+print $"(ansi green_italic)----------
+Configuring Nu...
+----------(ansi reset)"
+
 source utils.nu
-source themes.nu
-source cmds.nu
-source bindings.nu
+source plugins.nu
 source hooks.nu
 source menus.nu
-source plugins.nu
-use dotnet.nu *
+source cmds/cmds.nu
+source bindings.nu
 
 mut general = {
     show_banner                      : false # true or false to enable or disable the welcome banner at startup
-    color_config                     : $dark_theme   # if you want a light theme, replace `$dark_theme` to `$light_theme`
     footer_mode                      : 25 # always, never, number_of_rows, auto
     float_precision                  : 2 # the precision for displaying floats in tables
     buffer_editor                    : "vim" # command that will be used to edit the current line buffer with ctrl+o, if unset fallback to $env.EDITOR and $env.VISUAL
@@ -47,11 +53,21 @@ $general.completions = {
 $general.filesize = {
 
   }
+
 $general.cursor_shape = {
         emacs     : line # block, underscore, line, blink_block, blink_underscore, blink_line, inherit to skip setting cursor shape (line is the default)
         vi_insert : block # block, underscore, line, blink_block, blink_underscore, blink_line, inherit to skip setting cursor shape (block is the default)
         vi_normal : underscore # block, underscore, line, blink_block, blink_underscore, blink_line, inherit to skip setting cursor shape (underscore is the default)
   }
 
+#   --------------------------------------------------
+print "- Components:"
+
 # Combine all into config------------------------------------------
 $env.config = (cmerge $general $bindings $cmds $hooks $menus $plugins)
+
+#  overlays --------------------------------------------------
+print "- Overlays"
+overlay use themes/dark.nu
+
+print ""

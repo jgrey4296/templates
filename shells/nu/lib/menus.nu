@@ -1,7 +1,8 @@
 ## menus.nu -*- mode: Nushell -*-
-print "Configuring Menus..."
+print "- Menus..."
 
 mut _menus = []
+
 $_menus ++= [{name: completion_menu
         only_buffer_difference: false
         marker: "| "

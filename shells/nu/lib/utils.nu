@@ -1,6 +1,6 @@
 ## utils.nu -*- mode: Nushell -*-
 export-env {
-    print "Adding util funcs"
+    print "- utils..."
 }
 
 export def cmerge [...recs] {

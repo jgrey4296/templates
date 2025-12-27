@@ -1,0 +1,16 @@
+Nu List Pipelines:
+
+[foo bar baz]   | insert 1 'aweg'                             #
+[1,2,3,4]       | update 1 10                                 #
+[1,2,3]         | prepend 5                                   #
+[1,2,3]         | append  5                                   #
+[1,2,3,4,5]     | first 2                                     #
+[1,2,3,4,5]     | last 2                                      #
+[1,2,3,4,5]     | drop 2                                      #
+[1,2,3,4,5]     | reverse                                     #
+
+[1,2,3,4,5]     | each { |elt| $"value is ($elt)" }           #
+[1,2,3,4,5]     | reduce --fold 0 { |elt, acc| $acc + $elt }  #
+[1,2,3,4,5]     | any { |elt| $elt > 10 }                     #
+
+[one two three] | str join ","                                # string concatenation

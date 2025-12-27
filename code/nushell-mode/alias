@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : alias
+# uuid  : alias
+# key   : alias
+# group :
+# --
+alias ${1:name} = ${2:cmd} ${3:args}

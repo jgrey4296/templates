@@ -1,0 +1,15 @@
+#!/usr/bin/env -S nu --stdin
+## `(f-filename (buffer-file-name))` -*- mode: Nushell -*-
+# Summary:
+#
+#
+#
+use std
+
+def main [] {
+    print $"Input: ($in)"
+
+    [
+
+    ]
+}

@@ -1,0 +1,14 @@
+Nu Pipelines:
+
+false | describe                                    #
+
+data? | default []                                  # default value
+
+"12" | into int                                     # Type Conversion
+
+date now | date to-timezone "Europe/London"         # Date Conversion
+
+open data.db | get some_table                       # sqlite access
+open data.db | query db "select * fron some_table"  # sqlite query
+
+data | $in                                          # automatic variable

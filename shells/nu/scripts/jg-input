@@ -1,0 +1,14 @@
+#!/usr/bin/env -S nu --stdin
+## input.nu -*- mode: Nushell -*-
+# Summary:
+# call as "blah" | input.nu
+#
+#
+
+def main []: nothing -> list {
+    print "----------\nJG Input Example\n----------\n"
+
+    print $"stdin: ($in)"
+
+    []
+}

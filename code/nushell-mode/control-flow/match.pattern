@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name  : match.pattern
+# uuid  : match.pattern
+# key   : match.pattern
+# group : control-flow
+# --
+match ${1:cmd} {
+      { name: "blah", count: $it } => ($it + 3),
+      { name: _,      count: $it } if $it >= 10 => ($it),
+      { name: _,      count: $it } => 0,
+      _ => 1
+
+}

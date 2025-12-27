@@ -1,0 +1,6 @@
+Nu Record Pipelines:
+
+{'val': 'blah'}  | upsert val 'bloo'  # update a record
+
+{'val': 'blah'}  | select val         #
+{'val': 'blah'}  | get val            #

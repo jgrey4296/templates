@@ -1,0 +1,12 @@
+Nu Special Variables:
+
+$nu              #
+$env             #
+
+$in              #
+$it              #
+
+$NU_LIB_DIRS     #
+$NU_PLUGIN_DIRS  #
+
+$var.something?  # return null if path doesn't exist

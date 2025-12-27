@@ -1,0 +1,7 @@
+Nu Table Pipelines:
+
+ls               | sort-by size             #
+[{a:1, b:2}]     | drop column              # remove last column
+[{'val':30} {'val':50} {...}] | select val  # select columns from table
+
+table | where ($it.column  == "value")      # filter the table

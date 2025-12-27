@@ -1,0 +1,35 @@
+#!/usr/bin/env -S nu --stdin
+## example.nu -*- mode: Nushell -*-
+
+def main []: nothing -> list {
+    print "----------\nJG Example Script\n----------\n"
+    print "Reminders: "
+
+    [
+    "ls | sort-by size"
+
+
+    ]
+}
+
+
+def simple_bool []: nothing -> bool {
+    true
+}
+
+def simple_str []: nothing -> string {
+    "blah"
+}
+
+def simple_date []: nothing -> datetime {
+    2000-01-01
+}
+
+def simple_duration []: nothing -> duration {
+    12min
+}
+
+def --env blah []: nothing -> nothing {
+    $env.FOO = "Blah"
+
+}

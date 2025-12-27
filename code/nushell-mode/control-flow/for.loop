@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : for.loop
+# uuid  : for.loop
+# key   : for.loop
+# group : control-flow
+# --
+for $it in ${1:[1,2,3]} { $it | print }

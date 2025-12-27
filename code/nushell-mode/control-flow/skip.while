@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : skip.while
+# uuid  : skip.while
+# key   : skip.while
+# group : control-flow
+# --
+${1:cmd} | skip while { |x| $x > 0 } $0

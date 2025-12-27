@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : each
+# uuid  : each
+# key   : each
+# group : control-flow
+# --
+${1:cmd} | each { |elt| ${2:action} } $0

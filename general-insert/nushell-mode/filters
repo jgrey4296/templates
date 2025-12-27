@@ -1,0 +1,72 @@
+Nu Filters:
+all           #
+any           #
+append        #
+chunk-by      #
+chunks        #
+collect       #
+columns       #
+compact       #
+default       #
+drop          #
+drop column   #
+drop nth      #
+each          #
+each while    #
+enumerate     #
+every         #
+filter        #
+find          #
+first         #
+flatten       #
+get           #
+group-by      #
+headers       #
+insert        #
+interleave    #
+is-empty      #
+is-not-empty  #
+items         #
+join          #
+last          #
+length        #
+lines         #
+merge         #
+merge deep    #
+move          #
+par-each      #
+prepend       #
+reduce        #
+reject        #
+rename        #
+reverse       #
+roll          #
+roll down     #
+roll left     #
+roll right    #
+roll up       #
+rotate        #
+select        #
+shuffle       #
+skip          #
+skip until    #
+skip while    #
+slice         #
+sort          #
+sort-by       #
+split list    #
+take          #
+take until    #
+take while    #
+tee           #
+transpose     #
+uniq          #
+uniq-by       #
+update        #
+update cells  #
+upsert        #
+values        #
+where         #
+window        #
+wrap          #
+zip           #

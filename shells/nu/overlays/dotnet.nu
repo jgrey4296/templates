@@ -1,6 +1,13 @@
 ## dotnet.nu -*- mode: Nushell -*-
+# use std
+
+
+export def dotnet-blah [] {
+    print "blah"
+}
 
 export-env {
+        print $"(ansi light_blue)* dotnet...(ansi reset)"
 
             let DOTNET_ROOT                    = $env.BASELOCAL  | path join "dotnet"
             let DOTNET_TOOLS                   = $DOTNET_ROOT    | path join ".dotnet/tools"

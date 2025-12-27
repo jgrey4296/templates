@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : match
+# uuid  : match
+# key   : match
+# group : control-flow
+# --
+match ${1:val} {
+      ${2:value} => { ${3:action} },
+      _ => { "fallback" }
+}

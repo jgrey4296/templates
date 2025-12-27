@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : try
+# uuid  : try
+# key   : try
+# group : control-flow
+# --
+try { ${1:cmds} } catch { ${2:recovery} } | $0

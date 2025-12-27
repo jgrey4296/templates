@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : export.envmod
+# uuid  : export.envmod
+# key   : export.envmod
+# group : exports command environment
+# --
+export def --env ${1:cmd} []: nothing -> nothing {
+    $env.FOO = "Blah"
+
+}

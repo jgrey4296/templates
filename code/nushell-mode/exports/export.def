@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : export.def
+# uuid  : export.def
+# key   : export.def
+# group : exports commands
+# --
+export def ${1:cmdName} []: nothing -> nothing {
+
+
+}

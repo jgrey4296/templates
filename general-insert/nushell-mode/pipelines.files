@@ -1,0 +1,21 @@
+Nu File Pipelines:
+
+"file.txt" | start                        #
+"file.txt" | open                         #
+
+"lorem ipsum" | save file.txt             #
+"lorem ipsum" | save --append file.txt    #
+
+{a:1 b:2}     | save file.json            #
+
+glob **/*.{rs,toml} --depth 2
+
+watch . --glob=**/*.rs { || cargo test }  # watch a file and run a command when it changes
+
+filename | open | from json               # convert text to data
+
+filename | open | lines                   #
+
+ls | where type  = file                   #
+ls | where type  = dir                    #
+ls | where type  = symlink                #

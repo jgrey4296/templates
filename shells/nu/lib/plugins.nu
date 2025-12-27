@@ -1,5 +1,5 @@
 ## plugins.nu -*- mode: Nushell -*-
-print "Configuring Plugins..."
+print "- Plugins..."
 
 mut plugins = {}
 $plugins.plugins = {

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : take.while
+# uuid  : take.while
+# key   : take.while
+# group : control-flow
+# --
+${1:cmd} | take while { |x| $x > 0 } $0

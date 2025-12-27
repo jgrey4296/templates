@@ -1,10 +1,10 @@
 ## bindings.nu -*- mode: Nushell -*-
 # https://www.nushell.sh/book/line_editor.html#keybindings
 # inspect with 'keybindings list'
-print "Configuring bindings..."
+print "- bindings..."
 mut _bindings = []
 
-$_bindings ++= [ {name: completion_menu
+$_bindings ++= [{name: completion_menu
                 modifier: none
                 keycode: tab
                 mode: [emacs vi_normal vi_insert]

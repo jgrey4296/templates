@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : take.util
+# uuid  : take.util
+# key   : take.util
+# group : control-flow
+# --
+${cmd} | take until { |x| $x > 2 } $0

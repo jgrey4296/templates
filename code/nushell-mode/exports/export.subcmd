@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : export.subcmd
+# uuid  : export.subcmd
+# key   : export.subcmd
+# group : exports commands
+# --
+export def "${1:cmd} ${2:sub}" []: nothing -> nothing {
+
+
+}

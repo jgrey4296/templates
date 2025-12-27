@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : choice
+# uuid  : choice
+# key   : choice
+# group : control-flow
+# --
+${1:cmd} | if $in == ${2:test} { ${3:true} } else { ${4:false} } $0

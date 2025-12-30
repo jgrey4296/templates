@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Encounter Editor
+Terminal=false
+Exec=java -jar /home/john/.local/encounter_editor/EncounterEditor.jar
+Comment=Start the Encounter Editor.
+Icon=utilities-terminal
+StartupNotify=true

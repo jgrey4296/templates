@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Protege
+Terminal=false
+Exec=/home/john/.local/protege/protege
+Comment=Start Protege.
+Icon=/home/john/.local/protege/app/Protege.ico
+StartupNotify=true

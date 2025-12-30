@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Isabelle
+Terminal=false
+Exec=/home/john/.local/Isabelle2025/Isabelle2025
+Comment=Start Isabelle.
+Icon=/home/john/.local/Isabelle2025/lib/logo/isabelle.gif
+StartupNotify=true

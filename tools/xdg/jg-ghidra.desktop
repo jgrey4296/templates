@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Ghidra
+Terminal=false
+Exec=/home/john/.local/ghidra/ghidraRun
+Comment=Start ghidra.
+Icon=/home/john/.local/ghidra/docs/images/GHIDRA_1.png
+StartupNotify=true

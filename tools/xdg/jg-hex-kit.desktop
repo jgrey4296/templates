@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=HexKit
+Terminal=false
+Exec=/home/john/.local/hex_kit/hex_kit
+Comment=Start HexKit.
+Icon=utilities-terminal
+StartupNotify=true

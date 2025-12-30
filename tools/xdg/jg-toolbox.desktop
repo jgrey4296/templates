@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=TLA+ Toolbox
+Terminal=false
+Exec=/home/john/.local/toolbox/toolbox
+Comment=Start TLA+ Toolbox.
+Icon=/home/john/.local/toolbox/splash.bmp
+StartupNotify=true

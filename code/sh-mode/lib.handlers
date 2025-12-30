@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : lib.handlers
+# uuid  : lib.handlers
+# key   : lib.handlers
+# group : librarian
+# --
+# h : h : h+o+o+o
+export LIBRARIAN_HANDLERS="lsp:py-lsp:mypy:flycheck"

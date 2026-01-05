@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : test.node
+# uuid  : test.node
+# key   : test.node
+# group : gut unit_test
+# --
+var NodeClass = load("res://$1.gd")
+var node_inst = NodeClass.new()
+add_child_autofree(node_inst)

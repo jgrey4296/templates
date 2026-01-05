@@ -22,8 +22,8 @@ abbreviations:
 
     polyglot: /media/john/data/github/polyglot/polyglot-template
 
-    todo: /media/john/data/github/polyglot/poly-tasks/todo-{0}
-    lang: /media/john/data/github/polyglot/poly-tasks/langs-main/{0}
-    util: /media/john/data/github/polyglot/poly-tasks/langs-util/{0}
-    tool: /media/john/data/github/polyglot/poly-tasks/tools-main/{0}
-    task: /media/john/data/github/polyglot/poly-tasks/tasks-main/{0}
+    lang: /media/john/data/github/polyglot/poly-tasks/langs/{0}
+    util: /media/john/data/github/polyglot/poly-tasks/util/{0}
+    tool: /media/john/data/github/polyglot/poly-tasks/tools/{0}
+    task: /media/john/data/github/polyglot/poly-tasks/tasks/{0}
+    todo: /media/john/data/github/polyglot/poly-tasks/todo/{0}

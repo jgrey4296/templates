@@ -31,3 +31,6 @@ Unity Manual                # https://docs.unity3d.com/Manual/index.html
 .net xunit tutorial         # https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-csharp-with-xunit
 docfx generator             # https://dotnet.github.io/docfx/
 doxygen                     # https://www.doxygen.nl/manual/index.html
+
+godot gdscript              # https://docs.godotengine.org/en/stable/classes/class_%40gdscript.html#class-gdscript
+godot global scope          # https://docs.godotengine.org/en/stable/classes/class_%40globalscope.html#class-globalscope

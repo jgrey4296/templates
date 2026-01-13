@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+## `(f-filename (buffer-file-name))` -*- mode: python -*-
 """
 $0
 

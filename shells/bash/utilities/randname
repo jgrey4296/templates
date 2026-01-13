@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-#  randname -*- mode: sh -*-
-
-shuf < /usr/share/dict/words | head -n 1 | sed "s/'//g"

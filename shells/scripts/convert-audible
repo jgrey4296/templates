@@ -1,0 +1,77 @@
+#!/usr/bin/env -S bash
+
+function print-help () {
+    # test args, if the last one is -h or --help
+    # print help and exit
+    case "${@: -1}" in
+        -h|--help) ;;
+        *) if [[ "$#" -gt 0 ]]; then
+               return
+           fi
+           ;;
+    esac
+    echo -e "
+usage: convert-audible [-h] [profile] [title]
+
+download and convert and audible audiobook,
+using https://github.com/mkb79/audible-cli
+and ffmpeg
+
+positional arguments:
+profile : the profile to download from [eg:uk/us]
+title   : the short name of the title to download [eg:B0056ABAM6]
+
+options:
+-h, --help    : show this help message and exit
+
+"
+
+    exit "${PRINTED_HELP:-2}"
+}
+
+print-help "$@"
+
+JQ_QUERY=".activation_bytes"
+profile="$1"
+title="$2"
+
+case "${3:-}" in
+    mp3) codec="libmp3lame" ;;
+    flac) codec="flac" ;;
+    *) codec="libmp3lame" ;;
+esac
+
+ABYTES=$(jq --raw-output "$JQ_QUERY" "$AUDIBLE_CONFIG_DIR/${profile}.json")
+
+function fail () {
+    echo -e "$@"
+    exit 1
+}
+
+echo "** Converting Audible File **"
+[[ -n "$ABYTES" ]] || fail "Failed to retrieve activation bytes"
+
+pushd "$HOME/Downloads" || fail "Failed to enter downloads"
+echo "- Downloading file"
+audible -P "$profile" download --aax --pdf --no-confirm --asin "$title" || fail "Failed to download: $profile : $title"
+
+echo "- Converting File"
+for file in "$PWD/"*.aax
+do
+    case "$codec" in
+        libmp3lame) target="${file/.aax/.mp3}" ;;
+        flac) target="${file/.aax/.flac}" ;;
+        *) fail "unknown codec: $codec" ;;
+    esac
+
+    (ffmpeg \
+        -activation_bytes "$ABYTES" \
+        -i "$file" \
+        -vn \
+        -c:a "$codec" \
+        -q:a 4 \
+        "$target"
+     ) || fail "Failed to convert: $file"
+    rm "$file"
+done
+popd || fail "Failed to exit downloads"

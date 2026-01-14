@@ -5,15 +5,15 @@
 
 BASE_ENV=""
 PROMPT_INFO=()
-DEPTH_PROMPT="${PROMPT_NUM-1}"
+SHELL_DEPTH="${PROMPT_NUM:-1}"
 SEP="."
 
 function append () {
     if [[ "${#PROMPT_INFO}" = 0 ]]; then
-        PROMPT_INFO+="$1"
+        PROMPT_INFO+=("$1")
     else
-        PROMPT_INFO+="$SEP"
-        PROMPT_INFO+="$1"
+        PROMPT_INFO+=("$SEP")
+        PROMPT_INFO+=("$1")
     fi
 }
 
@@ -21,36 +21,28 @@ function append () {
 PATH_SEGMENT=$(pwd | sed -r 's/.+?\/(.+?\/.+?)/...\/\1/')
 
 # Get the depth:
-if [ "${PROMPT_NUM-}" -lt 2 ]; then
-    DEPTH_PROMPT="⟘"
-fi
-if [[ -n "${DEPTH_PROMPT}" ]]; then
-    append "$DEPTH_PROMPT"
-fi
+[[ "${SHELL_DEPTH}" -gt 1 ]] || SHELL_DEPTH="⟘"
+
+append "$SHELL_DEPTH"
+
 # See whats activated:
-if [[ -n "$TMUX" ]]; then
-    append "TMUX"
-fi
-if [[ -n "${INSIDE_EMACS}" ]]; then
-    append "emacs"
-fi
-if [[ -n "$DIRENV_DIR" ]]; then
-    append "direnv"
-fi
-if [[ -n "${ASDF_DATA_DIR}" ]]; then
-    append "asdf"
-fi
-if [[ -n "${SDKMAN_PLATFORM}" ]]; then
-    append "sdkman"
-fi
+[[ -z "${TMUX:-}" ]]            || append "TMUX"
+
+[[ -z "${INSIDE_EMACS:-}" ]]    || append "emacs"
+
+[[ -z "${DIRENV_DIR:-}" ]]      || append "direnv"
+
+[[ -z "${ASDF_DATA_DIR:-}" ]]   || append "asdf"
+
+[[ -z "${SDKMAN_PLATFORM:-}" ]] || append "sdkman"
 
 
-if [[ -n "${VIRTUAL_ENV}" ]]; then
+if [[ -n "${VIRTUAL_ENV:-}" ]]; then
     BASE_ENV=$(dirname "$VIRTUAL_ENV");
     BASE_ENV=$(basename "$BASE_ENV";)
     append "venv(${BASE_ENV})"
-elif [[ -n "${CONDA_DEFAULT_ENV-}" ]]; then
-    append "mamba(${CONDA_DEFAULT_ENV-})"
+elif [[ -n "${CONDA_DEFAULT_ENV:-}" ]]; then
+    append "mamba(${CONDA_DEFAULT_ENV:-})"
 fi
 
 

@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# login-mux.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+[[ -n "${TMUX:-}"  ]] || exit 0
+
+case "${TERM_PROGRAM:-}" in
+    tmux) exit 0  ;;
+    emacs) exit 0 ;;
+
+esac
+
+if { tmux has-session; }; then
+    echo "Tmux Session Running"
+else
+    echo "No Tmux Session"
+fi
+
+tmux new-session -s "$(randname)"

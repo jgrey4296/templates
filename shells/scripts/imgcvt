@@ -1,0 +1,67 @@
+#  image.bash -*- mode: sh -*-
+
+PRINTED_HELP="${PRINTED_HELP:-2}"
+HELP_TEXT="
+usage: imgcvt [-h] [args ...]
+
+positional arguments:
+args          :
+
+options:
+-h, --help    : show this help message and exit
+"
+
+function fail () {
+    echo -e "$@"
+    exit 1
+}
+
+function print-help () {
+    # test args, if the last one is -h or --help
+    # print help and exit
+    case "${@: -1}" in
+        -h|--help) ;;
+        *) if [[ "$#" -gt 0 ]]; then
+              # there are arguments, so don't print the help
+              return
+           fi ;;
+    esac
+    echo -e "$HELP_TEXT"
+    exit "${PRINTED_HELP:-2}"
+}
+
+print-help "$@"
+
+shopt -s nullglob
+potentials=""
+allargs=( "$@" )
+outname="$1"
+imgnames=("${allargs[@]:1}")
+tmpdir="$HOME/.cache/imgconv"
+
+[[ -d "$tmpdir" ]] || { echo "- Making temp dir"; mkdir "$tmpdir"; }
+
+for target in "${imgnames[@]}"
+do
+    base=$(basename "$target")
+    echo "- Converting: $base"
+    convert "$target" -alpha off "$tmpdir/$base"
+    mogrify -orient bottom-left "$tmpdir/$base"
+    ( img2pdf \
+        --output "$tmpdir/$base.pdf" \
+        --rotation=ifvalid \
+        --pagesize A4 \
+        --auto-orient "$tmpdir/$base"
+     ) || fail "Failed to convert to pdf"
+done
+
+potentials=$(find "$tmpdir" -name "*.pdf")
+
+echo "- Combining: ${potentials[*]}"
+pdftk "${potentials[@]}" cat output "./$outname.pdf"
+
+read -r -p "Delete Temp Files? y/* : " dodel
+if [[ "$dodel" = "y" ]]; then
+    echo "Deleting"
+    rm -rf "$tmpdir"
+fi

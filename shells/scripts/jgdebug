@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-#  jgdebug.bash -*- mode: sh -*-
-
-if [[ -n "${JGDEBUG-}" ]]; then
-    echo -e "%% " "$@"
-fi

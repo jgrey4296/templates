@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# mux-attach.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+case "${TERM_PROGRAM:-}" in
+    tmux)    return ;;
+    emacs)   return ;;
+    *) tmux "attach" ;;
+esac

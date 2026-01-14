@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# jg-debug -*- mode: sh -*-
+
+[[ -z "${JGDEBUG-}" ]] || echo -e "%% " "$@"

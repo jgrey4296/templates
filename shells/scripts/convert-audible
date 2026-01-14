@@ -1,4 +1,7 @@
 #!/usr/bin/env -S bash
+#set -o errexit
+set -o nounset
+set -o pipefail
 
 function print-help () {
     # test args, if the last one is -h or --help

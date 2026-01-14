@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# init-ssh.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+echo "Initialising SSH"
+base="$XDG_CONFIG_HOME/secrets"
+targets=("ssh")
+keys=$(ssh-add -l)
+
+[[ -n "${TMUX:-}" ]] || targets+=("github" "gitlab" "android")
+[[ -z "$keys" ]]     || { echo "- Initialised already";  exit 0; }
+
+for val in "${targets[@]}"
+do
+    echo "- Adding $val"
+    for file in "$base/$val/"*
+    do
+        statres=$(stat -c "%a" "$file")
+        if [[ -f "$file" ]] && [[ "$statres" = "600" ]]; then
+            ssh-add "$file"
+        fi
+    done
+done

@@ -1,3 +1,4 @@
+#  infinity.bash -*- mode: sh -*-
 # For weidu cli:
 # PATH=/Volumes/documents/github/_libs/weidu/compiled:$PATH
 # For near infinity:

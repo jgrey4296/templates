@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#  perl.bash -*- mode: sh -*-
 
-jgdebug "setting PERL"
+jg-debug "setting PERL"
 PROMPTER_BASE="$HOME/github/MAS/cotillion/packages/prompter/prompter"
 PERL5LIB="$PROMPTER_BASE:${PERL5LIB-}"
 PERL5LIB="$PROMPTER_BASE/mod_aspects:$PERL5LIB"

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#  jvm.bash -*- mode: sh -*-
 # https://developer.android.com/tools/variables
 # Required sdkmanager packages:
 # Android SDK Build Tools
@@ -11,7 +11,7 @@
 #
 # android sdk home is deprecated, use android_home
 
-jgdebug "Setting JVM"
+jg-debug "Setting JVM"
 BUILD_TOOLS="33.0.2"
 
 # ANDROID_HOME="/usr/lib/android-sdk"
@@ -25,8 +25,8 @@ PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
 # ANDROID_TOOLS="$ANDROID_HOME/platform-tools:$ANDROID_TOOLS"
 
 
-jgdebug "Setting up SDKMAN"
+jg-debug "Setting up SDKMAN"
 SDKMAN_DIR="$XDG_CACHE_HOME/sdkman"
 
-jgdebug "Setting Gradle"
+jg-debug "Setting Gradle"
 GRADLE_USER_HOME="$XDG_CACHE_HOME/gradle"

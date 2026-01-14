@@ -1,7 +1,8 @@
-#!/usr/bin/env bash
+#  rust.bash -*- mode: sh -*-
+
 # https://doc.rust-lang.org/cargo/reference/environment-variables.html
 #
-jgdebug Setting up rust
+jg-debug "Setting up rust"
 RUSTUP_HOME="${XDG_CACHE_HOME}/rustup"
 CARGO_HOME="${XDG_CACHE_HOME}/cargo"
 

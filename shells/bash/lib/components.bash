@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#  components.bash -*- mode: sh -*-
 
 function source_components () {
     shopt -s globstar
@@ -9,10 +9,10 @@ function source_components () {
             do
                 case $(basename "$i") in
                     _*.bash)
-                        jgdebug "-- SKIPPING: $i"
+                        jg-debug "-- SKIPPING: $i"
                         ;;
                     *)
-                        jgdebug "-- Sourcing: $i"
+                        jg-debug "-- Sourcing: $i"
                         # shellcheck disable=SC1090,SC1091
                         source "$i"
                         ((count++))

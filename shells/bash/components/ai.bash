@@ -1,10 +1,11 @@
+#  ai.bash -*- mode: sh -*-
 
-jgdebug "Setting CLIPS"
+jg-debug "Setting CLIPS"
 CLIPS_HOME="$HOME/github/_libs/ai/clips"
 
-jgdebug "Setting Ceptre"
+jg-debug "Setting Ceptre"
 CEPTRE_HOME="$HOME/github/_libs/ai/ceptre"
 
-# jgdebug "Setting Prompter"
+# jg-debug "Setting Prompter"
 # alias prompter="perl /Volumes/documents/github/MAS/cotillion/packages/prompter/prompter/prompter.pl"
 

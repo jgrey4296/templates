@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#  javascript.bash -*- mode: sh -*-
 
-# jgdebug "Setting Javascript"
+# jg-debug "Setting Javascript"
 #Node:
 PATH="$XDG_CACHE_HOME/npm-global/bin:$PATH"
 

@@ -1,8 +1,8 @@
-#!/usr/bin/env bash
+#  ocaml.bash -*- mode: sh -*-
 # https://coq.inria.fr/doc/V8.19.0/refman/practical-tools/coq-commands.html
 # https://ocaml.org/docs/installing-ocaml#1-install-opam
 #
-jgdebug "Ocaml/Rocq Setup"
+jg-debug "Ocaml/Rocq Setup"
 
 OPAMROOT="$XDG_CACHE_HOME/opam"
 OPAM_SWITCH_PREFIX="$XDG_CACHE_HOME/opam/default"

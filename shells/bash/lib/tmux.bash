@@ -1,12 +1,12 @@
-#!/usr/bin/env bash
+# tmux.bash -*- mode: sh -*-
 # Tmux
 
 function loginmux () {
     # tmux aware session creation
-    if [[ -n $TMUX  ]]; then
+    if [[ -z "${TMUX:-}"  ]]; then
         return
     fi
-    case "$TERM_PROGRAM" in
+    case "${TERM_PROGRAM:-}" in
    	    tmux) return ;;
    	    emacs) return ;;
 
@@ -23,7 +23,7 @@ function loginmux () {
 
 function attach () {
     # a simple tmux attach shortcut
-    case "$TERM_PROGRAM" in
+    case "${TERM_PROGRAM:-}" in
         tmux) return ;;
         emacs) return ;;
         *) tmux "attach" ;;

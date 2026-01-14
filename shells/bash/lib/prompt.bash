@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+# prompt.bash -*- mode: sh -*-
 # Prompt manipulation
 JG_PROMPT=("_" "_")
 
@@ -14,13 +14,13 @@ function _update_prompt {
 
 function jg_maybe_inc_prompt {
     # Increment the shell level each time you go into a subshell
-    if [[ -n "$PROMPT_NUM" ]] && [[ $PROMPT_NUM -eq $PROMPT_NUM ]] 2> /dev/null; then
-        jgdebug "Prompt Level: $PROMPT_NUM"
+    if [[ -n "${PROMPT_NUM:-}" ]] && [[ "${PROMPT_NUM:-}" -eq "${PROMPT_NUM:-}" ]] 2> /dev/null; then
+        jg-debug "Prompt Level: $PROMPT_NUM"
         ((PROMPT_NUM++))
     else
         PROMPT_NUM=1
     fi
-    jgdebug Depth Prompt: "${PROMPT_NUM-}"
+    jg-debug Depth Prompt: "${PROMPT_NUM-}"
 }
 
 function _direnv_hook() {
@@ -29,5 +29,5 @@ function _direnv_hook() {
   trap -- '' SIGINT;
   eval "$(/usr/bin/env direnv export bash)";
   trap - SIGINT;
-  return $previous_exit_status;
+  return "$previous_exit_status"
 };

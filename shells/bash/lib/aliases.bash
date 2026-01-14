@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#  aliases.bash -*- mode: sh -*-
 
-jgdebug Setting misc aliases
+jg-debug "Setting misc aliases"
 # alias tar="gtar"
 
 alias fd="fdfind"
@@ -21,7 +21,7 @@ alias lsda="ls -la | grep '^d'"
 alias lsl="ls -l"
 
 # enable color support of ls and also add handy aliases
-if [[ -x /usr/bin/dircolors ]] && [[ "$TERM" != "dumb" ]]; then
+if [[ -x /usr/bin/dircolors ]] && [[ "${TERM:-}" != "dumb" ]]; then
     (test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)") || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
     alias dir='dir --color=auto'
@@ -38,7 +38,8 @@ alias duh="du -hd 1 | sort"
 # cd + ls
 alias cd="cd_ls"
 function cd_ls {
-    builtin cd "$@"
+    builtin cd "$@" || echo "cd Failed"
+    # shellcheck disable=SC2181
     if [[ "$?" -gt 0 ]]; then
         return
     fi

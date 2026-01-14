@@ -1,3 +1,3 @@
 #  godot.bash -*- mode: sh -*-
 
-jgdebug "Setting Up Godot"
+jg-debug "Setting Up Godot"

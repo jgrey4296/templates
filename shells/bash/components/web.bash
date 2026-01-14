@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#  web.bash -*- mode: sh -*-
 
-jgdebug "Setting up web paths"
+jg-debug "Setting up web paths"
 APPLICATIONS="/Applications/"
 APP_INTERNAL="Contents/MacOS"
     

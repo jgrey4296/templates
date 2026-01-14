@@ -1,7 +1,6 @@
-#!/usr/bin/env bash
 # golang.bash -*- mode: sh -*-
 
-jgdebug "Golang Setup"
+jg-debug "Golang Setup"
 
 GOPATH="$XDG_CACHE_HOME/go"
 GOBIN="$GOPATH/bin"

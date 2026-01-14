@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#  nix.bash -*- mode: sh -*-
+
 # https://nix.dev/manual/nix/2.28/command-ref/env-common.html
 # set -euo pipefail
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-jgdebug Setting misc aliases
+jg-debug "Setting misc aliases"
 # alias tar="gtar"
 
 alias ghidra="ghidraRun"

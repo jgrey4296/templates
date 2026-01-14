@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
-
+#  _other.bash -*- mode: sh -*-
 
 fail "this should not run"

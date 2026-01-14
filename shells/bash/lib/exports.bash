@@ -1,12 +1,11 @@
-#!/usr/bin/env bash
+#  exports.bash -*- mode: sh -*-
 
-jgdebug "Setting Exports"
+jg-debug "Setting Exports"
 
 # Personal
 export JGLOGDIR
 
 # General
-export HISTFILE="$XDG_CACHE_HOME/logs/bash_history"
 export LESSHISTFILE="$XDG_CACHE_HOME/logs/lesshst"
 export NODE_REPL_HISTORY="$XDG_CACHE_HOME/logs/node_repl_history"
 export G_MESSAGES_PREFIXED="" # To get rid of atk-bridge complaints
@@ -85,9 +84,10 @@ export ASDF_DATA_DIR
 export GOPATH
 export GOBIN
 
+# audible
+export AUDIBLE_CONFIG_DIR
 
 # Functions
-# export -f jgdebug
 # export -f jg_maybe_inc_prompt
 # export -f jg_prompt_update
 # export -f jg_set_prompt

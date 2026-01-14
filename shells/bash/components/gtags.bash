@@ -1,3 +1,3 @@
-#!/usr/bin/env bash
+#  gtags.bash -*- mode: sh -*-
 
 GTAGSLABEL="pygments"

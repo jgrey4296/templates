@@ -1,3 +1,4 @@
+#  dotnet.bash -*- mode: sh -*-
 # Settings for dotnet / c#
 # https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-environment-variables
 #

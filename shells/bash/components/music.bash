@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#  music.bash -*- mode: sh -*-
 
-jgdebug "setting Tidal port"
+jg-debug "setting Tidal port"
 TIDAL_TEMPO_PORT=57120

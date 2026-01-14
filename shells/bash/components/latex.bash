@@ -1,7 +1,7 @@
-#!/usr/bin/env bash
+#  latex.bash -*- mode: sh -*-
 
-jgdebug "Setting Latex"
-jgdebug "reminder: tlmgr for installing packages, use --usermode after tlmgr init-usertree"
+jg-debug "Setting Latex"
+jg-debug "reminder: tlmgr for installing packages, use --usermode after tlmgr init-usertree"
 
 # TEXBASE="$HOME/.local/texlive/current"
 # PATH="$TEXBASE/bin/x86_64-linux:$PATH"

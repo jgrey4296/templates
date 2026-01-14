@@ -12,23 +12,8 @@ set -o nounset
 set -o pipefail
 
 DEFAULT_FILE="TODO.txt"
-
-# shellcheck disable=SC1091
-source "$POLY_SRC/lib/lib-util.bash"
-if [[ -e "$POLYGLOT_ROOT/.tasks/task-util.bash" ]]; then
-    # shellcheck disable=SC1091
-    source "$POLYGLOT_ROOT/.tasks/task-util.bash"
-fi
-
-function print-help () {
-    case "${@: -1}" in
-        -h|--help) ;;
-        *) if [[ "$#" -gt 0 ]]; then
-               return
-           fi
-           ;;
-    esac
-    echo -e "
+PRINTED_HELP="\${PRINTED_HELP:-2}"
+HELP_TEXT="
 usage: polyglot lang {lang} {cmd} [-h] [package] [filename|--] [args...]
 
 positional arguments:
@@ -40,7 +25,21 @@ options:
 -h, --help    : show this help message and exit
 
 "
-    exit "${PRINTED_HELP:-2}"
+
+# shellcheck disable=SC1091
+source "$POLY_SRC/lib/lib-util.bash"
+if [[ -e "$POLYGLOT_ROOT/.tasks/task-util.bash" ]]; then
+    # shellcheck disable=SC1091
+    source "$POLYGLOT_ROOT/.tasks/task-util.bash"
+fi
+
+function print-help () {
+    case "${@: -1}" in
+        -h|--help) ;;
+        *) [[ "$#" -gt 0 ]] && return ;;
+    esac
+    echo -e "$HELP_TEXT"
+    exit "$PRINTED_HELP"
 }
 
 function handle-result () {

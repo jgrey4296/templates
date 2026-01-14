@@ -1,0 +1,29 @@
+# -*- mode: snippet -*-
+# name  : print.help
+# uuid  : print.help
+# key   : print.help
+# group :
+# --
+PRINTED_HELP="\${PRINTED_HELP:-2}"
+HELP_TEXT="
+usage: ${1:cmd help} [-h] [args ...]
+
+positional arguments:
+args          :
+
+options:
+-h, --help    : show this help message and exit
+"
+
+function print-help () {
+    # test args, if the last one is -h or --help
+    # print help and exit
+    case "\${@: -1}" in
+        -h|--help) ;;
+        *) [[ "$#" -gt 0 ]] && return ;;
+    esac
+    echo -e "\$HELP_TEXT"
+    exit "\${PRINTED_HELP}"
+}
+
+print-help "$@"

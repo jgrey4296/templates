@@ -5,9 +5,8 @@
 
 # venv location
 export UV_PROJECT_ENVIRONMENT="$PWD/.temp/venv"
-if [ -d "$UV_PROJECT_ENVIRONMENT" ]; then
-    source "$UV_PROJECT_ENVIRONMENT/bin/activate"
-fi
+[[ -d "$UV_PROJECT_ENVIRONMENT" ]] && source "$UV_PROJECT_ENVIRONMENT/bin/activate"
+
 
 # user local
 PATH_add "$HOME/.local/bin"
@@ -33,6 +32,11 @@ PATH_add "$HOME/.local/texlive/current/bin/x86_64-linux"
 
 # For repo-local tasks
 PATH_add "$PWD/.tasks"
+
+##-- polyglot
+
+
+##-- end polyglot
 
 # h : h : h+o+o+o
 export LIBRARIAN_HANDLERS=""

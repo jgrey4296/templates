@@ -26,5 +26,4 @@ function init-sdkman () {
         # shellcheck disable=SC1091
         source "${SDKMAN_DIR}/bin/sdkman-init.sh"
     fi
-    set -o nounset
 }

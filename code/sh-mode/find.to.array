@@ -4,4 +4,9 @@
 # key   : find.to.array
 # group :
 # --
-readaray -d '' ${1:arrayName} < <(find "." -print0)
+readarray -d '' ${1:arrayName} < <(find \
+    "." \
+    -name "*" \
+    -type f \
+    -maxdepth 0 \
+    -print0 )

@@ -36,8 +36,21 @@ print-help "$@"
 
 JQ_QUERY=".activation_bytes"
 profile="$1"
-file="$2"
 ABYTES=$(jq --raw-output "$JQ_QUERY" "$AUDIBLE_CONFIG_DIR/${profile}.json")
+
+case "${2:-}" in
+    *.aax) file="$2" ;;
+    *)
+        readarray -d '' files < <(find . \
+            -maxdepth 1 \
+            -name "*.aax" \
+            -type f \
+            -print0 )
+
+        [[ "${#files[@]}" -gt 0 ]] || fail "There are no files to convert"
+        file="${files[0]}"
+    ;;
+esac
 
 target="${file/.aax/.mp3}"
 

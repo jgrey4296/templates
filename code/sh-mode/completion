@@ -1,0 +1,30 @@
+# -*- mode: snippet -*-
+# name  : completion
+# uuid  : completion
+# key   : completion
+# group : bash complete
+# --
+
+COMPLETE_NAME="${1:testcmd}"
+WORDLIST="now tomorrow never"
+
+function _completion_loader () {
+    ## register the function for $1
+    complete -F _comp_$1 "$COMPLETE_NAME"
+
+    ## register a wordlist for $1
+    # complete -W "$WORDLIST" "$COMPLETE_NAME"
+}
+
+function _comp_$1 () {
+    # $1 is command name,
+    # $2 is word being completed
+    # $3 is word preceding
+
+
+    # add completions into COMPREPLY
+    COMPREPLY=("blah" "bloo" "aweg")
+    return 0
+}
+
+_completion_loader

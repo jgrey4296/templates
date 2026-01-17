@@ -1,3 +1,5 @@
+# .gitignore -*- mode: Gitignore -*-
+
 .DS_Store
 .idea
 *.log
@@ -8,15 +10,18 @@ tmp/
 *.egg
 build
 htmlcov
+
 # Ruby
 .ruby-version
 .bundle
 vendor
 Gemfile.lock
 coverage
+
 # Java
 *.class
 build
+
 # Javascript
 *.tern-port
 node_modules/
@@ -26,6 +31,7 @@ yarn-error.log*
 *.tsbuildinfo
 .npm
 .eslintcache
+
 # Haskell
 dist
 dist-*
@@ -50,3 +56,6 @@ cabal.project.local
 cabal.project.local~
 .HTF/
 .ghc.environment.*
+
+# Lisp
+.eask

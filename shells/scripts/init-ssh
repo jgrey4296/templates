@@ -10,7 +10,13 @@ targets=("ssh")
 keys=$(ssh-add -l)
 
 [[ -n "${TMUX:-}" ]] || targets+=("github" "gitlab" "android")
-[[ -z "$keys" ]]     || { echo "- Initialised already";  exit 0; }
+
+case "${@: -1}" in
+    -f|--force) ;;
+    *)
+        [[ -z "$keys" ]] || { echo "- Initialised already";  exit 0; }
+        ;;
+esac
 
 for val in "${targets[@]}"
 do

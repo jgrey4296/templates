@@ -1,109 +1,133 @@
-
-ASDF vm management             # https://asdf-vm.com/guide/getting-started.html
-AWK Examples                   # https://en.m.wikibooks.org/wiki/An_Awk_Primer/Awk_Command-Line_Examples
-Agda CLI                       # https://agda.readthedocs.io/en/v2.6.2.2/tools/command-line-options.html
-Apt                            # https://manpages.ubuntu.com/manpages/xenial/man8/apt.8.html
-GNU Bash Reference             # https://www.gnu.org/software/bash/manual/bash.html
-Bash Scripting                 # https://tldp.org/LDP/abs/html/
-Bibtex                         # https://tug.org/texinfohtml/web2c.html#BibTeX
-Calibre Ebook                  # https://manual.calibre-ebook.com/generated/en/cli-index.html
-Cargo                          # https://doc.rust-lang.org/cargo/
-Conda                          # https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
-Cookiecutter                   # https://cookiecutter.readthedocs.io/en/stable/cli_options.html
-Coq                            # https://coq.inria.fr/doc/V8.20.0/refman/practical-tools/utilities.html
-Curl                           # https://curl.se/docs/manpage.html
-Ditaa Ascii Arg                # https://github.com/stathissideris/ditaa?tab=readme-ov-file#usage-and-syntax
-DotNet CLI                     # https://learn.microsoft.com/en-gb/dotnet/core/tools/
-DotNet Nuget                   # https://learn.microsoft.com/en-gb/nuget/
-DuckDucGo                      # https://github.com/jarun/ddgr?tab=readme-ov-file#usage
-Dune                           # https://dune.readthedocs.io/en/stable/reference/cli.html
-Elixir shell                   # https://hexdocs.pm/iex/IEx.html
-Exiftool                       # https://exiftool.org/exiftool_pod.html
-Exiftool Docs                  # https://exiftool.org/exiftool_pod.html
-Ffmpeg                         # https://ffmpeg.org/ffmpeg.html
-Firefox                        # https://wiki.mozilla.org/Firefox/CommandLineOptions
-Flathub                        # https://flathub.org
-Flatpak                        # https://docs.flatpak.org/en/latest/
-GDB                            # https://sourceware.org/gdb/current/onlinedocs/gdb#Invocation
-GHCI                           # https://downloads.haskell.org/ghc/latest/docs/users_guide/ghci.html
-GNU Awk                        # https://www.gnu.org/software/gawk/manual/gawk.html#Command-Line
-GNU GCal                       # https://www.gnu.org/software/gcal/manual/gcal.html
-GNU Global                     # https://www.gnu.org/software/global/globaldoc_toc.html#Command-line
-GNU Sed                        # https://www.gnu.org/software/sed/manual/sed.html
-GNU Sed                        # https://www.gnu.org/software/sed/manual/sed.html#Invoking-sed
-GNU Smalltalk CLI              # https://www.gnu.org/software/smalltalk/manual/gst.html#Invocation
-GPG                            # https://gnupg.org/documentation/manuals/gnupg/
-GPG Reference                  # https://www.futureboy.us/pgp.html
-Git                            # https://git-scm.com/doc
-Github                         # https://cli.github.com/manual/gh
-Godot                          # https://docs.godotengine.org/en/stable/tutorials/editor/command_line_tutorial.html
-Gradle                         # https://docs.gradle.org/current/userguide/command_line_interface.html
-GraphViz                       # https://graphviz.org/doc/info/command.html
-Grunt                          # https://gruntjs.com/using-the-cli
-Idris REPL                     # https://idris2.readthedocs.io/en/latest/reference/debugging.html#repl-commands
-Imagemagick                    # https://imagemagick.org/script/command-line-tools.php
-JDK tools                      # https://docs.oracle.com/en/java/javase/23/docs/specs/man/index.html
-Jq                             # https://jqlang.github.io/jq/
-KPathSea                       # https://tug.org/texinfohtml/kpathsea.html#index-bkpsewhich
-KotlinC                        # https://kotlinlang.org/docs/compiler-reference.html
-LLDB                           # https://lldb.llvm.org/man/lldb.html
-Learn By Example               # https://learnbyexample.github.io/
-MSCGen Message Control Graphs  # https://www.mcternan.me.uk/mscgen/
-Make                           # https://www.gnu.org/software/make/manual/make.html#Running
-Mamba Docs                     # https://mamba.readthedocs.io/en/latest/
-Maturin Py-Rust                # https://www.maturin.rs/#usage
-NPM                            # https://docs.npmjs.com/cli/v10/commands/npm
-Network Manager                # https://networkmanager.dev/docs/admins/
-Nix                            # https://nix.dev/manual/nix/2.18/command-ref/opt-common
-NodeJS                         # https://nodejs.org/docs/latest/api/synopsis.html
-Nushell                        # https://www.nushell.sh/
-Ocaml Repl                     # https://ocaml.org/manual/5.2/toplevel.html
-Ocamlc                         # https://ocaml.org/manual/5.2/comp.html
-Opam                           # https://opam.ocaml.org/doc/Usage.html
-OpenPolicyAgent                # https://www.openpolicyagent.org/docs/latest/cli/
-PDFTK                          # https://www.pdflabs.com/docs/pdftk-man-page/
-Pandoc                         # https://pandoc.org/MANUAL.html
-Pip                            # https://pip.pypa.io/en/stable/
-PipX                           # https://pypa.github.io/pipx/
-Plantuml CLI                   # https://plantuml.com/command-line
-Poetry                         # https://python-poetry.org/
-Pre-commit                     # https://pre-commit.com/
-PyLint                         # https://pylint.readthedocs.io/en/latest/index.html
-Python CLI                     # https://docs.python.org/3/using/cmdline.html#command-line
-Python isort                   # https://pycqa.github.io/isort/docs/quick_start/2.-cli.html
-RST doc8                       # https://doc8.readthedocs.io/en/latest/readme.html
-Ripgrep                        # https://learnbyexample.github.io/learn_gnugrep_ripgrep/
-RubyGems                       # https://guides.rubygems.org/command-reference/
-Rust CLI                       # https://rust-cli.github.io/book/index.html
-SDKman (jvm)                   # https://sdkman.io/install
-SWIPL CLI                      # https://www.swi-prolog.org/pldoc/man?section=cmdline
-Samba Wiki                     # https://wiki.samba.org/index.php/Main_Page
-Scala CLI                      # https://scala-cli.virtuslab.org/docs/overview/
-Snap                           # https://snapcraft.io/docs
-Sphinx                         # https://www.sphinx-doc.org/en/master/man/index.html
-SystemD                        # https://systemd.io/
-TMux                           # https://man.openbsd.org/OpenBSD-current/man1/tmux.1
-TeXLive                        # https://tug.org/texlive/doc/texlive-en/texlive-en.html
-Tesseract                      # https://github.com/tesseract-ocr/tesseract/blob/main/doc/tesseract.1.asc
-Tex Tlmgr                      # https://www.tug.org/texlive/doc/tlmgr.html
-Tex fmtutil                    # https://www.tug.org/texlive/doc/fmtutil.html
-Tex updmap                     # https://www.tug.org/texlive/doc/updmap.html
-Toolbox                        # https://containertoolbx.org/doc/
-Wget                           # https://www.gnu.org/software/wget/manual/wget.html#Invoking
-Wordnet                        # https://wordnet.princeton.edu/documentation
-XML Trang                      # https://relaxng.org/jclark/trang-manual.html
-XML Xidel                      # https://www.videlibri.de/xidel.html#docs
-XMLStarlet                     # https://xmlstar.sourceforge.net/doc/UG/xmlstarlet-ug.html
-Clamscan                       # https://docs.clamav.net/manual/Usage.html
-Docker                         # https://docs.docker.com/manuals/
-Maven                          # https://maven.apache.org/ref/3.9.9/maven-embedder/cli.html
-Soar                           # https://soar.eecs.umich.edu/soar_manual/09_SoarUserInterface/
-Jason                          # https://jason-lang.github.io/doc/jason-cli/commands.html
-Python UV                      # https://docs.astral.sh/uv/reference/cli/
-Elixir Mix                     # https://hexdocs.pm/mix/1.17.3/Mix.html
-Python Ruff                    # https://docs.astral.sh/ruff/linter/#ruff-check
-Rust Bindgen                   # https://rust-lang.github.io/rust-bindgen/command-line-usage.html
-
-GNU coreutils                      # https://www.gnu.org/software/coreutils/manual/html_node/index.html#SEC_Contents
-bash style guide               # https://style.ysap.sh/
-shellcheck directives          # https://github.com/koalaman/shellcheck/wiki/Directive#shellcheck-directives
+Agda CLI                                  https://agda.readthedocs.io/en/v2.6.2.2/tools/command-line-options.html
+Apt                                       https://manpages.ubuntu.com/manpages/xenial/man8/apt.8.html
+ASDF vm management                        https://asdf-vm.com/guide/getting-started.html
+AWK Examples                              https://en.m.wikibooks.org/wiki/An_Awk_Primer/Awk_Command-Line_Examples
+Bash Scripting                            https://tldp.org/LDP/abs/html/
+Bash Style Guide                          https://style.ysap.sh/
+Bibtex                                    https://tug.org/texinfohtml/web2c.html#BibTeX
+Calibre Ebook                             https://manual.calibre-ebook.com/generated/en/cli-index.html
+Cargo                                     https://doc.rust-lang.org/cargo/
+Clamscan                                  https://docs.clamav.net/manual/Usage.html
+Conda                                     https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
+Cookiecutter                              https://cookiecutter.readthedocs.io/en/stable/cli_options.html
+Coq                                       https://rocq-prover.org/doc/V9.1.0/refman/practical-tools/utilities.html
+Curl                                      https://curl.se/docs/manpage.html
+Deno javascript                           https://docs.deno.com/runtime/
+Ditaa Ascii Arg                           https://github.com/stathissideris/ditaa?tab=readme-ov-file#usage-and-syntax
+Docker                                    https://docs.docker.com/manuals/
+DotNet CLI                                https://learn.microsoft.com/en-gb/dotnet/core/tools/
+DotNet Nuget                              https://learn.microsoft.com/en-gb/nuget/
+DuckDucGo                                 https://github.com/jarun/ddgr?tab=readme-ov-file#usage
+Elixir Mix                                https://hexdocs.pm/mix/1.17.3/Mix.html
+Elixir shell                              https://hexdocs.pm/iex/IEx.html
+Exiftool                                  https://exiftool.org/exiftool_pod.html
+FDFind                                    https://github.com/sharkdp/fd?tab=readme-ov-file#how-to-use
+Ffmpeg                                    https://ffmpeg.org/ffmpeg.html
+Firefox                                   https://wiki.mozilla.org/Firefox/CommandLineOptions
+Flathub                                   https://flathub.org
+Flatpak                                   https://docs.flatpak.org/en/latest/
+GHCI                                      https://downloads.haskell.org/ghc/latest/docs/users_guide/ghci.html
+Git                                       https://git-scm.com/doc
+Github CLI                                https://cli.github.com/manual/gh
+Gitlab CLI                                https://docs.gitlab.com/cli/
+GNU - Manuals                             https://www.gnu.org/manual/manual.html#categories
+GNU Aspell                                http://aspell.net/man-html/
+GNU Auctex                                https://www.gnu.org/software/auctex/manual/auctex.html
+GNU Autoconf                              https://www.gnu.org/software/autoconf/manual/
+GNU Awk                                   https://www.gnu.org/software/gawk/manual/gawk.html#Command-Line
+GNU Bash Reference                        https://www.gnu.org/software/bash/manual/bash.html
+GNU bc                                    https://www.gnu.org/software/bc/manual/bc.html
+GNU cflow                                 https://www.gnu.org/software/cflow/manual/
+GNU Cobol                                 https://gnucobol.sourceforge.io/doc/gnucobol.html
+GNU coreutils                             https://www.gnu.org/software/coreutils/manual/html_node/index.html#SEC_Contents
+GNU Find                                  https://www.gnu.org/software/findutils/manual/html_mono/find.html
+GNU GCal                                  https://www.gnu.org/software/gcal/manual/gcal.html
+GNU GCC                                   https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/
+GNU GDB                                   https://sourceware.org/gdb/current/onlinedocs/gdb.html/
+GNU Global                                https://www.gnu.org/software/global/globaldoc_toc.html#Command-line
+GNU GPG                                   https://gnupg.org/documentation/manuals/gnupg/
+GNU Grep                                  https://www.gnu.org/software/grep/manual/grep.html
+GNU Grub                                  https://www.gnu.org/software/grub/manual/grub/grub.html
+GNU GZip                                  https://www.gnu.org/software/gzip/
+GNU Lilypond                              https://lilypond.org/manuals.html
+GNU Make                                  https://www.gnu.org/software/make/manual/make.html#Running
+GNU Prolog                                http://www.gprolog.org/manual/
+GNU Reftex                                https://www.gnu.org/software/auctex/manual/reftex.html
+GNU Sed                                   https://www.gnu.org/software/sed/manual/sed.html
+GNU Smalltalk CLI                         https://www.gnu.org/software/smalltalk/manual/gst.html#Invocation
+GNU Tar                                   https://www.gnu.org/software/tar/manual
+GNU Texinfo                               https://www.gnu.org/software/texinfo/manual/texinfo/texinfo.html
+GNU Units                                 https://www.gnu.org/software/units/manual/units.html
+GNU Wget                                  https://www.gnu.org/software/wget/manual/wget.html#Invoking
+Godot                                     https://docs.godotengine.org/en/stable/tutorials/editor/command_line_tutorial.html
+GPG Reference                             https://www.futureboy.us/pgp.html
+Gradle                                    https://docs.gradle.org/current/userguide/command_line_interface.html
+GraphViz                                  https://graphviz.org/doc/info/command.html
+Grunt                                     https://gruntjs.com/using-the-cli
+Idris REPL                                https://idris2.readthedocs.io/en/latest/reference/debugging.html#repl-commands
+Imagemagick                               https://imagemagick.org/script/command-line-tools.php
+Jason                                     https://jason-lang.github.io/doc/jason-cli/commands.html
+JDK tools                                 https://docs.oracle.com/en/java/javase/23/docs/specs/man/index.html
+Jq                                        https://jqlang.github.io/jq/
+KotlinC                                   https://kotlinlang.org/docs/compiler-reference.html
+KPathSea                                  https://tug.org/texinfohtml/kpathsea.html#index-bkpsewhich
+Learn By Example                          https://learnbyexample.github.io/
+Ledger                                    https://ledger-cli.org/docs.html
+LLDB                                      https://lldb.llvm.org/man/lldb.html
+Mamba Docs                                https://mamba.readthedocs.io/en/latest/
+Maturin Py-Rust                           https://www.maturin.rs/#usage
+Maven                                     https://maven.apache.org/ref/3.9.9/maven-embedder/cli.html
+MSCGen Message Control Graphs             https://www.mcternan.me.uk/mscgen/
+Network Manager                           https://networkmanager.dev/docs/admins/
+Nix                                       https://nix.dev/manual/nix/2.18/command-ref/opt-common
+NodeJS                                    https://nodejs.org/docs/latest/api/synopsis.html
+NPM                                       https://docs.npmjs.com/cli/v10/commands/npm
+Nushell                                   https://www.nushell.sh/
+Ocaml Dune                                https://dune.readthedocs.io/en/stable/reference/cli.html
+Ocaml Repl                                https://ocaml.org/manual/5.2/toplevel.html
+Ocamlc                                    https://ocaml.org/manual/5.2/comp.html
+Opam                                      https://opam.ocaml.org/doc/Usage.html
+OpenPolicyAgent                           https://www.openpolicyagent.org/docs/latest/cli/
+OpenSSH                                   https://man.openbsd.org/ssh
+OpenSSH ssh-add                           https://man.openbsd.org/ssh-add
+OpenSSH ssh-agent                         https://man.openbsd.org/ssh-agent
+OpenSSH ssh-keygen                        https://man.openbsd.org/ssh-keygen
+Pandoc                                    https://pandoc.org/MANUAL.html
+PDFTK                                     https://www.pdflabs.com/docs/pdftk-man-page/
+Pip                                       https://pip.pypa.io/en/stable/
+Plantuml CLI                              https://plantuml.com/command-line
+Podman                                    https://podman.io/docs
+Poetry                                    https://python-poetry.org/
+Pre-commit                                https://pre-commit.com/
+PyLint                                    https://pylint.readthedocs.io/en/latest/index.html
+Python CLI                                https://docs.python.org/3/using/cmdline.html#command-line
+Python isort                              https://pycqa.github.io/isort/docs/quick_start/2.-cli.html
+Python Ruff                               https://docs.astral.sh/ruff/linter/#ruff-check
+Python UV                                 https://docs.astral.sh/uv/reference/cli/
+Ripgrep                                   https://learnbyexample.github.io/learn_gnugrep_ripgrep/
+RST doc8                                  https://doc8.readthedocs.io/en/latest/readme.html
+RubyGems                                  https://guides.rubygems.org/command-reference/
+Rust Bindgen                              https://rust-lang.github.io/rust-bindgen/command-line-usage.html
+Rust CLI                                  https://rust-cli.github.io/book/index.html
+Samba Wiki                                https://wiki.samba.org/index.php/Main_Page
+Scala CLI                                 https://scala-cli.virtuslab.org/docs/overview/
+SDKman (jvm)                              https://sdkman.io/install
+shellcheck directives                     https://github.com/koalaman/shellcheck/wiki/Directive#shellcheck-directives
+Snap                                      https://snapcraft.io/docs
+Soar                                      https://soar.eecs.umich.edu/soar_manual/09_SoarUserInterface/
+Sphinx                                    https://www.sphinx-doc.org/en/master/man/index.html
+SWIPL CLI                                 https://www.swi-prolog.org/pldoc/man?section=cmdline
+SystemD                                   https://systemd.io/
+Tesseract                                 https://github.com/tesseract-ocr/tesseract/blob/main/doc/tesseract.1.asc
+Tex fmtutil                               https://www.tug.org/texlive/doc/fmtutil.html
+Tex Tlmgr                                 https://www.tug.org/texlive/doc/tlmgr.html
+Tex updmap                                https://www.tug.org/texlive/doc/updmap.html
+TeXLive                                   https://tug.org/texlive/doc/texlive-en/texlive-en.html
+TMux                                      https://man.openbsd.org/OpenBSD-current/man1/tmux.1
+Toolbox environments                      https://containertoolbx.org/doc/
+Wordnet                                   https://wordnet.princeton.edu/documentation
+XML Trang                                 https://relaxng.org/jclark/trang-manual.html
+XML Xidel                                 https://www.videlibri.de/xidel.html#docs
+XMLStarlet                                https://xmlstar.sourceforge.net/doc/UG/xmlstarlet-ug.html
+Zip                                       https://infozip.sourceforge.net/Zip.html
+Samba  https://www.samba.org/samba/docs/man/

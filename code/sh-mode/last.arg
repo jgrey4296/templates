@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : last.arg
+# uuid  : last.arg
+# key   : last.arg
+# group :
+# --
+"${@: -1}"

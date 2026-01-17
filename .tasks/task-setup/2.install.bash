@@ -13,6 +13,7 @@ sudo apt install libgl1-mesa-dev libglu1-mesa-dev libpng-dev libssh-dev unixodbc
 sudo apt install btop calibre cmake doxygen pdftk-java faust gringo exiftool clips
 sudo apt install poppler-utils tree unrar smbclient ffmpeg
 sudo apt install subversion dosbox wine wine64 wordnet
+sudo apt install bc units lilypond
 
 # from https://www.swi-prolog.org/build/Debian.html
 sudo apt install build-essential cmake ninja-build pkg-config

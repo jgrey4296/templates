@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# new-ssh-key.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+[[ "${#@}" -gt 0 ]] || { echo "At least specify a file name."; exit 1; }
+
+keyname="$1"
+shift
+
+keytype="ed25519"
+keysize=4096
+
+echo "Generating new key: $keyname"
+( ssh-keygen \
+    -t "$keytype"\
+    -b "$keysize" \
+    -C "$*" \
+    -f "$keyname"
+  )

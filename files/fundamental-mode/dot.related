@@ -4,10 +4,26 @@
 ;; Others are :{name} : {path} pairs
 ;; paths are relative
 
-:data        : data
-:docs        : docs
-:github      : .github/workflows
-:tasks       : .tasks
-:temp        : .temp
-:templates   : templates
-:wiki        : wiki_
+:temp         : .temp
+:tasks        : .tasks
+
+:src          : src
+:data         : src/data
+:docs         : docs
+
+:github       : .github/workflows
+:gitlab       : .gitlab/ci
+
+:templates    : templates_
+
+:eask         : Eask
+:envrc        : .envrc
+:cargo        : Cargo.toml
+:version      : VERSION.toml
+:gradle       : build.gradle.kts
+:mix          : mix.exs
+:pyproject    : pyproject.toml
+:tools        : .tool-versions
+:editor       : .editorconfig
+:precommit    : .pre-commit-config.yaml
+:readthedocs  : .readthedocs.yaml

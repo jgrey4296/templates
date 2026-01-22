@@ -7,4 +7,11 @@ set -o pipefail
 
 echo "All Args: " "$@"
 
-echo "Last Arg: ${@: -1}"
+echo "Last Arg: " "${@: -1}"
+
+value=0
+
+[[ "$value" -lt 5 ]] && (( value+=1 ))
+[[ "$value" = 0 ]] || value=$(( value + 1 ))
+
+echo "Value is: $value"

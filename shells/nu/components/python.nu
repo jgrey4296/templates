@@ -1,0 +1,1 @@
+#  python.nu -*- mode: Nushell -*-

@@ -34,6 +34,7 @@ export CLIPS_HOME
 # Emacs
 export EMACSDIR
 export DOOMDIR
+export EASK_HOMEDIR
 
 # Latex
 export TEXBASE

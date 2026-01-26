@@ -4,6 +4,7 @@
 set -o nounset
 set -o pipefail
 
+source "$HOME/_cache_/asdf/plugins/polyglot/polyglot/lib/lib-util.bash"
 
 echo "All Args: " "$@"
 
@@ -15,3 +16,21 @@ value=0
 [[ "$value" = 0 ]] || value=$(( value + 1 ))
 
 echo "Value is: $value"
+
+# read -p "Test Prompt: " blah
+
+# echo "Got : $blah"
+
+# if ( ! aweg 2>/dev/null ); then
+#     echo "no aweg"
+# fi
+
+pushctx "blah" >/dev/null
+pushctx "bloo" >/dev/null
+
+VALS=()
+
+# VALS+=("blah")
+# VALS+=("bloo")
+
+print-env-failures "${VALS[@]}"

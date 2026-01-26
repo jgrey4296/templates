@@ -1,0 +1,1 @@
+#  aliases.nu -*- mode: Nushell -*-

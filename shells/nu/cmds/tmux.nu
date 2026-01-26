@@ -1,0 +1,1 @@
+#  tmux.nu -*- mode: Nushell -*-

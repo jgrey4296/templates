@@ -1,0 +1,1 @@
+#  asdf.nu -*- mode: Nushell -*-

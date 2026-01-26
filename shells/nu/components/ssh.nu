@@ -1,0 +1,1 @@
+#  ssh.nu -*- mode: Nushell -*-

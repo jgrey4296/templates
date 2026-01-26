@@ -1,0 +1,1 @@
+#  gpg.nu -*- mode: Nushell -*-

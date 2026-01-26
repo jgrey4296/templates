@@ -65,4 +65,4 @@ target="${file/.aax/.mp3}"
 
 rm "$file"
 
-notify "Finished Conversion of: $file"
+notify-send -e "Finished Conversion of: $file" 2>/dev/null

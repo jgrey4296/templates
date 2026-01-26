@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# new-change.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+( which towncrier >/dev/null ) || { echo "Towncrier wasn't found"; exit 1; }
+
+towncrier create --no-edit

@@ -8,15 +8,17 @@ echo "Initialising SSH"
 base="$XDG_CONFIG_HOME/secrets"
 targets=("ssh")
 keys=$(ssh-add -l)
-
 [[ -n "${TMUX:-}" ]] || targets+=("github" "gitlab" "android")
 
 case "${@: -1}" in
-    -f|--force) ;;
+    -f|--force)
+        targets+=("github" "gitlab" "android")
+        ;;
     *)
         [[ -z "$keys" ]] || { echo "- Initialised already";  exit 0; }
         ;;
 esac
+
 
 for val in "${targets[@]}"
 do
@@ -25,7 +27,7 @@ do
     do
         statres=$(stat -c "%a" "$file")
         if [[ -f "$file" ]] && [[ "$statres" = "600" ]]; then
-            ssh-add "$file"
+            SSH_ASKPASS_REQUIRE="never" ssh-add "$file"
         fi
     done
 done

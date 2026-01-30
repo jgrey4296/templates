@@ -1,0 +1,7 @@
+#!/usr/bin/env -S nu --stdin
+#  disk-size.nu -*- mode: nushell -*-
+#
+
+def main []: nothing -> list {
+    df -h | str replace "Mounted on" mounted | detect columns
+}

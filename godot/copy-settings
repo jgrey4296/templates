@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# copy-settings.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+base="$XDG_CONFIG_HOME/godot"
+
+cp "$base/"*.cfg  "$PWD"
+cp "$base/"*.tres "$PWD"
+cp "$base/"*.profile "$PWD"

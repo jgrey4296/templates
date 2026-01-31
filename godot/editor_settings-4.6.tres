@@ -1,0 +1,674 @@
+[gd_resource type="EditorSettings" format=3]
+
+[sub_resource type="InputEventKey" id="InputEventKey_bbcr8"]
+device = -1
+physical_keycode = 4194309
+
+[resource]
+interface/theme/base_color = Color(0.161, 0.161, 0.161, 1)
+interface/theme/accent_color = Color(0.337, 0.62, 1, 1)
+interface/theme/contrast = 0.3
+interface/scene_tabs/show_script_button = true
+filesystem/directories/default_project_path = "/media/john/data/github/godot"
+text_editor/theme/highlighting/symbol_color = Color(0.67, 0.79, 1, 1)
+text_editor/theme/highlighting/keyword_color = Color(1, 0.44, 0.52, 1)
+text_editor/theme/highlighting/control_flow_keyword_color = Color(1, 0.55, 0.8, 1)
+text_editor/theme/highlighting/base_type_color = Color(0.26, 1, 0.76, 1)
+text_editor/theme/highlighting/engine_type_color = Color(0.56, 1, 0.86, 1)
+text_editor/theme/highlighting/user_type_color = Color(0.78, 1, 0.93, 1)
+text_editor/theme/highlighting/comment_color = Color(1, 1, 1, 0.5)
+text_editor/theme/highlighting/doc_comment_color = Color(0.6, 0.7, 0.8, 0.8)
+text_editor/theme/highlighting/string_color = Color(1, 0.93, 0.63, 1)
+text_editor/theme/highlighting/background_color = Color(0.103039995, 0.103039995, 0.103039995, 1)
+text_editor/theme/highlighting/completion_background_color = Color(0.14651, 0.14651, 0.14651, 1)
+text_editor/theme/highlighting/completion_selected_color = Color(1, 1, 1, 0.07)
+text_editor/theme/highlighting/completion_existing_color = Color(1, 1, 1, 0.14)
+text_editor/theme/highlighting/completion_font_color = Color(1, 1, 1, 0.75)
+text_editor/theme/highlighting/text_color = Color(1, 1, 1, 0.75)
+text_editor/theme/highlighting/line_number_color = Color(1, 1, 1, 0.5)
+text_editor/theme/highlighting/safe_line_number_color = Color(1, 1.2, 1, 0.75)
+text_editor/theme/highlighting/caret_color = Color(1, 1, 1, 1)
+text_editor/theme/highlighting/selection_color = Color(0.337, 0.62, 1, 0.4)
+text_editor/theme/highlighting/brace_mismatch_color = Color(1, 0.47, 0.42, 1)
+text_editor/theme/highlighting/current_line_color = Color(1, 1, 1, 0.07)
+text_editor/theme/highlighting/line_length_guideline_color = Color(0.161, 0.161, 0.161, 1)
+text_editor/theme/highlighting/word_highlighted_color = Color(1, 1, 1, 0.07)
+text_editor/theme/highlighting/number_color = Color(0.63, 1, 0.88, 1)
+text_editor/theme/highlighting/function_color = Color(0.34, 0.7, 1, 1)
+text_editor/theme/highlighting/member_variable_color = Color(0.736, 0.88, 1, 1)
+text_editor/theme/highlighting/mark_color = Color(1, 0.47, 0.42, 0.3)
+text_editor/theme/highlighting/warning_color = Color(0.83, 0.78, 0.62, 0.15)
+text_editor/theme/highlighting/breakpoint_color = Color(1, 0.47, 0.42, 1)
+text_editor/theme/highlighting/code_folding_color = Color(1, 1, 1, 0.27)
+text_editor/theme/highlighting/search_result_color = Color(1, 1, 1, 0.07)
+editors/3d_gizmos/gizmo_settings/bone_axis_length = 0.1
+editors/3d/navigation/navigation_scheme = 3
+editors/animation/default_animation_step = 0.033333335
+network/connection/network_mode = 1
+export/android/debug_keystore = "/home/john/.local/share/godot/keystores/debug.keystore"
+export/android/debug_keystore_pass = "android"
+export/android/java_sdk_path = "/home/john/_cache_/sdkman/candidates/java/current"
+export/android/android_sdk_path = "/home/john/_cache_/android"
+export/macos/rcodesign = ""
+export/web/http_port = 8060
+export/web/tls_key = ""
+export/web/tls_certificate = ""
+export/windows/osslsigncode = ""
+_editor_settings_advanced_mode = true
+_project_settings_advanced_mode = false
+_export_template_download_directory = "/home/john/_cache_/godot"
+_default_feature_profile = "default"
+_script_setup_templates_dictionary = {
+"CNode": "0ObjectEmpty",
+"CSNode": "0ObjectEmpty",
+"Node": "0NodeDefault",
+"Node2D": "0NodeDefault"
+}
+_script_setup_use_script_templates = true
+_use_favorites_root_selection = false
+dotnet/editor/external_editor = 0
+dotnet/editor/custom_exec_path = ""
+dotnet/editor/custom_exec_path_args = ""
+dotnet/build/verbosity_level = 2
+dotnet/build/problems_layout = 1
+gut/output_font_name = "CourierPrime"
+gut/output_font_size = 30
+gut/hide_result_tree = false
+gut/hide_output_text = false
+gut/hide_settings = false
+gut/use_colors = true
+gut/run_externally = false
+gut/run_externally_options_dialog_size = Vector2i(1300, 1336)
+gut/shortcuts_dialog_size = Vector2i(1720, 1152)
+gut/editor_window_size = Vector2i(-1, -1)
+gut/editor_window_on_top = false
+_export_preset_advanced_mode = false
+export/android/scrcpy/screen_size = "1920x1080/120"
+export/macos/actool = ""
+shortcuts = [{
+"name": "editor/clear_output",
+"shortcuts": []
+}, {
+"name": "spatial_editor/viewport_zoom_modifier_1",
+"shortcuts": []
+}, {
+"name": "spatial_editor/viewport_zoom_modifier_2",
+"shortcuts": []
+}, {
+"name": "editor/lock_selected_nodes",
+"shortcuts": []
+}, {
+"name": "editor/unlock_selected_nodes",
+"shortcuts": []
+}, {
+"name": "editor/group_selected_nodes",
+"shortcuts": []
+}, {
+"name": "editor/ungroup_selected_nodes",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/pan_view",
+"shortcuts": []
+}, {
+"name": "editor/show_opened_scenes_list",
+"shortcuts": []
+}, {
+"name": "editor/distraction_free_mode",
+"shortcuts": []
+}, {
+"name": "editor/toggle_last_opened_bottom_panel",
+"shortcuts": []
+}, {
+"name": "property_editor/copy_value",
+"shortcuts": []
+}, {
+"name": "property_editor/paste_value",
+"shortcuts": []
+}, {
+"name": "property_editor/copy_property_path",
+"shortcuts": []
+}, {
+"name": "scene_import_settings/play_selected_animation",
+"shortcuts": []
+}, {
+"name": "editor/next_tab",
+"shortcuts": []
+}, {
+"name": "editor/prev_tab",
+"shortcuts": []
+}, {
+"name": "editor/filter_files",
+"shortcuts": []
+}, {
+"name": "editor/new_scene",
+"shortcuts": []
+}, {
+"name": "editor/new_inherited_scene",
+"shortcuts": []
+}, {
+"name": "editor/open_scene",
+"shortcuts": []
+}, {
+"name": "editor/reopen_closed_scene",
+"shortcuts": []
+}, {
+"name": "editor/save_scene",
+"shortcuts": []
+}, {
+"name": "editor/save_scene_as",
+"shortcuts": []
+}, {
+"name": "editor/save_all_scenes",
+"shortcuts": []
+}, {
+"name": "editor/quick_open",
+"shortcuts": []
+}, {
+"name": "editor/quick_open_scene",
+"shortcuts": []
+}, {
+"name": "editor/quick_open_script",
+"shortcuts": []
+}, {
+"name": "editor/close_scene",
+"shortcuts": []
+}, {
+"name": "editor/file_quit",
+"shortcuts": []
+}, {
+"name": "editor/find_in_files",
+"shortcuts": []
+}, {
+"name": "editor/quit_to_project_list",
+"shortcuts": []
+}, {
+"name": "editor/command_palette",
+"shortcuts": []
+}, {
+"name": "editor/take_screenshot",
+"shortcuts": []
+}, {
+"name": "editor/fullscreen_mode",
+"shortcuts": []
+}, {
+"name": "editor/editor_help",
+"shortcuts": []
+}, {
+"name": "editor/editor_2d",
+"shortcuts": []
+}, {
+"name": "editor/editor_3d",
+"shortcuts": []
+}, {
+"name": "editor/editor_script",
+"shortcuts": []
+}, {
+"name": "editor/editor_game",
+"shortcuts": []
+}, {
+"name": "editor/editor_assetlib",
+"shortcuts": []
+}, {
+"name": "version_control/commit",
+"shortcuts": []
+}, {
+"name": "editor/run_project",
+"shortcuts": []
+}, {
+"name": "editor/pause_running_project",
+"shortcuts": []
+}, {
+"name": "editor/stop_running_project",
+"shortcuts": []
+}, {
+"name": "remote_deploy/deploy_to_device_1",
+"shortcuts": []
+}, {
+"name": "editor/run_current_scene",
+"shortcuts": []
+}, {
+"name": "editor/run_specific_scene",
+"shortcuts": []
+}, {
+"name": "scene_tree/rename",
+"shortcuts": []
+}, {
+"name": "scene_tree/batch_rename",
+"shortcuts": []
+}, {
+"name": "scene_tree/add_child_node",
+"shortcuts": []
+}, {
+"name": "scene_tree/instantiate_scene",
+"shortcuts": []
+}, {
+"name": "scene_tree/cut_node",
+"shortcuts": []
+}, {
+"name": "scene_tree/copy_node",
+"shortcuts": []
+}, {
+"name": "scene_tree/paste_node",
+"shortcuts": []
+}, {
+"name": "scene_tree/paste_node_as_sibling",
+"shortcuts": []
+}, {
+"name": "scene_tree/move_up",
+"shortcuts": []
+}, {
+"name": "scene_tree/move_down",
+"shortcuts": []
+}, {
+"name": "scene_tree/duplicate",
+"shortcuts": []
+}, {
+"name": "scene_tree/copy_node_path",
+"shortcuts": []
+}, {
+"name": "scene_tree/delete_no_confirm",
+"shortcuts": []
+}, {
+"name": "scene_tree/delete",
+"shortcuts": []
+}, {
+"name": "docks/open_filesystem",
+"shortcuts": []
+}, {
+"name": "filesystem_dock/copy_path",
+"shortcuts": []
+}, {
+"name": "filesystem_dock/copy_absolute_path",
+"shortcuts": []
+}, {
+"name": "filesystem_dock/copy_uid",
+"shortcuts": []
+}, {
+"name": "filesystem_dock/duplicate",
+"shortcuts": []
+}, {
+"name": "filesystem_dock/delete",
+"shortcuts": []
+}, {
+"name": "filesystem_dock/rename",
+"shortcuts": []
+}, {
+"name": "filesystem_dock/show_in_explorer",
+"shortcuts": []
+}, {
+"name": "filesystem_dock/open_in_external_program",
+"shortcuts": []
+}, {
+"name": "filesystem_dock/open_in_terminal",
+"shortcuts": []
+}, {
+"name": "filesystem_dock/focus_path",
+"shortcuts": []
+}, {
+"name": "connections_editor/disconnect",
+"shortcuts": []
+}, {
+"name": "groups_editor/delete",
+"shortcuts": []
+}, {
+"name": "groups_editor/rename",
+"shortcuts": []
+}, {
+"name": "editor/bottom_panel_expand",
+"shortcuts": []
+}, {
+"name": "bottom_panels/toggle_output_bottom_panel",
+"shortcuts": []
+}, {
+"name": "editor/copy_output",
+"shortcuts": []
+}, {
+"name": "editor/open_search",
+"shortcuts": []
+}, {
+"name": "debugger/step_into",
+"shortcuts": []
+}, {
+"name": "debugger/step_over",
+"shortcuts": []
+}, {
+"name": "debugger/step_out",
+"shortcuts": []
+}, {
+"name": "debugger/continue",
+"shortcuts": []
+}, {
+"name": "bottom_panels/toggle_debugger_bottom_panel",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/cancel_transform",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/zoom_3.125_percent",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/zoom_6.25_percent",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/zoom_12.5_percent",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/zoom_25_percent",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/zoom_50_percent",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/zoom_100_percent",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/zoom_200_percent",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/zoom_400_percent",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/zoom_800_percent",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/zoom_1600_percent",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/zoom_minus",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/zoom_plus",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/select_mode",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/move_mode",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/rotate_mode",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/scale_mode",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/pan_mode",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/ruler_mode",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/use_local_space",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/use_smart_snap",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/use_grid_snap",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/skeleton_make_bones",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/toggle_grid",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/show_helpers",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/show_guides",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/center_selection",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/frame_selection",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/anim_insert_key",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/anim_insert_key_existing_tracks",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/anim_clear_pose",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/multiply_grid_step",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/divide_grid_step",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/reset_transform_position",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/reset_transform_rotation",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/reset_transform_scale",
+"shortcuts": []
+}, {
+"name": "script_editor/reopen_closed_script",
+"shortcuts": []
+}, {
+"name": "script_editor/replace_in_files",
+"shortcuts": []
+}, {
+"name": "script_editor/window_move_up",
+"shortcuts": []
+}, {
+"name": "script_editor/window_move_down",
+"shortcuts": []
+}, {
+"name": "script_editor/next_script",
+"shortcuts": []
+}, {
+"name": "script_editor/prev_script",
+"shortcuts": []
+}, {
+"name": "script_editor/new",
+"shortcuts": []
+}, {
+"name": "script_editor/new_textfile",
+"shortcuts": []
+}, {
+"name": "script_editor/save",
+"shortcuts": []
+}, {
+"name": "script_editor/save_all",
+"shortcuts": []
+}, {
+"name": "script_editor/reload_script_soft",
+"shortcuts": []
+}, {
+"name": "script_editor/history_previous",
+"shortcuts": []
+}, {
+"name": "script_editor/history_next",
+"shortcuts": []
+}, {
+"name": "script_editor/close_file",
+"shortcuts": []
+}, {
+"name": "script_editor/run_file",
+"shortcuts": []
+}, {
+"name": "script_editor/toggle_files_panel",
+"shortcuts": []
+}, {
+"name": "editor/suspend_resume_embedded_project",
+"shortcuts": []
+}, {
+"name": "editor/next_frame_embedded_project",
+"shortcuts": []
+}, {
+"name": "bottom_panels/toggle_audio_bottom_panel",
+"shortcuts": []
+}, {
+"name": "script_text_editor/goto_previous_bookmark",
+"shortcuts": []
+}, {
+"name": "bottom_panels/toggle_animation_bottom_panel",
+"shortcuts": []
+}, {
+"name": "animation_bezier_editor/focus",
+"shortcuts": []
+}, {
+"name": "animation_bezier_editor/select_all_keys",
+"shortcuts": []
+}, {
+"name": "animation_bezier_editor/deselect_all_keys",
+"shortcuts": []
+}, {
+"name": "animation_marker_edit/rename_marker",
+"shortcuts": []
+}, {
+"name": "animation_marker_edit/delete_selection",
+"shortcuts": []
+}, {
+"name": "animation_marker_edit/toggle_marker_names",
+"shortcuts": []
+}, {
+"name": "animation_editor/auto_fit",
+"shortcuts": []
+}, {
+"name": "animation_editor/set_start_offset",
+"shortcuts": []
+}, {
+"name": "animation_editor/set_end_offset",
+"shortcuts": []
+}, {
+"name": "animation_editor/duplicate_selected_keys",
+"shortcuts": []
+}, {
+"name": "animation_editor/cut_selected_keys",
+"shortcuts": []
+}, {
+"name": "animation_editor/copy_selected_keys",
+"shortcuts": []
+}, {
+"name": "animation_editor/paste_keys",
+"shortcuts": []
+}, {
+"name": "animation_editor/move_first_selected_key_to_cursor",
+"shortcuts": []
+}, {
+"name": "animation_editor/move_last_selected_key_to_cursor",
+"shortcuts": []
+}, {
+"name": "animation_editor/delete_selection",
+"shortcuts": []
+}, {
+"name": "animation_editor/goto_next_step",
+"shortcuts": []
+}, {
+"name": "animation_editor/goto_prev_step",
+"shortcuts": []
+}, {
+"name": "animation_editor/go_to_next_keyframe",
+"shortcuts": []
+}, {
+"name": "animation_editor/go_to_previous_keyframe",
+"shortcuts": []
+}, {
+"name": "animation_editor/stop_animation",
+"shortcuts": []
+}, {
+"name": "animation_editor/play_animation",
+"shortcuts": []
+}, {
+"name": "animation_editor/play_animation_backwards",
+"shortcuts": []
+}, {
+"name": "animation_editor/play_animation_from_start",
+"shortcuts": []
+}, {
+"name": "animation_editor/play_animation_from_end",
+"shortcuts": []
+}, {
+"name": "shader_editor/new",
+"shortcuts": []
+}, {
+"name": "shader_editor/new_include",
+"shortcuts": []
+}, {
+"name": "shader_editor/open",
+"shortcuts": []
+}, {
+"name": "shader_editor/open_include",
+"shortcuts": []
+}, {
+"name": "bottom_panels/toggle_shader_editor_bottom_panel",
+"shortcuts": []
+}, {
+"name": "canvas_item_editor/resize_region_rect",
+"shortcuts": []
+}, {
+"name": "mono/build_solution",
+"shortcuts": []
+}, {
+"name": "particles/restart_emission",
+"shortcuts": []
+}, {
+"name": "audio_bus_editor/duplicate_selected_bus",
+"shortcuts": []
+}, {
+"name": "audio_bus_editor/delete_selected_bus",
+"shortcuts": []
+}, {
+"name": "script_editor/zoom_in",
+"shortcuts": []
+}, {
+"name": "script_editor/zoom_out",
+"shortcuts": []
+}, {
+"name": "script_editor/reset_zoom",
+"shortcuts": []
+}]
+builtin_action_overrides = [{
+"events": [],
+"name": "ui_select"
+}, {
+"events": [SubResource("InputEventKey_bbcr8")],
+"name": "ui_accept"
+}, {
+"events": [],
+"name": "ui_cut"
+}, {
+"events": [],
+"name": "ui_copy"
+}, {
+"events": [],
+"name": "ui_focus_mode"
+}, {
+"events": [],
+"name": "ui_paste"
+}, {
+"events": [],
+"name": "ui_undo"
+}, {
+"events": [],
+"name": "ui_redo"
+}, {
+"events": [],
+"name": "ui_text_completion_query"
+}, {
+"events": [],
+"name": "ui_text_completion_accept"
+}, {
+"events": [],
+"name": "ui_text_newline"
+}, {
+"events": [],
+"name": "ui_text_newline_blank"
+}, {
+"events": [],
+"name": "ui_focus_next"
+}, {
+"events": [],
+"name": "ui_text_indent"
+}, {
+"events": [],
+"name": "ui_text_completion_replace"
+}]

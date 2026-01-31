@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# make-links.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+base="$XDG_CONFIG_HOME/godot"
+
+cp ./*.cfg "$base/"
+cp ./*.tres "$base/"
+cp ./*.profile "$base/"

@@ -1,16 +1,9 @@
-# .tool-versions
+# .tool-versions -*- mode: Conf[Space] -*- 
 # https://asdf-vm.com/manage/configuration.html#tool-versions
 # https://mise.jdx.dev/dev-tools/
-cargo-show-asm  0.2.52
-cocq            4.14.1
 direnv          2.37.1
 git-cliff       2.4.0
-isort           6.0.1
-pandoc          2.8
-sdkman          5.18.2
-towncrier       25.8.0
-uv              0.8.15
-version-manager 3.0.0
+uv              0.9.28
 yt-dlp          2025.09.26
 pre-commit      4.3.0
 plantuml        1.2025.8

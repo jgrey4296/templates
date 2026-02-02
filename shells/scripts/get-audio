@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# get-audio.bash -*- mode: sh -*-
+set -o errexit
+set -o nounset
+set -o pipefail
+
+target=$(head -n 1 "$PWD/todo")
+echo "* Target: $target"
+yt-dlp -t mp3 "$target"
+tail -n +2 "$PWD/todo" > "$PWD/.todo"
+echo "* Updating todo"
+mv "$PWD/.todo" "$PWD/todo"
+notify-send -e "Finished Audio Download"

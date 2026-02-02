@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# send-media.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+source="$1"
+target="$2"
+
+echo "* Sending $source to $target"
+
+( scp -r "$source" "john@192.168.1.216:/media/users/$target" ) && notify-send -e "Finished sending $target to media"

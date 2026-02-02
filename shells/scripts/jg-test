@@ -34,3 +34,19 @@ VALS=()
 # VALS+=("bloo")
 
 print-env-failures "${VALS[@]}"
+
+TVAL="blah_mono"
+case "$TVAL" in
+    *_mono) echo "is mono";;
+    *) echo "is not mono";;
+esac
+
+T2VAL="${TVAL/_mono/}"
+echo "t2val: $T2VAL"
+
+function blah (){
+    echo "blahaweg"
+}
+
+AVAL=$($T2VAL | sed 'p; p')
+echo "aval is: $AVAL"

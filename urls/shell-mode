@@ -52,7 +52,7 @@ GNU Grub                      # https://www.gnu.org/software/grub/manual/grub/gr
 GNU GZip                      # https://www.gnu.org/software/gzip/
 GNU Lilypond                  # https://lilypond.org/manuals.html
 GNU Make                      # https://www.gnu.org/software/make/manual/make.html#Running
-GNU Prolog                                http://www.gprolog.org/manual/
+GNU Prolog                    # http://www.gprolog.org/manual/
 GNU Reftex                    # https://www.gnu.org/software/auctex/manual/reftex.html
 GNU Sed                       # https://www.gnu.org/software/sed/manual/sed.html
 GNU Smalltalk CLI             # https://www.gnu.org/software/smalltalk/manual/gst.html#Invocation
@@ -133,3 +133,4 @@ XMLStarlet                    # https://xmlstar.sourceforge.net/doc/UG/xmlstarle
 Zip                           # https://infozip.sourceforge.net/Zip.html
 Samba                         # https://www.samba.org/samba/docs/man/
 Fish                          # https://fishshell.com/docs/current/language.html
+yt-dlp # https://github.com/yt-dlp/yt-dlp

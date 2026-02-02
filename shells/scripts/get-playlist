@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# get-playlist.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+target="${1:-https://www.youtube.com/playlist?list=PLLUxIGUvOzFZY4h_cfCkFrGwKYYDYJMo8}"
+
+echo "* Getting playlist metadata: $target"
+
+( yt-dlp \
+    --no-download \
+    --write-info-json \
+    --write-description \
+    --write-playlist-metafiles \
+  "$target"
+) && notify-send -e "Finished retrieving playlist"

@@ -30,11 +30,7 @@ package # Top Unit of Code
 module  # A Sub-Unit of code
 crate   # Compiled unit of code
 ----               # Directories
-.{}                # Hidden, Ignorable
-{}_                # Source for Generation
-gen_{}             # Generation Output
-__tests            # Test dirs
-
+{} < _{} < __{} < .{} < {}_
 ----
 parameter                 # Formal Spec
 argument                  # Actual Value

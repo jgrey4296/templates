@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : array.slice
+# uuid  : array.slice
+# key   : array.slice
+# group :
+# --
+last="\${$1[-1]}"
+rest="\${$1[@]::\${$1[@]}-1}"

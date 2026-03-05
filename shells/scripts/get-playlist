@@ -14,4 +14,4 @@ echo "* Getting playlist metadata: $target"
     --write-description \
     --write-playlist-metafiles \
   "$target"
-) && notify-send -e "Finished retrieving playlist"
+) && notify-send -e "Finished retrieving playlist" 2>/dev/null

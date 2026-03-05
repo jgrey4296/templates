@@ -77,6 +77,14 @@ flycheck_*
 .python-version
 ##-- end python
 
+##-- rocq
+*.vo
+*.vok
+*.vos
+*.glob
+
+##-- end rocq
+
 ##-- lisp
 ac-comphist.dat
 *.yas-compiled-snippets.el

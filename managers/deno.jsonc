@@ -1,0 +1,13 @@
+//  deno.jsonc -*- mode: js -*-
+//
+{
+    "permissions": {
+        "default" : {
+            "env": true
+        }
+        // "read": [ "npm:cspell" ],
+        // "sys" : [ "npm:cspell" ],
+        // "env" : [ "npm:cspell" ],
+    }
+
+}

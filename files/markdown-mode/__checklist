@@ -21,19 +21,22 @@
     - [ ] templates
     - [ ] license
 - [ ] dot files
-    - [ ] python-version
+    - [ ] envrc
     - [ ] related
     - [ ] tool-versions
-    - [ ] tox
     - [ ] pre-commit
+    - [ ] rustfmt
+    - [ ] asdf.plugins
+    - [ ] editorconfig
     - [ ] gitignore
-    - [ ] lenvs
+    - [ ] gitattributes
+    - [ ] projectile
+    - [ ] rgignore
 - [ ] github
     - [ ] publish yaml
     - [ ] test yaml
     - [ ] maturin CI yaml
     - [ ] pages yaml
-- [ ] scripts
-    - [ ] release script
-- [ ] related
     - [ ] wiki
+- [ ] gitlab
+    - [ ] gitlab-ci.yml

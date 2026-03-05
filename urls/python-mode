@@ -197,5 +197,7 @@ ruff                 (tool)    # https://docs.astral.sh/ruff/
 pytest-cov           (test)    # https://pytest-cov.readthedocs.io/en/latest/
 
 sphinx-autoapi       (tooling) # https://sphinx-autoapi.readthedocs.io/en/latest/
-pydantic-settings   # https://docs.pydantic.dev/latest/concepts/pydantic_settings/
+pydantic-settings              # https://docs.pydantic.dev/latest/concepts/pydantic_settings/
 tkinter              (lib)     # https://docs.python.org/3/library/tkinter.html
+blender              (lib)     # https://docs.blender.org/api/current/
+blender ui best practice       # https://docs.blender.org/api/current/info_best_practice.html

@@ -30,23 +30,28 @@ pushctx "bloo" >/dev/null
 
 VALS=()
 
-# VALS+=("blah")
-# VALS+=("bloo")
+VALS+=("blah")
+VALS+=("bloo")
+VALS+=("aweg")
 
-print-env-failures "${VALS[@]}"
+echo "first: ${VALS[0]}"
+echo "${VALS[@]::${#VALS[@]}-1} : ${VALS[-1]}"
+echo "${VALS[@]:1}"
 
-TVAL="blah_mono"
-case "$TVAL" in
-    *_mono) echo "is mono";;
-    *) echo "is not mono";;
-esac
+# print-env-failures "${VALS[@]}"
 
-T2VAL="${TVAL/_mono/}"
-echo "t2val: $T2VAL"
+# TVAL="blah_mono"
+# case "$TVAL" in
+#     *_mono) echo "is mono";;
+#     *) echo "is not mono";;
+# esac
 
-function blah (){
-    echo "blahaweg"
-}
+# T2VAL="${TVAL/_mono/}"
+# echo "t2val: $T2VAL"
 
-AVAL=$($T2VAL | sed 'p; p')
-echo "aval is: $AVAL"
+# function blah (){
+#     echo "blahaweg"
+# }
+
+# AVAL=$($T2VAL | sed 'p; p')
+# echo "aval is: $AVAL"

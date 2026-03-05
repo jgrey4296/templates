@@ -4,9 +4,10 @@
 set -o nounset
 set -o pipefail
 
-source="$1"
-target="$2"
+# TODO add a help flag
+args=("$@")
+target="${args[0]}"
+rest=("${args[@]:1}")
 
-echo "* Sending $source to $target"
-
-( scp -r "$source" "john@192.168.1.216:/media/users/$target" ) && notify-send -e "Finished sending $target to media"
+echo "* Sending $rest to $target"
+( scp -r "${rest[@]}" "john@192.168.1.216:/media/users/$target" ) && notify-send -e "Finished sending $rest to media" 2>/dev/null

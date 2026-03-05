@@ -5,4 +5,4 @@ set -o nounset
 set -o pipefail
 
 
-yt-dlp -t mp4 "$1" && notify-send -e  "Finished Video Download"
+yt-dlp -t mp4 "$1" && notify-send -e  "Finished Video Download" 2>/dev/null

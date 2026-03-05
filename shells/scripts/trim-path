@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# trim-path.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+PATH=$(echo "$PATH" | sed -e "s/:/\n/g" | uniq | sed -z "s/\n/:/g")
+
+echo "$PATH"

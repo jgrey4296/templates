@@ -1,0 +1,50 @@
+# -*- mode: snippet -*-
+# name  : jinja.writer
+# uuid  : jinja.writer
+# key   : jinja.writer
+# group : jinja
+# --
+import jinja2
+from jgdv import Maybe
+
+class BasicJinjaWriter:
+    "A standardized jinja-writer setup"
+    _env  : Maybe[jinja2.Environment]
+    _prefix : str
+    _default_loader : jinja2.PackageLoader
+
+    def __init__(self, *, prefix:str=""):
+        self._env             = None
+        self._prefix          = prefix
+        self._default_loader  = jinja2.PackageLoader("bibble", "_templates")
+
+
+    def build_env(self, *, loaders:list[pl.Path]) -> None:
+        loaders = [jinja2.FileSystemLoader(x) for x in loaders]
+        loaders.append(self._default_loader)
+
+        self._env = jinja2.Environment(
+            loader=jinja2.ChoiceLoader(loaders),
+            autoescape=jinja2.select_autoescape(),
+            trim_blocks=True,
+            lstrip_blocks=True,
+        )
+
+    def _get_template(self, template:str) -> Maybe[jinja1.Template]:
+        if self._env is None:
+            self.build_env()
+
+        template_path = pl.Path(self._prefix, template)
+        try:
+            return self._env.get_template(str(template_path))
+        except jinja2.TemplateNotFound:
+            return None
+
+    def render(self, template, **ctx) -> list[str]:
+        match self._get_template(template):
+            case None:
+                return []
+            case jinja2.Template() as temp:
+                return [temp.render(**ctx)]
+            case _:
+                return []

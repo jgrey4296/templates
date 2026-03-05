@@ -5,9 +5,10 @@ set -o nounset
 set -o pipefail
 
 target=$(head -n 1 "$PWD/todo")
-echo "* Target: $target"
+count=$(cat "$PWD/todo" | wc -l)
+echo "* Target 1/$count: $target"
 yt-dlp -t mp3 "$target"
 tail -n +2 "$PWD/todo" > "$PWD/.todo"
-echo "* Updating todo"
 mv "$PWD/.todo" "$PWD/todo"
-notify-send -e "Finished Audio Download"
+echo "* Remaining todo: " "$(cat "$PWD/todo" | wc -l)"
+notify-send -e "Finished Audio Download" 2>/dev/null

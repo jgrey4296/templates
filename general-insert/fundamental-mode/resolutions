@@ -1,0 +1,42 @@
+---- Screen Sizes
+640x360    # 360p
+640x480    # 480p
+1280x720   # HD. 720p
+1920x1080  # Full HD. 1080p
+1920x1200  # WXGA. 16:10
+2560x1440  # QHD / 1440p
+3440x1440  # WQHD, ultrawide, 21:9
+3840x2160  # UHD 4k
+4096x2160  # DCI 4k
+5120x2880  # 5k
+7680x4320  # 8k UHD
+
+---- Aspect ratios
+16:9  # 1280x720. 1920x1080. 2560x1440.
+16:10 # 1280x800. 1920x1200. 2560x1600.
+21:9  # 2560x1080. 3440x144x. 5120x2160.
+4:3   # 800x600. 1024x768. 1600x1200.
+3:2   # 1500x1000. 2256x1504. 3000x2000.
+1:1   # 1080x1080. 1440x1440.
+32:9  # 3840x1080. 5120x1440.
+
+---- Social Media Images
+170x170   # FB profile picture.
+820x312   # FB cover photo.
+1200x630  # FB shared image
+1920x1080 # FB event cover
+1640x856  # FB group cover
+
+110x110   # Insta profile picture
+1080x1080 # Insta square post
+1080x1350 # Insta portrait post
+1080x608  # Insta landscape post
+1080x1920 # Insta stories
+
+400x400   # Bluesky profile picture
+1500x500  # Bluesky header photo
+1200x675  # Bluesky in-steam photo
+
+800x800   # Youtube channel profile
+2560x1440 # Youtube channel cover
+1280x720  # Youtube thumbnail

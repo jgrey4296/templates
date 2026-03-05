@@ -1,9 +1,7 @@
 ;; -*- mode: eask; lexical-binding: t -*-
 
-(defconst version "0.1.0")
 
-(package "TODO-mode"
-         version
+(package "TODO-mode" "0.1.0"
          "TODO")
 
 (website-url "https://github.com/jgrey4296/TODO-mode")

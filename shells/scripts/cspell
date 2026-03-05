@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# cspell.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+deno run --allow-read --allow-sys --allow-env "npm:cspell"

@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# get-video.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+if [[ "${#@}" = 0 ]]; then
+    target=$(head -n 1 "$PWD/todo")
+    yt-dlp --skip-download --write-subs --write-auto-subs --sub-langs "en" "$target"
+    tail -n +2 "$PWD/todo" > "$PWD/.todo"
+    cp "$PWD/.todo" "$PWD/todo"
+    notify-send -e  "Finished Video Download" 2>/dev/null
+else
+    yt-dlp --skip-download --write-subs --write-auto-subs --sub-langs "en" "$1" && notify-send -e  "Finished Video Download" 2>/dev/null
+fi

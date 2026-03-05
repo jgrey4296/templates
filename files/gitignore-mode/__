@@ -59,3 +59,9 @@ cabal.project.local~
 
 # Lisp
 .eask
+
+# Rocq
+*.vo
+*.vok
+*.vos
+*.glob

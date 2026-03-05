@@ -3,6 +3,8 @@
 jg-debug "Setting misc aliases"
 # alias tar="gtar"
 
+alias xml="xmlstarlet"
+
 alias fd="fdfind"
 alias browse="python -mwebbrowser"
 alias clingo="clingo -W all"

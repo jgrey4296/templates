@@ -4,7 +4,7 @@
 # key   : req.ssr
 # group : proof-mode ssreflect
 # --
-From Stdlib Require Import ssreflect ssrfun ssrbool.
+From Stdlib Require ssreflect ssrfun ssrbool.
 Set Implicit Arguments.
-Unset Strict Arguments.
 Unset Printing Implicit Defensive.
+Import ssreflect.

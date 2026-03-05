@@ -1,0 +1,23 @@
+Notation Syntax Modifiers:
+at level {nat} #
+in custom {ident} #
+{ident} at level {binder} #
+{left/right/no} associativity #
+only {parsing/printing} #
+format {string} #
+
+ident
+name
+global
+bigint
+strict pattern
+binder
+closed binder
+constr
+custom {ident}
+pattern
+
+as ident
+as name
+as pattern
+as strict pattern

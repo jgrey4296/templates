@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : haskell.dollar
+# uuid  : haskell.dollar
+# key   : haskell.dollar
+# group :
+# --
+Notation "f $ x" := (f x) (at level 60, right associativity, only parsing).

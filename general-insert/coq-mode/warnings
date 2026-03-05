@@ -1,0 +1,24 @@
+Roqc Warnings:
++automation        #
++bytecode-compiler #
++coercions         #
++deprecated        #
++extraction        #
++filesystem        #
++fixpoints         #
++fragile           #
++funind            #
++implicits         #
++ltac              #
++ltac2             #
++native-compiler   #
++numbers           #
++parsing           #
++pedantic          #
++records           #
++rewrite-rules     #
++ssr               #
++syntax            #
++tactics           # tactis?
++user-warn         #
++vernacular        #

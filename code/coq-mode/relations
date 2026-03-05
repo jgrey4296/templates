@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : relations
+# uuid  : relations
+# key   : relations
+# group :
+# --
+From Stdlib Require Import Relations.

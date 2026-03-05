@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : program_scope
+# uuid  : program_scope
+# key   : program_scope
+# group :
+# --
+From Corelib Require Import Program.Basics.
+Open Scope program_scope.

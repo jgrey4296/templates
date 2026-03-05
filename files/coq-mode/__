@@ -6,6 +6,7 @@
 (* From Mtac1 Require Import Mtac2. *)
 
 (*-- end proof mode imports  *)
+Set Implicit Arguments.
 Set Default Proof Mode "Noedit".
 
 (* -- imports *)

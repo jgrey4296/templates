@@ -4,4 +4,4 @@
 # key   : warnings
 # group :
 # --
-set Warnings "-notation-overridden,-parsing,-deprecated-hint-without-locality"$0
+Set Warnings "-notation-overridden,-parsing,-deprecated-hint-without-locality".$0

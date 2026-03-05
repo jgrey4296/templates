@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : match.type
+# uuid  : match.type
+# key   : match.type
+# group :
+# --
+match typeof($1):
+    TYPE_NIL:
+        pass
+    TYPE_BOOL:
+        pass

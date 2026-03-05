@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : engine.quit
+# uuid  : engine.quit
+# key   : engine.quit
+# group :
+# --
+Engine.get_main_loop().quit(${0:0})

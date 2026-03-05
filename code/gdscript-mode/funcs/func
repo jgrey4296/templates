@@ -4,5 +4,7 @@
 # key   : func
 # group : godot
 # --
+## $1
+##
 func ${1:name}(${2:params}) -> ${3:retType}:
      ${4:pass}

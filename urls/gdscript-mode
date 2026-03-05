@@ -19,3 +19,5 @@ Gdscript Objects   # https://docs.godotengine.org/en/stable/classes/index.html#o
 Gdscript Types     # https://docs.godotengine.org/en/stable/classes/index.html#variant-types
 
 Gut Assertions # https://gut.readthedocs.io/en/v9.5.0/class_ref/class_guttest.html
+
+Gdscript Format Strings # https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_format_string.html#doc-gdscript-printf

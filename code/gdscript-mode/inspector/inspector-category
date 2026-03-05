@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name  : inspector.category
+# uuid  : inspector.category
+# key   : inspector.category
+# group : debug ui editor
+# --
+@export_category("$1")
+
+@export_group("$2")
+@export var aName = "bob"
+
+@export_subgroup("$3", "sub_")
+@export var sub_label = "aweg"
+
+@export_group("", "")

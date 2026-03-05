@@ -1,23 +1,46 @@
 Basic Godot Types:
 void        #
-null        #
-bool        #
-int         #
-float       #
-String      #
-StringName  # immutable, only one instance at a time. fast to compare.
-Vector2     #
-Vector3     #
-Transform2D #
-Plane       #
-Quat        #
-AABB        #
-Basis       #
-Transform   #
-Color       #
-RID         #
-Object      #
-Sprite      #
+TYPE_NIL # null
+TYPE_BOOL  # bool
+TYPE_INT  # int
+TYPE_FLOAT  # float
+TYPE_STRING  # String
+TYPE_STRING_NAME # StringName, immutable, only one instance at a time. fast to compare.
+TYPE_NODE_PATH # like ^"a/b"
+TYPE_VECTOR2 # VECTOR2
+TYPE_VECTOR2I #
+TYPE_RECT2 #
+TYPE_RECT2I #
+TYPE_VECTOR3  # VECTOR3
+TYPE_VECTOR3I #
+TYPE_TRANSFORM2D  # 2x3 matrix of a transformation in 2d space.
+TYPE_VECTOR4 #
+TYPE_VECTOR4I #
+TYPE_PLANE # normalized place equation of x, y, z and d distance from origin.
+TYPE_QUATERNION #
+TYPE_AABB # axis aligned bounding box. position, end, size.
+TYPE_BASIS #
+TYPE_TRANSFORM3D  #
+TYPE_PROJECTION # 4x4 matrix of 3d projective transform.
+TYPE_COLOR # rgba.
+TYPE_RID  # low level resource id.
+TYPE_OBJECT #
+TYPE_CALLABLE #
+TYPE_SIGNAL #
+TYPE_DICTIONARY #
+TYPE_ARRAY #
+TYPE_PACKED_BYTE_ARRAY #
+TYPE_PACKED_INT32_ARRAY #
+TYPE_PACKED_FLOAT32_ARRAY #
+TYPE_PACKED_FLOAT64_ARRAY #
+TYPE_PACKED_STRING_ARRAY #
+TYPE_PACKED_VECTOR2_ARRAY #
+TYPE_PACKED_VECTOR3_ARRAY #
+TYPE_PACKED_COLOR_ARRAY #
+TYPE_PACKED_VECTGOR3_ARRAY #
+TYPE_MAX # size of the Variant.Type enum.
+
+Sprite #
 
 Callable    # called with {var}.call({args})
 Array[type] # passed by reference

@@ -1,0 +1,44 @@
+Godot Annotations:
+@abstract #
+@export
+@export_group(name, prefix)
+@export_subgroup(name, prefix)
+@export_category(name: String)
+@export_color_no_alpha
+@export_custom(hint, str, usage)
+@export_dir
+@export_global_dir
+@export_enum(names...)
+@export_exp_easing
+@export_file
+@export_global_file
+@export_file_path
+@export_flags(names...)
+
+
+@export_flags_2d_navigation
+@export_flags_2d_physics
+@export_flags_2d_render
+
+@export_flags_4d_navigation
+@export_flags_3d_physics
+@export_flags_3d_redner
+
+@export_flags_avoidance
+
+@export_multiline
+@export_node_path(type, ...)
+@export_placeholder(text)
+@export_range(min, max, step, hint)
+@export_storage
+
+@export_tool_button(text)
+@icon(path)
+@onready
+@rpc
+@static_unload
+@tool
+
+@warning_ignore
+@warning_ignore_restore
+@warning_ignore_start

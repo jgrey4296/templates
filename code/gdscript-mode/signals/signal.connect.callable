@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : signal.connect.callable
+# uuid  : signal.connect.callable
+# key   : signal.connect.callable
+# group : signals
+# --
+${1:obj}.${2:signal}.connect(Callable(self, "${2:fn}"))

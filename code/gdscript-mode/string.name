@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : string.name
+# uuid  : string.name
+# key   : string.name
+# group : sugar syntax stringname
+# --
+&"$1""

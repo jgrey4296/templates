@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# list-jg.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+fname=$(basename "${BASH_SOURCE[0]}")
+dname=$(dirname "${BASH_SOURCE[0]}")
+
+# For listing personal scripts
+ls "$dname" | sed -E 's/^([rwxd-]+?).+?[0-9]+ (.+?)$/- \2/p'

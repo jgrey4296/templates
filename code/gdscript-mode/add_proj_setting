@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name  : add_proj_setting
+# uuid  : add_proj_setting
+# key   : add_proj_setting
+# group : project setting plugin
+# --
+ProjectSettings.set("$1/$2", ${3:init_value})
+ProjectSettings.add_property_info({
+    "name" : "$1/$2",
+    "type" : ${4:TYPE_INT},
+    "hint" : ${5:PROPERTY_HINT_ENUM},
+    "hint_string": "${6:a hint string}",
+    })

@@ -1,0 +1,27 @@
+{
+	"disabled_build_options": {
+		"disable_xr": true,
+		"module_openxr_enabled": false
+	},
+	"disabled_classes": [
+		"OpenXRAction",
+		"OpenXRActionMap",
+		"OpenXRActionSet",
+		"OpenXRBindingModifier",
+		"OpenXRCompositionLayer",
+		"OpenXRHand",
+		"OpenXRHapticBase",
+		"OpenXRIPBinding",
+		"OpenXRInteractionProfile",
+		"OpenXRRenderModel",
+		"OpenXRRenderModelManager",
+		"OpenXRVisibilityMask",
+		"XRBodyModifier3D",
+		"XRFaceModifier3D",
+		"XRHandModifier3D",
+		"XRNode3D",
+		"XROrigin3D",
+		"XRCamera3D"
+	],
+	"type": "build_profile"
+}

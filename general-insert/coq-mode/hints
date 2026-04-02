@@ -1,0 +1,35 @@
+Rocq Hints:
+
+core                # standard db
+arith               # standard db
+zarith              # standard db
+bool                # standard db
+datatypes           # standard db
+sets                # standard db
+typeclass_instances # standard db
+fset                # standard db
+ordered_type        # standard db
+
+Print Hint *.
+Print HintDb \ident.
+
+Create HintDb \ident.
+Hint Constants [Transparent | Opaque] : \db.   # resolution of constants.
+Hint Projections [Transparent | Opaque] : \db. # resolution of projections.
+Hint Variables [Transparent | Opaque] : \db.   # resolution of variables.
+
+
+Hint Resolve \qualid \info : \db. # Add head symbol to hintdb.
+Hint Resolve [ <- -> ] .. # Restricted direction.
+Hint Immediate \qualid. # simple apply, solve trivial.
+Hint Constructors \indType . # add inductive type ctors.
+Hint Unfold \qualid. # allow unfolding definition.
+Hint [Transparent Opaque] \qualid. # for resolution.
+Hint Extern \nat \patt => \tactic : \db. # Extend auto with more than apply and unfold.
+Hint Extern \nat \patt => progress \tactic : \db. # for tactics succeed without changing context.
+Hint Cut [ \hintsRegex ] : \db. #
+Hint Mode \qualid + : \db. # arg is input
+Hint Mode \qualid ! : \db. # arg head is input
+Hint Mode \qualid - : \db. # arg is output
+Hint Rewrite [ <- -> ] \db.
+Hint Rewrite [ <- -> ] \term using \tactic : \db.

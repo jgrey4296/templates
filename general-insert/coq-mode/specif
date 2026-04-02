@@ -1,0 +1,13 @@
+Rocq Specification / Intuitionistic logic:
+
+prod := spec * spec #
+sum := spec + spec  #
+sumor   := spec + { spec } := inleft (_:A) | inright (_:B).  # constructive
+sumbool := { spec } + { spec } := left (_:A) | right (_:B).  # constructive.
+exist   := { ident : spec | form } := exist (x:A) (_:P x).   # sig. weak dependent.
+existT  := { ident : spec & spec }                           # sigT. Strong dependent.
+
+
+exist x:A (p:A->P) := {x:A | p x}                                       # weak dependent sum
+sig x p.                                                                # weak dependent sum.
+sigT (A:Type) (P:A->Type) : Set := exist (x:A) (_:P x).                 # Strong dependent sum.

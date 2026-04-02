@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : printl2
+# uuid  : printl2
+# key   : printl2
+# group :
+# --
+Print Ltac2 Signatures.

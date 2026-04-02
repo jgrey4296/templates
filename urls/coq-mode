@@ -18,12 +18,12 @@ Hierarchy Builder                # https://github.com/math-comp/hierarchy-builde
 Tactics in Plain English         # https://charlesaverill.github.io/ctpe/
 Mtac Tutorial                    # https://plv.mpi-sws.org/mtac/mtac_tutorial-1.1.html
 
-Logical Foundations 1            # https://softwarefoundations.cis.upenn.edu/lf-current/toc.html
-Prog Lang Foundations 2          # https://softwarefoundations.cis.upenn.edu/plf-current/toc.html
-Verified Functional Algorithms 3 # https://softwarefoundations.cis.upenn.edu/vfa-current/toc.html
-Quickchik 4                      # https://softwarefoundations.cis.upenn.edu/qc-current/toc.html
-Verified C 5                     # https://softwarefoundations.cis.upenn.edu/vc-current/toc.html
-Separation Logic 6               # https://softwarefoundations.cis.upenn.edu/slf-current/toc.html
+SF: Logical Foundations 1            # https://softwarefoundations.cis.upenn.edu/lf-current/toc.html
+SF: Prog Lang Foundations 2          # https://softwarefoundations.cis.upenn.edu/plf-current/toc.html
+SF: Verified Functional Algorithms 3 # https://softwarefoundations.cis.upenn.edu/vfa-current/toc.html
+SF: Quickchik 4                      # https://softwarefoundations.cis.upenn.edu/qc-current/toc.html
+SF: Verified C 5                     # https://softwarefoundations.cis.upenn.edu/vc-current/toc.html
+SF: Separation Logic 6               # https://softwarefoundations.cis.upenn.edu/slf-current/toc.html
 
 Opam                             # https://opam.ocaml.org/doc/Usage.html
 Opam Manual                      # https://opam.ocaml.org/doc/Manual.html
@@ -43,3 +43,6 @@ Idris Manual                     # https://idris2.readthedocs.io/en/latest/index
 Idris REPL                       # https://idris2.readthedocs.io/en/latest/reference/debugging.html#repl-commands
 Agda                             # https://agda.readthedocs.io/en/v2.6.2.2/
 Agda CLI                         # https://agda.readthedocs.io/en/v2.6.2.2/tools/command-line-options.html
+
+Archive of Formal Proofs # https://www.isa-afp.org
+Rocq Zulip chat # https://rocq-prover.zulipchat.com/#narrow/channel/278935-Ltac2

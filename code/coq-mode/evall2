@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : evall2
+# uuid  : evall2
+# key   : evall2
+# group : ltac2
+# --
+Ltac2 Eval $0.

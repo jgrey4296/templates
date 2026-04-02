@@ -1,0 +1,188 @@
+Rocq Ltac2 Tactics:
+Print Ltac2 Signatures.  # Debugging
+Print Libraries.         # Debugging
+About {thing}.           # Debugging
+Print {thing}.           # Debugging
+Locate Ltac2 {thing}.    # Debugging
+Ltac2 Eval {tactics}.    # Debug.
+
+()                       # equivalent to ltac's idtac.
+
+# ---- Context Bookkeeping
+fail                  # Notation.
+clear                 # Remove a prop. Notation for std.clear.
+keep                  # Keep only needed props in context. Notation for Std.keep.
+
+assert                     # Focus a new prop to prove. Notation for std.assert.
+pose                       # Add a new prop to prove. Notation for Std.pose.
+set ({ident}:={}).         # Local definitions for proofs.
+remember {} as {ident}.    # Local definitions in proofs. Notation for Std.remember.
+enough ({}:{}).            #
+
+intro[s] H at {loc}.  # Move vars from goal to context. Notation for Std.intro
+move                  # Move premises around in the context. notation for Std.move.
+rename                # rename premises in the context. notation for Std.rename.
+
+constructor           # use inductive type ctors.
+split                 # use inductive type ctors. notation for Std.split.
+left                  # use inductive type ctors.
+right                 # use inductive type ctors.
+
+# ---- Intro Patterns.
+forall x : T, ... # Dependent Premise. Intro pattern
+A -> ...          # Non-dependent Premise. Intro Pattern.
+let x := c        # Let Premise. Intro Pattern
+
+# ---- Goal Bookkeeping.
+revert                # Return a Prop to the goal. Notation for Std.revert.
+symmetry              # t=u -> u=t. Notation for Std.symmetry.
+exact                 # use a proof exactly.
+apply                 # unify forward or back. Notation for Std.apply.
+Std.transitivity      # Reduces t  = u when definitionally equal.
+Std.reflexivity ()    # Notation for Std.reflexivity.
+Std.rewrite           #
+Std.subst             #
+Std.change            #
+
+# ---- Reduction
+lazy
+cbv
+cbn
+Std.hnf
+Std.red
+Std.unfold
+Std.fold
+Std.pattern
+
+# ---- Existential
+eassert               #
+econstructor          #
+eenough               #
+eexact                # existential exact
+eexists               #
+eintros               #
+eleft                 #
+epose                 #
+eright                #
+eset                  #
+esplit                #
+
+Std.etransitivity #
+Std.eauto         #
+Evar.equal        #
+typeclasses_eauto
+
+# ---- Automation
+repeat                # Notation.
+do                    # Notation.
+once                  # Notation.
+progress              # Notation.
+first [ {} ]          # Notation.
+solve [ {} ]          # Notation.
+time                  # Notation.
+
+Std.autorewrite
+Std.trivial
+Std.auto
+Std.unify
+Std.congruence
+
+# ---- Core
+Control.refine # like exact, with _ holes.
+
+# ---- Case Analysis
+Std.case        #
+Std.destruct    # Generate subgoal for each constructor of the type.
+Std.assumption  # look for applicable hypothesis in ctx.
+
+# ---- Proof Flow
+
+Std.cut
+Std.specialize
+Std.generalize
+Std.absurd #
+Std.contradiction
+Std.admit
+
+# ---- Context
+Std.clearbody
+Std.set
+? post
+
+# ---- Induction
+Std.elim
+Std.induction
+Std.fix
+Std.cofix
+
+# ---- Inductive Types
+Std.injection
+Std.discriminate  # Prove inconsistent constructors. eg: 1 <> 2.
+Std.inversion     # For co-inductive types.
+
+# ---- Existential
+
+
+# ---- Tacticals
+try
+; (semcolon)
+Printf.printf
+
+# ---- Ltac 1
+Ltac1.apply
+Ltac1.lambda
+Ltac1.of_constr
+Ltac1.of_ident
+Ltac1.of_int
+Ltac1.of_intro_pattern
+Ltac1.of_list
+Ltac1.of_preterm
+Ltac1.ref
+Ltac1.run
+Ltac1.tag_name
+Ltac1.to_constr
+Ltac1.to_ident
+Ltac1.to_int
+Ltac1.to_intro_pattern
+Ltac1.to_list
+Ltac1.to_preterm
+
+
+# ---- Hints
+# ---- Modules
+Array
+Bool
+Char
+Constant
+Constr
+Constructor
+Control
+Env
+Evar
+FMap
+FSet
+Float
+Fresh
+Ident
+Ind
+Int
+Init
+Lazy
+List
+Message
+Meta
+Notations
+Option
+Pattern
+Printf
+Proj
+RedFlags
+Ref
+String
+Unification
+# ----
+# ----
+# ----
+# ----
+# ----
+# ----

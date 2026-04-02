@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name  :  no-prelude
+# uuid  :  no-prelude
+# key   :  no-prelude
+# group :
+# --
+(* From Corelib Require Import Prelude. *)
+
+(* At end of file: *)
+(* Local Variables: *)
+(* coq-prog-args: ("-noinit") *)
+(* End: *)

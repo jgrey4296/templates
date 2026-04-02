@@ -1,5 +1,6 @@
 Rocq Ltac Tactics:
-
+Print Grammar tactic. # Debugging.
+Print Ltac Signatures. # Debug.
 ----- # Basic
 
 

@@ -1,0 +1,20 @@
+Rocq Datatypes:
+
+reflect (Prop -> bool) bool : Set.
+ReflectT, ReflectF.
+
+id : A x => x.
+idProp : A x => x.
+
+inhabits (A:Type) : Prop.
+
+
+# records:
+
+Record \Name : Set := \ctor { \var : \type .. }. # definition
+{| \var:=\val .. |}                              # Instantiate
+Arguments \ctor \vals : assert.                  # print what values are not declared.
+rec\.(\var) or \var \rec.                        # record value access.
+
+# Type classes:
+Class \Name (\TVar:\Type ..) := { \Var : \TVar .. }.

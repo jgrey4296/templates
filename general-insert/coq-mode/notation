@@ -1,0 +1,62 @@
+Rocq Notation Scopes:
+Print Scopes.                                                      # Debug. Defined scopes.
+Print Visibility.                                                  # Debug. Active Scopes.
+About "/\".                                                        # Debug. Syntax.
+Print Notation "_ /\ _".                                           # Debug. Syntax.
+Locate "/\".                                                       # Debug. Syntax.
+Print Keywords.                                                    # Debug.
+Print Grammar.                                                     # Debug.
+Print Grammar constr.                                              # Debug. Terms.
+Print Grammar tactic.                                              # Debug. tactics.
+Print Grammar vernac.                                              # Debug. Comands.
+
+[En,Dis]able Notation "{syntax}" (all) : {scope}.                  #
+Enable Notation only [parsing, printing].                          #
+
+Set Printing Notations.                                            #
+Set Printing Raw Literals.                                         #
+Set Printing Parentheses.                                          #
+
+type_scope                                                         # scope
+function_scope                                                     # scope
+nat_scope                                                          # scope
+N_scope                                                            # scope
+Z_scope                                                            # scope
+positive_scope                                                     # scope
+Q_scope                                                            # scope
+Qc_scope                                                           # scope
+R_scope                                                            # scope
+bool_scope                                                         # scope
+list_scope                                                         # scope
+core_scope                                                         # scope
+string_scope                                                       # scope
+char_scope                                                         # scope
+
+at level {nat}                                                     # Syntax
+in custom {ident}                                                  # Syntax
+{ident} at level {binder}                                          # Syntax
+{left/right/no} associativity                                      # Syntax
+only {parsing/printing}                                            # Syntax
+format {string}                                                    # Syntax
+
+constr                                                             # Syntax. Term.
+ident                                                              # Syntax
+name                                                               # Syntax
+global                                                             # Syntax
+bigint                                                             # Syntax
+strict pattern                                                     # Syntax
+binder                                                             # Syntax
+closed binder                                                      # Syntax
+custom {ident}                                                     # Syntax
+pattern                                                            # Syntax
+
+as ident                                                           # Syntax
+as name                                                            # Syntax
+as pattern                                                         # Syntax
+as strict pattern                                                  # Syntax
+
+Declare Scope {name}.                                              # Definition.
+Ltac2 Notation "{syntax}" {args}  := {def}.                        # Definition. Ltac2.
+Notation "{syntax}"               := {def} ({options}) : {scope}.  # Definition.
+Infix "{syntax}"                  := {def} : {scope}.              # Definition.
+[Open,Close] Scope {scope}.                                        # Activation.

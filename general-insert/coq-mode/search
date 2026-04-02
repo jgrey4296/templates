@@ -1,0 +1,59 @@
+Rocq Search Commands:
+
+Search {thing}.                     #
+Search {thing} in {mod}.            #
+Search "{module}".                  #
+Search "{module}" -"{pattern}".     # Search Filtering.
+Search {item}:"{thing}" % {scope}.  #
+Search {thing} is:{kind}.           #
+Search "{thing}".                   #
+Search "{syntax}".                  #
+Search (_ + _).                     #
+Search ({type} -> {type}).          #
+Search (_ -> Prop).                 #
+SearchPattern (forall _, _ -> _).   #
+Search (_ + _ + _).                 #
+
+SearchPattern (_ + _ + _).          #
+SearchRewrite (_ + _ + _).          #
+
+Locate "{syntax}".                  #
+Locate {thing}.                     #
+Locate Term {thing}.                #
+Locate Module {thing. }             #
+Locate Library {thing}.             #
+Locate File {thing}.
+Locate Ltac {thing}.               #
+Locate Ltac2 {thing}.               #
+
+(?n _ ?m -> ?z)                     # Meta variables
+
+head                                # Item.
+hyp                                 # Item.
+concl                               # Item.
+headhyp                             # Item.
+headconcl                           # Item.
+
+Definition                          # kind
+Example                             # kind
+Context                             # kind
+Primitive                           # kind
+Symbol                              # kind
+Coercion                            # kind
+Instance                            # kind
+Scheme                              # kind
+Canonical                           # kind
+SubClass                            # kind
+Fixpoint                            # kind
+CoFixpoint                          # kind
+Field                               # kind
+Method                              # kind
+Theorem                             # kind
+Lemma                               # kind
+Axiom                               # kind
+Variable.                           # kind
+
+Search "well_founded_".             # Example.
+Search "+".                         # Example.
+Search nat is:Definition.           # Example.
+Search concl:bool.                  # Example. Search for bool in the conclusion.

@@ -1,24 +1,25 @@
 Roqc Warnings:
-+automation        #
-+bytecode-compiler #
-+coercions         #
-+deprecated        #
-+extraction        #
-+filesystem        #
-+fixpoints         #
-+fragile           #
-+funind            #
-+implicits         #
-+ltac              #
-+ltac2             #
-+native-compiler   #
-+numbers           #
-+parsing           #
-+pedantic          #
-+records           #
-+rewrite-rules     #
-+ssr               #
-+syntax            #
-+tactics           # tactis?
-+user-warn         #
-+vernacular        #
+Set Warnings {warning}. #
++automation        # warning.
++bytecode-compiler # warning.
++coercions         # warning.
++deprecated        # warning.
++extraction        # warning.
++filesystem        # warning.
++fixpoints         # warning.
++fragile           # warning.
++funind            # warning.
++implicits         # warning.
++ltac              # warning.
++ltac2             # warning.
++native-compiler   # warning.
++numbers           # warning.
++parsing           # warning.
++pedantic          # warning.
++records           # warning.
++rewrite-rules     # warning.
++ssr               # warning.
++syntax            # warning.
++tactics           # warning.
++user-warn         # warning.
++vernacular        # warning.

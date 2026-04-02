@@ -1,4 +1,4 @@
-Coq Proofs:
+Rocq Proofs:
 Theorem     #
 Lemma       #
 Fact        #
@@ -7,10 +7,3 @@ Corollary   #
 Proposition #
 Property    #
 
------ # Proof Modes
-"Classic"   # use Ltac.
-"Noedit"    # No tactic language
-"Ltac2"     # after Requiring Ltac2.
-"SSR"       # after requiring ssreflect.
-"Mtac2"     #
-"micromega" #

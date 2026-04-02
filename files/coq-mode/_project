@@ -4,5 +4,8 @@
 # key   : coqproject
 # group :
 # --
-# Parameter to pass to coqc
--Q . JG
+# Parameters to pass to coqc
+## For ocaml compilations:
+-I .temp/dune/install/default/lib
+## Recursive logical paths:
+-R . JG

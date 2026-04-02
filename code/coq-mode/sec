@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name  : sec
+# uuid  : sec
+# key   : sec
+# group :
+# --
+Section $1.
+$0
+
+End $1.

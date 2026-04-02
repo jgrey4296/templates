@@ -1,0 +1,12 @@
+Rocq Programming:
+
+Inductive unit : Set := tt.
+Inductive bool : Set := true | false.
+Inductive nat : Set := O | S (n:nat).
+Inductive option (A:Set) : Set := Some (_:A) | None.
+
+Inductive sum (A B : Set) : Set := inl (_:A) | inr(_:B).
+Inductive prod (A B : Set) : Set := pair (_:A) (_:B).
+
+fst (H: prod A B) -> A.
+snd (H: prod A B) -> B.

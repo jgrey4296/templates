@@ -1,25 +1,27 @@
 Coq Commands:
-Print                          #
+Print Grammar vernac.             # Debugging.
 
-Load                           # Load a file in load path.
-From {dirpath} Require Import {} # make components available by short names.
-From {dirpath} Require Export {} # component short names, and mark to export.
+Print                             #
 
-Pwd                            #
-Cd                             #
-Add LoadPath                   #
-Add Rec LoadPath               #
-Remove LoadPath                #
+Load                              # Load a file in load path.
+From {dirpath} Require Import {}  # make components available by short names.
+From {dirpath} Require Export {}  # component short names, and mark to export.
 
-Reset                          #
-Reset Initial                  #
-Back                           #
-BackTo                         #
+Pwd                               #
+Cd                                #
+Add LoadPath                      #
+Add Rec LoadPath                  #
+Remove LoadPath                   #
 
-Quit                           #
-Drop                           #
-Redirect                       #
+Reset                             #
+Reset Initial                     #
+Back                              #
+BackTo                            #
 
------ # Ocaml
-Declare ML Module {} # load an ocaml plugin.
-Register {qualid} as {qualid}. # make qualid's accessible to ocaml libraries.
+Quit                              #
+Drop                              #
+Redirect                          #
+
+-----                             # Ocaml
+Declare ML Module {}              # load an ocaml plugin.
+Register {qualid} as {qualid}.    # make qualid's accessible to ocaml libraries.

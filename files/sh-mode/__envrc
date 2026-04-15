@@ -32,6 +32,7 @@ PATH_add "$HOME/.local/texlive/current/bin/x86_64-linux"
 
 # For repo-local tasks
 PATH_add "$PWD/.tasks"
+PATH_add "$PWD/.polyglot"
 
 ##-- polyglot
 

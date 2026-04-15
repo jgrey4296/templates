@@ -2,6 +2,6 @@
 # name  : modeline
 # uuid  : modeline
 # key   : modeline
-# group : comments
+# group : comments headers
 # --
 `comment-start` `(buffer-name)` -*- mode: `mode-name` -*- `comment-end`

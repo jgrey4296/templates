@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : uv.git.source
+# uuid  : uv.git.source
+# key   : uv.git.source
+# group : python uv github dependencies
+# --
+# tag/branch/rev=""
+$1 = { git = "https://github.com/$2/$1" }$0

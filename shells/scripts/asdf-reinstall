@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# asdf-reinstall.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+
+target="$1"
+version="$2"
+
+echo "---- Reinstalling $target $version"
+asdf uninstall "$target" "$version"
+asdf install "$target" "$version"
+echo "---- Done"

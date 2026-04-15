@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name  : eblock
+# uuid  : eblock
+# key   : eblock
+# group : structure
+# --
+{% block $1 %}{% endblock $1 %}
+$0

@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# weekly-update.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+
+echo "---- Weekly Update"
+
+echo "-- Updating Apt"
+sudo apt update
+sudo apt upgrade
+
+echo "-- Updating Clamscan"
+sudo freshclam
+
+echo "-- TODO Update bookmarks"
+
+echo "-- TODO Update tags"
+
+echo "-- TODO update asdf"
+
+
+system-state

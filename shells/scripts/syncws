@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# sync-ws.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+echo "-- Syncing UV with all groups/extras"
+uv sync --all-groups --all-extras || { echo "UV Failed to Sync" && exit 1; }
+
+echo "-- Finished --"

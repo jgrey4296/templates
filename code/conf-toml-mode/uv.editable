@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : uv.editable
+# uuid  : uv.editable
+# key   : uv.editable
+# group : python dependencies
+# --
+$1 = { path = "../../$1", editable = true }$0

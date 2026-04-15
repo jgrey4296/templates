@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : readarray
+# uuid  : readarray
+# key   : readarray
+# group :
+# --
+readarray -t ${myvar} <<<  $( ${cmd} )$0

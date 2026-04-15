@@ -2,6 +2,6 @@
 # name  : hashbang
 # uuid  : hashbang
 # key   : hashbang
-# group :
+# group : headers
 # --
 #!/usr/bin/env -S ${1:bash}

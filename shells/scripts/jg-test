@@ -4,6 +4,7 @@
 set -o nounset
 set -o pipefail
 
+# shellcheck disable=SC1091
 source "$HOME/_cache_/asdf/plugins/polyglot/polyglot/lib/lib-util.bash"
 
 echo "All Args: " "$@"
@@ -28,14 +29,14 @@ echo "Value is: $value"
 pushctx "blah" >/dev/null
 pushctx "bloo" >/dev/null
 
-VALS=()
+VALS=("a" "b")
 
 VALS+=("blah")
 VALS+=("bloo")
 VALS+=("aweg")
 
 echo "first: ${VALS[0]}"
-echo "${VALS[@]::${#VALS[@]}-1} : ${VALS[-1]}"
+echo "${VALS[*]::${#VALS[@]}-1} : ${VALS[-1]}"
 echo "${VALS[@]:1}"
 
 # print-env-failures "${VALS[@]}"
@@ -55,3 +56,36 @@ echo "${VALS[@]:1}"
 
 # AVAL=$($T2VAL | sed 'p; p')
 # echo "aval is: $AVAL"
+
+function blah () {
+    echo "value"
+    echo "bloo"
+    echo "blee"
+}
+# { echo "blah"; echo "bloo"; }
+blah
+
+readarray -t myvar <<< "$(blah)"
+for val in "${myvar[@]}"
+do
+    echo "- '$val'"
+done
+
+
+values="blah
+bloo
+blee
+"
+
+fvals=$(< "$HOME/jgtestvals")
+
+echo "Values: ${values}"
+echo "fvals: ${fvals}"
+
+joined="${values}
+${fvals}"
+joined+=$(env | grep "POLYGLOT" | sort | uniq)
+
+echo "--"
+echo "${joined}" | sort | sed '/\S/!d'
+echo "--"

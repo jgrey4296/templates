@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : directory
+# uuid  : directory
+# key   : directory
+# group :
+# --
+$1/

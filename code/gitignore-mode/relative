@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : relative
+# uuid  : relative
+# key   : relative
+# group :
+# --
+/$1

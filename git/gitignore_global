@@ -2,6 +2,8 @@
 # https://git-scm.com/docs/gitignore
 # symlink to ~/.gitignore_global
 
+!/.polyglot/**
+
 ##-- compiled
 *.beam
 *.bl

@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# quick-server.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+echo "Starting Quickserver"
+# sudo ufw allow proto tcp from any to 192.168.1.247 port 8000
+
+( python \
+    -m http.server \
+    --directory "${1:-$PWD}" \
+    --bind 192.168.1.247 8000
+)

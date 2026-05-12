@@ -36,6 +36,6 @@ jg-debug "Path  : $PATH"
 source_components
 jg_maybe_inc_prompt
 jg_set_prompt
+# secrets-init
 init-sdkman
-init-ssh
 loginmux

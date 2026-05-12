@@ -15,24 +15,7 @@ echo "Root Dir: $root_dir"
 source "$root_dir/lib/utils.bash"
 
 case "$OSTYPE" in
-	linux*)
-       # shellcheck disable=SC1091
-       source "$root_dir/lib/aliases.bash"
-
-       if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-           debian_chroot=$(cat /etc/debian_chroot)
-       fi
-       # Setup prompt
-       jg_maybe_inc_prompt
-       jg_set_prompt
-       ;;
-    *)
-       fail "Bad OS"
-       ;;
+	linux*) source "$root_dir/interactive.linux.bash" ;;
+    *) fail "Bad OS" ;;
 esac
 
-
-# #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-# export SDKMAN_DIR="~/.cache/sdkman"
-# [[ -s "~/.cache/sdkman/bin/sdkman-init.sh" ]] && source "~/.cache/sdkman/bin/sdkman-init.sh"
-init-sdkman

@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+# export-keys.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+# keytype
+file_format="%s-%s-%s.sec"
+date_format="+%Y-%m-%d"
+
+function outname () {
+    local keytype idname now target
+    # keytype={normal,expired,revoked}
+    keytype="$1"
+    idname=$(echo "$2" | sed -E -e 's/\s*<.+$//;s/\s+/_/g')
+    # now=$(date "$date_format")
+    target="${idname}_${keytype}.sec"
+    echo "$target"
+}
+
+function do-key () {
+    local target idname
+    idname="$1"
+    target="$2"
+    echo "- Exporting: $idname -> $target"
+    if [[ ! -f "$target" ]]; then
+        gpg --armor --export-secret-keys --output="$PWD/$target" "$idname"
+    else
+        echo "E - Target already Exists: $target"
+    fi
+    # gpg --gen-revoke --armor --output="revoke-$target" "$idname"
+}
+
+# Read all Keys and export them
+readarray -t keys <<< $(gpg -K | grep -E "^uid")
+for val in "${keys[@]}"
+do
+    case "$val" in
+        *expired*)
+            keytype="expired"
+            idname=$(echo "$val" | sed -E -e 's/^.+expired.*\] //')
+            target=$(outname "$keytype" "$idname")
+            do-key "$idname" "$target"
+            ;;
+        *revoked*)
+            keytype="revoked"
+            idname=$(echo "$val" | sed -E -e 's/^.+revoked.*\] //')
+            target=$(outname "$keytype" "$idname")
+            do-key "$idname" "$target"
+            ;;
+        *)
+            keytype="current"
+            idname=$(echo "$val" | sed -E -e 's/^.+\] //')
+            target=$(outname "$keytype" "$idname")
+            do-key "$idname" "$target"
+            ;;
+    esac
+done

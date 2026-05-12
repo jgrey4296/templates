@@ -20,5 +20,7 @@ echo "-- TODO Update tags"
 
 echo "-- TODO update asdf"
 
+echo "-- Backing up secrets"
+secrets-backup
 
-system-state
+chores-system

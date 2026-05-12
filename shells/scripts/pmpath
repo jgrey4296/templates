@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#  ppath.bash -*- mode: sh -*-
+
+echo "Pretty Man Path: "
+count=0
+IFS=":"
+for i in $MANPATH; do
+    echo "- $i"
+    ((count++))
+done
+echo "Size: $count"

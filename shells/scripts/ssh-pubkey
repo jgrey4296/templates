@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# ssh-pubkey.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+target="$1"
+base="$XDG_CONFIG_HOME/secrets/ssh"
+[[ -f "$base/$target" ]] || { echo "Key Not Found: $target"; exit 1; }
+
+ssh-keygen -f "$base/$target" -y

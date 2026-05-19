@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name  : screenshot
+# uuid  : screenshot
+# key   : screenshot
+# group : util
+# --
+func take_screenshot():
+    # Function for taking screenshots and saving them
+    # https://stackoverflow.com/questions/77586404
+    var date             = Time.get_date_string_from_system().replace(".","_")
+    var time  : String   = Time.get_time_string_from_system().replace(":","")
+    var screenshot_path  = "user://" + "screenshot_" + date+ "_" + time + ".jpg"  # the path for our screenshot.
+
+    var image            = get_viewport().get_texture().get_image()               # We get what our player sees
+
+    image.save_jpg(screenshot_path)

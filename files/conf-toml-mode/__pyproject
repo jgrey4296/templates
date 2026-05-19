@@ -71,7 +71,7 @@ changelog     = "https://github.com/jgrey4296/$1/spam/blob/master/CHANGELOG.md"
 [project.entry-points."$1"] 
 ##-- end entry points
 
-`(snippet-expand "hatch.build")`
+`(+snippet-expand "hatch.build")`
 
 # Tools #######################################################################
 

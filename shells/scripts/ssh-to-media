@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# media.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+echo "SSHing into media"
+
+ssh john@192.168.1.216

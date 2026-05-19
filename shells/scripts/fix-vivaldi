@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# fix-vivaldi.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+# https://issues.chromium.org/issues/41103620
+#
+cd "$HOME/snap/vivaldi/current/.config/vivaldi/"
+
+rm ./Singleton*

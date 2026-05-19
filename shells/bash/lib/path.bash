@@ -54,4 +54,4 @@ MANPATH="/usr/local/man:/usr/local/share/man:/usr/share/man"
 MANPATH="$HOME/.local/share/man:$MANPATH"
 MANPATH="$HOME/github/_templates/man/main:$MANPATH"
 # shellcheck disable=SC2034
-INFOPATH=""
+INFOPATH=":"

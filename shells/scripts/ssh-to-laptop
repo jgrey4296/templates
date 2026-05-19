@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# ssh-to-laptop.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+echo "SSHing to laptop"
+ssh john@192.168.1.59

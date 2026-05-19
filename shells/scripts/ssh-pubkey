@@ -4,8 +4,21 @@
 set -o nounset
 set -o pipefail
 
-target="$1"
 base="$XDG_CONFIG_HOME/secrets/ssh"
-[[ -f "$base/$target" ]] || { echo "Key Not Found: $target"; exit 1; }
 
-ssh-keygen -f "$base/$target" -y
+case "${1:-}" in
+    -a|--all)
+        for file in "$base"/*
+        do
+            ssh-keygen -f "$file" -y
+        done
+        exit 0
+        ;;
+    *) ;;
+esac
+
+for key in "$@"
+do
+    [[ -f "$base/$key" ]] || { echo "Key Not Found: $key"; exit 1; }
+    ssh-keygen -f "$base/$key" -y
+done

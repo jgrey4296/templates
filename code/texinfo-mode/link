@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : link
+# uuid  : link
+# key   : link
+# group :
+# --
+* $1: ($2). $3.

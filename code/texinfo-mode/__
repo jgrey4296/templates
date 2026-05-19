@@ -1,0 +1,24 @@
+# -*- mode: snippet -*-
+# name  : __
+# uuid  : __
+# key   : __
+# group : file
+# --
+\input texinfo @c -*- texinfo -*-
+@settitle $1
+@dircategory $2
+
+@titlepage
+@title $1
+@page
+@vskip 0pt plus 1filll
+@end titlepage
+
+@contents
+
+@node Top
+@top $1
+
+@menu
+
+@end menu

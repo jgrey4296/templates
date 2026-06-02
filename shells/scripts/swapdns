@@ -17,7 +17,7 @@ case "${1:-help}" in
 
         sudo systemctl start dnsmasq
         sudo systemctl enable dnsmasq
-
+        sudo -K
     ;;
     stop)
         echo "-- Activating systemd-resolved"
@@ -27,7 +27,7 @@ case "${1:-help}" in
 
         sudo systemctl stop dnsmasq
         sudo systemctl disable dnsmasq
-
+        sudo -K
     ;;
     *)
         echo "-- No instruction provided"

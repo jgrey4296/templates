@@ -4,11 +4,17 @@
 set -o nounset
 set -o pipefail
 
-echo "Starting Quickserver"
+DIR="${1:-$PWD}"
+ADDR="${2:-192.68.1.247}"
+PORT="${3:-80}"
 # sudo ufw allow proto tcp from any to 192.168.1.247 port 8000
 
+echo "----Starting Quickserver"
+echo "- Dir: $DIR"
+echo "- Address: $ADDR"
+echo "- Port: $PORT"
 ( python \
     -m http.server \
-    --directory "${1:-$PWD}" \
-    --bind 192.168.1.247 8000
+    -d "$DIR"
+    -b "$ADDR" "$PORT"
 )

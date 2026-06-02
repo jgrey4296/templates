@@ -1,0 +1,12 @@
+# hosts -*- mode:conf -*-
+# Local network hosts
+# Format: ip.addr hostname aliases
+
+# Loopback
+127.0.0.1 localhost
+127.0.1.1 um700
+
+# Local
+192.168.1.1 router.jg router
+192.168.1.216 media.jg MEDIA
+192.168.1.247 um700.jg um700

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=GodotJG
+Terminal=false
+Exec=bash -l -c Godot
+Comment=Start Godot.
+Icon=utilities-terminal
+StartupNotify=true

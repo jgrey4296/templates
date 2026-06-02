@@ -7,9 +7,10 @@
 :data        : data
 :docs        : docs
 :github      : .github/workflows
-:tasks       : .tasks
+:tasks       : .polyglot/tasks
 :temp        : .temp
 :templates   : templates
 :wiki        : wiki_
 :git         : .git
 :versions    : .maintenance
+:related     : .related

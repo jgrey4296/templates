@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=SARL IDE
+Terminal=false
+Exec=/home/john/.local/sarl/sarl.eclipse/sarlide
+Comment=Start Sarl IDE.
+NoDisplay=true
+MimeType=x-scheme-handler/eclipse+command
+StartupNotify=true

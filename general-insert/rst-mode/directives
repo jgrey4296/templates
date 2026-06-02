@@ -28,3 +28,5 @@ RST Domain              # https://www.sphinx-doc.org/en/master/usage/domains/res
 rst:directive::         #
 rst:directive:option::  #
 rst:role::              #
+
+JG Bib Domain # TODO

@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# activate-dns.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+
+case "${1:-help}" in
+    help)
+        echo "swapdns [help|start|stop]"
+    ;;
+    start)
+        echo "-- De-activating systemd-resolved"
+        sudo systemctl stop systemd-resolved
+        sudo systemctl disable systemd-resolved
+        sudo systemctl mask systemd-resolved
+
+        sudo systemctl start dnsmasq
+        sudo systemctl enable dnsmasq
+
+    ;;
+    stop)
+        echo "-- Activating systemd-resolved"
+        sudo systemctl unmask systemd-resolved
+        sudo systemctl enable systemd-resolved
+        sudo systemctl start systemd-resolved
+
+        sudo systemctl stop dnsmasq
+        sudo systemctl disable dnsmasq
+
+    ;;
+    *)
+        echo "-- No instruction provided"
+        exit 1
+    ;;
+esac
+

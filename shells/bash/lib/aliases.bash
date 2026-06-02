@@ -53,7 +53,7 @@ function cd_ls {
 
 alias sdkman="sdk"
 alias precom="pre-commit"
-alias ckct="cookiecutter"
 alias cookie="cookiecutter"
-alias media="ssh john@192.168.1.216"
+alias cookie="cookiecutter"
+alias media="ssh john@MEDIA"
 alias ytdl="yt-dlp"

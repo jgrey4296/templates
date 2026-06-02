@@ -24,3 +24,5 @@ echo "-- Backing up secrets"
 secrets-backup
 
 chores-system
+
+sudo -K

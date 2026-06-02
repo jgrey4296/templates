@@ -9,7 +9,16 @@ ${1:$(s-replace-regexp "." "=" yas-text)}
 .. contents:: Contents
    :local:
 
-${0: Donec at pede.}
+${0: Aliquam erat volutpat.}
+
+.. toctree::
+   :caption: 
+   :titlesonly:
+   :hidden:
+   :glob:
+
+   ./[a-z]*
+   ./[a-z]*/index
 
 
 ..  --------------------------------------------------

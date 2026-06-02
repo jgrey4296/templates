@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Trenchbroom
+Terminal=false
+Exec=/home/john/.local/trench_broom/TrenchBroom.AppImage
+Comment=Start ghidra.
+StartupNotify=true

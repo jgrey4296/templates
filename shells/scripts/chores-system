@@ -1,61 +1,59 @@
 #!/usr/bin/env bash
 #  cargo-record-versions -*- mode: sh -*-
 
-function record_versions () {
-    set -o nounset
-    local TARGET="$PROJ_ROOT/.maintenance"
+set -o nounset
+TARGET="$PROJ_ROOT/.maintenance"
+echo "Recording System State to: $TARGET"
 
-    echo "Recording System State to: $TARGET"
-
-    # apt
+function chores-apt () {
     echo "... apt"
     apt list --installed > "$TARGET/apt.versions"
     apt-add-repository --list > "$TARGET/apt.repos"
-
+}
+function chores-snap () {
     # snap
     echo "... snap"
     snap list > "$TARGET/snap.versions"
-
+}
+function chores-flatpak () {
     # flatpak
     echo "... flatpak"
     flatpak list --all > "$TARGET/flatpak.versions"
     flatpak remotes > "$TARGET/flatpak.remotes"
-
+}
+function chores-git () {
     # git
     echo "... git"
     git --version > "$TARGET/git.version"
-
+}
+function chores-cron () {
     # cron
     echo "... cron"
     crontab -l > "$TARGET/cron.backup"
+}
 
-    # rust
-    echo "... rust"
-    rustup show -v > "$TARGET/rustup.info"
-
+function chores-asdf () {
     # asdf
     echo "... asdf"
     asdf info > "$TARGET/asdf.info"
     asdf list > "$TARGET/asdf.plugins"
-
-    # android
-    echo "... android sdkmanager"
-    sdkmanager --list_installed > "$TARGET/android.versions"
-
+}
+function chores-rust () {
+    # rust
+    echo "... rust"
+    rustup show -v > "$TARGET/rustup.info"
+}
+function chores-dotnet () {
     # dotnet
     echo "... dotnet"
     dotnet --info > "$TARGET/dotnet.info"
-
+}
+function chores-uv () {
     # uv tools
     echo "... uv"
     uv tool list > "$TARGET/uv.tools"
-
-    # .local
-    echo "... local"
-    ls -l "$HOME/.local" > "$TARGET/local.installs"
 }
-
-function record_sdkman () {
+function chores-jvm () {
     set +o nounset
     # sdkman
     local TARGET="$PROJ_ROOT/.maintenance"
@@ -63,6 +61,27 @@ function record_sdkman () {
     init_sdkman
     sdk current > "$TARGET/sdkman.versions"
 }
+function chores-android () {
+    # android
+    echo "... android sdkmanager"
+    sdkmanager --list_installed > "$TARGET/android.versions"
+}
+function chores-local () {
+    # .local
+    echo "... local"
+    ls -l "$HOME/.local" > "$TARGET/local.installs"
+}
 
-record_versions
-record_sdkman
+
+chores-apt
+chores-snap
+chores-flatpak
+chores-git
+chores-cron
+
+chores-asdf
+chores-rust
+chores-uv
+chores-jvm
+chores-android
+chores-local

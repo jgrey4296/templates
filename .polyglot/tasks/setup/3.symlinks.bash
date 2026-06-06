@@ -13,10 +13,7 @@ ln -s "$XDG_CONFIG_HOME/.templates/projects/cookiecutterrc" "$HOME/.cookiecutter
 
 ln -s "$XDG_CONFIG_HOME/.templates/vim/vimrc" "$HOME/.vimrc"
 
-
 # Git
-mkdir -p "$XDG_CONFIG_HOME/git"
-mkdir -p "$XDG_CONFIG_HOME/gh"
 ln -s "$XDG_CONFIG_HOME/.templates/git/gitconfig" "$XDG_CONFIG_HOME/git/config"
 ln -s "$XDG_CONFIG_HOME/.templates/git/gitignore_global" "$XDG_CONFIG_HOME/git/gitignore_global"
 ln -s "$XDG_CONFIG_HOME/.templates/git/github/github_config.yml" "$XDG_CONFIG_HOME/gh/config.yml"

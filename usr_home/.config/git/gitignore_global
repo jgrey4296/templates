@@ -16,9 +16,9 @@
 *.meta
 *.o
 *.so
-build/
 ccsat.*
-dist/
+/dist/
+/build/
 
 ##-- end compiled
 
@@ -42,8 +42,6 @@ ehthumbs.db
 node_modules
 tmp/
 ~*
-.doit.db.db
-
 ##-- end OS generated
 
 ##-- emacs
@@ -151,35 +149,24 @@ coverage.xml
 *.blg
 ##-- end latex
 
-##-- doot
-*.doot_defaults.toml
-
-##-- end doot
-
-##-- static site gen
-
-.site/
-
-##-- end static site gen
 
 ##-- misc directories
-.venv/
-env/
-bin/
-build/
-develop-eggs/
-dist/
-eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-include/
-man/
-venv/
+/.temp/
+/.venv/
+/.vscode/
+/bin/
+/develop-eggs/
+/dist/
+/eggs/
+/env/
+/include/
+/lib/
+/lib64/
+/man/
+/parts/
+/sdist/
+/var/
+/venv/
 docs/_generated_*
 docs/_build/
-.vscode/
-.temp/
 ##-- end misc directories

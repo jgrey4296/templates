@@ -27,3 +27,5 @@ abbreviations:
     tool: /media/john/data/github/polyglot/poly-tasks/tools/{0}
     task: /media/john/data/github/polyglot/poly-tasks/tasks/{0}
     todo: /media/john/data/github/polyglot/poly-tasks/todo/{0}
+
+    alt: /media/john/data/github/polyglot/poly-task-branches

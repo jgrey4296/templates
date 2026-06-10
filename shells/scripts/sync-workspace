@@ -4,7 +4,29 @@
 set -o nounset
 set -o pipefail
 
+echo "-- TODO asdf"
+
 echo "-- Syncing UV with all groups/extras"
 uv sync --all-groups --all-extras || { echo "UV Failed to Sync" && exit 1; }
+
+echo "-- TODO rustup/cargo/rust"
+
+echo "-- TODO dotnet"
+
+echo "-- TODO sdkman/jvm"
+
+echo "-- TODO gradle/kotlin"
+
+echo "-- TODO android"
+
+echo "-- TODO mix/elixir"
+
+echo "-- TODO godot"
+
+echo "-- TODO lisp"
+
+echo "-- TODO tlmgr/tex"
+
+echo "-- TODO opam/ocaml/roqc"
 
 echo "-- Finished --"

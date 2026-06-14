@@ -2,23 +2,7 @@
 # Tmux
 
 function loginmux () {
-    # tmux aware session creation
-    if [[ -z "${TMUX:-}"  ]]; then
-        return
-    fi
-    case "${TERM_PROGRAM:-}" in
-   	    tmux) return ;;
-   	    emacs) return ;;
-
-    esac
-
-    if { tmux has-session; }; then
-   	    echo "Tmux Session Running"
-        tmux new-session -s "$(randname)"
-    else
-   	 echo "No Tmux Session"
-     tmux new-session -s "$(randname)"
-    fi
+    echo "-- TODO: tmux login fn"
 }
 
 function attach () {

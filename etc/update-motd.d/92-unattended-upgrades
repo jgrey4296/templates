@@ -1,0 +1,5 @@
+#!/bin/sh
+echo "- 92-unattended-upgrades"
+if [ -x /usr/share/unattended-upgrades/update-motd-unattended-upgrades ]; then
+    exec /usr/share/unattended-upgrades/update-motd-unattended-upgrades
+fi

@@ -1,0 +1,9 @@
+#!/bin/sh
+echo "- 91-contract-ua-esm-status"
+contract_status_stamp="/var/lib/ubuntu-advantage/messages/motd-contract-status"
+
+[ ! -r "$contract_status_stamp" ] || cat "$contract_status_stamp"
+
+auto_attach_stamp="/var/lib/ubuntu-advantage/messages/motd-auto-attach-status"
+
+[ ! -r "$auto_attach_stamp" ] || cat "$auto_attach_stamp"

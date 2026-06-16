@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : yas-comment
+# uuid  : yas-comment
+# key   : yas-comment
+# group : yas comment
+# --
+\`(or comment-start "")\`

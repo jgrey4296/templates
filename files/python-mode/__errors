@@ -1,5 +1,6 @@
+## `(f-filename (buffer-file-name))` -*- mode: python-mode -*-
 """
-
+`(+snippet-expand "llm-header")`
 
 """
 from __future__ import annotations

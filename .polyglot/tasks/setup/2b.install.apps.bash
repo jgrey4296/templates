@@ -39,7 +39,8 @@ set -o pipefail
     xmlstarlet \
     texinfo \
     sox \
-    mkvtoolnix
+    mkvtoolnix \
+    gifsicle
 )
 
 

@@ -1,5 +1,6 @@
 ## `(f-filename (buffer-file-name))` -*- mode: python -*-
 """
+`(+snippet-expand "llm-header")`
 Configuration file for the Sphinx documentation builder.
 https://www.sphinx-doc.org/en/master/usage/configuration.html
 

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """
+`(+snippet-expand "llm-header")`
 
 """
 # ruff.ignore.in.file PLR0912, BLE001

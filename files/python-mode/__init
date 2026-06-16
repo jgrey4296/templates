@@ -1,10 +1,7 @@
-# -*- mode: snippet -*-
-# name: __init
-# uuid: __init
-# key:  __init
-# group :
-# --
+## `(f-filename (buffer-file-name))` -*- mode: python-mode -*-
 """
+`(+snippet-expand "llm-header")`
+
 $0
 
 """

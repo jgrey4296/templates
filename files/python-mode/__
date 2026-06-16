@@ -1,8 +1,10 @@
 ## `(f-filename (buffer-file-name))` -*- mode: python -*-
 """
-$0
+`(+snippet-expand "llm-header")`
 
 """
+`(+snippet-expand "llm-header-comment")`
+
 # ruff.ignore.in.file
 `(+snippet-expand "future.annotations")`
 

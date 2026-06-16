@@ -1,37 +1,31 @@
 // __ -*- mode: rustic -*-
-//
-//
-//
+/*
+`(+snippet-expand "llm-header")`
+*/
 
-// //--// extern crates
-
-// //--// end extern crates
-
-// //--// stdlib imports
+// //--// crates
+// -- stdlib
 use std::io;
-// //--// end stdlib imports
 
-// //--// 3rd party imports
+// -- externs
 
-// //--// end 3rd party imports
+// -- 3rd party
 
-// Local Module Declarations and imports
+// //--// end crates
+
+// Local imports:
 
 
 // // --------------------------------------------------
 
+// //--// types, enums, values
 // Type Aliases
 
 // Static values
 
-
-// //--// Enums
-
-
-// //--// end Enums
+// //--// end types, enums, values
 
 // //--// structs
-
 
 // //--// end structs
 
@@ -42,6 +36,7 @@ use std::io;
 $0
 
 
+// // --------------------------------------------------
 // //--// tests
 #[cfg(test)]
 mod tests {

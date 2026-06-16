@@ -1,8 +1,8 @@
 // build.rs -*- mode: rustic -*-
-// https://doc.rust-lang.org/cargo/reference/build-scripts.html
-//
-//
-//
+/*
+ * `(+snippet-expand "llm-header")`
+ * https://doc.rust-lang.org/cargo/reference/build-scripts.html
+*/
 
 // //-- imports (only build-dependencies)
 extern crate bindgen;

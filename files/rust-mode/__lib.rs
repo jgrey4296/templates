@@ -1,7 +1,7 @@
 // __lib.rs -*- mode: rustic -*-
-//
-//
-//
+/*
+ * `(+snippet-expand "llm-header")`
+*/
 
 // //--// module declarations
 pub mod $1;

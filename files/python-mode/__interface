@@ -1,5 +1,10 @@
 ## `(f-filename (buffer-file-name))` -*- mode: python -*-
-# Type Interface Specification
+"""
+`(+snippet-expand "llm-header")`
+
+Type Interface Specification:
+
+"""
 from __future__ import annotations
 
 `(+snippet-expand "import.typing")`

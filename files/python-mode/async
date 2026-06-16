@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+"""
+`(+snippet-expand "llm-header")`
+
+"""
 `(+snippet-expand "ruff.ignore.in.file")`
 
 `(+snippet-expand "import.core")`

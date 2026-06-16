@@ -1,8 +1,10 @@
 // __tests.rs -*- mode: rustic -*-
-// https://doc.rust-lang.org/stable/book/ch11-00-testing.html
-//
-//
-//
+/*
+ *
+`(+snippet-expand "llm-header")`
+
+https://doc.rust-lang.org/stable/book/ch11-00-testing.html
+*/
 
 // //--// imports
 

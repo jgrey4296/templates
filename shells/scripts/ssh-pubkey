@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # ssh-pubkey.bash -*- mode: sh -*-
+# Get the public key of a secret key
+
 #set -o errexit
 set -o nounset
 set -o pipefail

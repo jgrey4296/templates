@@ -2,86 +2,101 @@
 #  cargo-record-versions -*- mode: sh -*-
 
 set -o nounset
-TARGET="$PROJ_ROOT/.maintenance"
+TARGET="$HOME/.maintenance"
 echo "Recording System State to: $TARGET"
 
+
 function chores-apt () {
+    type -t apt || { echo "no apt"; exit 1; }
     echo "... apt"
+    apt update
     apt list --installed > "$TARGET/apt.versions"
     apt-add-repository --list > "$TARGET/apt.repos"
+    apt upgrade
 }
+
 function chores-snap () {
+    type -t snap || { echo "no snap"; return 1; }
     # snap
     echo "... snap"
+    snap refresh
     snap list > "$TARGET/snap.versions"
 }
+
 function chores-flatpak () {
+    type -t flatpack || { echo "no flatpak"; return 1; }
     # flatpak
     echo "... flatpak"
     flatpak list --all > "$TARGET/flatpak.versions"
     flatpak remotes > "$TARGET/flatpak.remotes"
 }
+
 function chores-git () {
+    type -t git || { echo "no git"; exit 1; }
     # git
     echo "... git"
     git --version > "$TARGET/git.version"
 }
+
 function chores-cron () {
+    type -t crontab || { echo "no cron"; exit 1; }
     # cron
     echo "... cron"
     crontab -l > "$TARGET/cron.backup"
 }
 
+
 function chores-asdf () {
+    type -t asdf || { echo "no asdf"; exit 1; }
     # asdf
     echo "... asdf"
     asdf info > "$TARGET/asdf.info"
     asdf list > "$TARGET/asdf.plugins"
 }
+
 function chores-rust () {
+    type -t rustup || { echo "no rust"; exit 1; }
     # rust
     echo "... rust"
     rustup show -v > "$TARGET/rustup.info"
 }
+
 function chores-dotnet () {
+    type -t dotnet || { echo "no dotnet"; exit 1; }
     # dotnet
     echo "... dotnet"
     dotnet --info > "$TARGET/dotnet.info"
 }
+
 function chores-uv () {
+    type -t uv || { echo "no uv"; exit 1; }
     # uv tools
     echo "... uv"
     uv tool list > "$TARGET/uv.tools"
 }
+
 function chores-jvm () {
-    set +o nounset
     # sdkman
-    local TARGET="$PROJ_ROOT/.maintenance"
     echo "... jvm sdkman"
     init_sdkman
     sdk current > "$TARGET/sdkman.versions"
 }
+
 function chores-android () {
+    type -t sdkmanager || { echo "no android sdkmanager"; exit 1; }
     # android
     echo "... android sdkmanager"
     sdkmanager --list_installed > "$TARGET/android.versions"
 }
+
 function chores-local () {
     # .local
     echo "... local"
-    ls -l "$HOME/.local" > "$TARGET/local.installs"
+    ls "$HOME/.local" | sed -e '' > "$TARGET/local.installs"
 }
 
-
-chores-apt
-chores-snap
-chores-flatpak
-chores-git
-chores-cron
-
-chores-asdf
-chores-rust
-chores-uv
-chores-jvm
-chores-android
-chores-local
+function chores-clamscan () {
+    type -t freshclam || { echo "no clamscan"; exit 1; }
+    echo "... clamscan"
+    freshclam
+}

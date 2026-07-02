@@ -11,7 +11,7 @@
 [credential]
 	helper = cache
 [core]
-	excludesfile = ~/.config/git/gitignore_global
+	# excludesfile = ~/.config/git/gitignore_global
 	autocrlf=input
 	eol=lf
 [init]

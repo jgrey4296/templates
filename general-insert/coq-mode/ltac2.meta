@@ -1,0 +1,129 @@
+Rocq Ltac2 Meta Grammar:
+Ltac1 [mutable] [rec] {def} with {def}.                                            # Define new value.
+Ltac2 Set {id} as {id} := {ltac2_expr}.                                            # Refine a mutable value.
+Print Ltac2 {id}.                                                                  # Debug.
+Print Ltac2 Type {id}.                                                             # Debug.
+Ltac2 Check {expr}.                                                                # Debug.
+
+printf "{fmtstr}" {args}                                                           # Debug.
+%i                                                                                 # Printf type int.
+%I                                                                                 # Printf type ident.
+%s                                                                                 # Printf type string.
+%a                                                                                 # Printf type (unit -> 'a -> message) 'a
+Ltac2 nl_str ()         : string := (String.make 1 (Char.of_int 10)).              # Printf. Util.
+Ltac2 gap_str ()        : string := " ".                                           # Printf. Util.
+Ltac2 empty_message ()  : message := of_string "".                                 # Printf. Util.
+Ltac2 basic_message ()  : message := of_string "- : ".                             # Printf. Util.
+
+
+of_constr               : constr -> message                                        # print
+of_exn                  : exn -> message                                           # print
+of_ident                : ident -> message                                         # print
+of_int                  : int -> message                                           # print
+of_string               : string -> message                                        # print
+
+
+({}                     : {type})                                                  # argument declaration.
+{ident}({syntax class})                                                            # Meta arg declaration.
+
+
+Ltac Type [rec] {def} with {def}.                                                  # Definition.
+Ltac2 Notation ">>"                         := fun x y => printf "- %s : %s" x y.  # Abbreviation
+Ltac2 Notation "<<" x(ident) y(ident) ">>"  := printf "- %I : %I" x y.             # Notation
+
+fun x  => {expr}.                                                                  # Lambda. 'x' is a thunk. call before use.
+
+ident:({id})                                                                       # Quote -> Ltac2.
+@id                                                                                # Quote. Equivalent to: ident:(id).
+constr:({term})                                                                    # Quote.
+open_constr:({term})                                                               # Quote.
+'term                                                                              # Quote. Equivalent to open_constr:(term).
+preterm:({term})                                                                   # Quote.
+pat:({pattern})                                                                    # Quote.
+reference:(&{ident})                                                               # Quote.
+reference:({id})                                                                   # Quote.
+ltac1:({expr})                                                                     # Quote.
+ltac1val:({expr})                                                                  # Quote.
+
+ltac2:({expr})                                                                     # Antiquote.
+${ident}                                                                           # Antiquote.
+$constr:{ident}                                                                    # Antiquote.
+$preterm:{ident}                                                                   # Antiquote.
+$pattern:{ident}.                                                                  # Antiquote.
+
+
+"{str}"                                                                            #
+{int}                                                                              #
+{name}                                                                             #
+{name}({class})                                                                    #
+
+tactic(n)                                                                          #
+0                                                                                  # n. Atoms
+1                                                                                  # n. function application
+2                                                                                  # n. list const
+3                                                                                  # n. comma expression.
+4                                                                                  #
+5                                                                                  # n. let, lambda.
+6                                                                                  # n. tactic sequence.
+
+
+opt({class})                                                                       # class
+list1({class} , "{str}")                                                           # class
+list0({class}, "{str}")                                                            # class
+seq({class})                                                                       # class
+
+constr                                                                             #
+open_constr                                                                        #
+preterm                                                                            #
+ident                                                                              #
+"{str}"                                                                            #
+keyword("{}")                                                                      #
+terminal("{}")                                                                     #
+tactic                                                                             #
+self                                                                               #
+next                                                                               #
+thunk({class})                                                                     #
+pattern                                                                            #
+
+intropattern                                                                       # nonterminal class.
+intropatterns                                                                      # nonterminal class.
+destruction_arg                                                                    # nonterminal class.
+with_bindings                                                                      # nonterminal class.
+bindings                                                                           # nonterminal class.
+reductions                                                                         # nonterminal class.
+reference                                                                          # nonterminal class.
+clause                                                                             # nonterminal class.
+occurrences                                                                        # nonterminal class.
+induction_clause                                                                   # nonterminal class.
+conversion                                                                         # nonterminal class.
+orient                                                                             # nonterminal class.
+rewriting                                                                          # nonterminal class.
+dispatch                                                                           # nonterminal class.
+hintdb                                                                             # nonterminal class.
+move_location                                                                      # nonterminal class.
+pose                                                                               # nonterminal class.
+assert                                                                             # nonterminal class.
+constr_matching                                                                    # nonterminal class.
+goal_matching                                                                      # nonterminal class.
+
+beta                                                                               # Red(uction) flag.
+iota                                                                               # Red(uction) flag.
+match                                                                              # Red(uction) flag.
+fix                                                                                # Red(uction) flag.
+cofix                                                                              # Red(uction) flag.
+zeta                                                                               # Red(uction) flag.
+delta                                                                              # Red(uction) flag.
+head                                                                               # Red(uction) flag.
+
+{match key} {expr} with {match list} end.                                          # Match over terms.
+{match key} goal with {match list} end                                             # Matching over goals.
+match {expr} with {branches} end                                                   # Match on values.
+lazy_match!                                                                        # Match Key. First matching branch.
+match!                                                                             # Match Key. Match till success.
+multi_match!                                                                       # Match Key.
+
+# ---- Types
+Precisely (int)  # repeat
+UpTo (int)       # repeat
+RepeatStar       # repeat
+RepeatPlus       # repeat

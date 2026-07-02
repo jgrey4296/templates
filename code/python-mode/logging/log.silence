@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : log.silence
+# uuid  : log.silence
+# key   : log.silence
+# group : logging
+# --
+logmod.getLogger("$1").propagate = False$0

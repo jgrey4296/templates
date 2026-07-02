@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name  : definition
+# uuid  : definition
+# key   : definition
+# group :
+# --
+
+.. index:: single: $1
+
+.. _$3:
+
+----
+$4
+----

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : gradle.dep.reflect
+# uuid  : gradle.dep.reflect
+# key   : gradle.dep.reflect
+# group : reflection dependency
+# --
+implementation(kotlin("reflect"))

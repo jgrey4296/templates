@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name  : import.meta
+# uuid  : import.meta
+# key   : import.meta
+# group :
+# --
+import importlib # stdlib. https://docs.python.org/3/library/importlib.html
+from importlib.resources import files
+from importlib.metadata import EntryPoint

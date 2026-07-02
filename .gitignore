@@ -1,5 +1,6 @@
-!painting.jpg
-!shells/bash/lib
+# .gitignore -*- mode: Gitignore -*- 
+
+# Ignores: --------------------------------------------------
 .DS_Store
 .idea
 *.log
@@ -54,3 +55,9 @@ cabal.project.local~
 .HTF/
 .ghc.environment.*
 **.sqlite
+
+# Exclusions --------------------------------------------------
+!*/gradle
+!painting.jpg
+!shells/bash/lib
+!import.meta

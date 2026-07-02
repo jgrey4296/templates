@@ -6,6 +6,18 @@ BLOOD_CONFIG="$BLOOD_SRC/example"
 EMACSDIR="$HOME/.emacs.d"
 DOOMDIR="$HOME/.config/jg/"
 
+HELP_TEXT="
+usage: set-emacs [-h] [-e
+
+options:
+-h, --help            : show this help message and exit
+-e, --env             : show the current environment
+
+-f,--framework {arg}  : set .emacs.d framework. (blood/doom or a custom location)
+-b,--bin {arg}        : set the emacs binary to use (apt/flatpak/snap)
+
+"
+
 function _fail () {
     echo -e "$@"
     exit 1
@@ -145,7 +157,7 @@ function report-emacs () {
     exit 0
 }
 
-function print-help () {
+function maybe-print-help () {
     # test args, if the last one is -h or --help
     # print help and exit
     case "${@: -1}" in
@@ -155,20 +167,12 @@ function print-help () {
            fi
            ;;
     esac
-    echo -e "usage: set-emacs [-h] [-e
-
-options:
--h, --help            : show this help message and exit
--e, --env             : show the current environment
-
--f,--framework {arg}  : set .emacs.d framework. (blood/doom or a custom location)
--b,--bin {arg}        : set the emacs binary to use (apt/flatpak/snap)
-"
+    echo -e "$HELP_TEXT"
     exit "${PRINTED_HELP:-2}"
 }
 
 #   --------------------------------------------------
-print-help "$@"
+maybe-print-help "$@"
 report-emacs "$@"
 
 if [[ -n "$INSIDE_EMACS" ]]; then

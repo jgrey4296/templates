@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name  : plan.sync.meta
+# uuid  : plan.sync.meta
+# key   : plan.sync.meta
+# group :
+# --
++!a <- action1.
++!b <- action2.
+
+// Pause b when it starts.
+^!b[state(pending)] <- .suspend(b).
+// Resume b when a finishes.
+^!a[state(finished)] <- .resume(b).

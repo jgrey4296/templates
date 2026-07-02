@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# untracked.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+git ls-files -i -o

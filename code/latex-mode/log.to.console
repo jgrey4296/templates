@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : log.to.console
+# uuid  : log.to.console
+# key   : log.to.console
+# group : debug
+# --
+\message{$1}

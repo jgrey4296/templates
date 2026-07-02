@@ -44,7 +44,6 @@ set -o pipefail
 )
 
 
-
 echo "-- Installing Snaps"
 snap install emacs --classic
 snap install nushell --classic

@@ -1,6 +1,7 @@
 .. -*- mode: ReST -*-
 
-.. index:: single: A; B
+.. index:: ! $2
+           single: A; B
 
 .. _${2:label}:
 
@@ -15,7 +16,7 @@ ${1:$(s-replace-regexp "." "=" yas-text)}
 .. Body
 .. --------------------------------------------------
 
-${0: Donec at pede.}
+${0:Donec at pede.}
 
 
 .. --------------------------------------------------

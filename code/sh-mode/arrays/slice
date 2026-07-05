@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name  : slice
+# uuid  : slice
+# key   : slice
+# group : arrays
+# --
+"\${$0[@]:1}"

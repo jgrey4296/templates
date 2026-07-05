@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+echo "... Presyncing Doom"
+
+rm -rf "$HOME/github/_libs/lisp/doom_2/.local/straight/build-30.2/magit"
+rm -rf "$HOME/github/_libs/lisp/doom_2/.local/straight/build-30.2/auctex"

@@ -1,0 +1,139 @@
+## .gitignore -*- mode: Gitignore -*-
+## adapted from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
+
+!/.polyglot/**
+!/notes/**
+
+# Log Files
+log.*
+.log
+
+# Temp directories
+.temp/
+
+*.auto
+
+# Godot
+.godot/
+
+# lisp/eask
+*.elc
+.eask/
+*-autoloads.el
+*-pkg.el
+
+# Rocq
+*.vo
+*.vos
+*.vok
+*.glob
+
+# Added by cargo
+/Cargo.lock
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Build results and caches
+/build/
+/dist/
+/target 
+/[Dd]ebug/
+/[Dd]ebugPublic/
+/[Rr]elease/
+/[Rr]eleases/
+/x64/
+/x86/
+/[Ww][Ii][Nn]32/
+/[Aa][Rr][Mm]/
+/[Aa][Rr][Mm]64/
+/bld/
+/[Bb]in/
+/[Oo]bj/
+/[Ll]og/
+/[Ll]ogs/
+.sass-cache/ 
+.vs/
+Generated\ Files/
+Generated_Code/
+node_modules/
+.DS_Store
+
+# MSTest test Results
+/[Tt]est[Rr]esult*/
+/[Bb]uild[Ll]og.*
+
+# NUnit
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+
+# Build Results of an ATL Project
+[Dd]ebugPS/
+[Rr]eleasePS/
+dlldata.c
+
+# Benchmark Results
+BenchmarkDotNet.Artifacts/
+
+# .NET
+project.lock.json
+project.fragment.lock.json
+
+# Coverage files
+coverage*.json
+coverage*.xml
+coverage*.info
+*.coverage
+*.coveragexml
+
+# NuGet Packages
+*.nupkg
+# NuGet Symbol Packages
+*.snupkg
+# The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
+# except build/, which is used as an MSBuild target.
+!**/[Pp]ackages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/[Pp]ackages/repositories.config
+# NuGet v3's project.json files produces more ignorable files
+*.nuget.props
+*.nuget.targets
+
+# Others
+ClientBin/
+~$*
+*~
+*.dbmdl
+*.dbproj.schemaview
+*.jfm
+*.pfx
+*.publishsettings
+orleans.codegen.cs
+
+# Backup & report files from converting an old project file
+# to a newer Visual Studio version. Backup files are not needed,
+# because we have git ;-)
+_UpgradeReport_Files/
+Backup*/
+UpgradeLog*.XML
+UpgradeLog*.htm
+ServiceFabricBackup/
+*.rptproj.bak
+
+# SQL Server files
+*.mdf
+*.ldf
+*.ndf
+
+# Python Tools for Visual Studio (PTVS)
+__pycache__/
+*.pyc

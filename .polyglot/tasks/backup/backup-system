@@ -5,10 +5,10 @@ set -o nounset
 
 # TODO use rsync --archive --progress --partial
 #
-# data     = "/media/john/data"
-# backup_1 = "/media/john/big_ex"
-# backup_2 = "/media/john/BackupSD"
-# backup_3 = "/media/john/LargeBackup"
+# data     = "/media/data"
+# backup_1 = "/media/big_ex"
+# backup_2 = "/media/BackupSD"
+# backup_3 = "/media/LargeBackup"
 
 
 function backup_assets () {

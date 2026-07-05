@@ -65,7 +65,7 @@ function _set-emacs () {
 ## --- Specific variants
 function _set-doom () {
     echo "setting framework to: doom current"
-    base="/media/john/data/github/_libs/lisp/doom_2"
+    base="/media/data/github/_libs/lisp/doom_2"
 
     _retarget-emacs-d "$base"
     _retarget-doom-bin "$base"
@@ -73,7 +73,7 @@ function _set-doom () {
 
 function _set-doom-alt () {
     echo "setting framework to: doom alt"
-    base="/media/john/data/github/_libs/lisp/doomemacs"
+    base="/media/data/github/_libs/lisp/doomemacs"
 
     _retarget-emacs-d "$base"
     _retarget-doom-bin "$base"

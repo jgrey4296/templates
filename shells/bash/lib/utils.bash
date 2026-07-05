@@ -13,8 +13,6 @@ source "$root_dir/lib/prompt.bash"
 # shellcheck disable=SC1091
 source "$root_dir/lib/tmux.bash"
 # shellcheck disable=SC1091
-source "$root_dir/lib/user_switch.bash"
-# shellcheck disable=SC1091
 source "$root_dir/lib/components.bash"
 
 function init-sdkman () {

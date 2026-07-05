@@ -10,4 +10,9 @@
 # /boot/efi was on /dev/nvme0n1p1 during curtin installation
 /dev/disk/by-uuid/CE74-E7FC /boot/efi vfat defaults 0 1
 /swap.img	none	swap	sw	0	0
-/dev/disk/by-uuid/d705d310-dd7d-4385-87f6-292281d08153 /media/john/data auto nosuid,nodev,nofail,x-gvfs-show 0 0
+
+/dev/disk/by-uuid/5a0d2fdf-6401-46fa-a35a-d99e26124eb2 /media/solid_ext4 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+/dev/disk/by-uuid/3758DCB275ABBEDD /media/solid_ntfs auto nosuid,nodev,nofail,x-gvfs-show 0 0
+/dev/disk/by-uuid/3eec31eb-dc5c-4ed6-99b2-91655ed93e3c /media/512Alt auto nosuid,nodev,nofail,x-gvfs-show 0 0
+/dev/disk/by-uuid/fb4b6528-e2b1-4a14-96ba-309bd8cdd176 /media/micro_photos auto nosuid,nodev,nofail,x-gvfs-show 0 0
+/dev/disk/by-uuid/d705d310-dd7d-4385-87f6-292281d08153 /media/data auto nosuid,nodev,nofail,x-gvfs-show 0 0

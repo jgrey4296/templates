@@ -24,7 +24,7 @@
 # TEXMFOUT    = $TEXMFDOTDIR
 # TEXMFCONFIG = $HOME/github/_templates/tex-config
 
-JG_FONTS = /media/john/data/assets/fonts/
+JG_FONTS = /media/data/assets/fonts/
 JG_BIB   = $HOME/github/bibliography/main
 
 BIBINPUTS=$TEXMFDOTDIR/bib//:$TEXMFDOTDIR:$JG_BIB:$TEXMFCONFIG/bibtex//:$TEXMFHOME/bibtex//:$TEXMFDIST/bibtex/bib//

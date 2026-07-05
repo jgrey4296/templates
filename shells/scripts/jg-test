@@ -7,6 +7,10 @@ set -o pipefail
 # shellcheck disable=SC1091
 source "$HOME/_cache_/asdf/plugins/polyglot/polyglot/lib/lib-util.bash"
 
+rst=("${@:1}")
+echo "Rest: ${@:1}"
+exit
+
 echo "All Args: " "$@"
 
 echo "Last Arg: " "${@: -1}"

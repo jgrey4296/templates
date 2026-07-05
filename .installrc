@@ -1,0 +1,27 @@
+#.installrc -*- mode: sh -*-
+
+# install-base "dest" "./source" blah bloo blee
+# install-home "dest" "./source" "*"
+# install-usr  "dest" "./source" "*"
+# install-config "dest" "./source" blah bloo blee
+# install-etc "dest" "./source" blah bloo blee
+# install-www "dest" "./source" blah bloo blee
+
+install-home "" "./home" "*"
+
+install-config "" "./home/.config/Supercollider" "*"
+install-config "" "./home/.config/calibre" "*"
+install-config "" "./home/.config/gdb" "*"
+install-config "" "./home/.config/git" "*"
+install-config "" "./home/.config/git-cliff" "*"
+install-config "" "./home/.config/godot" "*"
+install-config "" "./home/.config/gpg" "*"
+install-config "" "./home/.config/luarocks" "*"
+
+install-etc "" "./etc" "*"
+
+# ssh
+# man
+# git
+# home
+# shells

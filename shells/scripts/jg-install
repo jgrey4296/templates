@@ -1,0 +1,139 @@
+#!/usr/bin/env bash
+# jg-install.bash -*- mode: sh -*-
+#set -o errexit
+set -o nounset
+set -o pipefail
+
+# shellcheck disable=SC1091
+[[ -e "${POLY_SRC:-/polyglot}/lib/lib.bash" ]] && source "$POLY_SRC/lib/lib.bash"
+
+PRINTED_HELP="${PRINTED_HELP:-2}"
+HELP_TEXT="
+usage: jg-install [-h] [args ...]
+
+Read a .installrc file, mapping files to install to locations.
+
+Positional arguments:
+args          :
+
+options:
+-h, --help    : show this help message and exit
+"
+
+
+# fdfind -t f
+# fd --glob -t f -u -d 1 '*' ./usr_home
+
+# -b --backup
+# --group=GROUP
+# --mode=MODE
+# --owner=OWNER
+# -C --compare
+# -D creates leading components of dest
+#
+
+# ( install \
+#     -v \
+#     -C \
+#     -D \
+#     -b \
+#     -t "$head" \
+#     "${rest[@]}"
+#   )
+
+function maybe-print-help () {
+    # test args, if the last one is -h or --help
+    # print help and exit
+    case "${@: -1}" in
+        -h|--help) ;;
+        # *) [[ "$#" -gt 0 ]] && return ;;
+        *) return ;;
+    esac
+    echo -e "$HELP_TEXT"
+    exit "${PRINTED_HELP}"
+}
+
+maybe-print-help "$@"
+
+ROOT="$PWD"
+args=("$@")
+head=("${args[0]:-./.installrc}")
+rest=("${args[@]:1}")
+
+[[ -f "${head}" ]] || { echo "no .installrc file"; exit 1; }
+
+echo "Root: $ROOT"
+
+function install-base () {
+    # 0:dest, 1:source-base, 2+: patterns
+    local args h1 rst
+    args=("$@")
+    dest=("${args[0]}")
+    base=("${args[1]}")
+    rst=("${args[@]:2}")
+    echo "$dest <- $base : ${rst[@]}"
+    for patt in "${rst[@]}"
+    do
+        readarray -t sources <<<  $( fdfind -d 1 -u -t f --glob "$patt" "$base" )
+        for f in "${sources[@]}"
+        do
+            [[ -n "$f" ]] || continue;
+            echo "- $f"
+            # install -b -v -D -t "$dest" "$f"
+        done
+    done
+    echo ""
+}
+
+function install-super () {
+    # 0:dest, 1:source-base, 2+: patterns
+    local args h1 rst
+    args=("$@")
+    dest=("${args[0]}")
+    base=("${args[1]}")
+    rst=("${args[@]:2}")
+    echo "$dest <- $base : ${rst[@]}"
+    for patt in "${rst[@]}"
+    do
+        readarray -t sources <<<  $( fdfind -d 1 -u -t f --glob "$patt" "$base" )
+        for f in "${sources[@]}"
+        do
+            [[ -n "$f" ]] || continue;
+            sudo install -b -v -D -t "$dest" "$f"
+        done
+    done
+    echo ""
+}
+
+function install-home () {
+    install-base "$HOME/$1" "${@:2}"
+}
+
+function install-config () {
+    install-base "$HOME/.config/$1" "${@:2}"
+}
+
+function install-usr () {
+    install-base "/usr/$1" "${@:2}"
+}
+
+function install-etc () {
+    install-base "/etc/$1" "${@:2}"
+}
+
+function install-www () {
+    install-base "/var/www/$1" "${@:2}"
+}
+
+function install-app () {
+    install-base "$HOME/.local/share/applications/$1" "${@:2}"
+}
+
+# function install-bin () {
+#     install-base "$HOME/.local/bin/$1" "${@:2}"
+# }
+
+
+source "$head"
+
+# sudo -K

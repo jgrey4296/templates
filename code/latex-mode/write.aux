@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : write.aux
+# uuid  : write.aux
+# key   : write.aux
+# group : debug
+# --
+\directlua{
+  f=io.open("\jobname.aux","w")
+  f:write("$1")
+  f:close()
+}

@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name  : abstract.class
+# uuid  : abstract.class
+# key   : abstract.class
+# group :
+# --
+abstract class ${1:ClassName} {
+    // implement with override fun
+    abstract fun doSomething()
+
+}
